@@ -1,0 +1,98 @@
+[
+  {
+    "id": "hund-labrador-portrait",
+    "localPath": "assets/images/hund-labrador-portrait.jpg",
+    "fileTitle": "Labrador_Retriever_portrait.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Labrador_Retriever_portrait.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Labrador_Retriever_portrait.jpg",
+    "author": "Herwig Kavallar",
+    "license": "Public Domain",
+    "licenseUrl": "",
+    "usedFor": ["hero-visual", "site-logo", "entry-card-haltungsinfos", "animal-card-hunde", "support-card-gassi-service", "article-hero-hunde", "article-hero-selbsttest", "article-hero-notfall"],
+    "alt": "Labrador Retriever schaut aufmerksam in die Kamera"
+  },
+  {
+    "id": "katze-portrait",
+    "localPath": "assets/images/katze-portrait.jpg",
+    "fileTitle": "Cat_August_2010-4.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cat_August_2010-4.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "usedFor": ["stat-streunerkatzen", "entry-card-ueberlegung", "animal-card-katzen", "support-card-patenschaften", "article-hero-mensch", "article-hero-katzen", "article-hero-kastration"],
+    "alt": "Getigerter Kater"
+  },
+  {
+    "id": "vogel-wellensittich",
+    "localPath": "assets/images/vogel-wellensittich.jpg",
+    "fileTitle": "Budgerigar_01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budgerigar_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Budgerigar_01.jpg",
+    "author": "Asivechowdhury",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "usedFor": ["animal-card-voegel", "support-card-ehrenamt", "article-hero-voegel", "article-hero-wissen"],
+    "alt": "Wellensittich (Melopsittacus undulatus)"
+  },
+  {
+    "id": "kleintier-kaninchen",
+    "localPath": "assets/images/kleintier-kaninchen.jpg",
+    "fileTitle": "Oryctolagus_cuniculus_Rcdo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Rcdo.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Oryctolagus_cuniculus_Rcdo.jpg",
+    "author": "JM Ligero Loarte",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "usedFor": ["stat-tierheim", "animal-card-kleintiere", "support-card-pflegestelle", "article-hero-kleintiere", "article-hero-noch-nicht-bereit"],
+    "alt": "Hauskaninchen (Oryctolagus cuniculus)"
+  },
+  {
+    "id": "exot-bartagame",
+    "localPath": "assets/images/exot-bartagame.jpg",
+    "fileTitle": "Pogona_vitticeps.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pogona_vitticeps.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Pogona_vitticeps.jpg",
+    "author": "Joxerra Aihartza",
+    "license": "FAL",
+    "licenseUrl": "https://artlibre.org/licence/lal/en",
+    "usedFor": ["animal-card-exoten", "article-hero-exoten"],
+    "alt": "Bartagame (Pogona vitticeps)"
+  },
+  {
+    "id": "pferd-portrait",
+    "localPath": "assets/images/pferd-portrait.jpg",
+    "fileTitle": "Horse_December_2014-1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Horse_December_2014-1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Horse_December_2014-1.jpg",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "usedFor": ["animal-card-pferde", "article-hero-pferde"],
+    "alt": "Pferd im Profil"
+  },
+  {
+    "id": "qualzucht-mops",
+    "localPath": "assets/images/qualzucht-mops.jpg",
+    "fileTitle": "A_PUG_dog.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_PUG_dog.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/A_PUG_dog.jpg",
+    "author": "Nancy Wong",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "usedFor": ["article-hero-qualzucht"],
+    "alt": "Mops als Beispiel für problematische Zuchtmerkmale"
+  },
+  {
+    "id": "tierheim-hund",
+    "localPath": "assets/images/tierheim-hund.jpg",
+    "fileTitle": "Dog_in_Yedikule_Animal_Shelter.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dog_in_Yedikule_Animal_Shelter.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Dog_in_Yedikule_Animal_Shelter.jpg",
+    "author": "Turkish delight2",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "usedFor": ["article-hero-adoption"],
+    "alt": "Hund im Tierheim"
+  }
+]

@@ -221,7 +221,14 @@
       transition: var(--transition);
     }
     .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .card-icon { font-size: 2.5rem; padding: 1.5rem 1.5rem 0; display: block; }
+    .card-media {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border);
+      background: var(--primary-light);
+    }
     .card-body { padding: 1.25rem 1.5rem 1.5rem; }
     .card-body h3 { margin-top: 0; }
     .card-body p { color: var(--text-muted); font-size: 0.95rem; }
@@ -647,15 +654,15 @@
     }
 
     .site-logo::before {
-      content: "🐾";
+      content: "";
       width: 2rem;
       height: 2rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       border-radius: 999px;
-      background: var(--primary-light);
-      font-size: 1rem;
+      background: url('assets/images/hund-labrador-portrait.jpg') center 20% / cover var(--primary-light);
+      flex-shrink: 0;
     }
 
     .site-logo span { color: var(--secondary); }
@@ -790,14 +797,17 @@
       position: absolute;
       inset: 3.2rem 1.4rem auto;
       height: 210px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
       border-radius: var(--radius);
-      background:
-        linear-gradient(160deg, rgba(31, 58, 47, 0.12), rgba(232, 154, 75, 0.22)),
-        var(--white);
-      font-size: 7rem;
+      background: var(--primary-light);
+    }
+
+    .hero-animal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
     }
 
     .hero-card-foot {
@@ -874,9 +884,16 @@
       font-size: 1.25rem;
     }
 
-    #startseite .stat:nth-child(1)::before { content: "🏠"; }
-    #startseite .stat:nth-child(2)::before { content: "🐱"; }
-    #startseite .stat:nth-child(3)::before { content: "🐾"; }
+    #startseite .stat:nth-child(1)::before { content: ""; background: url('assets/images/kleintier-kaninchen.jpg') center / cover; }
+    #startseite .stat:nth-child(2)::before { content: ""; background: url('assets/images/katze-portrait.jpg') center 20% / cover; }
+    #startseite .stat:nth-child(3)::before {
+      content: "";
+      background:
+        radial-gradient(circle at 34% 38%, var(--primary) 0 18%, transparent 19%),
+        radial-gradient(circle at 62% 38%, var(--secondary) 0 16%, transparent 17%),
+        radial-gradient(circle at 50% 64%, var(--accent) 0 24%, transparent 25%),
+        var(--primary-light);
+    }
 
     #startseite .stat-number {
       font-family: var(--font-heading);
@@ -1401,6 +1418,16 @@
       color: rgba(255, 254, 250, 0.62);
     }
 
+    .image-credits {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+
+    .image-credits strong {
+      color: var(--white);
+    }
+
     .scroll-top {
       background: var(--secondary);
       border-radius: 999px;
@@ -1501,6 +1528,136 @@
         margin-bottom: 0.7rem;
       }
     }
+    /* ========== WIKIMEDIA BILDSCHICHT ========== */
+    .animal-card-img {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 110px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .animal-card::before {
+      display: none;
+    }
+
+    .animal-card .icon { display: none; }
+
+    .entry-card .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 999px;
+      display: block;
+    }
+
+    .entry-card .media-icon {
+      width: 100%;
+      height: 170px;
+      display: block;
+      overflow: hidden;
+      border-radius: var(--radius);
+      margin-bottom: 1.2rem;
+      background: var(--primary-light);
+    }
+
+    .entry-card .media-icon img {
+      border-radius: 0;
+      object-position: center 34%;
+    }
+
+    .entry-card .symbol-icon {
+      width: 3rem;
+      height: 3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      margin-bottom: 1.2rem;
+      background: var(--accent-light);
+    }
+
+    .animal-card {
+      min-height: 0;
+      padding: 0;
+      justify-content: flex-start;
+      gap: 0;
+    }
+
+    .animal-card-img {
+      position: static;
+      width: 100%;
+      height: clamp(220px, 18vw, 240px);
+      flex: 0 0 auto;
+      object-fit: cover;
+      object-position: center 36%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .animal-card span:not(.icon) {
+      padding: 1rem 1rem 0.25rem;
+    }
+
+    .animal-card small {
+      padding: 0 1rem 1.15rem;
+    }
+
+    .card-media {
+      aspect-ratio: 4 / 3;
+      object-position: center 36%;
+    }
+
+    .page:not(#startseite) .hero {
+      background: linear-gradient(135deg, #EDF6F1 0, #FFFEFA 62%, #FFF1DC 100%) !important;
+      overflow: hidden;
+    }
+
+    .page:not(#startseite) .hero .container {
+      max-width: var(--max-width);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .article-hero-copy {
+      max-width: var(--reading-width);
+    }
+
+    .article-hero-media {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      background: var(--primary-light);
+      aspect-ratio: 4 / 3;
+    }
+
+    .article-hero-media img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: var(--image-position, center 36%);
+    }
+
+    @media (max-width: 768px) {
+      .page:not(#startseite) .hero .container {
+        grid-template-columns: 1fr;
+      }
+
+      .article-hero-media {
+        max-width: 520px;
+      }
+
+      .animal-card-img {
+        height: 220px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1585,7 +1742,9 @@
         </div>
         <div class="hero-visual-card" aria-hidden="true">
           <div class="hero-tape">geduldig, ehrlich.</div>
-          <div class="hero-animal">🐾</div>
+          <div class="hero-animal">
+            <img src="assets/images/hund-labrador-portrait.jpg" alt="Labrador Retriever schaut aufmerksam" loading="eager">
+          </div>
           <div class="hero-card-foot">
             <strong>Artgerecht ist messbar.</strong>
             <span>Platz, Sozialkontakt, Beschäftigung, Klima.</span>
@@ -1622,17 +1781,17 @@
         <h2 class="text-center">Was suchst du?</h2>
         <div class="entry-cards">
           <div class="entry-card" onclick="navigateTo('mensch')">
-            <span class="icon">&#129300;</span>
+            <span class="icon media-icon"><img src="assets/images/katze-portrait.jpg" alt="" aria-hidden="true"></span>
             <h3>Ich überlege, mir ein Tier zu holen</h3>
             <p>Finde heraus, ob dein Leben gerade zu einem Tier passt – ehrlich und ohne Schönfärberei.</p>
           </div>
           <div class="entry-card" onclick="navigateTo('hunde')">
-            <span class="icon">&#128054;</span>
+            <span class="icon media-icon"><img src="assets/images/hund-labrador-portrait.jpg" alt="" aria-hidden="true"></span>
             <h3>Ich habe ein Tier und will es besser machen</h3>
             <p>Konkrete Infos zu deiner Tierart: Haltung, Gesundheit, Kosten, häufige Fehler.</p>
           </div>
           <div class="entry-card" onclick="navigateTo('notfall')">
-            <span class="icon">&#9888;</span>
+            <span class="icon symbol-icon">&#9888;</span>
             <h3>Etwas stimmt mit meinem Tier nicht</h3>
             <p>Warnsignale, Vergiftungsgefahren, Erste Hilfe – und wann du sofort zum Tierarzt musst.</p>
           </div>
@@ -1645,12 +1804,12 @@
         <h2 class="text-center">Tierarten-Übersicht</h2>
         <p class="text-center text-muted">Wähle eine Tierart für ausführliche Infos zu Haltung, Kosten und häufigen Fehlern.</p>
         <div class="animal-grid">
-          <div class="animal-card" onclick="navigateTo('hunde')"><span class="icon">&#128054;</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></div>
-          <div class="animal-card" onclick="navigateTo('katzen')"><span class="icon">&#128049;</span><span>Katzen</span><small>Einzeljäger, aber keine Einzelgänger.</small></div>
-          <div class="animal-card" onclick="navigateTo('voegel')"><span class="icon">&#129436;</span><span>Vögel</span><small>Schwarmtiere, keine Dekoration.</small></div>
-          <div class="animal-card" onclick="navigateTo('kleintiere')"><span class="icon">&#128048;</span><span>Kleintiere</span><small>Kein Einstiegstier, kein Spielzeug.</small></div>
-          <div class="animal-card" onclick="navigateTo('exoten')"><span class="icon">&#128014;</span><span>Exoten</span><small>Technisch anspruchsvoll.</small></div>
-          <div class="animal-card" onclick="navigateTo('pferde')"><span class="icon">&#128052;</span><span>Pferde</span><small>Herdentiere, nie Solisten.</small></div>
+          <div class="animal-card" onclick="navigateTo('hunde')"><img class="animal-card-img" src="assets/images/hund-labrador-portrait.jpg" alt="Hund" loading="lazy"><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></div>
+          <div class="animal-card" onclick="navigateTo('katzen')"><img class="animal-card-img" src="assets/images/katze-portrait.jpg" alt="Katze" loading="lazy"><span>Katzen</span><small>Einzeljäger, aber keine Einzelgänger.</small></div>
+          <div class="animal-card" onclick="navigateTo('voegel')"><img class="animal-card-img" src="assets/images/vogel-wellensittich.jpg" alt="Wellensittich" loading="lazy"><span>Vögel</span><small>Schwarmtiere, keine Dekoration.</small></div>
+          <div class="animal-card" onclick="navigateTo('kleintiere')"><img class="animal-card-img" src="assets/images/kleintier-kaninchen.jpg" alt="Kaninchen" loading="lazy"><span>Kleintiere</span><small>Kein Einstiegstier, kein Spielzeug.</small></div>
+          <div class="animal-card" onclick="navigateTo('exoten')"><img class="animal-card-img" src="assets/images/exot-bartagame.jpg" alt="Bartagame" loading="lazy"><span>Exoten</span><small>Technisch anspruchsvoll.</small></div>
+          <div class="animal-card" onclick="navigateTo('pferde')"><img class="animal-card-img" src="assets/images/pferd-portrait.jpg" alt="Pferd" loading="lazy"><span>Pferde</span><small>Herdentiere, nie Solisten.</small></div>
         </div>
       </div>
     </div>
@@ -2969,7 +3128,7 @@
 
         <div class="grid-2" style="margin: 2rem 0;">
           <div class="card">
-            <div class="card-icon">🐾</div>
+            <img class="card-media" src="assets/images/hund-labrador-portrait.jpg" alt="Aufmerksamer Hund als Beispiel für Tierkontakt ohne eigenes Tier" loading="lazy">
             <div class="card-body">
               <h3>Gassi-Service & Katzenstreicheln</h3>
               <p>Viele Tierheime und private Halter suchen Menschen, die Hunde ausführen oder Zeit mit Katzen verbringen. Du bekommst Tierkontakt, das Tier bekommt Zuwendung – ohne langfristige Verpflichtung.</p>
@@ -2977,7 +3136,7 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-icon">💝</div>
+            <img class="card-media" src="assets/images/katze-portrait.jpg" alt="Katze als Beispiel für ein Tier, das durch Patenschaften unterstützt werden kann" loading="lazy">
             <div class="card-body">
               <h3>Patenschaften</h3>
               <p>Für 10–30 Euro im Monat kannst du ein Tierheimtier unterstützen, das schwer vermittelbar ist – alt, krank oder einfach „zu gewöhnlich". Du bekommst Updates, kannst besuchen, trägst aber nicht die Vollverantwortung.</p>
@@ -2985,7 +3144,7 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-icon">🏠</div>
+            <img class="card-media" src="assets/images/kleintier-kaninchen.jpg" alt="Kaninchen als Beispiel für ein Tier, das vorübergehend Schutz brauchen kann" loading="lazy">
             <div class="card-body">
               <h3>Pflegestelle werden</h3>
               <p>Tierschutzorganisationen suchen immer Pflegestellen – Menschen, die ein Tier vorübergehend aufnehmen, bis ein dauerhaftes Zuhause gefunden ist. Zeitlich begrenzt, oft mit Kostenübernahme durch den Verein.</p>
@@ -2993,7 +3152,7 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-icon">🧹</div>
+            <img class="card-media" src="assets/images/vogel-wellensittich.jpg" alt="Wellensittich als Beispiel für Tiere, die im Ehrenamt versorgt werden" loading="lazy">
             <div class="card-body">
               <h3>Ehrenamt im Tierheim</h3>
               <p>Füttern, Reinigen, Spielen, Sozialisieren, Öffentlichkeitsarbeit, Fahrdienste – Tierheime brauchen helfende Hände. Du lernst dabei enorm viel über Tierhaltung und findest vielleicht dein zukünftiges Tier.</p>
@@ -3095,6 +3254,16 @@
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/impressum">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz">Datenschutz</a></p>
         <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener">TASSO e.&thinsp;V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener">BMEL</a></p>
+        <p class="image-credits"><strong>Bildnachweise:</strong>
+          <a href="https://commons.wikimedia.org/wiki/File:Labrador_Retriever_portrait.jpg" target="_blank" rel="noopener">Labrador Retriever</a>, Herwig Kavallar, Public Domain;
+          <a href="https://commons.wikimedia.org/wiki/File:Cat_August_2010-4.jpg" target="_blank" rel="noopener">Cat August 2010-4</a>, Alvesgaspar, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+          <a href="https://commons.wikimedia.org/wiki/File:Budgerigar_01.jpg" target="_blank" rel="noopener">Budgerigar 01</a>, Asivechowdhury, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+          <a href="https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Rcdo.jpg" target="_blank" rel="noopener">Oryctolagus cuniculus Rcdo</a>, JM Ligero Loarte, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>;
+          <a href="https://commons.wikimedia.org/wiki/File:Pogona_vitticeps.jpg" target="_blank" rel="noopener">Pogona vitticeps</a>, Joxerra Aihartza, <a href="https://artlibre.org/licence/lal/en" target="_blank" rel="noopener">FAL</a>;
+          <a href="https://commons.wikimedia.org/wiki/File:Horse_December_2014-1.jpg" target="_blank" rel="noopener">Horse December 2014-1</a>, Alvesgaspar, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+          <a href="https://commons.wikimedia.org/wiki/File:A_PUG_dog.jpg" target="_blank" rel="noopener">A PUG dog</a>, Nancy Wong, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+          <a href="https://commons.wikimedia.org/wiki/File:Dog_in_Yedikule_Animal_Shelter.jpg" target="_blank" rel="noopener">Dog in Yedikule Animal Shelter</a>, Turkish delight2, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+        </p>
       </div>
     </div>
   </footer>
@@ -3104,6 +3273,55 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
+    var articleHeroImages = {
+      'mensch': { src: 'assets/images/katze-portrait.jpg', alt: 'Katze als Beispiel für die Verantwortung vor der Tieraufnahme', position: 'center 35%' },
+      'hunde': { src: 'assets/images/hund-labrador-portrait.jpg', alt: 'Labrador Retriever als Beispiel für einen Hund mit sozialen Bedürfnissen', position: 'center 30%' },
+      'katzen': { src: 'assets/images/katze-portrait.jpg', alt: 'Getigerte Katze als Beispiel für Katzenhaltung', position: 'center 34%' },
+      'voegel': { src: 'assets/images/vogel-wellensittich.jpg', alt: 'Wellensittich als Beispiel für Vogelhaltung', position: 'center 35%' },
+      'kleintiere': { src: 'assets/images/kleintier-kaninchen.jpg', alt: 'Kaninchen als Beispiel für Kleintierhaltung', position: 'center 42%' },
+      'exoten': { src: 'assets/images/exot-bartagame.jpg', alt: 'Bartagame als Beispiel für anspruchsvolle Exotenhaltung', position: 'center 45%' },
+      'pferde': { src: 'assets/images/pferd-portrait.jpg', alt: 'Pferd im Profil als Beispiel für Pferdehaltung', position: 'center 34%' },
+      'kastration': { src: 'assets/images/katze-portrait.jpg', alt: 'Katze als Beispiel für Verantwortung bei Kastration und Vorsorge', position: 'center 34%' },
+      'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%' },
+      'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als Beispiel für Adoption statt Kauf', position: 'center 45%' },
+      'selbsttest': { src: 'assets/images/hund-labrador-portrait.jpg', alt: 'Aufmerksamer Hund als Beispiel für die Verantwortung vor der Entscheidung', position: 'center 30%' },
+      'notfall': { src: 'assets/images/hund-labrador-portrait.jpg', alt: 'Aufmerksamer Hund als Beispiel für ernst zu nehmende Warnsignale', position: 'center 30%' },
+      'wissen': { src: 'assets/images/vogel-wellensittich.jpg', alt: 'Wellensittich als Beispiel für Mythen und Fakten zur Tierhaltung', position: 'center 35%' },
+      'noch-nicht-bereit': { src: 'assets/images/kleintier-kaninchen.jpg', alt: 'Kaninchen als Beispiel für eine verantwortliche Entscheidung gegen vorschnelle Tieraufnahme', position: 'center 42%' }
+    };
+
+    function hydrateArticleHeroImages() {
+      Object.keys(articleHeroImages).forEach(function(pageId) {
+        var page = document.getElementById(pageId);
+        if (!page) return;
+        var hero = page.querySelector('.hero');
+        if (!hero) return;
+        var container = hero.querySelector('.container');
+        if (!container || container.querySelector('.article-hero-media')) return;
+
+        var config = articleHeroImages[pageId];
+        var copy = document.createElement('div');
+        copy.className = 'article-hero-copy';
+        while (container.firstChild) {
+          copy.appendChild(container.firstChild);
+        }
+
+        var media = document.createElement('figure');
+        media.className = 'article-hero-media';
+        media.style.setProperty('--image-position', config.position);
+
+        var img = document.createElement('img');
+        img.src = config.src;
+        img.alt = config.alt;
+        img.loading = 'eager';
+        img.decoding = 'async';
+
+        media.appendChild(img);
+        container.appendChild(copy);
+        container.appendChild(media);
+      });
+    }
+
     // ===== ROUTING =====
     function navigateTo(page) {
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
@@ -3126,6 +3344,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
+      hydrateArticleHeroImages();
       var hash = location.hash.slice(1);
       navigateTo(hash || 'startseite');
     });
