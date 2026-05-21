@@ -1,27 +1,81 @@
 [
   {
-    "id": "hund-labrador-portrait",
-    "localPath": "assets/images/hund-labrador-portrait.jpg",
-    "fileTitle": "Labrador_Retriever_portrait.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Labrador_Retriever_portrait.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Labrador_Retriever_portrait.jpg",
-    "author": "Herwig Kavallar",
-    "license": "Public Domain",
-    "licenseUrl": "",
-    "usedFor": ["hero-visual", "site-logo", "entry-card-haltungsinfos", "animal-card-hunde", "support-card-gassi-service", "article-hero-hunde", "article-hero-selbsttest", "article-hero-notfall"],
-    "alt": "Labrador Retriever schaut aufmerksam in die Kamera"
+    "id": "dog-owner-walking",
+    "localPath": "assets/images/dog-owner-walking.jpg",
+    "fileTitle": "Dog_with_owner_walking.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dog_with_owner_walking.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dog_with_owner_walking.jpg",
+    "author": "Anish Anilkumar",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "usedFor": ["start-hero-alltag", "entry-card-ueberlegung", "animal-card-hunde", "article-hero-hunde", "article-hero-noch-nicht-bereit", "support-card-gassi-service"],
+    "alt": "Hund wird an der Leine im Alltag geführt",
+    "modifications": "Local scaled copy; cropped by CSS where displayed."
   },
   {
-    "id": "katze-portrait",
-    "localPath": "assets/images/katze-portrait.jpg",
-    "fileTitle": "Cat_August_2010-4.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cat_August_2010-4.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
-    "author": "Alvesgaspar",
+    "id": "cat-carrier-square",
+    "localPath": "assets/images/cat-carrier-square.jpg",
+    "fileTitle": "2007-01-13_Cat_in_a_carrier_(square).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-01-13_Cat_in_a_carrier_(square).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/2007-01-13_Cat_in_a_carrier_%28square%29.jpg",
+    "author": "Greg Mote from Glendora, CA, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "usedFor": ["start-hero-notfall-vorbereitet", "entry-card-notfall", "animal-card-katzen", "article-hero-mensch", "article-hero-katzen", "article-hero-selbsttest", "support-card-pflegestelle"],
+    "alt": "Katze blickt aus einer Transporttasche",
+    "modifications": "Local resized copy; cropped by CSS where displayed."
+  },
+  {
+    "id": "cat-soft-carrier",
+    "localPath": "assets/images/cat-soft-carrier.jpg",
+    "fileTitle": "Cat_in_soft_side_cat_carrier.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cat_in_soft_side_cat_carrier.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Cat_in_soft_side_cat_carrier.jpg",
+    "author": "Tylervigen",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "usedFor": ["start-share-frueh-handeln", "article-hero-kastration", "article-hero-notfall"],
+    "alt": "Katze in einer weichen Transportbox",
+    "modifications": "Cropped by CSS where displayed."
+  },
+  {
+    "id": "guinea-pig-habitat",
+    "localPath": "assets/images/guinea-pig-habitat.jpg",
+    "fileTitle": "Guinea_pig_habitat.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guinea_pig_habitat.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Guinea_pig_habitat.jpg",
+    "author": "Mila.cridlig at English Wikipedia",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "usedFor": ["article-hero-kleintiere", "support-card-ehrenamt"],
+    "alt": "Strukturiertes Kleintier-Habitat mit Verstecken",
+    "modifications": "Cropped by CSS where displayed."
+  },
+  {
+    "id": "voegel-voliere",
+    "localPath": "assets/images/voegel-voliere.jpg",
+    "fileTitle": "Budgerigars (Melopsittacus undulatus) in a bird aviary 01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Budgerigars_%28Melopsittacus_undulatus%29_in_a_bird_aviary_01.jpg",
+    "author": "Bidgee",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "usedFor": ["stat-streunerkatzen", "entry-card-ueberlegung", "animal-card-katzen", "support-card-patenschaften", "article-hero-mensch", "article-hero-katzen", "article-hero-kastration"],
-    "alt": "Getigerter Kater"
+    "usedFor": ["entry-card-haltung-verbessern", "start-share-beduerfnisse", "animal-card-voegel"],
+    "alt": "Mehrere Wellensittiche in einer Voliere mit Ästen",
+    "modifications": "Local copy; cropped by CSS where displayed."
+  },
+  {
+    "id": "kleintiere-zwei-meerschweinchen",
+    "localPath": "assets/images/kleintiere-zwei-meerschweinchen.jpg",
+    "fileTitle": "Guinea Pigs.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guinea_Pigs.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Guinea_Pigs.jpg",
+    "author": "Daniel Hall",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "usedFor": ["start-hero-kleintiere-nicht-kleinreden", "animal-card-kleintiere", "start-share-kleintiere-nicht-kleinreden"],
+    "alt": "Zwei Meerschweinchen zusammen im Gras",
+    "modifications": "Local copy; cropped by CSS where displayed."
   },
   {
     "id": "vogel-wellensittich",
@@ -32,20 +86,9 @@
     "author": "Asivechowdhury",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["animal-card-voegel", "support-card-ehrenamt", "article-hero-voegel", "article-hero-wissen"],
-    "alt": "Wellensittich (Melopsittacus undulatus)"
-  },
-  {
-    "id": "kleintier-kaninchen",
-    "localPath": "assets/images/kleintier-kaninchen.jpg",
-    "fileTitle": "Oryctolagus_cuniculus_Rcdo.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Rcdo.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Oryctolagus_cuniculus_Rcdo.jpg",
-    "author": "JM Ligero Loarte",
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-    "usedFor": ["stat-tierheim", "animal-card-kleintiere", "support-card-pflegestelle", "article-hero-kleintiere", "article-hero-noch-nicht-bereit"],
-    "alt": "Hauskaninchen (Oryctolagus cuniculus)"
+    "usedFor": ["animal-card-voegel", "article-hero-voegel", "article-hero-wissen"],
+    "alt": "Wellensittich",
+    "modifications": "Cropped by CSS where displayed."
   },
   {
     "id": "exot-bartagame",
@@ -57,19 +100,21 @@
     "license": "FAL",
     "licenseUrl": "https://artlibre.org/licence/lal/en",
     "usedFor": ["animal-card-exoten", "article-hero-exoten"],
-    "alt": "Bartagame (Pogona vitticeps)"
+    "alt": "Bartagame",
+    "modifications": "Cropped by CSS where displayed."
   },
   {
-    "id": "pferd-portrait",
-    "localPath": "assets/images/pferd-portrait.jpg",
-    "fileTitle": "Horse_December_2014-1.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Horse_December_2014-1.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Horse_December_2014-1.jpg",
-    "author": "Alvesgaspar",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "id": "horse-herd-pasture",
+    "localPath": "assets/images/horse-herd-pasture.jpg",
+    "fileTitle": "Horse_herd_in_Wales_(Unsplash).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Horse_herd_in_Wales_(Unsplash).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Horse_herd_in_Wales_%28Unsplash%29.jpg",
+    "author": "Samantha Scholl sauriel",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "usedFor": ["animal-card-pferde", "article-hero-pferde"],
-    "alt": "Pferd im Profil"
+    "alt": "Pferdeherde auf einer Weide",
+    "modifications": "Local resized copy; cropped by CSS where displayed."
   },
   {
     "id": "qualzucht-mops",
@@ -81,7 +126,8 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "usedFor": ["article-hero-qualzucht"],
-    "alt": "Mops als Beispiel für problematische Zuchtmerkmale"
+    "alt": "Mops als Beispiel für problematische Zuchtmerkmale",
+    "modifications": "Cropped by CSS where displayed."
   },
   {
     "id": "tierheim-hund",
@@ -92,7 +138,8 @@
     "author": "Turkish delight2",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "usedFor": ["article-hero-adoption"],
-    "alt": "Hund im Tierheim"
+    "usedFor": ["article-hero-adoption", "support-card-patenschaften"],
+    "alt": "Hund im Tierheim",
+    "modifications": "Cropped by CSS where displayed."
   }
 ]
