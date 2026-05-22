@@ -774,17 +774,18 @@
 
     .hero-visual-card {
       position: relative;
-      min-height: 430px;
+      min-height: 520px;
       border-radius: var(--radius);
       background:
         linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(230, 243, 236, 0.86)),
         repeating-linear-gradient(135deg, rgba(31, 58, 47, 0.07) 0 1px, transparent 1px 18px);
       border: 1px solid var(--border);
       box-shadow: var(--shadow-lg);
-      padding: 1.4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      padding: 1rem;
+      display: grid;
+      grid-template-rows: minmax(300px, 1fr) auto;
+      align-content: stretch;
+      gap: 0.85rem;
     }
 
     .hero-tape {
@@ -798,21 +799,14 @@
       font-weight: 800;
       transform: rotate(-2deg);
       box-shadow: var(--shadow);
+      z-index: 3;
     }
 
-    .hero-image-grid {
-      position: absolute;
-      inset: 3.2rem 1.4rem auto;
-      height: 220px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-      grid-template-rows: repeat(2, minmax(0, 1fr));
-      gap: 0.65rem;
-    }
-
-    .hero-image-grid figure {
+    .hero-lead-image {
       position: relative;
       min-width: 0;
+      width: 100%;
+      height: 100%;
       margin: 0;
       overflow: hidden;
       border-radius: var(--radius);
@@ -821,16 +815,86 @@
       background: var(--primary-light);
     }
 
-    .hero-image-grid img {
+    .hero-lead-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42%, rgba(20, 52, 41, 0.78) 100%);
+      pointer-events: none;
+    }
+
+    .hero-lead-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: var(--image-position, center 38%);
+      object-position: var(--image-position, center 50%);
       display: block;
     }
 
-    .hero-image-main {
-      grid-row: span 2;
+    .hero-lead-image .context-caption {
+      z-index: 2;
+      left: 0.85rem;
+      right: 0.85rem;
+      bottom: 0.85rem;
+    }
+
+    .hero-proof-panel {
+      position: relative;
+      min-height: 306px;
+      padding: 1.85rem 1.35rem 1.25rem;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 230, 0.92)),
+        repeating-linear-gradient(135deg, rgba(29, 75, 55, 0.07) 0 1px, transparent 1px 22px);
+      border: 1px solid rgba(29, 75, 55, 0.12);
+      box-shadow: var(--shadow);
+      display: grid;
+      align-content: center;
+      gap: 0.95rem;
+    }
+
+    .hero-proof-panel .proof-label {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-proof-panel .proof-label::before {
+      content: "";
+      width: 0.62rem;
+      height: 0.62rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .hero-proof-panel strong {
+      display: block;
+      color: var(--primary);
+      font-size: clamp(2.5rem, 7vw, 4.8rem);
+      line-height: 0.92;
+      letter-spacing: 0;
+    }
+
+    .hero-proof-panel h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.14;
+      max-width: 11ch;
+    }
+
+    .hero-proof-panel p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 25rem;
     }
 
     .context-caption {
@@ -869,18 +933,31 @@
     .hero-card-foot strong { color: var(--primary); }
     .hero-card-foot span { color: var(--text-muted); font-size: 0.95rem; }
 
+    .hero-card-foot .num {
+      font-family: var(--font-heading);
+      color: var(--secondary);
+      font-size: 2.6rem;
+      line-height: 0.95;
+      font-weight: 900;
+    }
+
     .hero-side-note {
-      position: absolute;
-      right: -1.1rem;
-      bottom: 6.25rem;
-      width: min(250px, 70%);
-      max-width: calc(100% - 2rem);
+      position: relative;
+      width: 100%;
+      max-width: none;
       background: var(--primary);
       color: var(--white);
       border-radius: var(--radius);
       padding: 1rem;
       box-shadow: var(--shadow-lg);
       z-index: 2;
+    }
+
+    .hero-evidence-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 0.85rem;
+      align-items: stretch;
     }
 
     .hero-side-note span {
@@ -987,13 +1064,15 @@
     .entry-card {
       position: relative;
       overflow: hidden;
-      min-height: 240px;
+      min-height: 360px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.45rem;
       text-align: left;
       box-shadow: var(--shadow);
       background: var(--white);
+      display: flex;
+      flex-direction: column;
     }
 
     .entry-card::after {
@@ -1047,6 +1126,26 @@
       color: var(--text-muted);
       margin-bottom: 2.2rem;
       line-height: 1.55;
+    }
+
+    .entry-card .entry-media {
+      order: -1;
+      margin: -1.45rem -1.45rem 1.15rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+      min-height: 172px;
+      height: 172px;
+    }
+
+    .entry-card .entry-media img {
+      height: 100%;
+      object-position: var(--image-position, center 44%);
+    }
+
+    .entry-card .context-caption {
+      left: 0.85rem;
+      right: auto;
+      bottom: 0.85rem;
+      max-width: calc(100% - 1.7rem);
     }
 
     .animal-grid {
@@ -1136,17 +1235,50 @@
     }
 
     .share-focus {
-      max-width: 900px;
+      max-width: 1040px;
+      width: 100%;
       margin: 2rem auto 0;
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 1rem;
-      align-items: center;
-      padding: 1rem;
+      grid-template-columns: 1fr;
+      gap: 1.35rem;
+      align-items: stretch;
+      padding: clamp(1.4rem, 3vw, 2.25rem);
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: var(--radius);
-      background: rgba(255, 254, 250, 0.08);
+      background:
+        linear-gradient(135deg, rgba(255, 254, 250, 0.14), rgba(255, 254, 250, 0.05)),
+        radial-gradient(circle at top right, rgba(247, 184, 96, 0.22), transparent 42%);
       text-align: left;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .share-focus > * {
+      min-width: 0;
+    }
+
+    .share-focus::before {
+      content: "Teilen ist keine Werbung. Teilen ist Prävention.";
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+      min-width: 0;
+      justify-self: start;
+      white-space: normal;
+      box-sizing: border-box;
+      padding: 0.55rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(247, 184, 96, 0.18);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .share-focus .eyebrow {
+      color: var(--accent-light);
+      margin-bottom: 0.6rem;
     }
 
     .share-focus h3 {
@@ -1165,28 +1297,187 @@
     }
 
     .share-focus-media {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.55rem;
+      position: relative;
+      min-height: 320px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(255, 254, 250, 0.1);
+    }
+
+    .share-focus-media figure {
+      height: 100%;
     }
 
     .share-focus-media figure img {
       width: 100%;
-      height: 120px;
+      height: 100%;
       object-fit: cover;
       object-position: var(--image-position, center);
       display: block;
     }
 
-    .share-focus-media figure:first-child {
-      grid-row: span 2;
-      height: 100%;
-      min-height: 248px;
+    .share-focus-media .context-caption {
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      background: rgba(31, 58, 47, 0.9);
     }
 
-    .share-focus-media figure:first-child img {
+    .share-points {
+      display: grid;
+      gap: 0.7rem;
+      margin: 1rem 0 1.25rem;
+    }
+
+    .share-point {
+      padding: 0.85rem 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      background: rgba(255, 254, 250, 0.08);
+      color: rgba(255, 254, 250, 0.9);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .door-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .door-card {
+      position: relative;
+      min-height: 230px;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: inherit;
+      font: inherit;
+      appearance: none;
+      text-align: left;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .door-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--primary);
+      opacity: 0.82;
+    }
+
+    .door-card:nth-child(3)::before { background: var(--secondary); }
+    .door-card:nth-child(4)::before { background: var(--accent); }
+
+    .door-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(31, 58, 47, 0.32);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .door-mark {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 14px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    .door-card h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 1.08rem;
+      line-height: 1.22;
+    }
+
+    .door-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.52;
+      flex: 1;
+    }
+
+    .door-card .more {
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-weight: 900;
+    }
+
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .insight-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      text-align: left;
+      display: grid;
+      grid-template-rows: minmax(220px, 0.82fr) auto;
+    }
+
+    .insight-card figure {
+      position: relative;
+      margin: 0;
+      min-height: 220px;
+      overflow: hidden;
+      background: var(--primary-light);
+    }
+
+    .insight-card img {
+      width: 100%;
       height: 100%;
-      min-height: 248px;
+      min-height: 220px;
+      object-fit: cover;
+      object-position: var(--image-position, center 42%);
+      display: block;
+    }
+
+    .insight-body {
+      padding: 1.15rem;
+    }
+
+    .insight-body .nr {
+      color: var(--secondary);
+      font-size: 0.74rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .insight-body h3 {
+      margin-top: 0;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .insight-body p {
+      margin-bottom: 0;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-size: 0.95rem;
     }
 
     /* Article pages */
@@ -1539,6 +1830,18 @@
       color: var(--white);
     }
 
+    .image-credits summary {
+      width: fit-content;
+      margin: 0 auto 0.6rem;
+      cursor: pointer;
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .image-credits p {
+      margin: 0;
+    }
+
     .scroll-top {
       background: var(--secondary);
       border-radius: 999px;
@@ -1569,6 +1872,8 @@
       }
 
       .entry-cards,
+      .door-grid,
+      .insight-grid,
       #startseite .stats-bar,
       .animal-grid,
       .share-focus {
@@ -1576,7 +1881,15 @@
       }
 
       .hero-visual-card {
-        min-height: 360px;
+        min-height: 520px;
+      }
+
+      .hero-evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .door-card {
+        min-height: auto;
       }
 
       .page:not(#startseite) .hero h1,
@@ -1605,20 +1918,11 @@
         padding-top: 3.8rem;
         gap: 1rem;
       }
-      .hero-image-grid {
-        position: relative;
-        inset: auto;
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        margin-bottom: 0;
+
+      .hero-lead-image {
+        min-height: 320px;
       }
-      .hero-image-grid figure {
-        min-height: 155px;
-      }
-      .hero-image-main {
-        grid-row: auto;
-      }
+
       .footer-grid {
         gap: 1.4rem;
       }
@@ -1672,12 +1976,12 @@
 
     .entry-card .entry-media {
       position: relative;
-      width: 100%;
-      height: 180px;
+      width: calc(100% + 2.9rem);
+      height: 190px;
       display: block;
       overflow: hidden;
-      border-radius: var(--radius);
-      margin: 0 0 1.2rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin: -1.45rem -1.45rem 1.2rem;
       background: var(--primary-light);
     }
 
@@ -1699,7 +2003,7 @@
     .animal-card-img {
       position: static;
       width: 100%;
-      height: clamp(220px, 18vw, 240px);
+      height: clamp(250px, 20vw, 290px);
       flex: 0 0 auto;
       object-fit: cover;
       object-position: center 36%;
@@ -1761,6 +2065,7 @@
     }
 
     .article-hero-media {
+      position: relative;
       margin: 0;
       overflow: hidden;
       border: 1px solid var(--border);
@@ -1778,6 +2083,204 @@
       object-position: var(--image-position, center 36%);
     }
 
+    .article-hero-media figcaption,
+    .article-split figcaption {
+      position: absolute;
+      left: 0.8rem;
+      right: 0.8rem;
+      bottom: 0.8rem;
+      padding: 0.5rem 0.65rem;
+      border-radius: 7px;
+      background: rgba(31, 58, 47, 0.82);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .article-rhythm {
+      margin: 2.6rem 0;
+    }
+
+    .article-rhythm:first-child {
+      margin-top: 0;
+    }
+
+    .article-split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 1.4rem;
+      align-items: stretch;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #FFFEFA 0, #F4EFE2 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .article-split figure {
+      position: relative;
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: calc(var(--radius) - 2px);
+      background: var(--primary-light);
+    }
+
+    .article-split img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      display: block;
+      object-fit: cover;
+      object-position: var(--image-position, center 45%);
+    }
+
+    .article-split-copy {
+      min-width: 0;
+      padding: 0.45rem 0.2rem;
+    }
+
+    .article-split-copy h3,
+    .rhythm-card h3,
+    .share-callout h3 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+
+    .metric-grid,
+    .argument-grid,
+    .signal-grid,
+    .compare-mini {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.4rem 0;
+    }
+
+    .metric-card,
+    .rhythm-card,
+    .signal-card,
+    .compare-card {
+      min-width: 0;
+      padding: 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .metric-card strong {
+      display: block;
+      color: var(--primary-dark);
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      line-height: 1;
+      margin-bottom: 0.45rem;
+    }
+
+    .metric-card span,
+    .compare-card span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .myth-truth {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+
+    .myth-truth > div {
+      padding: 1.25rem;
+    }
+
+    .myth-truth .myth {
+      background: #FFF1E8;
+      border-right: 1px solid var(--border);
+    }
+
+    .myth-truth .truth {
+      background: #EAF5EF;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .quote-band,
+    .share-callout,
+    .decision-band {
+      padding: clamp(1.35rem, 3vw, 2rem);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .quote-band p,
+    .share-callout p,
+    .decision-band p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .quote-band blockquote {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 2.15rem);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .share-callout .share-bar {
+      justify-content: flex-start;
+      margin-top: 1rem;
+    }
+
+    .share-callout .share-btn {
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .quote-band .eyebrow,
+    .share-callout .eyebrow,
+    .decision-band .eyebrow {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .quote-band h3,
+    .share-callout h3,
+    .decision-band h3 {
+      color: var(--white);
+    }
+
+    .signal-card {
+      border-left: 5px solid var(--primary);
+    }
+
+    .signal-card strong,
+    .compare-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--primary-dark);
+    }
+
+    .compare-card.good { background: #EAF5EF; }
+    .compare-card.risk { background: #FFF8E7; }
+    .compare-card.bad { background: #FFF1E8; }
+
     @media (max-width: 768px) {
       .page:not(#startseite) .hero .container {
         grid-template-columns: 1fr;
@@ -1788,7 +2291,21 @@
       }
 
       .animal-card-img {
-        height: 220px;
+        height: 260px;
+      }
+
+      .article-split,
+      .metric-grid,
+      .argument-grid,
+      .signal-grid,
+      .compare-mini,
+      .myth-truth {
+        grid-template-columns: 1fr;
+      }
+
+      .myth-truth .myth {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
       }
     }
   </style>
@@ -1873,29 +2390,22 @@
             <span>Aus Mecklenburg-Vorpommern</span>
           </div>
         </div>
-        <div class="hero-visual-card" aria-hidden="true">
-          <div class="hero-tape">geduldig, ehrlich.</div>
-          <div class="hero-image-grid">
-            <figure class="hero-image-main image-context-card" data-image-purpose="Hero: Verantwortung ist Alltag, nicht Wunschbild" data-share-reason="Wer ein Tier will, muss den Alltag sehen, nicht nur das süße Bild.">
-              <img src="assets/images/dog-owner-walking.jpg" alt="Hund wird im Alltag an der Leine geführt" loading="eager" style="--image-position:center 50%;">
-              <figcaption class="context-caption">Alltag statt Wunschbild</figcaption>
-            </figure>
-            <figure class="image-context-card" data-image-purpose="Hero: Auch kleine Tiere haben echte Bedürfnisse" data-share-reason="Das Bild bremst den Reflex, Kleintiere als einfache Anschaffung zu sehen.">
-              <img src="assets/images/kleintiere-zwei-meerschweinchen.jpg" alt="Zwei Meerschweinchen zusammen im Gras" loading="eager" style="--image-position:center 44%;">
-              <figcaption class="context-caption">Klein heißt nicht anspruchslos</figcaption>
-            </figure>
-            <figure class="image-context-card" data-image-purpose="Hero: Im Zweifel vorbereitet und ruhig handeln" data-share-reason="Notfallwissen wird teilbar, wenn es handhabbar statt panisch wirkt.">
-              <img src="assets/images/cat-carrier-square.jpg" alt="Katze blickt aus einer Transporttasche" loading="eager" style="--image-position:center 16%;">
-              <figcaption class="context-caption">Vorbereitet sein hilft</figcaption>
-            </figure>
-          </div>
-          <div class="hero-card-foot">
-            <strong>Artgerecht ist messbar.</strong>
-            <span>Platz, Sozialkontakt, Beschäftigung, Klima.</span>
-          </div>
-          <div class="hero-side-note">
-            <span>Wusstest du es?</span>
-            <p>Viele Fehler in der Tierhaltung sehen von außen harmlos aus, sind für das Tier aber Dauerstress.</p>
+        <div class="hero-visual-card image-context-card" data-image-purpose="Hero: Mensch-Tier-Moment im Tierheim als sichtbare Verantwortung vor dem Kauf" data-share-reason="Das Bild soll den Satz 'vor dem Kauf lesen' menschlich machen, ohne ein Tier als Deko oder Produkt zu zeigen.">
+          <div class="hero-tape">vor dem Kauf lesen.</div>
+          <figure class="hero-lead-image">
+            <img src="assets/images/hero-shelter-volunteer.jpg" alt="Eine freiwillige Helferin sitzt bei einem ruhenden Hund im Tierheim" loading="eager" style="--image-position:center 52%;">
+            <figcaption class="context-caption">Vor dem Kauf steht immer ein echtes Tier mit echten Bedürfnissen</figcaption>
+          </figure>
+          <div class="hero-evidence-grid">
+            <div class="hero-card-foot">
+              <span class="num">~350.000</span>
+              <strong>Tiere landen jährlich in deutschen Tierheimen.</strong>
+              <span>Wissen vor der Anschaffung ist Prävention, bevor aus Wunsch und Überforderung ein Tierheimfall wird.</span>
+            </div>
+            <div class="hero-side-note">
+              <span>Teilen hilft hier wirklich</span>
+              <p>Ein Link zur richtigen Zeit kann einen Kauf bremsen, einen Tierarztbesuch auslösen oder eine Haltung verbessern.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1923,42 +2433,90 @@
     <div class="section section-alt">
       <div class="container">
         <h2 class="text-center">Was suchst du?</h2>
-        <div class="entry-cards">
-          <div class="entry-card" onclick="navigateTo('mensch')">
-            <figure class="entry-media image-context-card" data-image-purpose="Einstieg: Vor der Anschaffung den echten Alltag prüfen" data-share-reason="Diese Karte soll jemandem geschickt werden, bevor aus Tierliebe ein unüberlegter Kauf wird.">
-              <img src="assets/images/dog-owner-walking.jpg" alt="Hund wird an der Leine durch den Alltag geführt" aria-hidden="true" style="--image-position:center 50%;">
-              <figcaption class="context-caption">Passt dieser Alltag wirklich?</figcaption>
-            </figure>
-            <h3>Ich überlege, mir ein Tier zu holen</h3>
-            <p>Finde heraus, ob dein Leben gerade zu einem Tier passt – ehrlich und ohne Schönfärberei.</p>
-          </div>
-          <div class="entry-card" onclick="navigateTo('hunde')">
-            <figure class="entry-media image-context-card" data-image-purpose="Einstieg: Haltung verbessern heißt Bedürfnisse erkennen" data-share-reason="Die Karte zeigt: Besser machen ist konkret, nicht moralisch abstrakt.">
-              <img src="assets/images/voegel-voliere.jpg" alt="Wellensittiche in einer strukturierten Voliere" aria-hidden="true" style="--image-position:center 48%;">
-              <figcaption class="context-caption">Bedürfnisse sieht man</figcaption>
-            </figure>
-            <h3>Ich habe ein Tier und will es besser machen</h3>
-            <p>Konkrete Infos zu deiner Tierart: Haltung, Gesundheit, Kosten, häufige Fehler.</p>
-          </div>
-          <div class="entry-card" onclick="navigateTo('notfall')">
-            <figure class="entry-media image-context-card" data-image-purpose="Einstieg: Notfall ruhig und früh fachlich klären" data-share-reason="Diese Karte soll nicht erschrecken, sondern den Schritt zum Tierarzt entlasten.">
-              <img src="assets/images/cat-carrier-square.jpg" alt="Katze blickt aus einer Transporttasche" aria-hidden="true" style="--image-position:center 16%;">
-              <figcaption class="context-caption">Lieber einmal zu früh</figcaption>
-            </figure>
-            <h3>Etwas stimmt mit meinem Tier nicht</h3>
-            <p>Warnsignale, Vergiftungsgefahren, Erste Hilfe – und wann du sofort zum Tierarzt musst.</p>
-          </div>
+        <div class="door-grid">
+          <button class="door-card" onclick="navigateTo('mensch')">
+            <span class="door-mark">01</span>
+            <h3>Ich überlege, mir ein Tier zu holen.</h3>
+            <p>Erst Alltag, Geld, Zeit und Verantwortung prüfen, bevor aus einem Wunsch ein Lebewesen wird.</p>
+            <span class="more">Ehrlich anfangen →</span>
+          </button>
+          <button class="door-card" onclick="document.getElementById('tierarten-start').scrollIntoView({behavior:'smooth', block:'start'})">
+            <span class="door-mark">02</span>
+            <h3>Ich habe ein Tier und will es besser machen.</h3>
+            <p>Konkrete Haltungsthemen nach Tierart, ohne Ausreden und ohne Schönfärberei.</p>
+            <span class="more">Tierart wählen →</span>
+          </button>
+          <button class="door-card" onclick="navigateTo('notfall')">
+            <span class="door-mark">03</span>
+            <h3>Etwas stimmt mit meinem Tier nicht.</h3>
+            <p>Warnsignale, Vergiftungen und der Moment, in dem Abwarten gefährlich wird.</p>
+            <span class="more">Zum Notfall →</span>
+          </button>
+          <button class="door-card" onclick="navigateTo('wissen')">
+            <span class="door-mark">04</span>
+            <h3>Ich will einen Satz prüfen, den ich oft höre.</h3>
+            <p>Goldfischglas, Einzelvogel, Katermythen, Globuli: Was stimmt wirklich?</p>
+            <span class="more">Mythen prüfen →</span>
+          </button>
+          <button class="door-card" onclick="navigateTo('noch-nicht-bereit')">
+            <span class="door-mark">05</span>
+            <h3>Vielleicht passt ein Tier gerade nicht.</h3>
+            <p>Kein Tier zu nehmen kann die verantwortungsvollste Form von Tierliebe sein.</p>
+            <span class="more">Druck rausnehmen →</span>
+          </button>
         </div>
       </div>
     </div>
 
     <div class="section">
       <div class="container">
+        <h2 class="text-center">Drei Dinge, die man sofort teilen sollte</h2>
+        <p class="text-center text-muted">Nicht als Vorwurf. Als kurzer Perspektivwechsel für Menschen, die Tiere lieben, aber ein Detail übersehen.</p>
+        <div class="insight-grid">
+          <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Katzen: Ruhe kann Rückzug, Langeweile oder Überforderung sein" data-share-reason="Der Satz soll Katzenhalter erreichen, die stilles Verhalten zu schnell als Zufriedenheit lesen.">
+            <figure>
+              <img src="assets/images/cat-window-perch.jpg" alt="Katze sitzt auf einer Fensterbank und blickt nach draußen" loading="lazy" style="--image-position:center 44%;">
+              <figcaption class="context-caption">Still heißt nicht automatisch zufrieden</figcaption>
+            </figure>
+            <div class="insight-body">
+              <div class="nr">Nr. 01</div>
+              <h3>Katzen leiden oft leise.</h3>
+              <p>Wer nur auf Lärm, Kratzen oder Protest achtet, übersieht Rückzug, Langeweile und Schmerz.</p>
+            </div>
+          </article>
+          <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Kleintiere: Gehege und Struktur sind Grundbedürfnis, nicht Dekoration" data-share-reason="Diese Karte soll den Reflex brechen, Kleintiere als einfache Kinderzimmertiere zu sehen.">
+            <figure>
+              <img src="assets/images/hamster-home-built-enclosure.png" alt="Großes selbst gebautes Hamstergehege mit Einstreu, Laufrad und Verstecken" loading="lazy" style="--image-position:center 55%;">
+              <figcaption class="context-caption">Fläche ist ein Grundbedürfnis</figcaption>
+            </figure>
+            <div class="insight-body">
+              <div class="nr">Nr. 02</div>
+              <h3>Ein Käfig ist selten ein Zuhause.</h3>
+              <p>Viele Kleintiere brauchen Fläche, Struktur, Artgenossen und Rückzugsorte, nicht nur Futter und Streu.</p>
+            </div>
+          </article>
+          <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Notfall: Der ruhige Tierarztmoment senkt die Hemmung, früher Hilfe zu holen" data-share-reason="Die Karte soll Menschen bestärken, Unsicherheit nicht auszusitzen.">
+            <figure>
+              <img src="assets/images/vet-office-with-dog.jpg" alt="Hund sitzt ruhig in einer Tierarztpraxis" loading="lazy" style="--image-position:center 58%;">
+              <figcaption class="context-caption">Lieber einmal zu früh</figcaption>
+            </figure>
+            <div class="insight-body">
+              <div class="nr">Nr. 03</div>
+              <h3>Abwarten ist nicht neutral.</h3>
+              <p>Bei Atemnot, Krämpfen, Vergiftungsverdacht oder starken Schmerzen zählt jede Stunde.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="tierarten-start">
+      <div class="container">
         <h2 class="text-center">Tierarten-Übersicht</h2>
         <p class="text-center text-muted">Wähle eine Tierart für ausführliche Infos zu Haltung, Kosten und häufigen Fehlern.</p>
         <div class="animal-grid">
           <div class="animal-card image-context-card" data-image-purpose="Tierkarte Hunde: Alltag und Führung statt Hundeporträt" data-share-reason="Der Klick soll vom Wunschhund zum Zeit- und Alltagscheck führen." onclick="navigateTo('hunde')"><img class="animal-card-img" src="assets/images/dog-owner-walking.jpg" alt="Hund an der Leine im Alltag" loading="lazy"><span class="animal-card-caption">Alltag und Zeit</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></div>
-          <div class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Vorsorge und Verantwortung statt Niedlichkeit" data-share-reason="Die Karte soll Katzenhaltung als leise Verantwortung rahmen." onclick="navigateTo('katzen')"><img class="animal-card-img" src="assets/images/cat-carrier-square.jpg" alt="Katze blickt aus einer Transporttasche" loading="lazy"><span class="animal-card-caption">Vorsorge zählt</span><span>Katzen</span><small>Einzeljäger, aber keine Einzelgänger.</small></div>
+          <div class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Wohnung muss Bedürfnisse sichtbar mitdenken" data-share-reason="Die Karte soll Katzenhaltung als Umfeldgestaltung rahmen, nicht als bloßes Kuscheltierbild." onclick="navigateTo('katzen')"><img class="animal-card-img" src="assets/images/cat-scratching-post.jpg" alt="Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung" loading="lazy" style="object-position:center 48%;"><span class="animal-card-caption">Umfeld gestalten</span><span>Katzen</span><small>Einzeljäger, aber keine Einzelgänger.</small></div>
           <div class="animal-card image-context-card" data-image-purpose="Tierkarte Vögel: Schwarm und Raum sichtbar machen" data-share-reason="Das Bild widerspricht dem Einzelvogel-im-Käfig-Reflex." onclick="navigateTo('voegel')"><img class="animal-card-img" src="assets/images/voegel-voliere.jpg" alt="Mehrere Wellensittiche in einer Voliere" loading="lazy"><span class="animal-card-caption">Schwarm und Raum</span><span>Vögel</span><small>Schwarmtiere, keine Dekoration.</small></div>
           <div class="animal-card image-context-card" data-image-purpose="Tierkarte Kleintiere: Sozialkontakt statt Spielzeughaltung" data-share-reason="Das Bild zeigt Kleintiere als empfindsame Tiere, nicht als Kinderzimmerobjekt." onclick="navigateTo('kleintiere')"><img class="animal-card-img" src="assets/images/kleintiere-zwei-meerschweinchen.jpg" alt="Zwei Meerschweinchen zusammen im Gras" loading="lazy"><span class="animal-card-caption">Nicht allein denken</span><span>Kleintiere</span><small>Kein Einstiegstier, kein Spielzeug.</small></div>
           <div class="animal-card image-context-card" data-image-purpose="Tierkarte Exoten: Technik und Klima statt Faszination allein" data-share-reason="Der Klick soll von Faszination zu Temperatur, Licht und Fachwissen führen." onclick="navigateTo('exoten')"><img class="animal-card-img" src="assets/images/exot-bartagame.jpg" alt="Bartagame als Beispiel für anspruchsvolle Exotenhaltung" loading="lazy"><span class="animal-card-caption">Klima und Technik</span><span>Exoten</span><small>Technisch anspruchsvoll.</small></div>
@@ -1974,23 +2532,15 @@
         <p style="max-width: 750px; margin: 0 auto 1.5rem;" class="text-muted">Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir sind weder Verein noch Organisation – nur zwei Menschen, denen Tierschutz am Herzen liegt. Deshalb diese Seite, und deshalb unterstützen wir auch die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener">Streunerhilfe Plau e.&thinsp;V.</a>, die sich ehrenamtlich um Streunerkatzen in unserer Region kümmert.</p>
 
         <div class="share-focus">
-          <div class="share-focus-media" aria-hidden="true">
-            <figure class="image-context-card" data-image-purpose="Teilen-Zone: Wissen verhindert spätes Handeln" data-share-reason="Die Zone muss zeigen, dass Teilen konkrete Hilfe auslösen kann.">
-              <img class="image-fit-contain" src="assets/images/cat-soft-carrier.jpg" alt="" loading="lazy">
-              <figcaption class="context-caption">Wissen kann früher zum Tierarzt führen</figcaption>
-            </figure>
-            <figure class="image-context-card" data-image-purpose="Teilen-Zone: Kleine Tiere nicht kleinreden" data-share-reason="Der Link ist teilenswert, weil er typische Unterschätzung vor dem Kauf bremst.">
-              <img src="assets/images/kleintiere-zwei-meerschweinchen.jpg" alt="" loading="lazy" style="--image-position:center 44%;">
-              <figcaption class="context-caption">Klein heißt nicht anspruchslos</figcaption>
-            </figure>
-            <figure class="image-context-card" data-image-purpose="Teilen-Zone: Haltungswissen sichtbar machen" data-share-reason="Das Bild macht aus abstraktem Wissen sichtbare Tierbedürfnisse.">
-              <img src="assets/images/voegel-voliere.jpg" alt="" loading="lazy" style="--image-position:center 48%;">
-              <figcaption class="context-caption">Bedürfnisse weitergeben</figcaption>
-            </figure>
-          </div>
           <div>
+            <div class="eyebrow">Wissen weitergeben</div>
             <h3>Teilen ist hier der eigentliche Tierschutz.</h3>
             <p>Wenn nur eine Person vor dem Kauf genauer hinschaut, einem Tierarzt früher vertraut oder eine Kastration nicht mehr aufschiebt, hat sich dieser Link gelohnt.</p>
+            <div class="share-points">
+              <div class="share-point">Für Menschen, die gerade „nur mal schauen".</div>
+              <div class="share-point">Für Halter, die ein Problem lange kleinreden.</div>
+              <div class="share-point">Für Familien, bevor aus Wunsch ein Tierheimfall wird.</div>
+            </div>
             <div class="share-bar">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Ehrliche Aufklärung über Tierhaltung – Fakten statt Bauchgefühl. Für alle, die Tiere haben oder wollen:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('facebook')">Facebook</button>
@@ -3033,7 +3583,7 @@
   <!-- ===== SECTION 13: NOTFALL ===== -->
   <!-- ============================================================ -->
   <section id="notfall" class="page">
-    <div class="hero" style="background: linear-gradient(135deg, #C2553A 0%, #8B3A2A 100%);">
+    <div class="hero" style="background: linear-gradient(135deg, #2E6F73 0%, #214F58 100%);">
       <div class="container">
         <h1>Notfall – wenn etwas mit deinem Tier nicht stimmt</h1>
         <p>Im Zweifel gilt immer: Lieber einmal zu oft zum Tierarzt als einmal zu wenig.</p>
@@ -3301,7 +3851,7 @@
 
         <div class="grid-2" style="margin: 2rem 0;">
           <div class="card">
-            <img class="card-media" src="assets/images/dog-owner-walking.jpg" alt="Hundespaziergang als Beispiel für Hilfe ohne eigenes Tier" loading="lazy">
+            <img class="card-media" src="assets/images/dog-gentle-affection.jpg" alt="Ruhiger Kontakt zwischen Mensch und Hund als Beispiel für Hilfe ohne eigenes Tier" loading="lazy">
             <div class="card-body">
               <h3>Gassi-Service & Katzenstreicheln</h3>
               <p>Viele Tierheime und private Halter suchen Menschen, die Hunde ausführen oder Zeit mit Katzen verbringen. Du bekommst Tierkontakt, das Tier bekommt Zuwendung – ohne langfristige Verpflichtung.</p>
@@ -3309,7 +3859,7 @@
             </div>
           </div>
           <div class="card">
-            <img class="card-media" src="assets/images/tierheim-hund.jpg" alt="Tierheimtier als Beispiel für eine Patenschaft" loading="lazy">
+            <img class="card-media" src="assets/images/animal-shelter-fundraiser.jpg" alt="Tierschutzaktion als Beispiel für Patenschaften und Unterstützung" loading="lazy">
             <div class="card-body">
               <h3>Patenschaften</h3>
               <p>Für 10–30 Euro im Monat kannst du ein Tierheimtier unterstützen, das schwer vermittelbar ist – alt, krank oder einfach „zu gewöhnlich". Du bekommst Updates, kannst besuchen, trägst aber nicht die Vollverantwortung.</p>
@@ -3325,7 +3875,7 @@
             </div>
           </div>
           <div class="card">
-            <img class="card-media" src="assets/images/guinea-pig-habitat.jpg" alt="Vorbereitetes Kleintier-Gehege als Beispiel für praktische Tierheimarbeit" loading="lazy">
+            <img class="card-media image-fit-contain" src="assets/images/rat-cage-01.jpg" alt="Strukturierter Kleintierkäfig als Beispiel für praktische Tierheimarbeit" loading="lazy">
             <div class="card-body">
               <h3>Ehrenamt im Tierheim</h3>
               <p>Füttern, Reinigen, Spielen, Sozialisieren, Öffentlichkeitsarbeit, Fahrdienste – Tierheime brauchen helfende Hände. Du lernst dabei enorm viel über Tierhaltung und findest vielleicht dein zukünftiges Tier.</p>
@@ -3427,20 +3977,42 @@
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/impressum">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz">Datenschutz</a></p>
         <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener">TASSO e.&thinsp;V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener">BMEL</a></p>
-        <p class="image-credits"><strong>Bildnachweise:</strong>
-          <a href="https://commons.wikimedia.org/wiki/File:Dog_with_owner_walking.jpg" target="_blank" rel="noopener">Dog with owner walking</a>, Anish Anilkumar, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:2007-01-13_Cat_in_a_carrier_(square).jpg" target="_blank" rel="noopener">Cat in a carrier</a>, Greg Mote, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Cat_in_soft_side_cat_carrier.jpg" target="_blank" rel="noopener">Cat in soft side carrier</a>, Tylervigen, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Guinea_pig_habitat.jpg" target="_blank" rel="noopener">Guinea pig habitat</a>, Mila.cridlig, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_01.jpg" target="_blank" rel="noopener">Budgerigars in a bird aviary</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Guinea_Pigs.jpg" target="_blank" rel="noopener">Guinea Pigs</a>, Daniel Hall, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Budgerigar_01.jpg" target="_blank" rel="noopener">Budgerigar 01</a>, Asivechowdhury, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Pogona_vitticeps.jpg" target="_blank" rel="noopener">Pogona vitticeps</a>, Joxerra Aihartza, <a href="https://artlibre.org/licence/lal/en" target="_blank" rel="noopener">FAL</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Horse_herd_in_Wales_(Unsplash).jpg" target="_blank" rel="noopener">Horse herd in Wales</a>, Samantha Scholl sauriel, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:A_PUG_dog.jpg" target="_blank" rel="noopener">A PUG dog</a>, Nancy Wong, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-          <a href="https://commons.wikimedia.org/wiki/File:Dog_in_Yedikule_Animal_Shelter.jpg" target="_blank" rel="noopener">Dog in Yedikule Animal Shelter</a>, Turkish delight2, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
-          Lokale Kopien wurden teils verkleinert und im Layout beschnitten.
-        </p>
+        <details class="image-credits">
+          <summary>Bildnachweise anzeigen</summary>
+          <p><strong>Bildnachweise:</strong>
+            <a href="https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103129).jpg" target="_blank" rel="noopener">Souda Animal Shelter volunteer event</a>, U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_with_owner_walking.jpg" target="_blank" rel="noopener">Dog with owner walking</a>, Anish Anilkumar, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Veterinary_Office_with_dog.JPG" target="_blank" rel="noopener">Veterinary Office with dog</a>, MarkBuckawicki, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Kitty_cat_in_a_window_sill_perch.jpg" target="_blank" rel="noopener">Kitty cat in a window sill perch</a>, Tomwsulcer, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Zelda_on_her_scratching_post.jpg" target="_blank" rel="noopener">Zelda on her scratching post</a>, Jeffwgallant, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Home_built_enclosure_for_a_Syrian_Hamster.png" target="_blank" rel="noopener">Home built enclosure for a Syrian Hamster</a>, Jennifer Carlsson, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_01.jpg" target="_blank" rel="noopener">Budgerigars in a bird aviary 01</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Guinea_Pigs.jpg" target="_blank" rel="noopener">Guinea Pigs</a>, Daniel Hall, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Pogona_vitticeps.jpg" target="_blank" rel="noopener">Pogona vitticeps</a>, Joxerra Aihartza, <a href="https://artlibre.org/licence/lal/en" target="_blank" rel="noopener">FAL</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Horse_herd_in_Wales_(Unsplash).jpg" target="_blank" rel="noopener">Horse herd in Wales</a>, Samantha Scholl sauriel, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Friendly_dog_enjoys_gentle_affection_from_its_owner_while_relaxing.jpg" target="_blank" rel="noopener">Friendly dog enjoys gentle affection</a>, Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:CFAY-BASED_PAWS_HOSTS_FUNDRAISER_(5628139).jpg" target="_blank" rel="noopener">CFAY-BASED PAWS fundraiser</a>, U.S. Navy photo by Petty Officer 2nd Class Tyler Fraser, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:2007-01-13_Cat_in_a_carrier_(square).jpg" target="_blank" rel="noopener">Cat in a carrier</a>, Greg Mote, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Rat_cage_01.jpg" target="_blank" rel="noopener">Rat cage 01</a>, Inge Habex, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Rabbit_being_held_in_outdoor_enclosure_before_being_adopted_out_to_public.jpg" target="_blank" rel="noopener">Rabbit being held in outdoor enclosure</a>, Opossumsrule, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_training_in_Dovedale_-_geograph.org.uk_-_701827.jpg" target="_blank" rel="noopener">Dog training in Dovedale</a>, David Lally, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Two_cats_on_the_window.jpg" target="_blank" rel="noopener">Two cats on the window</a>, Stanglavine, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_02.jpg" target="_blank" rel="noopener">Budgerigars in a bird aviary 02</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Guinea_pig_habitat.jpg" target="_blank" rel="noopener">Guinea pig habitat</a>, Mila.cridlig, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Bearded_Dragon_in_terrarium.jpg" target="_blank" rel="noopener">Bearded Dragon in terrarium</a>, André Karwath, <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener">CC BY-SA 2.5</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Horse_paddocks_and_shelters_at_Redwings_-_geograph.org.uk_-_1385692.jpg" target="_blank" rel="noopener">Horse paddocks and shelters at Redwings</a>, Evelyn Simak, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Feral_cat,_sterilized_through_a_Trap-Neuter-Return_program.jpg" target="_blank" rel="noopener">Feral cat, sterilized through TNR</a>, FelineAvenger, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:A_PUG_dog.jpg" target="_blank" rel="noopener">A PUG dog</a>, Nancy Wong, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_in_Yedikule_Animal_Shelter.jpg" target="_blank" rel="noopener">Dog in Yedikule Animal Shelter</a>, Turkish delight2, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:A_pair_of_cats_in_a_cat_tree.jpg" target="_blank" rel="noopener">A pair of cats in a cat tree</a>, Matt Buck, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_at_zia_veterinary_and_pets_clinic.jpg" target="_blank" rel="noopener">Dog at zia veterinary and pets clinic</a>, Tauseefiqbal864, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Goldfish_aquarium.jpg" target="_blank" rel="noopener">Goldfish aquarium</a>, علاء, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103132).jpg" target="_blank" rel="noopener">Souda Animal Shelter volunteer event 6103132</a>, U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:Cat_gets_checkup_at_Guantanamo_-a.jpg" target="_blank" rel="noopener">Cat gets checkup at Guantanamo</a>, Elisha Dawkins, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:Cat_in_soft_side_cat_carrier.jpg" target="_blank" rel="noopener">Cat in soft side carrier</a>, Tylervigen, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+            Lokale Kopien wurden teils verkleinert und im Layout beschnitten.
+          </p>
+        </details>
       </div>
     </div>
   </footer>
@@ -3451,20 +4023,210 @@
   <!-- ===== JAVASCRIPT ===== -->
   <script>
     var articleHeroImages = {
-      'mensch': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Katze in einer Transporttasche als Symbol für Verantwortung vor der Tieraufnahme', position: 'center 42%' },
-      'hunde': { src: 'assets/images/dog-owner-walking.jpg', alt: 'Hund an der Leine im Alltag statt als bloßes Wunschbild', position: 'center 48%' },
-      'katzen': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Katze in einer Transporttasche als Beispiel für Vorsorge und Verantwortung', position: 'center 42%' },
-      'voegel': { src: 'assets/images/vogel-wellensittich.jpg', alt: 'Wellensittich als Beispiel für Vogelhaltung und Schwarmbedürfnisse', position: 'center 35%' },
-      'kleintiere': { src: 'assets/images/guinea-pig-habitat.jpg', alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung', position: 'center 50%' },
-      'exoten': { src: 'assets/images/exot-bartagame.jpg', alt: 'Bartagame als Beispiel für anspruchsvolle Exotenhaltung', position: 'center 45%' },
-      'pferde': { src: 'assets/images/horse-herd-pasture.jpg', alt: 'Pferdeherde auf einer Weide als Bild für Sozialkontakt', position: 'center 48%' },
-      'kastration': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in Transporttasche als ruhiges Bild für Vorsorge und Tierarztweg', position: 'center 45%' },
-      'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%' },
-      'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als Beispiel für Adoption statt Kauf', position: 'center 45%' },
-      'selbsttest': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Transporttasche als Erinnerung an konkrete Vorbereitung vor der Entscheidung', position: 'center 42%' },
-      'notfall': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in Transportbox als ruhiges Bild für Notfallvorbereitung', position: 'center 45%' },
-      'wissen': { src: 'assets/images/vogel-wellensittich.jpg', alt: 'Wellensittich als Beispiel für Mythen und Fakten zur Tierhaltung', position: 'center 35%' },
-      'noch-nicht-bereit': { src: 'assets/images/dog-owner-walking.jpg', alt: 'Hundespaziergang als Beispiel für Tierliebe ohne eigenes Tier', position: 'center 48%' }
+      'mensch': { src: 'assets/images/shelter-volunteer-dog-care.jpg', alt: 'Freiwillige im Tierheim kümmern sich ruhig um einen Hund', position: 'center 50%', caption: 'Der Wunsch nach Nähe braucht vorher einen ehrlichen Realitätscheck.', purpose: 'Mensch-Seite: Verantwortung und Beziehung statt Wunschbild zeigen', shareReason: 'Das Bild soll den Satz stützen: Vor einem Tier kommt die ehrliche Entscheidung.' },
+      'hunde': { src: 'assets/images/dog-training-dovedale.jpg', alt: 'Hundetraining im Freien als Bild für Alltag, Zeit und Beziehung', position: 'center 48%', caption: 'Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.', purpose: 'Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen', shareReason: 'Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen.' },
+      'katzen': { src: 'assets/images/two-cats-window.jpg', alt: 'Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung', position: 'center 48%', caption: 'Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.', purpose: 'Katzen-Seite: stille Bedürfnisse sichtbar machen', shareReason: 'Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer.' },
+      'voegel': { src: 'assets/images/voegel-voliere-02.jpg', alt: 'Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum', position: 'center 44%', caption: 'Schwarm, Flugraum und Reize sind kein Extra.', purpose: 'Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen', shareReason: 'Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen.' },
+      'kleintiere': { src: 'assets/images/guinea-pig-habitat.jpg', alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung', position: 'center 50%', caption: 'Kleintiere brauchen Fläche, Struktur und Artgenossen.', purpose: 'Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen', shareReason: 'Das Bild soll den Mythos vom einfachen Einstiegstier brechen.' },
+      'exoten': { src: 'assets/images/bearded-dragon-terrarium.jpg', alt: 'Bartagame im Terrarium als Bild für Technik, Licht und Klima', position: 'center 45%', caption: 'Leise Tiere brauchen oft die präziseste Technik.', purpose: 'Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen', shareReason: 'Das Bild soll Faszination mit Verantwortung koppeln.' },
+      'pferde': { src: 'assets/images/horse-paddocks-shelter.jpg', alt: 'Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme', position: 'center 50%', caption: 'Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.', purpose: 'Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen', shareReason: 'Das Bild soll die große Verpflichtung konkret machen.' },
+      'kastration': { src: 'assets/images/feral-cat-tnr.jpg', alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration', position: 'center 44%', caption: 'Kastration verhindert Leid, bevor es sichtbar wird.', purpose: 'Kastrations-Seite: Prävention und Streunerkatzenkontext zeigen', shareReason: 'Das Bild macht klar, dass Kastration praktischer Tierschutz ist.' },
+      'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%', caption: 'Süß darf kein Leidensmerkmal sein.', purpose: 'Qualzucht-Seite: problematische Zuchtmerkmale sachlich zeigen', shareReason: 'Das Bild soll Unbehagen erklären, ohne Clickbait zu werden.' },
+      'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als klares Bild für Adoption statt Kauf', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
+      'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
+      'notfall': { src: 'assets/images/dog-veterinary-clinic.jpg', alt: 'Hund in einer Tierarztpraxis als ruhiges Bild für rechtzeitige Hilfe', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
+      'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leben müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
+      'noch-nicht-bereit': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang', position: 'center 46%', caption: 'Warten kann die tierliebste Entscheidung sein.', purpose: 'Noch-nicht-bereit-Seite: verantwortliches Warten statt Scheitern zeigen', shareReason: 'Das Bild soll Tierverzicht als Fürsorge normalisieren.' }
+    };
+
+    var articleEnhancements = {
+      mensch: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm decision-band" data-enhancement="mensch-decision">
+            <span class="eyebrow">Spiegelmoment</span>
+            <h3>Die wichtigste Frage ist nicht: Welches Tier will ich?</h3>
+            <p>Die wichtigste Frage ist: Welches Leben kann ich einem Tier wirklich geben? Genau an dieser Stelle wird die Seite teilbar: für Menschen, die kurz vor einer Anschaffung stehen und noch offen genug sind, ehrlich zu prüfen.</p>
+          </div>`
+        },
+        {
+          afterHeading: 'Die häufigsten Selbstlügen',
+          html: `<div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
+            <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin."</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier."</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Share-Grund</span><h3>Vor dem Kauf teilen</h3><p>Diese Seite gehört zu Menschen, die gerade „nur mal schauen" und innerlich schon entschieden haben.</p></article>
+          </div>`
+        }
+      ],
+      hunde: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
+            <div class="metric-card"><strong>4-5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
+            <div class="metric-card"><strong>12-20 Tsd. €</strong><span>realistische Lebenszeitkosten, bevor chronische Krankheiten dazukommen.</span></div>
+            <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
+          </div>`
+        },
+        {
+          afterHeading: 'Allein zu Hause',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht."</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Beziehung, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Ein Hund wartet auf dich.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
+          </div>`
+        }
+      ],
+      katzen: [
+        {
+          afterHeading: 'Stilles Leiden erkennen',
+          html: `<div class="article-rhythm argument-grid" data-enhancement="katzen-still">
+            <article class="rhythm-card"><span class="eyebrow">Signal</span><h3>Rückzug</h3><p>Wenn eine Katze plötzlich weniger Kontakt sucht, ist das kein Charakterwechsel, sondern ein Warnsignal.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Signal</span><h3>Unsauberkeit</h3><p>Das ist selten Protest. Häufig stecken Stress, Schmerzen oder Harnwegserkrankungen dahinter.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Handlung</span><h3>Früher prüfen</h3><p>Lieber einmal zu viel zum Tierarzt als eine stille Erkrankung zu spät sehen.</p></article>
+          </div>`
+        }
+      ],
+      voegel: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm quote-band" data-enhancement="voegel-schwarm">
+            <span class="eyebrow">Share-Satz</span>
+            <blockquote>Ein einzelner Vogel wird nicht zahm. Er wird einsam.</blockquote>
+            <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer" geplant ist.</p>
+          </div>`
+        }
+      ],
+      kleintiere: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm compare-mini" data-enhancement="kleintiere-vergleich">
+            <div class="compare-card bad"><strong>Hamster</strong><span>Nachtaktiv, Einzelgänger, kein Anfasstier für Kinder.</span></div>
+            <div class="compare-card risk"><strong>Kaninchen</strong><span>Gruppenhaltung, viel Fläche, hohe Tierarztkosten bei Zähnen und Gebärmutter.</span></div>
+            <div class="compare-card risk"><strong>Ratten</strong><span>Intelligent, sozial, kurzlebig. Brauchen Gruppe, Höhe und Beschäftigung.</span></div>
+          </div>`
+        }
+      ],
+      exoten: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm quote-band" data-enhancement="exoten-leise">
+            <span class="eyebrow">Harte Wahrheit</span>
+            <blockquote>Bei Exoten heißt „pflegeleicht" oft nur: Das Tier stirbt leise.</blockquote>
+            <p>Temperatur, UV-B, Feuchtigkeit, Futter und Meldepflichten sind keine Details. Sie sind die Haltung.</p>
+          </div>`
+        }
+      ],
+      pferde: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm metric-grid" data-enhancement="pferde-stats">
+            <div class="metric-card"><strong>15-30 km</strong><span>natürliche Tagesbewegung im Schritt, grasen und Sozialkontakt eingeschlossen.</span></div>
+            <div class="metric-card"><strong>20+ Jahre</strong><span>Verpflichtung, Kosten und Alltag ändern sich über Jahrzehnte.</span></div>
+            <div class="metric-card"><strong>Herde</strong><span>Ein Pferd ist kein Solist. Sozialkontakt ist Grundbedürfnis.</span></div>
+          </div>`
+        }
+      ],
+      kastration: [
+        {
+          afterHeading: 'Die häufigsten Gegenargumente',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="kastration-kosten">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Das ist zu teuer."</h3><p>Die Kastration wird als vermeidbare Ausgabe gesehen, bis Nachwuchs, Kämpfe oder eine Notfall-OP kommen.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Prävention ist günstiger als Leid.</h3><p>Bei Katzen verhindert Kastration ungewollte Würfe, Revierkämpfe, Hormonstress und viele Folgekosten.</p></div>
+          </div>`
+        }
+      ],
+      qualzucht: [
+        {
+          afterHeading: 'Die bekanntesten Beispiele',
+          html: `<div class="article-rhythm signal-grid" data-enhancement="qualzucht-signale">
+            <article class="signal-card"><strong>Atmung</strong><span>Röcheln, Schnarchen und schnelle Erschöpfung sind keine niedlichen Rassemerkmale.</span></article>
+            <article class="signal-card"><strong>Bewegung</strong><span>Wenn Knochen, Gelenke oder Körperform normale Bewegung verhindern, ist Schönheit Leid.</span></article>
+            <article class="signal-card"><strong>Wahrnehmung</strong><span>Fell, Augen, Ohren oder Kopfgefieder dürfen Sicht, Hören und Alltag nicht behindern.</span></article>
+          </div>`
+        },
+        {
+          afterHeading: 'Was du tun kannst',
+          html: `<div class="article-rhythm article-split image-context-card" data-enhancement="qualzucht-adoption" data-image-purpose="Qualzucht-Lösungsabschnitt: Adoption als konkrete Alternative zu Nachfrage zeigen" data-share-reason="Das Bild soll den Ausweg zeigen, nicht nur das Problem bebildern.">
+            <figure style="--image-position:center 48%;">
+              <img src="assets/images/rabbit-adoption-enclosure.jpg" alt="Kaninchen wird vor einer Adoption in einem Außengehege gehalten" loading="lazy">
+              <figcaption class="context-caption">Nicht kaufen. Nachfrage entziehen. Tierschutztieren eine Chance geben.</figcaption>
+            </figure>
+            <div class="article-split-copy">
+              <span class="eyebrow">Ausweg</span>
+              <h3>Du musst Leid nicht finanzieren.</h3>
+              <p>Qualzucht endet nicht durch Mitleid mit einzelnen Rassen, sondern durch Nachfrage-Stopp. Adoption ist hier kein Trostpreis, sondern die konsequenteste Antwort.</p>
+              <button class="btn btn-primary" onclick="navigateTo('adoption')">Adoption statt Kauf</button>
+            </div>
+          </div>`
+        }
+      ],
+      adoption: [
+        {
+          afterHeading: 'Der Preis-Decoder',
+          html: `<div class="article-rhythm share-callout" data-enhancement="adoption-price-share">
+            <span class="eyebrow">Teilbarer Moment</span>
+            <h3>Der billige Welpe ist oft das teuerste Tier.</h3>
+            <p>Genau diese Rechnung sollte jemand sehen, bevor er bei Kleinanzeigen ein „Schnäppchen" anklickt.</p>
+            <div class="share-bar">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Der billige Welpe ist oft das teuerste Tier. Lies das, bevor du über Kleinanzeigen kaufst:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      selbsttest: [
+        {
+          afterSelector: '#test-form',
+          html: `<div class="article-rhythm decision-band" data-enhancement="selbsttest-share">
+            <span class="eyebrow">Vorher teilen</span>
+            <h3>Der beste Zeitpunkt für diesen Test ist vor dem Tier.</h3>
+            <p>Schick ihn jemandem, der gerade „nur mal guckt". Nach dem Kauf wird aus Einsicht viel schneller Rechtfertigung.</p>
+          </div>`
+        }
+      ],
+      notfall: [
+        {
+          afterSelector: '.warning-box',
+          html: `<div class="article-rhythm compare-mini" data-enhancement="notfall-handeln">
+            <div class="compare-card good"><strong>1. Anrufen</strong><span>Tierarzt oder Klinik, Symptom und Zeitpunkt knapp nennen.</span></div>
+            <div class="compare-card good"><strong>2. Sichern</strong><span>Tier ruhig halten, Transport vorbereiten, Substanz/Verpackung mitnehmen.</span></div>
+            <div class="compare-card bad"><strong>3. Nicht abwarten</strong><span>Bei Atemnot, Vergiftung, Krampf oder Harnstopp zählt jede Minute.</span></div>
+          </div>`
+        }
+      ],
+      wissen: [
+        {
+          afterHeading: '„Aber bei meinem Tier hat es geholfen"',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="wissen-korrelation">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Es wurde besser, also hat es gewirkt."</h3><p>Das ist ein verständlicher Schluss. Aber zeitliche Nähe ist kein Wirknachweis.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Beobachtung ist keine Studie.</h3><p>Spontanheilung, Futterwechsel, Schonung oder echte Behandlung werden oft den Globuli zugeschrieben.</p></div>
+          </div>`
+        },
+        {
+          afterHeading: 'Was stattdessen hilft',
+          html: `<div class="article-rhythm article-split image-context-card" data-enhancement="wissen-evidenz" data-image-purpose="Wissen-Seite: evidenzbasierte Tiermedizin als konkreter Ausweg statt Globuli zeigen" data-share-reason="Das Bild soll den Schritt weg vom Glauben und hin zur Untersuchung sichtbar machen.">
+            <figure style="--image-position:center 45%;">
+              <img src="assets/images/cat-vet-checkup.jpg" alt="Katze wird in einer Tierarztpraxis untersucht" loading="lazy">
+              <figcaption class="context-caption">Wenn ein Tier krank wirkt, braucht es Untersuchung, keine Verzögerung.</figcaption>
+            </figure>
+            <div class="article-split-copy">
+              <span class="eyebrow">Konkreter Ausweg</span>
+              <h3>Beobachten, dokumentieren, untersuchen lassen.</h3>
+              <p>Der hilfreiche Schritt ist nicht „irgendetwas geben", sondern Symptome ernst nehmen, Veränderungen notieren und rechtzeitig tierärztlich abklären.</p>
+              <button class="btn btn-primary" onclick="navigateTo('notfall')">Warnsignale prüfen</button>
+            </div>
+          </div>`
+        }
+      ],
+      'noch-nicht-bereit': [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm quote-band" data-enhancement="nicht-bereit-entlastung">
+            <span class="eyebrow">Entlastung</span>
+            <blockquote>Kein Tier zu nehmen kann die tierliebste Entscheidung sein.</blockquote>
+            <p>Diese Seite ist nicht das Nein gegen Tiere. Sie ist das Ja zu einem besseren Zeitpunkt.</p>
+          </div>`
+        }
+      ]
     };
 
     function hydrateArticleHeroImages() {
@@ -3484,8 +4246,10 @@
         }
 
         var media = document.createElement('figure');
-        media.className = 'article-hero-media';
+        media.className = 'article-hero-media image-context-card';
         media.style.setProperty('--image-position', config.position);
+        media.dataset.imagePurpose = config.purpose;
+        media.dataset.shareReason = config.shareReason;
 
         var img = document.createElement('img');
         img.src = config.src;
@@ -3494,8 +4258,35 @@
         img.decoding = 'async';
 
         media.appendChild(img);
+        if (config.caption) {
+          var caption = document.createElement('figcaption');
+          caption.className = 'context-caption';
+          caption.textContent = config.caption;
+          media.appendChild(caption);
+        }
         container.appendChild(copy);
         container.appendChild(media);
+      });
+    }
+
+    function findHeading(page, text) {
+      return Array.from(page.querySelectorAll('h2, h3')).find(function(heading) {
+        return heading.textContent.replace(/\s+/g, ' ').trim().indexOf(text) !== -1;
+      });
+    }
+
+    function hydrateArticleEnhancements() {
+      Object.keys(articleEnhancements).forEach(function(pageId) {
+        var page = document.getElementById(pageId);
+        if (!page || page.dataset.enhancementsHydrated === 'true') return;
+
+        articleEnhancements[pageId].forEach(function(item) {
+          var target = item.afterSelector ? page.querySelector(item.afterSelector) : findHeading(page, item.afterHeading);
+          if (!target) return;
+          target.insertAdjacentHTML('afterend', item.html);
+        });
+
+        page.dataset.enhancementsHydrated = 'true';
       });
     }
 
@@ -3522,6 +4313,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       hydrateArticleHeroImages();
+      hydrateArticleEnhancements();
       var hash = location.hash.slice(1);
       navigateTo(hash || 'startseite');
     });

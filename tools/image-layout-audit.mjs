@@ -97,6 +97,15 @@ for (const viewport of viewports) {
         };
       }).filter((entry) => entry.reasons.length);
 
+      const srcCounts = visibleImgs.reduce((acc, img) => {
+        const src = img.getAttribute('src');
+        if (src) acc[src] = (acc[src] || 0) + 1;
+        return acc;
+      }, {});
+      const duplicateVisibleImages = Object.entries(srcCounts)
+        .filter(([, count]) => count > 1)
+        .map(([src, count]) => ({ src, count }));
+
       const sectionsWithoutImages = Array.from(active.querySelectorAll('section, .section, .content-section, .article-section, .card-grid, .container > .card'))
         .filter((section) => {
           const rect = section.getBoundingClientRect();
@@ -113,6 +122,7 @@ for (const viewport of viewports) {
         heroBackground: heroBg,
         visibleImageCount: visibleImgs.length,
         imageIssues,
+        duplicateVisibleImages,
         sectionsWithoutImages,
         horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
       };
@@ -130,26 +140,62 @@ await browser.close();
 
 await fs.writeFile(path.join(outDir, 'report.json'), JSON.stringify(report, null, 2));
 
+const htmlSource = await fs.readFile(path.join(projectRoot, 'index.html'), 'utf8');
+const sourceImageRefs = Array.from(
+  htmlSource.matchAll(/(?:src:\s*'|src=\")([^'\"]*assets\/images\/[^'\"]+)/g),
+  (match) => match[1]
+);
+const sourceImageCounts = sourceImageRefs.reduce((acc, src) => {
+  acc[src] = (acc[src] || 0) + 1;
+  return acc;
+}, {});
+const duplicateSourceImages = Object.entries(sourceImageCounts)
+  .filter(([, count]) => count > 1)
+  .map(([src, count]) => ({ src, count }));
+
+const uniqueSourceImages = [...new Set(sourceImageRefs)];
+const missingImageFiles = [];
+for (const src of uniqueSourceImages) {
+  try {
+    await fs.access(path.join(projectRoot, src));
+  } catch {
+    missingImageFiles.push(src);
+  }
+}
+
+const imageCredits = JSON.parse(await fs.readFile(path.join(projectRoot, 'assets', 'image-credits.json'), 'utf8'));
+const creditedImages = new Set(imageCredits.map((entry) => entry.localPath.replaceAll('\\', '/')));
+const missingCredits = uniqueSourceImages.filter((src) => !creditedImages.has(src));
+
 const failures = report.filter((entry) =>
-  !entry.heroHasImage ||
+  (entry.page !== 'startseite' && !entry.heroHasImage) ||
   entry.visibleImageCount === 0 ||
   entry.imageIssues.length > 0 ||
+  entry.duplicateVisibleImages.length > 0 ||
   entry.horizontalOverflow
 );
 
 console.log(JSON.stringify({
   checked: report.length,
-  failures: failures.length,
+  sourceImages: {
+    totalRefs: sourceImageRefs.length,
+    uniqueRefs: uniqueSourceImages.length,
+    duplicateSourceImages,
+    missingImageFiles,
+    missingCredits,
+  },
+  failures: failures.length + duplicateSourceImages.length + missingImageFiles.length + missingCredits.length,
   byPage: failures.map((entry) => ({
     viewport: entry.viewport,
     page: entry.page,
     heroHasImage: entry.heroHasImage,
     visibleImageCount: entry.visibleImageCount,
     imageIssues: entry.imageIssues,
+    duplicateVisibleImages: entry.duplicateVisibleImages,
     sectionsWithoutImages: entry.sectionsWithoutImages,
     horizontalOverflow: entry.horizontalOverflow,
     screenshot: entry.screenshot,
   })),
 }, null, 2));
 
-if (failures.length) process.exitCode = 1;
+if (failures.length || duplicateSourceImages.length || missingImageFiles.length || missingCredits.length) process.exitCode = 1;

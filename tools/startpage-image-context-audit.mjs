@@ -16,7 +16,8 @@ const viewports = [
 
 const sectionShots = [
   { name: 'hero', selector: '#startseite .hero' },
-  { name: 'entry-cards', selector: '#startseite .entry-cards' },
+  { name: 'doors', selector: '#startseite .door-grid' },
+  { name: 'insights', selector: '#startseite .insight-grid' },
   { name: 'animal-grid', selector: '#startseite .animal-grid' },
   { name: 'share-focus', selector: '#startseite .share-focus' },
 ];
@@ -61,7 +62,7 @@ for (const viewport of viewports) {
       const rect = card.getBoundingClientRect();
       const imgRect = img?.getBoundingClientRect();
       const cardText = card.textContent.replace(/\s+/g, ' ').trim();
-      const surroundingText = card.closest('.entry-card, .animal-card, .share-focus, .hero-visual-card')?.textContent.replace(/\s+/g, ' ').trim() || cardText;
+      const surroundingText = card.closest('.insight-card, .animal-card, .share-focus, .hero-visual-card')?.textContent.replace(/\s+/g, ' ').trim() || cardText;
       const src = img?.getAttribute('src') || '';
       const reasons = [];
 
@@ -92,13 +93,21 @@ for (const viewport of viewports) {
     }, {});
 
     for (const card of cards) {
-      if (card.src && srcCounts[card.src] > 3) card.reasons.push('image-reused-more-than-three-times-on-startpage');
+      if (card.src && srcCounts[card.src] > 1) card.reasons.push('image-reused-on-startpage');
     }
 
     return {
       cardCount: cards.length,
+      structure: {
+        heroCards: active.querySelectorAll('.hero-visual-card.image-context-card').length,
+        heroProofPanels: active.querySelectorAll('.hero-visual-card .hero-proof-panel').length,
+        doorCards: active.querySelectorAll('.door-grid .door-card').length,
+        insightCards: active.querySelectorAll('.insight-grid .image-context-card').length,
+        animalCards: active.querySelectorAll('.animal-grid .image-context-card').length,
+        shareCards: active.querySelectorAll('.share-focus .image-context-card').length,
+      },
       horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
-      repeatedSources: Object.entries(srcCounts).filter(([, count]) => count > 3),
+      repeatedSources: Object.entries(srcCounts).filter(([, count]) => count > 1),
       cards,
     };
   });
@@ -128,7 +137,17 @@ const failures = report.flatMap((entry) =>
     }))
 );
 
-const pageFailures = report.filter((entry) => entry.horizontalOverflow || entry.cardCount < 12);
+const pageFailures = report.filter((entry) =>
+  entry.horizontalOverflow ||
+  entry.cardCount < 10 ||
+  entry.structure.heroCards !== 1 ||
+  entry.structure.heroProofPanels !== 0 ||
+  entry.structure.doorCards !== 5 ||
+  entry.structure.insightCards !== 3 ||
+  entry.structure.animalCards !== 6 ||
+  entry.structure.shareCards !== 0 ||
+  entry.repeatedSources.length > 0
+);
 
 console.log(JSON.stringify({
   checkedViewports: report.length,
@@ -139,6 +158,8 @@ console.log(JSON.stringify({
     viewport: entry.viewport,
     horizontalOverflow: entry.horizontalOverflow,
     cardCount: entry.cardCount,
+    structure: entry.structure,
+    repeatedSources: entry.repeatedSources,
   })),
   screenshots: report.flatMap((entry) => entry.screenshots),
 }, null, 2));
