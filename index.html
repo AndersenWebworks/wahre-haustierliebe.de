@@ -3206,6 +3206,7 @@
       background: transparent;
       box-shadow: none;
       backdrop-filter: none;
+      scroll-margin-top: 5.75rem;
     }
 
     #selbsttest .test-progress-top {
@@ -3265,6 +3266,15 @@
     #selbsttest .test-step-status {
       min-height: 1.3rem;
       margin: -0.15rem 0 0.75rem;
+    }
+
+    #selbsttest .test-step-status:empty {
+      display: none;
+    }
+
+    #selbsttest .test-step-status:not(:empty) {
+      display: block;
+      margin: 0 0 0.75rem;
     }
 
     #selbsttest .test-actions {
@@ -3354,6 +3364,20 @@
       .test-progress-top,
       .test-actions {
         align-items: stretch;
+        flex-direction: column;
+      }
+
+      #selbsttest .test-progress-top {
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #selbsttest #test-answered-label {
+        flex: 0 0 auto;
+      }
+
+      #selbsttest .test-actions {
         flex-direction: column;
       }
 
