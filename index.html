@@ -2894,6 +2894,494 @@
         margin-bottom: 0.75rem;
       }
     }
+
+    /* ========== WORKER-DESIGNPASS: PAGE RHYTHM & TOOL UX ========== */
+    .nav-share {
+      background: var(--accent) !important;
+      color: var(--primary-dark) !important;
+      box-shadow: 0 8px 22px rgba(232, 154, 75, 0.22);
+    }
+
+    .nav-share:hover {
+      background: #FFD96B !important;
+      color: var(--primary-dark) !important;
+    }
+
+    #startseite .hero {
+      min-height: min(820px, calc(100vh - 74px));
+      padding-top: clamp(2.25rem, 5vh, 3.6rem);
+    }
+
+    #startseite .hero .container {
+      align-items: start;
+    }
+
+    .hero-copy {
+      padding-top: clamp(0.35rem, 2vh, 1.4rem);
+    }
+
+    .hero-visual-card {
+      min-height: 470px;
+    }
+
+    .page:not(#startseite) .hero {
+      padding: clamp(3.35rem, 7vh, 5rem) 0;
+    }
+
+    .page:not(#startseite) .hero .container {
+      align-items: start;
+    }
+
+    .page:not(#startseite) .hero h1 {
+      font-size: clamp(2.55rem, 5.2vw, 4.55rem);
+      max-width: 13ch;
+    }
+
+    .article-kicker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1.1rem 0 0;
+    }
+
+    .article-kicker span,
+    .risk-chip,
+    .myth-status,
+    .test-progress-label {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.36rem 0.65rem;
+      background: rgba(31, 58, 47, 0.08);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 900;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .section-note {
+      margin: 2.25rem 0 1.1rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .action-card,
+    .emergency-card,
+    .test-progress-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      background: var(--white);
+    }
+
+    .emergency-card {
+      margin: 0 0 1.35rem;
+      padding: clamp(1.2rem, 3vw, 2rem);
+      background: linear-gradient(135deg, #C04A3A, #8F2F25);
+      color: var(--white);
+    }
+
+    .emergency-card h2,
+    .emergency-card h3 {
+      margin: 0 0 0.7rem;
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 3.1rem);
+    }
+
+    .emergency-card p {
+      max-width: 780px;
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 700;
+    }
+
+    .emergency-actions,
+    .share-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .emergency-actions .btn {
+      background: var(--white);
+      color: #8F2F25;
+    }
+
+    .risk-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .risk-chip {
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .share-callout {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 94% 0%, rgba(255, 217, 107, 0.24), transparent 18rem),
+        linear-gradient(135deg, var(--primary-dark), var(--primary));
+    }
+
+    .share-callout h3 {
+      font-size: clamp(1.65rem, 3vw, 2.45rem);
+      line-height: 1.05;
+    }
+
+    .share-callout .share-label {
+      color: rgba(255, 255, 255, 0.72);
+      text-align: left;
+    }
+
+    .quote-band blockquote {
+      color: var(--white);
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .signal-card::before,
+    .rhythm-card::before {
+      content: attr(data-nr);
+      display: inline-flex;
+      width: 2rem;
+      height: 2rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .test-progress-card {
+      position: sticky;
+      top: 88px;
+      z-index: 20;
+      margin: 0 0 1.25rem;
+      padding: 1rem;
+      background: rgba(255, 254, 250, 0.95);
+      backdrop-filter: blur(12px);
+    }
+
+    .test-progress-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .test-step-metadata {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .test-step-title {
+      color: var(--text);
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .test-progress-track {
+      height: 0.65rem;
+      border-radius: 999px;
+      background: rgba(31, 58, 47, 0.12);
+      overflow: hidden;
+    }
+
+    .test-progress-bar {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      transition: width 0.2s ease;
+    }
+
+    .test-question {
+      scroll-margin-top: 6.5rem;
+    }
+
+    .test-question.is-hidden {
+      display: none;
+    }
+
+    .test-step-status {
+      min-height: 1.45rem;
+      margin: 0 0 0.9rem;
+      color: var(--secondary);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .test-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: 1.6rem;
+    }
+
+    .test-actions .btn {
+      min-width: 9.5rem;
+    }
+
+    .test-actions .btn[hidden] {
+      display: none;
+    }
+
+    .btn:disabled,
+    .btn[aria-disabled="true"] {
+      opacity: 0.48;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .test-question-group {
+      margin: 2rem 0 0.85rem;
+      color: var(--primary);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .selftest-container {
+      max-width: 860px !important;
+      display: grid;
+      gap: clamp(1rem, 2.5vw, 1.35rem);
+    }
+
+    .selftest-intro {
+      margin: 0;
+      padding: clamp(1.25rem, 3.2vw, 1.75rem);
+    }
+
+    .selftest-intro h3 {
+      max-width: 14ch;
+      margin-bottom: 0.75rem;
+      font-size: clamp(1.55rem, 4.7vw, 2.35rem);
+      line-height: 1.08;
+    }
+
+    .selftest-intro p {
+      max-width: 38rem;
+      margin-bottom: 0;
+      font-size: clamp(1rem, 2.7vw, 1.18rem);
+      line-height: 1.65;
+    }
+
+    .test-form-card {
+      padding: clamp(1.15rem, 3vw, 1.55rem);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 254, 250, 0.98), rgba(255, 254, 250, 0.92)),
+        var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    #selbsttest .test-progress-card {
+      position: static;
+      top: auto;
+      z-index: auto;
+      margin: 0 0 1.15rem;
+      padding: 0 0 1rem;
+      border: 0;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    #selbsttest .test-progress-top {
+      margin-bottom: 0.85rem;
+    }
+
+    #selbsttest .test-step-title {
+      color: var(--primary-dark);
+      font-size: clamp(1.35rem, 4vw, 1.85rem);
+      line-height: 1.12;
+    }
+
+    #selbsttest .test-progress-label {
+      width: fit-content;
+    }
+
+    #selbsttest .test-progress-track {
+      height: 0.55rem;
+      background: rgba(31, 58, 47, 0.1);
+    }
+
+    #selbsttest .test-question {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    #selbsttest .test-question h3 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: clamp(1.18rem, 3.6vw, 1.45rem);
+      line-height: 1.22;
+    }
+
+    #selbsttest .test-options {
+      gap: 0.75rem;
+      margin-top: 1.15rem;
+    }
+
+    #selbsttest .test-option {
+      align-items: flex-start;
+      min-height: 4.25rem;
+      padding: 0.9rem 1rem;
+      border-color: rgba(31, 58, 47, 0.16);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    #selbsttest .test-option input {
+      flex: 0 0 auto;
+      margin-top: 0.22rem;
+    }
+
+    #selbsttest .test-step-status {
+      min-height: 1.3rem;
+      margin: -0.15rem 0 0.75rem;
+    }
+
+    #selbsttest .test-actions {
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    #myth-list .accordion-header {
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    #myth-list .accordion-header::before {
+      display: none;
+    }
+
+    #myth-list .accordion-header .claim-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .myth-status {
+      flex: 0 0 auto;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      letter-spacing: 0;
+    }
+
+    .myth-status.context {
+      background: var(--accent-light);
+      color: #8B4E13;
+    }
+
+    .myth-status.partly {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    @media (max-width: 640px) {
+      .cost-table td:first-child::before {
+        display: none;
+      }
+
+      .cost-table td:first-child {
+        display: block;
+        padding-bottom: 0.65rem;
+        font-weight: 900;
+        color: var(--primary-dark);
+      }
+
+      .cost-table td:not(:first-child) {
+        grid-template-columns: minmax(0, 5.8rem) minmax(0, 1fr);
+        gap: 0.55rem;
+      }
+
+      .cost-table td:not(:first-child)::before {
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-share {
+        display: none;
+      }
+
+      #startseite .hero h1,
+      .page:not(#startseite) .hero h1,
+      h1 {
+        font-size: clamp(2.2rem, 10.5vw, 3.25rem);
+        line-height: 1.02;
+      }
+
+      .page:not(#startseite) .hero h1 {
+        max-width: 100%;
+      }
+
+      .test-progress-card {
+        top: 70px;
+      }
+
+      #selbsttest .test-progress-card {
+        top: auto;
+      }
+
+      .test-progress-top,
+      .test-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .test-actions .btn {
+        width: 100%;
+      }
+
+      .emergency-actions,
+      .share-actions {
+        flex-direction: column;
+      }
+
+      .emergency-actions .btn,
+      .share-actions .share-btn,
+      .share-actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
@@ -2932,6 +3420,7 @@
           </li>
           <li><button class="nav-link" data-page="selbsttest" onclick="navigateTo('selbsttest')">Selbsttest</button></li>
           <li><button class="nav-link" data-page="notfall" onclick="navigateTo('notfall')">Notfall</button></li>
+          <li><button class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
         </ul>
       </nav>
       <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menü öffnen">&#9776;</button>
@@ -2957,6 +3446,7 @@
     <button class="mobile-nav-link" onclick="navigateTo('selbsttest')">Selbsttest</button>
     <button class="mobile-nav-link" onclick="navigateTo('notfall')">Notfall</button>
     <button class="mobile-nav-link" onclick="navigateTo('wissen')">Mythen, Homöopathie &amp; Glossar</button>
+    <button class="mobile-nav-link" onclick="shareThis('copy')">Aktuelle Seite teilen</button>
   </div>
 
   <!-- ============================================================ -->
@@ -4021,8 +4511,25 @@
     </div>
 
     <div class="section">
-      <div class="container" style="max-width: 800px;">
-        <div id="test-form">
+      <div class="container selftest-container">
+        <div class="article-rhythm decision-band selftest-intro" data-enhancement="selbsttest-einstieg">
+          <span class="eyebrow">Kein Quiz für dein Ego</span>
+          <h3>Antworte so, wie dein Alltag wirklich ist.</h3>
+          <p>Der Test ist absichtlich streng. Nicht um dich kleinzumachen, sondern weil ein Tier später keine Ausrede versteht.</p>
+        </div>
+
+        <div id="test-form" class="test-form-card">
+          <div class="test-progress-card" id="test-progress-card">
+            <div class="test-progress-top">
+              <div class="test-step-metadata">
+                <span class="test-progress-label" id="test-progress-label">Schritt 1 von 15</span>
+                <span class="test-step-title" id="test-step-title">Zeit im Alltag</span>
+              </div>
+              <span class="test-progress-label" id="test-answered-label">0/15 beantwortet</span>
+            </div>
+            <div class="test-progress-track" aria-hidden="true"><div class="test-progress-bar" id="test-progress-bar"></div></div>
+          </div>
+          <p class="test-step-status" id="test-step-status" aria-live="polite"></p>
 
           <div class="test-question" data-question="1">
             <h3>1. Wie viele Stunden am Tag bist du zu Hause?</h3>
@@ -4159,8 +4666,10 @@
             </div>
           </div>
 
-          <div class="text-center mt-2">
-            <button class="btn btn-primary" onclick="evaluateTest()" style="font-size: 1.1rem; padding: 0.9rem 2.5rem;">Auswertung anzeigen</button>
+          <div class="test-actions">
+            <button class="btn btn-outline" id="test-prev" type="button" onclick="changeTestStep(-1)">Zurück</button>
+            <button class="btn btn-primary" id="test-next" type="button" onclick="changeTestStep(1)">Weiter</button>
+            <button class="btn btn-primary" id="test-submit" type="button" onclick="evaluateTest()" hidden>Auswertung anzeigen</button>
           </div>
         </div>
 
@@ -4182,6 +4691,22 @@
 
     <div class="section">
       <div class="container">
+        <div class="emergency-card">
+          <span class="eyebrow">Erst handeln, dann weiterlesen</span>
+          <h2>Ruhig bleiben. Anrufen. Hinfahren.</h2>
+          <p>Bei Atemnot, Krampf, Vergiftungsverdacht, Harnstopp, Zusammenbruch oder starker Blutung ist das kein Recherche-Moment. Tierarzt oder Tierklinik anrufen, Transport vorbereiten, Verpackung oder Giftquelle mitnehmen.</p>
+          <div class="emergency-actions">
+            <a class="btn" href="https://www.bundestieraerztekammer.de/tieraerzte/notdienst/" target="_blank" rel="noopener">Notdienst suchen</a>
+            <button class="btn" onclick="shareThis('copy')">Seite speichern</button>
+          </div>
+          <div class="risk-strip">
+            <span class="risk-chip">Atemnot</span>
+            <span class="risk-chip">Krampf</span>
+            <span class="risk-chip">Vergiftung</span>
+            <span class="risk-chip">Kein Urin</span>
+            <span class="risk-chip">Starke Blutung</span>
+          </div>
+        </div>
         <div class="warning-box">
           <h3>Sofort zum Tierarzt – diese Symptome sind Notfälle</h3>
           <ul>
@@ -4719,8 +5244,8 @@
         {
           afterHeading: 'Die häufigsten Gegenargumente',
           html: `<div class="article-rhythm myth-truth" data-enhancement="kastration-kosten">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Das ist zu teuer."</h3><p>Die Kastration wird als vermeidbare Ausgabe gesehen, bis Nachwuchs, Kämpfe oder eine Notfall-OP kommen.</p></div>
-            <div class="truth"><span class="eyebrow">Fakt</span><h3>Prävention ist günstiger als Leid.</h3><p>Bei Katzen verhindert Kastration ungewollte Würfe, Revierkämpfe, Hormonstress und viele Folgekosten.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Einmal Babys wäre doch schön."</h3><p>Für Menschen klingt das romantisch. Für Tiere bedeutet es Hormonstress, Risiko, Nachwuchs ohne sichere Plätze und oft zusätzliches Tierheimleid.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Keine Geburt ist neutral.</h3><p>Jeder ungeplante Wurf braucht Futter, Tierarzt, Platz und verantwortungsvolle Vermittlung. Kastration verhindert Leid, bevor es anfängt.</p></div>
           </div>`
         }
       ],
@@ -4819,6 +5344,213 @@
       ]
     };
 
+    var articleEnhancementAddons = {
+      mensch: [
+        {
+          afterHeading: 'Die Entscheidung fällt im Bauch',
+          html: `<div class="article-rhythm share-callout" data-enhancement="mensch-frueh-teilen">
+            <span class="eyebrow">Für den Moment vor dem Kauf</span>
+            <h3>Schick das jemandem, der gerade „nur mal schaut".</h3>
+            <p>Genau dann ist noch genug Abstand da, um Alltag, Geld, Zeit und Verantwortung ehrlich zu prüfen.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Vor dem Haustierkauf: Die ehrlichste Frage ist nicht, welches Tier du willst, sondern welches Leben du ihm geben kannst:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      hunde: [
+        {
+          afterHeading: 'Bevor du dich entscheidest',
+          html: `<div class="article-rhythm share-callout" data-enhancement="hunde-share">
+            <span class="eyebrow">Vor dem Hundekauf teilen</span>
+            <h3>Ein Hund wartet nicht auf „später". Er wartet jeden Tag.</h3>
+            <p>Diese Seite gehört zu Menschen, die den Hundewunsch ernst meinen und deshalb zuerst ihren Alltag prüfen sollten.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      katzen: [
+        {
+          afterHeading: 'Einzeljäger bedeutet nicht Einzelgänger',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="katzen-einzeljaeger">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Katzen sind Einzelgänger."</h3><p>Der Satz wird oft benutzt, um Einzelhaltung in der Wohnung bequem zu machen.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Sie jagen allein, leben aber nicht automatisch allein.</h3><p>Viele Katzen brauchen passende Artgenossen, Rückzugsorte und eine Wohnung, die mehr bietet als Sofa und Futternapf.</p></div>
+          </div>`
+        },
+        {
+          afterSelector: '.warning-box',
+          html: `<div class="article-rhythm share-callout" data-enhancement="katzen-kastration-share">
+            <span class="eyebrow">Kastration teilen</span>
+            <h3>2 Millionen Streunerkatzen sind kein Naturproblem.</h3>
+            <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Dieser Fakt muss vor dem nächsten „einmal Babys"-Satz sichtbar werden.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', '2 Millionen Streunerkatzen in Deutschland: Kastration ist praktischer Tierschutz. Lies das:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      voegel: [
+        {
+          afterHeading: 'Schwarmvögel gehören nicht allein',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="voegel-einzelhaltung">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein einzelner Vogel wird zahmer."</h3><p>Er richtet sich verzweifelt auf Menschen aus, weil kein Artgenosse antwortet.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Zahmkeit darf keine Einsamkeit kosten.</h3><p>Mindestens ein passender Partner, Freiflug und Schwarmverhalten sind keine Extras, sondern Grundbedürfnisse.</p></div>
+          </div>`
+        },
+        {
+          afterHeading: 'Freiflug ist nicht optional',
+          html: `<div class="article-rhythm warning-box" data-enhancement="voegel-teflon">
+            <h3>Teflon kann Vögel in Minuten töten</h3>
+            <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küchenluft und Vogelzimmer gehören getrennt.</p>
+          </div>`
+        }
+      ],
+      kleintiere: [
+        {
+          afterHeading: 'Kaninchen',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Kleintiere sind gute Einstiegstiere."</h3><p>Sie wirken handlich, billig und unkompliziert. Genau das macht sie so oft zu Fehlkäufen.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Klein heißt nicht einfach.</h3><p>Fläche, Artgenossen, Zähne, Kastration, Tierarzt und Ruhe sind bei vielen Kleintieren anspruchsvoller als erwartet.</p></div>
+          </div>`
+        },
+        {
+          afterHeading: 'Hamster',
+          html: `<div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
+            <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich".</span></article>
+            <article class="signal-card" data-nr="02"><strong>Zähne</strong><span>Kaninchen und Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt.</span></article>
+            <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
+          </div>`
+        }
+      ],
+      exoten: [
+        {
+          afterHeading: 'Reptilien',
+          html: `<div class="article-rhythm metric-grid" data-enhancement="exoten-technik">
+            <div class="metric-card"><strong>UV-B</strong><span>ohne passende Lampe drohen Knochen- und Organschäden.</span></div>
+            <div class="metric-card"><strong>30–60 €</strong><span>monatliche Stromkosten sind bei Terrarien kein Ausnahmefall.</span></div>
+            <div class="metric-card"><strong>täglich</strong><span>Temperatur, Feuchtigkeit, Futter und Technik prüfen.</span></div>
+          </div>`
+        },
+        {
+          afterHeading: 'Fische',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="exoten-goldfisch">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas."</h3><p>Das Glas ist ein Symbol für falsche Haustierbilder, nicht für einfache Haltung.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Filter, Volumen, Wasserwerte.</h3><p>Fische sind nicht pflegeleicht, nur weil sie leise sterben. Aquariumhaltung ist Biologie plus Technik.</p></div>
+          </div>`
+        }
+      ],
+      pferde: [
+        {
+          afterHeading: 'Haltungsformen',
+          html: `<div class="article-rhythm compare-mini" data-enhancement="pferde-haltung">
+            <div class="compare-card good"><strong>Offenstall</strong><span>Bewegung, Luft, Herde und Rückzug zusammen gedacht.</span></div>
+            <div class="compare-card risk"><strong>Box</strong><span>Nur mit viel Auslauf, Sozialkontakt und täglicher Bewegung vertretbar.</span></div>
+            <div class="compare-card bad"><strong>Anbindung</strong><span>Dauerhafte Fixierung passt nicht zu einem Lauftier.</span></div>
+          </div>`
+        },
+        {
+          afterHeading: 'Reitbeteiligung',
+          html: `<div class="article-rhythm share-callout" data-enhancement="pferde-reitbeteiligung">
+            <span class="eyebrow">Ehrlicher Einstieg</span>
+            <h3>Eine Reitbeteiligung ist oft tierlieber als ein eigenes Pferd.</h3>
+            <p>Wer Verantwortung lernen will, muss nicht sofort Besitz erzeugen. Zeit, Pflege und Verlässlichkeit zählen mehr als Eigentum.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Vor dem eigenen Pferd: Warum eine Reitbeteiligung oft die ehrlichere Entscheidung ist:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      kastration: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm metric-grid" data-enhancement="kastration-kompakt">
+            <div class="metric-card"><strong>80–250 €</strong><span>typische Katzen-Kastration nach GOT, je nach Geschlecht und Praxis.</span></div>
+            <div class="metric-card"><strong>vorher</strong><span>Prävention wirkt, bevor Rolligkeit, Kämpfe oder Nachwuchs da sind.</span></div>
+            <div class="metric-card"><strong>TNR</strong><span>Fangen, kastrieren, zurücksetzen ist praktischer Streunerkatzenschutz.</span></div>
+          </div>`
+        }
+      ],
+      qualzucht: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm warning-box" data-enhancement="qualzucht-topwarnung">
+            <h3>Süß ist kein Qualitätsmerkmal</h3>
+            <p>Wenn ein Tier wegen seiner Körperform schlechter atmet, sieht, läuft, frisst oder lebt, ist das kein Stil. Es ist ein angezüchteter Nachteil.</p>
+          </div>`
+        },
+        {
+          afterHeading: 'Was ist Qualzucht',
+          html: `<div class="article-rhythm myth-truth" data-enhancement="qualzucht-rassestandard">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Rassestandard heißt gesund."</h3><p>Standards beschreiben oft Aussehen. Sie garantieren nicht, dass ein Körper gut funktioniert.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Funktion schlägt Form.</h3><p>Atmung, Bewegung, Wahrnehmung und Schmerzfreiheit müssen wichtiger sein als ein niedliches Merkmal.</p></div>
+          </div>`
+        }
+      ],
+      adoption: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm compare-mini" data-enhancement="adoption-serioes">
+            <div class="compare-card good"><strong>Seriös</strong><span>Schutzvertrag, Vorkontrolle, ehrliche Infos, Rücknahmezusage.</span></div>
+            <div class="compare-card risk"><strong>Prüfen</strong><span>Druck, Mitleid, „sofort mitnehmen" oder fehlende Gesundheitsinfos.</span></div>
+            <div class="compare-card bad"><strong>Finger weg</strong><span>Kofferraum, Parkplatz, mehrere Rassen, kein Muttertier, Bargeld-Druck.</span></div>
+          </div>`
+        }
+      ],
+      selbsttest: [],
+      notfall: [
+        {
+          afterHeading: 'Vergiftungsgefahren',
+          html: `<div class="article-rhythm share-callout" data-enhancement="notfall-speichern">
+            <span class="eyebrow">Speichern, bevor es ernst wird</span>
+            <h3>Im Notfall suchst du nicht nach Haltungstipps. Du brauchst Nummern und klare Reihenfolge.</h3>
+            <p>Teile diese Seite mit Menschen, die Tiere halten. Nicht später, sondern solange noch Ruhe ist.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Tier-Notfall: Warnsignale, Vergiftungen und die richtige Reihenfolge. Speichern und teilen:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      wissen: [
+        {
+          afterSelector: '.myth-panel',
+          html: `<div class="article-rhythm share-callout" data-enhancement="wissen-mythen-share">
+            <span class="eyebrow">Mythen stoppen</span>
+            <h3>Ein harmloser Satz kann schlechte Haltung normal machen.</h3>
+            <p>Teile die Mythenliste, wenn jemand mit „das war schon immer so" argumentiert.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Haustier-Mythen: Was stimmt wirklich und was schadet Tieren?')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ],
+      'noch-nicht-bereit': [
+        {
+          afterHeading: 'Kein Tier ist besser',
+          html: `<div class="article-rhythm share-callout" data-enhancement="nicht-bereit-share">
+            <span class="eyebrow">Entlastend teilen</span>
+            <h3>Warten ist kein Scheitern. Warten kann Fürsorge sein.</h3>
+            <p>Diese Perspektive hilft Menschen, die ein Tier wollen, aber eigentlich spüren, dass gerade zu viel wackelt.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Kein Tier zu nehmen kann die tierliebste Entscheidung sein. Lies das:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>`
+        }
+      ]
+    };
+
+    Object.keys(articleEnhancementAddons).forEach(function(pageId) {
+      articleEnhancements[pageId] = (articleEnhancements[pageId] || []).concat(articleEnhancementAddons[pageId]);
+    });
+
     function hydrateArticleHeroImages() {
       Object.keys(articleHeroImages).forEach(function(pageId) {
         var page = document.getElementById(pageId);
@@ -4899,6 +5631,167 @@
       });
     }
 
+    function hydrateArticleKickers() {
+      var labels = {
+        mensch: ['Vor dem Kauf', 'Selbstlügen prüfen', 'Verzicht ist erlaubt'],
+        hunde: ['4–5 h allein', '12–20 Tsd. €', 'Beziehung täglich'],
+        katzen: ['Nicht allein denken', 'Kastration schützt', 'Leises Leiden'],
+        voegel: ['Schwarm statt Spiegel', 'UV-Licht', 'Freiflug'],
+        kleintiere: ['Klein ist nicht einfach', 'Fläche', 'Zähne und Tierarzt'],
+        exoten: ['Technik ist Haltung', 'UV-B', 'Meldepflichten'],
+        pferde: ['Herde', 'Bewegung', 'Kosten über Jahre'],
+        kastration: ['Prävention', 'Streuner stoppen', 'Mythen klären'],
+        qualzucht: ['Form darf nicht leiden', 'Nachfrage stoppen', 'Adoption'],
+        adoption: ['Seriös prüfen', 'Nicht billig kaufen', 'Zweite Chance'],
+        selbsttest: ['15 Fragen', 'Ehrlich antworten', 'Vor dem Tier'],
+        notfall: ['Anrufen', 'Sichern', 'Hinfahren'],
+        wissen: ['Mythen', 'Globuli', 'Glossar'],
+        'noch-nicht-bereit': ['Warten erlaubt', 'Anders helfen', 'Später planen']
+      };
+
+      Object.keys(labels).forEach(function(pageId) {
+        var page = document.getElementById(pageId);
+        if (!page) return;
+        var copy = page.querySelector('.article-hero-copy');
+        if (!copy || copy.querySelector('.article-kicker')) return;
+        var kicker = document.createElement('div');
+        kicker.className = 'article-kicker';
+        labels[pageId].forEach(function(label) {
+          var span = document.createElement('span');
+          span.textContent = label;
+          kicker.appendChild(span);
+        });
+        copy.appendChild(kicker);
+      });
+    }
+
+    function hydrateMythRows() {
+      var mythList = document.getElementById('myth-list');
+      if (!mythList || mythList.dataset.rowsHydrated === 'true') return;
+      var statuses = ['Kontext', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
+      mythList.querySelectorAll('.accordion-header').forEach(function(header, index) {
+        var claim = header.textContent.replace(/\s+/g, ' ').trim();
+        header.textContent = '';
+        var status = document.createElement('span');
+        var value = statuses[index] || 'Falsch';
+        status.className = 'myth-status' + (value === 'Kontext' ? ' context' : value === 'Teils' ? ' partly' : '');
+        status.textContent = value;
+        var text = document.createElement('span');
+        text.className = 'claim-text';
+        text.textContent = claim;
+        header.appendChild(status);
+        header.appendChild(text);
+      });
+      mythList.dataset.rowsHydrated = 'true';
+    }
+
+    var currentTestStep = 1;
+    var TEST_TOTAL_QUESTIONS = 15;
+    var TEST_STEP_SIZE = 1;
+    var TEST_TOTAL_STEPS = Math.ceil(TEST_TOTAL_QUESTIONS / TEST_STEP_SIZE);
+    var TEST_STEP_TITLES = [
+      'Zeit im Alltag',
+      'Finanzieller Puffer',
+      'Stabilität',
+      'Haushalt',
+      'Lebenserwartung',
+      'Betreuung',
+      'Motiv',
+      'Wissen',
+      'Geduld',
+      'Kastration',
+      'Krankheit und Alter',
+      'Tierarzt',
+      'Lebensänderungen',
+      'Platz',
+      'Allergien'
+    ];
+
+    function hydrateTestProgress() {
+      var form = document.getElementById('test-form');
+      if (!form) return;
+      updateTestProgress();
+    }
+
+    function getTestStepForQuestion(questionNumber) {
+      return Math.ceil(questionNumber / TEST_STEP_SIZE);
+    }
+
+    function getAnsweredTestCount() {
+      var answered = 0;
+      for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
+        if (document.querySelector('input[name="q' + i + '"]:checked')) answered++;
+      }
+      return answered;
+    }
+
+    function isTestQuestionAnswered(questionNumber) {
+      return Boolean(document.querySelector('input[name="q' + questionNumber + '"]:checked'));
+    }
+
+    function isCurrentTestStepComplete() {
+      var start = ((currentTestStep - 1) * TEST_STEP_SIZE) + 1;
+      var end = Math.min(start + TEST_STEP_SIZE - 1, TEST_TOTAL_QUESTIONS);
+      for (var i = start; i <= end; i++) {
+        if (!isTestQuestionAnswered(i)) return false;
+      }
+      return true;
+    }
+
+    function getFirstIncompleteTestQuestion() {
+      for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
+        if (!isTestQuestionAnswered(i)) return i;
+      }
+      return null;
+    }
+
+    function setTestStepStatus(message) {
+      var status = document.getElementById('test-step-status');
+      if (status) status.textContent = message || '';
+    }
+
+    function updateTestProgress(options) {
+      currentTestStep = Math.max(1, Math.min(currentTestStep, TEST_TOTAL_STEPS));
+
+      document.querySelectorAll('#test-form .test-question').forEach(function(question) {
+        var questionNumber = parseInt(question.dataset.question, 10);
+        question.classList.toggle('is-hidden', getTestStepForQuestion(questionNumber) !== currentTestStep);
+      });
+
+      var answered = getAnsweredTestCount();
+      var percent = Math.round((answered / TEST_TOTAL_QUESTIONS) * 100);
+      var stepLabel = document.getElementById('test-progress-label');
+      var answeredLabel = document.getElementById('test-answered-label');
+      var stepTitle = document.getElementById('test-step-title');
+      var bar = document.getElementById('test-progress-bar');
+      var prev = document.getElementById('test-prev');
+      var next = document.getElementById('test-next');
+      var submit = document.getElementById('test-submit');
+
+      if (stepLabel) stepLabel.textContent = 'Schritt ' + currentTestStep + ' von ' + TEST_TOTAL_STEPS;
+      if (answeredLabel) answeredLabel.textContent = answered + '/' + TEST_TOTAL_QUESTIONS + ' beantwortet';
+      if (stepTitle) stepTitle.textContent = TEST_STEP_TITLES[currentTestStep - 1] || 'Selbsttest';
+      if (bar) bar.style.width = Math.max(7, percent) + '%';
+      if (prev) prev.hidden = currentTestStep === 1;
+      if (next) next.hidden = currentTestStep === TEST_TOTAL_STEPS;
+      if (submit) submit.hidden = currentTestStep !== TEST_TOTAL_STEPS;
+
+      if (options && options.scroll) {
+        var card = document.getElementById('test-progress-card');
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function changeTestStep(direction) {
+      if (direction > 0 && !isCurrentTestStepComplete()) {
+        setTestStepStatus('Bitte beantworte diese Frage, bevor du weitergehst.');
+        return;
+      }
+      setTestStepStatus('');
+      currentTestStep += direction;
+      updateTestProgress({ scroll: true });
+    }
+
     // ===== ROUTING =====
     function navigateTo(page) {
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
@@ -4923,7 +5816,10 @@
     document.addEventListener('DOMContentLoaded', function() {
       hydrateArticleHeroImages();
       hydrateArticleEnhancements();
+      hydrateArticleKickers();
       hydrateResponsiveTables();
+      hydrateMythRows();
+      hydrateTestProgress();
       var hash = location.hash.slice(1);
       navigateTo(hash || 'startseite');
     });
@@ -4985,7 +5881,7 @@
     function evaluateTest() {
       var total = 0;
       var answered = 0;
-      for (var i = 1; i <= 15; i++) {
+      for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
         var selected = document.querySelector('input[name="q' + i + '"]:checked');
         if (selected) {
           total += parseInt(selected.value);
@@ -4993,11 +5889,15 @@
         }
       }
 
-      if (answered < 15) {
-        alert('Bitte beantworte alle 15 Fragen, bevor du die Auswertung anzeigst.');
+      if (answered < TEST_TOTAL_QUESTIONS) {
+        var firstIncomplete = getFirstIncompleteTestQuestion();
+        currentTestStep = getTestStepForQuestion(firstIncomplete);
+        updateTestProgress({ scroll: true });
+        setTestStepStatus('Es fehlt noch Frage ' + firstIncomplete + '. Danach kann ich deine Auswertung anzeigen.');
         return;
       }
 
+      setTestStepStatus('');
       var resultDiv = document.getElementById('test-result');
       var maxScore = 30;
       var percent = Math.round((total / maxScore) * 100);
@@ -5066,6 +5966,8 @@
         if (question) {
           question.querySelectorAll('.test-option').forEach(function(opt) { opt.classList.remove('selected'); });
           e.target.closest('.test-option').classList.add('selected');
+          setTestStepStatus('');
+          updateTestProgress();
         }
       }
     });
