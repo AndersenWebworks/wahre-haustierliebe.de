@@ -401,5 +401,18 @@
     "usedFor": ["wissen-evidenz"],
     "alt": "Katze wird in einer Tierarztpraxis untersucht",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
+  },
+  {
+    "id": "wahre-haustierliebe-logo",
+    "localPath": "assets/images/wahre-haustierliebe-logo.png",
+    "fileTitle": "Wa(h)re Haustierliebe logo",
+    "sourceUrl": "",
+    "originalUrl": "",
+    "author": "Wa(h)re Haustierliebe",
+    "license": "Local project brand asset",
+    "licenseUrl": "",
+    "usedFor": ["header-logo", "hero-logo", "footer-logo", "social-preview"],
+    "alt": "Wa(h)re Haustierliebe Logo",
+    "modifications": "Local brand asset used without CSS crop."
   }
 ]

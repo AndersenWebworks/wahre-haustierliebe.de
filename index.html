@@ -10,7 +10,11 @@
   <meta property="og:description" content="Faktenbasierte Aufklärung über artgerechte Tierhaltung – ehrlich, respektvoll, im Sinne der Tiere.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wahre-haustierliebe.de">
+  <meta property="og:image" content="https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png">
   <link rel="canonical" href="https://wahre-haustierliebe.de">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* ========== RESET & BASE ========== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -462,12 +466,13 @@
     .share-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0 0.5rem; }
     .share-btn {
       display: inline-flex; align-items: center; gap: 0.4rem;
+      min-height: 2.75rem;
       padding: 0.5rem 1rem; border-radius: var(--radius); border: 1px solid var(--border);
       background: var(--white); cursor: pointer; font-size: 0.88rem; color: var(--text-muted);
       transition: var(--transition); font-family: var(--font-body); text-decoration: none;
     }
     .share-btn:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); text-decoration: none; }
-    .share-label { font-size: 0.85rem; color: var(--text-light); text-align: center; margin-bottom: 0.25rem; }
+    .share-label { font-size: 0.875rem; color: var(--text-light); text-align: center; margin-bottom: 0.25rem; }
 
     /* ========== SUPPORT BOX ========== */
     .support-box {
@@ -654,22 +659,25 @@
     }
 
     .site-logo::before {
-      content: "h";
-      width: 2rem;
-      height: 2rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      display: none;
+    }
+
+    .site-logo-image {
+      width: 2.7rem;
+      height: 2.7rem;
       border-radius: 999px;
-      background:
-        radial-gradient(circle at 32% 32%, rgba(255, 255, 255, 0.34) 0 13%, transparent 14%),
-        linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-      font-family: var(--font-heading);
-      font-size: 1.18rem;
-      font-weight: 900;
-      line-height: 1;
+      object-fit: cover;
+      object-position: center 39%;
+      background: var(--white);
+      box-shadow: 0 0 0 1px rgba(31, 58, 47, 0.12);
       flex-shrink: 0;
+    }
+
+    .site-logo-text {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.25rem;
+      line-height: 1.05;
     }
 
     .site-logo span { color: var(--secondary); }
@@ -714,7 +722,7 @@
     #startseite .hero .container {
       display: grid;
       grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
-      align-items: center;
+      align-items: start;
       gap: 3rem;
     }
 
@@ -738,6 +746,16 @@
       max-width: 720px;
       margin: 0 0 1.6rem;
       opacity: 1;
+    }
+
+    .hero-brand-logo {
+      display: block;
+      width: min(310px, 72vw);
+      height: auto;
+      margin: 0 0 1.55rem;
+      border-radius: var(--radius);
+      box-shadow: 0 12px 34px rgba(31, 58, 47, 0.1);
+      background: var(--white);
     }
 
     .hero-actions {
@@ -1638,6 +1656,66 @@
     .cost-table tr:nth-child(even) { background: var(--bg); }
     .cost-table .total { background: var(--primary-light); color: var(--primary); }
 
+    @media (max-width: 640px) {
+      .cost-table {
+        display: block;
+        overflow: visible;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+
+      .cost-table thead {
+        display: none;
+      }
+
+      .cost-table tbody,
+      .cost-table tr,
+      .cost-table td {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .cost-table tr {
+        padding: 0.75rem 0.85rem;
+        border-bottom: 1px solid rgba(31, 58, 47, 0.1);
+      }
+
+      .cost-table tr:last-child {
+        border-bottom: 0;
+      }
+
+      .cost-table td,
+      .cost-table th {
+        border-bottom: 0;
+      }
+
+      .cost-table td {
+        display: grid;
+        grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+        padding: 0.42rem 0;
+      }
+
+      .cost-table td::before {
+        content: attr(data-label);
+        color: var(--primary);
+        font-weight: 900;
+        font-size: 0.72rem;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+
+      .cost-table td[colspan] {
+        grid-template-columns: 1fr;
+      }
+
+      .cost-table td[colspan]::before {
+        display: none;
+      }
+    }
+
     .checklist {
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -1801,6 +1879,15 @@
       margin-top: 0;
     }
 
+    .footer-brand-logo {
+      display: block;
+      width: min(260px, 100%);
+      height: auto;
+      margin: 0 0 1.1rem;
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
     .site-footer h3,
     .site-footer h4 {
       color: var(--white) !important;
@@ -1904,6 +1991,10 @@
     @media (max-width: 768px) {
       .header-inner { height: 64px; }
       .mobile-nav { top: 64px; }
+      .site-logo-image {
+        width: 2.35rem;
+        height: 2.35rem;
+      }
       .section { padding: 3rem 0; }
       #startseite .hero { padding: 3.25rem 0; }
       .hero-side-note {
@@ -1930,6 +2021,14 @@
 
     @media (max-width: 520px) {
       .container { padding: 0 1rem; }
+      .site-logo {
+        gap: 0.45rem;
+      }
+      .site-logo-text {
+        max-width: 9.5rem;
+        flex-wrap: wrap;
+        gap: 0 0.2rem;
+      }
       #startseite .hero h1,
       .page:not(#startseite) .hero h1,
       h1 { font-size: 1.95rem; }
@@ -2308,6 +2407,493 @@
         border-bottom: 1px solid var(--border);
       }
     }
+
+    /* ========== REFERENZ-ANGLEICH V2/V4 ========== */
+    :root {
+      --primary: #1F3A2F;
+      --primary-dark: #14241D;
+      --primary-light: #E8F5EF;
+      --secondary: #C04A3A;
+      --secondary-light: #F6E0DA;
+      --accent: #E89A4B;
+      --accent-light: #FFF4CC;
+      --bg: #FBF8F2;
+      --bg-alt: #F5EFE3;
+      --white: #FFFEFA;
+      --border: rgba(31, 58, 47, 0.14);
+      --text: #1A2A22;
+      --text-muted: #3D5046;
+      --text-light: #6B7F75;
+      --shadow: 0 8px 28px rgba(31, 58, 47, 0.09);
+      --shadow-lg: 0 18px 50px rgba(31, 58, 47, 0.13);
+      --radius: 20px;
+      --radius-lg: 32px;
+      --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
+      --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+      --font-hand: "Caveat", cursive;
+      --max-width: 1240px;
+      --reading-width: 740px;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .site-logo {
+      font-family: var(--font-heading);
+      letter-spacing: -0.018em;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    h1 {
+      font-weight: 800;
+      line-height: 0.98;
+    }
+
+    h2 {
+      font-size: clamp(2.25rem, 4.8vw, 4.25rem);
+      line-height: 1.02;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-weight: 800;
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      padding-left: clamp(1.25rem, 5vw, 3.5rem);
+      padding-right: clamp(1.25rem, 5vw, 3.5rem);
+    }
+
+    .section {
+      padding: clamp(5rem, 11vh, 8rem) 0;
+      background: var(--bg);
+    }
+
+    .section-alt {
+      background: var(--bg-alt);
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .eyebrow,
+    #startseite .section-alt h2.text-center::before {
+      font-family: var(--font-body);
+      letter-spacing: 0.08em;
+      color: var(--primary);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .eyebrow::before,
+    #startseite .section-alt h2.text-center::before {
+      color: var(--primary);
+    }
+
+    .site-header {
+      background: rgba(251, 248, 242, 0.94);
+      border-color: rgba(31, 58, 47, 0.10);
+    }
+
+    .header-inner {
+      height: 74px;
+    }
+
+    .site-logo-image {
+      width: 2.45rem;
+      height: 2.45rem;
+      background: var(--primary-light);
+      box-shadow: none;
+    }
+
+    .nav-link {
+      border-radius: 999px;
+      padding: 0.65rem 0.9rem;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      background: var(--primary-light);
+    }
+
+    .btn {
+      border-radius: 999px;
+      min-height: 3.15rem;
+      padding: 0.85rem 1.45rem;
+      font-family: var(--font-body);
+      box-shadow: none;
+    }
+
+    .btn-primary,
+    .btn-white {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: rgba(251, 248, 242, 0.4);
+      border: 2px solid var(--primary);
+    }
+
+    #startseite .hero {
+      min-height: calc(100vh - 74px);
+      padding: clamp(3rem, 7vh, 5rem) 0 clamp(3.5rem, 7vh, 5.25rem);
+      background:
+        radial-gradient(circle at 94% 8%, rgba(255, 217, 107, 0.28), transparent 19rem),
+        linear-gradient(135deg, #B8E6D5 0%, #E8F5EF 46%, #FBF8F2 100%);
+      border-bottom: 0;
+    }
+
+    #startseite .hero .container {
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+      align-items: center;
+      gap: clamp(3rem, 6vw, 5.5rem);
+    }
+
+    .hero-brand-logo {
+      display: none;
+    }
+
+    #startseite .hero h1 {
+      font-size: clamp(3.6rem, 6.4vw, 5.55rem);
+      line-height: 0.96;
+      max-width: 10.8ch;
+      margin: 0 0 1.75rem;
+      letter-spacing: -0.035em;
+      hyphens: none;
+      overflow-wrap: normal;
+    }
+
+    #startseite .hero p {
+      max-width: 36rem;
+      font-size: clamp(1.12rem, 1.55vw, 1.35rem);
+      line-height: 1.62;
+    }
+
+    .hero-tape {
+      top: 0.75rem;
+      left: 2rem;
+      border-radius: 8px;
+      background: #FFD96B;
+      font-family: var(--font-hand);
+      color: var(--primary-dark);
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      transform: rotate(-3deg);
+    }
+
+    .hero-visual-card {
+      min-height: 530px;
+      padding: 1.25rem;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(145deg, rgba(255, 254, 250, 0.64), rgba(184, 230, 213, 0.42)),
+        repeating-linear-gradient(135deg, rgba(31, 58, 47, 0.06) 0 1px, transparent 1px 22px);
+      box-shadow: 0 28px 75px rgba(31, 58, 47, 0.13);
+    }
+
+    .hero-lead-image,
+    .article-hero-media,
+    .article-split figure,
+    .entry-card .entry-media,
+    .share-focus-media figure {
+      border-radius: calc(var(--radius-lg) - 8px);
+    }
+
+    .hero-lead-image .context-caption,
+    .context-caption,
+    .article-hero-media figcaption,
+    .article-split figcaption,
+    .animal-card-caption {
+      border-radius: 999px;
+      background: rgba(31, 58, 47, 0.88);
+      font-family: var(--font-body);
+    }
+
+    .hero-card-foot,
+    .hero-side-note {
+      border-radius: 18px;
+    }
+
+    .hero-card-foot .num {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      letter-spacing: -0.04em;
+      color: var(--secondary);
+    }
+
+    .hero-side-note {
+      background: var(--primary);
+    }
+
+    #startseite .stats-bar {
+      gap: 1.25rem;
+    }
+
+    #startseite .stat,
+    .entry-card,
+    .animal-card,
+    .insight-card,
+    .door-card,
+    .card,
+    .metric-card,
+    .rhythm-card,
+    .signal-card,
+    .compare-card {
+      border-radius: var(--radius);
+      border-color: var(--border);
+      box-shadow: var(--shadow);
+      background: rgba(255, 254, 250, 0.84);
+    }
+
+    #startseite .stat-number,
+    .metric-card strong {
+      font-family: var(--font-heading);
+      letter-spacing: -0.04em;
+    }
+
+    .entry-card {
+      min-height: 390px;
+      padding: 1.6rem;
+    }
+
+    .entry-card .entry-media {
+      width: calc(100% + 3.2rem);
+      height: 220px;
+      margin: -1.6rem -1.6rem 1.35rem;
+    }
+
+    .entry-card .icon,
+    .door-card .icon,
+    .animal-card .icon {
+      border-radius: 14px;
+      background: var(--primary-light);
+    }
+
+    .entry-card:nth-child(2) .icon,
+    .door-card:nth-child(3) .icon {
+      background: var(--secondary-light);
+    }
+
+    .entry-card:nth-child(3) .icon,
+    .door-card:nth-child(4) .icon {
+      background: var(--accent-light);
+    }
+
+    .animal-card-img {
+      height: clamp(280px, 22vw, 330px);
+    }
+
+    .share-focus {
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(255, 254, 250, 0.16), rgba(255, 254, 250, 0.06)),
+        radial-gradient(circle at 90% 0%, rgba(255, 217, 107, 0.28), transparent 20rem);
+    }
+
+    .page:not(#startseite) .hero {
+      padding: clamp(4.5rem, 9vh, 7rem) 0;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(255, 217, 107, 0.26), transparent 18rem),
+        linear-gradient(135deg, #E8F5EF 0%, #FBF8F2 100%) !important;
+    }
+
+    .page:not(#startseite) .hero h1 {
+      font-size: clamp(3rem, 6.2vw, 5.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      hyphens: none;
+      overflow-wrap: normal;
+    }
+
+    .page:not(#startseite) .hero p {
+      font-size: clamp(1.06rem, 1.35vw, 1.22rem);
+      line-height: 1.65;
+    }
+
+    .page:not(#startseite) > .section > .container {
+      max-width: var(--reading-width);
+    }
+
+    .page:not(#startseite) > .section > .container:has(.grid-2),
+    .page:not(#startseite) > .section > .container:has(.metric-grid),
+    .page:not(#startseite) > .section > .container:has(.argument-grid),
+    .page:not(#startseite) > .section > .container:has(.signal-grid),
+    .page:not(#startseite) > .section > .container:has(.compare-mini),
+    .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.share-callout),
+    .page:not(#startseite) > .section > .container:has(table) {
+      max-width: var(--max-width);
+    }
+
+    .info-box,
+    .warning-box,
+    .highlight-box {
+      position: relative;
+      padding: 1.35rem 1.35rem 1.35rem 4.75rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      border-left-width: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-box {
+      background: var(--primary-light);
+      border-left-color: var(--primary);
+    }
+
+    .warning-box {
+      background: var(--secondary-light);
+      border-left-color: var(--secondary);
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left-color: var(--accent);
+    }
+
+    .info-box::before,
+    .warning-box::before,
+    .highlight-box::before {
+      position: absolute;
+      left: 1.25rem;
+      top: 1.35rem;
+      width: 2.3rem;
+      height: 2.3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .info-box::before {
+      content: "!";
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .warning-box::before {
+      content: "!";
+      background: var(--white);
+      color: var(--secondary);
+    }
+
+    .highlight-box::before {
+      content: "?";
+      background: var(--white);
+      color: #8B4E13;
+    }
+
+    .info-box h3::before,
+    .warning-box h3::before,
+    .highlight-box h3::before {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-family: var(--font-body);
+      font-size: 0.73rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .info-box h3::before { content: "Wissen"; }
+    .warning-box h3::before { content: "Warnsignal"; }
+    .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .accordion,
+    .cost-table,
+    .mobile-card-table-row {
+      border-radius: var(--radius);
+    }
+
+    .accordion-header {
+      font-family: var(--font-heading);
+      letter-spacing: -0.01em;
+    }
+
+    .share-btn {
+      border-radius: 999px;
+    }
+
+    @media (max-width: 980px) {
+      #startseite .hero {
+        min-height: 0;
+      }
+
+      #startseite .hero h1 {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        height: 64px;
+      }
+
+      #startseite .hero,
+      .page:not(#startseite) .hero {
+        padding: 3.25rem 0;
+      }
+
+      #startseite .hero h1,
+      .page:not(#startseite) .hero h1,
+      h1 {
+        font-size: clamp(2.55rem, 13vw, 4rem);
+        line-height: 0.98;
+      }
+
+      h2 {
+        font-size: clamp(1.85rem, 7vw, 2.45rem);
+      }
+
+      .hero-visual-card {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .hero-tape {
+        left: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .info-box,
+      .warning-box,
+      .highlight-box {
+        padding: 1.15rem;
+      }
+
+      .info-box::before,
+      .warning-box::before,
+      .highlight-box::before {
+        position: static;
+        margin-bottom: 0.75rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -2315,7 +2901,10 @@
   <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="site-logo" onclick="navigateTo('startseite')">Wa(h)re <span>Haustierliebe</span></div>
+      <div class="site-logo" onclick="navigateTo('startseite')" aria-label="Wa(h)re Haustierliebe Startseite">
+        <img class="site-logo-image" src="assets/images/wahre-haustierliebe-logo.png" alt="" aria-hidden="true">
+        <span class="site-logo-text">Wa(h)re <span>Haustierliebe</span></span>
+      </div>
       <nav>
         <ul class="nav-links">
           <li><button class="nav-link" data-page="startseite" onclick="navigateTo('startseite')">Start</button></li>
@@ -2377,6 +2966,7 @@
     <div class="hero">
       <div class="container">
         <div class="hero-copy">
+          <img class="hero-brand-logo" src="assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustierliebe">
           <span class="eyebrow"><span class="dot"></span> Das Handbuch aus Liebe zum Tier</span>
           <h1>Jedes Tier verdient, dass du weißt, was du tust.</h1>
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor du Verantwortung für ein Lebewesen übernimmst.</p>
@@ -3945,7 +4535,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3 style="color: var(--white); margin-top: 0;">Wa(h)re Haustierliebe</h3>
+          <img class="footer-brand-logo" src="assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustierliebe">
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor und während du Verantwortung für ein Lebewesen trägst.</p>
           <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener">Streunerhilfe Plau e.&thinsp;V.</a></p>
           <div class="share-bar" style="justify-content: flex-start; margin-top: 1rem;">
@@ -4062,8 +4652,8 @@
         {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
-            <div class="metric-card"><strong>4-5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
-            <div class="metric-card"><strong>12-20 Tsd. €</strong><span>realistische Lebenszeitkosten, bevor chronische Krankheiten dazukommen.</span></div>
+            <div class="metric-card"><strong>4–5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
+            <div class="metric-card"><strong>12–20 Tsd. €</strong><span>realistische Lebenszeitkosten, bevor chronische Krankheiten dazukommen.</span></div>
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>`
         },
@@ -4119,7 +4709,7 @@
         {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm metric-grid" data-enhancement="pferde-stats">
-            <div class="metric-card"><strong>15-30 km</strong><span>natürliche Tagesbewegung im Schritt, grasen und Sozialkontakt eingeschlossen.</span></div>
+            <div class="metric-card"><strong>15–30 km</strong><span>natürliche Tagesbewegung im Schritt, grasen und Sozialkontakt eingeschlossen.</span></div>
             <div class="metric-card"><strong>20+ Jahre</strong><span>Verpflichtung, Kosten und Alltag ändern sich über Jahrzehnte.</span></div>
             <div class="metric-card"><strong>Herde</strong><span>Ein Pferd ist kein Solist. Sozialkontakt ist Grundbedürfnis.</span></div>
           </div>`
@@ -4290,6 +4880,25 @@
       });
     }
 
+    function hydrateResponsiveTables() {
+      document.querySelectorAll('.cost-table').forEach(function(table) {
+        var headers = Array.from(table.querySelectorAll('thead th')).map(function(th) {
+          return th.textContent.replace(/\s+/g, ' ').trim();
+        });
+        if (!headers.length) return;
+
+        table.querySelectorAll('tbody tr').forEach(function(row) {
+          var cells = Array.from(row.children);
+          cells.forEach(function(cell, index) {
+            if (cell.tagName !== 'TD') return;
+            var span = Number(cell.getAttribute('colspan') || 1);
+            var label = headers.slice(index, index + span).join(' / ');
+            cell.dataset.label = label || headers[index] || '';
+          });
+        });
+      });
+    }
+
     // ===== ROUTING =====
     function navigateTo(page) {
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
@@ -4314,6 +4923,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       hydrateArticleHeroImages();
       hydrateArticleEnhancements();
+      hydrateResponsiveTables();
       var hash = location.hash.slice(1);
       navigateTo(hash || 'startseite');
     });

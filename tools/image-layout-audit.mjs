@@ -32,6 +32,10 @@ const viewports = [
   { name: 'mobile', width: 390, height: 900 },
 ];
 
+const allowedRepeatedImages = new Set([
+  'assets/images/wahre-haustierliebe-logo.png',
+]);
+
 const outDir = path.join(projectRoot, 'screenshots', 'image-audit');
 await fs.mkdir(outDir, { recursive: true });
 
@@ -150,7 +154,7 @@ const sourceImageCounts = sourceImageRefs.reduce((acc, src) => {
   return acc;
 }, {});
 const duplicateSourceImages = Object.entries(sourceImageCounts)
-  .filter(([, count]) => count > 1)
+  .filter(([src, count]) => count > 1 && !allowedRepeatedImages.has(src))
   .map(([src, count]) => ({ src, count }));
 
 const uniqueSourceImages = [...new Set(sourceImageRefs)];
