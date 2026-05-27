@@ -52,6 +52,7 @@ const viewports = [
 
 const allowedRepeatedImages = new Set([
   'assets/images/wahre-haustierliebe-logo.png',
+  'assets/images/wahre-haustierliebe-mark.png',
 ]);
 
 const outDir = path.join(projectRoot, 'screenshots', 'image-audit');

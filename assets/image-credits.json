@@ -411,8 +411,21 @@
     "author": "Wa(h)re Haustierliebe",
     "license": "Local project brand asset",
     "licenseUrl": "",
-    "usedFor": ["header-logo", "hero-logo", "footer-logo", "social-preview"],
+    "usedFor": ["hero-logo", "footer-logo", "social-preview"],
     "alt": "Wa(h)re Haustierliebe Logo",
     "modifications": "Local brand asset used without CSS crop."
+  },
+  {
+    "id": "wahre-haustierliebe-mark",
+    "localPath": "assets/images/wahre-haustierliebe-mark.png",
+    "fileTitle": "Wa(h)re Haustierliebe header mark",
+    "sourceUrl": "",
+    "originalUrl": "",
+    "author": "Wa(h)re Haustierliebe",
+    "license": "Local project brand asset",
+    "licenseUrl": "",
+    "usedFor": ["header-logo"],
+    "alt": "Wa(h)re Haustierliebe Bildmarke ohne Schriftzug",
+    "modifications": "Cropped local brand asset for compact header usage."
   }
 ]
