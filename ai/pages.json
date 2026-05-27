@@ -1,0 +1,119 @@
+{
+  "lastUpdated": "2026-05-27",
+  "site": "Wa(h)re Haustierliebe",
+  "url": "https://wahre-haustierliebe.de/",
+  "pages": [
+    {
+      "id": "startseite",
+      "url": "https://wahre-haustierliebe.de/",
+      "title": "Wa(h)re Haustierliebe - Ehrliche Aufklärung über Tierhaltung",
+      "description": "Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.",
+      "intent": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung"
+    },
+    {
+      "id": "mensch",
+      "url": "https://wahre-haustierliebe.de/mensch/index.html",
+      "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",
+      "description": "Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation und Verantwortung prüfen, bevor ein Tier einzieht.",
+      "intent": "Vor dem Haustierkauf Entscheidung, Motivation und Alltag prüfen"
+    },
+    {
+      "id": "hunde",
+      "url": "https://wahre-haustierliebe.de/hunde/index.html",
+      "title": "Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen",
+      "description": "Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.",
+      "intent": "Hund anschaffen oder Hundehaltung verbessern"
+    },
+    {
+      "id": "katzen",
+      "url": "https://wahre-haustierliebe.de/katzen/index.html",
+      "title": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
+      "description": "Katzenhaltung ehrlich erklärt: Wohnungsgestaltung, Sozialkontakt, Freigang, Kastration, Tierarztkosten und leise Anzeichen für Stress oder Krankheit.",
+      "intent": "Katze anschaffen oder Katzenhaltung artgerechter machen"
+    },
+    {
+      "id": "voegel",
+      "url": "https://wahre-haustierliebe.de/voegel/index.html",
+      "title": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
+      "description": "Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.",
+      "intent": "Vogelhaltung und Wellensittichhaltung prüfen"
+    },
+    {
+      "id": "kleintiere",
+      "url": "https://wahre-haustierliebe.de/kleintiere/index.html",
+      "title": "Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten",
+      "description": "Kleintiere sind keine einfachen Einstiegstiere: Fläche, Gruppenhaltung, Zähne, Tierarztkosten und typische Haltungsfehler im Überblick.",
+      "intent": "Kaninchen, Meerschweinchen, Hamster oder Ratten verantwortungsvoll halten"
+    },
+    {
+      "id": "exoten",
+      "url": "https://wahre-haustierliebe.de/exoten/index.html",
+      "title": "Exoten halten: Terrarium, Technik, UV-B und Verantwortung",
+      "description": "Exotenhaltung ehrlich erklärt: Licht, Temperatur, Feuchtigkeit, Futter, Meldepflichten, Tierarztzugang und warum Faszination nicht reicht.",
+      "intent": "Exotische Haustiere und Terrarientiere prüfen"
+    },
+    {
+      "id": "pferde",
+      "url": "https://wahre-haustierliebe.de/pferde/index.html",
+      "title": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
+      "description": "Pferdehaltung realistisch prüfen: Herdenkontakt, tägliche Bewegung, Stallformen, Kosten, Tierarzt, Hufschmied und jahrzehntelange Verantwortung.",
+      "intent": "Pferdehaltung und Pferdekauf realistisch prüfen"
+    },
+    {
+      "id": "kastration",
+      "url": "https://wahre-haustierliebe.de/kastration/index.html",
+      "title": "Kastration bei Haustieren: Tierschutz, Kosten und Mythen",
+      "description": "Kastration schützt Tiere und verhindert Leid: Fakten zu Katzen, Hunden, Kaninchen, Kosten, Kastrationspflicht und typischen Gegenargumenten.",
+      "intent": "Kastration bei Haustieren verstehen und entscheiden"
+    },
+    {
+      "id": "qualzucht",
+      "url": "https://wahre-haustierliebe.de/qualzucht/index.html",
+      "title": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
+      "description": "Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.",
+      "intent": "Qualzucht verstehen und beim Tierkauf vermeiden"
+    },
+    {
+      "id": "adoption",
+      "url": "https://wahre-haustierliebe.de/adoption/index.html",
+      "title": "Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind",
+      "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, unseriöse Quellen und warum Zucht den Markt weiter füllt.",
+      "intent": "Tier aus dem Tierheim adoptieren statt kaufen"
+    },
+    {
+      "id": "selbsttest",
+      "url": "https://wahre-haustierliebe.de/selbsttest/index.html",
+      "title": "Haustier-Selbsttest: Bin ich bereit für ein Tier?",
+      "description": "15 ehrliche Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.",
+      "intent": "Selbsttest vor Haustieranschaffung"
+    },
+    {
+      "id": "notfall",
+      "url": "https://wahre-haustierliebe.de/notfall/index.html",
+      "title": "Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst",
+      "description": "Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.",
+      "intent": "Tiermedizinische Warnsignale und Notfallentscheidung"
+    },
+    {
+      "id": "wissen",
+      "url": "https://wahre-haustierliebe.de/wissen/index.html",
+      "title": "Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?",
+      "description": "Häufige Tierhaltungsmythen, Homöopathie bei Tieren und wichtige Begriffe rund um artgerechte Haltung, Krankheiten und Tierschutz verständlich erklärt.",
+      "intent": "Tierhaltungsmythen und Fachbegriffe prüfen"
+    },
+    {
+      "id": "noch-nicht-bereit",
+      "url": "https://wahre-haustierliebe.de/noch-nicht-bereit/index.html",
+      "title": "Noch nicht bereit für ein Tier: Warten kann Tierliebe sein",
+      "description": "Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie du trotzdem Tierschutz unterstützen kannst.",
+      "intent": "Verantwortlich warten statt vorschnell ein Tier anschaffen"
+    },
+    {
+      "id": "budgie-brain",
+      "url": "https://wahre-haustierliebe.de/budgie-brain/index.html",
+      "title": "Budgie Brain: Wellensittich-Haltung interaktiv verstehen",
+      "description": "Interaktive Simulation für Wellensittich-Haltung: Erlebe, wie Schwarm, UV-Licht, Freiflug, Stress und Alltag einen Vogel beeinflussen.",
+      "intent": "Interaktives Lernwerkzeug zur Wellensittich-Haltung"
+    }
+  ]
+}

@@ -25,14 +25,13 @@ const sectionShots = [
 const outDir = path.join(projectRoot, 'screenshots', 'startpage-context-audit');
 await fs.mkdir(outDir, { recursive: true });
 
-const fileUrl = pathToFileURL(path.join(projectRoot, 'index.html')).href;
 const browser = await chromium.launch();
 const report = [];
 
 for (const viewport of viewports) {
   const context = await browser.newContext({ viewport });
   const page = await context.newPage();
-  await page.goto(`${fileUrl}#startseite`, { waitUntil: 'load' });
+  await page.goto(pathToFileURL(path.join(projectRoot, 'index.html')).href, { waitUntil: 'load' });
   await page.waitForTimeout(250);
   await page.evaluate(async () => {
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

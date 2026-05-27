@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgie Brain: Wellensittich-Haltung interaktiv verstehen</title>
+  <meta name="description" content="Interaktive Simulation für Wellensittich-Haltung: Erlebe, wie Schwarm, UV-Licht, Freiflug, Stress und Alltag einen Vogel beeinflussen.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:title" content="Budgie Brain: Wellensittich-Haltung interaktiv verstehen">
+  <meta property="og:description" content="Interaktive Simulation für Wellensittich-Haltung: Erlebe, wie Schwarm, UV-Licht, Freiflug, Stress und Alltag einen Vogel beeinflussen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wahre-haustierliebe.de/budgie-brain/index.html">
+  <meta property="og:image" content="https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png">
+  <meta property="og:site_name" content="Wa(h)re Haustierliebe">
+  <meta property="og:locale" content="de_DE">
+  <link rel="canonical" href="https://wahre-haustierliebe.de/budgie-brain/index.html">
+  <link rel="stylesheet" href="../css/budgie.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Budgie Brain: Wellensittich-Haltung interaktiv verstehen",
+  "description": "Interaktive Simulation für Wellensittich-Haltung: Erlebe, wie Schwarm, UV-Licht, Freiflug, Stress und Alltag einen Vogel beeinflussen.",
+  "url": "https://wahre-haustierliebe.de/budgie-brain/index.html",
+  "inLanguage": "de-DE",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Wa(h)re Haustierliebe",
+    "url": "https://wahre-haustierliebe.de/"
+  },
+  "teaches": [
+    "Wellensittich-Haltung",
+    "Schwarmhaltung",
+    "UV-Licht",
+    "Freiflug",
+    "Stress bei Vögeln"
+  ]
+}
+  </script>
+</head>
+<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="budgie-brain">
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <main id="main-content"><div class="budgie-app" id="app">
+
+    <!-- ===== INTRO SCREEN ===== -->
+    <div id="intro-screen" class="intro-screen">
+      <div class="intro-header">
+        <div class="intro-logo">🐦</div>
+        <h1>Budgie Brain</h1>
+        <p class="intro-tagline">Lerne einen Wellensittich zu verstehen.</p>
+      </div>
+
+      <div class="intro-preview">
+        <div class="budgie-container budgie-container--intro">
+          <div class="budgie neutral" id="intro-budgie">
+            <div class="budgie-body">
+              <div class="budgie-head">
+                <div class="budgie-cere"></div>
+                <div class="budgie-beak"></div>
+                <div class="budgie-eye"><div class="budgie-pupil"></div></div>
+                <div class="budgie-markings"></div>
+              </div>
+              <div class="budgie-wing"></div>
+              <div class="budgie-chest"></div>
+              <div class="budgie-tail"></div>
+            </div>
+            <div class="budgie-feet"></div>
+            <div class="budgie-perch"></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="intro-form" id="intro-form">
+        <div class="form-group">
+          <label for="budgie-name">Name</label>
+          <input type="text" id="budgie-name" placeholder="z. B. Pistazie" maxlength="20" autofocus>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="budgie-color">Gefiederfarbe</label>
+            <select id="budgie-color">
+              <option value="grün-gelb">Wildfarbe</option>
+              <option value="blau-weiß">Blau-Weiss</option>
+              <option value="gelb">Lutino</option>
+              <option value="hellblau">Hellblau</option>
+              <option value="grau">Grau</option>
+              <option value="violett">Violett</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budgie-sex">Geschlecht</label>
+            <select id="budgie-sex">
+              <option value="männlich">Maennlich</option>
+              <option value="weiblich">Weiblich</option>
+              <option value="unbekannt">Unbekannt</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-start">Simulation starten</button>
+      </form>
+    </div>
+
+    <!-- ===== MAIN SIMULATION ===== -->
+    <div id="simulation-screen" style="display:none;">
+
+      <!-- Top Bar -->
+      <header class="sim-header">
+        <div class="sim-header-left">
+          <span class="sim-name" id="header-name">Budgie Brain</span>
+          <span class="sim-traits" id="personality-badges"></span>
+        </div>
+        <div class="sim-header-right">
+          <span class="sim-mood-icon" id="mood-icon">😊</span>
+          <div class="sim-time-block">
+            <span class="sim-day" id="sim-day">Tag 1</span>
+            <span class="sim-clock" id="sim-clock">08:00</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Day Progress Bar -->
+      <div class="day-progress" id="day-progress">
+        <div class="day-progress-fill" id="day-progress-fill"></div>
+        <div class="day-progress-markers">
+          <span class="marker marker-dawn" title="Daemmerung"></span>
+          <span class="marker marker-noon" title="Mittag"></span>
+          <span class="marker marker-evening" title="Abend"></span>
+        </div>
+      </div>
+
+      <!-- Knowledge Counter -->
+      <div class="knowledge-bar" id="knowledge-bar" onclick="BudgieApp.toggleKnowledgePanel()">
+        <span class="knowledge-icon">📖</span>
+        <span class="knowledge-count" id="knowledge-count">0</span> Erkenntnisse
+        <span class="knowledge-chevron" id="knowledge-chevron">▸</span>
+      </div>
+
+      <!-- Knowledge Panel (hidden by default) -->
+      <div class="knowledge-panel hidden" id="knowledge-panel">
+        <div class="knowledge-grid" id="knowledge-grid"></div>
+      </div>
+
+      <!-- Budgie Visual + Behavior -->
+      <div class="sim-center">
+        <div class="budgie-scene" id="budgie-scene">
+          <!-- Stars for night -->
+          <div class="stars hidden" id="stars">
+            <div class="star"></div><div class="star"></div><div class="star"></div>
+            <div class="star"></div><div class="star"></div><div class="star"></div>
+          </div>
+
+          <div class="budgie-container">
+            <div class="budgie neutral" id="sim-budgie" onclick="BudgieApp.showThoughtBubble()">
+              <div class="budgie-body">
+                <div class="budgie-head">
+                  <div class="budgie-cere"></div>
+                  <div class="budgie-beak"></div>
+                  <div class="budgie-eye"><div class="budgie-pupil"></div></div>
+                  <div class="budgie-markings"></div>
+                </div>
+                <div class="budgie-wing"></div>
+                <div class="budgie-chest"></div>
+                <div class="budgie-tail"></div>
+              </div>
+              <div class="budgie-feet"></div>
+              <div class="budgie-perch"></div>
+            </div>
+          </div>
+
+          <!-- Thought Bubble (click on bird) -->
+          <div class="thought-bubble hidden" id="thought-bubble">
+            <div class="thought-text" id="thought-text"></div>
+            <div class="thought-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <!-- Companion -->
+          <div class="companion-badge hidden" id="companion-badge">
+            <span class="companion-icon">🐦</span>
+            <span class="companion-name" id="companion-name-display"></span>
+          </div>
+        </div>
+
+        <!-- Behavior line -->
+        <div class="behavior-line" id="behavior-line"></div>
+      </div>
+
+      <!-- Action Feedback Popup -->
+      <div class="action-popup hidden" id="action-popup">
+        <span class="action-popup-text" id="action-popup-text"></span>
+      </div>
+
+      <!-- State Chips -->
+      <div class="state-chips" id="state-chips"></div>
+
+      <!-- Vocal Repertoire -->
+      <div class="vocal-repertoire hidden" id="vocal-repertoire">
+        <div class="vocal-label">Repertoire</div>
+        <div class="vocal-items" id="vocal-items"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="actions-grid">
+        <div class="action-group">
+          <div class="action-group-label">Pflege</div>
+          <div class="action-group-buttons">
+            <button class="action-btn action-btn--feed" onclick="BudgieApp.showFoodModal()">
+              <span class="action-icon">🌾</span>
+              <span class="action-label">Fuettern</span>
+            </button>
+            <button class="action-btn action-btn--water" onclick="BudgieApp.doAction('water')">
+              <span class="action-icon">💧</span>
+              <span class="action-label">Wasser</span>
+            </button>
+            <button class="action-btn action-btn--clean" onclick="BudgieApp.doAction('clean')">
+              <span class="action-icon">🧹</span>
+              <span class="action-label">Sauber machen</span>
+            </button>
+            <button class="action-btn action-btn--vet" onclick="BudgieApp.doAction('vet')">
+              <span class="action-icon">🏥</span>
+              <span class="action-label">Tierarzt</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="action-group">
+          <div class="action-group-label">Soziales</div>
+          <div class="action-group-buttons">
+            <button class="action-btn action-btn--talk" onclick="BudgieApp.doAction('talk')">
+              <span class="action-icon">💬</span>
+              <span class="action-label">Reden</span>
+            </button>
+            <button class="action-btn action-btn--companion" id="btn-companion" onclick="BudgieApp.doAction('companion')">
+              <span class="action-icon">🐦</span>
+              <span class="action-label">Partner</span>
+            </button>
+            <button class="action-btn action-btn--freeflight" onclick="BudgieApp.doAction('freeflight')">
+              <span class="action-icon">🕊️</span>
+              <span class="action-label">Freiflug</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="action-group">
+          <div class="action-group-label">Umgebung</div>
+          <div class="action-group-buttons">
+            <button class="action-btn action-btn--env" onclick="BudgieApp.showEnvironmentModal()">
+              <span class="action-icon">⚙️</span>
+              <span class="action-label">Umgebung</span>
+            </button>
+            <button class="action-btn action-btn--toy" onclick="BudgieApp.doAction('toy')">
+              <span class="action-icon">🔔</span>
+              <span class="action-label">Spielzeug</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="action-group">
+          <div class="action-group-label">Zeit</div>
+          <div class="action-group-buttons">
+            <button class="action-btn action-btn--observe" onclick="BudgieApp.doAction('observe')">
+              <span class="action-icon">👁️</span>
+              <span class="action-label">Beobachten</span>
+            </button>
+            <button class="action-btn action-btn--skip" onclick="BudgieApp.doAction('skip4')">
+              <span class="action-icon">⏩</span>
+              <span class="action-label">4 Std.</span>
+            </button>
+            <button class="action-btn action-btn--skipday" onclick="BudgieApp.doAction('skipday')">
+              <span class="action-icon">🌙</span>
+              <span class="action-label">Naechster Tag</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Button (opens explanation) -->
+      <button class="info-fab" id="info-fab" onclick="BudgieApp.showExplanation()">
+        <span>ℹ️</span>
+      </button>
+
+      <!-- Explanation Panel (hidden by default) -->
+      <div class="explanation-overlay hidden" id="explanation-overlay" onclick="BudgieApp.hideExplanation()">
+        <div class="explanation-card" onclick="event.stopPropagation()">
+          <div class="explanation-header">
+            <span>Was passiert hier?</span>
+            <button class="explanation-close" onclick="BudgieApp.hideExplanation()">✕</button>
+          </div>
+          <div class="explanation-body" id="explanation-body"></div>
+        </div>
+      </div>
+
+      <!-- Event Log -->
+      <div class="event-log" id="event-log">
+        <div class="event-log-header" onclick="BudgieApp.toggleLog()">
+          <span>Ereignisse</span>
+          <span class="event-count" id="event-count"></span>
+          <span class="event-chevron" id="event-chevron">▸</span>
+        </div>
+        <div class="event-list" id="event-list"></div>
+      </div>
+
+    </div>
+
+    <!-- ===== DEATH SCREEN ===== -->
+    <div id="death-screen" class="death-screen" style="display:none;">
+      <div class="death-icon">💀</div>
+      <h2 class="death-title">Game Over</h2>
+      <div class="death-epitaph" id="death-epitaph"></div>
+      <div class="death-lesson-card">
+        <div class="death-lesson-label">Was du gelernt hast</div>
+        <div class="death-lesson-text" id="death-lesson"></div>
+      </div>
+      <div class="death-stats" id="death-stats"></div>
+      <button class="btn-restart" onclick="BudgieApp.restart()">Neues Spiel</button>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOD MODAL ===== -->
+  <div class="modal-overlay hidden" id="food-modal">
+    <div class="modal">
+      <h3>Was fuettern?</h3>
+      <div class="food-options" id="food-options"></div>
+      <button class="modal-cancel" onclick="BudgieApp.closeFoodModal()">Abbrechen</button>
+    </div>
+  </div>
+
+  <!-- ===== ENVIRONMENT MODAL ===== -->
+  <div class="modal-overlay hidden" id="env-modal">
+    <div class="modal" id="env-modal-content"></div>
+  </div>
+
+  <!-- ===== COMPANION NAME MODAL ===== -->
+  <div class="modal-overlay hidden" id="companion-modal">
+    <div class="modal companion-modal">
+      <h3>Zweiter Wellensittich</h3>
+      <p class="companion-intro">Ein Artgenosse veraendert alles. Wellensittiche sind Schwarmtiere. Wie soll der neue Vogel heissen?</p>
+      <div class="form-group">
+        <input type="text" id="companion-name-input" placeholder="z. B. Kazooie" maxlength="20">
+      </div>
+      <div class="companion-buttons">
+        <button class="btn-confirm" onclick="BudgieApp.confirmCompanion()">Einziehen lassen</button>
+        <button class="modal-cancel" onclick="BudgieApp.closeCompanionModal()">Abbrechen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  </main>
+  <script src="../js/budgie-engine.js"></script>
+  <script src="../js/budgie-text.js"></script>
+  <script src="../js/budgie-app.js"></script>
+</body>
+</html>

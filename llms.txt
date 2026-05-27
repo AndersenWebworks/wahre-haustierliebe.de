@@ -1,0 +1,22 @@
+# Wa(h)re Haustierliebe
+
+> Private, werbefreie Aufklärungsseite über verantwortungsvolle Haustierhaltung in Deutschland.
+
+## Wichtig
+
+- Kein Ersatz für tierärztliche Beratung.
+- Schwerpunkt: Wissen vor Anschaffung, bessere Haltung, Kastration, Qualzucht vermeiden, Adoption und Notfallwarnzeichen.
+
+## Zentrale URLs
+
+- Start: https://wahre-haustierliebe.de/
+- Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
+- Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: https://wahre-haustierliebe.de/katzen/index.html
+- Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
+- Kastration bei Haustieren: Tierschutz, Kosten und Mythen: https://wahre-haustierliebe.de/kastration/index.html
+- Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
+- Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
+- Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+
+Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt
+

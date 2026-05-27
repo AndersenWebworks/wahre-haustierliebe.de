@@ -1,0 +1,1794 @@
+/**
+ * Budgie Brain — Educational Game Stylesheet
+ *
+ * Clean, warm, game-aesthetic. Mobile-first.
+ * CSS-Art budgie reacts to mood states.
+ * Tageszeit shifts background atmosphere.
+ */
+
+/* =========================================================================
+   RESET & VARIABLES
+   ========================================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Core palette — warm, inviting */
+  --green: #4CAF50;
+  --green-dark: #388E3C;
+  --green-light: #81C784;
+  --blue: #42A5F5;
+  --blue-dark: #1E88E5;
+  --amber: #FFB300;
+  --amber-dark: #FF8F00;
+  --red: #EF5350;
+  --red-dark: #C62828;
+  --teal: #26A69A;
+
+  /* Neutrals */
+  --bg: #FFF8F0;
+  --bg-card: #FFFFFF;
+  --bg-dim: #F5EDE3;
+  --text: #2D2A26;
+  --text-secondary: #6D6560;
+  --text-muted: #9E9590;
+  --border: #E8DFD5;
+  --border-light: #F0EAE2;
+
+  /* Severity */
+  --positive: #4CAF50;
+  --info: #42A5F5;
+  --warning: #FFB300;
+  --critical: #EF5350;
+
+  /* Budgie colors (overridden by JS per color choice) */
+  --budgie-body: #6ABF4B;
+  --budgie-body-dark: #4A9F2B;
+  --budgie-head: #E8E052;
+  --budgie-wing: #3D8C28;
+  --budgie-chest: #8DD870;
+
+  /* Spacing */
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.25rem;
+  --s6: 1.5rem;
+  --s8: 2rem;
+
+  /* Font */
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+  /* Radius */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
+  /* Transitions */
+  --t-fast: 0.15s ease;
+  --t-med: 0.3s ease;
+  --t-slow: 0.8s ease;
+  --t-bg: 1.5s ease;
+}
+
+
+/* =========================================================================
+   BODY & LAYOUT
+   ========================================================================= */
+
+body.budgie-page {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  min-height: 100dvh;
+  transition: background var(--t-bg), color var(--t-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.budgie-app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--s4);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+/* =========================================================================
+   INTRO SCREEN
+   ========================================================================= */
+
+.intro-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--s8) 0;
+  animation: fadeIn 0.6s ease;
+}
+
+.intro-header {
+  text-align: center;
+  margin-bottom: var(--s6);
+}
+
+.intro-logo {
+  font-size: 3rem;
+  margin-bottom: var(--s2);
+}
+
+.intro-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  letter-spacing: -0.02em;
+}
+
+.intro-tagline {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: var(--s1);
+}
+
+.intro-preview {
+  margin-bottom: var(--s6);
+}
+
+.budgie-container--intro {
+  transform: scale(1.3);
+  margin: var(--s4) 0;
+}
+
+.intro-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  width: 100%;
+  max-width: 320px;
+}
+
+.intro-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s3);
+}
+
+.intro-form label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--s1);
+  display: block;
+}
+
+.intro-form input[type="text"],
+.intro-form select {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  padding: var(--s3) var(--s4);
+  border: 2px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-card);
+  color: var(--text);
+  width: 100%;
+  transition: border-color var(--t-fast);
+}
+
+.intro-form input[type="text"]:focus,
+.intro-form select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.intro-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-start {
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--s3) var(--s6);
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast);
+  margin-top: var(--s2);
+}
+
+.btn-start:hover {
+  background: var(--green-dark);
+}
+
+.btn-start:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================================
+   SIMULATION HEADER
+   ========================================================================= */
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--s3) 0;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--s3);
+}
+
+.sim-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sim-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sim-traits {
+  display: flex;
+  gap: var(--s1);
+  flex-wrap: wrap;
+}
+
+.trait-pill {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: var(--r-full);
+  background: var(--bg-dim);
+  color: var(--text-secondary);
+}
+
+.sim-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.sim-mood-icon {
+  font-size: 1.5rem;
+  transition: all var(--t-med);
+}
+
+.sim-time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.sim-day {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sim-clock {
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================================
+   DAY PROGRESS BAR
+   ========================================================================= */
+
+.day-progress {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  position: relative;
+  margin-bottom: var(--s3);
+  overflow: visible;
+}
+
+.day-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--amber), var(--green), var(--blue-dark));
+  border-radius: 2px;
+  transition: width var(--t-med);
+}
+
+.day-progress-markers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.day-progress-markers .marker {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  top: -2px;
+  background: var(--text-muted);
+  opacity: 0.3;
+  border-radius: 1px;
+}
+
+.marker-dawn { left: 25%; }
+.marker-noon { left: 50%; }
+.marker-evening { left: 79%; }
+
+
+/* =========================================================================
+   KNOWLEDGE BAR & PANEL
+   ========================================================================= */
+
+.knowledge-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s2) var(--s3);
+  background: var(--bg-dim);
+  border-radius: var(--r-sm);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--t-fast);
+  margin-bottom: var(--s3);
+  user-select: none;
+}
+
+.knowledge-bar:hover {
+  background: var(--border);
+}
+
+.knowledge-icon {
+  font-size: 1rem;
+}
+
+.knowledge-count {
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.knowledge-chevron {
+  margin-left: auto;
+  transition: transform var(--t-fast);
+  font-size: 0.7rem;
+}
+
+.knowledge-bar.open .knowledge-chevron {
+  transform: rotate(90deg);
+}
+
+.knowledge-panel {
+  margin-bottom: var(--s4);
+  animation: slideDown 0.25s ease;
+}
+
+.knowledge-panel.hidden {
+  display: none;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s2);
+  max-height: 300px;
+  overflow-y: auto;
+  padding: var(--s2);
+}
+
+.knowledge-card {
+  padding: var(--s3);
+  background: var(--bg-card);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--blue);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  animation: fadeIn 0.3s ease;
+}
+
+.knowledge-card .kc-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--s1);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.knowledge-card.kc-milestone {
+  border-left-color: var(--amber);
+}
+
+
+/* =========================================================================
+   BUDGIE CSS ART
+   ========================================================================= */
+
+.budgie-scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+  padding: var(--s4) 0;
+}
+
+.budgie-container {
+  position: relative;
+  width: 120px;
+  height: 150px;
+}
+
+.budgie {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform var(--t-med);
+}
+
+/* Idle bobbing */
+.budgie {
+  animation: budgie-idle 3s ease-in-out infinite;
+}
+
+/* Body */
+.budgie-body {
+  position: relative;
+  width: 70px;
+  height: 90px;
+  margin: 0 auto;
+  transition: transform var(--t-med), width var(--t-med), height var(--t-med);
+}
+
+/* Head */
+.budgie-head {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 36px;
+  background: var(--budgie-head);
+  border-radius: 50% 50% 45% 45%;
+  z-index: 3;
+  transition: transform var(--t-med), background var(--t-med);
+}
+
+.budgie-markings {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  right: 5px;
+  height: 14px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0,0,0,0.2) 0px,
+    rgba(0,0,0,0.2) 1.5px,
+    transparent 1.5px,
+    transparent 3.5px
+  );
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* Cere (nose) */
+.budgie-cere {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 6px;
+  background: #5B9BD5;
+  border-radius: 50%;
+  z-index: 5;
+  transition: background var(--t-med);
+}
+
+/* Beak */
+.budgie-beak {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 8px;
+  background: #E8A030;
+  border-radius: 0 0 50% 50%;
+  z-index: 4;
+}
+
+/* Eye */
+.budgie-eye {
+  position: absolute;
+  top: 12px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  z-index: 5;
+  overflow: hidden;
+  transition: height var(--t-med), top var(--t-med);
+}
+
+.budgie-pupil {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background: #1A1A1A;
+  border-radius: 50%;
+  animation: blink 4s ease-in-out infinite;
+}
+
+/* Main body (chest area) */
+.budgie-chest {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 72px;
+  background: var(--budgie-body);
+  border-radius: 50% 50% 40% 40%;
+  z-index: 1;
+  transition: background var(--t-med), width var(--t-med), height var(--t-med);
+}
+
+/* Wing */
+.budgie-wing {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-35%);
+  width: 40px;
+  height: 55px;
+  background: var(--budgie-wing);
+  border-radius: 30% 60% 55% 40%;
+  z-index: 2;
+  transition: background var(--t-med), transform var(--t-med);
+}
+
+/* Tail */
+.budgie-tail {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 30px;
+  background: var(--budgie-wing);
+  border-radius: 3px 3px 2px 2px;
+  z-index: 0;
+  transition: background var(--t-med);
+}
+
+/* Feet */
+.budgie-feet {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 6px;
+  z-index: 6;
+}
+
+.budgie-feet::before,
+.budgie-feet::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  background: #888;
+  border-radius: 2px;
+}
+
+.budgie-feet::before { left: 2px; }
+.budgie-feet::after { right: 2px; }
+
+/* Perch */
+.budgie-perch {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 8px;
+  background: linear-gradient(180deg, #A0855C, #8B7048);
+  border-radius: 4px;
+  z-index: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* ---- BUDGIE STATE VARIATIONS ---- */
+
+/* Content: smooth feathers, upright, slight happy lean */
+.budgie.content .budgie-head {
+  transform: translateX(-50%) rotate(-3deg);
+}
+.budgie.content .budgie-chest {
+  width: 56px;
+}
+
+/* Stressed: puffed up, bigger body, head tucked */
+.budgie.stressed .budgie-chest {
+  width: 66px;
+  height: 78px;
+}
+.budgie.stressed .budgie-body {
+  transform: scale(1.08);
+}
+.budgie.stressed .budgie-head {
+  top: -16px;
+  transform: translateX(-50%) translateY(4px);
+}
+.budgie.stressed {
+  animation: budgie-idle 5s ease-in-out infinite;
+}
+
+/* Sleeping: eyes closed, head tucked in */
+.budgie.sleeping .budgie-eye {
+  height: 2px;
+  top: 16px;
+}
+.budgie.sleeping .budgie-head {
+  transform: translateX(-50%) rotate(15deg) translateY(6px);
+  top: -14px;
+}
+.budgie.sleeping .budgie-chest {
+  width: 62px;
+}
+.budgie.sleeping {
+  animation: budgie-breathe 4s ease-in-out infinite;
+}
+
+/* Curious: head tilted */
+.budgie.curious .budgie-head {
+  transform: translateX(-50%) rotate(-12deg);
+}
+.budgie.curious .budgie-pupil {
+  animation: pupil-pin 1.5s ease-in-out infinite;
+}
+
+/* Sick: droopy, head down */
+.budgie.sick .budgie-body {
+  transform: translateY(4px);
+}
+.budgie.sick .budgie-head {
+  transform: translateX(-50%) translateY(6px);
+  top: -16px;
+}
+.budgie.sick .budgie-wing {
+  transform: translateX(-35%) translateY(3px);
+}
+.budgie.sick .budgie-chest {
+  width: 64px;
+}
+.budgie.sick {
+  animation: none;
+  opacity: 0.85;
+}
+
+/* Crisis: on floor (perch hidden, bird low) */
+.budgie.crisis .budgie-body {
+  transform: translateY(10px);
+}
+.budgie.crisis .budgie-head {
+  transform: translateX(-50%) translateY(10px);
+}
+.budgie.crisis {
+  animation: none;
+  opacity: 0.7;
+}
+
+/* Dead */
+.budgie.dead {
+  animation: none;
+  opacity: 0.4;
+  filter: grayscale(0.8);
+}
+.budgie.dead .budgie-eye {
+  height: 2px;
+}
+
+
+/* ---- BUDGIE ANIMATIONS ---- */
+
+@keyframes budgie-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes budgie-breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1px) scale(1.02); }
+}
+
+@keyframes blink {
+  0%, 95%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.1); }
+}
+
+@keyframes pupil-pin {
+  0%, 100% { width: 6px; height: 6px; }
+  50% { width: 3px; height: 3px; top: 3px; left: 3px; }
+}
+
+
+/* ---- BUDGIE ACTION REACTIONS ---- */
+
+.budgie.react-happy {
+  animation: react-bounce 0.5s ease;
+}
+
+.budgie.react-eat {
+  animation: react-peck 0.4s ease;
+}
+
+.budgie.react-shake {
+  animation: react-shake 0.4s ease;
+}
+
+@keyframes react-bounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  60% { transform: translateY(-4px); }
+}
+
+@keyframes react-peck {
+  0%, 100% { transform: rotate(0); }
+  30% { transform: rotate(8deg) translateY(3px); }
+  60% { transform: rotate(-3deg); }
+}
+
+@keyframes react-shake {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  60% { transform: rotate(-3deg); }
+  80% { transform: rotate(3deg); }
+}
+
+
+/* =========================================================================
+   THOUGHT BUBBLE
+   ========================================================================= */
+
+.thought-bubble {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  max-width: 200px;
+  padding: var(--s3) var(--s4);
+  background: var(--bg-card);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  z-index: 10;
+  animation: bubble-in 0.3s ease;
+}
+
+.thought-bubble.hidden {
+  display: none;
+}
+
+.thought-dots {
+  position: absolute;
+  bottom: -14px;
+  left: 20px;
+  display: flex;
+  gap: 4px;
+}
+
+.thought-dots span {
+  width: 6px;
+  height: 6px;
+  background: var(--bg-card);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+.thought-dots span:nth-child(2) { width: 5px; height: 5px; }
+.thought-dots span:nth-child(3) { width: 4px; height: 4px; }
+
+@keyframes bubble-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+/* =========================================================================
+   COMPANION BADGE
+   ========================================================================= */
+
+.companion-badge {
+  position: absolute;
+  bottom: 28px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+  padding: 2px 8px;
+  background: var(--bg-card);
+  border-radius: var(--r-full);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.companion-badge.hidden {
+  display: none;
+}
+
+.companion-icon {
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================================
+   BEHAVIOR LINE
+   ========================================================================= */
+
+.sim-center {
+  margin-bottom: var(--s3);
+}
+
+.behavior-line {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: var(--s2) var(--s4);
+  min-height: 2.5em;
+  transition: opacity var(--t-med);
+}
+
+
+/* =========================================================================
+   ACTION POPUP (feedback after actions)
+   ========================================================================= */
+
+.action-popup {
+  text-align: center;
+  padding: var(--s2) var(--s4);
+  border-radius: var(--r-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  animation: popup-in 0.3s ease;
+  transition: opacity 0.5s ease;
+  margin-bottom: var(--s3);
+}
+
+.action-popup.hidden {
+  display: none;
+}
+
+.action-popup.severity-positive {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--green-dark);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.action-popup.severity-info {
+  background: rgba(66, 165, 245, 0.1);
+  color: var(--blue-dark);
+  border: 1px solid rgba(66, 165, 245, 0.2);
+}
+
+.action-popup.severity-warning {
+  background: rgba(255, 179, 0, 0.12);
+  color: var(--amber-dark);
+  border: 1px solid rgba(255, 179, 0, 0.25);
+}
+
+.action-popup.severity-critical {
+  background: rgba(239, 83, 80, 0.1);
+  color: var(--red-dark);
+  border: 1px solid rgba(239, 83, 80, 0.2);
+}
+
+@keyframes popup-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =========================================================================
+   STATE CHIPS
+   ========================================================================= */
+
+.state-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  justify-content: center;
+  padding: var(--s2) 0;
+  margin-bottom: var(--s3);
+}
+
+.state-chip {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all var(--t-fast);
+}
+
+.state-chip.good {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--green-dark);
+}
+
+.state-chip.fair {
+  background: var(--bg-dim);
+  color: var(--text-muted);
+}
+
+.state-chip.poor {
+  background: rgba(255, 179, 0, 0.12);
+  color: var(--amber-dark);
+}
+
+.state-chip.critical {
+  background: rgba(239, 83, 80, 0.1);
+  color: var(--red-dark);
+  font-weight: 600;
+  animation: chip-pulse 2s ease infinite;
+}
+
+@keyframes chip-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+
+/* =========================================================================
+   VOCAL REPERTOIRE
+   ========================================================================= */
+
+.vocal-repertoire {
+  padding: var(--s2) 0;
+  animation: fadeIn 0.4s ease;
+}
+
+.vocal-repertoire.hidden {
+  display: none;
+}
+
+.vocal-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: var(--s2);
+}
+
+.vocal-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  justify-content: center;
+}
+
+.vocal-item {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: var(--r-full);
+  background: rgba(76, 175, 80, 0.08);
+  color: var(--green-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+
+.vocal-item .vocal-day {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================================
+   ACTION BUTTONS
+   ========================================================================= */
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s3);
+  margin-bottom: var(--s4);
+}
+
+.action-group {
+  background: var(--bg-card);
+  border-radius: var(--r-md);
+  padding: var(--s3);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.action-group-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: var(--s2);
+}
+
+.action-group-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--s2) var(--s2);
+  background: var(--bg-dim);
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all var(--t-fast);
+  font-family: var(--font);
+  flex: 1;
+  min-width: 56px;
+}
+
+.action-btn:hover {
+  border-color: var(--green);
+  background: rgba(76, 175, 80, 0.06);
+}
+
+.action-btn:active {
+  transform: scale(0.94);
+}
+
+.action-icon {
+  font-size: 1.1rem;
+}
+
+.action-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Specific button hover colors */
+.action-btn--vet:hover { border-color: var(--warning); }
+.action-btn--skip:hover,
+.action-btn--skipday:hover { border-color: var(--info); }
+
+
+/* =========================================================================
+   INFO FAB (Science button)
+   ========================================================================= */
+
+.info-fab {
+  position: fixed;
+  bottom: var(--s4);
+  right: var(--s4);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--t-fast), transform var(--t-fast);
+  z-index: 50;
+}
+
+.info-fab:hover {
+  background: var(--blue-dark);
+  transform: scale(1.05);
+}
+
+.info-fab:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================================================================
+   EXPLANATION OVERLAY
+   ========================================================================= */
+
+.explanation-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.2s ease;
+}
+
+.explanation-overlay.hidden {
+  display: none;
+}
+
+.explanation-card {
+  background: var(--bg-card);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  padding: var(--s6);
+  max-width: 480px;
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.3s ease;
+}
+
+.explanation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--s4);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.explanation-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--s1);
+}
+
+.explanation-body {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  white-space: pre-line;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+
+/* =========================================================================
+   EVENT LOG
+   ========================================================================= */
+
+.event-log {
+  border-top: 1px solid var(--border-light);
+  padding-top: var(--s3);
+  margin-bottom: var(--s8);
+}
+
+.event-log-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+  padding: var(--s2) 0;
+}
+
+.event-count {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.event-chevron {
+  margin-left: auto;
+  transition: transform var(--t-fast);
+  font-size: 0.7rem;
+}
+
+.event-log.open .event-chevron {
+  transform: rotate(90deg);
+}
+
+.event-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--t-med);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.event-log.open .event-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: var(--s2);
+}
+
+.event-item {
+  font-size: 0.75rem;
+  padding: var(--s1) var(--s2);
+  border-radius: var(--r-sm);
+  color: var(--text-secondary);
+  display: flex;
+  gap: var(--s2);
+  border-left: 2px solid transparent;
+}
+
+.event-item .event-time {
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 60px;
+  font-variant-numeric: tabular-nums;
+}
+
+.event-item.severity-positive { border-left-color: var(--positive); }
+.event-item.severity-info { border-left-color: var(--info); }
+.event-item.severity-warning { border-left-color: var(--warning); background: rgba(255,179,0,0.04); }
+.event-item.severity-critical { border-left-color: var(--critical); background: rgba(239,83,80,0.05); }
+
+
+/* =========================================================================
+   DEATH SCREEN
+   ========================================================================= */
+
+.death-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--s8);
+  animation: fadeIn 1.5s ease;
+}
+
+.death-icon {
+  font-size: 3rem;
+  margin-bottom: var(--s4);
+}
+
+.death-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--red-dark);
+  margin-bottom: var(--s4);
+}
+
+.death-epitaph {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: var(--s6);
+  line-height: 1.6;
+}
+
+.death-lesson-card {
+  max-width: 380px;
+  padding: var(--s5);
+  background: var(--bg-card);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--red);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+  margin-bottom: var(--s6);
+}
+
+.death-lesson-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  margin-bottom: var(--s2);
+}
+
+.death-lesson-text {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.death-stats {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: var(--s6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s4);
+  justify-content: center;
+}
+
+.death-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.death-stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.death-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.btn-restart {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: var(--s3) var(--s8);
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+
+.btn-restart:hover {
+  background: var(--green-dark);
+}
+
+.btn-restart:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================================
+   MODALS
+   ========================================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal {
+  background: var(--bg-card);
+  border-radius: var(--r-lg);
+  padding: var(--s6);
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: slideDown 0.25s ease;
+}
+
+.modal h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: var(--s4);
+}
+
+/* Food options */
+.food-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.food-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--s3) var(--s4);
+  background: var(--bg-dim);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all var(--t-fast);
+  border: 1px solid transparent;
+}
+
+.food-option:hover {
+  border-color: var(--green);
+  background: rgba(76, 175, 80, 0.06);
+}
+
+.food-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.food-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.food-quality {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: var(--r-full);
+  margin-left: 6px;
+}
+
+.food-quality.good { background: rgba(76,175,80,0.12); color: var(--green-dark); }
+.food-quality.fair { background: var(--bg-dim); color: var(--text-muted); }
+
+/* Buttons */
+.modal-cancel {
+  font-family: var(--font);
+  font-size: 0.85rem;
+  padding: var(--s2) var(--s4);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 100%;
+  margin-top: var(--s4);
+  transition: all var(--t-fast);
+}
+
+.modal-cancel:hover {
+  border-color: var(--text-muted);
+  color: var(--text-secondary);
+}
+
+.btn-confirm {
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: var(--s3) var(--s6);
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  width: 100%;
+  transition: background var(--t-fast);
+}
+
+.btn-confirm:hover {
+  background: var(--green-dark);
+}
+
+/* Companion modal */
+.companion-modal {
+  text-align: center;
+}
+
+.companion-intro {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--s4);
+}
+
+.companion-modal input[type="text"] {
+  font-family: var(--font);
+  font-size: 1rem;
+  padding: var(--s3) var(--s4);
+  border: 2px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-card);
+  color: var(--text);
+  width: 100%;
+  text-align: center;
+  margin-bottom: var(--s4);
+}
+
+.companion-modal input[type="text"]:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.companion-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+/* Environment modal */
+.env-group {
+  margin-bottom: var(--s4);
+}
+
+.env-group label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--s2);
+}
+
+.env-group select {
+  width: 100%;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  padding: var(--s2) var(--s3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.env-group input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+
+.env-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--green);
+  cursor: pointer;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s2) 0;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.toggle-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.toggle-switch {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  background: var(--border);
+  border-radius: 10px;
+  transition: background var(--t-fast);
+}
+
+.toggle-switch.active {
+  background: var(--green);
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  top: 2px;
+  left: 2px;
+  transition: transform var(--t-fast);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.toggle-switch.active::after {
+  transform: translateX(18px);
+}
+
+
+/* =========================================================================
+   STARS (night sky)
+   ========================================================================= */
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stars.hidden {
+  display: none;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.star:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.star:nth-child(2) { top: 20%; left: 70%; animation-delay: 0.7s; }
+.star:nth-child(3) { top: 5%; left: 45%; animation-delay: 1.4s; }
+.star:nth-child(4) { top: 25%; left: 85%; animation-delay: 0.3s; }
+.star:nth-child(5) { top: 8%; left: 30%; animation-delay: 2s; }
+.star:nth-child(6) { top: 15%; left: 60%; animation-delay: 1.1s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
+
+
+/* =========================================================================
+   TAGESZEIT-THEMES
+   ========================================================================= */
+
+body.budgie-page.time-dawn {
+  --bg: #FFF3E0;
+  --bg-dim: #FFE8CC;
+  --border-light: #F5D5A8;
+}
+
+body.budgie-page.time-morning {
+  --bg: #FFF8F0;
+  --bg-dim: #F5EDE3;
+  --border-light: #F0EAE2;
+}
+
+body.budgie-page.time-midday {
+  --bg: #FAFAF5;
+  --bg-dim: #F0F0EA;
+  --border-light: #E8E8E0;
+}
+
+body.budgie-page.time-afternoon {
+  --bg: #FFF6E8;
+  --bg-dim: #F5EBD8;
+  --border-light: #EDE0CA;
+}
+
+body.budgie-page.time-evening {
+  --bg: #F0E8DD;
+  --bg-dim: #E5DACC;
+  --border-light: #D8CCB8;
+}
+
+body.budgie-page.time-night {
+  --bg: #1A1D28;
+  --bg-card: #252838;
+  --bg-dim: #2A2D3A;
+  --text: #D8D5D0;
+  --text-secondary: #A8A4A0;
+  --text-muted: #686460;
+  --border: #3A3D4A;
+  --border-light: #33364A;
+  --green: #66BB6A;
+  --green-dark: #81C784;
+}
+
+body.budgie-page.time-night .action-btn {
+  background: var(--bg-dim);
+}
+
+body.budgie-page.time-night .action-group {
+  background: var(--bg-dim);
+  border-color: var(--border);
+}
+
+body.budgie-page.time-night .modal {
+  background: var(--bg-dim);
+}
+
+body.budgie-page.time-night .food-option {
+  background: rgba(255,255,255,0.05);
+}
+
+body.budgie-page.time-night .explanation-card {
+  background: var(--bg-dim);
+}
+
+body.budgie-page.time-night input,
+body.budgie-page.time-night select {
+  background: var(--bg-dim);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+
+/* =========================================================================
+   ANIMATIONS (shared)
+   ========================================================================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+
+@media (min-width: 500px) {
+  .budgie-app {
+    padding: var(--s6);
+  }
+
+  .thought-bubble {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 380px) {
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btn {
+    min-width: 48px;
+    padding: var(--s1) var(--s2);
+  }
+
+  .action-icon {
+    font-size: 0.95rem;
+  }
+
+  .action-label {
+    font-size: 0.58rem;
+  }
+
+  .sim-header {
+    flex-wrap: wrap;
+    gap: var(--s2);
+  }
+}

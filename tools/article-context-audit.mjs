@@ -26,6 +26,23 @@ const articlePages = [
   'noch-nicht-bereit',
 ];
 
+const pageFiles = {
+  mensch: 'mensch/index.html',
+  hunde: 'hunde/index.html',
+  katzen: 'katzen/index.html',
+  voegel: 'voegel/index.html',
+  kleintiere: 'kleintiere/index.html',
+  exoten: 'exoten/index.html',
+  pferde: 'pferde/index.html',
+  kastration: 'kastration/index.html',
+  qualzucht: 'qualzucht/index.html',
+  adoption: 'adoption/index.html',
+  selbsttest: 'selbsttest/index.html',
+  notfall: 'notfall/index.html',
+  wissen: 'wissen/index.html',
+  'noch-nicht-bereit': 'noch-nicht-bereit/index.html',
+};
+
 const viewports = [
   { name: 'desktop', width: 1440, height: 1100 },
   { name: 'mobile', width: 390, height: 900 },
@@ -34,7 +51,6 @@ const viewports = [
 const outDir = path.join(projectRoot, 'screenshots', 'article-context-audit');
 await fs.mkdir(outDir, { recursive: true });
 
-const fileUrl = pathToFileURL(path.join(projectRoot, 'index.html')).href;
 const browser = await chromium.launch();
 const report = [];
 
@@ -43,7 +59,7 @@ for (const viewport of viewports) {
   const page = await context.newPage();
 
   for (const pageId of articlePages) {
-    await page.goto(`${fileUrl}#${pageId}`, { waitUntil: 'load' });
+    await page.goto(pathToFileURL(path.join(projectRoot, pageFiles[pageId])).href, { waitUntil: 'load' });
     await page.waitForTimeout(250);
     await page.evaluate(async () => {
       const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
