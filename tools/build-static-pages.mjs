@@ -656,7 +656,7 @@ function buildAiFaq() {
 
 async function main() {
   await ensureSource();
-  const source = await fs.readFile(sourcePath, 'utf8');
+  const source = (await fs.readFile(sourcePath, 'utf8')).replace(/\r\n/g, '\n');
   const style = extractBetween(source, '<style>', '</style>');
   const rawScript = extractBetween(source, '<!-- ===== JAVASCRIPT ===== -->\n  <script>', '\n  </script>');
   const bodyStart = source.indexOf('<body>');

@@ -1,5 +1,6 @@
 screenshots/
 node_modules/
 .worker-runs/
+.claude/
 .DS_Store
 Thumbs.db

@@ -79,6 +79,7 @@ Nach Änderungen mindestens ausführen:
 ```powershell
 node tools/build-static-pages.mjs
 node tools/static-pages-audit.mjs
+node tools/layout-consistency-audit.mjs
 node tools/image-layout-audit.mjs
 node tools/article-context-audit.mjs
 node tools/startpage-image-context-audit.mjs
@@ -90,6 +91,7 @@ Die Audits prüfen unter anderem:
 - Metadaten, Canonicals, OpenGraph und JSON-LD
 - Sitemap, Robots, `llms-full.txt` und `/ai/*.json`
 - fehlende Assets und Bildcredits
+- konsistente Paddings, Margins, Textbreiten, Tabellenbreiten und Section-Rhythmik
 - horizontales Overflow auf Desktop und Mobile
 - Artikel-Heros, Bildkontext und v2/v4-artige Verdichtungsmodule
 - Startseiten-Hero, Doorway-Karten, Aha-Karten, Tierarten-Grid und Teilen-Zone

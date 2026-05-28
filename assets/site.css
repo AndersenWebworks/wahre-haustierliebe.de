@@ -3416,6 +3416,241 @@
       }
     }
 
+    /* ========== LAYOUT-POLISH: RHYTHM, TABLES, SURFACES ========== */
+    :root {
+      --bg-alt: #EEF5EF;
+      --accent-light: #FFF1DC;
+      --surface-warm: #F6EFE2;
+      --surface-mint: #EAF5EF;
+      --surface-positive: #EAF5EF;
+      --surface-caution: #FFF5DF;
+      --surface-negative: #F8E7E0;
+      --reading-width: 800px;
+    }
+
+    .section {
+      padding: clamp(4rem, 7.5vh, 6rem) 0;
+    }
+
+    #startseite .section {
+      padding: clamp(4rem, 7.5vh, 6.25rem) 0;
+    }
+
+    #startseite .section > .container > p.text-center {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page:not(#startseite) .hero {
+      padding: clamp(3.75rem, 7vh, 5.75rem) 0;
+    }
+
+    .page:not(#startseite) > .section {
+      padding: clamp(3.5rem, 6.5vh, 5.5rem) 0;
+    }
+
+    .page:not(#startseite) > .section > .container > :where(p, ul, ol, blockquote):not(.share-bar):not(.hero-trust) {
+      max-width: var(--reading-width);
+    }
+
+    .page:not(#startseite) > .section > .container > h2,
+    .page:not(#startseite) > .section > .container > h3 {
+      max-width: min(100%, 980px);
+    }
+
+    .page:not(#startseite) > .section > .container > h2 {
+      font-size: clamp(1.9rem, 3.5vw, 3.1rem);
+      line-height: 1.05;
+      margin-top: clamp(2.75rem, 5.5vh, 4rem);
+      padding-top: clamp(1rem, 2vh, 1.55rem);
+      border-top: 1px solid rgba(31, 58, 47, 0.13);
+    }
+
+    .page:not(#startseite) > .section > .container > :where(.info-box, .warning-box, .highlight-box, .article-rhythm, .accordion-group, .cost-table, .checklist) + h2 {
+      margin-top: clamp(3rem, 6vh, 4.5rem);
+    }
+
+    .page:not(#startseite) > .section > .container > h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-rhythm {
+      margin: clamp(2rem, 4.5vh, 3rem) 0;
+    }
+
+    .metric-grid,
+    .argument-grid,
+    .signal-grid,
+    .compare-mini {
+      margin: clamp(1.25rem, 3vh, 2rem) 0;
+      gap: clamp(0.85rem, 2vw, 1.25rem);
+    }
+
+    .info-box,
+    .warning-box,
+    .highlight-box,
+    .metric-card,
+    .rhythm-card,
+    .signal-card,
+    .compare-card,
+    .accordion,
+    .checklist {
+      background: rgba(255, 254, 250, 0.92);
+    }
+
+    .info-box {
+      background: var(--surface-mint);
+    }
+
+    .warning-box {
+      background: #F8E7E0;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+    }
+
+    .myth-truth .myth {
+      background: var(--surface-negative);
+    }
+
+    .myth-truth .truth,
+    .compare-card.good {
+      background: var(--surface-positive);
+    }
+
+    .compare-card.risk {
+      background: var(--surface-caution);
+    }
+
+    .compare-card.bad {
+      background: var(--surface-negative);
+    }
+
+    body > section.section[style*="accent-light"] {
+      background: var(--surface-warm) !important;
+      padding: clamp(3.25rem, 6vh, 4.5rem) 0 !important;
+    }
+
+    @media (min-width: 761px) {
+      .cost-table {
+        display: table;
+        width: 100%;
+        min-width: 100%;
+        table-layout: auto;
+        overflow: hidden;
+      }
+
+      .cost-table thead {
+        display: table-header-group;
+      }
+
+      .cost-table tbody {
+        display: table-row-group;
+        width: 100%;
+      }
+
+      .cost-table tr {
+        display: table-row;
+        width: 100%;
+      }
+
+      .cost-table th,
+      .cost-table td {
+        display: table-cell;
+        min-width: 0;
+        vertical-align: top;
+      }
+
+      .cost-table th:first-child,
+      .cost-table td:first-child {
+        width: 46%;
+      }
+
+      .cost-table th:nth-child(2),
+      .cost-table td:nth-child(2) {
+        width: 23%;
+      }
+
+      .cost-table th:nth-child(3),
+      .cost-table td:nth-child(3) {
+        width: 31%;
+      }
+
+      .cost-table:not(:has(thead th:nth-child(3))) th:first-child,
+      .cost-table:not(:has(thead th:nth-child(3))) td:first-child {
+        width: 62%;
+      }
+
+      .cost-table:not(:has(thead th:nth-child(3))) th:nth-child(2),
+      .cost-table:not(:has(thead th:nth-child(3))) td:nth-child(2) {
+        width: 38%;
+      }
+
+      .cost-table:has(thead th:nth-child(4)) th:first-child,
+      .cost-table:has(thead th:nth-child(4)) td:first-child {
+        width: 24%;
+      }
+
+      .cost-table:has(thead th:nth-child(4)) th:nth-child(2),
+      .cost-table:has(thead th:nth-child(4)) td:nth-child(2),
+      .cost-table:has(thead th:nth-child(4)) th:nth-child(3),
+      .cost-table:has(thead th:nth-child(4)) td:nth-child(3) {
+        width: 17%;
+      }
+
+      .cost-table:has(thead th:nth-child(4)) th:nth-child(4),
+      .cost-table:has(thead th:nth-child(4)) td:nth-child(4) {
+        width: 42%;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .cost-table {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        overflow: visible;
+        table-layout: auto;
+      }
+
+      .cost-table thead {
+        display: none;
+      }
+
+      .cost-table tbody,
+      .cost-table tr,
+      .cost-table td {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .cost-table tr {
+        padding: 0.85rem 0.9rem;
+      }
+
+      .cost-table td {
+        display: grid;
+        grid-template-columns: minmax(0, 5.8rem) minmax(0, 1fr);
+        gap: 0.55rem;
+        padding: 0.36rem 0;
+      }
+
+      .cost-table td:first-child {
+        display: block;
+        padding-bottom: 0.65rem;
+        font-weight: 900;
+        color: var(--primary-dark);
+      }
+
+      .cost-table td:first-child::before,
+      .cost-table td[colspan]::before {
+        display: none;
+      }
+    }
+
     @media (max-width: 1040px) {
       .nav-links {
         display: none;
