@@ -43,16 +43,16 @@ const BudgieApp = (function() {
     'unbekannt': '#C0A8D0',
   };
 
-  const MOOD_ICONS = {
-    content: '😊',
-    neutral: '😐',
-    restless: '😰',
-    stressed: '😟',
-    crisis: '🆘',
-    sleeping: '😴',
-    sick: '🤒',
-    dying: '💀',
-    dead: '✝️',
+  const MOOD_LABELS = {
+    content: { label: 'OK', tone: 'mood-content' },
+    neutral: { label: 'Ruhig', tone: 'mood-muted' },
+    restless: { label: 'Unruhig', tone: 'mood-warning' },
+    stressed: { label: 'Stress', tone: 'mood-warning' },
+    crisis: { label: 'Not', tone: 'mood-critical' },
+    sleeping: { label: 'Schlaf', tone: 'mood-muted' },
+    sick: { label: 'Krank', tone: 'mood-warning' },
+    dying: { label: 'Kritisch', tone: 'mood-critical' },
+    dead: { label: 'Tot', tone: 'mood-critical' },
   };
 
 
@@ -109,7 +109,7 @@ const BudgieApp = (function() {
     grid.innerHTML = [...knowledge].reverse().map(k => {
       const isMilestone = k.type === 'milestone';
       return `<div class="knowledge-card ${isMilestone ? 'kc-milestone' : ''}">
-        <div class="kc-title">${isMilestone ? '🏆 Meilenstein' : '🔬 Erkenntnis'} — Tag ${k.day}</div>
+        <div class="kc-title">${isMilestone ? 'Meilenstein' : 'Erkenntnis'} - Tag ${k.day}</div>
         <div>${k.text}</div>
       </div>`;
     }).join('');
@@ -212,9 +212,13 @@ const BudgieApp = (function() {
       }
     }
 
-    // Mood icon
+    // Mood status
     const moodIcon = document.getElementById('mood-icon');
-    if (moodIcon) moodIcon.textContent = MOOD_ICONS[mood] || '😐';
+    if (moodIcon) {
+      const moodMeta = MOOD_LABELS[mood] || MOOD_LABELS.neutral;
+      moodIcon.textContent = moodMeta.label;
+      moodIcon.className = 'sim-mood-icon ' + moodMeta.tone;
+    }
   }
 
   function triggerBudgieReaction(type) {

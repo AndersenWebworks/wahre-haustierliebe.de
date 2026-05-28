@@ -28,6 +28,7 @@ const pages = [
 
 const pageIds = new Set(pages.map((page) => page.id));
 const canonicalSet = new Set(pages.map((page) => page.canonical));
+const decorativeGlyphPattern = /[❌✅⚠🐕🐈🦜🏆🧪💚❤]/u;
 
 function matchesAll(source, pattern) {
   return Array.from(source.matchAll(pattern));
@@ -84,6 +85,7 @@ async function auditPage(page) {
   if (mainCount !== 1) issues.push(`main-count:${mainCount}`);
   if (!html.includes(`data-static-site="true"`)) issues.push('missing-static-site-marker');
   if (!html.includes(`data-page-id="${page.id}"`)) issues.push('missing-page-id-marker');
+  if (decorativeGlyphPattern.test(html)) issues.push('decorative-emoji-left-in-html');
 
   const schemaTypes = [];
   for (const block of jsonLdBlocks) {
@@ -183,12 +185,24 @@ async function main() {
     }
   }
 
+  const css = await fs.readFile(path.join(projectRoot, 'assets', 'site.css'), 'utf8');
+  const sourceHtml = await fs.readFile(path.join(projectRoot, 'src', 'site-source.html'), 'utf8');
+  const budgieEngine = await fs.readFile(path.join(projectRoot, 'js', 'budgie-engine.js'), 'utf8');
+  const iconIssues = [];
+  if (/\.signal-card::before\s*,\s*\.rhythm-card::before/.test(css) || /\.signal-card::before\s*,\s*\.rhythm-card::before/.test(sourceHtml)) {
+    iconIssues.push('empty-card-number-pseudo-selector');
+  }
+  for (const [label, source] of [['src/site-source.html', sourceHtml], ['js/budgie-engine.js', budgieEngine]]) {
+    if (decorativeGlyphPattern.test(source)) iconIssues.push(`${label}:decorative-emoji-left-in-source`);
+  }
+
   const failures = [
     ...report.flatMap((entry) => entry.issues.map((issue) => `${entry.file}:${issue}`)),
     ...sitemapIssues.map((issue) => `sitemap.xml:${issue}`),
     ...robotsIssues.map((issue) => `robots.txt:${issue}`),
     ...llmsIssues.map((issue) => `llms-full.txt:${issue}`),
     ...aiIssues,
+    ...iconIssues,
   ];
 
   console.log(JSON.stringify({

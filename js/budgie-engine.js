@@ -1201,7 +1201,7 @@ const BudgieEngine = (function() {
 
         case 'roomType':
           if (value === 'kitchen') {
-            description = '⚠️ KÜCHE! Beschichtete Pfannen, Teflon-Dämpfe, heiße Oberflächen — Lebensgefahr für Wellensittiche!';
+            description = 'Warnung: KÜCHE! Beschichtete Pfannen, Teflon-Dämpfe, heiße Oberflächen — Lebensgefahr für Wellensittiche!';
             severity = 'critical';
           } else {
             description = `Standort geändert: ${value === 'living_room' ? 'Wohnzimmer' : value === 'bedroom' ? 'Schlafzimmer' : 'Büro'}.`;

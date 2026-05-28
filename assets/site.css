@@ -999,40 +999,26 @@
       box-shadow: var(--shadow);
     }
 
-    #startseite .stat::before {
-      display: block;
-      width: 2.4rem;
-      height: 2.4rem;
-      margin-bottom: 1rem;
-      border-radius: 999px;
-      background: var(--primary-light);
-      text-align: center;
-      line-height: 2.4rem;
-      font-size: 1.25rem;
+    #startseite .stats-bar {
+      counter-reset: stat;
     }
 
-    #startseite .stat:nth-child(1)::before {
-      content: "";
-      background:
-        linear-gradient(90deg, transparent 20%, var(--primary) 21% 31%, transparent 32% 68%, var(--primary) 69% 79%, transparent 80%),
-        linear-gradient(0deg, transparent 18%, var(--secondary) 19% 28%, transparent 29% 72%, var(--secondary) 73% 82%, transparent 83%),
-        var(--primary-light);
-    }
-    #startseite .stat:nth-child(2)::before {
-      content: "";
-      background:
-        radial-gradient(circle at 50% 42%, var(--primary) 0 20%, transparent 21%),
-        radial-gradient(circle at 34% 33%, var(--secondary) 0 11%, transparent 12%),
-        radial-gradient(circle at 66% 33%, var(--secondary) 0 11%, transparent 12%),
-        var(--primary-light);
-    }
-    #startseite .stat:nth-child(3)::before {
-      content: "";
-      background:
-        radial-gradient(circle at 34% 38%, var(--primary) 0 18%, transparent 19%),
-        radial-gradient(circle at 62% 38%, var(--secondary) 0 16%, transparent 17%),
-        radial-gradient(circle at 50% 64%, var(--accent) 0 24%, transparent 25%),
-        var(--primary-light);
+    #startseite .stat::before {
+      counter-increment: stat;
+      content: "0" counter(stat);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.9rem;
+      height: 2.1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0;
     }
 
     #startseite .stat-number {
@@ -2807,6 +2793,18 @@
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
 
+    .info-box,
+    .warning-box,
+    .highlight-box {
+      padding: 1.35rem;
+    }
+
+    .info-box::before,
+    .warning-box::before,
+    .highlight-box::before {
+      display: none !important;
+    }
+
     .accordion,
     .cost-table,
     .mobile-card-table-row {
@@ -3038,8 +3036,8 @@
       padding: 0;
     }
 
-    .signal-card::before,
-    .rhythm-card::before {
+    .signal-card[data-nr]::before,
+    .rhythm-card[data-nr]::before {
       content: attr(data-nr);
       display: inline-flex;
       width: 2rem;
@@ -3052,6 +3050,19 @@
       color: var(--primary);
       font-weight: 900;
       font-size: 0.8rem;
+    }
+
+    .table-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.75rem;
+      padding: 0.32rem 0.65rem;
+      border-radius: 999px;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      font-size: 0.82rem;
+      font-weight: 900;
+      line-height: 1.2;
     }
 
     .test-progress-card {
