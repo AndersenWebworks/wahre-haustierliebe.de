@@ -2909,6 +2909,27 @@
       min-height: 470px;
     }
 
+    .hero-evidence-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    }
+
+    .hero-card-foot,
+    .hero-side-note {
+      min-width: 0;
+    }
+
+    .hero-card-foot {
+      overflow: hidden;
+    }
+
+    .hero-card-foot .num {
+      max-width: 100%;
+      font-size: clamp(2.15rem, 3vw, 2.45rem);
+      line-height: 0.9;
+      letter-spacing: -0.055em;
+      white-space: nowrap;
+    }
+
     .page:not(#startseite) .hero {
       padding: clamp(3.35rem, 7vh, 5rem) 0;
     }

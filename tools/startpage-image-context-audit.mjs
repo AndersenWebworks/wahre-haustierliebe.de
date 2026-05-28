@@ -11,6 +11,8 @@ const { chromium } = playwright.default ?? playwright;
 
 const viewports = [
   { name: 'desktop', width: 1440, height: 1200 },
+  { name: 'narrow-desktop', width: 1200, height: 1000 },
+  { name: 'tablet-edge', width: 1024, height: 1000 },
   { name: 'mobile', width: 390, height: 1000 },
 ];
 
@@ -95,6 +97,57 @@ for (const viewport of viewports) {
       if (card.src && srcCounts[card.src] > 1) card.reasons.push('image-reused-on-startpage');
     }
 
+    const rectFor = (element) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        left: rect.left,
+        right: rect.right,
+        top: rect.top,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+      };
+    };
+
+    const overlaps = (a, b) => (
+      a.left < b.right &&
+      a.right > b.left &&
+      a.top < b.bottom &&
+      a.bottom > b.top
+    );
+
+    const heroEvidenceIssues = [];
+    const evidenceGrid = active.querySelector('.hero-evidence-grid');
+    const heroStatNumber = active.querySelector('.hero-card-foot .num');
+    const heroStatCard = active.querySelector('.hero-card-foot');
+    const heroSideNote = active.querySelector('.hero-side-note');
+
+    if (!evidenceGrid || !heroStatNumber || !heroStatCard || !heroSideNote) {
+      heroEvidenceIssues.push('missing-hero-evidence-elements');
+    } else {
+      const gridRect = rectFor(evidenceGrid);
+      const statNumberRect = rectFor(heroStatNumber);
+      const statCardRect = rectFor(heroStatCard);
+      const sideNoteRect = rectFor(heroSideNote);
+
+      if (gridRect.right > document.documentElement.clientWidth + 1) {
+        heroEvidenceIssues.push('hero-evidence-grid-overflows-viewport');
+      }
+
+      if (
+        statNumberRect.left < statCardRect.left - 1 ||
+        statNumberRect.right > statCardRect.right + 1 ||
+        statNumberRect.top < statCardRect.top - 1 ||
+        statNumberRect.bottom > statCardRect.bottom + 1
+      ) {
+        heroEvidenceIssues.push('hero-stat-number-overflows-card');
+      }
+
+      if (overlaps(statNumberRect, sideNoteRect)) {
+        heroEvidenceIssues.push('hero-stat-number-overlaps-side-note');
+      }
+    }
+
     return {
       cardCount: cards.length,
       structure: {
@@ -106,6 +159,7 @@ for (const viewport of viewports) {
         shareCards: active.querySelectorAll('.share-focus .image-context-card').length,
       },
       horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
+      heroEvidenceIssues,
       repeatedSources: Object.entries(srcCounts).filter(([, count]) => count > 1),
       cards,
     };
@@ -138,6 +192,7 @@ const failures = report.flatMap((entry) =>
 
 const pageFailures = report.filter((entry) =>
   entry.horizontalOverflow ||
+  entry.heroEvidenceIssues.length > 0 ||
   entry.cardCount < 10 ||
   entry.structure.heroCards !== 1 ||
   entry.structure.heroProofPanels !== 0 ||
@@ -156,6 +211,7 @@ console.log(JSON.stringify({
   pageFailures: pageFailures.map((entry) => ({
     viewport: entry.viewport,
     horizontalOverflow: entry.horizontalOverflow,
+    heroEvidenceIssues: entry.heroEvidenceIssues,
     cardCount: entry.cardCount,
     structure: entry.structure,
     repeatedSources: entry.repeatedSources,
