@@ -295,7 +295,7 @@ function transformLinks(html, currentPage) {
   });
 
   next = next.replace(/<span class="card-link" onclick="window\.open\('([^']+)', '_blank'\)">([\s\S]*?)<\/span>/g, (_match, url, label) => {
-    return `<a class="card-link" href="${url}" target="_blank" rel="noopener">${label}</a>`;
+    return `<a class="card-link" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
   });
 
   next = next.replace(/<span class="card-link" onclick="navigateTo\('([^']+)'\)">([\s\S]*?)<\/span>/g, (match, targetId, label) => {
@@ -304,6 +304,18 @@ function transformLinks(html, currentPage) {
   });
 
   next = next.replace(/href="budgie\.html"/g, `href="${hrefFor('budgie-brain', currentPage)}"`);
+  next = next.replace(/<a\b([^>]*?)target="_blank"([^>]*?)>/g, (_match, before, after) => {
+    const attrs = `${before}target="_blank"${after}`;
+    if (/\brel=/.test(attrs)) {
+      return `<a${attrs.replace(/\brel="([^"]*)"/, (_relMatch, relValue) => {
+        const values = new Set(relValue.split(/\s+/).filter(Boolean));
+        values.add('noopener');
+        values.add('noreferrer');
+        return `rel="${Array.from(values).join(' ')}"`;
+      })}>`;
+    }
+    return `<a${before}target="_blank" rel="noopener noreferrer"${after}>`;
+  });
 
   return next;
 }
@@ -352,7 +364,7 @@ function rewriteScript(script) {
     `        var link = document.querySelector('.nav-link[data-page="' + page + '"]');\n` +
     `        if (link) link.classList.add('active');\n` +
     `      }\n` +
-    `      window.scrollTo(0, 0);\n` +
+    `      window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });\n` +
     `      closeMobileNav();\n` +
     `      closeDropdowns();\n` +
     `      history.replaceState(null, '', page === 'startseite' ? location.pathname : '#' + page);\n` +
@@ -376,10 +388,23 @@ function rewriteScript(script) {
     `          window.location.replace(staticRouteFor(hash));\n` +
     `          return;\n` +
     `        }\n` +
-    `        document.querySelectorAll('.nav-link[data-page]').forEach(function(link) {\n` +
+    `        document.querySelectorAll('[data-page]').forEach(function(link) {\n` +
     `          var active = link.dataset.page === pageId;\n` +
     `          link.classList.toggle('active', active);\n` +
     `          if (active) link.setAttribute('aria-current', 'page');\n` +
+    `          else link.removeAttribute('aria-current');\n` +
+    `        });\n` +
+    `        document.querySelectorAll('.dropdown').forEach(function(dropdown) {\n` +
+    `          var hasActive = dropdown.querySelector('[aria-current=\"page\"]');\n` +
+    `          var toggle = dropdown.querySelector('.dropdown-toggle');\n` +
+    `          if (toggle && hasActive) toggle.setAttribute('aria-current', 'page');\n` +
+    `        });\n` +
+    `        initAccessibilityState();\n` +
+    `        document.addEventListener('keydown', function(event) {\n` +
+    `          if (event.key === 'Escape') {\n` +
+    `            closeDropdowns();\n` +
+    `            closeMobileNav();\n` +
+    `          }\n` +
     `        });\n` +
     `        return;\n` +
     `      }\n` +
@@ -450,7 +475,7 @@ function buildHead(page, prefix) {
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
   const prefix = assetPrefixFor(page);
   const routePrefix = page.slug ? '../' : '';
-  let body = `${header}\n\n  <main id="main-content">\n${section}\n  </main>\n\n${commonAfterSections}`;
+  let body = `${header}\n\n  <main id="main-content" tabindex="-1">\n${section}\n  </main>\n\n${commonAfterSections}`;
   body = transformLinks(body, page);
   body = prefixAssets(body, prefix);
   body = body.replace(new RegExp(`<section id="${page.id}" class="page(?: active)?">`), `<section id="${page.id}" class="page active">`);
@@ -486,7 +511,7 @@ async function buildBudgiePage(page) {
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
   html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${baseUrl}/assets/images/wahre-haustierliebe-logo.png">\n  <meta property="og:site_name" content="Wa(h)re Haustierliebe">\n  <meta property="og:locale" content="de_DE">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
   html = html.replace('<body class="budgie-page time-morning">', `<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="${page.id}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>`);
-  html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content"><div class="budgie-app" id="app">');
+  html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content" tabindex="-1"><div class="budgie-app" id="app">');
   html = html.replace('<h2>Budgie Brain</h2>', '<h1>Budgie Brain</h1>');
   html = html.replace(/\n  <script src="js\/budgie-engine\.js"><\/script>/, '\n  </main>\n  <script src="../js/budgie-engine.js"></script>');
   html = html.replace(/<script src="js\/budgie-text\.js"><\/script>/, '<script src="../js/budgie-text.js"></script>');
@@ -671,7 +696,7 @@ async function main() {
   const header = source.slice(bodyStart + '<body>'.length, firstSection).trimEnd();
   const commonAfterSections = source.slice(footerMarker, scriptMarker).trimEnd();
   const script = rewriteScript(rawScript);
-  const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site .nav-link[aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n`;
+  const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n`;
 
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);

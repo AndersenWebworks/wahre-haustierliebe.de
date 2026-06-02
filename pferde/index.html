@@ -67,63 +67,63 @@
         <img class="site-logo-image" src="../assets/images/wahre-haustierliebe-mark.png" alt="" aria-hidden="true">
         <span class="site-logo-text"><span class="brand-dark">Wa</span><span class="brand-red">(h)</span><span class="brand-dark">re Haustier</span><span class="brand-red">(liebe)</span></span>
       </a>
-      <nav>
+      <nav aria-label="Hauptnavigation">
         <ul class="nav-links">
           <li><a class="nav-link" data-page="startseite" href="../index.html">Start</a></li>
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
-            <button class="nav-link dropdown-toggle">Tierarten</button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" href="../pferde/index.html">Pferde</a>
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
+            <div class="dropdown-menu" id="tierarten-menu">
+              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
+              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
+              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
+              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
+              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+              <a class="dropdown-item active" data-page="pferde" href="../pferde/index.html" aria-current="page">Pferde</a>
             </div>
           </li>
           <li class="dropdown">
-            <button class="nav-link dropdown-toggle">Wissen</button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="../kastration/index.html">Kastration</a>
-              <a class="dropdown-item" href="../qualzucht/index.html">Qualzucht</a>
-              <a class="dropdown-item" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" href="../wissen/index.html">Mythen, Homöopathie &amp; Glossar</a>
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="wissen-menu">Wissen</button>
+            <div class="dropdown-menu" id="wissen-menu">
+              <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
+              <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+              <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
+              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+              <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen, Homöopathie &amp; Glossar</a>
             </div>
           </li>
           <li><a class="nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a></li>
           <li><a class="nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a></li>
-          <li><button class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
+          <li><button type="button" class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
         </ul>
       </nav>
-      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menü öffnen">☰</button>
+      <button type="button" class="hamburger" onclick="toggleMobileNav()" aria-label="Menü öffnen" aria-controls="mobile-nav" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobile-nav">
-    <a class="mobile-nav-link" href="../index.html">Start</a>
-    <a class="mobile-nav-link" href="../mensch/index.html">Mensch &amp; Tier</a>
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
+    <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
     <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" href="../pferde/index.html">Pferde</a>
+      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
+      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
+      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
+      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
+      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+      <a class="mobile-nav-link active" data-page="pferde" href="../pferde/index.html" aria-current="page">Pferde</a>
     </div>
-    <a class="mobile-nav-link" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" href="../selbsttest/index.html">Selbsttest</a>
-    <a class="mobile-nav-link" href="../notfall/index.html">Notfall</a>
-    <a class="mobile-nav-link" href="../wissen/index.html">Mythen, Homöopathie &amp; Glossar</a>
-    <button class="mobile-nav-link" onclick="shareThis('copy')">Aktuelle Seite teilen</button>
+    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+    <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+    <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
+    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen, Homöopathie &amp; Glossar</a>
+    <button type="button" class="mobile-nav-link" onclick="shareThis('copy')">Aktuelle Seite teilen</button>
   </div>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
 <section id="pferde" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #6B5940 0%, #4A3D2B 100%);">
       <div class="container"><div class="article-hero-copy">
@@ -154,7 +154,7 @@
         <p><strong>Mindestens ein Artgenosse</strong> ist Pflicht. Andere Tiere (Esel, Ponys, Ziegen) können ein Pferd begleiten, ersetzen aber keinen echten Artgenossen der gleichen Art.</p>
 
         <h2>Platzbedarf – die unbequeme Wahrheit</h2>
-        <p>Die <a href="https://www.bmel.de/DE/themen/tiere/tierschutz/tierschutz_node.html" target="_blank" rel="noopener">Leitlinien zur Pferdehaltung des BMEL</a> empfehlen für einen Offenstall mit Auslauf und Weide <strong>mindestens 150 m² befestigte Fläche pro Pferd</strong> plus Weidezugang. Für reine Weidehaltung werden je nach Bodenbeschaffenheit <strong>1.000–2.000 m² pro Pferd</strong> genannt – und selbst das ist ein Mindestmaß.</p>
+        <p>Die <a href="https://www.bmel.de/DE/themen/tiere/tierschutz/tierschutz_node.html" target="_blank" rel="noopener noreferrer">Leitlinien zur Pferdehaltung des BMEL</a> empfehlen für einen Offenstall mit Auslauf und Weide <strong>mindestens 150 m² befestigte Fläche pro Pferd</strong> plus Weidezugang. Für reine Weidehaltung werden je nach Bodenbeschaffenheit <strong>1.000–2.000 m² pro Pferd</strong> genannt – und selbst das ist ein Mindestmaß.</p>
         <p>Wildpferde legen 15–30 km am Tag zurück. Sie grasen dabei im Schritt – eine natürliche Kombination aus Bewegung und Nahrungsaufnahme, die keine Koppel der Welt vollständig ersetzen kann. Tägliches Reiten oder Bewegen ist Pflicht, nicht Bonus.</p>
 
         <h2>Haltungsformen</h2><div class="article-rhythm compare-mini" data-enhancement="pferde-haltung">
@@ -164,7 +164,7 @@
           </div>
         <p><strong>Offenstall/Aktivstall:</strong> Die artgerechteste Form. Pferde haben Zugang zu Unterstand, Auslauf und Weide und können sich frei bewegen, Sozialkontakte pflegen und selbst entscheiden, wann sie fressen, ruhen oder laufen.</p>
         <p><strong>Boxenhaltung:</strong> In vielen Reitställen Standard. Eine 3 × 3 m Box ist für ein Pferd, das in der Natur Kilometer zurücklegt, eine Zelle. Boxenhaltung ist nur vertretbar, wenn täglich mehrstündiger Auslauf und Sozialkontakt gewährleistet sind.</p>
-        <p><strong>Anbindehaltung:</strong> In Teilen Deutschlands noch verbreitet, von Tierschutzorganisationen wie dem <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener">Deutschen Tierschutzbund</a> klar abgelehnt. Das Tier kann sich nicht drehen, nicht liegen, nicht mit Artgenossen interagieren.</p>
+        <p><strong>Anbindehaltung:</strong> In Teilen Deutschlands noch verbreitet, von Tierschutzorganisationen wie dem <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbund</a> klar abgelehnt. Das Tier kann sich nicht drehen, nicht liegen, nicht mit Artgenossen interagieren.</p>
 
         <h2>Kosten – pro Monat, nicht pro Jahr</h2>
         <table class="cost-table">
@@ -179,7 +179,7 @@
             <tr class="total"><td data-label="Posten"><strong>Gesamt pro Monat</strong></td><td data-label="Monatlich"><strong>340–920 €</strong></td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Nicht eingerechnet: Reitunterricht, Turniergebühren, Notfall-OPs (Koliken: 3.000–10.000 Euro), Hufreheschübe, chronische Erkrankungen. Quelle: Zusammenstellung aus <a href="https://www.pferd-aktuell.de" target="_blank" rel="noopener">FN</a>-Empfehlungen und Erhebungen der Pferdekostenstudie. Was dich die <a href="../mensch/index.html">Psychologie hinter der Entscheidung für ein Tier</a> lehrt: Kosten werden fast immer unterschätzt.</p>
+        <p class="text-muted">Nicht eingerechnet: Reitunterricht, Turniergebühren, Notfall-OPs (Koliken: 3.000–10.000 Euro), Hufreheschübe, chronische Erkrankungen. Quelle: Zusammenstellung aus <a href="https://www.pferd-aktuell.de" target="_blank" rel="noopener noreferrer">FN</a>-Empfehlungen und Erhebungen der Pferdekostenstudie. Was dich die <a href="../mensch/index.html">Psychologie hinter der Entscheidung für ein Tier</a> lehrt: Kosten werden fast immer unterschätzt.</p>
 
         <h2>Reitbeteiligung – der ehrlichere Einstieg</h2><div class="article-rhythm share-callout" data-enhancement="pferde-reitbeteiligung">
             <span class="eyebrow">Ehrlicher Einstieg</span>
@@ -217,10 +217,10 @@
       <h2 style="color: #B8862D;">Diese Seite unterstützen</h2>
       <p style="max-width: 700px; margin: 0 auto 1rem;">Wa(h)re Haustierliebe ist ein privates Projekt – werbefrei, unabhängig und ehrenamtlich. Die laufenden Kosten für Hosting, Domain und Recherche tragen wir selbst. Wenn dir diese Seite geholfen hat, freuen wir uns über Unterstützung – für uns oder direkt für den Tierschutz:</p>
       <div class="support-buttons">
-        <a href="https://paypal.me/wahrehaustierliebe" class="btn btn-primary" target="_blank" rel="noopener">Seite unterstützen</a>
-        <a href="https://streunerhilfe-plau.de/spenden" class="btn btn-outline" target="_blank" rel="noopener">An die Streunerhilfe spenden (steuerlich absetzbar)</a>
+        <a href="https://paypal.me/wahrehaustierliebe" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Seite unterstützen</a>
+        <a href="https://streunerhilfe-plau.de/spenden" class="btn btn-outline" target="_blank" rel="noopener noreferrer">An die Streunerhilfe spenden (steuerlich absetzbar)</a>
       </div>
-      <p class="text-muted" style="margin-top: 1rem; font-size: 0.85rem;">Spenden an uns als Privatpersonen sind nicht steuerlich absetzbar. Die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener">Streunerhilfe Plau e. V.</a> ist ein eigenständiger gemeinnütziger Verein – dort ist deine Spende steuerlich absetzbar und fließt direkt in die Versorgung und Kastration von Streunerkatzen.</p>
+      <p class="text-muted" style="margin-top: 1rem; font-size: 0.85rem;">Spenden an uns als Privatpersonen sind nicht steuerlich absetzbar. Die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a> ist ein eigenständiger gemeinnütziger Verein – dort ist deine Spende steuerlich absetzbar und fließt direkt in die Versorgung und Kastration von Streunerkatzen.</p>
     </div>
   </section>
 
@@ -230,7 +230,7 @@
         <div>
           <img class="footer-brand-logo" src="../assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustierliebe">
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor und während du Verantwortung für ein Lebewesen trägst.</p>
-          <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener">Streunerhilfe Plau e. V.</a></p>
+          <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a></p>
           <div class="share-bar" style="justify-content: flex-start; margin-top: 1rem;">
             <button class="share-btn" onclick="shareThis('whatsapp')" style="border-color: rgba(255,255,255,0.2); color: var(--bg-alt);">WhatsApp</button>
             <button class="share-btn" onclick="shareThis('facebook')" style="border-color: rgba(255,255,255,0.2); color: var(--bg-alt);">Facebook</button>
@@ -259,40 +259,40 @@
       </div>
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/impressum">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz">Datenschutz</a></p>
-        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener">TASSO e. V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener">BMEL</a></p>
+        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener noreferrer">BMEL</a></p>
         <details class="image-credits">
           <summary>Bildnachweise anzeigen</summary>
           <p><strong>Bildnachweise:</strong>
-            <a href="https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103129).jpg" target="_blank" rel="noopener">Souda Animal Shelter volunteer event</a>, U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee, Public domain;
-            <a href="https://commons.wikimedia.org/wiki/File:Dog_with_owner_walking.jpg" target="_blank" rel="noopener">Dog with owner walking</a>, Anish Anilkumar, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Veterinary_Office_with_dog.JPG" target="_blank" rel="noopener">Veterinary Office with dog</a>, MarkBuckawicki, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Kitty_cat_in_a_window_sill_perch.jpg" target="_blank" rel="noopener">Kitty cat in a window sill perch</a>, Tomwsulcer, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Zelda_on_her_scratching_post.jpg" target="_blank" rel="noopener">Zelda on her scratching post</a>, Jeffwgallant, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Home_built_enclosure_for_a_Syrian_Hamster.png" target="_blank" rel="noopener">Home built enclosure for a Syrian Hamster</a>, Jennifer Carlsson, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_01.jpg" target="_blank" rel="noopener">Budgerigars in a bird aviary 01</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Guinea_Pigs.jpg" target="_blank" rel="noopener">Guinea Pigs</a>, Daniel Hall, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Pogona_vitticeps.jpg" target="_blank" rel="noopener">Pogona vitticeps</a>, Joxerra Aihartza, <a href="https://artlibre.org/licence/lal/en" target="_blank" rel="noopener">FAL</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Horse_herd_in_Wales_(Unsplash).jpg" target="_blank" rel="noopener">Horse herd in Wales</a>, Samantha Scholl sauriel, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Friendly_dog_enjoys_gentle_affection_from_its_owner_while_relaxing.jpg" target="_blank" rel="noopener">Friendly dog enjoys gentle affection</a>, Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:CFAY-BASED_PAWS_HOSTS_FUNDRAISER_(5628139).jpg" target="_blank" rel="noopener">CFAY-BASED PAWS fundraiser</a>, U.S. Navy photo by Petty Officer 2nd Class Tyler Fraser, Public domain;
-            <a href="https://commons.wikimedia.org/wiki/File:2007-01-13_Cat_in_a_carrier_(square).jpg" target="_blank" rel="noopener">Cat in a carrier</a>, Greg Mote, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Rat_cage_01.jpg" target="_blank" rel="noopener">Rat cage 01</a>, Inge Habex, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Rabbit_being_held_in_outdoor_enclosure_before_being_adopted_out_to_public.jpg" target="_blank" rel="noopener">Rabbit being held in outdoor enclosure</a>, Opossumsrule, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Dog_training_in_Dovedale_-_geograph.org.uk_-_701827.jpg" target="_blank" rel="noopener">Dog training in Dovedale</a>, David Lally, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Two_cats_on_the_window.jpg" target="_blank" rel="noopener">Two cats on the window</a>, Stanglavine, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_02.jpg" target="_blank" rel="noopener">Budgerigars in a bird aviary 02</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Guinea_pig_habitat.jpg" target="_blank" rel="noopener">Guinea pig habitat</a>, Mila.cridlig, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Bearded_Dragon_in_terrarium.jpg" target="_blank" rel="noopener">Bearded Dragon in terrarium</a>, André Karwath, <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener">CC BY-SA 2.5</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Horse_paddocks_and_shelters_at_Redwings_-_geograph.org.uk_-_1385692.jpg" target="_blank" rel="noopener">Horse paddocks and shelters at Redwings</a>, Evelyn Simak, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Feral_cat,_sterilized_through_a_Trap-Neuter-Return_program.jpg" target="_blank" rel="noopener">Feral cat, sterilized through TNR</a>, FelineAvenger, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:A_PUG_dog.jpg" target="_blank" rel="noopener">A PUG dog</a>, Nancy Wong, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Dog_in_Yedikule_Animal_Shelter.jpg" target="_blank" rel="noopener">Dog in Yedikule Animal Shelter</a>, Turkish delight2, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:A_pair_of_cats_in_a_cat_tree.jpg" target="_blank" rel="noopener">A pair of cats in a cat tree</a>, Matt Buck, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Dog_at_zia_veterinary_and_pets_clinic.jpg" target="_blank" rel="noopener">Dog at zia veterinary and pets clinic</a>, Tauseefiqbal864, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Goldfish_aquarium.jpg" target="_blank" rel="noopener">Goldfish aquarium</a>, علاء, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103132).jpg" target="_blank" rel="noopener">Souda Animal Shelter volunteer event 6103132</a>, U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee, Public domain;
-            <a href="https://commons.wikimedia.org/wiki/File:Cat_gets_checkup_at_Guantanamo_-a.jpg" target="_blank" rel="noopener">Cat gets checkup at Guantanamo</a>, Elisha Dawkins, Public domain;
-            <a href="https://commons.wikimedia.org/wiki/File:Cat_in_soft_side_cat_carrier.jpg" target="_blank" rel="noopener">Cat in soft side carrier</a>, Tylervigen, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+            <a href="https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103129).jpg" target="_blank" rel="noopener noreferrer">Souda Animal Shelter volunteer event</a>, U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_with_owner_walking.jpg" target="_blank" rel="noopener noreferrer">Dog with owner walking</a>, Anish Anilkumar, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Veterinary_Office_with_dog.JPG" target="_blank" rel="noopener noreferrer">Veterinary Office with dog</a>, MarkBuckawicki, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Kitty_cat_in_a_window_sill_perch.jpg" target="_blank" rel="noopener noreferrer">Kitty cat in a window sill perch</a>, Tomwsulcer, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Zelda_on_her_scratching_post.jpg" target="_blank" rel="noopener noreferrer">Zelda on her scratching post</a>, Jeffwgallant, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Home_built_enclosure_for_a_Syrian_Hamster.png" target="_blank" rel="noopener noreferrer">Home built enclosure for a Syrian Hamster</a>, Jennifer Carlsson, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_01.jpg" target="_blank" rel="noopener noreferrer">Budgerigars in a bird aviary 01</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Guinea_Pigs.jpg" target="_blank" rel="noopener noreferrer">Guinea Pigs</a>, Daniel Hall, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Pogona_vitticeps.jpg" target="_blank" rel="noopener noreferrer">Pogona vitticeps</a>, Joxerra Aihartza, <a href="https://artlibre.org/licence/lal/en" target="_blank" rel="noopener noreferrer">FAL</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Horse_herd_in_Wales_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Horse herd in Wales</a>, Samantha Scholl sauriel, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Friendly_dog_enjoys_gentle_affection_from_its_owner_while_relaxing.jpg" target="_blank" rel="noopener noreferrer">Friendly dog enjoys gentle affection</a>, Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:CFAY-BASED_PAWS_HOSTS_FUNDRAISER_(5628139).jpg" target="_blank" rel="noopener noreferrer">CFAY-BASED PAWS fundraiser</a>, U.S. Navy photo by Petty Officer 2nd Class Tyler Fraser, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:2007-01-13_Cat_in_a_carrier_(square).jpg" target="_blank" rel="noopener noreferrer">Cat in a carrier</a>, Greg Mote, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Rat_cage_01.jpg" target="_blank" rel="noopener noreferrer">Rat cage 01</a>, Inge Habex, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Rabbit_being_held_in_outdoor_enclosure_before_being_adopted_out_to_public.jpg" target="_blank" rel="noopener noreferrer">Rabbit being held in outdoor enclosure</a>, Opossumsrule, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_training_in_Dovedale_-_geograph.org.uk_-_701827.jpg" target="_blank" rel="noopener noreferrer">Dog training in Dovedale</a>, David Lally, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Two_cats_on_the_window.jpg" target="_blank" rel="noopener noreferrer">Two cats on the window</a>, Stanglavine, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Budgerigars_(Melopsittacus_undulatus)_in_a_bird_aviary_02.jpg" target="_blank" rel="noopener noreferrer">Budgerigars in a bird aviary 02</a>, Bidgee, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Guinea_pig_habitat.jpg" target="_blank" rel="noopener noreferrer">Guinea pig habitat</a>, Mila.cridlig, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Bearded_Dragon_in_terrarium.jpg" target="_blank" rel="noopener noreferrer">Bearded Dragon in terrarium</a>, André Karwath, <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.5</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Horse_paddocks_and_shelters_at_Redwings_-_geograph.org.uk_-_1385692.jpg" target="_blank" rel="noopener noreferrer">Horse paddocks and shelters at Redwings</a>, Evelyn Simak, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Feral_cat,_sterilized_through_a_Trap-Neuter-Return_program.jpg" target="_blank" rel="noopener noreferrer">Feral cat, sterilized through TNR</a>, FelineAvenger, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:A_PUG_dog.jpg" target="_blank" rel="noopener noreferrer">A PUG dog</a>, Nancy Wong, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_in_Yedikule_Animal_Shelter.jpg" target="_blank" rel="noopener noreferrer">Dog in Yedikule Animal Shelter</a>, Turkish delight2, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:A_pair_of_cats_in_a_cat_tree.jpg" target="_blank" rel="noopener noreferrer">A pair of cats in a cat tree</a>, Matt Buck, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Dog_at_zia_veterinary_and_pets_clinic.jpg" target="_blank" rel="noopener noreferrer">Dog at zia veterinary and pets clinic</a>, Tauseefiqbal864, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:Goldfish_aquarium.jpg" target="_blank" rel="noopener noreferrer">Goldfish aquarium</a>, علاء, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>;
+            <a href="https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103132).jpg" target="_blank" rel="noopener noreferrer">Souda Animal Shelter volunteer event 6103132</a>, U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:Cat_gets_checkup_at_Guantanamo_-a.jpg" target="_blank" rel="noopener noreferrer">Cat gets checkup at Guantanamo</a>, Elisha Dawkins, Public domain;
+            <a href="https://commons.wikimedia.org/wiki/File:Cat_in_soft_side_cat_carrier.jpg" target="_blank" rel="noopener noreferrer">Cat in soft side carrier</a>, Tylervigen, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
             Lokale Kopien wurden teils verkleinert und im Layout beschnitten.
           </p>
         </details>
@@ -301,7 +301,7 @@
   </footer>
 
   <!-- Scroll-to-top -->
-  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <button type="button" class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Nach oben scrollen">↑</button>
   <script src="../assets/site.js"></script>
 
 
