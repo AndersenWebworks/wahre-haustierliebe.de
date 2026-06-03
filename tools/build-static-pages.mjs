@@ -171,9 +171,9 @@ const faqByPage = {
 };
 
 const ogImageByPage = {
-  startseite: 'assets/images/hero-shelter-volunteer.jpg',
-  mensch: 'assets/images/shelter-volunteer-dog-care.jpg',
-  hunde: 'assets/images/dog-training-dovedale.jpg',
+  startseite: 'assets/images/tierheim-hund.jpg',
+  mensch: 'assets/images/tierheim-hund.jpg',
+  hunde: 'assets/images/golden-retriever-agility-jump.jpg',
   katzen: 'assets/images/two-cats-window.jpg',
   voegel: 'assets/images/voegel-voliere-02.jpg',
   kleintiere: 'assets/images/guinea-pig-habitat.jpg',
@@ -183,7 +183,7 @@ const ogImageByPage = {
   qualzucht: 'assets/images/qualzucht-mops.jpg',
   adoption: 'assets/images/tierheim-hund.jpg',
   selbsttest: 'assets/images/cats-cat-tree-pair.jpg',
-  notfall: 'assets/images/dog-veterinary-clinic.jpg',
+  notfall: 'assets/images/vet-office-with-dog.jpg',
   wissen: 'assets/images/goldfish-aquarium.jpg',
   'noch-nicht-bereit': 'assets/images/cat-soft-carrier.jpg',
 };

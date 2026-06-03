@@ -1,31 +1,5 @@
 [
   {
-    "id": "hero-shelter-volunteer",
-    "localPath": "assets/images/hero-shelter-volunteer.jpg",
-    "fileTitle": "NSA Souda Bay participates in volunteer event at the Souda Animal Shelter (6103129).jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103129).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_%286103129%29.jpg",
-    "author": "U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee",
-    "license": "Public domain",
-    "licenseUrl": "",
-    "usedFor": ["start-hero"],
-    "alt": "Eine freiwillige Helferin sitzt bei einem ruhenden Hund im Tierheim",
-    "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
-  },
-  {
-    "id": "dog-owner-walking",
-    "localPath": "assets/images/dog-owner-walking.jpg",
-    "fileTitle": "Dog_with_owner_walking.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dog_with_owner_walking.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dog_with_owner_walking.jpg",
-    "author": "Anish Anilkumar",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "usedFor": ["animal-card-hunde", "article-hero-hunde", "support-card-gassi-service"],
-    "alt": "Hund wird an der Leine im Alltag geführt",
-    "modifications": "Local scaled copy; cropped by CSS where displayed."
-  },
-  {
     "id": "vet-office-with-dog",
     "localPath": "assets/images/vet-office-with-dog.jpg",
     "fileTitle": "Veterinary Office with dog.JPG",
@@ -34,7 +8,11 @@
     "author": "MarkBuckawicki",
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "usedFor": ["start-insight-notfall", "article-hero-notfall"],
+    "usedFor": [
+      "start-insight-notfall",
+      "article-hero-notfall",
+      "wissen-evidenz"
+    ],
     "alt": "Hund sitzt ruhig in einer Tierarztpraxis",
     "modifications": "Local copy; cropped by CSS where displayed."
   },
@@ -47,9 +25,28 @@
     "author": "Tomwsulcer",
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "usedFor": ["start-insight-katzen", "article-hero-katzen"],
+    "usedFor": [
+      "start-insight-katzen",
+      "article-hero-katzen"
+    ],
     "alt": "Katze sitzt auf einer Fensterbank und blickt nach draußen",
     "modifications": "Local copy; cropped by CSS where displayed."
+  },
+  {
+    "id": "golden-retriever-agility-jump",
+    "localPath": "assets/images/golden-retriever-agility-jump.jpg",
+    "fileTitle": "Golden Retriever agility jump.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_agility_jump.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Golden_Retriever_agility_jump.jpg",
+    "author": "Ron Armstrong from Helena, MT, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "usedFor": [
+      "animal-card-hunde",
+      "article-hero-hunde"
+    ],
+    "alt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung",
+    "modifications": "Local copy from Wikimedia; cropped by CSS where displayed."
   },
   {
     "id": "cat-scratching-post",
@@ -60,7 +57,10 @@
     "author": "Jeffwgallant",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["animal-card-katzen", "article-hero-selbsttest"],
+    "usedFor": [
+      "animal-card-katzen",
+      "article-hero-selbsttest"
+    ],
     "alt": "Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung",
     "modifications": "Local copy; cropped by CSS where displayed."
   },
@@ -73,7 +73,9 @@
     "author": "Greg Mote from Glendora, CA, USA",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "usedFor": ["support-card-pflegestelle"],
+    "usedFor": [
+      "support-card-pflegestelle"
+    ],
     "alt": "Katze blickt aus einer Transporttasche",
     "modifications": "Local resized copy; cropped by CSS where displayed."
   },
@@ -86,7 +88,9 @@
     "author": "Jennifer Carlsson",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["start-insight-kleintiere"],
+    "usedFor": [
+      "start-insight-kleintiere"
+    ],
     "alt": "Großes selbst gebautes Hamstergehege mit Einstreu, Laufrad und Verstecken",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -99,7 +103,9 @@
     "author": "Tylervigen",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "usedFor": ["article-hero-noch-nicht-bereit"],
+    "usedFor": [
+      "article-hero-noch-nicht-bereit"
+    ],
     "alt": "Katze in einer weichen Transportbox",
     "modifications": "Cropped by CSS where displayed."
   },
@@ -112,7 +118,10 @@
     "author": "Mila.cridlig at English Wikipedia",
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "usedFor": ["article-hero-kleintiere", "support-card-ehrenamt"],
+    "usedFor": [
+      "article-hero-kleintiere",
+      "support-card-ehrenamt"
+    ],
     "alt": "Strukturiertes Kleintier-Habitat mit Verstecken",
     "modifications": "Cropped by CSS where displayed."
   },
@@ -125,7 +134,10 @@
     "author": "Bidgee",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "usedFor": ["animal-card-voegel", "article-hero-voegel"],
+    "usedFor": [
+      "animal-card-voegel",
+      "article-hero-voegel"
+    ],
     "alt": "Mehrere Wellensittiche in einer Voliere mit Ästen",
     "modifications": "Local copy; cropped by CSS where displayed."
   },
@@ -138,7 +150,10 @@
     "author": "Daniel Hall",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "usedFor": ["animal-card-kleintiere", "article-hero-noch-nicht-bereit"],
+    "usedFor": [
+      "animal-card-kleintiere",
+      "article-hero-noch-nicht-bereit"
+    ],
     "alt": "Zwei Meerschweinchen zusammen im Gras",
     "modifications": "Local copy; cropped by CSS where displayed."
   },
@@ -151,7 +166,9 @@
     "author": "Asivechowdhury",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["article-hero-wissen"],
+    "usedFor": [
+      "article-hero-wissen"
+    ],
     "alt": "Wellensittich",
     "modifications": "Cropped by CSS where displayed."
   },
@@ -164,7 +181,10 @@
     "author": "Joxerra Aihartza",
     "license": "FAL",
     "licenseUrl": "https://artlibre.org/licence/lal/en",
-    "usedFor": ["animal-card-exoten", "article-hero-exoten"],
+    "usedFor": [
+      "animal-card-exoten",
+      "article-hero-exoten"
+    ],
     "alt": "Bartagame",
     "modifications": "Cropped by CSS where displayed."
   },
@@ -177,7 +197,10 @@
     "author": "Samantha Scholl sauriel",
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "usedFor": ["animal-card-pferde", "article-hero-pferde"],
+    "usedFor": [
+      "animal-card-pferde",
+      "article-hero-pferde"
+    ],
     "alt": "Pferdeherde auf einer Weide",
     "modifications": "Local resized copy; cropped by CSS where displayed."
   },
@@ -190,7 +213,9 @@
     "author": "Nancy Wong",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["article-hero-qualzucht"],
+    "usedFor": [
+      "article-hero-qualzucht"
+    ],
     "alt": "Mops als Beispiel für problematische Zuchtmerkmale",
     "modifications": "Cropped by CSS where displayed."
   },
@@ -203,22 +228,14 @@
     "author": "Turkish delight2",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "usedFor": ["article-hero-adoption"],
-    "alt": "Hund im Tierheim",
+    "usedFor": [
+      "start-hero",
+      "article-hero-mensch",
+      "article-hero-adoption",
+      "support-card-gassi-service"
+    ],
+    "alt": "Hund im Tierheim als Bild für echte Bedürfnisse vor dem Kauf",
     "modifications": "Cropped by CSS where displayed."
-  },
-  {
-    "id": "dog-gentle-affection",
-    "localPath": "assets/images/dog-gentle-affection.jpg",
-    "fileTitle": "Friendly dog enjoys gentle affection from its owner while relaxing.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Friendly_dog_enjoys_gentle_affection_from_its_owner_while_relaxing.jpg",
-    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Friendly_dog_enjoys_gentle_affection_from_its_owner_while_relaxing.jpg",
-    "author": "Shixart1985",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "usedFor": ["support-card-gassi-service"],
-    "alt": "Ruhiger Kontakt zwischen Mensch und Hund als Beispiel für Hilfe ohne eigenes Tier",
-    "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
   {
     "id": "animal-shelter-fundraiser",
@@ -229,7 +246,9 @@
     "author": "U.S. Navy photo by Petty Officer 2nd Class Tyler Fraser",
     "license": "Public domain",
     "licenseUrl": "",
-    "usedFor": ["support-card-patenschaften"],
+    "usedFor": [
+      "support-card-patenschaften"
+    ],
     "alt": "Tierschutzaktion als Beispiel für Patenschaften und Unterstützung",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -242,7 +261,9 @@
     "author": "Inge Habex",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "usedFor": ["support-card-ehrenamt"],
+    "usedFor": [
+      "support-card-ehrenamt"
+    ],
     "alt": "Strukturierter Kleintierkäfig als Beispiel für praktische Tierheimarbeit",
     "modifications": "Local thumbnail copy from Wikimedia; displayed with object-fit contain."
   },
@@ -255,21 +276,10 @@
     "author": "Opossumsrule",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "usedFor": ["qualzucht-adoption-alternative"],
+    "usedFor": [
+      "qualzucht-adoption-alternative"
+    ],
     "alt": "Kaninchen wird vor einer Adoption in einem Außengehege gehalten",
-    "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
-  },
-  {
-    "id": "dog-training-dovedale",
-    "localPath": "assets/images/dog-training-dovedale.jpg",
-    "fileTitle": "Dog training in Dovedale - geograph.org.uk - 701827.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dog_training_in_Dovedale_-_geograph.org.uk_-_701827.jpg",
-    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_training_in_Dovedale_-_geograph.org.uk_-_701827.jpg",
-    "author": "David Lally",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "usedFor": ["article-hero-hunde"],
-    "alt": "Hundetraining im Freien als Bild für Alltag, Zeit und Beziehung",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
   {
@@ -281,7 +291,9 @@
     "author": "Stanglavine",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["article-hero-katzen"],
+    "usedFor": [
+      "article-hero-katzen"
+    ],
     "alt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -294,7 +306,9 @@
     "author": "Bidgee",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "usedFor": ["article-hero-voegel"],
+    "usedFor": [
+      "article-hero-voegel"
+    ],
     "alt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -307,7 +321,9 @@
     "author": "Andre Karwath",
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
-    "usedFor": ["article-hero-exoten"],
+    "usedFor": [
+      "article-hero-exoten"
+    ],
     "alt": "Bartagame im Terrarium als Bild für Technik, Licht und Klima",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -320,7 +336,9 @@
     "author": "Evelyn Simak",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "usedFor": ["article-hero-pferde"],
+    "usedFor": [
+      "article-hero-pferde"
+    ],
     "alt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -333,7 +351,9 @@
     "author": "FelineAvenger",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "usedFor": ["article-hero-kastration"],
+    "usedFor": [
+      "article-hero-kastration"
+    ],
     "alt": "Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
@@ -346,21 +366,10 @@
     "author": "Matt Buck",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "usedFor": ["article-hero-selbsttest"],
+    "usedFor": [
+      "article-hero-selbsttest"
+    ],
     "alt": "Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung",
-    "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
-  },
-  {
-    "id": "dog-veterinary-clinic",
-    "localPath": "assets/images/dog-veterinary-clinic.jpg",
-    "fileTitle": "Dog at zia veterinary and pets clinic.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dog_at_zia_veterinary_and_pets_clinic.jpg",
-    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_at_zia_veterinary_and_pets_clinic.jpg",
-    "author": "Tauseefiqbal864",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "usedFor": ["article-hero-notfall"],
-    "alt": "Hund in einer Tierarztpraxis als ruhiges Bild für rechtzeitige Hilfe",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
   {
@@ -372,34 +381,10 @@
     "author": "علاء",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "usedFor": ["article-hero-wissen"],
+    "usedFor": [
+      "article-hero-wissen"
+    ],
     "alt": "Goldfische im Aquarium als Bild für hartnäckige Haustiermythen",
-    "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
-  },
-  {
-    "id": "shelter-volunteer-dog-care",
-    "localPath": "assets/images/shelter-volunteer-dog-care.jpg",
-    "fileTitle": "NSA Souda Bay participates in volunteer event at the Souda Animal Shelter (6103132).jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_(6103132).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/NSA_Souda_Bay_participates_in_volunteer_event_at_the_Souda_Animal_Shelter_%286103132%29.jpg",
-    "author": "U.S. Navy photo by Petty Officer 2nd Class Kelly M. Agee",
-    "license": "Public domain",
-    "licenseUrl": "",
-    "usedFor": ["article-hero-mensch"],
-    "alt": "Freiwillige im Tierheim kümmern sich ruhig um einen Hund",
-    "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
-  },
-  {
-    "id": "cat-vet-checkup",
-    "localPath": "assets/images/cat-vet-checkup.jpg",
-    "fileTitle": "Cat gets checkup at Guantanamo -a.jpg",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cat_gets_checkup_at_Guantanamo_-a.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Cat_gets_checkup_at_Guantanamo_-a.jpg",
-    "author": "Elisha Dawkins",
-    "license": "Public domain",
-    "licenseUrl": "",
-    "usedFor": ["wissen-evidenz"],
-    "alt": "Katze wird in einer Tierarztpraxis untersucht",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
   {
@@ -411,7 +396,11 @@
     "author": "Wa(h)re Haustierliebe",
     "license": "Local project brand asset",
     "licenseUrl": "",
-    "usedFor": ["hero-logo", "footer-logo", "social-preview"],
+    "usedFor": [
+      "hero-logo",
+      "footer-logo",
+      "social-preview"
+    ],
     "alt": "Wa(h)re Haustierliebe Logo",
     "modifications": "Local brand asset used without CSS crop."
   },
@@ -424,7 +413,9 @@
     "author": "Wa(h)re Haustierliebe",
     "license": "Local project brand asset",
     "licenseUrl": "",
-    "usedFor": ["header-logo"],
+    "usedFor": [
+      "header-logo"
+    ],
     "alt": "Wa(h)re Haustierliebe Bildmarke ohne Schriftzug",
     "modifications": "Cropped local brand asset for compact header usage."
   }

@@ -121,7 +121,9 @@ Screenshots aus Audits liegen unter `screenshots/` und werden nicht versioniert.
 
 ## Bilder und Credits
 
-`assets/images/` enthält lokale Kopien von Wikimedia-Commons-Bildern und das lokale Markenasset. Jedes verwendete Bild ist in `assets/image-credits.json` mit Quelle, Lizenz, Urheber und Einsatzort dokumentiert. Zusätzlich stehen sichtbare Bildnachweise im Footer der öffentlichen Seiten.
+`assets/images/` enthält lokale Kopien von Wikimedia-Commons-Bildern und die lokalen Markenassets. Jedes verwendete Bild ist in `assets/image-credits.json` mit Quelle, Lizenz, Urheber und Einsatzort dokumentiert. Der Pflegevertrag steht in `assets/IMAGE-LICENSES.md`. Zusätzlich stehen sichtbare Bildnachweise im Footer der öffentlichen Seiten.
+
+Seit 03.06.2026 werden keine bewusst eingesetzten Bilder mit erkennbaren Menschen, Gesichtern, Körpern oder Händen mehr verwendet. Neue Personenmotive brauchen vor Einsatz eine separate Prüfung der Persönlichkeitsrechte und eine klare Freigabe.
 
 Verwendete Lizenzen: Public domain, CC0, CC BY 2.0, CC BY 4.0, CC BY-SA 2.0, CC BY-SA 2.5, CC BY-SA 3.0, CC BY-SA 4.0, FAL.
 
