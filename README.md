@@ -77,6 +77,8 @@ node tools/prepare-pages-artifact.mjs
 
 Der zweite Befehl ist eine lokale Sichtprüfung des Pages-Artefakts; das Verzeichnis `.pages-artifact/` wird nicht versioniert.
 
+Der Pages-Workflow ist bis zur GitHub-Pages-Aktivierung bewusst nur manuell auslösbar. Nach der Umstellung in den Repository-Settings kann der Workflow manuell gestartet oder wieder auf Push-Deploy erweitert werden.
+
 ## GEO/SEO/AVO
 
 Die Seitenstruktur folgt dem Clautz-GEO/SEO-Guide:
