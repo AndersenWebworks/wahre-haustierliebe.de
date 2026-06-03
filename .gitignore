@@ -2,5 +2,7 @@ screenshots/
 node_modules/
 .worker-runs/
 .claude/
+dist/
+.pages-artifact/
 .DS_Store
 Thumbs.db

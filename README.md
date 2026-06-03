@@ -58,6 +58,25 @@ Er erzeugt oder aktualisiert:
 
 Der Build rendert die Seiten zusätzlich mit Playwright vor. Dadurch stehen Hero, Kicker, Verdichtungsmodule, Tabellenlabels und andere JS-verstärkte Bereiche direkt im HTML und sind nicht nur nach clientseitiger Hydration sichtbar.
 
+## GitHub Pages
+
+Die geplante Live-Version läuft statisch über GitHub Pages mit Custom Domain:
+
+```text
+wahre-haustierliebe.de
+```
+
+Der Pages-Workflow veröffentlicht nicht den gesamten Repo-Root, sondern nur ein öffentliches Artefakt aus `.pages-artifact/`. Dadurch bleiben Quellen, Tools, Referenzen, Screenshots und Worker-Artefakte außerhalb der ausgelieferten Website.
+
+Vor einem Pages-Deploy müssen die statischen Dateien lokal gebaut und committed sein:
+
+```powershell
+node tools/build-static-pages.mjs
+node tools/prepare-pages-artifact.mjs
+```
+
+Der zweite Befehl ist eine lokale Sichtprüfung des Pages-Artefakts; das Verzeichnis `.pages-artifact/` wird nicht versioniert.
+
 ## GEO/SEO/AVO
 
 Die Seitenstruktur folgt dem Clautz-GEO/SEO-Guide:
