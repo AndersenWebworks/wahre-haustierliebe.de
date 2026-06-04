@@ -8,13 +8,14 @@ const projectRoot = path.resolve(__dirname, '..');
 const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
-const lastmod = '2026-05-27';
+const siteName = 'Wa(h)re Haustier(liebe)';
+const lastmod = '2026-06-04';
 
 const pages = [
   {
     id: 'startseite',
     slug: '',
-    title: 'Wa(h)re Haustierliebe - Ehrliche Aufklärung über Tierhaltung',
+    title: 'Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung',
     description: 'Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.',
     intent: 'Startseite und Orientierung für verantwortungsvolle Haustierhaltung',
     priority: '1.0',
@@ -25,8 +26,8 @@ const pages = [
     id: 'mensch',
     slug: 'mensch',
     title: 'Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?',
-    description: 'Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation und Verantwortung prüfen, bevor ein Tier einzieht.',
-    intent: 'Vor dem Haustierkauf Entscheidung, Motivation und Alltag prüfen',
+    description: 'Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation, Wunschbilder und Verantwortung prüfen, bevor ein Tier einzieht.',
+    intent: 'Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen',
     priority: '0.9',
   },
   {
@@ -126,6 +127,51 @@ const pages = [
     priority: '0.8',
   },
   {
+    id: 'hitzefalle-auto',
+    slug: 'hitzefalle-auto',
+    title: 'Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind',
+    description: 'Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.',
+    intent: 'Sommerhitze und Hund im Auto einschätzen',
+    priority: '0.8',
+    staticOnly: true,
+  },
+  {
+    id: 'ernaehrung-taurin',
+    slug: 'ernaehrung-taurin',
+    title: 'Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt',
+    description: 'Warum Hunde und Katzen ernährungsphysiologisch verschieden sind, was Taurin bei Katzen leistet und warum Katzen- und Hundefutter nicht austauschbar sind.',
+    intent: 'Tierernährung, vegane Ernährung und Taurin verstehen',
+    priority: '0.8',
+    staticOnly: true,
+  },
+  {
+    id: 'realhaltung',
+    slug: 'realhaltung',
+    title: 'Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen',
+    description: 'Typische Haustierhaltung gegen wirklich vertretbare Haltung: Warum normal nicht automatisch artgerecht ist und der Kaufpreis nie die echten Kosten zeigt.',
+    intent: 'Realistische Haltung und Kosten vor der Anschaffung prüfen',
+    priority: '0.8',
+    staticOnly: true,
+  },
+  {
+    id: 'zucht-und-vermehrung',
+    slug: 'zucht-und-vermehrung',
+    title: 'Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist',
+    description: 'Unterschied zwischen Züchter und Vermehrer, warum zusätzliche Haustierproduktion problematisch bleibt und warum Adoption die konsequentere Entscheidung ist.',
+    intent: 'Zucht, Vermehrung und Adoption einordnen',
+    priority: '0.8',
+    staticOnly: true,
+  },
+  {
+    id: 'wildtierhaltung',
+    slug: 'wildtierhaltung',
+    title: 'Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar',
+    description: 'Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.',
+    intent: 'Private Wildtierhaltung, Exoten und Wildschutz verstehen',
+    priority: '0.8',
+    staticOnly: true,
+  },
+  {
     id: 'noch-nicht-bereit',
     slug: 'noch-nicht-bereit',
     title: 'Noch nicht bereit für ein Tier: Warten kann Tierliebe sein',
@@ -145,7 +191,7 @@ const pages = [
 ];
 
 const pageById = new Map(pages.map((page) => [page.id, page]));
-const sectionPages = pages.filter((page) => !page.standalone);
+const sectionPages = pages.filter((page) => !page.standalone && !page.staticOnly);
 const pageIds = sectionPages.map((page) => page.id);
 
 const faqByPage = {
@@ -185,6 +231,11 @@ const ogImageByPage = {
   selbsttest: 'assets/images/cats-cat-tree-pair.jpg',
   notfall: 'assets/images/vet-office-with-dog.jpg',
   wissen: 'assets/images/goldfish-aquarium.jpg',
+  'hitzefalle-auto': 'assets/images/vet-office-with-dog.jpg',
+  'ernaehrung-taurin': 'assets/images/two-cats-window.jpg',
+  realhaltung: 'assets/images/hamster-home-built-enclosure.png',
+  'zucht-und-vermehrung': 'assets/images/animal-shelter-fundraiser.jpg',
+  wildtierhaltung: 'assets/images/exot-bartagame.jpg',
   'noch-nicht-bereit': 'assets/images/cat-soft-carrier.jpg',
 };
 
@@ -453,7 +504,7 @@ function buildJsonLd(page) {
     dateModified: lastmod,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Wa(h)re Haustierliebe',
+      name: siteName,
       url: `${baseUrl}/`,
     },
   };
@@ -469,7 +520,7 @@ function buildHead(page, prefix) {
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
 
-  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:site_name" content="Wa(h)re Haustierliebe">\n  <meta property="og:locale" content="de_DE">\n  <meta name="twitter:card" content="summary_large_image">\n  <link rel="canonical" href="${canonical}">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
+  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta name="twitter:card" content="summary_large_image">\n  <link rel="canonical" href="${canonical}">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
 }
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
@@ -495,7 +546,7 @@ async function buildBudgiePage(page) {
     inLanguage: 'de-DE',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Wa(h)re Haustierliebe',
+      name: siteName,
       url: `${baseUrl}/`,
     },
     teaches: [
@@ -509,7 +560,7 @@ async function buildBudgiePage(page) {
 
   let html = source;
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
-  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${baseUrl}/assets/images/wahre-haustierliebe-logo.png">\n  <meta property="og:site_name" content="Wa(h)re Haustierliebe">\n  <meta property="og:locale" content="de_DE">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
+  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${baseUrl}/assets/images/wahre-haustierliebe-logo.png">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
   html = html.replace('<body class="budgie-page time-morning">', `<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="${page.id}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>`);
   html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content" tabindex="-1"><div class="budgie-app" id="app">');
   html = html.replace('<h2>Budgie Brain</h2>', '<h1>Budgie Brain</h1>');
@@ -565,13 +616,13 @@ function buildRobots() {
 
 function buildLlmsFull() {
   const lines = [
-    '# Wa(h)re Haustierliebe',
+    '# Wa(h)re Haustier(liebe)',
     '',
     '> Private, werbefreie Aufklärungsseite über verantwortungsvolle Haustierhaltung in Deutschland.',
     '',
     '## Core Facts',
     '',
-    '- Name: Wa(h)re Haustierliebe',
+    `- Name: ${siteName}`,
     `- Website: ${baseUrl}/`,
     '- Thema: artgerechte Haustierhaltung, Tierwohl, Tierschutz, Kastration, Qualzucht, Adoption, Notfälle',
     '- Region: Deutschland, mit privatem Bezug zu Mecklenburg-Vorpommern',
@@ -604,7 +655,7 @@ function buildLlmsFull() {
 function buildLlmsShort() {
   const important = ['hunde', 'katzen', 'notfall', 'kastration', 'adoption', 'selbsttest', 'wissen'];
   const lines = [
-    '# Wa(h)re Haustierliebe',
+    '# Wa(h)re Haustier(liebe)',
     '',
     '> Private, werbefreie Aufklärungsseite über verantwortungsvolle Haustierhaltung in Deutschland.',
     '',
@@ -630,7 +681,7 @@ function buildLlmsShort() {
 function buildAiPages() {
   return JSON.stringify({
     lastUpdated: lastmod,
-    site: 'Wa(h)re Haustierliebe',
+    site: siteName,
     url: `${baseUrl}/`,
     pages: pages.map((page) => ({
       id: page.id,
@@ -645,7 +696,7 @@ function buildAiPages() {
 function buildAiSite() {
   return JSON.stringify({
     lastUpdated: lastmod,
-    name: 'Wa(h)re Haustierliebe',
+    name: siteName,
     url: `${baseUrl}/`,
     type: 'WebSite',
     language: 'de-DE',
@@ -702,6 +753,7 @@ async function main() {
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
 
   for (const page of pages) {
+    if (page.staticOnly) continue;
     if (page.standalone === 'budgie') {
       await writeFileEnsured(outputPathFor(page), await buildBudgiePage(page));
       continue;

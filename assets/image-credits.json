@@ -390,10 +390,10 @@
   {
     "id": "wahre-haustierliebe-logo",
     "localPath": "assets/images/wahre-haustierliebe-logo.png",
-    "fileTitle": "Wa(h)re Haustierliebe logo",
+    "fileTitle": "Wa(h)re Haustier(liebe) logo",
     "sourceUrl": "",
     "originalUrl": "",
-    "author": "Wa(h)re Haustierliebe",
+    "author": "Wa(h)re Haustier(liebe)",
     "license": "Local project brand asset",
     "licenseUrl": "",
     "usedFor": [
@@ -401,22 +401,22 @@
       "footer-logo",
       "social-preview"
     ],
-    "alt": "Wa(h)re Haustierliebe Logo",
+    "alt": "Wa(h)re Haustier(liebe) Logo",
     "modifications": "Local brand asset used without CSS crop."
   },
   {
     "id": "wahre-haustierliebe-mark",
     "localPath": "assets/images/wahre-haustierliebe-mark.png",
-    "fileTitle": "Wa(h)re Haustierliebe header mark",
+    "fileTitle": "Wa(h)re Haustier(liebe) header mark",
     "sourceUrl": "",
     "originalUrl": "",
-    "author": "Wa(h)re Haustierliebe",
+    "author": "Wa(h)re Haustier(liebe)",
     "license": "Local project brand asset",
     "licenseUrl": "",
     "usedFor": [
       "header-logo"
     ],
-    "alt": "Wa(h)re Haustierliebe Bildmarke ohne Schriftzug",
+    "alt": "Wa(h)re Haustier(liebe) Bildmarke ohne Schriftzug",
     "modifications": "Cropped local brand asset for compact header usage."
   }
 ]

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-05-27",
-  "site": "Wa(h)re Haustierliebe",
+  "lastUpdated": "2026-06-04",
+  "site": "Wa(h)re Haustier(liebe)",
   "url": "https://wahre-haustierliebe.de/",
   "pages": [
     {
       "id": "startseite",
       "url": "https://wahre-haustierliebe.de/",
-      "title": "Wa(h)re Haustierliebe - Ehrliche Aufklärung über Tierhaltung",
+      "title": "Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung",
       "description": "Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.",
       "intent": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung"
     },
@@ -14,8 +14,8 @@
       "id": "mensch",
       "url": "https://wahre-haustierliebe.de/mensch/index.html",
       "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",
-      "description": "Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation und Verantwortung prüfen, bevor ein Tier einzieht.",
-      "intent": "Vor dem Haustierkauf Entscheidung, Motivation und Alltag prüfen"
+      "description": "Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation, Wunschbilder und Verantwortung prüfen, bevor ein Tier einzieht.",
+      "intent": "Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen"
     },
     {
       "id": "hunde",
@@ -100,6 +100,41 @@
       "title": "Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?",
       "description": "Häufige Tierhaltungsmythen, Homöopathie bei Tieren und wichtige Begriffe rund um artgerechte Haltung, Krankheiten und Tierschutz verständlich erklärt.",
       "intent": "Tierhaltungsmythen und Fachbegriffe prüfen"
+    },
+    {
+      "id": "hitzefalle-auto",
+      "url": "https://wahre-haustierliebe.de/hitzefalle-auto/index.html",
+      "title": "Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind",
+      "description": "Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.",
+      "intent": "Sommerhitze und Hund im Auto einschätzen"
+    },
+    {
+      "id": "ernaehrung-taurin",
+      "url": "https://wahre-haustierliebe.de/ernaehrung-taurin/index.html",
+      "title": "Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt",
+      "description": "Warum Hunde und Katzen ernährungsphysiologisch verschieden sind, was Taurin bei Katzen leistet und warum Katzen- und Hundefutter nicht austauschbar sind.",
+      "intent": "Tierernährung, vegane Ernährung und Taurin verstehen"
+    },
+    {
+      "id": "realhaltung",
+      "url": "https://wahre-haustierliebe.de/realhaltung/index.html",
+      "title": "Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen",
+      "description": "Typische Haustierhaltung gegen wirklich vertretbare Haltung: Warum normal nicht automatisch artgerecht ist und der Kaufpreis nie die echten Kosten zeigt.",
+      "intent": "Realistische Haltung und Kosten vor der Anschaffung prüfen"
+    },
+    {
+      "id": "zucht-und-vermehrung",
+      "url": "https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html",
+      "title": "Zucht und Vermehrung: Warum auch gute Zucht nicht das Ideal ist",
+      "description": "Unterschied zwischen Züchter und Vermehrer, warum zusätzliche Haustierproduktion problematisch bleibt und warum Adoption die konsequentere Entscheidung ist.",
+      "intent": "Zucht, Vermehrung und Adoption einordnen"
+    },
+    {
+      "id": "wildtierhaltung",
+      "url": "https://wahre-haustierliebe.de/wildtierhaltung/index.html",
+      "title": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
+      "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.",
+      "intent": "Private Wildtierhaltung, Exoten und Wildschutz verstehen"
     },
     {
       "id": "noch-nicht-bereit",

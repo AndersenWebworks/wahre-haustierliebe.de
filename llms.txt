@@ -1,4 +1,4 @@
-# Wa(h)re Haustierliebe
+# Wa(h)re Haustier(liebe)
 
 > Private, werbefreie Aufklärungsseite über verantwortungsvolle Haustierhaltung in Deutschland.
 
@@ -17,6 +17,10 @@
 - Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+- Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
+- Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
+- Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen: https://wahre-haustierliebe.de/realhaltung/index.html
+- Zucht und Vermehrung: Warum auch gute Zucht nicht das Ideal ist: https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html
+- Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar: https://wahre-haustierliebe.de/wildtierhaltung/index.html
 
 Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt
-

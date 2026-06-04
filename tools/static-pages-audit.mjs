@@ -22,6 +22,11 @@ const pages = [
   { id: 'selbsttest', file: 'selbsttest/index.html', canonical: `${baseUrl}/selbsttest/index.html` },
   { id: 'notfall', file: 'notfall/index.html', canonical: `${baseUrl}/notfall/index.html` },
   { id: 'wissen', file: 'wissen/index.html', canonical: `${baseUrl}/wissen/index.html` },
+  { id: 'hitzefalle-auto', file: 'hitzefalle-auto/index.html', canonical: `${baseUrl}/hitzefalle-auto/index.html` },
+  { id: 'ernaehrung-taurin', file: 'ernaehrung-taurin/index.html', canonical: `${baseUrl}/ernaehrung-taurin/index.html` },
+  { id: 'realhaltung', file: 'realhaltung/index.html', canonical: `${baseUrl}/realhaltung/index.html` },
+  { id: 'zucht-und-vermehrung', file: 'zucht-und-vermehrung/index.html', canonical: `${baseUrl}/zucht-und-vermehrung/index.html` },
+  { id: 'wildtierhaltung', file: 'wildtierhaltung/index.html', canonical: `${baseUrl}/wildtierhaltung/index.html` },
   { id: 'noch-nicht-bereit', file: 'noch-nicht-bereit/index.html', canonical: `${baseUrl}/noch-nicht-bereit/index.html` },
   { id: 'budgie-brain', file: 'budgie-brain/index.html', canonical: `${baseUrl}/budgie-brain/index.html` },
 ];

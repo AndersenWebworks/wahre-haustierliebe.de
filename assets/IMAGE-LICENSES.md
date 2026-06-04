@@ -1,8 +1,8 @@
-# Wa(h)re Haustierliebe Bildlizenzen
+# Wa(h)re Haustier(liebe) Bildlizenzen
 
 Stand: 03.06.2026
 
-Die maschinenlesbare Nachweistabelle liegt in `image-credits.json`. Sie ist die verbindliche Asset-Tabelle für die statische Website.
+Die maschinenlesbare Nachweistabelle liegt in `image-credits.json`. Sie ist die verbindliche Asset-Tabelle für die aktuelle statische Preview unter `/wahre-haustierliebe-current/`.
 
 ## Status
 
@@ -30,7 +30,7 @@ Die maschinenlesbare Nachweistabelle liegt in `image-credits.json`. Sie ist die 
 
 ## Personenmotive
 
-Seit 03.06.2026 enthält die statische Website keine bewusst eingesetzten Bilder mit erkennbaren Menschen, Gesichtern, Körpern oder Händen mehr. Neue Bilder mit Personenmotiven gehören nicht auf die Website, solange keine separate Prüfung der Persönlichkeitsrechte und eine klare Freigabe dokumentiert sind.
+Seit 03.06.2026 enthält die statische Preview keine bewusst eingesetzten Bilder mit erkennbaren Menschen, Gesichtern, Körpern oder Händen mehr. Neue Bilder mit Personenmotiven gehören nicht in die Preview, solange keine separate Prüfung der Persönlichkeitsrechte und eine klare Freigabe dokumentiert sind.
 
 ## Pflegevertrag
 
@@ -47,7 +47,7 @@ Jedes neue Bild in `assets/images/` braucht vor Verwendung einen Eintrag in `ima
 - `alt`
 - `modifications`
 
-Wenn ein Bild keine belegbare Quelle, keine passende Lizenz oder keine klare lokale Rechtebasis hat, gehört es nicht auf die Website.
+Wenn ein Bild keine belegbare Quelle, keine passende Lizenz oder keine klare lokale Rechtebasis hat, gehört es nicht in die Preview.
 
 ## Sichtbare Nachweise
 
