@@ -268,11 +268,11 @@ const defaultSocialImage = {
 
 const firstContentImageByPage = {
   mensch: {
-    src: 'assets/images/tierheim-hund.jpg',
-    width: 960,
-    height: 1280,
+    src: 'assets/images/cat-carrier-square.jpg',
+    width: 1400,
+    height: 1394,
     type: 'image/jpeg',
-    alt: 'Hund im Tierheim als Bild für ehrliche Entscheidung vor dem Kauf.',
+    alt: 'Katze in Transporttasche als Bild für ehrliche Vorbereitung vor dem Einzug.',
   },
   hunde: {
     src: 'assets/images/golden-retriever-agility-jump.jpg',

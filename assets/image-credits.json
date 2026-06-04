@@ -74,6 +74,7 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
     "usedFor": [
+      "article-hero-mensch",
       "support-card-pflegestelle"
     ],
     "alt": "Katze blickt aus einer Transporttasche",
@@ -230,7 +231,6 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
     "usedFor": [
       "start-hero",
-      "article-hero-mensch",
       "article-hero-adoption",
       "support-card-gassi-service"
     ],

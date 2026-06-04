@@ -1,5 +1,8 @@
 screenshots/
 node_modules/
+.env
+.env.*
+!.env.example
 .worker-runs/
 .claude/
 dist/

@@ -85,6 +85,34 @@ Der zweite Befehl ist eine lokale Sichtprüfung des Pages-Artefakts; das Verzeic
 
 Der Pages-Workflow läuft automatisch bei jedem Push auf `main` und kann zusätzlich manuell gestartet werden. Das Pages-Artefakt übernimmt die öffentlichen Seiten aus `ai/pages.json`, damit neue Unterseiten nicht in einer zweiten Deploy-Liste vergessen werden.
 
+## Kontaktformular
+
+Die Kontaktseite sendet per `POST /api/kontakt`. GitHub Pages kann diesen Endpoint nicht selbst ausführen, weil Pages nur statische Dateien ausliefert. Der Mailversand läuft deshalb über den separaten Node-Endpoint `server/contact-api.mjs`, der per Reverse Proxy oder Routing unter `/api/kontakt` erreichbar sein muss.
+
+Der Endpoint nutzt SMTP-Zugangsdaten aus Environment-Variablen. Secrets werden nicht committed; `.env.example` enthält nur Platzhalter.
+
+Benötigte Variablen:
+
+```powershell
+CONTACT_API_PORT=8787
+CONTACT_ALLOWED_ORIGINS=https://wahre-haustierliebe.de
+CONTACT_TO=kontakt@wahre-haustierliebe.de
+CONTACT_SUBJECT_PREFIX=Wa(h)re Haustier(liebe)
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_STARTTLS=true
+SMTP_USER=kontakt@wahre-haustierliebe.de
+SMTP_PASS=...
+SMTP_FROM=Wa(h)re Haustier(liebe) <kontakt@wahre-haustierliebe.de>
+```
+
+Start lokal oder auf dem Host:
+
+```powershell
+node server/contact-api.mjs
+```
+
 ## GEO/SEO/AVO
 
 Die Seitenstruktur folgt dem Clautz-GEO/SEO-Guide:

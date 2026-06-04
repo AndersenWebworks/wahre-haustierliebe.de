@@ -260,7 +260,7 @@
         </div>
 
         <div class="contact-form-card">
-          <form class="contact-form" action="/api/kontakt" method="post" data-smtp-form="kontakt">
+          <form class="contact-form" action="/api/kontakt" method="post" data-contact-form="kontakt">
             <input type="hidden" name="form" value="wahre-haustierliebe-kontakt">
             <input type="hidden" name="subject" value="Kontaktanfrage Wa(h)re Haustier(liebe)">
             <div class="contact-honeypot" aria-hidden="true">
@@ -315,9 +315,10 @@
             </label>
 
             <div class="contact-form-actions">
-              <button class="btn btn-primary" type="submit" disabled>Nachricht senden</button>
-              <p class="contact-form-note">Der Mailversand wird aktiviert, sobald die SMTP-Zugangsdaten eingebunden sind.</p>
+              <button class="btn btn-primary" type="submit" data-contact-submit>Nachricht senden</button>
+              <p class="contact-form-note">Wir senden deine Anfrage verschlüsselt an unseren Mail-Endpoint und antworten dir per E-Mail.</p>
             </div>
+            <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
           </form>
         </div>
       </div></div>
