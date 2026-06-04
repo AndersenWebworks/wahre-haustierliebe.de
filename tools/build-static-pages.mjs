@@ -243,35 +243,159 @@ const faqByPage = {
   ],
 };
 
-const socialCardWidth = 1200;
-const socialCardHeight = 630;
-const defaultSocialImage = 'assets/social/wahre-haustierliebe-default.png';
 const brandLogo = 'assets/images/wahre-haustierliebe-logo.png';
 const brandMark = 'assets/images/wahre-haustierliebe-mark.png';
 const defaultSocialDescription = 'Ehrliche Aufklärung über Haustierhaltung, Tierwohl, Adoption, Qualzucht und Notfälle - privat, werbefrei und verständlich.';
 
-const socialBackgroundByPage = {
-  mensch: 'assets/images/tierheim-hund.jpg',
-  hunde: 'assets/images/golden-retriever-agility-jump.jpg',
-  katzen: 'assets/images/two-cats-window.jpg',
-  voegel: 'assets/images/voegel-voliere-02.jpg',
-  kleintiere: 'assets/images/guinea-pig-habitat.jpg',
-  exoten: 'assets/images/bearded-dragon-terrarium.jpg',
-  pferde: 'assets/images/horse-paddocks-shelter.jpg',
-  kastration: 'assets/images/feral-cat-tnr.jpg',
-  qualzucht: 'assets/images/qualzucht-mops.jpg',
-  adoption: 'assets/images/tierheim-hund.jpg',
-  selbsttest: 'assets/images/cats-cat-tree-pair.jpg',
-  notfall: 'assets/images/vet-office-with-dog.jpg',
-  'tierarzt-notdienst': 'assets/images/vet-office-with-dog.jpg',
-  wissen: 'assets/images/goldfish-aquarium.jpg',
-  'hitzefalle-auto': 'assets/images/vet-office-with-dog.jpg',
-  'ernaehrung-taurin': 'assets/images/two-cats-window.jpg',
-  realhaltung: 'assets/images/hamster-home-built-enclosure.png',
-  'zucht-und-vermehrung': 'assets/images/animal-shelter-fundraiser.jpg',
-  wildtierhaltung: 'assets/images/exot-bartagame.jpg',
-  'noch-nicht-bereit': 'assets/images/cat-soft-carrier.jpg',
-  'budgie-brain': 'assets/images/vogel-wellensittich.jpg',
+const defaultSocialImage = {
+  src: brandLogo,
+  width: 1536,
+  height: 1024,
+  type: 'image/png',
+  alt: 'Offizielles Logo von Wa(h)re Haustier(liebe).',
+};
+
+const firstContentImageByPage = {
+  mensch: {
+    src: 'assets/images/tierheim-hund.jpg',
+    width: 960,
+    height: 1280,
+    type: 'image/jpeg',
+    alt: 'Hund im Tierheim als Bild für ehrliche Entscheidung vor dem Kauf.',
+  },
+  hunde: {
+    src: 'assets/images/golden-retriever-agility-jump.jpg',
+    width: 2000,
+    height: 1339,
+    type: 'image/jpeg',
+    alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.',
+  },
+  katzen: {
+    src: 'assets/images/two-cats-window.jpg',
+    width: 843,
+    height: 954,
+    type: 'image/jpeg',
+    alt: 'Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.',
+  },
+  voegel: {
+    src: 'assets/images/voegel-voliere-02.jpg',
+    width: 1600,
+    height: 1064,
+    type: 'image/jpeg',
+    alt: 'Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.',
+  },
+  kleintiere: {
+    src: 'assets/images/guinea-pig-habitat.jpg',
+    width: 800,
+    height: 599,
+    type: 'image/jpeg',
+    alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung.',
+  },
+  exoten: {
+    src: 'assets/images/bearded-dragon-terrarium.jpg',
+    width: 1000,
+    height: 702,
+    type: 'image/jpeg',
+    alt: 'Bartagame im Terrarium als Bild für Technik, Licht und Klima.',
+  },
+  pferde: {
+    src: 'assets/images/horse-paddocks-shelter.jpg',
+    width: 640,
+    height: 480,
+    type: 'image/jpeg',
+    alt: 'Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.',
+  },
+  kastration: {
+    src: 'assets/images/feral-cat-tnr.jpg',
+    width: 432,
+    height: 324,
+    type: 'image/jpeg',
+    alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration.',
+  },
+  qualzucht: {
+    src: 'assets/images/qualzucht-mops.jpg',
+    width: 960,
+    height: 639,
+    type: 'image/jpeg',
+    alt: 'Mops als Beispiel für problematische Zuchtmerkmale.',
+  },
+  adoption: {
+    src: 'assets/images/tierheim-hund.jpg',
+    width: 960,
+    height: 1280,
+    type: 'image/jpeg',
+    alt: 'Hund im Tierheim als klares Bild für Adoption statt Kauf.',
+  },
+  selbsttest: {
+    src: 'assets/images/cats-cat-tree-pair.jpg',
+    width: 1920,
+    height: 1507,
+    type: 'image/jpeg',
+    alt: 'Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung.',
+  },
+  notfall: {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.',
+  },
+  'tierarzt-notdienst': {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.',
+  },
+  wissen: {
+    src: 'assets/images/goldfish-aquarium.jpg',
+    width: 1920,
+    height: 1309,
+    type: 'image/jpeg',
+    alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen.',
+  },
+  'hitzefalle-auto': {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress.',
+  },
+  'ernaehrung-taurin': {
+    src: 'assets/images/two-cats-window.jpg',
+    width: 843,
+    height: 954,
+    type: 'image/jpeg',
+    alt: 'Zwei Katzen am Fenster als Bild für katzenspezifische Bedürfnisse.',
+  },
+  realhaltung: {
+    src: 'assets/images/hamster-home-built-enclosure.png',
+    width: 1280,
+    height: 685,
+    type: 'image/png',
+    alt: 'Großes selbst gebautes Hamstergehege als Gegenbild zur Käfighaltung.',
+  },
+  'zucht-und-vermehrung': {
+    src: 'assets/images/animal-shelter-fundraiser.jpg',
+    width: 1920,
+    height: 1372,
+    type: 'image/jpeg',
+    alt: 'Tierschutzaktion als Bild für vorhandene Tiere statt weiterer Produktion.',
+  },
+  wildtierhaltung: {
+    src: 'assets/images/exot-bartagame.jpg',
+    width: 330,
+    height: 212,
+    type: 'image/jpeg',
+    alt: 'Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung.',
+  },
+  'noch-nicht-bereit': {
+    src: 'assets/images/cat-soft-carrier.jpg',
+    width: 1254,
+    height: 1638,
+    type: 'image/jpeg',
+    alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang.',
+  },
 };
 
 const socialCopyByPage = {
@@ -423,17 +547,21 @@ function canonicalUrl(page) {
 
 function socialCopy(page) {
   const fallback = socialCopyByPage.startseite;
+  const image = socialImage(page);
   return {
     eyebrow: socialCopyByPage[page.id]?.eyebrow || fallback.eyebrow,
     title: socialCopyByPage[page.id]?.title || page.title,
     description: socialCopyByPage[page.id]?.description || page.description || defaultSocialDescription,
-    alt: socialCopyByPage[page.id]?.alt || `${siteName} Social-Card: ${socialCopyByPage[page.id]?.title || page.title}`,
+    alt: socialCopyByPage[page.id]?.alt || image.alt,
   };
 }
 
 function socialImagePath(page) {
-  if (page.id === 'startseite' || !socialBackgroundByPage[page.id]) return defaultSocialImage;
-  return `assets/social/${page.id}.png`;
+  return socialImage(page).src;
+}
+
+function socialImage(page) {
+  return page.id === 'startseite' ? defaultSocialImage : firstContentImageByPage[page.id] || defaultSocialImage;
 }
 
 function socialImageUrl(page) {
@@ -671,11 +799,12 @@ function rewriteScript(script) {
 function buildJsonLd(page) {
   const canonical = canonicalUrl(page);
   const copy = socialCopy(page);
+  const social = socialImage(page);
   const image = {
     '@type': 'ImageObject',
     url: socialImageUrl(page),
-    width: socialCardWidth,
-    height: socialCardHeight,
+    width: social.width,
+    height: social.height,
     caption: copy.alt,
   };
   const breadcrumb = {
@@ -736,13 +865,14 @@ function buildJsonLd(page) {
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
   const copy = socialCopy(page);
+  const social = socialImage(page);
   const image = socialImageUrl(page);
   const keywords = pageKeywords(page).join(', ');
   const schema = buildJsonLd(page)
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
 
-  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="image/png">\n  <meta property="og:image:width" content="${socialCardWidth}">\n  <meta property="og:image:height" content="${socialCardHeight}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
+  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
 }
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
@@ -790,6 +920,7 @@ async function buildBudgiePage(page) {
   const source = await fs.readFile(path.join(projectRoot, 'src', 'budgie-source.html'), 'utf8');
   const prefix = assetPrefixFor(page);
   const copy = socialCopy(page);
+  const social = socialImage(page);
   const image = socialImageUrl(page);
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -800,8 +931,8 @@ async function buildBudgiePage(page) {
     image: {
       '@type': 'ImageObject',
       url: image,
-      width: socialCardWidth,
-      height: socialCardHeight,
+      width: social.width,
+      height: social.height,
       caption: copy.alt,
     },
     thumbnailUrl: image,
@@ -823,7 +954,7 @@ async function buildBudgiePage(page) {
 
   let html = source;
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
-  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="image/png">\n  <meta property="og:image:width" content="${socialCardWidth}">\n  <meta property="og:image:height" content="${socialCardHeight}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
+  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
   html = html.replace('<body class="budgie-page time-morning">', `<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="${page.id}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>`);
   html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content" tabindex="-1"><div class="budgie-app" id="app">');
   html = html.replace('<h2>Budgie Brain</h2>', '<h1>Budgie Brain</h1>');
@@ -871,73 +1002,13 @@ function mimeTypeFor(relativePath) {
 }
 
 async function buildAssetDataUrls() {
-  const assets = new Set([brandLogo, brandMark, ...Object.values(socialBackgroundByPage)]);
+  const assets = new Set([brandLogo, brandMark]);
   const result = new Map();
   for (const asset of assets) {
     const buffer = await fs.readFile(path.join(projectRoot, asset));
     result.set(asset, `data:${mimeTypeFor(asset)};base64,${buffer.toString('base64')}`);
   }
   return result;
-}
-
-function socialCardHtml(page, assetUrls) {
-  const assetUrl = (relativePath) => assetUrls.get(relativePath);
-  const copy = socialCopy(page);
-  const background = socialBackgroundByPage[page.id];
-  const isDefault = page.id === 'startseite' || !background;
-  const backgroundStyle = background
-    ? `<img class="photo" src="${assetUrl(background)}" alt="">`
-    : `<div class="brand-field"><img src="${assetUrl(brandLogo)}" alt=""></div>`;
-  const label = isDefault ? 'Website' : 'Ratgeber';
-
-  return `<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; width: ${socialCardWidth}px; height: ${socialCardHeight}px; overflow: hidden; font-family: "Segoe UI", "Plus Jakarta Sans", Arial, sans-serif; color: #21352d; background: #f7efe3; }
-    .card { position: relative; width: ${socialCardWidth}px; height: ${socialCardHeight}px; background: linear-gradient(135deg, #f9f1e6 0%, #fffaf1 45%, #dfeee1 100%); overflow: hidden; }
-    .photo-wrap { position: absolute; inset: 0 0 0 55%; overflow: hidden; background: #d5e5d6; }
-    .photo { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.04) contrast(1.03); }
-    .photo-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(249, 241, 230, 0.96) 0%, rgba(249, 241, 230, 0.74) 22%, rgba(249, 241, 230, 0.1) 58%); }
-    .content { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; width: 55%; height: 100%; padding: 58px 50px 54px 70px; }
-    .brand { display: flex; align-items: center; gap: 20px; }
-    .brand img { width: ${isDefault ? 330 : 170}px; height: auto; display: block; }
-    .pill { align-self: flex-start; padding: 10px 18px; border-radius: 999px; background: #2f7d57; color: #fffaf1; font-size: 20px; font-weight: 800; letter-spacing: 0; }
-    .headline { max-width: 540px; font-size: ${isDefault ? 74 : 47}px; line-height: 1; font-weight: 850; letter-spacing: 0; margin: 20px 0 14px; color: #1f332b; }
-    .text { max-width: 530px; font-size: 23px; line-height: 1.24; font-weight: 650; color: #405249; margin: 0; }
-    .footer { display: flex; align-items: center; gap: 16px; font-size: 25px; font-weight: 800; color: #2f7d57; }
-    .mark { width: 44px; height: 44px; object-fit: contain; }
-    .brand-field { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(135deg, #f7efe3 0%, #ffffff 56%, #e2f0e3 100%); }
-    .brand-field img { width: 580px; max-height: 350px; object-fit: contain; }
-    .default-card .content { width: 100%; padding-right: 88px; }
-    .default-card .headline { max-width: 980px; font-size: 78px; }
-    .default-card .text { max-width: 940px; font-size: 31px; }
-    .default-card .photo-wrap { display: none; }
-  </style>
-</head>
-<body>
-  <div class="card${isDefault ? ' default-card' : ''}">
-    <div class="photo-wrap">${backgroundStyle}</div>
-    <div class="content">
-      <div class="brand">
-        <img src="${assetUrl(brandLogo)}" alt="Wa(h)re Haustier(liebe)">
-        <div class="pill">${escapeHtml(label)}</div>
-      </div>
-      <div>
-        <div class="pill">${escapeHtml(copy.eyebrow)}</div>
-        <h1 class="headline">${escapeHtml(copy.title)}</h1>
-        <p class="text">${escapeHtml(copy.description)}</p>
-      </div>
-      <div class="footer">
-        <img class="mark" src="${assetUrl(brandMark)}" alt="">
-        <span>wahre-haustierliebe.de</span>
-      </div>
-    </div>
-  </div>
-</body>
-</html>`;
 }
 
 function iconHtml(size, assetUrls) {
@@ -963,30 +1034,11 @@ async function screenshotHtml(browser, html, outputFile, viewport) {
   await page.close();
 }
 
-async function generateSocialCards() {
+async function generateBrandIcons() {
   const chromium = await loadChromium();
   const browser = await chromium.launch();
   const assetUrls = await buildAssetDataUrls();
-  await fs.mkdir(path.join(projectRoot, 'assets', 'social'), { recursive: true });
   await fs.mkdir(path.join(projectRoot, 'assets', 'icons'), { recursive: true });
-
-  await screenshotHtml(
-    browser,
-    socialCardHtml(pageById.get('startseite'), assetUrls),
-    path.join(projectRoot, defaultSocialImage),
-    { width: socialCardWidth, height: socialCardHeight },
-  );
-
-  for (const page of pages) {
-    const output = socialImagePath(page);
-    if (output === defaultSocialImage) continue;
-    await screenshotHtml(
-      browser,
-      socialCardHtml(page, assetUrls),
-      path.join(projectRoot, output),
-      { width: socialCardWidth, height: socialCardHeight },
-    );
-  }
 
   for (const [name, size] of [['icon-32.png', 32], ['icon-192.png', 192], ['apple-touch-icon.png', 180]]) {
     await screenshotHtml(
@@ -1130,22 +1182,25 @@ function buildAiPages() {
     lastUpdated: lastmod,
     site: siteName,
     url: `${baseUrl}/`,
-    pages: pages.map((page) => ({
-      id: page.id,
-      url: canonicalUrl(page),
-      title: page.title,
-      description: page.description,
-      intent: page.intent,
-      keywords: pageKeywords(page),
-      social: {
-        title: socialCopy(page).title,
-        description: socialCopy(page).description,
-        image: socialImageUrl(page),
-        imageAlt: socialCopy(page).alt,
-        imageWidth: socialCardWidth,
-        imageHeight: socialCardHeight,
-      },
-    })),
+    pages: pages.map((page) => {
+      const social = socialImage(page);
+      return {
+        id: page.id,
+        url: canonicalUrl(page),
+        title: page.title,
+        description: page.description,
+        intent: page.intent,
+        keywords: pageKeywords(page),
+        social: {
+          title: socialCopy(page).title,
+          description: socialCopy(page).description,
+          image: socialImageUrl(page),
+          imageAlt: socialCopy(page).alt,
+          imageWidth: social.width,
+          imageHeight: social.height,
+        },
+      };
+    }),
   }, null, 2) + '\n';
 }
 
@@ -1174,10 +1229,10 @@ function buildAiSite() {
       'Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien.',
     ],
     socialPreview: {
-      defaultImage: `${baseUrl}/${defaultSocialImage}`,
-      width: socialCardWidth,
-      height: socialCardHeight,
-      format: 'image/png',
+      defaultImage: `${baseUrl}/${defaultSocialImage.src}`,
+      width: defaultSocialImage.width,
+      height: defaultSocialImage.height,
+      format: defaultSocialImage.type,
     },
     machineReadableEndpoints: [
       `${baseUrl}/llms.txt`,
@@ -1222,7 +1277,7 @@ async function main() {
 
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
-  await generateSocialCards();
+  await generateBrandIcons();
 
   for (const page of pages) {
     if (page.staticOnly) {
@@ -1253,7 +1308,7 @@ async function main() {
   console.log(JSON.stringify({
     pages: pages.length,
     prerendered: sectionPages.length,
-    socialCards: pages.filter((page) => socialImagePath(page) !== defaultSocialImage).length + 1,
+    socialImages: new Set(pages.map((page) => socialImagePath(page))).size,
     source: path.relative(projectRoot, sourcePath),
     outputs: pages.map((page) => path.relative(projectRoot, outputPathFor(page)).replaceAll('\\', '/')),
   }, null, 2));

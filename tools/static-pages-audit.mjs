@@ -99,10 +99,10 @@ async function auditPage(page) {
   if (description.length < 70 || description.length > 180) issues.push(`bad-description-length:${description.length}`);
   if (canonical !== page.canonical) issues.push(`canonical-mismatch:${canonical}`);
   if (ogUrl !== page.canonical) issues.push(`og-url-mismatch:${ogUrl}`);
-  if (!ogImage.startsWith(`${baseUrl}/assets/social/`)) issues.push(`bad-og-image:${ogImage}`);
-  if (ogImageType !== 'image/png') issues.push(`bad-og-image-type:${ogImageType}`);
-  if (ogImageWidth !== '1200') issues.push(`bad-og-image-width:${ogImageWidth}`);
-  if (ogImageHeight !== '630') issues.push(`bad-og-image-height:${ogImageHeight}`);
+  if (!ogImage.startsWith(`${baseUrl}/assets/images/`)) issues.push(`bad-og-image:${ogImage}`);
+  if (!['image/png', 'image/jpeg'].includes(ogImageType)) issues.push(`bad-og-image-type:${ogImageType}`);
+  if (!Number.isInteger(Number(ogImageWidth)) || Number(ogImageWidth) <= 0) issues.push(`bad-og-image-width:${ogImageWidth}`);
+  if (!Number.isInteger(Number(ogImageHeight)) || Number(ogImageHeight) <= 0) issues.push(`bad-og-image-height:${ogImageHeight}`);
   if (ogImageAlt.length < 20) issues.push('missing-og-image-alt');
   if (twitterCard !== 'summary_large_image') issues.push(`bad-twitter-card:${twitterCard}`);
   if (!twitterTitle) issues.push('missing-twitter-title');

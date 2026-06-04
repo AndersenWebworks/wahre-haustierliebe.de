@@ -59,10 +59,9 @@ Er erzeugt oder aktualisiert:
 - `ai/site.json`
 - `ai/pages.json`
 - `ai/faq.json`
-- `assets/social/*.png`
 - `assets/icons/*.png`
 
-Der Build rendert die Seiten zusätzlich mit Playwright vor. Dadurch stehen Hero, Kicker, Verdichtungsmodule, Tabellenlabels und andere JS-verstärkte Bereiche direkt im HTML und sind nicht nur nach clientseitiger Hydration sichtbar.
+Der Build rendert die Seiten zusätzlich mit Playwright vor. Dadurch stehen Hero, Kicker, Verdichtungsmodule, Tabellenlabels und andere JS-verstärkte Bereiche direkt im HTML und sind nicht nur nach clientseitiger Hydration sichtbar. Social-Preview-Bilder kommen aus den echten Website-Bildern: Startseite und Fallbacks nutzen das offizielle Logo, Unterseiten ihr erstes Inhaltsbild.
 
 ## GitHub Pages
 
