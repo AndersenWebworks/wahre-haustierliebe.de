@@ -70,8 +70,8 @@
       "id": "kontakt",
       "url": "https://wahre-haustierliebe.de/kontakt/index.html",
       "title": "Kontakt - Wa(h)re Haustier(liebe)",
-      "description": "Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktformular für Fragen, Anregungen oder Unterstützungsbedarf.",
-      "intent": "Kontaktformular und Informationen zum privaten Projekt Wa(h)re Haustierliebe",
+      "description": "Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktmöglichkeiten für Fragen, Anregungen oder Unterstützungsbedarf.",
+      "intent": "Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe",
       "keywords": [
         "Kontakt",
         "Haltungsfragen",

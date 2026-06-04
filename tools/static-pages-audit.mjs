@@ -11,6 +11,7 @@ const pages = [
   { id: 'startseite', file: 'index.html', canonical: `${baseUrl}/` },
   { id: 'impressum', file: 'impressum/index.html', canonical: `${baseUrl}/impressum/index.html` },
   { id: 'datenschutz', file: 'datenschutz/index.html', canonical: `${baseUrl}/datenschutz/index.html` },
+  { id: 'kontakt', file: 'kontakt/index.html', canonical: `${baseUrl}/kontakt/index.html` },
   { id: 'mensch', file: 'mensch/index.html', canonical: `${baseUrl}/mensch/index.html` },
   { id: 'hunde', file: 'hunde/index.html', canonical: `${baseUrl}/hunde/index.html` },
   { id: 'katzen', file: 'katzen/index.html', canonical: `${baseUrl}/katzen/index.html` },
