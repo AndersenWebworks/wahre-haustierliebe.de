@@ -56,7 +56,7 @@ function normalizeAssetUrls(root) {
       'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als klares Bild für Adoption statt Kauf', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
       'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
       'notfall': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
-      'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leben müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
+      'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leiden müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
       'noch-nicht-bereit': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang', position: 'center 46%', caption: 'Warten kann die tierliebste Entscheidung sein.', purpose: 'Noch-nicht-bereit-Seite: verantwortliches Warten statt Scheitern zeigen', shareReason: 'Das Bild soll Tierverzicht als Fürsorge normalisieren.' }
     };
 
@@ -553,7 +553,11 @@ function normalizeAssetUrls(root) {
         adoption: ['Seriös prüfen', 'Nicht billig kaufen', 'Zweite Chance'],
         selbsttest: ['15 Fragen', 'Ehrlich antworten', 'Vor dem Tier'],
         notfall: ['Anrufen', 'Sichern', 'Hinfahren'],
-        wissen: ['Mythen', 'Globuli', 'Glossar'],
+        wissen: [
+          { text: 'Mythen', href: '#mythen' },
+          { text: 'Globuli', href: '#globuli' },
+          { text: 'Glossar', href: '#glossar' }
+        ],
         'noch-nicht-bereit': ['Warten erlaubt', 'Anders helfen', 'Später planen']
       };
 
@@ -565,9 +569,17 @@ function normalizeAssetUrls(root) {
         var kicker = document.createElement('div');
         kicker.className = 'article-kicker';
         labels[pageId].forEach(function(label) {
-          var span = document.createElement('span');
-          span.textContent = label;
-          kicker.appendChild(span);
+          if (typeof label === 'string') {
+            var span = document.createElement('span');
+            span.textContent = label;
+            kicker.appendChild(span);
+            return;
+          }
+
+          var link = document.createElement('a');
+          link.href = label.href;
+          link.textContent = label.text;
+          kicker.appendChild(link);
         });
         copy.appendChild(kicker);
       });
@@ -703,13 +715,20 @@ function normalizeAssetUrls(root) {
 
     // ===== ROUTING =====
     function navigateTo(page) {
+      var target = document.getElementById(page);
+      if (target && !target.classList.contains('page')) {
+        scrollElementIntoView(target, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+        closeMobileNav();
+        closeDropdowns();
+        return;
+      }
+
       if (document.body && document.body.dataset.staticSite === 'true') {
         window.location.href = staticRouteFor(page);
         return;
       }
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
       document.querySelectorAll('.nav-link[data-page]').forEach(function(l) { l.classList.remove('active'); });
-      var target = document.getElementById(page);
       if (target) {
         target.classList.add('active');
         var link = document.querySelector('.nav-link[data-page="' + page + '"]');

@@ -255,14 +255,71 @@
 
         <div class="info-box">
           <h2>Kontakt</h2>
-          <p>Bei Fragen, Anregungen oder Unterstützungsbedarf kannst du dich hier melden, sobald das Kontaktformular fertig ist.</p>
+          <p>Bei Fragen, Anregungen oder Unterstützungsbedarf kannst du dich über das Kontaktformular melden.</p>
           <p>Bitte beschreibe kurz, um welches Tier es geht, wo du ungefähr wohnst und wobei du Hilfe brauchst.</p>
         </div>
 
-        <div class="contact-form-card contact-form-card--pending">
-          <h2>Kontaktformular kommt noch</h2>
-          <p>Das Formular wird noch ergänzt. Bis dahin findest du uns auch auf Instagram:</p>
-          <p><a class="btn btn-primary" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">Auf Instagram folgen</a></p>
+        <div class="contact-form-card">
+          <form class="contact-form" data-contact-form="kontakt" data-contact-email="mail@andersen-webworks.de">
+            <input type="hidden" name="form" value="wahre-haustierliebe-kontakt">
+            <input type="hidden" name="subject" value="Kontaktanfrage Wa(h)re Haustier(liebe)">
+            <div class="contact-honeypot" aria-hidden="true">
+              <label>Bitte lasse dieses Feld leer.
+                <input type="text" name="website" tabindex="-1" autocomplete="off">
+              </label>
+            </div>
+
+            <fieldset>
+              <legend>Deine Kontaktdaten</legend>
+              <label>Dein Name *
+                <input type="text" name="name" autocomplete="name" placeholder="Wie dürfen wir dich nennen?" required>
+              </label>
+              <label>Deine E-Mail-Adresse *
+                <input type="email" name="email" autocomplete="email" placeholder="Für unsere Antwort" required>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Worum geht es?</legend>
+              <p class="form-hint">Damit wir dich schneller verstehen und besser helfen können.</p>
+              <div class="contact-choice-group">
+                <label class="contact-choice"><input type="radio" name="kontaktgrund" value="Ich habe Fragen BEVOR ich mir ein Tier anschaffe" checked><span>Ich habe Fragen, bevor ich mir ein Tier anschaffe</span></label>
+                <label class="contact-choice"><input type="radio" name="kontaktgrund" value="Ich brauche Hilfe mit meinem Tier"><span>Ich brauche Hilfe mit meinem Tier</span></label>
+                <label class="contact-choice"><input type="radio" name="kontaktgrund" value="Ich suche ein Tier zur Adoption oder möchte eins vermitteln"><span>Ich suche ein Tier zur Adoption oder möchte eins vermitteln</span></label>
+                <label class="contact-choice"><input type="radio" name="kontaktgrund" value="Ich habe Feedback oder Korrekturen zur Website"><span>Ich habe Feedback oder Korrekturen zur Website</span></label>
+                <label class="contact-choice"><input type="radio" name="kontaktgrund" value="Ich möchte das Projekt unterstützen oder zusammenarbeiten"><span>Ich möchte das Projekt unterstützen oder zusammenarbeiten</span></label>
+                <label class="contact-choice"><input type="radio" name="kontaktgrund" value="Etwas anderes"><span>Etwas anderes</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Details</legend>
+              <p class="form-hint">Um welches Tier geht es? Optional.</p>
+              <div class="contact-choice-group">
+                <label class="contact-choice"><input type="checkbox" name="tierart[]" value="Hund"><span>Hund</span></label>
+                <label class="contact-choice"><input type="checkbox" name="tierart[]" value="Katze"><span>Katze</span></label>
+                <label class="contact-choice"><input type="checkbox" name="tierart[]" value="Kaninchen/Nager"><span>Kaninchen/Nager</span></label>
+                <label class="contact-choice"><input type="checkbox" name="tierart[]" value="Vogel"><span>Vogel</span></label>
+                <label class="contact-choice"><input type="checkbox" name="tierart[]" value="Reptil/Exot"><span>Reptil/Exot</span></label>
+                <label class="contact-choice"><input type="checkbox" name="tierart[]" value="Anderes/Unentschieden"><span>Anderes/Unentschieden</span></label>
+              </div>
+            </fieldset>
+
+            <label>Deine Nachricht *
+              <textarea name="message" maxlength="1000" placeholder="Beschreibe kurz, wobei wir dir helfen können." required></textarea>
+            </label>
+
+            <label class="contact-choice">
+              <input type="checkbox" name="datenschutz" value="1" required>
+              <span>Ich habe die <a href="../datenschutz/index.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span>
+            </label>
+
+            <div class="contact-form-actions">
+              <button class="btn btn-primary" type="submit" data-contact-submit>Mail-Entwurf öffnen</button>
+              <p class="contact-form-note">Wir öffnen dein E-Mail-Programm mit einem vorbereiteten Entwurf. Du kannst ihn prüfen und selbst absenden.</p>
+            </div>
+            <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div></div>
     </section>

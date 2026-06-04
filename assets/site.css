@@ -3205,6 +3205,7 @@
     }
 
     .article-kicker span,
+    .article-kicker a,
     .risk-chip,
     .myth-status,
     .test-progress-label {
@@ -3219,6 +3220,14 @@
       line-height: 1.2;
       text-transform: uppercase;
       letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .article-kicker a:hover,
+    .article-kicker a:focus-visible {
+      background: rgba(31, 58, 47, 0.14);
+      color: var(--primary-dark);
+      text-decoration: none;
     }
 
     .section-note {
