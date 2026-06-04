@@ -314,6 +314,63 @@
       margin: 1.5rem 0;
     }
     .highlight-box h3 { margin-top: 0; color: #B8862D; }
+    .source-list {
+      margin: 1.5rem 0 0;
+      padding: 1rem 1.25rem 1rem 2.2rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .source-list li { margin-bottom: 0.45rem; }
+    .notdienst-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .notdienst-card {
+      min-width: 0;
+      padding: 1.15rem;
+      background: rgba(255, 254, 250, 0.94);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .notdienst-card h3 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+    .notdienst-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .notdienst-links {
+      display: grid;
+      gap: 0.45rem;
+      margin-top: 0.9rem;
+    }
+    .notdienst-link {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 2.35rem;
+      padding: 0.38rem 0.7rem;
+      border: 1px solid rgba(42, 123, 111, 0.22);
+      border-radius: var(--radius);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .notdienst-link:hover {
+      border-color: var(--primary);
+      background: var(--white);
+      text-decoration: none;
+    }
 
     /* ========== CHECKLIST ========== */
     .checklist { list-style: none; padding: 0; }
@@ -5035,7 +5092,7 @@
           <h2>Ruhig bleiben. Anrufen. Hinfahren.</h2>
           <p>Bei Atemnot, Krampf, Vergiftungsverdacht, Harnstopp, Zusammenbruch oder starker Blutung ist das kein Recherche-Moment. Tierarzt oder Tierklinik anrufen, Transport vorbereiten, Verpackung oder Giftquelle mitnehmen.</p>
           <div class="emergency-actions">
-            <a class="btn" href="https://www.bundestieraerztekammer.de/tieraerzte/notdienst/" target="_blank" rel="noopener noreferrer">Notdienst suchen</a>
+            <a class="btn" href="#tierarzt-notdienst">Tierärztlichen Notdienst finden</a>
             <button class="btn" onclick="shareThis('copy')">Seite speichern</button>
           </div>
           <div class="risk-strip">
@@ -5130,7 +5187,7 @@
         </div>
 
         <h2>Tierärztlichen Notdienst finden</h2>
-        <p>Außerhalb der Sprechzeiten: Den nächsten tierärztlichen Notdienst findest du über die <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Tierärztekammer</a> deines Bundeslandes oder über die Notrufnummer deiner Tierklinik. Viele Regionen haben rotierende Notdienste – informiere dich <em>vorher</em>, nicht erst im Notfall.</p>
+        <p>Außerhalb der Sprechzeiten: Es gibt keine zentrale bundesweite Suche. Die Notdienste sind je nach Bundesland und Region unterschiedlich organisiert. Nutze die <a href="#tierarzt-notdienst">Bundesländer-Übersicht zum tierärztlichen Notdienst</a> und rufe immer an, bevor du losfährst.</p>
         <p><strong>Tipp:</strong> Speichere die Nummer deines Tierarztes und der nächsten Tierklinik mit Notdienst jetzt in deinem Handy. Im Notfall ist keine Zeit zum Suchen.</p>
 
         <div class="highlight-box">

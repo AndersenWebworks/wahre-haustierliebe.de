@@ -95,6 +95,13 @@
       "intent": "Tiermedizinische Warnsignale und Notfallentscheidung"
     },
     {
+      "id": "tierarzt-notdienst",
+      "url": "https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html",
+      "title": "Tierärztlichen Notdienst finden: Bundesländer-Übersicht",
+      "description": "Offizielle Kammern, Notrufnummern und regionale Notdienst-Systeme nach Bundesland: tierärztlichen Notdienst finden und vor der Fahrt telefonisch prüfen.",
+      "intent": "Tierärztlichen Notdienst nach Bundesland finden"
+    },
+    {
       "id": "wissen",
       "url": "https://wahre-haustierliebe.de/wissen/index.html",
       "title": "Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?",

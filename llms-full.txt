@@ -26,6 +26,7 @@
 - Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
+- Tierärztlichen Notdienst finden: Bundesländer-Übersicht: https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html
 - Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
 - Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
 - Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
@@ -50,6 +51,7 @@
 - https://wahre-haustierliebe.de/adoption/index.html - Tier aus dem Tierheim adoptieren statt kaufen
 - https://wahre-haustierliebe.de/selbsttest/index.html - Selbsttest vor Haustieranschaffung
 - https://wahre-haustierliebe.de/notfall/index.html - Tiermedizinische Warnsignale und Notfallentscheidung
+- https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html - Tierärztlichen Notdienst nach Bundesland finden
 - https://wahre-haustierliebe.de/wissen/index.html - Tierhaltungsmythen und Fachbegriffe prüfen
 - https://wahre-haustierliebe.de/hitzefalle-auto/index.html - Sommerhitze und Hund im Auto einschätzen
 - https://wahre-haustierliebe.de/ernaehrung-taurin/index.html - Tierernährung, vegane Ernährung und Taurin verstehen

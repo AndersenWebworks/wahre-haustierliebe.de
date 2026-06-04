@@ -119,6 +119,15 @@ const pages = [
     priority: '0.9',
   },
   {
+    id: 'tierarzt-notdienst',
+    slug: 'notfall/tierarzt-notdienst',
+    title: 'Tierärztlichen Notdienst finden: Bundesländer-Übersicht',
+    description: 'Offizielle Kammern, Notrufnummern und regionale Notdienst-Systeme nach Bundesland: tierärztlichen Notdienst finden und vor der Fahrt telefonisch prüfen.',
+    intent: 'Tierärztlichen Notdienst nach Bundesland finden',
+    priority: '0.85',
+    staticOnly: true,
+  },
+  {
     id: 'wissen',
     slug: 'wissen',
     title: 'Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?',
@@ -230,6 +239,7 @@ const ogImageByPage = {
   adoption: 'assets/images/tierheim-hund.jpg',
   selbsttest: 'assets/images/cats-cat-tree-pair.jpg',
   notfall: 'assets/images/vet-office-with-dog.jpg',
+  'tierarzt-notdienst': 'assets/images/vet-office-with-dog.jpg',
   wissen: 'assets/images/goldfish-aquarium.jpg',
   'hitzefalle-auto': 'assets/images/vet-office-with-dog.jpg',
   'ernaehrung-taurin': 'assets/images/two-cats-window.jpg',
@@ -255,15 +265,20 @@ function outputPathFor(page) {
   return page.slug ? path.join(projectRoot, page.slug, 'index.html') : path.join(projectRoot, 'index.html');
 }
 
+function prefixForSlug(slug) {
+  return slug ? '../'.repeat(slug.split('/').length) : '';
+}
+
 function assetPrefixFor(page) {
-  return page.slug ? '../' : '';
+  return prefixForSlug(page.slug);
 }
 
 function hrefFor(targetId, currentPage) {
   const target = pageById.get(targetId);
   if (!target) return '#';
-  if (!target.slug) return currentPage.slug ? '../index.html' : 'index.html';
-  return currentPage.slug ? `../${target.slug}/index.html` : `${target.slug}/index.html`;
+  const prefix = prefixForSlug(currentPage.slug);
+  if (!target.slug) return `${prefix}index.html`;
+  return `${prefix}${target.slug}/index.html`;
 }
 
 function escapeHtml(value) {
@@ -525,7 +540,7 @@ function buildHead(page, prefix) {
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
   const prefix = assetPrefixFor(page);
-  const routePrefix = page.slug ? '../' : '';
+  const routePrefix = prefixForSlug(page.slug);
   let body = `${header}\n\n  <main id="main-content" tabindex="-1">\n${section}\n  </main>\n\n${commonAfterSections}`;
   body = transformLinks(body, page);
   body = prefixAssets(body, prefix);
@@ -653,7 +668,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'katzen', 'notfall', 'kastration', 'adoption', 'selbsttest', 'wissen'];
+  const important = ['hunde', 'katzen', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',
