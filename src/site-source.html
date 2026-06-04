@@ -2010,9 +2010,11 @@
     }
 
     .contact-form .contact-choice {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.65rem;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      column-gap: 0.65rem;
+      row-gap: 0;
       min-height: 2.75rem;
       padding: 0.7rem 0.8rem;
       border: 1px solid rgba(31, 58, 47, 0.14);
@@ -2024,10 +2026,9 @@
     }
 
     .contact-form .contact-choice input {
-      flex: 0 0 auto;
       width: 1.1rem;
       height: 1.1rem;
-      margin-top: 0.2rem;
+      margin: 0;
       accent-color: var(--primary);
     }
 
