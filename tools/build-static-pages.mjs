@@ -567,6 +567,36 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
   return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${body}\n  <script src="${prefix}assets/site.js"></script>\n</body>\n</html>\n`;
 }
 
+function ensureStaticSectionIdentity(section, page) {
+  const sectionStart = section.indexOf('<section ');
+  if (sectionStart === -1) return section;
+
+  const openEnd = section.indexOf('>', sectionStart);
+  if (openEnd === -1) return section;
+
+  let openTag = section.slice(sectionStart, openEnd + 1);
+  if (!openTag.includes(' id=')) {
+    openTag = openTag.replace('<section ', `<section id="${page.id}" `);
+  }
+  if (openTag.includes('class="page"')) {
+    openTag = openTag.replace('class="page"', 'class="page active"');
+  }
+
+  return `${section.slice(0, sectionStart)}${openTag}${section.slice(openEnd + 1)}`;
+}
+
+async function extractStaticOnlySection(page) {
+  const html = (await fs.readFile(outputPathFor(page), 'utf8')).replace(/\r\n/g, '\n');
+  const mainStart = html.indexOf('<main id="main-content" tabindex="-1">');
+  if (mainStart === -1) throw new Error(`Missing main content for static page: ${page.id}`);
+
+  const contentStart = mainStart + '<main id="main-content" tabindex="-1">'.length;
+  const mainEnd = html.indexOf('</main>', contentStart);
+  if (mainEnd === -1) throw new Error(`Missing main close for static page: ${page.id}`);
+
+  return ensureStaticSectionIdentity(html.slice(contentStart, mainEnd).trim(), page);
+}
+
 async function buildBudgiePage(page) {
   const source = await fs.readFile(path.join(projectRoot, 'src', 'budgie-source.html'), 'utf8');
   const prefix = assetPrefixFor(page);
@@ -786,7 +816,12 @@ async function main() {
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
 
   for (const page of pages) {
-    if (page.staticOnly) continue;
+    if (page.staticOnly) {
+      const section = await extractStaticOnlySection(page);
+      const html = buildHtmlPage({ page, header, section, commonAfterSections });
+      await writeFileEnsured(outputPathFor(page), html);
+      continue;
+    }
     if (page.standalone === 'budgie') {
       await writeFileEnsured(outputPathFor(page), await buildBudgiePage(page));
       continue;
