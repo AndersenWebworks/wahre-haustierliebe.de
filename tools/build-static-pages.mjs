@@ -826,6 +826,7 @@ function rewriteScript(script) {
     `          if (toggle && hasActive) toggle.setAttribute('aria-current', 'page');\n` +
     `        });\n` +
     `        initAccessibilityState();\n` +
+    `        initContactForms();\n` +
     `        document.addEventListener('keydown', function(event) {\n` +
     `          if (event.key === 'Escape') {\n` +
     `            closeDropdowns();\n` +
@@ -834,6 +835,14 @@ function rewriteScript(script) {
     `        });\n` +
     `        return;\n` +
     `      }\n` +
+    `      initAccessibilityState();\n` +
+    `      initContactForms();\n` +
+    `      document.addEventListener('keydown', function(event) {\n` +
+    `        if (event.key === 'Escape') {\n` +
+    `          closeDropdowns();\n` +
+    `          closeMobileNav();\n` +
+    `        }\n` +
+    `      });\n` +
     `      var hash = location.hash.slice(1);\n` +
     `      navigateTo(hash || 'startseite');\n` +
     `    });`

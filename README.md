@@ -87,31 +87,9 @@ Der Pages-Workflow läuft automatisch bei jedem Push auf `main` und kann zusätz
 
 ## Kontaktformular
 
-Die Kontaktseite sendet per `POST /api/kontakt`. GitHub Pages kann diesen Endpoint nicht selbst ausführen, weil Pages nur statische Dateien ausliefert. Der Mailversand läuft deshalb über den separaten Node-Endpoint `server/contact-api.mjs`, der per Reverse Proxy oder Routing unter `/api/kontakt` erreichbar sein muss.
+Die Kontaktseite bleibt GitHub-Pages-tauglich und nutzt keinen serverseitigen Mailversand. Das Formular baut per JavaScript einen vorbereiteten `mailto:`-Entwurf an `mail@andersen-webworks.de`. Nutzer prüfen und senden die Mail anschließend in ihrem eigenen E-Mail-Programm.
 
-Der Endpoint nutzt SMTP-Zugangsdaten aus Environment-Variablen. Secrets werden nicht committed; `.env.example` enthält nur Platzhalter.
-
-Benötigte Variablen:
-
-```powershell
-CONTACT_API_PORT=8787
-CONTACT_ALLOWED_ORIGINS=https://wahre-haustierliebe.de
-CONTACT_TO=kontakt@wahre-haustierliebe.de
-CONTACT_SUBJECT_PREFIX=Wa(h)re Haustier(liebe)
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_STARTTLS=true
-SMTP_USER=kontakt@wahre-haustierliebe.de
-SMTP_PASS=...
-SMTP_FROM=Wa(h)re Haustier(liebe) <kontakt@wahre-haustierliebe.de>
-```
-
-Start lokal oder auf dem Host:
-
-```powershell
-node server/contact-api.mjs
-```
+Dadurch liegen keine SMTP-Zugangsdaten im Repository und es ist kein externer Formdienst nötig. Eine serverseitige Versandbestätigung gibt es bei diesem statischen Weg nicht.
 
 ## GEO/SEO/AVO
 

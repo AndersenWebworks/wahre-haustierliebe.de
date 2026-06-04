@@ -260,7 +260,7 @@
         </div>
 
         <div class="contact-form-card">
-          <form class="contact-form" action="/api/kontakt" method="post" data-contact-form="kontakt">
+          <form class="contact-form" action="mailto:mail@andersen-webworks.de" method="post" enctype="text/plain" data-contact-form="kontakt" data-contact-email="mail@andersen-webworks.de">
             <input type="hidden" name="form" value="wahre-haustierliebe-kontakt">
             <input type="hidden" name="subject" value="Kontaktanfrage Wa(h)re Haustier(liebe)">
             <div class="contact-honeypot" aria-hidden="true">
@@ -306,7 +306,7 @@
             </fieldset>
 
             <label>Deine Nachricht *
-              <textarea name="message" maxlength="2000" placeholder="Je ausführlicher du schreibst, desto besser können wir dir helfen." required></textarea>
+              <textarea name="message" maxlength="1000" placeholder="Beschreibe kurz, wobei wir dir helfen können." required></textarea>
             </label>
 
             <label class="contact-choice">
@@ -315,8 +315,8 @@
             </label>
 
             <div class="contact-form-actions">
-              <button class="btn btn-primary" type="submit" data-contact-submit>Nachricht senden</button>
-              <p class="contact-form-note">Wir senden deine Anfrage verschlüsselt an unseren Mail-Endpoint und antworten dir per E-Mail.</p>
+              <button class="btn btn-primary" type="submit" data-contact-submit>Mail-Entwurf öffnen</button>
+              <p class="contact-form-note">Wir öffnen dein E-Mail-Programm mit einem vorbereiteten Entwurf. Du kannst ihn prüfen und selbst absenden.</p>
             </div>
             <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
           </form>

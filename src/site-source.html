@@ -6447,47 +6447,62 @@
       return payload;
     }
 
+    function contactMailBody(payload) {
+      var tierart = Array.isArray(payload.tierart) && payload.tierart.length ? payload.tierart.join(', ') : '-';
+      return [
+        'Hallo,',
+        '',
+        'ich melde mich über Wa(h)re Haustier(liebe).',
+        '',
+        'Name: ' + (payload.name || '-'),
+        'E-Mail: ' + (payload.email || '-'),
+        'Kontaktgrund: ' + (payload.kontaktgrund || '-'),
+        'Tierart: ' + tierart,
+        'Seite: ' + (payload.pageUrl || '-'),
+        '',
+        'Nachricht:',
+        payload.message || '',
+        '',
+        'Viele Grüße',
+        payload.name || ''
+      ].join('\n');
+    }
+
+    function openContactMailDraft(form, payload) {
+      var to = form.dataset.contactEmail || 'mail@andersen-webworks.de';
+      var subject = payload.subject || 'Kontaktanfrage Wa(h)re Haustier(liebe)';
+      var href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(contactMailBody(payload));
+      window.location.href = href;
+    }
+
     function submitContactForm(form, submit, status) {
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      var endpoint = form.getAttribute('action') || '/api/kontakt';
+      var payload = contactFormPayload(form);
+      if (payload.website) {
+        setContactFormStatus(status, 'Danke. Deine Nachricht wurde vorbereitet.', 'success');
+        return;
+      }
+
       var previousLabel = submit.textContent;
       submit.disabled = true;
-      submit.textContent = 'Wird gesendet ...';
-      setContactFormStatus(status, 'Wir senden deine Nachricht gerade.', '');
+      submit.textContent = 'Mail-Entwurf wird geöffnet ...';
+      setContactFormStatus(status, 'Wir öffnen dein E-Mail-Programm mit einem vorbereiteten Entwurf.', '');
 
-      fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(contactFormPayload(form))
-      })
-        .then(function(response) {
-          return response.json().catch(function() {
-            return {};
-          }).then(function(data) {
-            if (!response.ok || data.ok !== true) {
-              throw new Error(data.message || 'Die Nachricht konnte nicht gesendet werden.');
-            }
-            return data;
-          });
-        })
-        .then(function() {
-          form.reset();
-          setContactFormStatus(status, 'Danke. Deine Nachricht wurde gesendet.', 'success');
-        })
-        .catch(function() {
-          setContactFormStatus(status, 'Das hat noch nicht geklappt. Bitte versuche es gleich noch einmal oder schreibe uns direkt per E-Mail.', 'error');
-        })
-        .finally(function() {
+      try {
+        openContactMailDraft(form, payload);
+        setContactFormStatus(status, 'Dein Mail-Entwurf wurde geöffnet. Bitte prüfe ihn kurz und sende ihn in deinem E-Mail-Programm ab.', 'success');
+      } catch (error) {
+        setContactFormStatus(status, 'Der Mail-Entwurf konnte nicht automatisch geöffnet werden. Schreibe uns bitte direkt an mail@andersen-webworks.de.', 'error');
+      } finally {
+        window.setTimeout(function() {
           submit.disabled = false;
           submit.textContent = previousLabel;
-        });
+        }, 600);
+      }
     }
 
     function prefersReducedMotion() {
