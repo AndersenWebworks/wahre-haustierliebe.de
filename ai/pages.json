@@ -11,6 +11,20 @@
       "intent": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung"
     },
     {
+      "id": "impressum",
+      "url": "https://wahre-haustierliebe.de/impressum/index.html",
+      "title": "Impressum",
+      "description": "Impressum und Anbieterkennzeichnung für Wa(h)re Haustier(liebe), das private Informationsprojekt von Jan-Erik Andersen und Annemarie Andersen.",
+      "intent": "Anbieterkennzeichnung und rechtliche Kontaktangaben"
+    },
+    {
+      "id": "datenschutz",
+      "url": "https://wahre-haustierliebe.de/datenschutz/index.html",
+      "title": "Datenschutzerklärung",
+      "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.",
+      "intent": "Datenschutzinformationen nach DSGVO für die Website"
+    },
+    {
       "id": "mensch",
       "url": "https://wahre-haustierliebe.de/mensch/index.html",
       "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",
@@ -132,7 +146,7 @@
     {
       "id": "zucht-und-vermehrung",
       "url": "https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html",
-      "title": "Zucht und Vermehrung: Warum auch gute Zucht nicht das Ideal ist",
+      "title": "Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist",
       "description": "Unterschied zwischen Züchter und Vermehrer, warum zusätzliche Haustierproduktion problematisch bleibt und warum Adoption die konsequentere Entscheidung ist.",
       "intent": "Zucht, Vermehrung und Adoption einordnen"
     },
