@@ -4,10 +4,22 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Googlebot
 Allow: /
 
 Sitemap: https://wahre-haustierliebe.de/sitemap.xml

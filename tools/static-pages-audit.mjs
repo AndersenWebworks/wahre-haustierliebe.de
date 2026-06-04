@@ -23,6 +23,7 @@ const pages = [
   { id: 'adoption', file: 'adoption/index.html', canonical: `${baseUrl}/adoption/index.html` },
   { id: 'selbsttest', file: 'selbsttest/index.html', canonical: `${baseUrl}/selbsttest/index.html` },
   { id: 'notfall', file: 'notfall/index.html', canonical: `${baseUrl}/notfall/index.html` },
+  { id: 'tierarzt-notdienst', file: 'notfall/tierarzt-notdienst/index.html', canonical: `${baseUrl}/notfall/tierarzt-notdienst/index.html` },
   { id: 'wissen', file: 'wissen/index.html', canonical: `${baseUrl}/wissen/index.html` },
   { id: 'hitzefalle-auto', file: 'hitzefalle-auto/index.html', canonical: `${baseUrl}/hitzefalle-auto/index.html` },
   { id: 'ernaehrung-taurin', file: 'ernaehrung-taurin/index.html', canonical: `${baseUrl}/ernaehrung-taurin/index.html` },
@@ -80,6 +81,16 @@ async function auditPage(page) {
   const description = firstGroup(html, /<meta name="description" content="([^"]+)"/i).trim();
   const canonical = firstGroup(html, /<link rel="canonical" href="([^"]+)"/i).trim();
   const ogUrl = firstGroup(html, /<meta property="og:url" content="([^"]+)"/i).trim();
+  const ogImage = firstGroup(html, /<meta property="og:image" content="([^"]+)"/i).trim();
+  const ogImageType = firstGroup(html, /<meta property="og:image:type" content="([^"]+)"/i).trim();
+  const ogImageWidth = firstGroup(html, /<meta property="og:image:width" content="([^"]+)"/i).trim();
+  const ogImageHeight = firstGroup(html, /<meta property="og:image:height" content="([^"]+)"/i).trim();
+  const ogImageAlt = firstGroup(html, /<meta property="og:image:alt" content="([^"]+)"/i).trim();
+  const twitterCard = firstGroup(html, /<meta name="twitter:card" content="([^"]+)"/i).trim();
+  const twitterTitle = firstGroup(html, /<meta name="twitter:title" content="([^"]+)"/i).trim();
+  const twitterDescription = firstGroup(html, /<meta name="twitter:description" content="([^"]+)"/i).trim();
+  const twitterImage = firstGroup(html, /<meta name="twitter:image" content="([^"]+)"/i).trim();
+  const twitterImageAlt = firstGroup(html, /<meta name="twitter:image:alt" content="([^"]+)"/i).trim();
   const h1Count = matchesAll(html, /<h1\b/gi).length;
   const mainCount = matchesAll(html, /<main\b/gi).length;
   const jsonLdBlocks = matchesAll(html, /<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/gi);
@@ -88,6 +99,16 @@ async function auditPage(page) {
   if (description.length < 70 || description.length > 180) issues.push(`bad-description-length:${description.length}`);
   if (canonical !== page.canonical) issues.push(`canonical-mismatch:${canonical}`);
   if (ogUrl !== page.canonical) issues.push(`og-url-mismatch:${ogUrl}`);
+  if (!ogImage.startsWith(`${baseUrl}/assets/social/`)) issues.push(`bad-og-image:${ogImage}`);
+  if (ogImageType !== 'image/png') issues.push(`bad-og-image-type:${ogImageType}`);
+  if (ogImageWidth !== '1200') issues.push(`bad-og-image-width:${ogImageWidth}`);
+  if (ogImageHeight !== '630') issues.push(`bad-og-image-height:${ogImageHeight}`);
+  if (ogImageAlt.length < 20) issues.push('missing-og-image-alt');
+  if (twitterCard !== 'summary_large_image') issues.push(`bad-twitter-card:${twitterCard}`);
+  if (!twitterTitle) issues.push('missing-twitter-title');
+  if (!twitterDescription) issues.push('missing-twitter-description');
+  if (twitterImage !== ogImage) issues.push(`twitter-image-mismatch:${twitterImage}`);
+  if (twitterImageAlt !== ogImageAlt) issues.push('twitter-alt-mismatch');
   if (h1Count !== 1) issues.push(`h1-count:${h1Count}`);
   if (mainCount !== 1) issues.push(`main-count:${mainCount}`);
   if (!html.includes(`data-static-site="true"`)) issues.push('missing-static-site-marker');
@@ -136,7 +157,7 @@ async function auditPage(page) {
 
   const assetRefs = [
     ...matchesAll(html, /src="([^"]+)"/gi).map((match) => match[1]),
-    ...matchesAll(html, /href="([^"]+\.(?:css|js))"/gi).map((match) => match[1]),
+    ...matchesAll(html, /href="([^"]+\.(?:css|js|png|webmanifest))"/gi).map((match) => match[1]),
   ].filter((ref) => !/^(https?:|mailto:|tel:|#)/i.test(ref));
 
   for (const ref of assetRefs) {
@@ -173,7 +194,7 @@ async function main() {
   const robots = await fs.readFile(path.join(projectRoot, 'robots.txt'), 'utf8');
   const robotsIssues = [];
   if (!robots.includes(`Sitemap: ${baseUrl}/sitemap.xml`)) robotsIssues.push('robots-missing-sitemap');
-  for (const bot of ['OAI-SearchBot', 'PerplexityBot', 'Claude-SearchBot']) {
+  for (const bot of ['OAI-SearchBot', 'ChatGPT-User', 'GPTBot', 'PerplexityBot', 'ClaudeBot', 'Claude-SearchBot', 'Googlebot']) {
     if (!robots.includes(`User-agent: ${bot}`)) robotsIssues.push(`robots-missing:${bot}`);
   }
 

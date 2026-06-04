@@ -25,7 +25,7 @@ const pages = [
   {
     id: 'impressum',
     slug: 'impressum',
-    title: 'Impressum',
+    title: 'Impressum - Wa(h)re Haustier(liebe)',
     description: 'Impressum und Anbieterkennzeichnung für Wa(h)re Haustier(liebe), das private Informationsprojekt von Jan-Erik Andersen und Annemarie Andersen.',
     intent: 'Anbieterkennzeichnung und rechtliche Kontaktangaben',
     priority: '0.35',
@@ -243,8 +243,14 @@ const faqByPage = {
   ],
 };
 
-const ogImageByPage = {
-  startseite: 'assets/images/tierheim-hund.jpg',
+const socialCardWidth = 1200;
+const socialCardHeight = 630;
+const defaultSocialImage = 'assets/social/wahre-haustierliebe-default.png';
+const brandLogo = 'assets/images/wahre-haustierliebe-logo.png';
+const brandMark = 'assets/images/wahre-haustierliebe-mark.png';
+const defaultSocialDescription = 'Ehrliche Aufklärung über Haustierhaltung, Tierwohl, Adoption, Qualzucht und Notfälle - privat, werbefrei und verständlich.';
+
+const socialBackgroundByPage = {
   mensch: 'assets/images/tierheim-hund.jpg',
   hunde: 'assets/images/golden-retriever-agility-jump.jpg',
   katzen: 'assets/images/two-cats-window.jpg',
@@ -265,6 +271,146 @@ const ogImageByPage = {
   'zucht-und-vermehrung': 'assets/images/animal-shelter-fundraiser.jpg',
   wildtierhaltung: 'assets/images/exot-bartagame.jpg',
   'noch-nicht-bereit': 'assets/images/cat-soft-carrier.jpg',
+  'budgie-brain': 'assets/images/vogel-wellensittich.jpg',
+};
+
+const socialCopyByPage = {
+  startseite: {
+    eyebrow: 'Verantwortungsvolle Haustierhaltung',
+    title: 'Wa(h)re Haustier(liebe)',
+    description: 'Ehrliche Aufklärung, bevor ein Tier einzieht: Alltag, Kosten, Tierwohl, Notfall, Adoption und Qualzucht verständlich erklärt.',
+    alt: 'Logo von Wa(h)re Haustier(liebe) auf einer Social-Card zur verantwortungsvollen Haustierhaltung.',
+  },
+  mensch: {
+    eyebrow: 'Vor dem Haustierkauf',
+    title: 'Passt ein Tier wirklich in dein Leben?',
+    description: 'Der ehrliche Realitätscheck für Zeit, Geld, Wohnung, Alltag und Verantwortung, bevor ein Haustier einzieht.',
+  },
+  hunde: {
+    eyebrow: 'Hundehaltung realistisch prüfen',
+    title: 'Hund halten: Zeit, Kosten, Alltag',
+    description: 'Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.',
+  },
+  katzen: {
+    eyebrow: 'Katzenhaltung ohne Wunschbild',
+    title: 'Katzen halten: Wohnung, Freigang, Kastration',
+    description: 'Wie Katzen artgerechter leben: Struktur, Sozialkontakt, sichere Freiräume, Kastration und leise Warnsignale.',
+  },
+  voegel: {
+    eyebrow: 'Vogelhaltung verstehen',
+    title: 'Vögel brauchen Schwarm, Flugraum und Licht',
+    description: 'Warum Einzelhaltung im Käfig nicht reicht und was Wellensittiche und andere Vögel im Alltag wirklich brauchen.',
+  },
+  kleintiere: {
+    eyebrow: 'Kleintiere sind keine Einstiegstiere',
+    title: 'Kaninchen, Meerschweinchen, Hamster und Ratten',
+    description: 'Fläche, Gruppenhaltung, Zähne, Tierarztkosten und typische Fehler bei Kleintieren klar erklärt.',
+  },
+  exoten: {
+    eyebrow: 'Exotenhaltung ehrlich einordnen',
+    title: 'Terrarium, Technik, UV-B und Verantwortung',
+    description: 'Warum Faszination nicht reicht und exotische Tiere spezialisierte Haltung, Wissen und Tierarztzugang brauchen.',
+  },
+  pferde: {
+    eyebrow: 'Pferdehaltung langfristig denken',
+    title: 'Pferde brauchen Herde, Bewegung und Budget',
+    description: 'Stallform, tägliche Bewegung, Hufschmied, Tierarzt und jahrzehntelange Verantwortung realistisch prüfen.',
+  },
+  kastration: {
+    eyebrow: 'Praktischer Tierschutz',
+    title: 'Kastration verhindert Leid',
+    description: 'Fakten zu Katzen, Hunden, Kaninchen, Kosten, Kastrationspflicht und typischen Mythen rund um Kastration.',
+  },
+  qualzucht: {
+    eyebrow: 'Zuchtmerkmale kritisch sehen',
+    title: 'Qualzucht erkennen, bevor Nachfrage Leid finanziert',
+    description: 'Atemnot, Schmerzen, Gendefekte und extreme Körperformen bei Hunden, Katzen, Kaninchen, Vögeln und Exoten.',
+  },
+  adoption: {
+    eyebrow: 'Tierschutz statt Nachfrage',
+    title: 'Adoption statt Kauf',
+    description: 'Warum Tierheim, Pflegestelle, Schutzgebühr und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.',
+  },
+  selbsttest: {
+    eyebrow: 'Bereit für ein Haustier?',
+    title: 'Der Haustier-Selbsttest',
+    description: '15 ehrliche Fragen zu Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.',
+  },
+  notfall: {
+    eyebrow: 'Tier-Notfall erkennen',
+    title: 'Wann du sofort handeln musst',
+    description: 'Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale klar einordnen.',
+  },
+  'tierarzt-notdienst': {
+    eyebrow: 'Notdienst finden',
+    title: 'Tierärztlicher Notdienst nach Bundesland',
+    description: 'Offizielle Kammern, Notrufnummern und regionale Systeme, damit du im Ernstfall schneller richtig suchst.',
+  },
+  wissen: {
+    eyebrow: 'Tiermythen prüfen',
+    title: 'Was stimmt wirklich?',
+    description: 'Mythen, Homöopathie, Fachbegriffe und Tierschutzwissen verständlich, kritisch und ohne Werbeinteresse.',
+  },
+  'hitzefalle-auto': {
+    eyebrow: 'Hund im Auto',
+    title: 'Zehn Minuten können lebensgefährlich sein',
+    description: 'Warum Autos sich schnell aufheizen, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.',
+  },
+  'ernaehrung-taurin': {
+    eyebrow: 'Tierernährung verständlich',
+    title: 'Katzen, Hunde, vegane Ernährung und Taurin',
+    description: 'Warum Katzen und Hunde ernährungsphysiologisch verschieden sind und Futter nicht einfach austauschbar ist.',
+  },
+  realhaltung: {
+    eyebrow: 'Normal ist nicht automatisch artgerecht',
+    title: 'Realhaltung vs. vertretbare Haltung',
+    description: 'Warum übliche Haustierhaltung oft nicht reicht und der Kaufpreis nie die echten Kosten eines Tieres zeigt.',
+  },
+  'zucht-und-vermehrung': {
+    eyebrow: 'Haustiermarkt kritisch sehen',
+    title: 'Zucht, Vermehrung und Adoption',
+    description: 'Warum zusätzliche Haustierproduktion problematisch bleibt, auch wenn sie sauberer wirkt als Vermehrung.',
+  },
+  wildtierhaltung: {
+    eyebrow: 'Wildtiere sind keine Haustiere',
+    title: 'Private Wildtierhaltung: legal heißt nicht vertretbar',
+    description: 'Bundesrecht, Landesrecht, Exoten, Gefahrtierhaltung und Wildschutz für Deutschland verständlich eingeordnet.',
+  },
+  'noch-nicht-bereit': {
+    eyebrow: 'Warten kann Tierliebe sein',
+    title: 'Noch nicht bereit für ein Tier',
+    description: 'Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie Tierschutz trotzdem geht.',
+  },
+  'budgie-brain': {
+    eyebrow: 'Interaktive Vogelhaltung',
+    title: 'Budgie Brain',
+    description: 'Eine spielbare Simulation, die Schwarm, UV-Licht, Freiflug, Stress und Wellensittich-Alltag erfahrbar macht.',
+  },
+};
+
+const keywordByPage = {
+  startseite: ['Haustierhaltung', 'Tierwohl', 'Tierschutz', 'Adoption', 'Qualzucht', 'Tiernotfall'],
+  mensch: ['Haustier anschaffen', 'Haustierkauf', 'Verantwortung', 'Kosten', 'Alltag'],
+  hunde: ['Hund halten', 'Hund anschaffen', 'Hundekosten', 'Alleinbleiben', 'Erziehung'],
+  katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
+  voegel: ['Vögel halten', 'Wellensittiche', 'Schwarmhaltung', 'Freiflug', 'UV-Licht'],
+  kleintiere: ['Kleintiere halten', 'Kaninchen', 'Meerschweinchen', 'Hamster', 'Ratten'],
+  exoten: ['Exoten halten', 'Terrarium', 'UV-B', 'Reptilien', 'Meldepflicht'],
+  pferde: ['Pferde halten', 'Herde', 'Stallform', 'Hufschmied', 'Pferdekosten'],
+  kastration: ['Kastration', 'Kastrationspflicht', 'Tierschutz', 'Katzen', 'Kaninchen'],
+  qualzucht: ['Qualzucht', 'Rassemerkmale', 'Atemnot', 'Gendefekte', 'Tierleid'],
+  adoption: ['Adoption', 'Tierheim', 'Tierschutz', 'Schutzgebühr', 'Pflegestelle'],
+  selbsttest: ['Haustier Selbsttest', 'bereit für ein Tier', 'Zeit', 'Geld', 'Betreuung'],
+  notfall: ['Tiernotfall', 'Vergiftung', 'Atemnot', 'Tierarzt', 'Warnsignale'],
+  'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
+  wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Glossar', 'Tierschutzwissen'],
+  'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],
+  'ernaehrung-taurin': ['Tierernährung', 'Taurin', 'Katzenfutter', 'Hundefutter', 'vegane Tierernährung'],
+  realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
+  'zucht-und-vermehrung': ['Zucht', 'Vermehrung', 'Züchter', 'Tierheim', 'Adoption'],
+  wildtierhaltung: ['Wildtierhaltung', 'Exoten', 'Gefahrtier', 'Wildschutz', 'Deutschland'],
+  'noch-nicht-bereit': ['noch nicht bereit', 'Tierschutz unterstützen', 'Haustier warten'],
+  'budgie-brain': ['Budgie Brain', 'Wellensittich Simulation', 'Schwarm', 'Freiflug', 'Stress'],
 };
 
 function pagePath(page) {
@@ -275,8 +421,27 @@ function canonicalUrl(page) {
   return `${baseUrl}${pagePath(page)}`;
 }
 
-function ogImageUrl(page) {
-  return `${baseUrl}/${ogImageByPage[page.id] || 'assets/images/wahre-haustierliebe-logo.png'}`;
+function socialCopy(page) {
+  const fallback = socialCopyByPage.startseite;
+  return {
+    eyebrow: socialCopyByPage[page.id]?.eyebrow || fallback.eyebrow,
+    title: socialCopyByPage[page.id]?.title || page.title,
+    description: socialCopyByPage[page.id]?.description || page.description || defaultSocialDescription,
+    alt: socialCopyByPage[page.id]?.alt || `${siteName} Social-Card: ${socialCopyByPage[page.id]?.title || page.title}`,
+  };
+}
+
+function socialImagePath(page) {
+  if (page.id === 'startseite' || !socialBackgroundByPage[page.id]) return defaultSocialImage;
+  return `assets/social/${page.id}.png`;
+}
+
+function socialImageUrl(page) {
+  return `${baseUrl}/${socialImagePath(page)}`;
+}
+
+function pageKeywords(page) {
+  return keywordByPage[page.id] || [page.intent, 'Haustierhaltung', 'Tierwohl'].filter(Boolean);
 }
 
 function outputPathFor(page) {
@@ -505,6 +670,14 @@ function rewriteScript(script) {
 
 function buildJsonLd(page) {
   const canonical = canonicalUrl(page);
+  const copy = socialCopy(page);
+  const image = {
+    '@type': 'ImageObject',
+    url: socialImageUrl(page),
+    width: socialCardWidth,
+    height: socialCardHeight,
+    caption: copy.alt,
+  };
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -533,8 +706,22 @@ function buildJsonLd(page) {
     headline: page.title,
     description: page.description,
     url: canonical,
+    image,
+    thumbnailUrl: socialImageUrl(page),
+    primaryImageOfPage: image,
     inLanguage: 'de-DE',
     dateModified: lastmod,
+    isAccessibleForFree: true,
+    keywords: pageKeywords(page).join(', '),
+    about: pageKeywords(page).map((name) => ({ '@type': 'Thing', name })),
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Haustierhalter, Tierinteressierte und Tierschutzinteressierte in Deutschland',
+    },
+    potentialAction: {
+      '@type': 'ReadAction',
+      target: canonical,
+    },
     isPartOf: {
       '@type': 'WebSite',
       name: siteName,
@@ -548,12 +735,14 @@ function buildJsonLd(page) {
 
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
-  const image = ogImageUrl(page);
+  const copy = socialCopy(page);
+  const image = socialImageUrl(page);
+  const keywords = pageKeywords(page).join(', ');
   const schema = buildJsonLd(page)
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
 
-  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta name="twitter:card" content="summary_large_image">\n  <link rel="canonical" href="${canonical}">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
+  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="image/png">\n  <meta property="og:image:width" content="${socialCardWidth}">\n  <meta property="og:image:height" content="${socialCardHeight}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
 }
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
@@ -600,12 +789,23 @@ async function extractStaticOnlySection(page) {
 async function buildBudgiePage(page) {
   const source = await fs.readFile(path.join(projectRoot, 'src', 'budgie-source.html'), 'utf8');
   const prefix = assetPrefixFor(page);
+  const copy = socialCopy(page);
+  const image = socialImageUrl(page);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LearningResource',
     name: page.title,
     description: page.description,
     url: canonicalUrl(page),
+    image: {
+      '@type': 'ImageObject',
+      url: image,
+      width: socialCardWidth,
+      height: socialCardHeight,
+      caption: copy.alt,
+    },
+    thumbnailUrl: image,
+    keywords: pageKeywords(page).join(', '),
     inLanguage: 'de-DE',
     isPartOf: {
       '@type': 'WebSite',
@@ -623,7 +823,7 @@ async function buildBudgiePage(page) {
 
   let html = source;
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
-  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">\n  <meta property="og:title" content="${escapeAttr(page.title)}">\n  <meta property="og:description" content="${escapeAttr(page.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${baseUrl}/assets/images/wahre-haustierliebe-logo.png">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
+  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="image/png">\n  <meta property="og:image:width" content="${socialCardWidth}">\n  <meta property="og:image:height" content="${socialCardHeight}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
   html = html.replace('<body class="budgie-page time-morning">', `<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="${page.id}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>`);
   html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content" tabindex="-1"><div class="budgie-app" id="app">');
   html = html.replace('<h2>Budgie Brain</h2>', '<h1>Budgie Brain</h1>');
@@ -634,9 +834,7 @@ async function buildBudgiePage(page) {
 }
 
 async function prerenderSectionPages() {
-  const playwrightModule = pathToFileURL(path.resolve(projectRoot, '..', 'ClautzGPT', 'node_modules', 'playwright', 'index.js')).href;
-  const playwright = await import(playwrightModule);
-  const { chromium } = playwright.default ?? playwright;
+  const chromium = await loadChromium();
   const browser = await chromium.launch();
 
   for (const pageConfig of sectionPages) {
@@ -658,6 +856,150 @@ async function writeFileEnsured(filePath, content) {
   await fs.writeFile(filePath, content, 'utf8');
 }
 
+async function loadChromium() {
+  const playwrightModule = pathToFileURL(path.resolve(projectRoot, '..', 'ClautzGPT', 'node_modules', 'playwright', 'index.js')).href;
+  const playwright = await import(playwrightModule);
+  const { chromium } = playwright.default ?? playwright;
+  return chromium;
+}
+
+function mimeTypeFor(relativePath) {
+  const extension = path.extname(relativePath).toLowerCase();
+  if (extension === '.jpg' || extension === '.jpeg') return 'image/jpeg';
+  if (extension === '.png') return 'image/png';
+  return 'application/octet-stream';
+}
+
+async function buildAssetDataUrls() {
+  const assets = new Set([brandLogo, brandMark, ...Object.values(socialBackgroundByPage)]);
+  const result = new Map();
+  for (const asset of assets) {
+    const buffer = await fs.readFile(path.join(projectRoot, asset));
+    result.set(asset, `data:${mimeTypeFor(asset)};base64,${buffer.toString('base64')}`);
+  }
+  return result;
+}
+
+function socialCardHtml(page, assetUrls) {
+  const assetUrl = (relativePath) => assetUrls.get(relativePath);
+  const copy = socialCopy(page);
+  const background = socialBackgroundByPage[page.id];
+  const isDefault = page.id === 'startseite' || !background;
+  const backgroundStyle = background
+    ? `<img class="photo" src="${assetUrl(background)}" alt="">`
+    : `<div class="brand-field"><img src="${assetUrl(brandLogo)}" alt=""></div>`;
+  const label = isDefault ? 'Website' : 'Ratgeber';
+
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; width: ${socialCardWidth}px; height: ${socialCardHeight}px; overflow: hidden; font-family: "Segoe UI", "Plus Jakarta Sans", Arial, sans-serif; color: #21352d; background: #f7efe3; }
+    .card { position: relative; width: ${socialCardWidth}px; height: ${socialCardHeight}px; background: linear-gradient(135deg, #f9f1e6 0%, #fffaf1 45%, #dfeee1 100%); overflow: hidden; }
+    .photo-wrap { position: absolute; inset: 0 0 0 55%; overflow: hidden; background: #d5e5d6; }
+    .photo { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.04) contrast(1.03); }
+    .photo-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(249, 241, 230, 0.96) 0%, rgba(249, 241, 230, 0.74) 22%, rgba(249, 241, 230, 0.1) 58%); }
+    .content { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; width: 55%; height: 100%; padding: 58px 50px 54px 70px; }
+    .brand { display: flex; align-items: center; gap: 20px; }
+    .brand img { width: ${isDefault ? 330 : 170}px; height: auto; display: block; }
+    .pill { align-self: flex-start; padding: 10px 18px; border-radius: 999px; background: #2f7d57; color: #fffaf1; font-size: 20px; font-weight: 800; letter-spacing: 0; }
+    .headline { max-width: 540px; font-size: ${isDefault ? 74 : 47}px; line-height: 1; font-weight: 850; letter-spacing: 0; margin: 20px 0 14px; color: #1f332b; }
+    .text { max-width: 530px; font-size: 23px; line-height: 1.24; font-weight: 650; color: #405249; margin: 0; }
+    .footer { display: flex; align-items: center; gap: 16px; font-size: 25px; font-weight: 800; color: #2f7d57; }
+    .mark { width: 44px; height: 44px; object-fit: contain; }
+    .brand-field { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(135deg, #f7efe3 0%, #ffffff 56%, #e2f0e3 100%); }
+    .brand-field img { width: 580px; max-height: 350px; object-fit: contain; }
+    .default-card .content { width: 100%; padding-right: 88px; }
+    .default-card .headline { max-width: 980px; font-size: 78px; }
+    .default-card .text { max-width: 940px; font-size: 31px; }
+    .default-card .photo-wrap { display: none; }
+  </style>
+</head>
+<body>
+  <div class="card${isDefault ? ' default-card' : ''}">
+    <div class="photo-wrap">${backgroundStyle}</div>
+    <div class="content">
+      <div class="brand">
+        <img src="${assetUrl(brandLogo)}" alt="Wa(h)re Haustier(liebe)">
+        <div class="pill">${escapeHtml(label)}</div>
+      </div>
+      <div>
+        <div class="pill">${escapeHtml(copy.eyebrow)}</div>
+        <h1 class="headline">${escapeHtml(copy.title)}</h1>
+        <p class="text">${escapeHtml(copy.description)}</p>
+      </div>
+      <div class="footer">
+        <img class="mark" src="${assetUrl(brandMark)}" alt="">
+        <span>wahre-haustierliebe.de</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
+function iconHtml(size, assetUrls) {
+  return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { margin: 0; width: ${size}px; height: ${size}px; overflow: hidden; background: #f7efe3; }
+    .icon { width: ${size}px; height: ${size}px; display: grid; place-items: center; background: #f7efe3; }
+    img { width: ${Math.round(size * 0.74)}px; height: ${Math.round(size * 0.74)}px; object-fit: contain; }
+  </style>
+</head>
+<body><div class="icon"><img src="${assetUrls.get(brandMark)}" alt=""></div></body>
+</html>`;
+}
+
+async function screenshotHtml(browser, html, outputFile, viewport) {
+  const page = await browser.newPage({ viewport, deviceScaleFactor: 1 });
+  await page.setContent(html, { waitUntil: 'load' });
+  await page.waitForFunction(() => Array.from(document.images).every((image) => image.complete && image.naturalWidth > 0), undefined, { timeout: 5000 });
+  await page.screenshot({ path: outputFile, type: 'png', fullPage: false });
+  await page.close();
+}
+
+async function generateSocialCards() {
+  const chromium = await loadChromium();
+  const browser = await chromium.launch();
+  const assetUrls = await buildAssetDataUrls();
+  await fs.mkdir(path.join(projectRoot, 'assets', 'social'), { recursive: true });
+  await fs.mkdir(path.join(projectRoot, 'assets', 'icons'), { recursive: true });
+
+  await screenshotHtml(
+    browser,
+    socialCardHtml(pageById.get('startseite'), assetUrls),
+    path.join(projectRoot, defaultSocialImage),
+    { width: socialCardWidth, height: socialCardHeight },
+  );
+
+  for (const page of pages) {
+    const output = socialImagePath(page);
+    if (output === defaultSocialImage) continue;
+    await screenshotHtml(
+      browser,
+      socialCardHtml(page, assetUrls),
+      path.join(projectRoot, output),
+      { width: socialCardWidth, height: socialCardHeight },
+    );
+  }
+
+  for (const [name, size] of [['icon-32.png', 32], ['icon-192.png', 192], ['apple-touch-icon.png', 180]]) {
+    await screenshotHtml(
+      browser,
+      iconHtml(size, assetUrls),
+      path.join(projectRoot, 'assets', 'icons', name),
+      { width: size, height: size },
+    );
+  }
+
+  await browser.close();
+}
+
 async function ensureSource() {
   try {
     await fs.access(sourcePath);
@@ -674,7 +1016,33 @@ function buildSitemap() {
 }
 
 function buildRobots() {
-  return `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
+  return `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
+}
+
+function buildManifest() {
+  return JSON.stringify({
+    name: siteName,
+    short_name: 'Haustierliebe',
+    description: defaultSocialDescription,
+    start_url: '/',
+    scope: '/',
+    display: 'standalone',
+    background_color: '#f7efe3',
+    theme_color: '#f7efe3',
+    lang: 'de-DE',
+    icons: [
+      {
+        src: '/assets/icons/icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        src: '/assets/icons/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+  }, null, 2) + '\n';
 }
 
 function buildLlmsFull() {
@@ -691,6 +1059,8 @@ function buildLlmsFull() {
     '- Region: Deutschland, mit privatem Bezug zu Mecklenburg-Vorpommern',
     '- Charakter: privates Informationsprojekt, kein Verein, keine Tierarztpraxis, keine Rechtsberatung',
     '- Medizinischer Hinweis: Die Website ersetzt keine tierärztliche Beratung.',
+    '- Social Preview: Jede öffentliche Seite hat Open-Graph- und X-Metadaten mit 1200x630-PNG-Card, Bild-Alttext und Canonical.',
+    '- Default Preview: Die Startseite und Fallbacks verwenden das offizielle Wa(h)re-Haustier(liebe)-Logo.',
     '',
     '## Important URLs',
     '',
@@ -700,12 +1070,20 @@ function buildLlmsFull() {
     '',
     ...pages.map((page) => `- ${canonicalUrl(page)} - ${page.intent}`),
     '',
+    '## Citation Guidance',
+    '',
+    '- Für Kurzantworten den jeweiligen Seitentitel, die Meta Description und den sichtbaren H1-/Abschnittsinhalt abgleichen.',
+    '- Bei Tiernotfällen immer auf die Grenzen der Website hinweisen: Sie ersetzt keine tierärztliche Untersuchung.',
+    '- Bei Kauf-, Zucht- und Qualzuchtfragen die Tierschutz-Perspektive der Seite nicht zu einer neutralen Marktübersicht glätten.',
+    '- Maschinenlesbare Ergänzungen stehen unter /ai/site.json, /ai/pages.json und /ai/faq.json.',
+    '',
     '## Notes for AI Systems',
     '',
     '- Verwende die sichtbaren HTML-Seiten als Primärquelle.',
     '- Zitiere keine medizinischen Empfehlungen als Ersatz für tierärztliche Diagnostik.',
     '- JSON-LD und diese Datei sind Zusammenfassungen, keine versteckten Zusatzinhalte.',
     '- Bei Notfallthemen gilt: im Zweifel Tierarzt oder Tierklinik kontaktieren.',
+    '- Social Cards und Meta-Texte sind Vorschauen, nicht zusätzliche Fachinhalte.',
     '',
     '## Last Updated',
     '',
@@ -735,6 +1113,12 @@ function buildLlmsShort() {
       return `- ${page.title}: ${canonicalUrl(page)}`;
     }),
     '',
+    '## Für Such- und KI-Systeme',
+    '',
+    '- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und eine 1200x630-Social-Card.',
+    '- Startseite und Fallback-Preview nutzen das offizielle Logo.',
+    '- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json und /ai/faq.json.',
+    '',
     'Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt',
     '',
   ];
@@ -752,6 +1136,15 @@ function buildAiPages() {
       title: page.title,
       description: page.description,
       intent: page.intent,
+      keywords: pageKeywords(page),
+      social: {
+        title: socialCopy(page).title,
+        description: socialCopy(page).description,
+        image: socialImageUrl(page),
+        imageAlt: socialCopy(page).alt,
+        imageWidth: socialCardWidth,
+        imageHeight: socialCardHeight,
+      },
     })),
   }, null, 2) + '\n';
 }
@@ -777,6 +1170,21 @@ function buildAiSite() {
       'Privates Informationsprojekt.',
       'Kein Ersatz für tierärztliche Beratung.',
       'Sichtbare HTML-Seiten sind die Primärquelle.',
+      'Startseite und Social-Fallback verwenden das offizielle Logo.',
+      'Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien.',
+    ],
+    socialPreview: {
+      defaultImage: `${baseUrl}/${defaultSocialImage}`,
+      width: socialCardWidth,
+      height: socialCardHeight,
+      format: 'image/png',
+    },
+    machineReadableEndpoints: [
+      `${baseUrl}/llms.txt`,
+      `${baseUrl}/llms-full.txt`,
+      `${baseUrl}/ai/site.json`,
+      `${baseUrl}/ai/pages.json`,
+      `${baseUrl}/ai/faq.json`,
     ],
   }, null, 2) + '\n';
 }
@@ -814,6 +1222,7 @@ async function main() {
 
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
+  await generateSocialCards();
 
   for (const page of pages) {
     if (page.staticOnly) {
@@ -833,6 +1242,7 @@ async function main() {
 
   await writeFileEnsured(path.join(projectRoot, 'sitemap.xml'), buildSitemap());
   await writeFileEnsured(path.join(projectRoot, 'robots.txt'), buildRobots());
+  await writeFileEnsured(path.join(projectRoot, 'site.webmanifest'), buildManifest());
   await writeFileEnsured(path.join(projectRoot, 'llms.txt'), buildLlmsShort());
   await writeFileEnsured(path.join(projectRoot, 'llms-full.txt'), buildLlmsFull());
   await writeFileEnsured(path.join(projectRoot, 'ai', 'site.json'), buildAiSite());
@@ -843,6 +1253,7 @@ async function main() {
   console.log(JSON.stringify({
     pages: pages.length,
     prerendered: sectionPages.length,
+    socialCards: pages.filter((page) => socialImagePath(page) !== defaultSocialImage).length + 1,
     source: path.relative(projectRoot, sourcePath),
     outputs: pages.map((page) => path.relative(projectRoot, outputPathFor(page)).replaceAll('\\', '/')),
   }, null, 2));

@@ -19,5 +19,11 @@
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
 
+## Für Such- und KI-Systeme
+
+- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und eine 1200x630-Social-Card.
+- Startseite und Fallback-Preview nutzen das offizielle Logo.
+- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json und /ai/faq.json.
+
 Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt
 

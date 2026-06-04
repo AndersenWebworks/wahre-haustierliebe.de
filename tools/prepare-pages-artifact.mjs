@@ -16,6 +16,7 @@ const fixedPublicPaths = [
   'llms-full.txt',
   'llms.txt',
   'robots.txt',
+  'site.webmanifest',
   'sitemap.xml',
   'CNAME',
 ];

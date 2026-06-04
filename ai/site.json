@@ -17,6 +17,21 @@
   "notes": [
     "Privates Informationsprojekt.",
     "Kein Ersatz für tierärztliche Beratung.",
-    "Sichtbare HTML-Seiten sind die Primärquelle."
+    "Sichtbare HTML-Seiten sind die Primärquelle.",
+    "Startseite und Social-Fallback verwenden das offizielle Logo.",
+    "Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien."
+  ],
+  "socialPreview": {
+    "defaultImage": "https://wahre-haustierliebe.de/assets/social/wahre-haustierliebe-default.png",
+    "width": 1200,
+    "height": 630,
+    "format": "image/png"
+  },
+  "machineReadableEndpoints": [
+    "https://wahre-haustierliebe.de/llms.txt",
+    "https://wahre-haustierliebe.de/llms-full.txt",
+    "https://wahre-haustierliebe.de/ai/site.json",
+    "https://wahre-haustierliebe.de/ai/pages.json",
+    "https://wahre-haustierliebe.de/ai/faq.json"
   ]
 }

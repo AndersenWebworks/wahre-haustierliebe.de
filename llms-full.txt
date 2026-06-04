@@ -10,11 +10,13 @@
 - Region: Deutschland, mit privatem Bezug zu Mecklenburg-Vorpommern
 - Charakter: privates Informationsprojekt, kein Verein, keine Tierarztpraxis, keine Rechtsberatung
 - Medizinischer Hinweis: Die Website ersetzt keine tierärztliche Beratung.
+- Social Preview: Jede öffentliche Seite hat Open-Graph- und X-Metadaten mit 1200x630-PNG-Card, Bild-Alttext und Canonical.
+- Default Preview: Die Startseite und Fallbacks verwenden das offizielle Wa(h)re-Haustier(liebe)-Logo.
 
 ## Important URLs
 
 - Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung: https://wahre-haustierliebe.de/
-- Impressum: https://wahre-haustierliebe.de/impressum/index.html
+- Impressum - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/impressum/index.html
 - Datenschutzerklärung: https://wahre-haustierliebe.de/datenschutz/index.html
 - Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?: https://wahre-haustierliebe.de/mensch/index.html
 - Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
@@ -65,12 +67,20 @@
 - https://wahre-haustierliebe.de/noch-nicht-bereit/index.html - Verantwortlich warten statt vorschnell ein Tier anschaffen
 - https://wahre-haustierliebe.de/budgie-brain/index.html - Interaktives Lernwerkzeug zur Wellensittich-Haltung
 
+## Citation Guidance
+
+- Für Kurzantworten den jeweiligen Seitentitel, die Meta Description und den sichtbaren H1-/Abschnittsinhalt abgleichen.
+- Bei Tiernotfällen immer auf die Grenzen der Website hinweisen: Sie ersetzt keine tierärztliche Untersuchung.
+- Bei Kauf-, Zucht- und Qualzuchtfragen die Tierschutz-Perspektive der Seite nicht zu einer neutralen Marktübersicht glätten.
+- Maschinenlesbare Ergänzungen stehen unter /ai/site.json, /ai/pages.json und /ai/faq.json.
+
 ## Notes for AI Systems
 
 - Verwende die sichtbaren HTML-Seiten als Primärquelle.
 - Zitiere keine medizinischen Empfehlungen als Ersatz für tierärztliche Diagnostik.
 - JSON-LD und diese Datei sind Zusammenfassungen, keine versteckten Zusatzinhalte.
 - Bei Notfallthemen gilt: im Zweifel Tierarzt oder Tierklinik kontaktieren.
+- Social Cards und Meta-Texte sind Vorschauen, nicht zusätzliche Fachinhalte.
 
 ## Last Updated
 

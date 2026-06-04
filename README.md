@@ -19,9 +19,12 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `adoption/index.html`
 - `selbsttest/index.html`
 - `notfall/index.html`
+- `notfall/tierarzt-notdienst/index.html`
 - `wissen/index.html`
 - `noch-nicht-bereit/index.html`
 - `budgie-brain/index.html`
+- `impressum/index.html`
+- `datenschutz/index.html`
 
 Wichtig: Der aktuelle Tailnet-/Static-Server liefert Unterordner nicht automatisch als Directory Index aus. Deshalb nutzen Canonicals, Sitemap und interne Links für Unterseiten bewusst `slug/index.html` statt nur `slug/`.
 
@@ -50,23 +53,26 @@ Er erzeugt oder aktualisiert:
 - `assets/site.js`
 - `sitemap.xml`
 - `robots.txt`
+- `site.webmanifest`
 - `llms.txt`
 - `llms-full.txt`
 - `ai/site.json`
 - `ai/pages.json`
 - `ai/faq.json`
+- `assets/social/*.png`
+- `assets/icons/*.png`
 
 Der Build rendert die Seiten zusätzlich mit Playwright vor. Dadurch stehen Hero, Kicker, Verdichtungsmodule, Tabellenlabels und andere JS-verstärkte Bereiche direkt im HTML und sind nicht nur nach clientseitiger Hydration sichtbar.
 
 ## GitHub Pages
 
-Die geplante Live-Version läuft statisch über GitHub Pages mit Custom Domain:
+Die Live-Version läuft statisch über GitHub Pages mit Custom Domain:
 
 ```text
 wahre-haustierliebe.de
 ```
 
-Der Pages-Workflow veröffentlicht nicht den gesamten Repo-Root, sondern nur ein öffentliches Artefakt aus `.pages-artifact/`. Dadurch bleiben Quellen, Tools, Referenzen, Screenshots und Worker-Artefakte außerhalb der ausgelieferten Website.
+Der Pages-Workflow veröffentlicht nicht den gesamten Repo-Root, sondern nur ein öffentliches Artefakt aus `.pages-artifact/`. Dadurch bleiben Quellen, Tools, Referenzen, Screenshots, Worker-Artefakte und interne Projektdokumente außerhalb der ausgelieferten Website.
 
 Vor einem Pages-Deploy müssen die statischen Dateien lokal gebaut und committed sein:
 
@@ -77,7 +83,7 @@ node tools/prepare-pages-artifact.mjs
 
 Der zweite Befehl ist eine lokale Sichtprüfung des Pages-Artefakts; das Verzeichnis `.pages-artifact/` wird nicht versioniert.
 
-Der Pages-Workflow ist bis zur GitHub-Pages-Aktivierung bewusst nur manuell auslösbar. Nach der Umstellung in den Repository-Settings kann der Workflow manuell gestartet oder wieder auf Push-Deploy erweitert werden.
+Der Pages-Workflow läuft automatisch bei jedem Push auf `main` und kann zusätzlich manuell gestartet werden. Das Pages-Artefakt übernimmt die öffentlichen Seiten aus `ai/pages.json`, damit neue Unterseiten nicht in einer zweiten Deploy-Liste vergessen werden.
 
 ## GEO/SEO/AVO
 
@@ -90,6 +96,9 @@ Die Seitenstruktur folgt dem Clautz-GEO/SEO-Guide:
 - Sitemap und Robots-Datei
 - `llms.txt`, `llms-full.txt` und maschinenlesbare `/ai/*.json`
 - JSON-LD pro Seite, sichtbar gedeckt durch den Seiteninhalt
+- vollständige Open-Graph- und X/Twitter-Card-Tags pro Seite
+- 1200x630-Social-Cards mit offiziellem Logo, Fallback-Logo-Card für Startseite und ungezielte Seiten
+- App-/Favicon-Metadaten mit Manifest und lokalen PNG-Icons
 
 Es wird keine künstliche Autoritätsrolle behauptet. Deshalb gibt es kein pauschales `publisher: Organization` in den WebPage-Schemata und keine FAQPage-Auszeichnung ohne sichtbaren FAQ-Block.
 

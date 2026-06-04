@@ -399,7 +399,8 @@
     "usedFor": [
       "hero-logo",
       "footer-logo",
-      "social-preview"
+      "social-preview",
+      "generated-social-cards"
     ],
     "alt": "Wa(h)re Haustier(liebe) Logo",
     "modifications": "Local brand asset used without CSS crop."
@@ -414,7 +415,9 @@
     "license": "Local project brand asset",
     "licenseUrl": "",
     "usedFor": [
-      "header-logo"
+      "header-logo",
+      "generated-social-cards",
+      "generated-icons"
     ],
     "alt": "Wa(h)re Haustier(liebe) Bildmarke ohne Schriftzug",
     "modifications": "Cropped local brand asset for compact header usage."

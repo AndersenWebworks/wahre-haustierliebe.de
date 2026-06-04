@@ -4,5 +4,6 @@ node_modules/
 .claude/
 dist/
 .pages-artifact/
+docs/wahre-haustierliebe-themenbacklog.md
 .DS_Store
 Thumbs.db
