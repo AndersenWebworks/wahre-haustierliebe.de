@@ -67,6 +67,28 @@
       }
     },
     {
+      "id": "kontakt",
+      "url": "https://wahre-haustierliebe.de/kontakt/index.html",
+      "title": "Kontakt - Wa(h)re Haustier(liebe)",
+      "description": "Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktformular für Fragen, Anregungen oder Unterstützungsbedarf.",
+      "intent": "Kontaktformular und Informationen zum privaten Projekt Wa(h)re Haustierliebe",
+      "keywords": [
+        "Kontakt",
+        "Haltungsfragen",
+        "Haustierberatung",
+        "Tierschutz",
+        "Privates Projekt"
+      ],
+      "social": {
+        "title": "Kontakt und Hilfe - Wa(h)re Haustier(liebe)",
+        "description": "Wer hinter Wa(h)re Haustier(liebe) steht, warum wir die Seite machen und wie du uns erreichen kannst.",
+        "image": "https://wahre-haustierliebe.de/assets/social/kontakt.png",
+        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als ruhiges Bild für Fragen und Kontakt.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "mensch",
       "url": "https://wahre-haustierliebe.de/mensch/index.html",
       "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",

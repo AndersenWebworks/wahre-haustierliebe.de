@@ -41,6 +41,15 @@ const pages = [
     staticOnly: true,
   },
   {
+    id: 'kontakt',
+    slug: 'kontakt',
+    title: 'Kontakt - Wa(h)re Haustier(liebe)',
+    description: 'Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktformular für Fragen, Anregungen oder Unterstützungsbedarf.',
+    intent: 'Kontaktformular und Informationen zum privaten Projekt Wa(h)re Haustierliebe',
+    priority: '0.45',
+    staticOnly: true,
+  },
+  {
     id: 'mensch',
     slug: 'mensch',
     title: 'Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?',
@@ -349,6 +358,13 @@ const firstContentImageByPage = {
     type: 'image/jpeg',
     alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.',
   },
+  kontakt: {
+    src: 'assets/images/two-cats-window.jpg',
+    width: 843,
+    height: 954,
+    type: 'image/jpeg',
+    alt: 'Zwei Katzen sitzen gemeinsam am Fenster als ruhiges Bild für Fragen und Kontakt.',
+  },
   wissen: {
     src: 'assets/images/goldfish-aquarium.jpg',
     width: 1920,
@@ -472,6 +488,11 @@ const socialCopyByPage = {
     title: 'Tierärztlicher Notdienst nach Bundesland',
     description: 'Offizielle Kammern, Notrufnummern und regionale Systeme, damit du im Ernstfall schneller richtig suchst.',
   },
+  kontakt: {
+    eyebrow: 'Privates Projekt',
+    title: 'Kontakt und Hilfe',
+    description: 'Wer hinter Wa(h)re Haustier(liebe) steht, warum wir die Seite machen und wie du uns erreichen kannst.',
+  },
   wissen: {
     eyebrow: 'Tiermythen prüfen',
     title: 'Was stimmt wirklich?',
@@ -529,6 +550,7 @@ const keywordByPage = {
   selbsttest: ['Haustier Selbsttest', 'bereit für ein Tier', 'Zeit', 'Geld', 'Betreuung'],
   notfall: ['Tiernotfall', 'Vergiftung', 'Atemnot', 'Tierarzt', 'Warnsignale'],
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
+  kontakt: ['Kontakt', 'Haltungsfragen', 'Haustierberatung', 'Tierschutz', 'Privates Projekt'],
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Glossar', 'Tierschutzwissen'],
   'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],
   'ernaehrung-taurin': ['Tierernährung', 'Taurin', 'Katzenfutter', 'Hundefutter', 'vegane Tierernährung'],

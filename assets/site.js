@@ -2,6 +2,7 @@ var staticPageRoutes = {
   "startseite": "/",
   "impressum": "/impressum/index.html",
   "datenschutz": "/datenschutz/index.html",
+  "kontakt": "/kontakt/index.html",
   "mensch": "/mensch/index.html",
   "hunde": "/hunde/index.html",
   "katzen": "/katzen/index.html",

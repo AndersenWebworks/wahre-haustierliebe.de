@@ -23,6 +23,7 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `wissen/index.html`
 - `noch-nicht-bereit/index.html`
 - `budgie-brain/index.html`
+- `kontakt/index.html`
 - `impressum/index.html`
 - `datenschutz/index.html`
 
