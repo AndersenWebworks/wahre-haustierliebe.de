@@ -813,30 +813,66 @@ function normalizeAssetUrls(root) {
       return payload;
     }
 
+    function contactReasonSentence(reason) {
+      switch (reason) {
+        case 'Ich habe Fragen BEVOR ich mir ein Tier anschaffe':
+          return 'Ich möchte mich vor der Anschaffung eines Tieres gut informieren und hätte dazu eine Frage.';
+        case 'Ich brauche Hilfe mit meinem Tier':
+          return 'Ich brauche Unterstützung bei einer Frage rund um mein Tier.';
+        case 'Ich suche ein Tier zur Adoption oder möchte eins vermitteln':
+          return 'Ich melde mich, weil es um Adoption oder Vermittlung eines Tieres geht.';
+        case 'Ich habe Feedback oder Korrekturen zur Website':
+          return 'Ich habe Feedback oder eine Korrektur zur Website.';
+        case 'Ich möchte das Projekt unterstützen oder zusammenarbeiten':
+          return 'Ich möchte das Projekt unterstützen oder über eine Zusammenarbeit sprechen.';
+        default:
+          return 'Ich melde mich über Wa(h)re Haustier(liebe).';
+      }
+    }
+
+    function contactMailSubject(payload) {
+      var name = payload.name ? ' von ' + payload.name : '';
+      switch (payload.kontaktgrund) {
+        case 'Ich habe Fragen BEVOR ich mir ein Tier anschaffe':
+          return 'Wa(h)re Haustierliebe: Frage vor Tieranschaffung' + name;
+        case 'Ich brauche Hilfe mit meinem Tier':
+          return 'Wa(h)re Haustierliebe: Hilfe mit Tier' + name;
+        case 'Ich suche ein Tier zur Adoption oder möchte eins vermitteln':
+          return 'Wa(h)re Haustierliebe: Adoption oder Vermittlung' + name;
+        case 'Ich habe Feedback oder Korrekturen zur Website':
+          return 'Wa(h)re Haustierliebe: Feedback zur Website' + name;
+        case 'Ich möchte das Projekt unterstützen oder zusammenarbeiten':
+          return 'Wa(h)re Haustierliebe: Unterstützung oder Zusammenarbeit' + name;
+        default:
+          return 'Wa(h)re Haustierliebe: Kontaktanfrage' + name;
+      }
+    }
+
     function contactMailBody(payload) {
-      var tierart = Array.isArray(payload.tierart) && payload.tierart.length ? payload.tierart.join(', ') : '-';
+      var tierart = Array.isArray(payload.tierart) && payload.tierart.length ? payload.tierart.join(', ') : 'nicht angegeben';
+      var name = payload.name || '';
       return [
         'Hallo,',
         '',
-        'ich melde mich über Wa(h)re Haustier(liebe).',
+        contactReasonSentence(payload.kontaktgrund),
         '',
+        payload.message || '',
+        '',
+        'Meine Angaben:',
         'Name: ' + (payload.name || '-'),
         'E-Mail: ' + (payload.email || '-'),
         'Kontaktgrund: ' + (payload.kontaktgrund || '-'),
         'Tierart: ' + tierart,
         'Seite: ' + (payload.pageUrl || '-'),
         '',
-        'Nachricht:',
-        payload.message || '',
-        '',
         'Viele Grüße',
-        payload.name || ''
+        name
       ].join('\n');
     }
 
     function openContactMailDraft(form, payload) {
       var to = form.dataset.contactEmail || 'mail@andersen-webworks.de';
-      var subject = payload.subject || 'Kontaktanfrage Wa(h)re Haustier(liebe)';
+      var subject = contactMailSubject(payload);
       var href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(contactMailBody(payload));
       window.location.href = href;
     }
