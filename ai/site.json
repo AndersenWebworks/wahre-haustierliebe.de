@@ -22,9 +22,9 @@
     "Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien."
   ],
   "socialPreview": {
-    "defaultImage": "https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png",
-    "width": 1536,
-    "height": 1024,
+    "defaultImage": "https://wahre-haustierliebe.de/assets/social/default.png",
+    "width": 1200,
+    "height": 630,
     "format": "image/png"
   },
   "machineReadableEndpoints": [

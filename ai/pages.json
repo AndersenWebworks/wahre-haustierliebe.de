@@ -18,12 +18,12 @@
         "Tiernotfall"
       ],
       "social": {
-        "title": "Wa(h)re Haustier(liebe)",
+        "title": "Wa(h)re Haustier(liebe) - Tierschutz-Wiki",
         "description": "Ehrliche Aufklärung, bevor ein Tier einzieht: Alltag, Kosten, Tierwohl, Notfall, Adoption und Qualzucht verständlich erklärt.",
-        "image": "https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
         "imageAlt": "Logo von Wa(h)re Haustier(liebe) auf einer Social-Card zur verantwortungsvollen Haustierhaltung.",
-        "imageWidth": 1536,
-        "imageHeight": 1024
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -40,10 +40,10 @@
       "social": {
         "title": "Impressum - Wa(h)re Haustier(liebe)",
         "description": "Impressum und Anbieterkennzeichnung für Wa(h)re Haustier(liebe), das private Informationsprojekt von Jan-Erik Andersen und Annemarie Andersen.",
-        "image": "https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
         "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
-        "imageWidth": 1536,
-        "imageHeight": 1024
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -58,12 +58,12 @@
         "Tierwohl"
       ],
       "social": {
-        "title": "Datenschutzerklärung",
+        "title": "Datenschutzerklärung - Wa(h)re Haustier(liebe)",
         "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.",
-        "image": "https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
         "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
-        "imageWidth": 1536,
-        "imageHeight": 1024
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -82,10 +82,10 @@
       "social": {
         "title": "Passt ein Tier wirklich in dein Leben?",
         "description": "Der ehrliche Realitätscheck für Zeit, Geld, Wohnung, Alltag und Verantwortung, bevor ein Haustier einzieht.",
-        "image": "https://wahre-haustierliebe.de/assets/images/tierheim-hund.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/mensch.png",
         "imageAlt": "Hund im Tierheim als Bild für ehrliche Entscheidung vor dem Kauf.",
-        "imageWidth": 960,
-        "imageHeight": 1280
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -102,12 +102,12 @@
         "Erziehung"
       ],
       "social": {
-        "title": "Hund halten: Zeit, Kosten, Alltag",
+        "title": "Hund halten: Zeit, Kosten, Alltag - Wa(h)re Haustier(liebe)",
         "description": "Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.",
-        "image": "https://wahre-haustierliebe.de/assets/images/golden-retriever-agility-jump.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/hunde.png",
         "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
-        "imageWidth": 2000,
-        "imageHeight": 1339
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -126,10 +126,10 @@
       "social": {
         "title": "Katzen halten: Wohnung, Freigang, Kastration",
         "description": "Wie Katzen artgerechter leben: Struktur, Sozialkontakt, sichere Freiräume, Kastration und leise Warnsignale.",
-        "image": "https://wahre-haustierliebe.de/assets/images/two-cats-window.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/katzen.png",
         "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
-        "imageWidth": 843,
-        "imageHeight": 954
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -148,10 +148,10 @@
       "social": {
         "title": "Vögel brauchen Schwarm, Flugraum und Licht",
         "description": "Warum Einzelhaltung im Käfig nicht reicht und was Wellensittiche und andere Vögel im Alltag wirklich brauchen.",
-        "image": "https://wahre-haustierliebe.de/assets/images/voegel-voliere-02.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/voegel.png",
         "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
-        "imageWidth": 1600,
-        "imageHeight": 1064
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -170,10 +170,10 @@
       "social": {
         "title": "Kaninchen, Meerschweinchen, Hamster und Ratten",
         "description": "Fläche, Gruppenhaltung, Zähne, Tierarztkosten und typische Fehler bei Kleintieren klar erklärt.",
-        "image": "https://wahre-haustierliebe.de/assets/images/guinea-pig-habitat.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/kleintiere.png",
         "imageAlt": "Kleintier-Habitat mit Struktur statt Spielzeughaltung.",
-        "imageWidth": 800,
-        "imageHeight": 599
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -192,10 +192,10 @@
       "social": {
         "title": "Terrarium, Technik, UV-B und Verantwortung",
         "description": "Warum Faszination nicht reicht und exotische Tiere spezialisierte Haltung, Wissen und Tierarztzugang brauchen.",
-        "image": "https://wahre-haustierliebe.de/assets/images/bearded-dragon-terrarium.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/exoten.png",
         "imageAlt": "Bartagame im Terrarium als Bild für Technik, Licht und Klima.",
-        "imageWidth": 1000,
-        "imageHeight": 702
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -214,10 +214,10 @@
       "social": {
         "title": "Pferde brauchen Herde, Bewegung und Budget",
         "description": "Stallform, tägliche Bewegung, Hufschmied, Tierarzt und jahrzehntelange Verantwortung realistisch prüfen.",
-        "image": "https://wahre-haustierliebe.de/assets/images/horse-paddocks-shelter.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/pferde.png",
         "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
-        "imageWidth": 640,
-        "imageHeight": 480
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -234,12 +234,12 @@
         "Kaninchen"
       ],
       "social": {
-        "title": "Kastration verhindert Leid",
+        "title": "Kastration verhindert Leid - Wa(h)re Haustier(liebe)",
         "description": "Fakten zu Katzen, Hunden, Kaninchen, Kosten, Kastrationspflicht und typischen Mythen rund um Kastration.",
-        "image": "https://wahre-haustierliebe.de/assets/images/feral-cat-tnr.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/kastration.png",
         "imageAlt": "Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration.",
-        "imageWidth": 432,
-        "imageHeight": 324
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -258,10 +258,10 @@
       "social": {
         "title": "Qualzucht erkennen, bevor Nachfrage Leid finanziert",
         "description": "Atemnot, Schmerzen, Gendefekte und extreme Körperformen bei Hunden, Katzen, Kaninchen, Vögeln und Exoten.",
-        "image": "https://wahre-haustierliebe.de/assets/images/qualzucht-mops.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/qualzucht.png",
         "imageAlt": "Mops als Beispiel für problematische Zuchtmerkmale.",
-        "imageWidth": 960,
-        "imageHeight": 639
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -278,12 +278,12 @@
         "Pflegestelle"
       ],
       "social": {
-        "title": "Adoption statt Kauf",
+        "title": "Adoption statt Kauf - Wa(h)re Haustier(liebe)",
         "description": "Warum Tierheim, Pflegestelle, Schutzgebühr und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.",
-        "image": "https://wahre-haustierliebe.de/assets/images/tierheim-hund.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/adoption.png",
         "imageAlt": "Hund im Tierheim als klares Bild für Adoption statt Kauf.",
-        "imageWidth": 960,
-        "imageHeight": 1280
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -300,12 +300,12 @@
         "Betreuung"
       ],
       "social": {
-        "title": "Der Haustier-Selbsttest",
+        "title": "Der Haustier-Selbsttest - Wa(h)re Haustier(liebe)",
         "description": "15 ehrliche Fragen zu Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.",
-        "image": "https://wahre-haustierliebe.de/assets/images/cats-cat-tree-pair.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/selbsttest.png",
         "imageAlt": "Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung.",
-        "imageWidth": 1920,
-        "imageHeight": 1507
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -322,12 +322,12 @@
         "Warnsignale"
       ],
       "social": {
-        "title": "Wann du sofort handeln musst",
+        "title": "Wann du sofort handeln musst - Wa(h)re Haustier(liebe)",
         "description": "Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale klar einordnen.",
-        "image": "https://wahre-haustierliebe.de/assets/images/vet-office-with-dog.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/notfall.png",
         "imageAlt": "Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.",
-        "imageWidth": 2048,
-        "imageHeight": 1536
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -345,10 +345,10 @@
       "social": {
         "title": "Tierärztlicher Notdienst nach Bundesland",
         "description": "Offizielle Kammern, Notrufnummern und regionale Systeme, damit du im Ernstfall schneller richtig suchst.",
-        "image": "https://wahre-haustierliebe.de/assets/images/vet-office-with-dog.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/tierarzt-notdienst.png",
         "imageAlt": "Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.",
-        "imageWidth": 2048,
-        "imageHeight": 1536
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -364,12 +364,12 @@
         "Tierschutzwissen"
       ],
       "social": {
-        "title": "Was stimmt wirklich?",
+        "title": "Was stimmt wirklich? - Wa(h)re Haustier(liebe)",
         "description": "Mythen, Homöopathie, Fachbegriffe und Tierschutzwissen verständlich, kritisch und ohne Werbeinteresse.",
-        "image": "https://wahre-haustierliebe.de/assets/images/goldfish-aquarium.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/wissen.png",
         "imageAlt": "Goldfische im Aquarium als Bild für hartnäckige Haustiermythen.",
-        "imageWidth": 1920,
-        "imageHeight": 1309
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -388,10 +388,10 @@
       "social": {
         "title": "Zehn Minuten können lebensgefährlich sein",
         "description": "Warum Autos sich schnell aufheizen, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.",
-        "image": "https://wahre-haustierliebe.de/assets/images/vet-office-with-dog.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/hitzefalle-auto.png",
         "imageAlt": "Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress.",
-        "imageWidth": 2048,
-        "imageHeight": 1536
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -410,10 +410,10 @@
       "social": {
         "title": "Katzen, Hunde, vegane Ernährung und Taurin",
         "description": "Warum Katzen und Hunde ernährungsphysiologisch verschieden sind und Futter nicht einfach austauschbar ist.",
-        "image": "https://wahre-haustierliebe.de/assets/images/two-cats-window.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/ernaehrung-taurin.png",
         "imageAlt": "Zwei Katzen am Fenster als Bild für katzenspezifische Bedürfnisse.",
-        "imageWidth": 843,
-        "imageHeight": 954
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -431,10 +431,10 @@
       "social": {
         "title": "Realhaltung vs. vertretbare Haltung",
         "description": "Warum übliche Haustierhaltung oft nicht reicht und der Kaufpreis nie die echten Kosten eines Tieres zeigt.",
-        "image": "https://wahre-haustierliebe.de/assets/images/hamster-home-built-enclosure.png",
+        "image": "https://wahre-haustierliebe.de/assets/social/realhaltung.png",
         "imageAlt": "Großes selbst gebautes Hamstergehege als Gegenbild zur Käfighaltung.",
-        "imageWidth": 1280,
-        "imageHeight": 685
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -451,12 +451,12 @@
         "Adoption"
       ],
       "social": {
-        "title": "Zucht, Vermehrung und Adoption",
+        "title": "Zucht, Vermehrung und Adoption - Wa(h)re Haustier(liebe)",
         "description": "Warum zusätzliche Haustierproduktion problematisch bleibt, auch wenn sie sauberer wirkt als Vermehrung.",
-        "image": "https://wahre-haustierliebe.de/assets/images/animal-shelter-fundraiser.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/zucht-und-vermehrung.png",
         "imageAlt": "Tierschutzaktion als Bild für vorhandene Tiere statt weiterer Produktion.",
-        "imageWidth": 1920,
-        "imageHeight": 1372
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -475,10 +475,10 @@
       "social": {
         "title": "Private Wildtierhaltung: legal heißt nicht vertretbar",
         "description": "Bundesrecht, Landesrecht, Exoten, Gefahrtierhaltung und Wildschutz für Deutschland verständlich eingeordnet.",
-        "image": "https://wahre-haustierliebe.de/assets/images/exot-bartagame.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/wildtierhaltung.png",
         "imageAlt": "Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung.",
-        "imageWidth": 330,
-        "imageHeight": 212
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -493,12 +493,12 @@
         "Haustier warten"
       ],
       "social": {
-        "title": "Noch nicht bereit für ein Tier",
+        "title": "Noch nicht bereit für ein Tier - Wa(h)re Haustier(liebe)",
         "description": "Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie Tierschutz trotzdem geht.",
-        "image": "https://wahre-haustierliebe.de/assets/images/cat-soft-carrier.jpg",
+        "image": "https://wahre-haustierliebe.de/assets/social/noch-nicht-bereit.png",
         "imageAlt": "Katze in einer weichen Transportbox als Bild für Warten und Übergang.",
-        "imageWidth": 1254,
-        "imageHeight": 1638
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     },
     {
@@ -515,12 +515,12 @@
         "Stress"
       ],
       "social": {
-        "title": "Budgie Brain",
+        "title": "Budgie Brain - Wa(h)re Haustier(liebe)",
         "description": "Eine spielbare Simulation, die Schwarm, UV-Licht, Freiflug, Stress und Wellensittich-Alltag erfahrbar macht.",
-        "image": "https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
         "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
-        "imageWidth": 1536,
-        "imageHeight": 1024
+        "imageWidth": 1200,
+        "imageHeight": 630
       }
     }
   ]

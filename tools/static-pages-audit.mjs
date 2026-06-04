@@ -80,6 +80,7 @@ async function auditPage(page) {
   const title = firstGroup(html, /<title>([\s\S]*?)<\/title>/i).trim();
   const description = firstGroup(html, /<meta name="description" content="([^"]+)"/i).trim();
   const canonical = firstGroup(html, /<link rel="canonical" href="([^"]+)"/i).trim();
+  const ogTitle = firstGroup(html, /<meta property="og:title" content="([^"]+)"/i).trim();
   const ogUrl = firstGroup(html, /<meta property="og:url" content="([^"]+)"/i).trim();
   const ogImage = firstGroup(html, /<meta property="og:image" content="([^"]+)"/i).trim();
   const ogImageType = firstGroup(html, /<meta property="og:image:type" content="([^"]+)"/i).trim();
@@ -97,9 +98,10 @@ async function auditPage(page) {
 
   if (title.length < 20 || title.length > 90) issues.push(`bad-title-length:${title.length}`);
   if (description.length < 70 || description.length > 180) issues.push(`bad-description-length:${description.length}`);
+  if (ogTitle.length < 30 || ogTitle.length > 90) issues.push(`bad-og-title-length:${ogTitle.length}`);
   if (canonical !== page.canonical) issues.push(`canonical-mismatch:${canonical}`);
   if (ogUrl !== page.canonical) issues.push(`og-url-mismatch:${ogUrl}`);
-  if (!ogImage.startsWith(`${baseUrl}/assets/images/`)) issues.push(`bad-og-image:${ogImage}`);
+  if (!ogImage.startsWith(`${baseUrl}/assets/images/`) && !ogImage.startsWith(`${baseUrl}/assets/social/`)) issues.push(`bad-og-image:${ogImage}`);
   if (!['image/png', 'image/jpeg'].includes(ogImageType)) issues.push(`bad-og-image-type:${ogImageType}`);
   if (!Number.isInteger(Number(ogImageWidth)) || Number(ogImageWidth) <= 0) issues.push(`bad-og-image-width:${ogImageWidth}`);
   if (!Number.isInteger(Number(ogImageHeight)) || Number(ogImageHeight) <= 0) issues.push(`bad-og-image-height:${ogImageHeight}`);

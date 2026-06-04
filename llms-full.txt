@@ -10,8 +10,8 @@
 - Region: Deutschland, mit privatem Bezug zu Mecklenburg-Vorpommern
 - Charakter: privates Informationsprojekt, kein Verein, keine Tierarztpraxis, keine Rechtsberatung
 - Medizinischer Hinweis: Die Website ersetzt keine tierärztliche Beratung.
-- Social Preview: Jede öffentliche Seite hat Open-Graph- und X-Metadaten mit 1200x630-PNG-Card, Bild-Alttext und Canonical.
-- Default Preview: Die Startseite und Fallbacks verwenden das offizielle Wa(h)re-Haustier(liebe)-Logo.
+- Social Preview: Jede öffentliche Seite hat Open-Graph- und X-Metadaten mit 1200x630-PNG-Preview, Bild-Alttext und Canonical.
+- Default Preview: Die Startseite und Fallbacks verwenden das offizielle Wa(h)re-Haustier(liebe)-Logo, Unterseiten ihr erstes echtes Inhaltsbild.
 
 ## Important URLs
 

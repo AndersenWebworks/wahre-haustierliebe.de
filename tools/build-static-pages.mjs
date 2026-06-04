@@ -246,6 +246,8 @@ const faqByPage = {
 const brandLogo = 'assets/images/wahre-haustierliebe-logo.png';
 const brandMark = 'assets/images/wahre-haustierliebe-mark.png';
 const defaultSocialDescription = 'Ehrliche Aufklärung über Haustierhaltung, Tierwohl, Adoption, Qualzucht und Notfälle - privat, werbefrei und verständlich.';
+const socialCardWidth = 1200;
+const socialCardHeight = 630;
 
 const defaultSocialImage = {
   src: brandLogo,
@@ -548,20 +550,45 @@ function canonicalUrl(page) {
 function socialCopy(page) {
   const fallback = socialCopyByPage.startseite;
   const image = socialImage(page);
+  const rawTitle = socialCopyByPage[page.id]?.title || page.title;
   return {
     eyebrow: socialCopyByPage[page.id]?.eyebrow || fallback.eyebrow,
-    title: socialCopyByPage[page.id]?.title || page.title,
+    title: socialTitle(page, rawTitle),
     description: socialCopyByPage[page.id]?.description || page.description || defaultSocialDescription,
     alt: socialCopyByPage[page.id]?.alt || image.alt,
   };
+}
+
+function socialTitle(page, title) {
+  if (page.id === 'startseite') return 'Wa(h)re Haustier(liebe) - Tierschutz-Wiki';
+
+  const brandedTitle = `${title} - ${siteName}`;
+  if (title.length < 30 || (title.length < 45 && brandedTitle.length <= 60)) {
+    return brandedTitle;
+  }
+
+  return title;
 }
 
 function socialImagePath(page) {
   return socialImage(page).src;
 }
 
-function socialImage(page) {
+function sourceSocialImage(page) {
   return page.id === 'startseite' ? defaultSocialImage : firstContentImageByPage[page.id] || defaultSocialImage;
+}
+
+function socialImage(page) {
+  const source = sourceSocialImage(page);
+  const usesDefault = source.src === defaultSocialImage.src;
+  return {
+    ...source,
+    sourceSrc: source.src,
+    src: `assets/social/${usesDefault ? 'default' : page.id}.png`,
+    width: socialCardWidth,
+    height: socialCardHeight,
+    type: 'image/png',
+  };
 }
 
 function socialImageUrl(page) {
@@ -1001,8 +1028,8 @@ function mimeTypeFor(relativePath) {
   return 'application/octet-stream';
 }
 
-async function buildAssetDataUrls() {
-  const assets = new Set([brandLogo, brandMark]);
+async function buildAssetDataUrls(assetsToLoad = [brandLogo, brandMark]) {
+  const assets = new Set(assetsToLoad);
   const result = new Map();
   for (const asset of assets) {
     const buffer = await fs.readFile(path.join(projectRoot, asset));
@@ -1023,6 +1050,27 @@ function iconHtml(size, assetUrls) {
   </style>
 </head>
 <body><div class="icon"><img src="${assetUrls.get(brandMark)}" alt=""></div></body>
+</html>`;
+}
+
+function socialImageHtml(source, assetUrls, mode) {
+  const isLogo = mode === 'logo';
+  return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; width: ${socialCardWidth}px; height: ${socialCardHeight}px; overflow: hidden; background: #f7efe3; }
+    .card { width: ${socialCardWidth}px; height: ${socialCardHeight}px; display: grid; place-items: center; background: #f7efe3; }
+    img { display: block; }
+    .photo { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .logo { width: 56%; height: 58%; object-fit: contain; object-position: center; }
+  </style>
+</head>
+<body>
+  <div class="card"><img class="${isLogo ? 'logo' : 'photo'}" src="${assetUrls.get(source.src)}" alt=""></div>
+</body>
 </html>`;
 }
 
@@ -1047,6 +1095,31 @@ async function generateBrandIcons() {
       path.join(projectRoot, 'assets', 'icons', name),
       { width: size, height: size },
     );
+  }
+
+  await browser.close();
+}
+
+async function generateSocialImages() {
+  const chromium = await loadChromium();
+  const browser = await chromium.launch();
+  const sourceAssets = pages.map((page) => sourceSocialImage(page).src);
+  const assetUrls = await buildAssetDataUrls(sourceAssets);
+  await fs.mkdir(path.join(projectRoot, 'assets', 'social'), { recursive: true });
+  const generated = new Set();
+
+  for (const page of pages) {
+    const source = sourceSocialImage(page);
+    const social = socialImage(page);
+    if (generated.has(social.src)) continue;
+    const usesLogo = source.src === defaultSocialImage.src;
+    await screenshotHtml(
+      browser,
+      socialImageHtml(source, assetUrls, usesLogo ? 'logo' : 'photo'),
+      path.join(projectRoot, social.src),
+      { width: socialCardWidth, height: socialCardHeight },
+    );
+    generated.add(social.src);
   }
 
   await browser.close();
@@ -1111,8 +1184,8 @@ function buildLlmsFull() {
     '- Region: Deutschland, mit privatem Bezug zu Mecklenburg-Vorpommern',
     '- Charakter: privates Informationsprojekt, kein Verein, keine Tierarztpraxis, keine Rechtsberatung',
     '- Medizinischer Hinweis: Die Website ersetzt keine tierärztliche Beratung.',
-    '- Social Preview: Jede öffentliche Seite hat Open-Graph- und X-Metadaten mit 1200x630-PNG-Card, Bild-Alttext und Canonical.',
-    '- Default Preview: Die Startseite und Fallbacks verwenden das offizielle Wa(h)re-Haustier(liebe)-Logo.',
+    '- Social Preview: Jede öffentliche Seite hat Open-Graph- und X-Metadaten mit 1200x630-PNG-Preview, Bild-Alttext und Canonical.',
+    '- Default Preview: Die Startseite und Fallbacks verwenden das offizielle Wa(h)re-Haustier(liebe)-Logo, Unterseiten ihr erstes echtes Inhaltsbild.',
     '',
     '## Important URLs',
     '',
@@ -1167,8 +1240,8 @@ function buildLlmsShort() {
     '',
     '## Für Such- und KI-Systeme',
     '',
-    '- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und eine 1200x630-Social-Card.',
-    '- Startseite und Fallback-Preview nutzen das offizielle Logo.',
+    '- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und ein 1200x630-Social-Bild.',
+    '- Startseite und Fallback-Preview nutzen das offizielle Logo, Unterseiten ihr erstes echtes Inhaltsbild.',
     '- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json und /ai/faq.json.',
     '',
     'Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt',
@@ -1229,10 +1302,10 @@ function buildAiSite() {
       'Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien.',
     ],
     socialPreview: {
-      defaultImage: `${baseUrl}/${defaultSocialImage.src}`,
-      width: defaultSocialImage.width,
-      height: defaultSocialImage.height,
-      format: defaultSocialImage.type,
+      defaultImage: socialImageUrl(pageById.get('startseite')),
+      width: socialCardWidth,
+      height: socialCardHeight,
+      format: 'image/png',
     },
     machineReadableEndpoints: [
       `${baseUrl}/llms.txt`,
@@ -1278,6 +1351,7 @@ async function main() {
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
   await generateBrandIcons();
+  await generateSocialImages();
 
   for (const page of pages) {
     if (page.staticOnly) {
