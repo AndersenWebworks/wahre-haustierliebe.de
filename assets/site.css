@@ -2127,6 +2127,12 @@
       border-color: rgba(255, 254, 250, 0.22) !important;
     }
 
+    .footer-credit {
+      margin-top: 0.5rem;
+      color: rgba(255, 254, 250, 0.74);
+      font-weight: 700;
+    }
+
     .footer-bottom {
       color: rgba(255, 254, 250, 0.62);
     }
