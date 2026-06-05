@@ -267,6 +267,19 @@ function normalizeAssetUrls(root) {
       ],
       hunde: [
         {
+          afterHeading: 'Soziale Bedürfnisse',
+          html: `<div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Ein Hund braucht Aufgaben, die ihn ruhiger und sicherer machen.</h3>
+            <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen", sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Nasenarbeit</span><h3>Suchen statt hochdrehen</h3><p>Futterbeutel, Geruchsspuren oder versteckte Leckerchen lasten viele Hunde besser aus als immer mehr Tempo.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Alltagssignale</span><h3>Nützlich trainieren</h3><p>Rückruf, Decke, Warten, Tauschen und ruhiges Anleinen sind keine Kunststücke, sondern echte Sicherheit im Alltag.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Ruhe</span><h3>Entspannung lernen</h3><p>Nach Beschäftigung braucht ein Hund Schlaf und Reizpause. Dauerprogramm macht viele Hunde nicht glücklich, sondern nervös.</p></article>
+            </div>
+          </div>`
+        },
+        {
           afterHeading: 'Bevor du dich entscheidest',
           html: `<div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
@@ -280,6 +293,19 @@ function normalizeAssetUrls(root) {
         }
       ],
       katzen: [
+        {
+          afterHeading: 'Wohnungshaltung',
+          html: `<div class="article-rhythm" data-enhancement="katzen-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Wohnungskatzen brauchen Jagd, Kontrolle und Rückzug.</h3>
+            <p>Spielzeug allein reicht nicht. Entscheidend ist, ob die Katze wählen, beobachten, jagen, klettern und sich ungestört zurückziehen kann.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Jagdspiel</span><h3>Richtig spielen</h3><p>Kurze Einheiten mit Lauern, Hetzen, Fangen und danach Futter passen besser zur Katze als hektisches Wedeln vor der Nase.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Futter erarbeiten</span><h3>Nicht nur Napf</h3><p>Fummelbretter, Suchspiele und versteckte Trockenfutterstücke bringen Beschäftigung in den Alltag, ohne die Katze zu überfordern.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Clicker</span><h3>Freiwillige Tricks</h3><p>Targettraining oder Pfote geben kann Spaß machen, wenn die Katze jederzeit gehen darf und die Einheit kurz bleibt.</p></article>
+            </div>
+          </div>`
+        },
         {
           afterHeading: 'Einzeljäger bedeutet nicht Einzelgänger',
           html: `<div class="article-rhythm myth-truth" data-enhancement="katzen-einzeljaeger">
@@ -314,9 +340,35 @@ function normalizeAssetUrls(root) {
             <h3>Teflon kann Vögel in Minuten töten</h3>
             <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küchenluft und Vogelzimmer gehören getrennt.</p>
           </div>`
+        },
+        {
+          afterHeading: 'Spiegel und Plastikvögel ersetzen keinen Partner',
+          html: `<div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Vögel brauchen Reize, die zu Schwarm, Flug und Futtersuche passen.</h3>
+            <p>Der wichtigste „Trick" ist nicht, dass ein Vogel etwas für Menschen vorführt. Wichtig ist eine Umgebung, in der er selbst aktiv sein kann.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Futtersuche</span><h3>Erarbeiten lassen</h3><p>Kräuter, Gräser, Kolbenhirse oder Futter an wechselnden Stellen regen natürliches Suchen und Knabbern an.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Klettern</span><h3>Frische Zweige</h3><p>Ungiftige Naturäste, Schaukeln und Landeplätze machen den Raum interessanter als Plastikstangen im Käfig.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Schwarm</span><h3>Gemeinsam statt zahm erzwingen</h3><p>Rituale, Ansprache und freiwilliges Targettraining können bereichern. Ein Partner bleibt trotzdem unersetzlich.</p></article>
+            </div>
+          </div>`
         }
       ],
       kleintiere: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm" data-enhancement="kleintiere-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Kleintiere brauchen Struktur, nicht Kinderzimmer-Bespaßung.</h3>
+            <p>Bei vielen Kleintieren ist die beste Beschäftigung ein Lebensraum, der Buddeln, Verstecken, Klettern, Nagen und Futtersuche ermöglicht.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Kaninchen & Meerschweinchen</span><h3>Gehege gestalten</h3><p>Tunnel, erhöhte Ebenen, Häuschen mit zwei Ausgängen, Zweige und verteiltes Frischfutter machen den Alltag reicher.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Hamster</span><h3>Graben dürfen</h3><p>Tiefe Einstreu, Sandbad, sichere Verstecke und verstreutes Körnerfutter sind wichtiger als Anfassen oder Wecken.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Ratten</span><h3>Lernen und klettern</h3><p>Ratten profitieren von Kletterwegen, Auslauf, Futterrätseln und freiwilligem Target- oder Namenstraining.</p></article>
+            </div>
+          </div>`
+        },
         {
           afterHeading: 'Kaninchen',
           html: `<div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
@@ -336,6 +388,19 @@ function normalizeAssetUrls(root) {
       exoten: [
         {
           afterHeading: 'Reptilien',
+          html: `<div class="article-rhythm" data-enhancement="exoten-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Bei Exoten heißt Beschäftigung vor allem: Lebensraum richtig bauen.</h3>
+            <p>Viele Exoten wollen keine Tricks lernen. Sie brauchen Klima, Licht, Verstecke, Klettermöglichkeiten und Futterreize, die zu ihrer Art passen.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Reptilien</span><h3>Zonen statt Deko</h3><p>Wärmeplätze, kühlere Bereiche, Korkröhren, Äste, Steine und Sichtschutz geben dem Tier echte Wahlmöglichkeiten.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Aquarium</span><h3>Umgebung statt Glas</h3><p>Pflanzen, Strömung, Verstecke, passende Gruppen und stabile Wasserwerte beschäftigen Fische besser als jeder Menschkontakt.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Schildkröten</span><h3>Freigehege strukturieren</h3><p>Sonnenplätze, Schatten, Futterpflanzen, Unebenheiten und Rückzug machen ein Gehege lebendiger und tiergerechter.</p></article>
+            </div>
+          </div>`
+        },
+        {
+          afterHeading: 'Reptilien',
           html: `<div class="article-rhythm metric-grid" data-enhancement="exoten-technik">
             <div class="metric-card"><strong>UV-B</strong><span>ohne passende Lampe drohen Knochen- und Organschäden.</span></div>
             <div class="metric-card"><strong>30–60 €</strong><span>monatliche Stromkosten sind bei Terrarien kein Ausnahmefall.</span></div>
@@ -351,6 +416,19 @@ function normalizeAssetUrls(root) {
         }
       ],
       pferde: [
+        {
+          afterHeading: 'Platzbedarf',
+          html: `<div class="article-rhythm" data-enhancement="pferde-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Pferde brauchen Bewegung, Beziehung und ruhige Lernmomente.</h3>
+            <p>Beschäftigung ersetzt keine Herde und keine Fläche. Sie kann aber helfen, Vertrauen, Körpergefühl und Alltagssicherheit aufzubauen.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Bodenarbeit</span><h3>Führen, weichen, warten</h3><p>Klare, ruhige Übungen vom Boden stärken Kommunikation, ohne dass jedes Zusammensein Reiten sein muss.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Gelassenheit</span><h3>Alltag üben</h3><p>Planen, Jacken, Geräusche, Hänger, Hufe geben: kleine Trainingseinheiten machen den Umgang sicherer und stressärmer.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Erkunden</span><h3>Spaziergänge und Handarbeit</h3><p>Gemeinsames Gehen, unterschiedliche Untergründe und ruhige Umwelterfahrung können Pferde sinnvoll beschäftigen.</p></article>
+            </div>
+          </div>`
+        },
         {
           afterHeading: 'Haltungsformen',
           html: `<div class="article-rhythm compare-mini" data-enhancement="pferde-haltung">
@@ -715,20 +793,13 @@ function normalizeAssetUrls(root) {
 
     // ===== ROUTING =====
     function navigateTo(page) {
-      var target = document.getElementById(page);
-      if (target && !target.classList.contains('page')) {
-        scrollElementIntoView(target, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
-        closeMobileNav();
-        closeDropdowns();
-        return;
-      }
-
       if (document.body && document.body.dataset.staticSite === 'true') {
         window.location.href = staticRouteFor(page);
         return;
       }
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
       document.querySelectorAll('.nav-link[data-page]').forEach(function(l) { l.classList.remove('active'); });
+      var target = document.getElementById(page);
       if (target) {
         target.classList.add('active');
         var link = document.querySelector('.nav-link[data-page="' + page + '"]');
@@ -845,7 +916,7 @@ function normalizeAssetUrls(root) {
         case 'Ich möchte das Projekt unterstützen oder zusammenarbeiten':
           return 'Ich möchte das Projekt unterstützen oder über eine Zusammenarbeit sprechen.';
         default:
-          return 'Ich melde mich über Wa(h)re Haustier(liebe).';
+          return 'Ich melde mich über Wa(h)re Haustierliebe.';
       }
     }
 
@@ -870,23 +941,40 @@ function normalizeAssetUrls(root) {
     function contactMailBody(payload) {
       var tierart = Array.isArray(payload.tierart) && payload.tierart.length ? payload.tierart.join(', ') : 'nicht angegeben';
       var name = payload.name || '';
-      return [
-        'Hallo,',
+      var lines = [
+        'Hallo Annemarie und Erik,',
         '',
         contactReasonSentence(payload.kontaktgrund),
-        '',
-        payload.message || '',
-        '',
-        'Meine Angaben:',
+        ''
+      ];
+
+      if (payload.message) {
+        lines.push(
+          'Meine Nachricht',
+          '----------------',
+          payload.message,
+          ''
+        );
+      }
+
+      lines.push(
+        'Meine Kontaktdaten',
+        '------------------',
         'Name: ' + (payload.name || '-'),
         'E-Mail: ' + (payload.email || '-'),
+        '',
+        'Angaben zur Anfrage',
+        '-------------------',
         'Kontaktgrund: ' + (payload.kontaktgrund || '-'),
         'Tierart: ' + tierart,
         'Seite: ' + (payload.pageUrl || '-'),
         '',
         'Viele Grüße',
-        name
-      ].join('\n');
+        name,
+        ''
+      );
+
+      return lines.join('\n');
     }
 
     function openContactMailDraft(form, payload) {
