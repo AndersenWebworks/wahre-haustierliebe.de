@@ -561,6 +561,18 @@
       color: var(--primary);
       text-decoration: underline;
     }
+    @media (max-width: 640px), (pointer: coarse) {
+      .glossary-term-popover {
+        position: fixed;
+        left: 0.75rem !important;
+        right: 0.75rem;
+        bottom: 0.75rem;
+        top: auto !important;
+        width: auto;
+        max-height: min(18rem, calc(100vh - 1.5rem));
+        overflow: auto;
+      }
+    }
 
     /* ========== ANIMAL NAV GRID ========== */
     .animal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
@@ -575,7 +587,7 @@
     }
     .animal-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
     .animal-card .icon { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
-    .animal-card span { font-weight: 600; font-size: 0.95rem; }
+    .animal-card > span { font-weight: 600; font-size: 0.95rem; }
 
     /* ========== FOOTER ========== */
     .site-footer {
@@ -1360,7 +1372,7 @@
       z-index: 1;
     }
 
-    .animal-card span:not(.icon) {
+    .animal-card > span:not(.icon) {
       color: var(--primary);
       font-size: 1.15rem;
       font-weight: 800;
@@ -1452,6 +1464,19 @@
     .share-focus p {
       color: rgba(255, 254, 250, 0.82) !important;
       margin-bottom: 1rem !important;
+    }
+
+    .share-focus .glossary-term {
+      color: var(--white);
+      font-weight: 800;
+      text-decoration-color: rgba(247, 184, 96, 0.88);
+    }
+
+    .share-focus .glossary-term:hover,
+    .share-focus .glossary-term.is-active,
+    .share-focus .glossary-term.is-open {
+      color: var(--accent-light);
+      text-decoration-color: var(--accent-light);
     }
 
     .share-focus .share-bar {
@@ -2465,12 +2490,19 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
-    .animal-card span:not(.icon):not(.animal-card-caption) {
+    .animal-card > span:not(.icon):not(.animal-card-caption) {
       padding: 1rem 1rem 0.25rem;
     }
 
     .animal-card small {
       padding: 0 1rem 1.15rem;
+    }
+
+    .animal-card small .glossary-term {
+      padding: 0;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
     }
 
     .card-media {

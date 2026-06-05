@@ -1022,6 +1022,7 @@ function normalizeAssetUrls(root) {
     var glossaryTooltip = null;
     var activeGlossaryTrigger = null;
     var glossaryTooltipReady = false;
+    var glossaryHideTimer = null;
 
     function initGlossaryTooltips() {
       if (glossaryTooltipReady) return;
@@ -1041,13 +1042,43 @@ function normalizeAssetUrls(root) {
 
       triggers.forEach(function(trigger) {
         trigger.setAttribute('aria-describedby', 'glossary-term-popover');
+        if (!trigger.closest('a')) {
+          trigger.setAttribute('tabindex', '0');
+          trigger.setAttribute('role', 'button');
+        }
 
         trigger.addEventListener('mouseenter', function() {
+          cancelGlossaryTooltipHide();
           showGlossaryTooltip(trigger, false);
         });
 
         trigger.addEventListener('mouseleave', function() {
           if (activeGlossaryTrigger === trigger && !trigger.classList.contains('is-open')) {
+            scheduleGlossaryTooltipHide();
+          }
+        });
+
+        trigger.addEventListener('focus', function() {
+          cancelGlossaryTooltipHide();
+          showGlossaryTooltip(trigger, false);
+        });
+
+        trigger.addEventListener('blur', function() {
+          if (activeGlossaryTrigger === trigger && !trigger.classList.contains('is-open')) {
+            scheduleGlossaryTooltipHide();
+          }
+        });
+
+        trigger.addEventListener('keydown', function(event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            if (activeGlossaryTrigger === trigger && trigger.classList.contains('is-open')) {
+              hideGlossaryTooltip();
+              return;
+            }
+            showGlossaryTooltip(trigger, true);
+          }
+          if (event.key === 'Escape') {
             hideGlossaryTooltip();
           }
         });
@@ -1067,6 +1098,14 @@ function normalizeAssetUrls(root) {
         event.stopPropagation();
       });
 
+      glossaryTooltip.addEventListener('mouseenter', cancelGlossaryTooltipHide);
+
+      glossaryTooltip.addEventListener('mouseleave', function() {
+        if (activeGlossaryTrigger && !activeGlossaryTrigger.classList.contains('is-open')) {
+          scheduleGlossaryTooltipHide();
+        }
+      });
+
       document.addEventListener('click', function(event) {
         if (event.target.closest('.glossary-term') || event.target.closest('.glossary-term-popover')) return;
         hideGlossaryTooltip();
@@ -1080,8 +1119,22 @@ function normalizeAssetUrls(root) {
       }, { passive: true });
     }
 
+    function cancelGlossaryTooltipHide() {
+      if (!glossaryHideTimer) return;
+      window.clearTimeout(glossaryHideTimer);
+      glossaryHideTimer = null;
+    }
+
+    function scheduleGlossaryTooltipHide() {
+      cancelGlossaryTooltipHide();
+      glossaryHideTimer = window.setTimeout(function() {
+        hideGlossaryTooltip();
+      }, 240);
+    }
+
     function showGlossaryTooltip(trigger, keepOpen) {
       if (!glossaryTooltip) return;
+      cancelGlossaryTooltipHide();
 
       document.querySelectorAll('.glossary-term.is-active, .glossary-term.is-open').forEach(function(term) {
         term.classList.remove('is-active', 'is-open');
@@ -1109,6 +1162,7 @@ function normalizeAssetUrls(root) {
 
     function hideGlossaryTooltip() {
       if (!glossaryTooltip) return;
+      cancelGlossaryTooltipHide();
       glossaryTooltip.classList.remove('is-visible');
       document.querySelectorAll('.glossary-term.is-active, .glossary-term.is-open').forEach(function(term) {
         term.classList.remove('is-active', 'is-open');
