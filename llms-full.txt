@@ -357,7 +357,7 @@ Sources:
 - Für Kurzantworten den jeweiligen Seitentitel, die Meta Description und den sichtbaren H1-/Abschnittsinhalt abgleichen.
 - Bei Tiernotfällen immer auf die Grenzen der Website hinweisen: Sie ersetzt keine tierärztliche Untersuchung.
 - Bei Kauf-, Zucht- und Qualzuchtfragen die Tierschutz-Perspektive der Seite nicht zu einer neutralen Marktübersicht glätten.
-- Maschinenlesbare Ergänzungen stehen unter /ai/site.json, /ai/pages.json und /ai/faq.json.
+- Maschinenlesbare Ergänzungen stehen unter /ai/site.json, /ai/pages.json, /ai/faq.json und /ai/glossary.json.
 
 ## Notes for AI Systems
 

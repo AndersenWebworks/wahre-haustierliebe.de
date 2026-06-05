@@ -1,0 +1,672 @@
+{
+  "lastUpdated": "2026-06-05",
+  "site": "Wa(h)re Haustier(liebe)",
+  "url": "https://wahre-haustierliebe.de/glossar/index.html",
+  "terms": [
+    {
+      "key": "adoption",
+      "title": "Adoption",
+      "summary": "Aufnahme eines bereits vorhandenen Tieres aus Tierheim, Tierschutz oder Pflegestelle statt Kauf aus neuer Zucht oder Handel.",
+      "description": "Aufnahme eines bereits vorhandenen Tieres aus Tierheim, Tierschutz oder Pflegestelle. Adoption vermeidet zusätzliche Nachfrage nach neu produzierten Haustieren.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#adoption"
+    },
+    {
+      "key": "albinismus",
+      "title": "Albinismus",
+      "summary": "Pigmentmangel, der bei Tieren je nach Art zu Lichtempfindlichkeit, Sehproblemen und Zuchtrisiken führen kann.",
+      "description": "Pigmentmangel, der Haut, Augen und Fell oder Schuppen betrifft. Bei gezielter Zucht auf Albinismus können Lichtempfindlichkeit, Sehprobleme und weitere Belastungen entstehen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#albinismus"
+    },
+    {
+      "key": "alleinfutter",
+      "title": "Alleinfutter",
+      "summary": "Futter, das laut Zusammensetzung den vollständigen Bedarf eines Tieres dauerhaft decken soll.",
+      "description": "Futter, das den vollständigen Bedarf eines Tieres dauerhaft decken soll. Besonders bei Katzen, Welpen, kranken oder alten Tieren ist entscheidend, ob es wirklich zur Art und Lebensphase passt.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#alleinfutter"
+    },
+    {
+      "key": "anbindehaltung",
+      "title": "Anbindehaltung",
+      "summary": "Haltung, bei der ein Tier dauerhaft oder lange angebunden ist und sich kaum frei bewegen kann.",
+      "description": "Haltung, bei der ein Tier dauerhaft oder über lange Zeiten angebunden ist. Bei Pferden verhindert sie Drehen, Liegen, freie Bewegung und normale Sozialkontakte.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#anbindehaltung"
+    },
+    {
+      "key": "apathie",
+      "title": "Apathie",
+      "summary": "Auffällige Teilnahmslosigkeit. Bei Tieren oft ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit.",
+      "description": "Auffällige Teilnahmslosigkeit, Schwäche oder fehlende Reaktion auf Umweltreize. Bei Tieren ist Apathie oft ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#apathie"
+    },
+    {
+      "key": "artenschutz",
+      "title": "Artenschutz",
+      "summary": "Regeln zum Schutz gefährdeter Arten, etwa zu Herkunft, Handel, Nachweisen und Meldepflichten.",
+      "description": "Schutz gefährdeter Tier- und Pflanzenarten. In der Heimtierhaltung betrifft Artenschutz vor allem Herkunftsnachweise, Handel, CITES-Papiere und Meldepflichten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#artenschutz"
+    },
+    {
+      "key": "artgenosse",
+      "title": "Artgenosse",
+      "summary": "Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen.",
+      "description": "Ein Tier derselben Art. Für viele soziale Haustiere sind passende Artgenossen unverzichtbar; andere Arten ersetzen die eigene Sozialstruktur nicht zuverlässig.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#artgenosse"
+    },
+    {
+      "key": "artgerecht",
+      "title": "Artgerecht",
+      "summary": "Haltung, die sich an den Bedürfnissen der Tierart orientiert: Platz, Sozialstruktur, Futter, Klima und Beschäftigung.",
+      "description": "Haltung, die den natürlichen Bedürfnissen einer Tierart entspricht: Platz, Sozialstruktur, Ernährung, Beschäftigung, Klima, Rückzug und Gesundheitsvorsorge.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#artgerecht"
+    },
+    {
+      "key": "atemnot",
+      "title": "Atemnot",
+      "summary": "Erschwerte oder auffällige Atmung. Bei Tieren immer ernst nehmen und im Zweifel sofort tierärztlich abklären.",
+      "description": "Erschwerte, schnelle, laute oder sichtbar angestrengte Atmung. Atemnot ist bei Tieren ein Notfallzeichen und sollte sofort tierärztlich abgeklärt werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#atemnot"
+    },
+    {
+      "key": "beutetier",
+      "title": "Beutetier",
+      "summary": "Tierart, die in der Natur gejagt wird und Schwäche oft instinktiv verbirgt.",
+      "description": "Tierart, die in der Natur selbst Beute sein kann. Viele Beutetiere verbergen Schmerz und Krankheit instinktiv, weshalb sichtbare Symptome oft spät auftreten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#beutetier"
+    },
+    {
+      "key": "boxenhaltung",
+      "title": "Boxenhaltung",
+      "summary": "Pferdehaltung in Einzelboxen. Nur vertretbar, wenn täglich viel Bewegung und Sozialkontakt gesichert sind.",
+      "description": "Pferdehaltung in Einzelboxen. Sie kann soziale und körperliche Bedürfnisse stark einschränken und ist nur mit täglichem Auslauf, Bewegung und Sozialkontakt vertretbar.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#boxenhaltung"
+    },
+    {
+      "key": "brachyzephales-atemwegssyndrom",
+      "title": "Brachyzephales Atemwegssyndrom",
+      "summary": "Atemwegsproblem kurzköpfiger Rassen durch verengte Nasen, Gaumen, Kehlkopf oder Luftröhre.",
+      "description": "Atemwegsproblem kurzköpfiger Rassen. Verengte Nasenlöcher, verlängertes Gaumensegel, Kehlkopf- und Luftröhrenprobleme können Atmung, Schlaf und Belastbarkeit massiv einschränken.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#brachyzephales-atemwegssyndrom"
+    },
+    {
+      "key": "brachyzephalie",
+      "title": "Brachyzephalie",
+      "summary": "Extrem verkürzte Schädelform, die häufig zu Atemnot, Augenproblemen und Hitzeempfindlichkeit führt.",
+      "description": "Extrem verkürzte Schädelform. Bei Hunden und Katzen kann sie zu chronischer Atemnot, Augenproblemen, Zahnfehlstellungen und hoher Hitzeempfindlichkeit führen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#brachyzephalie"
+    },
+    {
+      "key": "brut-und-setzzeit",
+      "title": "Brut- und Setzzeit",
+      "summary": "Zeit, in der Wildtiere brüten oder Jungtiere setzen. Hunde sollten dann besonders kontrolliert und oft angeleint werden.",
+      "description": "Zeit, in der Wildtiere brüten, Nachwuchs setzen oder Jungtiere aufziehen. Störungen durch freilaufende Hunde können in dieser Phase besonders schweren Schaden anrichten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#brut-und-setzzeit"
+    },
+    {
+      "key": "chippen",
+      "title": "Chippen",
+      "summary": "Einsetzen eines Mikrochips unter die Haut, damit ein Tier eindeutig identifizierbar ist.",
+      "description": "Einsetzen eines Mikrochips, meist unter die Haut am Hals. Der Chip trägt eine eindeutige Nummer; erst die Registrierung macht ihn für Rückvermittlung wirklich nützlich.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#chippen"
+    },
+    {
+      "key": "cites",
+      "title": "CITES",
+      "summary": "Washingtoner Artenschutzübereinkommen zum internationalen Handel mit gefährdeten Arten.",
+      "description": "Washingtoner Artenschutzübereinkommen. Es regelt den internationalen Handel mit gefährdeten Tier- und Pflanzenarten und betrifft viele Reptilien, Schildkröten und Exoten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#cites"
+    },
+    {
+      "key": "einzelgaenger",
+      "title": "Einzelgänger",
+      "summary": "Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet.",
+      "description": "Tier, das überwiegend allein lebt und Artgenossen nicht dauerhaft braucht. Bei Katzen wird der Begriff häufig falsch verwendet, weil Einzeljagd nicht automatisch Einzelhaltung bedeutet.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#einzelgaenger"
+    },
+    {
+      "key": "einzeljaeger",
+      "title": "Einzeljäger",
+      "summary": "Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will.",
+      "description": "Tiere, die allein jagen, etwa Katzen. Einzeljagd bedeutet nicht automatisch, dass ein Tier sozial isoliert leben möchte.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#einzeljaeger"
+    },
+    {
+      "key": "evidenzbasierte-medizin",
+      "title": "Evidenzbasierte Medizin",
+      "summary": "Medizin, die sich an überprüfbaren Studien, systematischer Erfahrung und fachlicher Diagnostik orientiert.",
+      "description": "Medizinische Praxis, die sich an überprüfbaren Studien, systematischer Erfahrung und fachlicher Diagnostik orientiert, statt nur an Anekdoten oder Glaubenssätzen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#evidenzbasierte-medizin"
+    },
+    {
+      "key": "felv",
+      "title": "FeLV",
+      "summary": "Virusinfektion bei Katzen, die Immunsystem und Blutbildung schwächen und Tumore begünstigen kann.",
+      "description": "Felines Leukämievirus. Eine ansteckende Virusinfektion bei Katzen, die Immunsystem und Blutbildung schwächen und Tumorerkrankungen begünstigen kann.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#felv"
+    },
+    {
+      "key": "fiv",
+      "title": "FIV",
+      "summary": "Felines Immundefizienz-Virus. Wird vor allem durch tiefe Bissverletzungen übertragen.",
+      "description": "Felines Immundefizienz-Virus, oft ungenau „Katzen-AIDS“ genannt. Es schwächt das Immunsystem und wird hauptsächlich durch tiefe Bissverletzungen übertragen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#fiv"
+    },
+    {
+      "key": "fluchttier",
+      "title": "Fluchttier",
+      "summary": "Tier, das auf Gefahr zuerst mit Flucht reagiert und Festhalten oder Hochheben oft als Bedrohung erlebt.",
+      "description": "Tier, das auf Gefahr instinktiv mit Flucht reagiert. Viele Fluchttiere erleben Hochheben, Festhalten, Lärm oder bedrängenden Kontakt als Stress.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#fluchttier"
+    },
+    {
+      "key": "freiflug",
+      "title": "Freiflug",
+      "summary": "Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum.",
+      "description": "Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum. Für viele Heimvögel ist Freiflug Grundbedürfnis, nicht Zusatzbeschäftigung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#freiflug"
+    },
+    {
+      "key": "freigang",
+      "title": "Freigang",
+      "summary": "Unbeaufsichtigter oder kontrollierter Zugang nach draußen, besonders bei Katzen ein wichtiger, aber riskanter Haltungsaspekt.",
+      "description": "Zugang nach draußen. Bei Katzen kann Freigang Verhalten und Revierbedürfnisse erfüllen, bringt aber Risiken wie Verkehr, Krankheiten, Revierkämpfe und unkontrollierte Vermehrung mit sich.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#freigang"
+    },
+    {
+      "key": "fruehkastration",
+      "title": "Frühkastration",
+      "summary": "Kastration vor der Geschlechtsreife, bei Katzen oft vor der ersten Rolligkeit.",
+      "description": "Kastration vor der Geschlechtsreife. Bei Katzen bedeutet das häufig vor der ersten Rolligkeit und kann unkontrollierte Vermehrung sowie bestimmte Risiken deutlich reduzieren.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#fruehkastration"
+    },
+    {
+      "key": "gefahrtier",
+      "title": "Gefahrtier",
+      "summary": "Tier, das wegen Größe, Gift, Kraft oder Verhalten besondere Sicherheitsanforderungen stellt.",
+      "description": "Tier, das wegen Größe, Gift, Kraft, Jagdverhalten oder Unberechenbarkeit besondere Sicherheitsanforderungen stellt. Die Regeln unterscheiden sich je nach Bundesland.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#gefahrtier"
+    },
+    {
+      "key": "gendefekt",
+      "title": "Gendefekt",
+      "summary": "Erbliche Veränderung, die Gesundheit, Körperbau oder normale Funktion eines Tieres beeinträchtigen kann.",
+      "description": "Erbliche Veränderung, die Gesundheit, Körperbau oder normale Funktion eines Tieres beeinträchtigen kann. In der Zucht können solche Defekte bewusst oder unbewusst weitergegeben werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#gendefekt"
+    },
+    {
+      "key": "globuli",
+      "title": "Globuli",
+      "summary": "Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar.",
+      "description": "Kleine Zuckerkügelchen aus der Homöopathie. Sie dienen als Träger für potenzierte Substanzen; in üblichen Potenzen ist kein Wirkstoff mehr nachweisbar.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#globuli"
+    },
+    {
+      "key": "got",
+      "title": "GOT",
+      "summary": "Gebührenordnung für Tierärzte. Sie regelt, wie tierärztliche Leistungen in Deutschland abgerechnet werden.",
+      "description": "Gebührenordnung für Tierärzte. Sie regelt die Abrechnung tierärztlicher Leistungen in Deutschland und erklärt, warum Tierarztkosten nicht frei erfunden sind.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#got"
+    },
+    {
+      "key": "harnroehrenverschluss",
+      "title": "Harnröhrenverschluss",
+      "summary": "Blockierter Urinabsatz, besonders bei Katern lebensgefährlich und ein sofortiger Notfall.",
+      "description": "Blockierter oder unmöglicher Urinabsatz. Besonders bei Katern kann ein Harnröhrenverschluss schnell lebensgefährlich werden und braucht sofortige tierärztliche Hilfe.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#harnroehrenverschluss"
+    },
+    {
+      "key": "hecheln",
+      "title": "Hecheln",
+      "summary": "Schnelle Atmung über Maul und Zunge. Bei Hunden wichtig zur Kühlung, bei Stress oder Hitze aber ein Warnsignal.",
+      "description": "Schnelle Atmung über Maul und Zunge. Hunde nutzen Hecheln zur Kühlung; starkes, hektisches oder anhaltendes Hecheln kann aber Stress, Schmerzen oder Überhitzung anzeigen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#hecheln"
+    },
+    {
+      "key": "herdentier",
+      "title": "Herdentier",
+      "summary": "Tierart, die soziale Sicherheit aus einer Gruppe zieht. Alleinhaltung erzeugt oft massiven Stress.",
+      "description": "Tierart, die in Gruppen lebt und soziale Sicherheit aus Herde oder Verband zieht. Bei Herdentieren ist isolierte Einzelhaltung meist stark belastend.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#herdentier"
+    },
+    {
+      "key": "hitzschlag",
+      "title": "Hitzschlag",
+      "summary": "Lebensgefährliche Überhitzung des Körpers. Bei Tieren zählt schnelles, kontrolliertes Kühlen und tierärztliche Hilfe.",
+      "description": "Lebensgefährliche Überhitzung des Körpers. Warnzeichen sind starkes Hecheln, Schwäche, Taumeln, Erbrechen, Krämpfe oder Kollaps. Sofort tierärztlich handeln.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#hitzschlag"
+    },
+    {
+      "key": "homoeopathie",
+      "title": "Homöopathie",
+      "summary": "Alternativmedizinisches Verfahren ohne belastbaren Wirksamkeitsnachweis über Placebo hinaus.",
+      "description": "Alternativmedizinisches Verfahren aus dem 18. Jahrhundert. Für Homöopathie gibt es keinen belastbaren Wirksamkeitsnachweis über Placeboeffekte hinaus.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#homoeopathie"
+    },
+    {
+      "key": "hufschmied",
+      "title": "Hufschmied",
+      "summary": "Fachperson für Hufpflege und Beschlag. Bei Pferden gehört regelmäßige Hufversorgung zu den Grundkosten.",
+      "description": "Fachperson für Hufpflege, Korrektur und Beschlag. Bei Pferden gehört regelmäßige Hufversorgung zu den festen Gesundheits- und Haltungskosten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#hufschmied"
+    },
+    {
+      "key": "hueftdysplasie",
+      "title": "Hüftdysplasie",
+      "summary": "Fehlentwicklung des Hüftgelenks, besonders bei größeren Hunderassen relevant.",
+      "description": "Fehlentwicklung des Hüftgelenks, häufig erblich mitbedingt. Sie kann Schmerzen, Lahmheit und Arthrose verursachen und ist bei vielen großen Hunderassen relevant.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#hueftdysplasie"
+    },
+    {
+      "key": "kastration",
+      "title": "Kastration",
+      "summary": "Entfernung der Keimdrüsen. Verhindert Fortpflanzung und beendet die Hormonproduktion weitgehend.",
+      "description": "Chirurgische Entfernung der Keimdrüsen, also Hoden oder Eierstöcke. Sie verhindert Fortpflanzung und beendet hormonbedingte Vorgänge wie Rolligkeit oder Markierdruck weitgehend.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#kastration"
+    },
+    {
+      "key": "keimdruese",
+      "title": "Keimdrüsen",
+      "summary": "Hoden oder Eierstöcke. Sie bilden Keimzellen und wichtige Geschlechtshormone.",
+      "description": "Hoden oder Eierstöcke. Keimdrüsen bilden Keimzellen und wichtige Geschlechtshormone; bei der Kastration werden sie entfernt.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#keimdruese"
+    },
+    {
+      "key": "kognitive-dissonanz",
+      "title": "Kognitive Dissonanz",
+      "summary": "Innerer Widerspruch zwischen Selbstbild und Realität, den Menschen oft durch Ausreden oder Umdeutung entschärfen.",
+      "description": "Psychologischer Spannungszustand, wenn Verhalten, Fakten und Selbstbild nicht zusammenpassen. Menschen lösen ihn oft durch Ausreden, Umdeutung oder Schuldverschiebung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#kognitive-dissonanz"
+    },
+    {
+      "key": "kolik",
+      "title": "Kolik",
+      "summary": "Sammelbegriff für Bauchschmerzen beim Pferd. Kann harmlos beginnen, aber lebensgefährlich werden.",
+      "description": "Sammelbegriff für Bauchschmerzen beim Pferd. Koliken können verschiedene Ursachen haben und müssen wegen Lebensgefahr immer ernst genommen werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#kolik"
+    },
+    {
+      "key": "magendrehung",
+      "title": "Magendrehung",
+      "summary": "Lebensgefährlicher Notfall beim Hund, bei dem sich der Magen verdreht und aufgast.",
+      "description": "Lebensgefährlicher Notfall beim Hund. Der Magen dreht sich und gast auf; typische Warnzeichen sind Unruhe, erfolgloses Würgen, harter Bauch und Kreislaufprobleme.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#magendrehung"
+    },
+    {
+      "key": "mammatumor",
+      "title": "Mammatumor",
+      "summary": "Tumor der Milchleiste. Bei Katzen und Hündinnen kann Kastration das Risiko je nach Zeitpunkt senken.",
+      "description": "Tumor der Milchleiste. Bei Katzen und Hündinnen können Mammatumoren gut- oder bösartig sein; Kastration kann das Risiko je nach Tierart und Zeitpunkt deutlich beeinflussen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#mammatumor"
+    },
+    {
+      "key": "mauser",
+      "title": "Mauser",
+      "summary": "Natürlicher Federwechsel bei Vögeln, der Energie kostet und mehrere Wochen dauern kann.",
+      "description": "Natürlicher Federwechsel bei Vögeln. Er dauert oft mehrere Wochen, kostet Energie und kann Verhalten und Stimmung beeinflussen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#mauser"
+    },
+    {
+      "key": "meldepflicht",
+      "title": "Meldepflicht",
+      "summary": "Pflicht, bestimmte Tiere oder Haltungen bei einer Behörde anzumelden, etwa aus Artenschutzgründen.",
+      "description": "Pflicht, bestimmte Tiere, Haltungen oder Nachweise bei einer Behörde anzumelden. In der Heimtierhaltung betrifft das vor allem artgeschützte Exoten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#meldepflicht"
+    },
+    {
+      "key": "metabolische-knochenerkrankung",
+      "title": "Metabolische Knochenerkrankung",
+      "summary": "Knochenerweichung bei Reptilien, meist durch UV-B-, Vitamin-D3- oder Kalziummangel.",
+      "description": "Knochenerweichung bei Reptilien, oft durch fehlende UV-B-Strahlung, Vitamin-D3- oder Kalziummangel. Sie führt zu Verformungen, Schmerzen und schweren Organschäden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#metabolische-knochenerkrankung"
+    },
+    {
+      "key": "nachtaktiv",
+      "title": "Nachtaktiv",
+      "summary": "Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress.",
+      "description": "Tier ist vor allem in Dämmerung oder Nacht aktiv. Bei nachtaktiven Tieren bedeutet tagsüberes Wecken häufig Stress und widerspricht dem natürlichen Rhythmus.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#nachtaktiv"
+    },
+    {
+      "key": "notfallfonds",
+      "title": "Notfallfonds",
+      "summary": "Zurückgelegtes Geld für unerwartete Tierarztkosten, damit Behandlung nicht am Kontostand scheitert.",
+      "description": "Zurückgelegtes Geld für unerwartete Tierarztkosten. Ein Notfallfonds verhindert, dass Diagnose oder Behandlung im Ernstfall am Kontostand scheitern.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#notfallfonds"
+    },
+    {
+      "key": "obligat-sozial",
+      "title": "Obligat sozial",
+      "summary": "Tierart braucht Artgenossen zwingend. Alleinhaltung ist dann kein kleiner Kompromiss.",
+      "description": "Tierart braucht passende Artgenossen zwingend. Bei obligat sozialen Tieren ist Alleinhaltung kein kleiner Kompromiss, sondern ein Tierschutzproblem.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#obligat-sozial"
+    },
+    {
+      "key": "obligater-karnivor",
+      "title": "Obligater Karnivor",
+      "summary": "Tierart, deren Stoffwechsel auf tierische Nahrung spezialisiert ist. Katzen sind obligate Karnivoren.",
+      "description": "Tierart, deren Stoffwechsel auf tierische Nahrung und bestimmte Nährstoffprofile spezialisiert ist. Katzen sind obligate Karnivoren und keine kleinen Hunde.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#obligater-karnivor"
+    },
+    {
+      "key": "offenstall",
+      "title": "Offenstall",
+      "summary": "Pferdehaltung mit Bewegungsfreiheit, Unterstand, Auslauf und Sozialkontakt.",
+      "description": "Pferdehaltung, bei der Tiere Zugang zu Unterstand, Auslauf und oft Weide haben. Gute Offenstallkonzepte fördern Bewegung, Sozialkontakt und selbstbestimmtes Verhalten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#offenstall"
+    },
+    {
+      "key": "osteochondrodysplasie",
+      "title": "Osteochondrodysplasie",
+      "summary": "Erbliche Knorpel- und Knochenerkrankung, bekannt bei Scottish-Fold-Katzen.",
+      "description": "Erbliche Knorpel- und Knochenerkrankung. Bei Scottish-Fold-Katzen hängt sie mit den gefalteten Ohren zusammen und kann lebenslange Schmerzen verursachen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#osteochondrodysplasie"
+    },
+    {
+      "key": "parvovirose",
+      "title": "Parvovirose",
+      "summary": "Schwere Virusinfektion bei Hunden, besonders für Welpen lebensgefährlich.",
+      "description": "Schwere, hochansteckende Virusinfektion bei Hunden. Besonders Welpen können durch Erbrechen, Durchfall, Dehydrierung und Kreislaufversagen sterben.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#parvovirose"
+    },
+    {
+      "key": "patenschaft",
+      "title": "Patenschaft",
+      "summary": "Regelmäßige finanzielle oder praktische Unterstützung für ein Tier, ohne es selbst zu halten.",
+      "description": "Regelmäßige finanzielle oder praktische Unterstützung für ein Tier, ohne es selbst zu halten. Patenschaften helfen besonders alten, kranken oder schwer vermittelbaren Tieren.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#patenschaft"
+    },
+    {
+      "key": "pbfd",
+      "title": "PBFD",
+      "summary": "Ansteckende Viruserkrankung bei Papageienvögeln, die Gefieder, Schnabel und Immunsystem angreifen kann.",
+      "description": "Psittacine Beak and Feather Disease. Eine ansteckende Viruserkrankung bei Papageienvögeln, die Gefieder, Schnabel und Immunsystem angreifen kann.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#pbfd"
+    },
+    {
+      "key": "permethrin",
+      "title": "Permethrin",
+      "summary": "Wirkstoff in manchen Hunde-Flohmitteln. Für Katzen kann er lebensgefährlich giftig sein.",
+      "description": "Insektizid, das in manchen Hunde-Flohmitteln vorkommt. Für Katzen kann Permethrin wegen ihres Stoffwechsels lebensgefährlich giftig sein.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#permethrin"
+    },
+    {
+      "key": "pflegestelle",
+      "title": "Pflegestelle",
+      "summary": "Vorübergehendes Zuhause für ein Tier, bis eine dauerhafte Vermittlung gefunden ist.",
+      "description": "Vorübergehendes Zuhause für ein Tier aus dem Tierschutz, bis eine dauerhafte Vermittlung gefunden ist. Pflegestellen entlasten Tierheime und lernen Tiere im Alltag kennen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#pflegestelle"
+    },
+    {
+      "key": "phytotherapie",
+      "title": "Phytotherapie",
+      "summary": "Pflanzenheilkunde. Kann je nach Mittel wirksame Stoffe enthalten, braucht aber fachliche Abklärung.",
+      "description": "Pflanzenheilkunde. Anders als Homöopathie kann Phytotherapie wirksame Stoffe enthalten; gerade deshalb sind Dosierung, Wechselwirkungen und tierärztliche Abklärung wichtig.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#phytotherapie"
+    },
+    {
+      "key": "placebo-effekt",
+      "title": "Placebo-Effekt",
+      "summary": "Wahrgenommene Besserung durch Erwartung, Beobachtung oder Begleitumstände statt durch einen wirksamen Stoff.",
+      "description": "Wahrgenommene Besserung durch Erwartung, veränderte Beobachtung oder Begleitumstände statt durch einen wirksamen Stoff. Bei Tieren spielt vor allem die menschliche Interpretation eine Rolle.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#placebo-effekt"
+    },
+    {
+      "key": "potenzierung",
+      "title": "Potenzierung",
+      "summary": "Homöopathisches Verdünnen und Verschütteln, bei dem der Ausgangsstoff rechnerisch oft nicht mehr vorhanden ist.",
+      "description": "Homöopathisches Verfahren aus Verdünnen und Verschütteln. In hohen Potenzen ist vom Ausgangsstoff rechnerisch kein Molekül mehr enthalten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#potenzierung"
+    },
+    {
+      "key": "ptfe",
+      "title": "PTFE",
+      "summary": "Beschichtungsstoff, der bei Überhitzung giftige Dämpfe bilden kann. Für Vögel besonders gefährlich.",
+      "description": "Polytetrafluorethylen, bekannt aus Antihaftbeschichtungen. Bei Überhitzung können Dämpfe entstehen, die für Vögel extrem schnell tödlich sein können.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#ptfe"
+    },
+    {
+      "key": "pyometra",
+      "title": "Pyometra",
+      "summary": "Gebärmuttervereiterung. Lebensbedrohlich und bei unkastrierten Hündinnen und Katzen ein Notfall.",
+      "description": "Gebärmuttervereiterung. Sie tritt besonders bei unkastrierten Hündinnen und Katzen auf und ist lebensbedrohlich, wenn sie nicht schnell behandelt wird.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#pyometra"
+    },
+    {
+      "key": "qualzucht",
+      "title": "Qualzucht",
+      "summary": "Zucht auf Merkmale, die Schmerzen, Leiden, Schäden oder eingeschränkte normale Funktionen verursachen.",
+      "description": "Zucht auf Merkmale, die Schmerzen, Leiden, Schäden oder eingeschränkte normale Funktionen verursachen. Qualzucht ist nach § 11b TierSchG verboten, bleibt aber praktisch schwer durchzusetzen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#qualzucht"
+    },
+    {
+      "key": "rassemerkmal",
+      "title": "Rassemerkmal",
+      "summary": "Züchterisch gewünschtes Merkmal einer Rasse. Nicht jedes Rassemerkmal ist gesund oder harmlos.",
+      "description": "Züchterisch gewünschtes Merkmal einer Rasse. Ein Rassemerkmal kann äußerlich beliebt sein und trotzdem Gesundheit, Bewegung, Atmung oder Sinneswahrnehmung belasten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#rassemerkmal"
+    },
+    {
+      "key": "rolligkeit",
+      "title": "Rolligkeit",
+      "summary": "Paarungsbereite Zyklusphase bei Katzen, oft mit Stress, Rufen und Unruhe.",
+      "description": "Paarungsbereite Zyklusphase bei unkastrierten Katzen. Sie kann alle zwei bis drei Wochen auftreten und mit starkem Stress, Rufen, Unruhe und Gesundheitsrisiken verbunden sein.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#rolligkeit"
+    },
+    {
+      "key": "sachkunde",
+      "title": "Sachkunde",
+      "summary": "Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere.",
+      "description": "Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere. Bei anspruchsvollen oder gefährlichen Arten reicht Begeisterung nicht aus.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#sachkunde"
+    },
+    {
+      "key": "schutzgebuehr",
+      "title": "Schutzgebühr",
+      "summary": "Betrag bei Adoption, der Versorgungskosten mitträgt und kein normaler Kaufpreis ist.",
+      "description": "Betrag, der bei Adoption eines Tierschutztieres gezahlt wird. Er deckt einen Teil von Kastration, Impfung, Chip, Futter und tierärztlicher Versorgung und ist kein normaler Kaufpreis.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#schutzgebuehr"
+    },
+    {
+      "key": "schutzvertrag",
+      "title": "Schutzvertrag",
+      "summary": "Adoptionsvertrag, der Rückgabe, Nachkontrolle und Haltungsbedingungen regeln kann.",
+      "description": "Vertrag bei der Vermittlung eines Tierschutztieres. Er kann Rückgaberecht, Nachkontrolle, Kastration, Haltungsvorgaben und Verantwortung nach der Adoption regeln.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#schutzvertrag"
+    },
+    {
+      "key": "schwarmvogel",
+      "title": "Schwarmvogel",
+      "summary": "Vogelart, die in Gruppen lebt und Artgenossen braucht.",
+      "description": "Vogelart, die in Gruppen lebt und passende Artgenossen braucht. Wellensittiche, Nymphensittiche und Zebrafinken sind typische Schwarmvögel.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#schwarmvogel"
+    },
+    {
+      "key": "skorbut",
+      "title": "Skorbut",
+      "summary": "Krankheit durch Vitamin-C-Mangel. Bei Meerschweinchen relevant, weil sie Vitamin C nicht selbst bilden.",
+      "description": "Krankheit durch Vitamin-C-Mangel. Meerschweinchen können Vitamin C nicht selbst bilden und brauchen deshalb regelmäßig geeignetes Frischfutter.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#skorbut"
+    },
+    {
+      "key": "sozialisation",
+      "title": "Sozialisation",
+      "summary": "Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen und Artgenossen kennenlernen.",
+      "description": "Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen, Artgenossen und Alltagssituationen kennenlernen. Fehlende Sozialisation kann später Angst und Problemverhalten fördern.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#sozialisation"
+    },
+    {
+      "key": "stereotypie",
+      "title": "Stereotypie",
+      "summary": "Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress.",
+      "description": "Sich wiederholende, zwanghafte Verhaltensweisen ohne erkennbaren Zweck. Beispiele sind Koppen, Weben, Federrupfen oder stereotypes Kopfwippen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#stereotypie"
+    },
+    {
+      "key": "sterilisation",
+      "title": "Sterilisation",
+      "summary": "Durchtrennung von Ei- oder Samenleitern. Das Tier wird unfruchtbar, Hormone bleiben aktiv.",
+      "description": "Durchtrennung der Ei- oder Samenleiter. Das Tier wird unfruchtbar, aber Hormonproduktion, Rolligkeit, Markierverhalten und Paarungsdrang bleiben weitgehend bestehen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#sterilisation"
+    },
+    {
+      "key": "streunerkatze",
+      "title": "Streunerkatze",
+      "summary": "Frei lebende Katze ohne verlässliche Versorgung, oft Nachkomme unkastrierter Hauskatzen.",
+      "description": "Frei lebende Katze ohne verlässliche menschliche Versorgung. Viele Streunerkatzen sind Nachkommen unkastrierter Freigängerkatzen und leiden unter Krankheit, Hunger und Verletzungen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#streunerkatze"
+    },
+    {
+      "key": "taurin",
+      "title": "Taurin",
+      "summary": "Für Katzen essenzieller Nährstoff, wichtig für Herz, Augen, Stoffwechsel und Fortpflanzung.",
+      "description": "Für Katzen essenzieller Nährstoff. Taurin ist wichtig für Herz, Netzhaut, Gallensäuren, Fortpflanzung und Entwicklung und muss zuverlässig im Futter vorhanden sein.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#taurin"
+    },
+    {
+      "key": "theobromin",
+      "title": "Theobromin",
+      "summary": "Stoff aus Kakao und Schokolade, der für Hunde giftig sein kann.",
+      "description": "Stoff aus Kakao und Schokolade. Hunde bauen Theobromin langsam ab; schon kleinere Mengen dunkler Schokolade können gefährlich werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#theobromin"
+    },
+    {
+      "key": "thermoregulation",
+      "title": "Thermoregulation",
+      "summary": "Fähigkeit des Körpers, Temperatur zu halten oder zu steuern. Bei Qualzucht oder Hitze kann sie versagen.",
+      "description": "Fähigkeit des Körpers, Temperatur zu halten oder aktiv zu steuern. Bei Hitze, Kurzköpfigkeit, Albinismus oder falscher Haltung kann Thermoregulation massiv eingeschränkt sein.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#thermoregulation"
+    },
+    {
+      "key": "notdienst",
+      "title": "Tierärztlicher Notdienst",
+      "summary": "Tierärztliche Versorgung außerhalb normaler Sprechzeiten. Immer telefonisch bestätigen, bevor du losfährst.",
+      "description": "Tierärztliche Versorgung außerhalb normaler Sprechzeiten. Notdienste sind regional organisiert und sollten immer telefonisch bestätigt werden, bevor man losfährt.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#notdienst"
+    },
+    {
+      "key": "tierheilpraktiker",
+      "title": "Tierheilpraktiker",
+      "summary": "Nicht geschützte Berufsbezeichnung. Kein Ersatz für tierärztliche Diagnostik und Behandlung.",
+      "description": "Nicht geschützte Berufsbezeichnung in Deutschland. Ausbildung und Qualität sind uneinheitlich; Tierheilpraktiker ersetzen keine tierärztliche Diagnostik und Behandlung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tierheilpraktiker"
+    },
+    {
+      "key": "tierheim",
+      "title": "Tierheim",
+      "summary": "Einrichtung, die abgegebene, gefundene oder beschlagnahmte Tiere versorgt und vermittelt.",
+      "description": "Einrichtung, die gefundene, abgegebene, ausgesetzte oder beschlagnahmte Tiere versorgt und vermittelt. Tierheime sind oft überlastet und auf Unterstützung angewiesen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tierheim"
+    },
+    {
+      "key": "tierklinik",
+      "title": "Tierklinik",
+      "summary": "Tiermedizinische Einrichtung mit erweitertem Leistungsangebot, oft wichtig bei Notfällen außerhalb normaler Praxiszeiten.",
+      "description": "Tiermedizinische Einrichtung mit erweitertem Leistungsangebot. Tierkliniken sind bei schweren Notfällen, Operationen oder Nacht- und Wochenendversorgung oft die richtige Anlaufstelle.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tierklinik"
+    },
+    {
+      "key": "tierschg",
+      "title": "TierSchG",
+      "summary": "Deutsches Tierschutzgesetz. Es regelt Grundpflichten, Verbote und Verantwortlichkeiten im Umgang mit Tieren.",
+      "description": "Deutsches Tierschutzgesetz. Es regelt Grundpflichten, Verbote und Verantwortlichkeiten im Umgang mit Tieren, darunter Haltung, Pflege, Zucht und Aussetzen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tierschg"
+    },
+    {
+      "key": "tierschutz-hundeverordnung",
+      "title": "Tierschutz-Hundeverordnung",
+      "summary": "Deutsche Verordnung mit Mindestanforderungen an Hundehaltung, etwa Auslauf, Sozialkontakt und Zwingerhaltung.",
+      "description": "Deutsche Verordnung mit Mindestanforderungen an Hundehaltung. Sie betrifft unter anderem Auslauf, Sozialkontakt, Betreuung, Zwingerhaltung und Witterungsschutz.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tierschutz-hundeverordnung"
+    },
+    {
+      "key": "tnr",
+      "title": "TNR",
+      "summary": "Trap-Neuter-Return: Streunerkatzen einfangen, kastrieren und wieder zurücksetzen.",
+      "description": "Trap-Neuter-Return. Methode zur Kontrolle von Streunerkatzen: einfangen, kastrieren, medizinisch versorgen und wieder an betreute Futterstellen zurücksetzen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tnr"
+    },
+    {
+      "key": "traechtigkeit",
+      "title": "Trächtigkeit",
+      "summary": "Schwangerschaft bei Tieren. Ungewollte Trächtigkeit erzeugt Verantwortung und Gesundheitsrisiken.",
+      "description": "Schwangerschaft bei Tieren. Ungewollte Trächtigkeit bedeutet Gesundheitsrisiken, Kosten, Verantwortung für Nachwuchs und oft zusätzliche Belastung für Tierheime.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#traechtigkeit"
+    },
+    {
+      "key": "tvt",
+      "title": "TVT",
+      "summary": "Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung.",
+      "description": "Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter, Leitlinien und Einschätzungen zu artgerechter Tierhaltung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tvt"
+    },
+    {
+      "key": "uv-b",
+      "title": "UV-B-Strahlung",
+      "summary": "Ultraviolette Strahlung, die viele Reptilien und Vögel für Vitamin-D3-Bildung und normale Wahrnehmung brauchen.",
+      "description": "Ultraviolette Strahlung. Viele Reptilien brauchen UV-B für Vitamin-D3-Bildung und Kalziumstoffwechsel; Vögel nutzen UV-Licht auch für ihre Farbwahrnehmung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#uv-b"
+    },
+    {
+      "key": "vegane-tierernaehrung",
+      "title": "Vegane Tierernährung",
+      "summary": "Tierernährung ohne tierische Bestandteile. Bei Haustieren zählt zuerst der Bedarf der Tierart, nicht die Weltanschauung des Menschen.",
+      "description": "Tierernährung ohne tierische Bestandteile. Bei Haustieren entscheidet zuerst der Bedarf der Tierart; besonders Katzen sind hier deutlich kritischer als Menschen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#vegane-tierernaehrung"
+    },
+    {
+      "key": "vergiftung",
+      "title": "Vergiftung",
+      "summary": "Aufnahme oder Kontakt mit giftigen Stoffen. Verpackung sichern und sofort tierärztlich anrufen.",
+      "description": "Aufnahme oder Kontakt mit giftigen Stoffen. Bei Verdacht: Verpackung oder Quelle sichern, Zeitpunkt und Menge notieren und sofort tierärztlich anrufen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#vergiftung"
+    },
+    {
+      "key": "vermehrer",
+      "title": "Vermehrer",
+      "summary": "Person oder Betrieb, der Tiere vor allem für schnelle Abgabe und Gewinn produziert.",
+      "description": "Person oder Betrieb, der Tiere vor allem für schnelle Abgabe, Optik und Gewinn produziert. Gesundheit, Sozialisation, Herkunft und Nachbetreuung bleiben oft auf der Strecke.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#vermehrer"
+    },
+    {
+      "key": "veterinaermedizin",
+      "title": "Veterinärmedizin",
+      "summary": "Tiermedizinische Diagnostik und Behandlung durch Tierärztinnen und Tierärzte.",
+      "description": "Tiermedizinische Diagnostik, Behandlung und Vorsorge durch Tierärztinnen und Tierärzte. Sie ist bei Krankheit, Schmerzen und Notfällen nicht durch Glaubensmethoden ersetzbar.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#veterinaermedizin"
+    },
+    {
+      "key": "winterruhe",
+      "title": "Winterruhe",
+      "summary": "Kontrollierte Ruhephase bei bestimmten Tierarten, etwa europäischen Landschildkröten.",
+      "description": "Kontrollierte Ruhephase mit reduziertem Stoffwechsel. Für bestimmte Arten, etwa europäische Landschildkröten, ist sie gesundheitlich notwendig.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#winterruhe"
+    },
+    {
+      "key": "xylit",
+      "title": "Xylit",
+      "summary": "Birkenzucker. Für Hunde kann schon wenig Xylit lebensgefährlich sein.",
+      "description": "Birkenzucker, ein Zuckeraustauschstoff. Für Hunde kann Xylit lebensgefährlich sein, weil es schwere Unterzuckerung und Leberschäden auslösen kann.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#xylit"
+    },
+    {
+      "key": "zoohandel",
+      "title": "Zoohandel",
+      "summary": "Kommerzieller Verkauf von Tieren und Zubehör. Problematisch, wenn Verkauf vor Tierwohl steht.",
+      "description": "Kommerzieller Verkauf von Tieren und Zubehör. Problematisch wird Zoohandel, wenn Beratung, Herkunft, Sozialisation und Langzeitverantwortung hinter dem Verkauf zurückstehen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#zoohandel"
+    },
+    {
+      "key": "zoonose",
+      "title": "Zoonose",
+      "summary": "Krankheit, die zwischen Tier und Mensch übertragen werden kann.",
+      "description": "Krankheit, die zwischen Tier und Mensch übertragen werden kann. Beispiele sind Tollwut, Salmonellen, Toxoplasmose oder bestimmte Parasiten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#zoonose"
+    },
+    {
+      "key": "zuechter",
+      "title": "Züchter",
+      "summary": "Person, die Tiere gezielt verpaart. Seriöse Zucht ist nicht dasselbe wie Vermehrung, erzeugt aber neue Tiere.",
+      "description": "Person, die Tiere gezielt verpaart. Seriöse Zucht arbeitet transparenter als Vermehrung, erzeugt aber trotzdem neue Haustiere in einem überfüllten System.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#zuechter"
+    }
+  ]
+}

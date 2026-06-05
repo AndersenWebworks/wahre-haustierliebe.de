@@ -499,6 +499,11 @@
       padding: 1.25rem;
       margin-bottom: 0.75rem;
       box-shadow: var(--shadow);
+      scroll-margin-top: 6rem;
+    }
+    .glossary-item:target {
+      border-color: rgba(212, 165, 116, 0.75);
+      box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.28), var(--shadow);
     }
     .glossary-item dt { font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 0.25rem; }
     .glossary-item dd { color: var(--text-muted); margin: 0; }
@@ -517,6 +522,16 @@
     .glossary-term.is-active {
       color: var(--primary);
       text-decoration-color: var(--primary);
+    }
+    .hero .glossary-term {
+      color: inherit;
+      text-decoration-color: rgba(255, 254, 250, 0.72);
+    }
+    .hero .glossary-term:hover,
+    .hero .glossary-term.is-active,
+    .hero .glossary-term.is-open {
+      color: var(--accent-light);
+      text-decoration-color: var(--accent-light);
     }
     .glossary-term-popover {
       position: absolute;
@@ -3345,8 +3360,8 @@
       margin: 1.1rem 0 0;
     }
 
-    .article-kicker span,
-    .article-kicker a,
+    .article-kicker > span,
+    .article-kicker > a,
     .risk-chip,
     .myth-status,
     .test-progress-label {
@@ -3369,6 +3384,19 @@
       background: rgba(31, 58, 47, 0.14);
       color: var(--primary-dark);
       text-decoration: none;
+    }
+
+    .article-kicker .glossary-term {
+      display: inline !important;
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
     }
 
     .section-note {

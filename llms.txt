@@ -25,7 +25,7 @@
 - Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und ein 1200x630-Social-Bild.
 - Startseite und Fallback-Preview nutzen das offizielle Logo, Unterseiten ihr erstes echtes Inhaltsbild.
 - Fachseiten enthalten sichtbare Quellen-/Prüfstand-Blöcke und maschinenlesbare Page-Facts.
-- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json und /ai/faq.json.
+- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json, /ai/faq.json und /ai/glossary.json.
 
 Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt
 

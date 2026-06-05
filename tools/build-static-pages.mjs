@@ -2,6 +2,7 @@ import fsSync from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { glossaryAnnotationsByPage, glossaryTerms } from './glossary-data.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -249,6 +250,7 @@ const pageById = new Map(pages.map((page) => [page.id, page]));
 const publicPages = pages.filter((page) => !page.onHold);
 const sectionPages = publicPages.filter((page) => !page.standalone && !page.staticOnly);
 const pageIds = sectionPages.map((page) => page.id);
+const glossaryTermByKey = new Map(glossaryTerms.map((term) => [term.key, term]));
 
 const faqByPage = {
   hunde: [
@@ -1112,6 +1114,229 @@ function hrefFor(targetId, currentPage) {
   return `${prefix}${target.slug}/index.html`;
 }
 
+function glossaryHrefFor(key, currentPage) {
+  return `${hrefFor('glossar', currentPage)}#${key}`;
+}
+
+function buildGlossaryListHtml() {
+  const items = glossaryTerms
+    .slice()
+    .sort((first, second) => first.title.localeCompare(second.title, 'de'))
+    .map((term) => `          <div class="glossary-item" id="${escapeAttr(term.key)}" data-glossary-key="${escapeAttr(term.key)}"><dt>${escapeHtml(term.title)}</dt><dd>${escapeHtml(term.description)}</dd></div>`)
+    .join('\n');
+  return `        <dl id="glossary-list">\n${items}\n        </dl>`;
+}
+
+function replaceGlossaryList(html) {
+  const marker = '<dl id="glossary-list">';
+  const start = html.indexOf(marker);
+  if (start === -1) return html;
+  const end = html.indexOf('</dl>', start);
+  if (end === -1) throw new Error('Glossary list is missing closing </dl>.');
+  return `${html.slice(0, start)}${buildGlossaryListHtml()}${html.slice(end + '</dl>'.length)}`;
+}
+
+function validateGlossaryData() {
+  const seen = new Set();
+  const duplicates = [];
+  glossaryTerms.forEach((term) => {
+    if (seen.has(term.key)) duplicates.push(term.key);
+    seen.add(term.key);
+  });
+  if (duplicates.length) {
+    throw new Error(`Duplicate glossary keys: ${duplicates.join(', ')}`);
+  }
+
+  Object.entries(glossaryAnnotationsByPage).forEach(([pageId, annotations]) => {
+    if (!pageById.has(pageId)) throw new Error(`Glossary annotations reference unknown page: ${pageId}`);
+    annotations.forEach((annotation) => {
+      const keys = extractGlossaryKeysFromHtml(annotation.to);
+      keys.forEach((key) => {
+        if (!glossaryTermByKey.has(key)) {
+          throw new Error(`Glossary annotation on ${pageId} references unknown key: ${key}`);
+        }
+      });
+    });
+  });
+}
+
+function applyGlossaryAnnotations(html, currentPage) {
+  const annotations = glossaryAnnotationsByPage[currentPage.id] || [];
+  let next = html;
+  const missing = [];
+
+  annotations.forEach((annotation) => {
+    if (hasGlossaryAnnotation(next, annotation.to)) return;
+    const index = next.indexOf(annotation.from);
+    if (index === -1) {
+      missing.push(annotation.from);
+      return;
+    }
+    next = `${next.slice(0, index)}${annotation.to}${next.slice(index + annotation.from.length)}`;
+  });
+
+  if (missing.length) {
+    throw new Error(`Missing glossary annotation anchors on ${currentPage.id}:\n- ${missing.join('\n- ')}`);
+  }
+
+  return next;
+}
+
+function extractGlossaryKeysFromHtml(html) {
+  const keys = [];
+  const marker = 'data-glossary-key="';
+  let index = 0;
+  while (index < html.length) {
+    const start = html.indexOf(marker, index);
+    if (start === -1) break;
+    const valueStart = start + marker.length;
+    const valueEnd = html.indexOf('"', valueStart);
+    if (valueEnd === -1) break;
+    keys.push(html.slice(valueStart, valueEnd));
+    index = valueEnd + 1;
+  }
+  return keys;
+}
+
+function isHtmlWhitespace(char) {
+  return char === ' ' || char === '\n' || char === '\r' || char === '\t' || char === '\f';
+}
+
+function walkHtmlAttributes(attrs, callback) {
+  let index = 0;
+  while (index < attrs.length) {
+    const rawStart = index;
+    while (index < attrs.length && isHtmlWhitespace(attrs[index])) index += 1;
+    if (index >= attrs.length) {
+      callback({ name: '', value: '', raw: attrs.slice(rawStart) });
+      break;
+    }
+
+    const nameStart = index;
+    while (
+      index < attrs.length
+      && !isHtmlWhitespace(attrs[index])
+      && attrs[index] !== '='
+      && attrs[index] !== '>'
+    ) {
+      index += 1;
+    }
+    const name = attrs.slice(nameStart, index);
+
+    while (index < attrs.length && isHtmlWhitespace(attrs[index])) index += 1;
+
+    let value = '';
+    if (attrs[index] === '=') {
+      index += 1;
+      while (index < attrs.length && isHtmlWhitespace(attrs[index])) index += 1;
+      const quote = attrs[index];
+      if (quote === '"' || quote === "'") {
+        index += 1;
+        const valueStart = index;
+        const valueEnd = attrs.indexOf(quote, valueStart);
+        if (valueEnd === -1) {
+          value = attrs.slice(valueStart);
+          index = attrs.length;
+        } else {
+          value = attrs.slice(valueStart, valueEnd);
+          index = valueEnd + 1;
+        }
+      } else {
+        const valueStart = index;
+        while (index < attrs.length && !isHtmlWhitespace(attrs[index])) index += 1;
+        value = attrs.slice(valueStart, index);
+      }
+    }
+
+    callback({ name, value, raw: attrs.slice(rawStart, index) });
+  }
+}
+
+function readHtmlAttribute(attrs, name) {
+  let found = '';
+  walkHtmlAttributes(attrs, (attribute) => {
+    if (!found && attribute.name === name) found = attribute.value;
+  });
+  return found;
+}
+
+function stripGlossaryDataAttributes(attrs) {
+  const blocked = new Set([
+    'data-glossary-key',
+    'data-glossary-title',
+    'data-glossary-text',
+    'data-glossary-href',
+  ]);
+  let next = '';
+  walkHtmlAttributes(attrs, (attribute) => {
+    if (!attribute.name || blocked.has(attribute.name)) return;
+    next += attribute.raw;
+  });
+  return next.trim();
+}
+
+function replaceGlossarySpanOpenings(html, replacer) {
+  const marker = '<span class="glossary-term"';
+  let next = '';
+  let index = 0;
+  while (index < html.length) {
+    const start = html.indexOf(marker, index);
+    if (start === -1) {
+      next += html.slice(index);
+      break;
+    }
+
+    const end = html.indexOf('>', start);
+    if (end === -1) {
+      next += html.slice(index);
+      break;
+    }
+
+    next += html.slice(index, start);
+    const opening = html.slice(start, end + 1);
+    const attrs = opening.slice('<span'.length, -1);
+    next += replacer(opening, attrs);
+    index = end + 1;
+  }
+  return next;
+}
+
+function normalizeGlossaryMarkers(html) {
+  return replaceGlossarySpanOpenings(html, (opening, attrs) => {
+    const key = readHtmlAttribute(attrs, 'data-glossary-key');
+    if (!key) return opening;
+    return `<span class="glossary-term" data-glossary-key="${escapeAttr(key)}">`;
+  });
+}
+
+function hasGlossaryAnnotation(html, annotationHtml) {
+  return normalizeGlossaryMarkers(html).includes(annotationHtml);
+}
+
+function enrichGlossaryTerms(html, currentPage) {
+  return replaceGlossarySpanOpenings(html, (opening, attrs) => {
+    const key = readHtmlAttribute(attrs, 'data-glossary-key');
+    if (!key) return opening;
+    const term = glossaryTermByKey.get(key);
+    if (!term) throw new Error(`Unknown glossary key in ${currentPage.id}: ${key}`);
+    const preservedAttrs = stripGlossaryDataAttributes(attrs);
+    const extra = [
+      `data-glossary-key="${escapeAttr(term.key)}"`,
+      `data-glossary-title="${escapeAttr(term.title)}"`,
+      `data-glossary-text="${escapeAttr(term.summary)}"`,
+      `data-glossary-href="${escapeAttr(glossaryHrefFor(term.key, currentPage))}"`,
+    ].join(' ');
+    return `<span${preservedAttrs ? ` ${preservedAttrs}` : ''} ${extra}>`;
+  });
+}
+
+function hydrateGlossary(html, currentPage) {
+  let next = applyGlossaryAnnotations(html, currentPage);
+  next = replaceGlossaryList(next);
+  next = enrichGlossaryTerms(next, currentPage);
+  return next;
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -1521,6 +1746,7 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
   const routePrefix = prefixForSlug(page.slug);
   let body = `${header}\n\n  <main id="main-content" tabindex="-1">\n${section}\n  </main>\n\n${commonAfterSections}`;
   body = injectGeoBlocks(body, page);
+  body = hydrateGlossary(body, page);
   body = transformLinks(body, page);
   body = prefixAssets(body, prefix);
   body = addImageAttributes(body);
@@ -1950,7 +2176,7 @@ function buildLlmsFull() {
     '- Für Kurzantworten den jeweiligen Seitentitel, die Meta Description und den sichtbaren H1-/Abschnittsinhalt abgleichen.',
     '- Bei Tiernotfällen immer auf die Grenzen der Website hinweisen: Sie ersetzt keine tierärztliche Untersuchung.',
     '- Bei Kauf-, Zucht- und Qualzuchtfragen die Tierschutz-Perspektive der Seite nicht zu einer neutralen Marktübersicht glätten.',
-    '- Maschinenlesbare Ergänzungen stehen unter /ai/site.json, /ai/pages.json und /ai/faq.json.',
+    '- Maschinenlesbare Ergänzungen stehen unter /ai/site.json, /ai/pages.json, /ai/faq.json und /ai/glossary.json.',
     '',
     '## Notes for AI Systems',
     '',
@@ -1993,7 +2219,7 @@ function buildLlmsShort() {
     '- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und ein 1200x630-Social-Bild.',
     '- Startseite und Fallback-Preview nutzen das offizielle Logo, Unterseiten ihr erstes echtes Inhaltsbild.',
     '- Fachseiten enthalten sichtbare Quellen-/Prüfstand-Blöcke und maschinenlesbare Page-Facts.',
-    '- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json und /ai/faq.json.',
+    '- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json, /ai/faq.json und /ai/glossary.json.',
     '',
     'Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt',
     '',
@@ -2069,6 +2295,7 @@ function buildAiSite() {
       `${baseUrl}/ai/site.json`,
       `${baseUrl}/ai/pages.json`,
       `${baseUrl}/ai/faq.json`,
+      `${baseUrl}/ai/glossary.json`,
     ],
   }, null, 2) + '\n';
 }
@@ -2085,7 +2312,26 @@ function buildAiFaq() {
   return JSON.stringify({ lastUpdated: lastmod, entries }, null, 2) + '\n';
 }
 
+function buildAiGlossary() {
+  return JSON.stringify({
+    lastUpdated: lastmod,
+    site: siteName,
+    url: `${baseUrl}/glossar/index.html`,
+    terms: glossaryTerms
+      .slice()
+      .sort((first, second) => first.title.localeCompare(second.title, 'de'))
+      .map((term) => ({
+        key: term.key,
+        title: term.title,
+        summary: term.summary,
+        description: term.description,
+        url: `${baseUrl}/glossar/index.html#${term.key}`,
+      })),
+  }, null, 2) + '\n';
+}
+
 async function main() {
+  validateGlossaryData();
   await ensureSource();
   const source = (await fs.readFile(sourcePath, 'utf8')).replace(/\r\n/g, '\n');
   const style = extractBetween(source, '<style>', '</style>');
@@ -2133,6 +2379,7 @@ async function main() {
   await writeFileEnsured(path.join(projectRoot, 'ai', 'site.json'), buildAiSite());
   await writeFileEnsured(path.join(projectRoot, 'ai', 'pages.json'), buildAiPages());
   await writeFileEnsured(path.join(projectRoot, 'ai', 'faq.json'), buildAiFaq());
+  await writeFileEnsured(path.join(projectRoot, 'ai', 'glossary.json'), buildAiGlossary());
   await prerenderSectionPages();
 
   console.log(JSON.stringify({
