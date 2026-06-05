@@ -167,9 +167,17 @@ const pages = [
   {
     id: 'wissen',
     slug: 'wissen',
-    title: 'Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?',
-    description: 'Häufige Tierhaltungsmythen, Homöopathie bei Tieren und wichtige Begriffe rund um artgerechte Haltung, Krankheiten und Tierschutz verständlich erklärt.',
-    intent: 'Tierhaltungsmythen und Fachbegriffe prüfen',
+    title: 'Tiermythen und Homöopathie: Was stimmt wirklich?',
+    description: 'Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, verständlich und ohne Werbeinteresse eingeordnet.',
+    intent: 'Tierhaltungsmythen und Homöopathie bei Tieren prüfen',
+    priority: '0.8',
+  },
+  {
+    id: 'glossar',
+    slug: 'glossar',
+    title: 'Glossar für Tierhaltung und Tierschutz',
+    description: 'Wichtige Begriffe rund um artgerechte Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz und verständlich erklärt.',
+    intent: 'Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen',
     priority: '0.8',
   },
   {
@@ -471,7 +479,7 @@ const evidenceByPage = {
     facts: [
       'Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.',
       'Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.',
-      'Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur.',
+      'Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.',
     ],
     sources: [
       ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
@@ -480,6 +488,22 @@ const evidenceByPage = {
     guardrails: [
       'Keine medizinischen Empfehlungen als Behandlung zitieren.',
       'Mythen nicht als gleichwertige Gegenposition darstellen.',
+    ],
+  },
+  glossar: {
+    facts: [
+      'Das Glossar erklärt zentrale Begriffe aus Haltung, Tiermedizin und Tierschutz kurz und alltagstauglich.',
+      'Begriffe wie Pyometra, Brachyzephalie, GOT, TNR oder TierSchG werden als Einstieg erklärt.',
+      'Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose.',
+    ],
+    sources: [
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+    ],
+    guardrails: [
+      'Nicht als vollständiges veterinärmedizinisches Lexikon zitieren.',
+      'Bei Symptomen immer auf tierärztliche Abklärung verweisen.',
     ],
   },
   'hitzefalle-auto': {
@@ -711,6 +735,13 @@ const firstContentImageByPage = {
     type: 'image/jpeg',
     alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen.',
   },
+  glossar: {
+    src: 'assets/images/goldfish-aquarium.jpg',
+    width: 1920,
+    height: 1309,
+    type: 'image/jpeg',
+    alt: 'Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen.',
+  },
   'hitzefalle-auto': {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
@@ -835,7 +866,12 @@ const socialCopyByPage = {
   wissen: {
     eyebrow: 'Tiermythen prüfen',
     title: 'Was stimmt wirklich?',
-    description: 'Mythen, Homöopathie, Fachbegriffe und Tierschutzwissen verständlich, kritisch und ohne Werbeinteresse.',
+    description: 'Mythen und Homöopathie bei Tieren verständlich, kritisch und ohne Werbeinteresse eingeordnet.',
+  },
+  glossar: {
+    eyebrow: 'Begriffe nachschlagen',
+    title: 'Glossar für Tierhaltung und Tierschutz',
+    description: 'Wichtige Begriffe rund um Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz erklärt.',
   },
   'hitzefalle-auto': {
     eyebrow: 'Hund im Auto',
@@ -890,7 +926,8 @@ const keywordByPage = {
   notfall: ['Tiernotfall', 'Vergiftung', 'Atemnot', 'Tierarzt', 'Warnsignale'],
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
   kontakt: ['Kontakt', 'Haltungsfragen', 'Haustierberatung', 'Tierschutz', 'Privates Projekt'],
-  wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Glossar', 'Tierschutzwissen'],
+  wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
+  glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
   'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],
   'ernaehrung-taurin': ['Tierernährung', 'Taurin', 'Katzenfutter', 'Hundefutter', 'vegane Tierernährung'],
   realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
@@ -1932,7 +1969,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'katzen', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen'];
+  const important = ['hunde', 'katzen', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',

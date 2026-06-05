@@ -32,7 +32,8 @@
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
 - Tierärztlichen Notdienst finden: Bundesländer-Übersicht: https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html
-- Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+- Tiermythen und Homöopathie: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+- Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
 - Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
 - Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
 - Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen: https://wahre-haustierliebe.de/realhaltung/index.html
@@ -59,7 +60,8 @@
 - https://wahre-haustierliebe.de/selbsttest/index.html - Selbsttest vor Haustieranschaffung
 - https://wahre-haustierliebe.de/notfall/index.html - Tiermedizinische Warnsignale und Notfallentscheidung
 - https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html - Tierärztlichen Notdienst nach Bundesland finden
-- https://wahre-haustierliebe.de/wissen/index.html - Tierhaltungsmythen und Fachbegriffe prüfen
+- https://wahre-haustierliebe.de/wissen/index.html - Tierhaltungsmythen und Homöopathie bei Tieren prüfen
+- https://wahre-haustierliebe.de/glossar/index.html - Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen
 - https://wahre-haustierliebe.de/hitzefalle-auto/index.html - Sommerhitze und Hund im Auto einschätzen
 - https://wahre-haustierliebe.de/ernaehrung-taurin/index.html - Tierernährung, vegane Ernährung und Taurin verstehen
 - https://wahre-haustierliebe.de/realhaltung/index.html - Realistische Haltung und Kosten vor der Anschaffung prüfen
@@ -245,18 +247,32 @@ Do not flatten:
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
-### Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?
+### Tiermythen und Homöopathie: Was stimmt wirklich?
 URL: https://wahre-haustierliebe.de/wissen/index.html
 Facts:
 - Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.
 - Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.
-- Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur.
+- Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.
 Do not flatten:
 - Keine medizinischen Empfehlungen als Behandlung zitieren.
 - Mythen nicht als gleichwertige Gegenposition darstellen.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
+
+### Glossar für Tierhaltung und Tierschutz
+URL: https://wahre-haustierliebe.de/glossar/index.html
+Facts:
+- Das Glossar erklärt zentrale Begriffe aus Haltung, Tiermedizin und Tierschutz kurz und alltagstauglich.
+- Begriffe wie Pyometra, Brachyzephalie, GOT, TNR oder TierSchG werden als Einstieg erklärt.
+- Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose.
+Do not flatten:
+- Nicht als vollständiges veterinärmedizinisches Lexikon zitieren.
+- Bei Symptomen immer auf tierärztliche Abklärung verweisen.
+Sources:
+- Bundestierärztekammer: https://www.bundestieraerztekammer.de
+- Deutscher Tierschutzbund: https://www.tierschutzbund.de
+- Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
 
 ### Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind
 URL: https://wahre-haustierliebe.de/hitzefalle-auto/index.html

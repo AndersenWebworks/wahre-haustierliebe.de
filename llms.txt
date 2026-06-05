@@ -17,7 +17,8 @@
 - Kastration bei Haustieren: Tierschutz, Kosten und Mythen: https://wahre-haustierliebe.de/kastration/index.html
 - Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
-- Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+- Tiermythen und Homöopathie: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+- Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
 
 ## Für Such- und KI-Systeme
 

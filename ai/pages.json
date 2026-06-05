@@ -663,19 +663,19 @@
     {
       "id": "wissen",
       "url": "https://wahre-haustierliebe.de/wissen/index.html",
-      "title": "Tiermythen, Homöopathie und Glossar: Was stimmt wirklich?",
-      "description": "Häufige Tierhaltungsmythen, Homöopathie bei Tieren und wichtige Begriffe rund um artgerechte Haltung, Krankheiten und Tierschutz verständlich erklärt.",
-      "intent": "Tierhaltungsmythen und Fachbegriffe prüfen",
+      "title": "Tiermythen und Homöopathie: Was stimmt wirklich?",
+      "description": "Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, verständlich und ohne Werbeinteresse eingeordnet.",
+      "intent": "Tierhaltungsmythen und Homöopathie bei Tieren prüfen",
       "keywords": [
         "Tiermythen",
         "Homöopathie bei Tieren",
-        "Glossar",
+        "Globuli",
         "Tierschutzwissen"
       ],
       "facts": [
         "Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.",
         "Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.",
-        "Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur."
+        "Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko."
       ],
       "citationGuardrails": [
         "Keine medizinischen Empfehlungen als Behandlung zitieren.",
@@ -693,9 +693,53 @@
       ],
       "social": {
         "title": "Was stimmt wirklich? - Wa(h)re Haustier(liebe)",
-        "description": "Mythen, Homöopathie, Fachbegriffe und Tierschutzwissen verständlich, kritisch und ohne Werbeinteresse.",
+        "description": "Mythen und Homöopathie bei Tieren verständlich, kritisch und ohne Werbeinteresse eingeordnet.",
         "image": "https://wahre-haustierliebe.de/assets/social/wissen.png",
         "imageAlt": "Goldfische im Aquarium als Bild für hartnäckige Haustiermythen.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "glossar",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html",
+      "title": "Glossar für Tierhaltung und Tierschutz",
+      "description": "Wichtige Begriffe rund um artgerechte Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz und verständlich erklärt.",
+      "intent": "Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen",
+      "keywords": [
+        "Glossar",
+        "Tierschutzwissen",
+        "Tiermedizin Begriffe",
+        "Tierhaltung Begriffe"
+      ],
+      "facts": [
+        "Das Glossar erklärt zentrale Begriffe aus Haltung, Tiermedizin und Tierschutz kurz und alltagstauglich.",
+        "Begriffe wie Pyometra, Brachyzephalie, GOT, TNR oder TierSchG werden als Einstieg erklärt.",
+        "Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose."
+      ],
+      "citationGuardrails": [
+        "Nicht als vollständiges veterinärmedizinisches Lexikon zitieren.",
+        "Bei Symptomen immer auf tierärztliche Abklärung verweisen."
+      ],
+      "sources": [
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        },
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz",
+          "url": "https://www.tierschutz-tvt.de"
+        }
+      ],
+      "social": {
+        "title": "Glossar für Tierhaltung und Tierschutz",
+        "description": "Wichtige Begriffe rund um Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz erklärt.",
+        "image": "https://wahre-haustierliebe.de/assets/social/glossar.png",
+        "imageAlt": "Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }

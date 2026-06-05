@@ -24,6 +24,7 @@ const pages = [
   { id: 'selbsttest', file: 'selbsttest/index.html' },
   { id: 'notfall', file: 'notfall/index.html' },
   { id: 'wissen', file: 'wissen/index.html' },
+  { id: 'glossar', file: 'glossar/index.html' },
   { id: 'hitzefalle-auto', file: 'hitzefalle-auto/index.html' },
   { id: 'ernaehrung-taurin', file: 'ernaehrung-taurin/index.html' },
   { id: 'realhaltung', file: 'realhaltung/index.html' },

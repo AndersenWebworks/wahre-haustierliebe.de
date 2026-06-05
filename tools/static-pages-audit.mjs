@@ -26,6 +26,7 @@ const pages = [
   { id: 'notfall', file: 'notfall/index.html', canonical: `${baseUrl}/notfall/index.html` },
   { id: 'tierarzt-notdienst', file: 'notfall/tierarzt-notdienst/index.html', canonical: `${baseUrl}/notfall/tierarzt-notdienst/index.html` },
   { id: 'wissen', file: 'wissen/index.html', canonical: `${baseUrl}/wissen/index.html` },
+  { id: 'glossar', file: 'glossar/index.html', canonical: `${baseUrl}/glossar/index.html` },
   { id: 'hitzefalle-auto', file: 'hitzefalle-auto/index.html', canonical: `${baseUrl}/hitzefalle-auto/index.html` },
   { id: 'ernaehrung-taurin', file: 'ernaehrung-taurin/index.html', canonical: `${baseUrl}/ernaehrung-taurin/index.html` },
   { id: 'realhaltung', file: 'realhaltung/index.html', canonical: `${baseUrl}/realhaltung/index.html` },

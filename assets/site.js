@@ -17,6 +17,7 @@ var staticPageRoutes = {
   "notfall": "/notfall/index.html",
   "tierarzt-notdienst": "/notfall/tierarzt-notdienst/index.html",
   "wissen": "/wissen/index.html",
+  "glossar": "/glossar/index.html",
   "hitzefalle-auto": "/hitzefalle-auto/index.html",
   "ernaehrung-taurin": "/ernaehrung-taurin/index.html",
   "realhaltung": "/realhaltung/index.html",
@@ -56,6 +57,7 @@ function normalizeAssetUrls(root) {
       'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
       'notfall': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
       'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leiden müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
+      'glossar': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für Nachschlagewissen zur Tierhaltung', position: 'center 48%', caption: 'Begriffe sind nur hilfreich, wenn sie zu besseren Entscheidungen führen.', purpose: 'Glossar-Seite: Fachbegriffe als Einstieg in verantwortliche Tierhaltung zeigen', shareReason: 'Das Bild soll Nachschlagewissen ruhig und wiedererkennbar rahmen.' },
       'noch-nicht-bereit': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang', position: 'center 46%', caption: 'Warten kann die tierliebste Entscheidung sein.', purpose: 'Noch-nicht-bereit-Seite: verantwortliches Warten statt Scheitern zeigen', shareReason: 'Das Bild soll Tierverzicht als Fürsorge normalisieren.' }
     };
 
@@ -633,7 +635,11 @@ function normalizeAssetUrls(root) {
         wissen: [
           { text: 'Mythen', href: '#mythen' },
           { text: 'Globuli', href: '#globuli' },
-          { text: 'Glossar', href: '#glossar' }
+        ],
+        glossar: [
+          { text: 'Begriffe', href: '#begriffe' },
+          { text: 'Suche', href: '#glossary-search' },
+          { text: 'Tierschutzwissen', href: '#begriffe' }
         ],
         'noch-nicht-bereit': ['Warten erlaubt', 'Anders helfen', 'Später planen']
       };
@@ -1011,6 +1017,138 @@ function normalizeAssetUrls(root) {
           submit.textContent = previousLabel;
         }, 600);
       }
+    }
+
+    var glossaryTooltip = null;
+    var activeGlossaryTrigger = null;
+    var glossaryTooltipReady = false;
+
+    function initGlossaryTooltips() {
+      if (glossaryTooltipReady) return;
+      var triggers = document.querySelectorAll('.glossary-term[data-glossary-title][data-glossary-text]');
+      if (!triggers.length) return;
+
+      glossaryTooltip = document.getElementById('glossary-term-popover');
+      if (!glossaryTooltip) {
+        glossaryTooltip = document.createElement('div');
+        glossaryTooltip.id = 'glossary-term-popover';
+        document.body.appendChild(glossaryTooltip);
+      }
+      glossaryTooltip.className = 'glossary-term-popover';
+      glossaryTooltip.setAttribute('role', 'tooltip');
+      glossaryTooltip.textContent = '';
+      glossaryTooltipReady = true;
+
+      triggers.forEach(function(trigger) {
+        trigger.setAttribute('aria-describedby', 'glossary-term-popover');
+
+        trigger.addEventListener('mouseenter', function() {
+          showGlossaryTooltip(trigger, false);
+        });
+
+        trigger.addEventListener('mouseleave', function() {
+          if (activeGlossaryTrigger === trigger && !trigger.classList.contains('is-open')) {
+            hideGlossaryTooltip();
+          }
+        });
+
+        trigger.addEventListener('click', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          if (activeGlossaryTrigger === trigger && trigger.classList.contains('is-open')) {
+            hideGlossaryTooltip();
+            return;
+          }
+          showGlossaryTooltip(trigger, true);
+        });
+      });
+
+      glossaryTooltip.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+
+      document.addEventListener('click', function(event) {
+        if (event.target.closest('.glossary-term') || event.target.closest('.glossary-term-popover')) return;
+        hideGlossaryTooltip();
+      });
+
+      window.addEventListener('resize', hideGlossaryTooltip);
+      window.addEventListener('scroll', function() {
+        if (activeGlossaryTrigger && glossaryTooltip && glossaryTooltip.classList.contains('is-visible')) {
+          positionGlossaryTooltip(activeGlossaryTrigger);
+        }
+      }, { passive: true });
+    }
+
+    function showGlossaryTooltip(trigger, keepOpen) {
+      if (!glossaryTooltip) return;
+
+      document.querySelectorAll('.glossary-term.is-active, .glossary-term.is-open').forEach(function(term) {
+        term.classList.remove('is-active', 'is-open');
+      });
+
+      activeGlossaryTrigger = trigger;
+      trigger.classList.add('is-active');
+      if (keepOpen) trigger.classList.add('is-open');
+
+      glossaryTooltip.textContent = '';
+      var title = document.createElement('strong');
+      title.textContent = trigger.dataset.glossaryTitle;
+      var text = document.createElement('span');
+      text.textContent = trigger.dataset.glossaryText;
+      var link = document.createElement('a');
+      link.href = trigger.dataset.glossaryHref || 'glossar/index.html';
+      link.textContent = 'Zum Glossar';
+
+      glossaryTooltip.appendChild(title);
+      glossaryTooltip.appendChild(text);
+      glossaryTooltip.appendChild(link);
+      glossaryTooltip.classList.add('is-visible');
+      positionGlossaryTooltip(trigger);
+    }
+
+    function hideGlossaryTooltip() {
+      if (!glossaryTooltip) return;
+      glossaryTooltip.classList.remove('is-visible');
+      document.querySelectorAll('.glossary-term.is-active, .glossary-term.is-open').forEach(function(term) {
+        term.classList.remove('is-active', 'is-open');
+      });
+      activeGlossaryTrigger = null;
+    }
+
+    function positionGlossaryTooltip(trigger) {
+      if (!glossaryTooltip || !trigger) return;
+
+      var viewportWidth = document.documentElement.clientWidth;
+      var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      var rect = trigger.getBoundingClientRect();
+      var gap = 8;
+      var margin = 12;
+
+      glossaryTooltip.style.left = '0px';
+      glossaryTooltip.style.top = '0px';
+
+      var tooltipRect = glossaryTooltip.getBoundingClientRect();
+      var left = window.scrollX + rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+      var maxLeft = window.scrollX + viewportWidth - tooltipRect.width - margin;
+      left = Math.max(window.scrollX + margin, Math.min(left, maxLeft));
+
+      var top = window.scrollY + rect.bottom + gap;
+      if (rect.bottom + gap + tooltipRect.height > viewportHeight - margin) {
+        top = window.scrollY + rect.top - tooltipRect.height - gap;
+      }
+      if (top < window.scrollY + margin) {
+        top = window.scrollY + margin;
+      }
+
+      glossaryTooltip.style.left = left + 'px';
+      glossaryTooltip.style.top = top + 'px';
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGlossaryTooltips);
+    } else {
+      initGlossaryTooltips();
     }
 
     function prefersReducedMotion() {
