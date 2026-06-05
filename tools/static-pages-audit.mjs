@@ -32,7 +32,6 @@ const pages = [
   { id: 'zucht-und-vermehrung', file: 'zucht-und-vermehrung/index.html', canonical: `${baseUrl}/zucht-und-vermehrung/index.html` },
   { id: 'wildtierhaltung', file: 'wildtierhaltung/index.html', canonical: `${baseUrl}/wildtierhaltung/index.html` },
   { id: 'noch-nicht-bereit', file: 'noch-nicht-bereit/index.html', canonical: `${baseUrl}/noch-nicht-bereit/index.html` },
-  { id: 'budgie-brain', file: 'budgie-brain/index.html', canonical: `${baseUrl}/budgie-brain/index.html` },
 ];
 
 const pageIds = new Set(pages.map((page) => page.id));
@@ -127,10 +126,8 @@ async function auditPage(page) {
       issues.push(`invalid-jsonld:${error.message}`);
     }
   }
-  if (page.id !== 'budgie-brain' && !schemaTypes.includes('BreadcrumbList')) issues.push('missing-breadcrumb-schema');
-  if (page.id === 'budgie-brain') {
-    if (!schemaTypes.includes('LearningResource')) issues.push('missing-learning-resource-schema');
-  } else if (!schemaTypes.includes(page.id === 'startseite' ? 'WebSite' : 'WebPage')) {
+  if (!schemaTypes.includes('BreadcrumbList')) issues.push('missing-breadcrumb-schema');
+  if (!schemaTypes.includes(page.id === 'startseite' ? 'WebSite' : 'WebPage')) {
     issues.push('missing-webpage-schema');
   }
 
@@ -218,12 +215,11 @@ async function main() {
 
   const css = await fs.readFile(path.join(projectRoot, 'assets', 'site.css'), 'utf8');
   const sourceHtml = await fs.readFile(path.join(projectRoot, 'src', 'site-source.html'), 'utf8');
-  const budgieEngine = await fs.readFile(path.join(projectRoot, 'js', 'budgie-engine.js'), 'utf8');
   const iconIssues = [];
   if (/\.signal-card::before\s*,\s*\.rhythm-card::before/.test(css) || /\.signal-card::before\s*,\s*\.rhythm-card::before/.test(sourceHtml)) {
     iconIssues.push('empty-card-number-pseudo-selector');
   }
-  for (const [label, source] of [['src/site-source.html', sourceHtml], ['js/budgie-engine.js', budgieEngine]]) {
+  for (const [label, source] of [['src/site-source.html', sourceHtml]]) {
     if (decorativeGlyphPattern.test(source)) iconIssues.push(`${label}:decorative-emoji-left-in-source`);
   }
 

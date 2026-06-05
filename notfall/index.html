@@ -35,9 +35,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&amp;family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="../assets/site.css">
   <script type="application/ld+json">
 {
@@ -123,6 +122,65 @@
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst",
+  "name": "Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst",
+  "description": "Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.",
+  "url": "https://wahre-haustierliebe.de/notfall/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/notfall/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/notfall.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-06-05",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Tiernotfall, Vergiftung, Atemnot, Tierarzt, Warnsignale",
+  "articleSection": "Tiermedizinische Warnsignale und Notfallentscheidung",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Tiernotfall"
+    },
+    {
+      "@type": "Thing",
+      "name": "Vergiftung"
+    },
+    {
+      "@type": "Thing",
+      "name": "Atemnot"
+    },
+    {
+      "@type": "Thing",
+      "name": "Tierarzt"
+    },
+    {
+      "@type": "Thing",
+      "name": "Warnsignale"
+    }
+  ],
+  "citation": [
+    "https://www.bundestieraerztekammer.de",
+    "https://www.tasso.net"
+  ]
+}
+  </script>
 </head>
 <body class="static-site" data-static-site="true" data-page-id="notfall" data-route-prefix="../" data-asset-prefix="../">
   <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
@@ -132,7 +190,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="../index.html" aria-label="Wa(h)re Haustier(liebe) Startseite">
-        <img class="site-logo-image" src="../assets/images/wahre-haustierliebe-mark.png" alt="" aria-hidden="true">
+        <img class="site-logo-image" src="../assets/images/optimized/wahre-haustierliebe-mark.png" alt="" aria-hidden="true" width="280" height="258" decoding="async">
         <span class="site-logo-text"><span class="brand-dark">Wa</span><span class="brand-red">(h)</span><span class="brand-dark">re Haustier</span><span class="brand-red">(liebe)</span></span>
       </a>
       <nav aria-label="Hauptnavigation">
@@ -199,7 +257,7 @@
       <div class="container"><div class="article-hero-copy">
         <h1>Notfall – wenn etwas mit deinem Tier nicht stimmt</h1>
         <p>Im Zweifel gilt immer: Lieber einmal zu oft zum Tierarzt als einmal zu wenig.</p>
-      <div class="article-kicker"><span>Anrufen</span><span>Sichern</span><span>Hinfahren</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen" data-share-reason="Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen." style="--image-position: center 50%;"><img src="../assets/images/vet-office-with-dog.jpg" alt="Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe" loading="eager" decoding="async"><figcaption class="context-caption">Im Zweifel ruhig bleiben, anrufen, hinfahren.</figcaption></figure></div>
+      <div class="article-kicker"><span>Anrufen</span><span>Sichern</span><span>Hinfahren</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen" data-share-reason="Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen." style="--image-position: center 50%;"><img src="../assets/images/optimized/vet-office-with-dog.jpg" alt="Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe" loading="eager" decoding="async" width="1200" height="900" fetchpriority="high"><figcaption class="context-caption">Im Zweifel ruhig bleiben, anrufen, hinfahren.</figcaption></figure></div>
     </div>
 
     <div class="section">
@@ -324,7 +382,26 @@
           <p>Alle Informationen hier dienen der Ersteinschätzung. Sie ersetzen nicht die Diagnose und Behandlung durch eine Tierärztin oder einen Tierarzt. Im Zweifel: anrufen, hinfahren, untersuchen lassen.</p>
         </div>
 
-        <p class="share-label mt-2">Speichere diese Seite und teile sie – im Notfall zählt jede Minute:</p>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="notfall">
+          <span class="eyebrow">Quellen und Prüfstand</span>
+          <h2>Worauf diese Seite ihre Aussagen stützt</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kernfakten</h3>
+              <ul><li>Atemnot, Krämpfe, Vergiftungsverdacht, starke Blutung, Zusammenbruch und Harnstopp sind sofortige Tierarztfälle.</li><li>Bei Vergiftung Verpackung oder Substanz sichern und nicht eigenmächtig Erbrechen auslösen.</li><li>Notdienste sind regional organisiert; vor der Fahrt immer anrufen.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Primäre Quellen</h3>
+              <ul><li><a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a></li><li><a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Nicht glätten</h3>
+              <ul><li>Immer klar sagen: keine tierärztliche Diagnose.</li><li>Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.</li></ul>
+            </article>
+          </div>
+        </div>
+<p class="share-label mt-2">Speichere diese Seite und teile sie – im Notfall zählt jede Minute:</p>
         <div class="share-bar">
           <button class="share-btn" onclick="shareThis('whatsapp', 'Tier-Notfall: Vergiftungsgefahren, Warnsignale und Erste Hilfe. Speichern und teilen:')">WhatsApp</button>
           <button class="share-btn" onclick="shareThis('facebook')">Facebook</button>
@@ -359,7 +436,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img class="footer-brand-logo" src="../assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)">
+          <img class="footer-brand-logo" src="../assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="720" height="480" decoding="async">
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor und während du Verantwortung für ein Lebewesen trägst.</p>
           <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a></p>
           <p>Neuigkeiten und kurze Denkanstöße gibt es auch auf <a href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">Instagram: @wahrehaustierliebe</a>.</p>
@@ -392,7 +469,7 @@
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/kontakt/">Kontakt</a> | <a href="https://wahre-haustierliebe.de/impressum/">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz/">Datenschutz</a></p>
         <p class="footer-credit">Texte von <a href="https://annemarie-andersen.de/" target="_blank" rel="noopener noreferrer">Annemarie Andersen</a> &amp; Umsetzung von <a href="https://andersen-webworks.de/" target="_blank" rel="noopener noreferrer">Andersen Webworks</a>.</p>
-        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener noreferrer">BMEL</a></p>
+        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmleh.de" target="_blank" rel="noopener noreferrer">BMLEH</a></p>
         <details class="image-credits">
           <summary>Bildnachweise anzeigen</summary>
           <p><strong>Bildnachweise:</strong>

@@ -11,8 +11,6 @@ const pagesMetadataPath = path.join(projectRoot, 'ai', 'pages.json');
 const fixedPublicPaths = [
   'ai',
   'assets',
-  'css',
-  'js',
   'llms-full.txt',
   'llms.txt',
   'robots.txt',

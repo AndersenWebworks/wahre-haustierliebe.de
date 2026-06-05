@@ -330,7 +330,7 @@ const BudgieApp = (function() {
     const parts = [];
 
     if (moodAfter !== moodBefore) {
-      const labels = { content: 'zufriedener', neutral: 'ruhiger', restless: 'unruhiger', stressed: 'gestresster', crisis: 'verzweifelter', sleeping: 'eingeschlafen', sick: 'kraenker' };
+      const labels = { content: 'zufriedener', neutral: 'ruhiger', restless: 'unruhiger', stressed: 'gestresster', crisis: 'verzweifelter', sleeping: 'eingeschlafen', sick: 'kränker' };
       parts.push(name + ' wirkt ' + (labels[moodAfter] || 'anders') + ' als vor einer Stunde.');
     }
 
@@ -824,11 +824,11 @@ const BudgieApp = (function() {
       '<h3>Umgebung</h3>' +
 
       '<div class="env-group">' +
-        '<label>Kaefigtyp</label>' +
+        '<label>Käfigtyp</label>' +
         '<select onchange="BudgieApp.changeEnv(\'cageType\', this.value)">' +
-          '<option value="cage_small"' + (env.cageType === 'cage_small' ? ' selected' : '') + '>Kleiner Kaefig</option>' +
-          '<option value="cage_medium"' + (env.cageType === 'cage_medium' ? ' selected' : '') + '>Mittlerer Kaefig</option>' +
-          '<option value="cage_large"' + (env.cageType === 'cage_large' ? ' selected' : '') + '>Grosser Kaefig</option>' +
+          '<option value="cage_small"' + (env.cageType === 'cage_small' ? ' selected' : '') + '>Kleiner Käfig</option>' +
+          '<option value="cage_medium"' + (env.cageType === 'cage_medium' ? ' selected' : '') + '>Mittlerer Käfig</option>' +
+          '<option value="cage_large"' + (env.cageType === 'cage_large' ? ' selected' : '') + '>Großer Käfig</option>' +
           '<option value="aviary"' + (env.cageType === 'aviary' ? ' selected' : '') + '>Voliere</option>' +
         '</select>' +
       '</div>' +
@@ -838,8 +838,8 @@ const BudgieApp = (function() {
         '<select onchange="BudgieApp.changeEnv(\'roomType\', this.value)">' +
           '<option value="living_room"' + (env.roomType === 'living_room' ? ' selected' : '') + '>Wohnzimmer</option>' +
           '<option value="bedroom"' + (env.roomType === 'bedroom' ? ' selected' : '') + '>Schlafzimmer</option>' +
-          '<option value="office"' + (env.roomType === 'office' ? ' selected' : '') + '>Buero</option>' +
-          '<option value="kitchen"' + (env.roomType === 'kitchen' ? ' selected' : '') + '>Kueche (!)</option>' +
+          '<option value="office"' + (env.roomType === 'office' ? ' selected' : '') + '>Büro</option>' +
+          '<option value="kitchen"' + (env.roomType === 'kitchen' ? ' selected' : '') + '>Küche (!)</option>' +
         '</select>' +
       '</div>' +
 
@@ -957,7 +957,7 @@ const BudgieApp = (function() {
     statsEl.innerHTML =
       '<div class="death-stat"><span class="death-stat-value">' + s.daysSurvived + '</span><span class="death-stat-label">Tage</span></div>' +
       '<div class="death-stat"><span class="death-stat-value">' + s.totalInteractions + '</span><span class="death-stat-label">Aktionen</span></div>' +
-      '<div class="death-stat"><span class="death-stat-value">' + s.fedCount + '</span><span class="death-stat-label">Gefuettert</span></div>' +
+      '<div class="death-stat"><span class="death-stat-value">' + s.fedCount + '</span><span class="death-stat-label">Gefüttert</span></div>' +
       '<div class="death-stat"><span class="death-stat-value">' + s.vetVisits + '</span><span class="death-stat-label">Tierarzt</span></div>' +
       '<div class="death-stat"><span class="death-stat-value">' + s.worstStress + '%</span><span class="death-stat-label">Max. Stress</span></div>';
 

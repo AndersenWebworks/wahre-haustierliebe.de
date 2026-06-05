@@ -49,7 +49,7 @@
             <label for="budgie-color">Gefiederfarbe</label>
             <select id="budgie-color">
               <option value="grün-gelb">Wildfarbe</option>
-              <option value="blau-weiß">Blau-Weiss</option>
+              <option value="blau-weiß">Blau-Weiß</option>
               <option value="gelb">Lutino</option>
               <option value="hellblau">Hellblau</option>
               <option value="grau">Grau</option>
@@ -59,7 +59,7 @@
           <div class="form-group">
             <label for="budgie-sex">Geschlecht</label>
             <select id="budgie-sex">
-              <option value="männlich">Maennlich</option>
+              <option value="männlich">Männlich</option>
               <option value="weiblich">Weiblich</option>
               <option value="unbekannt">Unbekannt</option>
             </select>
@@ -68,6 +68,20 @@
 
         <button type="submit" class="btn-start">Simulation starten</button>
       </form>
+
+      <section class="intro-learning" data-evidence-block="budgie-brain" aria-labelledby="budgie-learning-title">
+        <p class="learning-kicker">Wellensittich-Haltung verstehen</p>
+        <h2 id="budgie-learning-title">Ein kleiner Vogel ist kein kleines Bedürfnis.</h2>
+        <p>Budgie Brain übersetzt typische Haltungsfehler in eine spielbare Erfahrung: Einzelhaltung, fehlender Freiflug, zu wenig UV-Licht, Stress durch Langeweile und der Unterschied zwischen Beschäftigung und echter Umgebung.</p>
+        <p>Die Simulation ist kein vollständiger Haltungsplan. Sie zeigt, warum Wellensittiche mindestens paarweise leben, täglich fliegen, frische Reize bekommen und bei Warnsignalen tierärztlich abgeklärt werden müssen.</p>
+        <h3>Quellen und Prüfstand</h3>
+        <p>Die Lernlogik orientiert sich an Tierschutz-Grundlagen zu Schwarmhaltung, Freiflug, Umgebung und Stress. Nicht glätten: Einzelhaltung ist keine normale Einstiegsoption.</p>
+        <div class="learning-links">
+          <a href="../voegel/index.html">Vogelhaltung lesen</a>
+          <a href="../notfall/index.html">Warnsignale prüfen</a>
+          <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>
+        </div>
+      </section>
     </div>
 
     <!-- ===== MAIN SIMULATION ===== -->
@@ -92,7 +106,7 @@
       <div class="day-progress" id="day-progress">
         <div class="day-progress-fill" id="day-progress-fill"></div>
         <div class="day-progress-markers">
-          <span class="marker marker-dawn" title="Daemmerung"></span>
+          <span class="marker marker-dawn" title="Dämmerung"></span>
           <span class="marker marker-noon" title="Mittag"></span>
           <span class="marker marker-evening" title="Abend"></span>
         </div>
@@ -177,7 +191,7 @@
           <div class="action-group-buttons">
             <button class="action-btn action-btn--feed" onclick="BudgieApp.showFoodModal()">
               <span class="action-icon action-icon--feed" aria-hidden="true"></span>
-              <span class="action-label">Fuettern</span>
+              <span class="action-label">Füttern</span>
             </button>
             <button class="action-btn action-btn--water" onclick="BudgieApp.doAction('water')">
               <span class="action-icon action-icon--water" aria-hidden="true"></span>
@@ -239,7 +253,7 @@
             </button>
             <button class="action-btn action-btn--skipday" onclick="BudgieApp.doAction('skipday')">
               <span class="action-icon action-icon--night" aria-hidden="true"></span>
-              <span class="action-label">Naechster Tag</span>
+              <span class="action-label">Nächster Tag</span>
             </button>
           </div>
         </div>
@@ -291,7 +305,7 @@
   <!-- ===== FOOD MODAL ===== -->
   <div class="modal-overlay hidden" id="food-modal">
     <div class="modal">
-      <h3>Was fuettern?</h3>
+      <h3>Was füttern?</h3>
       <div class="food-options" id="food-options"></div>
       <button class="modal-cancel" onclick="BudgieApp.closeFoodModal()">Abbrechen</button>
     </div>
@@ -306,7 +320,7 @@
   <div class="modal-overlay hidden" id="companion-modal">
     <div class="modal companion-modal">
       <h3>Zweiter Wellensittich</h3>
-      <p class="companion-intro">Ein Artgenosse veraendert alles. Wellensittiche sind Schwarmtiere. Wie soll der neue Vogel heissen?</p>
+      <p class="companion-intro">Ein Artgenosse verändert alles. Wellensittiche sind Schwarmtiere. Wie soll der neue Vogel heißen?</p>
       <div class="form-group">
         <input type="text" id="companion-name-input" placeholder="z. B. Kazooie" maxlength="20">
       </div>

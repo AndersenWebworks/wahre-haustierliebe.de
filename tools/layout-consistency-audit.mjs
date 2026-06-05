@@ -30,7 +30,6 @@ const pages = [
   { id: 'zucht-und-vermehrung', file: 'zucht-und-vermehrung/index.html' },
   { id: 'wildtierhaltung', file: 'wildtierhaltung/index.html' },
   { id: 'noch-nicht-bereit', file: 'noch-nicht-bereit/index.html' },
-  { id: 'budgie-brain', file: 'budgie-brain/index.html', standalone: true },
 ];
 
 const viewports = [

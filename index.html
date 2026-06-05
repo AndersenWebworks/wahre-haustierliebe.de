@@ -35,9 +35,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&amp;family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">
 {
@@ -130,7 +129,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="index.html" aria-label="Wa(h)re Haustier(liebe) Startseite">
-        <img class="site-logo-image" src="assets/images/wahre-haustierliebe-mark.png" alt="" aria-hidden="true">
+        <img class="site-logo-image" src="assets/images/optimized/wahre-haustierliebe-mark.png" alt="" aria-hidden="true" width="280" height="258" decoding="async">
         <span class="site-logo-text"><span class="brand-dark">Wa</span><span class="brand-red">(h)</span><span class="brand-dark">re Haustier</span><span class="brand-red">(liebe)</span></span>
       </a>
       <nav aria-label="Hauptnavigation">
@@ -196,7 +195,7 @@
     <div class="hero">
       <div class="container">
         <div class="hero-copy">
-          <img class="hero-brand-logo" src="assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)">
+          <img class="hero-brand-logo" src="assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="720" height="480" decoding="async" fetchpriority="high">
           <span class="eyebrow"><span class="dot"></span> Das Handbuch aus Liebe zum Tier</span>
           <h1>Jedes Tier verdient, dass du weißt, was du tust.</h1>
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor du Verantwortung für ein Lebewesen übernimmst.</p>
@@ -213,7 +212,7 @@
         <div class="hero-visual-card image-context-card" data-image-purpose="Hero: Tierheim-Hund als sichtbare Verantwortung vor dem Kauf" data-share-reason="Das Bild soll den Satz 'vor dem Kauf lesen' konkret machen, ohne ein Personenmotiv zu nutzen.">
           <div class="hero-tape">vor dem Kauf lesen.</div>
           <figure class="hero-lead-image">
-            <img src="assets/images/tierheim-hund.jpg" alt="Hund im Tierheim als Bild für echte Bedürfnisse vor dem Kauf" loading="eager" style="--image-position:center 45%;">
+            <img src="assets/images/optimized/tierheim-hund.jpg" alt="Hund im Tierheim als Bild für echte Bedürfnisse vor dem Kauf" loading="eager" style="--image-position:center 45%;" width="960" height="1280" decoding="async" fetchpriority="high">
             <figcaption class="context-caption">Vor dem Kauf steht immer ein echtes Tier mit echten Bedürfnissen</figcaption>
           </figure>
           <div class="hero-evidence-grid">
@@ -295,7 +294,7 @@
         <div class="insight-grid">
           <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Katzen: Ruhe kann Rückzug, Langeweile oder Überforderung sein" data-share-reason="Der Satz soll Katzenhalter erreichen, die stilles Verhalten zu schnell als Zufriedenheit lesen.">
             <figure>
-              <img src="assets/images/cat-window-perch.jpg" alt="Katze sitzt auf einer Fensterbank und blickt nach draußen" loading="lazy" style="--image-position:center 44%;">
+              <img src="assets/images/optimized/cat-window-perch.jpg" alt="Katze sitzt auf einer Fensterbank und blickt nach draußen" loading="lazy" style="--image-position:center 44%;" width="1000" height="750" decoding="async">
               <figcaption class="context-caption">Still heißt nicht automatisch zufrieden</figcaption>
             </figure>
             <div class="insight-body">
@@ -306,7 +305,7 @@
           </article>
           <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Kleintiere: Gehege und Struktur sind Grundbedürfnis, nicht Dekoration" data-share-reason="Diese Karte soll den Reflex brechen, Kleintiere als einfache Kinderzimmertiere zu sehen.">
             <figure>
-              <img src="assets/images/hamster-home-built-enclosure.png" alt="Großes selbst gebautes Hamstergehege mit Einstreu, Laufrad und Verstecken" loading="lazy" style="--image-position:center 55%;">
+              <img src="assets/images/optimized/hamster-home-built-enclosure.jpg" alt="Großes selbst gebautes Hamstergehege mit Einstreu, Laufrad und Verstecken" loading="lazy" style="--image-position:center 55%;" width="1200" height="642" decoding="async">
               <figcaption class="context-caption">Fläche ist ein Grundbedürfnis</figcaption>
             </figure>
             <div class="insight-body">
@@ -317,7 +316,7 @@
           </article>
           <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Notfall: Der ruhige Tierarztmoment senkt die Hemmung, früher Hilfe zu holen" data-share-reason="Die Karte soll Menschen bestärken, Unsicherheit nicht auszusitzen.">
             <figure>
-              <img src="assets/images/vet-office-with-dog.jpg" alt="Hund sitzt ruhig in einer Tierarztpraxis" loading="lazy" style="--image-position:center 58%;">
+              <img src="assets/images/optimized/vet-office-with-dog.jpg" alt="Hund sitzt ruhig in einer Tierarztpraxis" loading="lazy" style="--image-position:center 58%;" width="1200" height="900" decoding="async">
               <figcaption class="context-caption">Lieber einmal zu früh</figcaption>
             </figure>
             <div class="insight-body">
@@ -335,12 +334,12 @@
         <h2 class="text-center">Tierarten-Übersicht</h2>
         <p class="text-center text-muted">Wähle eine Tierart für ausführliche Infos zu Haltung, Kosten und häufigen Fehlern.</p>
         <div class="animal-grid">
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Hunde: Training und Beschäftigung statt Hundeporträt" data-share-reason="Der Klick soll vom Wunschhund zum Zeit- und Alltagscheck führen." href="hunde/index.html"><img class="animal-card-img" src="assets/images/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training und Beschäftigung" loading="lazy"><span class="animal-card-caption">Training und Zeit</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Wohnung muss Bedürfnisse sichtbar mitdenken" data-share-reason="Die Karte soll Katzenhaltung als Umfeldgestaltung rahmen, nicht als bloßes Kuscheltierbild." href="katzen/index.html"><img class="animal-card-img" src="assets/images/cat-scratching-post.jpg" alt="Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung" loading="lazy" style="object-position:center 48%;"><span class="animal-card-caption">Umfeld gestalten</span><span>Katzen</span><small>Einzeljäger, aber keine Einzelgänger.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Vögel: Schwarm und Raum sichtbar machen" data-share-reason="Das Bild widerspricht dem Einzelvogel-im-Käfig-Reflex." href="voegel/index.html"><img class="animal-card-img" src="assets/images/voegel-voliere.jpg" alt="Mehrere Wellensittiche in einer Voliere" loading="lazy"><span class="animal-card-caption">Schwarm und Raum</span><span>Vögel</span><small>Schwarmtiere, keine Dekoration.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Kleintiere: Sozialkontakt statt Spielzeughaltung" data-share-reason="Das Bild zeigt Kleintiere als empfindsame Tiere, nicht als Kinderzimmerobjekt." href="kleintiere/index.html"><img class="animal-card-img" src="assets/images/kleintiere-zwei-meerschweinchen.jpg" alt="Zwei Meerschweinchen zusammen im Gras" loading="lazy"><span class="animal-card-caption">Nicht allein denken</span><span>Kleintiere</span><small>Kein Einstiegstier, kein Spielzeug.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Exoten: Technik und Klima statt Faszination allein" data-share-reason="Der Klick soll von Faszination zu Temperatur, Licht und Fachwissen führen." href="exoten/index.html"><img class="animal-card-img" src="assets/images/exot-bartagame.jpg" alt="Bartagame als Beispiel für anspruchsvolle Exotenhaltung" loading="lazy"><span class="animal-card-caption">Klima und Technik</span><span>Exoten</span><small>Technisch anspruchsvoll.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Pferde: Herde als Mindestbild" data-share-reason="Das Bild macht klar: Pferde sind keine Solisten." href="pferde/index.html"><img class="animal-card-img" src="assets/images/horse-herd-pasture.jpg" alt="Pferdeherde auf einer Weide" loading="lazy"><span class="animal-card-caption">Herde, Raum, Kosten</span><span>Pferde</span><small>Herdentiere, nie Solisten.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Hunde: Training und Beschäftigung statt Hundeporträt" data-share-reason="Der Klick soll vom Wunschhund zum Zeit- und Alltagscheck führen." href="hunde/index.html"><img class="animal-card-img" src="assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training und Beschäftigung" loading="lazy" width="1200" height="804" decoding="async"><span class="animal-card-caption">Training und Zeit</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Wohnung muss Bedürfnisse sichtbar mitdenken" data-share-reason="Die Karte soll Katzenhaltung als Umfeldgestaltung rahmen, nicht als bloßes Kuscheltierbild." href="katzen/index.html"><img class="animal-card-img" src="assets/images/optimized/cat-scratching-post.jpg" alt="Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung" loading="lazy" style="object-position:center 48%;" width="700" height="934" decoding="async"><span class="animal-card-caption">Umfeld gestalten</span><span>Katzen</span><small>Einzeljäger, aber keine Einzelgänger.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Vögel: Schwarm und Raum sichtbar machen" data-share-reason="Das Bild widerspricht dem Einzelvogel-im-Käfig-Reflex." href="voegel/index.html"><img class="animal-card-img" src="assets/images/optimized/voegel-voliere.jpg" alt="Mehrere Wellensittiche in einer Voliere" loading="lazy" width="1200" height="880" decoding="async"><span class="animal-card-caption">Schwarm und Raum</span><span>Vögel</span><small>Schwarmtiere, keine Dekoration.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Kleintiere: Sozialkontakt statt Spielzeughaltung" data-share-reason="Das Bild zeigt Kleintiere als empfindsame Tiere, nicht als Kinderzimmerobjekt." href="kleintiere/index.html"><img class="animal-card-img" src="assets/images/optimized/kleintiere-zwei-meerschweinchen.jpg" alt="Zwei Meerschweinchen zusammen im Gras" loading="lazy" width="709" height="474" decoding="async"><span class="animal-card-caption">Nicht allein denken</span><span>Kleintiere</span><small>Kein Einstiegstier, kein Spielzeug.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Exoten: Technik und Klima statt Faszination allein" data-share-reason="Der Klick soll von Faszination zu Temperatur, Licht und Fachwissen führen." href="exoten/index.html"><img class="animal-card-img" src="assets/images/optimized/exot-bartagame.jpg" alt="Bartagame als Beispiel für anspruchsvolle Exotenhaltung" loading="lazy" width="330" height="212" decoding="async"><span class="animal-card-caption">Klima und Technik</span><span>Exoten</span><small>Technisch anspruchsvoll.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Pferde: Herde als Mindestbild" data-share-reason="Das Bild macht klar: Pferde sind keine Solisten." href="pferde/index.html"><img class="animal-card-img" src="assets/images/optimized/horse-herd-pasture.jpg" alt="Pferdeherde auf einer Weide" loading="lazy" width="1200" height="800" decoding="async"><span class="animal-card-caption">Herde, Raum, Kosten</span><span>Pferde</span><small>Herdentiere, nie Solisten.</small></a>
         </div>
       </div>
     </div>
@@ -397,7 +396,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img class="footer-brand-logo" src="assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)">
+          <img class="footer-brand-logo" src="assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="720" height="480" decoding="async">
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor und während du Verantwortung für ein Lebewesen trägst.</p>
           <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a></p>
           <p>Neuigkeiten und kurze Denkanstöße gibt es auch auf <a href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">Instagram: @wahrehaustierliebe</a>.</p>
@@ -430,7 +429,7 @@
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/kontakt/">Kontakt</a> | <a href="https://wahre-haustierliebe.de/impressum/">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz/">Datenschutz</a></p>
         <p class="footer-credit">Texte von <a href="https://annemarie-andersen.de/" target="_blank" rel="noopener noreferrer">Annemarie Andersen</a> &amp; Umsetzung von <a href="https://andersen-webworks.de/" target="_blank" rel="noopener noreferrer">Andersen Webworks</a>.</p>
-        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener noreferrer">BMEL</a></p>
+        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmleh.de" target="_blank" rel="noopener noreferrer">BMLEH</a></p>
         <details class="image-credits">
           <summary>Bildnachweise anzeigen</summary>
           <p><strong>Bildnachweise:</strong>

@@ -1,4 +1,26 @@
 
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("../assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");
+      font-weight: 500 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Plus Jakarta Sans";
+      src: url("../assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Caveat";
+      src: url("../assets/fonts/caveat-latin.woff2") format("woff2");
+      font-weight: 600 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
     /* ========== RESET & BASE ========== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -3748,6 +3770,77 @@
       margin: clamp(2rem, 4.5vh, 3rem) 0;
     }
 
+    .evidence-block,
+    .faq-block {
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border: 1px solid rgba(31, 58, 47, 0.14);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 254, 250, 0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .evidence-block h2,
+    .faq-block h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.9rem, 2vw, 1.25rem);
+      margin-top: 1.25rem;
+    }
+
+    .evidence-card {
+      min-width: 0;
+      padding: 1rem;
+      border-radius: var(--radius);
+      background: var(--primary-light);
+    }
+
+    .evidence-card:nth-child(2) {
+      background: var(--accent-light);
+    }
+
+    .evidence-card:nth-child(3) {
+      background: var(--secondary-light);
+    }
+
+    .evidence-card h3 {
+      margin-top: 0;
+      font-size: 1.08rem;
+    }
+
+    .evidence-card ul {
+      margin-bottom: 0;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(31, 58, 47, 0.12);
+      border-radius: var(--radius);
+      background: var(--white);
+      padding: 0.85rem 1rem;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .faq-item p {
+      margin: 0.7rem 0 0;
+    }
+
     .metric-grid,
     .argument-grid,
     .signal-grid,
@@ -3876,6 +3969,10 @@
     }
 
     @media (max-width: 760px) {
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
       .cost-table {
         display: block;
         width: 100%;
@@ -3962,7 +4059,7 @@
         transform: none !important;
       }
     }
-  
+
 
 /* Static SEO/GEO page build overrides */
 .skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }

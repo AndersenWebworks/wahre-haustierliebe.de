@@ -12,10 +12,29 @@
   <meta property="og:url" content="https://wahre-haustierliebe.de">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/images/wahre-haustierliebe-logo.png">
   <link rel="canonical" href="https://wahre-haustierliebe.de">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("../assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");
+      font-weight: 500 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Plus Jakarta Sans";
+      src: url("../assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Caveat";
+      src: url("../assets/fonts/caveat-latin.woff2") format("woff2");
+      font-weight: 600 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
     /* ========== RESET & BASE ========== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -3765,6 +3784,77 @@
       margin: clamp(2rem, 4.5vh, 3rem) 0;
     }
 
+    .evidence-block,
+    .faq-block {
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border: 1px solid rgba(31, 58, 47, 0.14);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 254, 250, 0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .evidence-block h2,
+    .faq-block h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.9rem, 2vw, 1.25rem);
+      margin-top: 1.25rem;
+    }
+
+    .evidence-card {
+      min-width: 0;
+      padding: 1rem;
+      border-radius: var(--radius);
+      background: var(--primary-light);
+    }
+
+    .evidence-card:nth-child(2) {
+      background: var(--accent-light);
+    }
+
+    .evidence-card:nth-child(3) {
+      background: var(--secondary-light);
+    }
+
+    .evidence-card h3 {
+      margin-top: 0;
+      font-size: 1.08rem;
+    }
+
+    .evidence-card ul {
+      margin-bottom: 0;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(31, 58, 47, 0.12);
+      border-radius: var(--radius);
+      background: var(--white);
+      padding: 0.85rem 1rem;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .faq-item p {
+      margin: 0.7rem 0 0;
+    }
+
     .metric-grid,
     .argument-grid,
     .signal-grid,
@@ -3893,6 +3983,10 @@
     }
 
     @media (max-width: 760px) {
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
       .cost-table {
         display: block;
         width: 100%;
@@ -4645,12 +4739,6 @@
         <p>In der Natur bedeutet Schwäche zeigen: gefressen werden. Deshalb verbergen Vögel Krankheitssymptome, bis sie nicht mehr können. Wenn dein Wellensittich aufgeplustert auf der Stange sitzt, wenig frisst oder am Käfigboden hockt, ist das ein <strong><a href="#notfall" onclick="navigateTo('notfall');return false">Notfall</a></strong> – nicht ein „schlechter Tag".</p>
         <p>Regelmäßige Beobachtung ist entscheidend: Frisst der Vogel? Wie sieht der Kot aus? Sind die Federn in Ordnung? Ist der Vogel aktiv? Veränderungen im Verhalten sind oft das einzige Frühwarnsystem.</p>
 
-        <div class="highlight-box">
-          <h3>Budgie Brain – den Vogel verstehen lernen</h3>
-          <p>Budgie Brain ist eine interaktive Simulation, die dir zeigt, wie ein Wellensittich seine Umgebung erlebt. Nicht als Spiel, sondern als wissenschaftlich fundierter Perspektivwechsel. Du siehst, was passiert, wenn UV fehlt, wenn der Schwarm fehlt, wenn der Stress steigt.</p>
-          <p><a href="budgie.html" class="btn btn-primary" style="margin-top: 0.5rem;">Budgie Brain starten</a></p>
-        </div>
-
         <h2>Schauwellensittiche – Qualzucht mit Federn</h2>
         <p>Schauwellensittiche (auch „Standard"-Wellensittiche) werden auf Größe und Kopfgefieder gezüchtet. Das Ergebnis: übermäßig langes Stirngefieder, das den Vögeln die Sicht verdeckt. Manche Schauwellensittiche können kaum noch sehen und sind dadurch unsicher, stressanfällig und in ihrer Bewegungsfreiheit eingeschränkt. Das ist <a href="#qualzucht" onclick="navigateTo('qualzucht');return false">Qualzucht</a> – auch wenn es unter Züchtern als „Rassestandard" gilt.</p>
 
@@ -4803,7 +4891,7 @@
         <p><strong>Mindestens ein Artgenosse</strong> ist Pflicht. Andere Tiere (Esel, Ponys, Ziegen) können ein Pferd begleiten, ersetzen aber keinen echten Artgenossen der gleichen Art.</p>
 
         <h2>Platzbedarf – die unbequeme Wahrheit</h2>
-        <p>Die <a href="https://www.bmel.de/DE/themen/tiere/tierschutz/tierschutz_node.html" target="_blank" rel="noopener noreferrer">Leitlinien zur Pferdehaltung des BMEL</a> empfehlen für einen Offenstall mit Auslauf und Weide <strong>mindestens 150 m² befestigte Fläche pro Pferd</strong> plus Weidezugang. Für reine Weidehaltung werden je nach Bodenbeschaffenheit <strong>1.000–2.000 m² pro Pferd</strong> genannt – und selbst das ist ein Mindestmaß.</p>
+        <p>Die <a href="https://www.pferdesport-deutschland.de/tierschutz/tierschutz" target="_blank" rel="noopener noreferrer">Leitlinien zur Pferdehaltung, auf die die FN verweist</a>, empfehlen für einen Offenstall mit Auslauf und Weide <strong>mindestens 150 m² befestigte Fläche pro Pferd</strong> plus Weidezugang. Für reine Weidehaltung werden je nach Bodenbeschaffenheit <strong>1.000–2.000 m² pro Pferd</strong> genannt – und selbst das ist ein Mindestmaß.</p>
         <p>Wildpferde legen 15–30 km am Tag zurück. Sie grasen dabei im Schritt – eine natürliche Kombination aus Bewegung und Nahrungsaufnahme, die keine Koppel der Welt vollständig ersetzen kann. Tägliches Reiten oder Bewegen ist Pflicht, nicht Bonus.</p>
 
         <h2>Haltungsformen</h2>
@@ -4824,7 +4912,7 @@
             <tr class="total"><td><strong>Gesamt pro Monat</strong></td><td><strong>340–920 €</strong></td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Nicht eingerechnet: Reitunterricht, Turniergebühren, Notfall-OPs (Koliken: 3.000–10.000 Euro), Hufreheschübe, chronische Erkrankungen. Quelle: Zusammenstellung aus <a href="https://www.pferd-aktuell.de" target="_blank" rel="noopener noreferrer">FN</a>-Empfehlungen und Erhebungen der Pferdekostenstudie. Was dich die <a href="#mensch" onclick="navigateTo('mensch');return false">Psychologie hinter der Entscheidung für ein Tier</a> lehrt: Kosten werden fast immer unterschätzt.</p>
+        <p class="text-muted">Nicht eingerechnet: Reitunterricht, Turniergebühren, Notfall-OPs (Koliken: 3.000–10.000 Euro), Hufreheschübe, chronische Erkrankungen. Quelle: Zusammenstellung aus <a href="https://www.pferdesport-deutschland.de/tierschutz/tierschutz" target="_blank" rel="noopener noreferrer">FN</a>-Empfehlungen und Erhebungen der Pferdekostenstudie. Was dich die <a href="#mensch" onclick="navigateTo('mensch');return false">Psychologie hinter der Entscheidung für ein Tier</a> lehrt: Kosten werden fast immer unterschätzt.</p>
 
         <h2>Reitbeteiligung – der ehrlichere Einstieg</h2>
         <p>Wer ein Pferd will, aber bei den Kosten, dem Zeitaufwand oder der Erfahrung unsicher ist: Eine Reitbeteiligung ist kein Kompromiss, sondern oft die bessere Wahl. Du teilst dir die Versorgung und die Kosten mit dem Besitzer, sammelst Erfahrung im Alltag mit einem Pferd und merkst nach ein paar Monaten, ob du wirklich bereit bist – oder ob die Vorstellung schöner war als die Realität. Viele Pferdebesitzer suchen aktiv nach zuverlässigen Reitbeteiligungen, weil sie Hilfe bei der täglichen Versorgung brauchen.</p>
@@ -5569,7 +5657,7 @@
             <div class="card-body">
               <h3>Gassi-Service & Katzenstreicheln</h3>
               <p>Viele Tierheime und private Halter suchen Menschen, die Hunde ausführen oder Zeit mit Katzen verbringen. Du bekommst Tierkontakt, das Tier bekommt Zuwendung – ohne langfristige Verpflichtung.</p>
-              <span class="card-link" onclick="window.open('https://www.tierschutzbund.de/tierheime', '_blank')">Tierheime in deiner Nähe finden</span>
+              <span class="card-link" onclick="window.open('https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/', '_blank')">Tierheime in deiner Nähe finden</span>
             </div>
           </div>
           <div class="card">
@@ -5693,7 +5781,7 @@
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/kontakt/">Kontakt</a> | <a href="https://wahre-haustierliebe.de/impressum/">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz/">Datenschutz</a></p>
         <p class="footer-credit">Texte von <a href="https://annemarie-andersen.de/" target="_blank" rel="noopener noreferrer">Annemarie Andersen</a> &amp; Umsetzung von <a href="https://andersen-webworks.de/" target="_blank" rel="noopener noreferrer">Andersen Webworks</a>.</p>
-        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e.&thinsp;V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener noreferrer">BMEL</a></p>
+        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e.&thinsp;V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmleh.de" target="_blank" rel="noopener noreferrer">BMLEH</a></p>
         <details class="image-credits">
           <summary>Bildnachweise anzeigen</summary>
           <p><strong>Bildnachweise:</strong>

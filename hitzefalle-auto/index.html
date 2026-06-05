@@ -36,9 +36,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/site.css">
   <script type="application/ld+json">
 {
@@ -124,6 +123,65 @@
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind",
+  "name": "Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind",
+  "description": "Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.",
+  "url": "https://wahre-haustierliebe.de/hitzefalle-auto/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/hitzefalle-auto/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/hitzefalle-auto.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-06-05",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Hund im Auto, Hitze, Hitzschlag, Sommer, Notfall",
+  "articleSection": "Sommerhitze und Hund im Auto einschätzen",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Hund im Auto"
+    },
+    {
+      "@type": "Thing",
+      "name": "Hitze"
+    },
+    {
+      "@type": "Thing",
+      "name": "Hitzschlag"
+    },
+    {
+      "@type": "Thing",
+      "name": "Sommer"
+    },
+    {
+      "@type": "Thing",
+      "name": "Notfall"
+    }
+  ],
+  "citation": [
+    "https://www.tasso.net",
+    "https://www.tierschutzbund.de"
+  ]
+}
+  </script>
 </head>
 <body class="static-site" data-static-site="true" data-page-id="hitzefalle-auto" data-route-prefix="../" data-asset-prefix="../">
   <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
@@ -133,7 +191,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="../index.html" aria-label="Wa(h)re Haustier(liebe) Startseite">
-        <img class="site-logo-image" src="../assets/images/wahre-haustierliebe-mark.png" alt="" aria-hidden="true">
+        <img class="site-logo-image" src="../assets/images/optimized/wahre-haustierliebe-mark.png" alt="" aria-hidden="true" width="280" height="258" decoding="async">
         <span class="site-logo-text"><span class="brand-dark">Wa</span><span class="brand-red">(h)</span><span class="brand-dark">re Haustier</span><span class="brand-red">(liebe)</span></span>
       </a>
       <nav aria-label="Hauptnavigation">
@@ -201,7 +259,7 @@
           <h1>Ein Hund im Auto stirbt nicht „plötzlich“. Er wird überhitzt.</h1>
           <p>Zehn Minuten wirken harmlos, wenn man nur den Einkauf im Kopf hat. Für den Hund ist das parkende Auto ein geschlossener Hitzeraum.</p>
           <div class="article-kicker"><span>Sommerwarnung</span><span>Fensterspalt reicht nicht</span><span>Polizei/Feuerwehr statt Diskussion</span></div>
-        </div><figure class="article-hero-media image-context-card" style="--image-position:center 50%;"><img src="../assets/images/vet-office-with-dog.jpg" alt="Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress" loading="eager" decoding="async"><figcaption class="context-caption">Bei Hitzestress zählt Handeln, nicht Abwarten.</figcaption></figure></div>
+        </div><figure class="article-hero-media image-context-card" style="--image-position:center 50%;"><img src="../assets/images/optimized/vet-office-with-dog.jpg" alt="Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress" loading="eager" decoding="async" width="1200" height="900" fetchpriority="high"><figcaption class="context-caption">Bei Hitzestress zählt Handeln, nicht Abwarten.</figcaption></figure></div>
       </div>
       <div class="section"><div class="container">
         <div class="warning-box"><h3>Auf einen Blick</h3><ul><li>Ein Auto kann sich auch bei moderaten Außentemperaturen schnell aufheizen.</li><li>Hunde kühlen sich vor allem über Hecheln. In einem heißen Auto kippt dieses System.</li><li>Schatten, ein Fensterspalt oder „nur kurz“ sind keine verlässlichen Schutzmaßnahmen.</li><li>Bei deutlichen Hitzestresszeichen: Besitzer suchen, Polizei oder Feuerwehr rufen, Beweise sichern.</li></ul></div>
@@ -218,7 +276,26 @@
         <h2>Quellen und Prüfstand</h2>
         <ul class="source-list"><li><a href="https://www.adac.de/gesundheit/gesund-unterwegs/reisen-mit-dem-tier/hund-auto-hitze/" target="_blank" rel="noopener noreferrer">ADAC: Mit Hund im Auto in der Sommerhitze</a></li><li><a href="https://www.bundestieraerztekammer.de/presse/archiv/2012/PM17_2012_HitzefalleAuto.pdf" target="_blank" rel="noopener noreferrer">Bundestierärztekammer: Hitzefalle Auto</a></li><li><a href="https://www.akc.org/expert-advice/health/heat-stroke-in-dogs/" target="_blank" rel="noopener noreferrer">AKC: Heatstroke in Dogs</a></li></ul>
       </div></div>
-    </section>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="hitzefalle-auto">
+          <span class="eyebrow">Quellen und Prüfstand</span>
+          <h2>Worauf diese Seite ihre Aussagen stützt</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kernfakten</h3>
+              <ul><li>Autos heizen sich auch bei milden Außentemperaturen schnell gefährlich auf.</li><li>Hunde können Hitzestress nicht zuverlässig durch Schwitzen ausgleichen.</li><li>Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Primäre Quellen</h3>
+              <ul><li><a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a></li><li><a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Nicht glätten</h3>
+              <ul><li>Keine Rechtsberatung zum Einschlagen von Scheiben geben.</li><li>Bei Hitzschlag nicht mit Eiswasser schocken.</li></ul>
+            </article>
+          </div>
+        </div>
+</section>
   </main>
 
 <!-- ===== FOOTER ===== -->
@@ -240,7 +317,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img class="footer-brand-logo" src="../assets/images/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)">
+          <img class="footer-brand-logo" src="../assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="720" height="480" decoding="async">
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor und während du Verantwortung für ein Lebewesen trägst.</p>
           <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e.&thinsp;V.</a></p>
           <p>Neuigkeiten und kurze Denkanstöße gibt es auch auf <a href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">Instagram: @wahrehaustierliebe</a>.</p>
@@ -273,7 +350,7 @@
       <div class="footer-bottom">
         <p>Alle Angaben ohne Gewähr. Diese Seite ersetzt keine tierärztliche Beratung. | <a href="https://wahre-haustierliebe.de/kontakt/">Kontakt</a> | <a href="https://wahre-haustierliebe.de/impressum/">Impressum</a> | <a href="https://wahre-haustierliebe.de/datenschutz/">Datenschutz</a></p>
         <p class="footer-credit">Texte von <a href="https://annemarie-andersen.de/" target="_blank" rel="noopener noreferrer">Annemarie Andersen</a> &amp; Umsetzung von <a href="https://andersen-webworks.de/" target="_blank" rel="noopener noreferrer">Andersen Webworks</a>.</p>
-        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e.&thinsp;V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmel.de" target="_blank" rel="noopener noreferrer">BMEL</a></p>
+        <p style="margin-top: 0.5rem;">Quellen: <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e.&thinsp;V.</a>, <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">TVT</a>, <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>, <a href="https://www.bmleh.de" target="_blank" rel="noopener noreferrer">BMLEH</a></p>
         <details class="image-credits">
           <summary>Bildnachweise anzeigen</summary>
           <p><strong>Bildnachweise:</strong>

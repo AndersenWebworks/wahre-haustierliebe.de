@@ -22,17 +22,18 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `notfall/tierarzt-notdienst/index.html`
 - `wissen/index.html`
 - `noch-nicht-bereit/index.html`
-- `budgie-brain/index.html`
 - `kontakt/index.html`
 - `impressum/index.html`
 - `datenschutz/index.html`
 
 Wichtig: Der aktuelle Tailnet-/Static-Server liefert Unterordner nicht automatisch als Directory Index aus. Deshalb nutzen Canonicals, Sitemap und interne Links für Unterseiten bewusst `slug/index.html` statt nur `slug/`.
 
+Derzeit pausiert: `budgie-brain/index.html` bleibt als `noindex`-Hinweisseite erhalten, ist aber nicht Teil von Navigation, Sitemap, `llms*` oder `/ai/pages.json`.
+
 ## Quellen
 
 - `src/site-source.html`: gepflegte Hauptquelle der Haustierliebe-Seite.
-- `src/budgie-source.html`: Quelle für die interaktive Budgie-Brain-Seite.
+- `src/budgie-source.html`: pausierte Quelle für die interaktive Budgie-Brain-Seite.
 - `references/content/annemarie-content-source.html`: unveränderte Content-Quelle aus der migrierten Annemarie-Version.
 - `references/design/Wahre Haustierliebe v2 standalone.html`: Designreferenz.
 - `references/design/Wahre Haustierliebe v4 standalone.html`: Designreferenz.

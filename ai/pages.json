@@ -17,6 +17,9 @@
         "Qualzucht",
         "Tiernotfall"
       ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
       "social": {
         "title": "Wa(h)re Haustier(liebe) - Tierschutz-Wiki",
         "description": "Ehrliche Aufklärung, bevor ein Tier einzieht: Alltag, Kosten, Tierwohl, Notfall, Adoption und Qualzucht verständlich erklärt.",
@@ -37,6 +40,9 @@
         "Haustierhaltung",
         "Tierwohl"
       ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
       "social": {
         "title": "Impressum - Wa(h)re Haustier(liebe)",
         "description": "Impressum und Anbieterkennzeichnung für Wa(h)re Haustier(liebe), das private Informationsprojekt von Jan-Erik Andersen und Annemarie Andersen.",
@@ -57,6 +63,9 @@
         "Haustierhaltung",
         "Tierwohl"
       ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
       "social": {
         "title": "Datenschutzerklärung - Wa(h)re Haustier(liebe)",
         "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.",
@@ -79,6 +88,9 @@
         "Tierschutz",
         "Privates Projekt"
       ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
       "social": {
         "title": "Kontakt und Hilfe - Wa(h)re Haustier(liebe)",
         "description": "Wer hinter Wa(h)re Haustier(liebe) steht, warum wir die Seite machen und wie du uns erreichen kannst.",
@@ -100,6 +112,25 @@
         "Verantwortung",
         "Kosten",
         "Alltag"
+      ],
+      "facts": [
+        "Ein Tier zieht in einen konkreten Alltag ein: Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen vor der Anschaffung passen.",
+        "Ein verantwortliches Nein verhindert späteres Abgeben, Aussetzen oder dauerhafte Minimalversorgung.",
+        "Die Seite bewertet keine Wünsche, sondern prüft die Folgen für das Tier."
+      ],
+      "citationGuardrails": [
+        "Nicht als psychologischen Eignungstest zitieren.",
+        "Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
       ],
       "social": {
         "title": "Passt ein Tier wirklich in dein Leben?",
@@ -123,6 +154,33 @@
         "Alleinbleiben",
         "Erziehung"
       ],
+      "facts": [
+        "Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.",
+        "Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize.",
+        "Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung."
+      ],
+      "citationGuardrails": [
+        "Nicht als pauschale Rasseberatung verwenden.",
+        "Medizinische Symptome gehören in eine Tierarztpraxis."
+      ],
+      "sources": [
+        {
+          "label": "TASSO e. V.",
+          "url": "https://www.tasso.net"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        },
+        {
+          "label": "Tierschutz-Hundeverordnung",
+          "url": "https://www.gesetze-im-internet.de/tierschhuv/"
+        },
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        }
+      ],
       "social": {
         "title": "Hund halten: Zeit, Kosten, Alltag - Wa(h)re Haustier(liebe)",
         "description": "Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.",
@@ -144,6 +202,29 @@
         "Freigang",
         "Kastration",
         "Katzenstress"
+      ],
+      "facts": [
+        "Katzen sind Einzeljäger, aber nicht automatisch Einzelgänger.",
+        "Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.",
+        "Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion."
+      ],
+      "citationGuardrails": [
+        "Wohnungshaltung nicht als Ideal darstellen, sondern als Kompromiss mit Bedingungen.",
+        "Keine Ferndiagnose bei Verhaltensänderungen."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        },
+        {
+          "label": "Streunerhilfe Plau e. V.",
+          "url": "https://streunerhilfe-plau.de"
+        },
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        }
       ],
       "social": {
         "title": "Katzen halten: Wohnung, Freigang, Kastration",
@@ -167,6 +248,25 @@
         "Freiflug",
         "UV-Licht"
       ],
+      "facts": [
+        "Wellensittiche und viele andere Heimvögel brauchen Artgenossen, Flugraum und Beschäftigung.",
+        "Ein einzelner Vogel wirkt oft zahm, weil ihm ein artgleicher Sozialpartner fehlt.",
+        "Licht, Luftqualität und sichere Freiflugbereiche sind Teil der Haltung, nicht Dekoration."
+      ],
+      "citationGuardrails": [
+        "Keine Einzelhaltung als normale Option glätten.",
+        "Nicht nur Käfiggröße zitieren; Sozialkontakt und Freiflug gehören dazu."
+      ],
+      "sources": [
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz",
+          "url": "https://www.tierschutz-tvt.de"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
+      ],
       "social": {
         "title": "Vögel brauchen Schwarm, Flugraum und Licht",
         "description": "Warum Einzelhaltung im Käfig nicht reicht und was Wellensittiche und andere Vögel im Alltag wirklich brauchen.",
@@ -188,6 +288,25 @@
         "Meerschweinchen",
         "Hamster",
         "Ratten"
+      ],
+      "facts": [
+        "Kaninchen, Meerschweinchen und Ratten sind soziale Tiere und brauchen passende Artgenossen.",
+        "Hamster sind nachtaktive Einzelgänger und keine einfachen Kindertiere.",
+        "Zähne, Verdauung und Stresssignale machen Kleintiere tierärztlich anspruchsvoller, als viele Käufer erwarten."
+      ],
+      "citationGuardrails": [
+        "Nicht als Käfig-Mindestmaß-Liste verkürzen.",
+        "Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen."
+      ],
+      "sources": [
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz",
+          "url": "https://www.tierschutz-tvt.de"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
       ],
       "social": {
         "title": "Kaninchen, Meerschweinchen, Hamster und Ratten",
@@ -211,6 +330,29 @@
         "Reptilien",
         "Meldepflicht"
       ],
+      "facts": [
+        "Exotenhaltung steht und fällt mit Temperatur, UV-B, Luftfeuchtigkeit, Futter und tierärztlicher Fachkunde.",
+        "Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.",
+        "Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden."
+      ],
+      "citationGuardrails": [
+        "Legalität nicht mit Vertretbarkeit gleichsetzen.",
+        "Keine Haltungsparameter ohne konkrete Art ableiten."
+      ],
+      "sources": [
+        {
+          "label": "CITES Species+ Checklist",
+          "url": "https://checklist.cites.org/"
+        },
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz",
+          "url": "https://www.tierschutz-tvt.de"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        }
+      ],
       "social": {
         "title": "Terrarium, Technik, UV-B und Verantwortung",
         "description": "Warum Faszination nicht reicht und exotische Tiere spezialisierte Haltung, Wissen und Tierarztzugang brauchen.",
@@ -232,6 +374,29 @@
         "Stallform",
         "Hufschmied",
         "Pferdekosten"
+      ],
+      "facts": [
+        "Pferde brauchen Herde, Bewegung, Raufutter, Witterungsschutz und langfristig tragbare Kosten.",
+        "Reiten ersetzt keine pferdegerechte Haltung.",
+        "Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen."
+      ],
+      "citationGuardrails": [
+        "Kosten nie nur als Kaufpreis darstellen.",
+        "Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte."
+      ],
+      "sources": [
+        {
+          "label": "FN: Tierschutz im Pferdesport",
+          "url": "https://www.pferdesport-deutschland.de/tierschutz/tierschutz"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        }
       ],
       "social": {
         "title": "Pferde brauchen Herde, Bewegung und Budget",
@@ -255,6 +420,29 @@
         "Katzen",
         "Kaninchen"
       ],
+      "facts": [
+        "Kastration verhindert bei Katzen unkontrollierte Vermehrung und reduziert Streunerleid.",
+        "Beim Hund ist Kastration eine Einzelfallentscheidung und kein Ersatz für Training oder Haltungsarbeit.",
+        "Bei Kaninchen ist Kastration besonders für Rammler und zur Gruppenhaltung praktisch relevant."
+      ],
+      "citationGuardrails": [
+        "Nicht als pauschale OP-Empfehlung für jedes Tier zitieren.",
+        "Medizinische Entscheidung immer tierärztlich abklären."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        },
+        {
+          "label": "Streunerhilfe Plau e. V.",
+          "url": "https://streunerhilfe-plau.de"
+        },
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        }
+      ],
       "social": {
         "title": "Kastration verhindert Leid - Wa(h)re Haustier(liebe)",
         "description": "Fakten zu Katzen, Hunden, Kaninchen, Kosten, Kastrationspflicht und typischen Mythen rund um Kastration.",
@@ -276,6 +464,29 @@
         "Atemnot",
         "Gendefekte",
         "Tierleid"
+      ],
+      "facts": [
+        "Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.",
+        "Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.",
+        "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien."
+      ],
+      "citationGuardrails": [
+        "Nicht als Angriff auf einzelne Halter formulieren.",
+        "Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutzgesetz § 11b",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11b.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        },
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz",
+          "url": "https://www.tierschutz-tvt.de"
+        }
       ],
       "social": {
         "title": "Qualzucht erkennen, bevor Nachfrage Leid finanziert",
@@ -299,6 +510,29 @@
         "Schutzgebühr",
         "Pflegestelle"
       ],
+      "facts": [
+        "Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.",
+        "Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.",
+        "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung."
+      ],
+      "citationGuardrails": [
+        "Nicht als neutrale Kaufberatung zwischen Tierheim und Zucht glätten.",
+        "Seriöse Adoption braucht Zeit und ehrliche Beratung."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Tierheime",
+          "url": "https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/"
+        },
+        {
+          "label": "Streunerhilfe Plau e. V.",
+          "url": "https://streunerhilfe-plau.de"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        }
+      ],
       "social": {
         "title": "Adoption statt Kauf - Wa(h)re Haustier(liebe)",
         "description": "Warum Tierheim, Pflegestelle, Schutzgebühr und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.",
@@ -320,6 +554,25 @@
         "Zeit",
         "Geld",
         "Betreuung"
+      ],
+      "facts": [
+        "Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.",
+        "Strenge Antworten schützen das Tier vor späterer Überforderung.",
+        "Ein schlechtes Ergebnis ist kein Urteil, sondern ein Hinweis, noch zu warten."
+      ],
+      "citationGuardrails": [
+        "Nicht als psychometrischen Test zitieren.",
+        "Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
       ],
       "social": {
         "title": "Der Haustier-Selbsttest - Wa(h)re Haustier(liebe)",
@@ -343,6 +596,25 @@
         "Tierarzt",
         "Warnsignale"
       ],
+      "facts": [
+        "Atemnot, Krämpfe, Vergiftungsverdacht, starke Blutung, Zusammenbruch und Harnstopp sind sofortige Tierarztfälle.",
+        "Bei Vergiftung Verpackung oder Substanz sichern und nicht eigenmächtig Erbrechen auslösen.",
+        "Notdienste sind regional organisiert; vor der Fahrt immer anrufen."
+      ],
+      "citationGuardrails": [
+        "Immer klar sagen: keine tierärztliche Diagnose.",
+        "Im Zweifel anrufen und hinfahren, nicht weiter recherchieren."
+      ],
+      "sources": [
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        },
+        {
+          "label": "TASSO e. V.",
+          "url": "https://www.tasso.net"
+        }
+      ],
       "social": {
         "title": "Wann du sofort handeln musst - Wa(h)re Haustier(liebe)",
         "description": "Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale klar einordnen.",
@@ -364,6 +636,21 @@
         "Tierärztekammer",
         "Notrufnummer"
       ],
+      "facts": [
+        "Deutschland hat keine einheitliche zentrale Notdienstsuche für alle Regionen.",
+        "Landestierärztekammern und regionale Systeme sind der verlässlichere Einstieg als allgemeine Suchmaschinen.",
+        "Vor der Fahrt muss die Praxis oder Klinik telefonisch bestätigen, dass sie erreichbar ist."
+      ],
+      "citationGuardrails": [
+        "Keine Garantie für Öffnungszeiten oder Erreichbarkeit geben.",
+        "Bei akuten Notfällen nicht erst lange sortieren, sondern telefonieren."
+      ],
+      "sources": [
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        }
+      ],
       "social": {
         "title": "Tierärztlicher Notdienst nach Bundesland",
         "description": "Offizielle Kammern, Notrufnummern und regionale Systeme, damit du im Ernstfall schneller richtig suchst.",
@@ -384,6 +671,25 @@
         "Homöopathie bei Tieren",
         "Glossar",
         "Tierschutzwissen"
+      ],
+      "facts": [
+        "Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.",
+        "Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.",
+        "Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur."
+      ],
+      "citationGuardrails": [
+        "Keine medizinischen Empfehlungen als Behandlung zitieren.",
+        "Mythen nicht als gleichwertige Gegenposition darstellen."
+      ],
+      "sources": [
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
       ],
       "social": {
         "title": "Was stimmt wirklich? - Wa(h)re Haustier(liebe)",
@@ -407,6 +713,25 @@
         "Sommer",
         "Notfall"
       ],
+      "facts": [
+        "Autos heizen sich auch bei milden Außentemperaturen schnell gefährlich auf.",
+        "Hunde können Hitzestress nicht zuverlässig durch Schwitzen ausgleichen.",
+        "Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe."
+      ],
+      "citationGuardrails": [
+        "Keine Rechtsberatung zum Einschlagen von Scheiben geben.",
+        "Bei Hitzschlag nicht mit Eiswasser schocken."
+      ],
+      "sources": [
+        {
+          "label": "TASSO e. V.",
+          "url": "https://www.tasso.net"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
+      ],
       "social": {
         "title": "Zehn Minuten können lebensgefährlich sein",
         "description": "Warum Autos sich schnell aufheizen, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.",
@@ -429,6 +754,25 @@
         "Hundefutter",
         "vegane Tierernährung"
       ],
+      "facts": [
+        "Katzen sind obligate Karnivoren und auf eine passende Taurinversorgung angewiesen.",
+        "Hunde und Katzen haben unterschiedliche Ernährungsphysiologie.",
+        "Futterumstellungen gehören bei Krankheit oder Spezialdiät tierärztlich begleitet."
+      ],
+      "citationGuardrails": [
+        "Nicht als individueller Futterplan verwenden.",
+        "Vegane Tierernährung nicht pauschal empfehlen."
+      ],
+      "sources": [
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        },
+        {
+          "label": "Deutscher Tierschutzbund",
+          "url": "https://www.tierschutzbund.de"
+        }
+      ],
       "social": {
         "title": "Katzen, Hunde, vegane Ernährung und Taurin",
         "description": "Warum Katzen und Hunde ernährungsphysiologisch verschieden sind und Futter nicht einfach austauschbar ist.",
@@ -449,6 +793,25 @@
         "artgerechte Haltung",
         "Haustierkosten",
         "Haltungsfehler"
+      ],
+      "facts": [
+        "Übliche Haltung ist nicht automatisch artgerecht.",
+        "Der Kaufpreis ist fast nie der größte Kostenblock eines Haustieres.",
+        "Vertretbare Haltung beginnt bei Bedürfnissen, nicht bei dem, was im Handel verkauft wird."
+      ],
+      "citationGuardrails": [
+        "Nicht als reine Kostenwarnung verkürzen.",
+        "Normalität immer gegen Tierbedürfnisse prüfen."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz",
+          "url": "https://www.tierschutz-tvt.de"
+        }
       ],
       "social": {
         "title": "Realhaltung vs. vertretbare Haltung",
@@ -472,6 +835,25 @@
         "Tierheim",
         "Adoption"
       ],
+      "facts": [
+        "Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.",
+        "Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.",
+        "Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt."
+      ],
+      "citationGuardrails": [
+        "Nicht als Gleichsetzung aller Züchter mit illegalen Vermehrern formulieren.",
+        "Die ethische Position der Seite nicht neutralisieren."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Tierheime",
+          "url": "https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/"
+        },
+        {
+          "label": "Tierschutzgesetz § 11b",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11b.html"
+        }
+      ],
       "social": {
         "title": "Zucht, Vermehrung und Adoption - Wa(h)re Haustier(liebe)",
         "description": "Warum zusätzliche Haustierproduktion problematisch bleibt, auch wenn sie sauberer wirkt als Vermehrung.",
@@ -494,6 +876,25 @@
         "Wildschutz",
         "Deutschland"
       ],
+      "facts": [
+        "Legalität bedeutet nicht, dass private Wildtier- oder Exotenhaltung vertretbar ist.",
+        "Gefahrtier- und Artenschutzfragen hängen von Bundesland, Art und Herkunft ab.",
+        "Wildtiere brauchen Schutz vor Haustieren, Leinenpflicht und vermeidbarem Stress."
+      ],
+      "citationGuardrails": [
+        "Keine Rechtsberatung zu Gefahrtierlisten geben.",
+        "Nicht aus Legalität eine Haltungsempfehlung ableiten."
+      ],
+      "sources": [
+        {
+          "label": "CITES Species+ Checklist",
+          "url": "https://checklist.cites.org/"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        }
+      ],
       "social": {
         "title": "Private Wildtierhaltung: legal heißt nicht vertretbar",
         "description": "Bundesrecht, Landesrecht, Exoten, Gefahrtierhaltung und Wildschutz für Deutschland verständlich eingeordnet.",
@@ -514,33 +915,30 @@
         "Tierschutz unterstützen",
         "Haustier warten"
       ],
+      "facts": [
+        "Warten verhindert Tierleid, wenn Zeit, Geld, Wohnsituation oder Stabilität noch nicht passen.",
+        "Tierliebe kann auch über Ehrenamt, Patenschaften, Pflegestellen oder Spenden wirken.",
+        "Ein späterer Einzug wird besser, wenn Rücklagen, Wissen und Betreuung vorher stehen."
+      ],
+      "citationGuardrails": [
+        "Nicht beschämen; die Seite soll entlasten und Verantwortung normalisieren.",
+        "Keine Anschaffung drängen, wenn die Bedingungen nicht passen."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Tierheime",
+          "url": "https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/"
+        },
+        {
+          "label": "Streunerhilfe Plau e. V.",
+          "url": "https://streunerhilfe-plau.de"
+        }
+      ],
       "social": {
         "title": "Noch nicht bereit für ein Tier - Wa(h)re Haustier(liebe)",
         "description": "Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie Tierschutz trotzdem geht.",
         "image": "https://wahre-haustierliebe.de/assets/social/noch-nicht-bereit.png",
         "imageAlt": "Katze in einer weichen Transportbox als Bild für Warten und Übergang.",
-        "imageWidth": 1200,
-        "imageHeight": 630
-      }
-    },
-    {
-      "id": "budgie-brain",
-      "url": "https://wahre-haustierliebe.de/budgie-brain/index.html",
-      "title": "Budgie Brain: Wellensittich-Haltung interaktiv verstehen",
-      "description": "Interaktive Simulation für Wellensittich-Haltung: Erlebe, wie Schwarm, UV-Licht, Freiflug, Stress und Alltag einen Vogel beeinflussen.",
-      "intent": "Interaktives Lernwerkzeug zur Wellensittich-Haltung",
-      "keywords": [
-        "Budgie Brain",
-        "Wellensittich Simulation",
-        "Schwarm",
-        "Freiflug",
-        "Stress"
-      ],
-      "social": {
-        "title": "Budgie Brain - Wa(h)re Haustier(liebe)",
-        "description": "Eine spielbare Simulation, die Schwarm, UV-Licht, Freiflug, Stress und Wellensittich-Alltag erfahrbar macht.",
-        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
-        "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
         "imageWidth": 1200,
         "imageHeight": 630
       }

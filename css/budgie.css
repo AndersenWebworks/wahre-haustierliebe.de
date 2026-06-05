@@ -524,6 +524,73 @@ body.budgie-page {
   transform: scale(0.97);
 }
 
+.intro-learning {
+  margin-top: var(--s6);
+  padding: var(--s5);
+  border: 1px solid rgba(56, 142, 60, 0.18);
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow-sm);
+}
+
+.learning-kicker {
+  margin: 0 0 var(--s2);
+  color: var(--green-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.intro-learning h2 {
+  margin: 0 0 var(--s3);
+  color: var(--text);
+  font-size: clamp(1.2rem, 4vw, 1.45rem);
+  line-height: 1.2;
+}
+
+.intro-learning h3 {
+  margin: var(--s4) 0 var(--s2);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.intro-learning p {
+  margin: 0 0 var(--s3);
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.learning-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin-top: var(--s4);
+}
+
+.learning-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.3rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: var(--r-sm);
+  background: var(--green-dark);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.learning-links a:nth-child(2) {
+  background: var(--blue-dark);
+}
+
+.learning-links a:nth-child(3) {
+  background: var(--amber-dark);
+}
+
 
 /* =========================================================================
    SIMULATION HEADER

@@ -1,3 +1,4 @@
+import fsSync from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -227,16 +228,18 @@ const pages = [
   {
     id: 'budgie-brain',
     slug: 'budgie-brain',
-    title: 'Budgie Brain: Wellensittich-Haltung interaktiv verstehen',
-    description: 'Interaktive Simulation für Wellensittich-Haltung: Erlebe, wie Schwarm, UV-Licht, Freiflug, Stress und Alltag einen Vogel beeinflussen.',
-    intent: 'Interaktives Lernwerkzeug zur Wellensittich-Haltung',
-    priority: '0.65',
+    title: 'Budgie Brain - derzeit pausiert',
+    description: 'Budgie Brain ist derzeit pausiert und nicht Teil der öffentlichen Navigation von Wa(h)re Haustier(liebe).',
+    intent: 'Pausiertes internes Lernwerkzeug zur Wellensittich-Haltung',
+    priority: '0.0',
     standalone: 'budgie',
+    onHold: true,
   },
 ];
 
 const pageById = new Map(pages.map((page) => [page.id, page]));
-const sectionPages = pages.filter((page) => !page.standalone && !page.staticOnly);
+const publicPages = pages.filter((page) => !page.onHold);
+const sectionPages = publicPages.filter((page) => !page.standalone && !page.staticOnly);
 const pageIds = sectionPages.map((page) => page.id);
 
 const faqByPage = {
@@ -261,11 +264,338 @@ const faqByPage = {
   ],
 };
 
+const evidenceByPage = {
+  mensch: {
+    facts: [
+      'Ein Tier zieht in einen konkreten Alltag ein: Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen vor der Anschaffung passen.',
+      'Ein verantwortliches Nein verhindert späteres Abgeben, Aussetzen oder dauerhafte Minimalversorgung.',
+      'Die Seite bewertet keine Wünsche, sondern prüft die Folgen für das Tier.',
+    ],
+    sources: [
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Nicht als psychologischen Eignungstest zitieren.',
+      'Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.',
+    ],
+  },
+  hunde: {
+    facts: [
+      'Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.',
+      'Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize.',
+      'Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung.',
+    ],
+    sources: [
+      ['TASSO e. V.', 'https://www.tasso.net'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Tierschutz-Hundeverordnung', 'https://www.gesetze-im-internet.de/tierschhuv/'],
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+    ],
+    guardrails: [
+      'Nicht als pauschale Rasseberatung verwenden.',
+      'Medizinische Symptome gehören in eine Tierarztpraxis.',
+    ],
+  },
+  katzen: {
+    facts: [
+      'Katzen sind Einzeljäger, aber nicht automatisch Einzelgänger.',
+      'Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.',
+      'Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Streunerhilfe Plau e. V.', 'https://streunerhilfe-plau.de'],
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+    ],
+    guardrails: [
+      'Wohnungshaltung nicht als Ideal darstellen, sondern als Kompromiss mit Bedingungen.',
+      'Keine Ferndiagnose bei Verhaltensänderungen.',
+    ],
+  },
+  voegel: {
+    facts: [
+      'Wellensittiche und viele andere Heimvögel brauchen Artgenossen, Flugraum und Beschäftigung.',
+      'Ein einzelner Vogel wirkt oft zahm, weil ihm ein artgleicher Sozialpartner fehlt.',
+      'Licht, Luftqualität und sichere Freiflugbereiche sind Teil der Haltung, nicht Dekoration.',
+    ],
+    sources: [
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Keine Einzelhaltung als normale Option glätten.',
+      'Nicht nur Käfiggröße zitieren; Sozialkontakt und Freiflug gehören dazu.',
+    ],
+  },
+  kleintiere: {
+    facts: [
+      'Kaninchen, Meerschweinchen und Ratten sind soziale Tiere und brauchen passende Artgenossen.',
+      'Hamster sind nachtaktive Einzelgänger und keine einfachen Kindertiere.',
+      'Zähne, Verdauung und Stresssignale machen Kleintiere tierärztlich anspruchsvoller, als viele Käufer erwarten.',
+    ],
+    sources: [
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Nicht als Käfig-Mindestmaß-Liste verkürzen.',
+      'Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.',
+    ],
+  },
+  exoten: {
+    facts: [
+      'Exotenhaltung steht und fällt mit Temperatur, UV-B, Luftfeuchtigkeit, Futter und tierärztlicher Fachkunde.',
+      'Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.',
+      'Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden.',
+    ],
+    sources: [
+      ['CITES Species+ Checklist', 'https://checklist.cites.org/'],
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+    ],
+    guardrails: [
+      'Legalität nicht mit Vertretbarkeit gleichsetzen.',
+      'Keine Haltungsparameter ohne konkrete Art ableiten.',
+    ],
+  },
+  pferde: {
+    facts: [
+      'Pferde brauchen Herde, Bewegung, Raufutter, Witterungsschutz und langfristig tragbare Kosten.',
+      'Reiten ersetzt keine pferdegerechte Haltung.',
+      'Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen.',
+    ],
+    sources: [
+      ['FN: Tierschutz im Pferdesport', 'https://www.pferdesport-deutschland.de/tierschutz/tierschutz'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+    ],
+    guardrails: [
+      'Kosten nie nur als Kaufpreis darstellen.',
+      'Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.',
+    ],
+  },
+  kastration: {
+    facts: [
+      'Kastration verhindert bei Katzen unkontrollierte Vermehrung und reduziert Streunerleid.',
+      'Beim Hund ist Kastration eine Einzelfallentscheidung und kein Ersatz für Training oder Haltungsarbeit.',
+      'Bei Kaninchen ist Kastration besonders für Rammler und zur Gruppenhaltung praktisch relevant.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Streunerhilfe Plau e. V.', 'https://streunerhilfe-plau.de'],
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+    ],
+    guardrails: [
+      'Nicht als pauschale OP-Empfehlung für jedes Tier zitieren.',
+      'Medizinische Entscheidung immer tierärztlich abklären.',
+    ],
+  },
+  qualzucht: {
+    facts: [
+      'Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.',
+      'Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.',
+      'Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.',
+    ],
+    sources: [
+      ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+    ],
+    guardrails: [
+      'Nicht als Angriff auf einzelne Halter formulieren.',
+      'Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken.',
+    ],
+  },
+  adoption: {
+    facts: [
+      'Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.',
+      'Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.',
+      'Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Tierheime', 'https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/'],
+      ['Streunerhilfe Plau e. V.', 'https://streunerhilfe-plau.de'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+    ],
+    guardrails: [
+      'Nicht als neutrale Kaufberatung zwischen Tierheim und Zucht glätten.',
+      'Seriöse Adoption braucht Zeit und ehrliche Beratung.',
+    ],
+  },
+  selbsttest: {
+    facts: [
+      'Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.',
+      'Strenge Antworten schützen das Tier vor späterer Überforderung.',
+      'Ein schlechtes Ergebnis ist kein Urteil, sondern ein Hinweis, noch zu warten.',
+    ],
+    sources: [
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Nicht als psychometrischen Test zitieren.',
+      'Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen.',
+    ],
+  },
+  notfall: {
+    facts: [
+      'Atemnot, Krämpfe, Vergiftungsverdacht, starke Blutung, Zusammenbruch und Harnstopp sind sofortige Tierarztfälle.',
+      'Bei Vergiftung Verpackung oder Substanz sichern und nicht eigenmächtig Erbrechen auslösen.',
+      'Notdienste sind regional organisiert; vor der Fahrt immer anrufen.',
+    ],
+    sources: [
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+      ['TASSO e. V.', 'https://www.tasso.net'],
+    ],
+    guardrails: [
+      'Immer klar sagen: keine tierärztliche Diagnose.',
+      'Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.',
+    ],
+  },
+  'tierarzt-notdienst': {
+    facts: [
+      'Deutschland hat keine einheitliche zentrale Notdienstsuche für alle Regionen.',
+      'Landestierärztekammern und regionale Systeme sind der verlässlichere Einstieg als allgemeine Suchmaschinen.',
+      'Vor der Fahrt muss die Praxis oder Klinik telefonisch bestätigen, dass sie erreichbar ist.',
+    ],
+    sources: [
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+    ],
+    guardrails: [
+      'Keine Garantie für Öffnungszeiten oder Erreichbarkeit geben.',
+      'Bei akuten Notfällen nicht erst lange sortieren, sondern telefonieren.',
+    ],
+  },
+  wissen: {
+    facts: [
+      'Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.',
+      'Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.',
+      'Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur.',
+    ],
+    sources: [
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Keine medizinischen Empfehlungen als Behandlung zitieren.',
+      'Mythen nicht als gleichwertige Gegenposition darstellen.',
+    ],
+  },
+  'hitzefalle-auto': {
+    facts: [
+      'Autos heizen sich auch bei milden Außentemperaturen schnell gefährlich auf.',
+      'Hunde können Hitzestress nicht zuverlässig durch Schwitzen ausgleichen.',
+      'Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe.',
+    ],
+    sources: [
+      ['TASSO e. V.', 'https://www.tasso.net'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Keine Rechtsberatung zum Einschlagen von Scheiben geben.',
+      'Bei Hitzschlag nicht mit Eiswasser schocken.',
+    ],
+  },
+  'ernaehrung-taurin': {
+    facts: [
+      'Katzen sind obligate Karnivoren und auf eine passende Taurinversorgung angewiesen.',
+      'Hunde und Katzen haben unterschiedliche Ernährungsphysiologie.',
+      'Futterumstellungen gehören bei Krankheit oder Spezialdiät tierärztlich begleitet.',
+    ],
+    sources: [
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Nicht als individueller Futterplan verwenden.',
+      'Vegane Tierernährung nicht pauschal empfehlen.',
+    ],
+  },
+  realhaltung: {
+    facts: [
+      'Übliche Haltung ist nicht automatisch artgerecht.',
+      'Der Kaufpreis ist fast nie der größte Kostenblock eines Haustieres.',
+      'Vertretbare Haltung beginnt bei Bedürfnissen, nicht bei dem, was im Handel verkauft wird.',
+    ],
+    sources: [
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+    ],
+    guardrails: [
+      'Nicht als reine Kostenwarnung verkürzen.',
+      'Normalität immer gegen Tierbedürfnisse prüfen.',
+    ],
+  },
+  'zucht-und-vermehrung': {
+    facts: [
+      'Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.',
+      'Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.',
+      'Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Tierheime', 'https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/'],
+      ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
+    ],
+    guardrails: [
+      'Nicht als Gleichsetzung aller Züchter mit illegalen Vermehrern formulieren.',
+      'Die ethische Position der Seite nicht neutralisieren.',
+    ],
+  },
+  wildtierhaltung: {
+    facts: [
+      'Legalität bedeutet nicht, dass private Wildtier- oder Exotenhaltung vertretbar ist.',
+      'Gefahrtier- und Artenschutzfragen hängen von Bundesland, Art und Herkunft ab.',
+      'Wildtiere brauchen Schutz vor Haustieren, Leinenpflicht und vermeidbarem Stress.',
+    ],
+    sources: [
+      ['CITES Species+ Checklist', 'https://checklist.cites.org/'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+    ],
+    guardrails: [
+      'Keine Rechtsberatung zu Gefahrtierlisten geben.',
+      'Nicht aus Legalität eine Haltungsempfehlung ableiten.',
+    ],
+  },
+  'noch-nicht-bereit': {
+    facts: [
+      'Warten verhindert Tierleid, wenn Zeit, Geld, Wohnsituation oder Stabilität noch nicht passen.',
+      'Tierliebe kann auch über Ehrenamt, Patenschaften, Pflegestellen oder Spenden wirken.',
+      'Ein späterer Einzug wird besser, wenn Rücklagen, Wissen und Betreuung vorher stehen.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Tierheime', 'https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/'],
+      ['Streunerhilfe Plau e. V.', 'https://streunerhilfe-plau.de'],
+    ],
+    guardrails: [
+      'Nicht beschämen; die Seite soll entlasten und Verantwortung normalisieren.',
+      'Keine Anschaffung drängen, wenn die Bedingungen nicht passen.',
+    ],
+  },
+  'budgie-brain': {
+    facts: [
+      'Budgie Brain ist ein Lernspiel über Wellensittich-Haltung.',
+      'Die Simulation macht Schwarm, Freiflug, UV-Licht, Stress und Routine als Haltungsfaktoren erfahrbar.',
+      'Das Spiel ersetzt keine Fachberatung, sondern übersetzt Grundbedürfnisse in eine interaktive Erfahrung.',
+    ],
+    sources: [
+      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+    ],
+    guardrails: [
+      'Nicht als vollständiges Haltungsprotokoll zitieren.',
+      'Immer auf echte Vogelhaltung mit Artgenossen und Freiflug zurückführen.',
+    ],
+  },
+};
+
 const brandLogo = 'assets/images/wahre-haustierliebe-logo.png';
 const brandMark = 'assets/images/wahre-haustierliebe-mark.png';
 const defaultSocialDescription = 'Ehrliche Aufklärung über Haustierhaltung, Tierwohl, Adoption, Qualzucht und Notfälle - privat, werbefrei und verständlich.';
 const socialCardWidth = 1200;
 const socialCardHeight = 630;
+
+const imageDimensionCache = new Map();
 
 const defaultSocialImage = {
   src: brandLogo,
@@ -634,6 +964,101 @@ function outputPathFor(page) {
   return page.slug ? path.join(projectRoot, page.slug, 'index.html') : path.join(projectRoot, 'index.html');
 }
 
+function normalizeAssetPath(src) {
+  if (!src || /^(https?:|data:|\/)/.test(src)) return null;
+  const normalized = src.replaceAll('\\', '/').replace(/^(\.\.\/)+/, '');
+  const assetIndex = normalized.indexOf('assets/');
+  return assetIndex === -1 ? null : normalized.slice(assetIndex);
+}
+
+function optimizedImagePath(relativePath) {
+  if (!relativePath?.startsWith('assets/images/')) return relativePath;
+  const filename = path.basename(relativePath);
+  const optimizedSame = `assets/images/optimized/${filename}`;
+  if (fsSync.existsSync(path.join(projectRoot, optimizedSame))) return optimizedSame;
+
+  const parsed = path.parse(filename);
+  const optimizedJpg = `assets/images/optimized/${parsed.name}.jpg`;
+  if (fsSync.existsSync(path.join(projectRoot, optimizedJpg))) return optimizedJpg;
+
+  return relativePath;
+}
+
+function withAssetPrefix(relativePath, originalSrc) {
+  const prefixMatch = originalSrc.match(/^((?:\.\.\/)+)/);
+  return `${prefixMatch ? prefixMatch[1] : ''}${relativePath}`;
+}
+
+function imageDimensions(relativePath) {
+  if (!relativePath) return null;
+  const normalized = relativePath.replaceAll('\\', '/');
+  if (imageDimensionCache.has(normalized)) return imageDimensionCache.get(normalized);
+
+  const filePath = path.join(projectRoot, normalized);
+  if (!fsSync.existsSync(filePath)) return null;
+  const buffer = fsSync.readFileSync(filePath);
+  let result = null;
+
+  if (buffer.length > 24 && buffer.toString('ascii', 1, 4) === 'PNG') {
+    result = {
+      width: buffer.readUInt32BE(16),
+      height: buffer.readUInt32BE(20),
+    };
+  } else if (buffer.length > 4 && buffer[0] === 0xff && buffer[1] === 0xd8) {
+    let offset = 2;
+    while (offset < buffer.length) {
+      if (buffer[offset] !== 0xff) break;
+      const marker = buffer[offset + 1];
+      const length = buffer.readUInt16BE(offset + 2);
+      if (marker >= 0xc0 && marker <= 0xc3) {
+        result = {
+          height: buffer.readUInt16BE(offset + 5),
+          width: buffer.readUInt16BE(offset + 7),
+        };
+        break;
+      }
+      offset += 2 + length;
+    }
+  }
+
+  imageDimensionCache.set(normalized, result);
+  return result;
+}
+
+function addImageAttributes(html) {
+  return html.replace(/<img\b([^>]*?)>/g, (match, attrs) => {
+    const srcMatch = attrs.match(/\bsrc="([^"]+)"/);
+    if (!srcMatch) return match;
+
+    const rawSrc = srcMatch[1];
+    const relativeSrc = normalizeAssetPath(rawSrc);
+    if (!relativeSrc) return match;
+
+    const optimizedSrc = optimizedImagePath(relativeSrc);
+    const dimensions = imageDimensions(optimizedSrc);
+    let nextAttrs = attrs;
+
+    if (optimizedSrc !== relativeSrc) {
+      nextAttrs = nextAttrs.replace(`src="${rawSrc}"`, `src="${withAssetPrefix(optimizedSrc, rawSrc)}"`);
+    }
+
+    if (dimensions && !/\bwidth=/.test(nextAttrs)) {
+      nextAttrs += ` width="${dimensions.width}"`;
+    }
+    if (dimensions && !/\bheight=/.test(nextAttrs)) {
+      nextAttrs += ` height="${dimensions.height}"`;
+    }
+    if (!/\bdecoding=/.test(nextAttrs)) {
+      nextAttrs += ' decoding="async"';
+    }
+    if (!/\bfetchpriority=/.test(nextAttrs) && (/\bloading="eager"/.test(nextAttrs) || /\bclass="[^"]*\bhero-brand-logo\b/.test(nextAttrs))) {
+      nextAttrs += ' fetchpriority="high"';
+    }
+
+    return `<img${nextAttrs}>`;
+  });
+}
+
 function prefixForSlug(slug) {
   return slug ? '../'.repeat(slug.split('/').length) : '';
 }
@@ -644,7 +1069,7 @@ function assetPrefixFor(page) {
 
 function hrefFor(targetId, currentPage) {
   const target = pageById.get(targetId);
-  if (!target) return '#';
+  if (!target || target.onHold) return '#';
   const prefix = prefixForSlug(currentPage.slug);
   if (!target.slug) return `${prefix}index.html`;
   return `${prefix}${target.slug}/index.html`;
@@ -763,7 +1188,7 @@ function prefixAssets(html, prefix) {
 
 function rewriteScript(script) {
   let next = script;
-  const routeMap = Object.fromEntries(pages.map((page) => [page.id, pagePath(page)]));
+  const routeMap = Object.fromEntries(publicPages.map((page) => [page.id, pagePath(page)]));
 
   next = `var staticPageRoutes = ${JSON.stringify(routeMap, null, 2)};\n` +
     `function staticRouteFor(page) {\n` +
@@ -926,6 +1351,53 @@ function buildJsonLd(page) {
   };
 
   const blocks = [webPage, breadcrumb];
+  const evidence = evidenceByPage[page.id];
+  if (evidence && page.id !== 'startseite') {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': page.standalone === 'budgie' ? 'LearningResource' : 'Article',
+      headline: page.title,
+      name: page.title,
+      description: page.description,
+      url: canonical,
+      mainEntityOfPage: canonical,
+      image,
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Annemarie Andersen',
+        },
+        {
+          '@type': 'Person',
+          name: 'Jan-Erik Andersen',
+        },
+      ],
+      dateModified: lastmod,
+      inLanguage: 'de-DE',
+      isAccessibleForFree: true,
+      keywords: pageKeywords(page).join(', '),
+      articleSection: page.intent,
+      about: pageKeywords(page).map((name) => ({ '@type': 'Thing', name })),
+      citation: evidence.sources.map(([, url]) => url),
+    });
+  }
+
+  const faqItems = faqByPage[page.id];
+  if (faqItems?.length) {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(([question, answer]) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: answer,
+        },
+      })),
+    });
+  }
+
   return blocks;
 }
 
@@ -940,6 +1412,60 @@ function buildIconLinks(prefix) {
   ].join('\n');
 }
 
+function listItems(items) {
+  return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+}
+
+function sourceLinks(sources) {
+  return `<ul>${sources.map(([label, url]) => `<li><a href="${url}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`).join('')}</ul>`;
+}
+
+function buildFaqBlock(page) {
+  const items = faqByPage[page.id];
+  if (!items?.length) return '';
+
+  return `\n        <div class="article-rhythm faq-block" data-faq-block="${page.id}">\n          <span class="eyebrow">Kurz beantwortet</span>\n          <h2>Häufige Fragen</h2>\n          <div class="faq-list">\n${items.map(([question, answer]) => `            <details class="faq-item">\n              <summary>${escapeHtml(question)}</summary>\n              <p>${escapeHtml(answer)}</p>\n            </details>`).join('\n')}\n          </div>\n        </div>\n`;
+}
+
+function buildEvidenceBlock(page) {
+  const evidence = evidenceByPage[page.id];
+  if (!evidence) return '';
+
+  return `\n        <div class="article-rhythm evidence-block" data-evidence-block="${page.id}">\n          <span class="eyebrow">Quellen und Prüfstand</span>\n          <h2>Worauf diese Seite ihre Aussagen stützt</h2>\n          <div class="evidence-grid">\n            <article class="evidence-card">\n              <h3>Kernfakten</h3>\n              ${listItems(evidence.facts)}\n            </article>\n            <article class="evidence-card">\n              <h3>Primäre Quellen</h3>\n              ${sourceLinks(evidence.sources)}\n            </article>\n            <article class="evidence-card">\n              <h3>Nicht glätten</h3>\n              ${listItems(evidence.guardrails)}\n            </article>\n          </div>\n        </div>\n`;
+}
+
+function injectBeforeClosingContent(body, block) {
+  if (!block) return body;
+  const shareIndex = body.indexOf('<p class="share-label');
+  if (shareIndex !== -1) {
+    return `${body.slice(0, shareIndex)}${block}${body.slice(shareIndex)}`;
+  }
+
+  const ctaIndex = body.lastIndexOf('<div class="mt-2 text-center">');
+  if (ctaIndex !== -1) {
+    return `${body.slice(0, ctaIndex)}${block}${body.slice(ctaIndex)}`;
+  }
+
+  const sectionClose = body.lastIndexOf('</section>');
+  if (sectionClose !== -1) {
+    return `${body.slice(0, sectionClose)}${block}${body.slice(sectionClose)}`;
+  }
+
+  return `${body}${block}`;
+}
+
+function injectGeoBlocks(body, page) {
+  if (body.includes('data-evidence-block=') || body.includes('data-faq-block=')) return body;
+  const mainEnd = body.indexOf('\n  </main>');
+  if (mainEnd === -1) {
+    return injectBeforeClosingContent(injectBeforeClosingContent(body, buildFaqBlock(page)), buildEvidenceBlock(page));
+  }
+
+  const mainBody = body.slice(0, mainEnd);
+  const rest = body.slice(mainEnd);
+  return `${injectBeforeClosingContent(injectBeforeClosingContent(mainBody, buildFaqBlock(page)), buildEvidenceBlock(page))}${rest}`;
+}
+
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
   const copy = socialCopy(page);
@@ -950,15 +1476,17 @@ function buildHead(page, prefix) {
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
 
-  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n${buildIconLinks(prefix)}\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
+  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n${buildIconLinks(prefix)}\n  <link rel="preload" href="${prefix}assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>\n  <link rel="preload" href="${prefix}assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
 }
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
   const prefix = assetPrefixFor(page);
   const routePrefix = prefixForSlug(page.slug);
   let body = `${header}\n\n  <main id="main-content" tabindex="-1">\n${section}\n  </main>\n\n${commonAfterSections}`;
+  body = injectGeoBlocks(body, page);
   body = transformLinks(body, page);
   body = prefixAssets(body, prefix);
+  body = addImageAttributes(body);
   body = body.replace(new RegExp(`<section id="${page.id}" class="page(?: active)?">`), `<section id="${page.id}" class="page active">`);
 
   return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${body}\n  <script src="${prefix}assets/site.js"></script>\n</body>\n</html>\n`;
@@ -994,7 +1522,46 @@ async function extractStaticOnlySection(page) {
   return ensureStaticSectionIdentity(html.slice(contentStart, mainEnd).trim(), page);
 }
 
+function buildOnHoldStandalonePage(page) {
+  const prefix = assetPrefixFor(page);
+  const canonical = canonicalUrl(page);
+
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(page.title)}</title>
+  <meta name="description" content="${escapeAttr(page.description)}">
+  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#f7efe3">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="${canonical}">
+${buildIconLinks(prefix)}
+  <link rel="stylesheet" href="${prefix}assets/site.css">
+</head>
+<body class="static-site" data-static-site="true" data-page-id="${page.id}">
+  <main id="main-content" tabindex="-1">
+    <section class="page active">
+      <div class="section">
+        <div class="container article-rhythm">
+          <span class="eyebrow">Pausiert</span>
+          <h1>Budgie Brain ist derzeit on hold.</h1>
+          <p>Das interaktive Wellensittich-Lernwerkzeug ist im Moment bewusst nicht Teil der öffentlichen Seite. Die Vogel-Informationen bleiben auf der normalen Vögel-Seite.</p>
+          <p><a class="btn btn-primary" href="${prefix}voegel/index.html">Zur Vögel-Seite</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+`;
+}
+
 async function buildBudgiePage(page) {
+  if (page.onHold) return buildOnHoldStandalonePage(page);
+
   const source = await fs.readFile(path.join(projectRoot, 'src', 'budgie-source.html'), 'utf8');
   const prefix = assetPrefixFor(page);
   const copy = socialCopy(page);
@@ -1016,6 +1583,12 @@ async function buildBudgiePage(page) {
     thumbnailUrl: image,
     keywords: pageKeywords(page).join(', '),
     inLanguage: 'de-DE',
+    learningResourceType: 'Interaktive Simulation',
+    educationalUse: 'Selbstlernangebot',
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Tierinteressierte, Vogelhalter und Familien vor der Anschaffung von Wellensittichen',
+    },
     isPartOf: {
       '@type': 'WebSite',
       name: siteName,
@@ -1028,6 +1601,7 @@ async function buildBudgiePage(page) {
       'Freiflug',
       'Stress bei Vögeln',
     ],
+    citation: evidenceByPage['budgie-brain'].sources.map(([, url]) => url),
   };
 
   let html = source;
@@ -1039,7 +1613,7 @@ async function buildBudgiePage(page) {
   html = html.replace(/\n  <script src="js\/budgie-engine\.js"><\/script>/, '\n  </main>\n  <script src="../js/budgie-engine.js"></script>');
   html = html.replace(/<script src="js\/budgie-text\.js"><\/script>/, '<script src="../js/budgie-text.js"></script>');
   html = html.replace(/<script src="js\/budgie-app\.js"><\/script>/, '<script src="../js/budgie-app.js"></script>');
-  return html;
+  return addImageAttributes(html);
 }
 
 async function prerenderSectionPages() {
@@ -1053,7 +1627,7 @@ async function prerenderSectionPages() {
     await page.goto(pathToFileURL(pageFile).href, { waitUntil: 'load' });
     await page.waitForTimeout(250);
     const html = await page.evaluate(() => `<!DOCTYPE html>\n${document.documentElement.outerHTML}\n`);
-    await fs.writeFile(pageFile, transformLinks(html, pageConfig), 'utf8');
+    await fs.writeFile(pageFile, stripTrailingWhitespace(addImageAttributes(transformLinks(html, pageConfig))), 'utf8');
     await context.close();
   }
 
@@ -1062,7 +1636,11 @@ async function prerenderSectionPages() {
 
 async function writeFileEnsured(filePath, content) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
-  await fs.writeFile(filePath, content, 'utf8');
+  await fs.writeFile(filePath, stripTrailingWhitespace(content), 'utf8');
+}
+
+function stripTrailingWhitespace(content) {
+  return content.replace(/[ \t]+$/gm, '');
 }
 
 async function loadChromium() {
@@ -1247,7 +1825,7 @@ async function ensureSource() {
 }
 
 function buildSitemap() {
-  const urls = pages.map((page) => `  <url>\n    <loc>${canonicalUrl(page)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${page.changefreq || 'monthly'}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>`).join('\n');
+  const urls = publicPages.map((page) => `  <url>\n    <loc>${canonicalUrl(page)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${page.changefreq || 'monthly'}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
@@ -1289,6 +1867,7 @@ function buildManifest() {
 }
 
 function buildLlmsFull() {
+  const pagesWithEvidence = publicPages.filter((page) => evidenceByPage[page.id]);
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',
@@ -1307,12 +1886,28 @@ function buildLlmsFull() {
     '',
     '## Important URLs',
     '',
-    ...pages.map((page) => `- ${page.title}: ${canonicalUrl(page)}`),
+    ...publicPages.map((page) => `- ${page.title}: ${canonicalUrl(page)}`),
     '',
     '## Page Intent',
     '',
-    ...pages.map((page) => `- ${canonicalUrl(page)} - ${page.intent}`),
+    ...publicPages.map((page) => `- ${canonicalUrl(page)} - ${page.intent}`),
     '',
+    '## Page Facts and Guardrails',
+    '',
+    ...pagesWithEvidence.flatMap((page) => {
+      const evidence = evidenceByPage[page.id];
+      return [
+        `### ${page.title}`,
+        `URL: ${canonicalUrl(page)}`,
+        'Facts:',
+        ...evidence.facts.map((fact) => `- ${fact}`),
+        'Do not flatten:',
+        ...evidence.guardrails.map((guardrail) => `- ${guardrail}`),
+        'Sources:',
+        ...evidence.sources.map(([label, url]) => `- ${label}: ${url}`),
+        '',
+      ];
+    }),
     '## Citation Guidance',
     '',
     '- Für Kurzantworten den jeweiligen Seitentitel, die Meta Description und den sichtbaren H1-/Abschnittsinhalt abgleichen.',
@@ -1360,6 +1955,7 @@ function buildLlmsShort() {
     '',
     '- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und ein 1200x630-Social-Bild.',
     '- Startseite und Fallback-Preview nutzen das offizielle Logo, Unterseiten ihr erstes echtes Inhaltsbild.',
+    '- Fachseiten enthalten sichtbare Quellen-/Prüfstand-Blöcke und maschinenlesbare Page-Facts.',
     '- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json und /ai/faq.json.',
     '',
     'Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt',
@@ -1373,8 +1969,9 @@ function buildAiPages() {
     lastUpdated: lastmod,
     site: siteName,
     url: `${baseUrl}/`,
-    pages: pages.map((page) => {
+    pages: publicPages.map((page) => {
       const social = socialImage(page);
+      const evidence = evidenceByPage[page.id];
       return {
         id: page.id,
         url: canonicalUrl(page),
@@ -1382,6 +1979,9 @@ function buildAiPages() {
         description: page.description,
         intent: page.intent,
         keywords: pageKeywords(page),
+        facts: evidence?.facts || [],
+        citationGuardrails: evidence?.guardrails || [],
+        sources: evidence?.sources.map(([label, url]) => ({ label, url })) || [],
         social: {
           title: socialCopy(page).title,
           description: socialCopy(page).description,
@@ -1418,6 +2018,7 @@ function buildAiSite() {
       'Sichtbare HTML-Seiten sind die Primärquelle.',
       'Startseite und Social-Fallback verwenden das offizielle Logo.',
       'Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien.',
+      'Fachseiten enthalten sichtbare Quellen-und-Prüfstand-Blöcke mit Kernfakten, Primärquellen und Zitiergrenzen.',
     ],
     socialPreview: {
       defaultImage: socialImageUrl(pageById.get('startseite')),

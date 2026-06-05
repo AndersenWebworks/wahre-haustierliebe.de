@@ -19,7 +19,8 @@
     "Kein Ersatz für tierärztliche Beratung.",
     "Sichtbare HTML-Seiten sind die Primärquelle.",
     "Startseite und Social-Fallback verwenden das offizielle Logo.",
-    "Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien."
+    "Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien.",
+    "Fachseiten enthalten sichtbare Quellen-und-Prüfstand-Blöcke mit Kernfakten, Primärquellen und Zitiergrenzen."
   ],
   "socialPreview": {
     "defaultImage": "https://wahre-haustierliebe.de/assets/social/default.png",
