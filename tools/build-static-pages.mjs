@@ -9,7 +9,16 @@ const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
 const siteName = 'Wa(h)re Haustier(liebe)';
-const lastmod = '2026-06-04';
+const lastmod = '2026-06-05';
+const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Wa(h)re Haustier(liebe)">
+  <path fill="#b91f2f" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Z"/>
+  <path fill="#8f1524" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Zm0-3.1.8-.7c6.1-5 9.5-8.3 9.5-13.9 0-3-2.1-5.1-4.9-5.1-2.3 0-4 1.4-4.8 4.1h-1.2c-.8-2.7-2.5-4.1-4.8-4.1-2.8 0-4.9 2.1-4.9 5.1 0 5.6 3.4 8.9 9.5 13.9l.8.7Z" opacity=".65"/>
+  <ellipse cx="16" cy="20.4" rx="5.2" ry="4.2" fill="#fffaf3"/>
+  <circle cx="9.9" cy="15" r="2.25" fill="#fffaf3"/>
+  <circle cx="14.1" cy="12.1" r="2.35" fill="#fffaf3"/>
+  <circle cx="17.9" cy="12.1" r="2.35" fill="#fffaf3"/>
+  <circle cx="22.1" cy="15" r="2.25" fill="#fffaf3"/>
+</svg>`;
 
 const pages = [
   {
@@ -920,6 +929,17 @@ function buildJsonLd(page) {
   return blocks;
 }
 
+function buildIconLinks(prefix) {
+  return [
+    `  <link rel="icon" href="${prefix}favicon.ico" sizes="any">`,
+    `  <link rel="icon" type="image/svg+xml" href="${prefix}assets/icons/favicon.svg">`,
+    `  <link rel="icon" type="image/png" sizes="16x16" href="${prefix}assets/icons/favicon-16x16.png">`,
+    `  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/favicon-32x32.png">`,
+    `  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">`,
+    `  <link rel="manifest" href="${prefix}site.webmanifest">`,
+  ].join('\n');
+}
+
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
   const copy = socialCopy(page);
@@ -930,7 +950,7 @@ function buildHead(page, prefix) {
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
 
-  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
+  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n${buildIconLinks(prefix)}\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
 }
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
@@ -1012,7 +1032,7 @@ async function buildBudgiePage(page) {
 
   let html = source;
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
-  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n  <link rel="icon" type="image/png" sizes="32x32" href="${prefix}assets/icons/icon-32.png">\n  <link rel="icon" type="image/png" sizes="192x192" href="${prefix}assets/icons/icon-192.png">\n  <link rel="apple-touch-icon" sizes="180x180" href="${prefix}assets/icons/apple-touch-icon.png">\n  <link rel="manifest" href="${prefix}site.webmanifest">\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
+  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n${buildIconLinks(prefix)}\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
   html = html.replace('<body class="budgie-page time-morning">', `<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="${page.id}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>`);
   html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content" tabindex="-1"><div class="budgie-app" id="app">');
   html = html.replace('<h2>Budgie Brain</h2>', '<h1>Budgie Brain</h1>');
@@ -1069,18 +1089,22 @@ async function buildAssetDataUrls(assetsToLoad = [brandLogo, brandMark]) {
   return result;
 }
 
-function iconHtml(size, assetUrls) {
+function iconHtml(size, options = {}) {
+  const background = options.background || 'transparent';
+  const scale = options.scale || 1;
+  const iconSize = Math.round(size * scale);
+
   return `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <style>
-    body { margin: 0; width: ${size}px; height: ${size}px; overflow: hidden; background: #f7efe3; }
-    .icon { width: ${size}px; height: ${size}px; display: grid; place-items: center; background: #f7efe3; }
-    img { width: ${Math.round(size * 0.74)}px; height: ${Math.round(size * 0.74)}px; object-fit: contain; }
+    body { margin: 0; width: ${size}px; height: ${size}px; overflow: hidden; background: ${background}; }
+    .icon { width: ${size}px; height: ${size}px; display: grid; place-items: center; background: ${background}; }
+    svg { width: ${iconSize}px; height: ${iconSize}px; display: block; }
   </style>
 </head>
-<body><div class="icon"><img src="${assetUrls.get(brandMark)}" alt=""></div></body>
+<body><div class="icon">${faviconSvg}</div></body>
 </html>`;
 }
 
@@ -1105,30 +1129,86 @@ function socialImageHtml(source, assetUrls, mode) {
 </html>`;
 }
 
-async function screenshotHtml(browser, html, outputFile, viewport) {
+async function screenshotHtml(browser, html, outputFile, viewport, screenshotOptions = {}) {
   const page = await browser.newPage({ viewport, deviceScaleFactor: 1 });
   await page.setContent(html, { waitUntil: 'load' });
   await page.waitForFunction(() => Array.from(document.images).every((image) => image.complete && image.naturalWidth > 0), undefined, { timeout: 5000 });
-  await page.screenshot({ path: outputFile, type: 'png', fullPage: false });
+  await page.screenshot({ path: outputFile, type: 'png', fullPage: false, ...screenshotOptions });
   await page.close();
+}
+
+function pngSize(buffer) {
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20),
+  };
+}
+
+async function writeIco(outputFile, pngFiles) {
+  const images = await Promise.all(pngFiles.map(async (file) => {
+    const buffer = await fs.readFile(file);
+    return {
+      buffer,
+      ...pngSize(buffer),
+    };
+  }));
+
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(images.length, 4);
+
+  const directory = Buffer.alloc(16 * images.length);
+  let offset = header.length + directory.length;
+
+  images.forEach((image, index) => {
+    const start = index * 16;
+    directory.writeUInt8(image.width >= 256 ? 0 : image.width, start);
+    directory.writeUInt8(image.height >= 256 ? 0 : image.height, start + 1);
+    directory.writeUInt8(0, start + 2);
+    directory.writeUInt8(0, start + 3);
+    directory.writeUInt16LE(1, start + 4);
+    directory.writeUInt16LE(32, start + 6);
+    directory.writeUInt32LE(image.buffer.length, start + 8);
+    directory.writeUInt32LE(offset, start + 12);
+    offset += image.buffer.length;
+  });
+
+  await fs.writeFile(outputFile, Buffer.concat([header, directory, ...images.map((image) => image.buffer)]));
 }
 
 async function generateBrandIcons() {
   const chromium = await loadChromium();
   const browser = await chromium.launch();
-  const assetUrls = await buildAssetDataUrls();
-  await fs.mkdir(path.join(projectRoot, 'assets', 'icons'), { recursive: true });
+  const iconsDir = path.join(projectRoot, 'assets', 'icons');
+  await fs.mkdir(iconsDir, { recursive: true });
+  await fs.writeFile(path.join(iconsDir, 'favicon.svg'), `${faviconSvg}\n`, 'utf8');
 
-  for (const [name, size] of [['icon-32.png', 32], ['icon-192.png', 192], ['apple-touch-icon.png', 180]]) {
+  const icons = [
+    ['favicon-16x16.png', 16, { background: 'transparent', scale: 1, transparent: true }],
+    ['favicon-32x32.png', 32, { background: 'transparent', scale: 1, transparent: true }],
+    ['favicon-48x48.png', 48, { background: 'transparent', scale: 1, transparent: true }],
+    ['icon-32.png', 32, { background: 'transparent', scale: 1, transparent: true }],
+    ['apple-touch-icon.png', 180, { background: '#f7efe3', scale: 0.76 }],
+    ['icon-192.png', 192, { background: '#f7efe3', scale: 0.76 }],
+    ['icon-512.png', 512, { background: '#f7efe3', scale: 0.76 }],
+  ];
+
+  for (const [name, size, options] of icons) {
     await screenshotHtml(
       browser,
-      iconHtml(size, assetUrls),
-      path.join(projectRoot, 'assets', 'icons', name),
+      iconHtml(size, options),
+      path.join(iconsDir, name),
       { width: size, height: size },
+      options.transparent ? { omitBackground: true } : {},
     );
   }
 
   await browser.close();
+  await writeIco(
+    path.join(projectRoot, 'favicon.ico'),
+    ['favicon-16x16.png', 'favicon-32x32.png', 'favicon-48x48.png'].map((name) => path.join(iconsDir, name)),
+  );
 }
 
 async function generateSocialImages() {
@@ -1191,6 +1271,13 @@ function buildManifest() {
         src: '/assets/icons/icon-192.png',
         sizes: '192x192',
         type: 'image/png',
+        purpose: 'any maskable',
+      },
+      {
+        src: '/assets/icons/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'any maskable',
       },
       {
         src: '/assets/icons/apple-touch-icon.png',
