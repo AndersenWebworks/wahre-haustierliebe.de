@@ -536,24 +536,49 @@
     .glossary-term-popover {
       position: absolute;
       z-index: 3000;
-      width: min(20rem, calc(100vw - 1.5rem));
-      padding: 0.85rem 0.95rem;
-      border: 1px solid rgba(42, 123, 111, 0.24);
+      width: min(21rem, calc(100vw - 1.5rem));
+      padding: 0.95rem 1rem;
+      border: 1px solid rgba(42, 123, 111, 0.32);
       border-radius: var(--radius);
-      background: rgba(255, 254, 250, 0.98);
-      box-shadow: var(--shadow-lg);
+      background: linear-gradient(180deg, #fffefa 0%, #f4fbf7 100%);
+      box-shadow: 0 18px 45px rgba(31, 51, 58, 0.2), 0 0 0 1px rgba(255, 254, 250, 0.78) inset;
       color: var(--text);
       font-size: 0.92rem;
       line-height: 1.55;
       opacity: 0;
       pointer-events: none;
-      transform: translateY(0.25rem);
-      transition: opacity 0.16s ease, transform 0.16s ease;
+      transform: translateY(0.32rem) scale(0.98);
+      transform-origin: top center;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+    .glossary-term-popover::before {
+      content: "";
+      position: absolute;
+      left: var(--glossary-arrow-left, 50%);
+      top: -0.48rem;
+      width: 0.86rem;
+      height: 0.86rem;
+      border-left: 1px solid rgba(42, 123, 111, 0.28);
+      border-top: 1px solid rgba(42, 123, 111, 0.28);
+      background: #fffefa;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .glossary-term-popover.is-above {
+      transform-origin: bottom center;
+      transform: translateY(-0.32rem) scale(0.98);
+    }
+    .glossary-term-popover.is-above::before {
+      top: auto;
+      bottom: -0.48rem;
+      border: 0;
+      border-right: 1px solid rgba(42, 123, 111, 0.28);
+      border-bottom: 1px solid rgba(42, 123, 111, 0.28);
+      background: #f4fbf7;
     }
     .glossary-term-popover.is-visible {
       opacity: 1;
       pointer-events: auto;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
     .glossary-term-popover strong {
       display: block;
@@ -579,13 +604,14 @@
     @media (max-width: 640px), (pointer: coarse) {
       .glossary-term-popover {
         position: fixed;
-        left: 0.75rem !important;
-        right: 0.75rem;
-        bottom: 0.75rem;
-        top: auto !important;
-        width: auto;
-        max-height: min(18rem, calc(100vh - 1.5rem));
+        width: min(23rem, calc(100vw - 1rem));
+        max-height: min(19rem, calc(100vh - 1rem));
         overflow: auto;
+        border-color: rgba(212, 165, 116, 0.6);
+        box-shadow: 0 18px 42px rgba(24, 38, 41, 0.28), 0 0 0 3px rgba(212, 165, 116, 0.16);
+      }
+      .glossary-term-popover strong {
+        font-size: 1rem;
       }
     }
 

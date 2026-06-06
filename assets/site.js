@@ -1163,11 +1163,16 @@ function normalizeAssetUrls(root) {
     function hideGlossaryTooltip() {
       if (!glossaryTooltip) return;
       cancelGlossaryTooltipHide();
-      glossaryTooltip.classList.remove('is-visible');
+      glossaryTooltip.classList.remove('is-visible', 'is-above', 'is-below');
       document.querySelectorAll('.glossary-term.is-active, .glossary-term.is-open').forEach(function(term) {
         term.classList.remove('is-active', 'is-open');
       });
       activeGlossaryTrigger = null;
+    }
+
+    function usesViewportGlossaryTooltip() {
+      return window.matchMedia
+        && (window.matchMedia('(max-width: 640px)').matches || window.matchMedia('(pointer: coarse)').matches);
     }
 
     function positionGlossaryTooltip(trigger) {
@@ -1176,27 +1181,46 @@ function normalizeAssetUrls(root) {
       var viewportWidth = document.documentElement.clientWidth;
       var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
       var rect = trigger.getBoundingClientRect();
-      var gap = 8;
-      var margin = 12;
+      var gap = usesViewportGlossaryTooltip() ? 12 : 8;
+      var margin = usesViewportGlossaryTooltip() ? 8 : 12;
 
       glossaryTooltip.style.left = '0px';
       glossaryTooltip.style.top = '0px';
+      glossaryTooltip.style.right = 'auto';
+      glossaryTooltip.style.bottom = 'auto';
+      glossaryTooltip.classList.remove('is-above', 'is-below');
 
       var tooltipRect = glossaryTooltip.getBoundingClientRect();
-      var left = window.scrollX + rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-      var maxLeft = window.scrollX + viewportWidth - tooltipRect.width - margin;
-      left = Math.max(window.scrollX + margin, Math.min(left, maxLeft));
+      var isViewportTooltip = usesViewportGlossaryTooltip();
+      var leftBase = isViewportTooltip ? 0 : window.scrollX;
+      var topBase = isViewportTooltip ? 0 : window.scrollY;
+      var triggerCenter = rect.left + (rect.width / 2);
+      var left = leftBase + triggerCenter - (tooltipRect.width / 2);
+      var maxLeft = leftBase + viewportWidth - tooltipRect.width - margin;
+      left = Math.max(leftBase + margin, Math.min(left, maxLeft));
 
-      var top = window.scrollY + rect.bottom + gap;
+      var belowTop = topBase + rect.bottom + gap;
+      var aboveTop = topBase + rect.top - tooltipRect.height - gap;
+      var top = belowTop;
       if (rect.bottom + gap + tooltipRect.height > viewportHeight - margin) {
-        top = window.scrollY + rect.top - tooltipRect.height - gap;
+        top = aboveTop;
+        glossaryTooltip.classList.add('is-above');
+      } else {
+        glossaryTooltip.classList.add('is-below');
       }
-      if (top < window.scrollY + margin) {
-        top = window.scrollY + margin;
+      var maxTop = topBase + viewportHeight - tooltipRect.height - margin;
+      if (maxTop < topBase + margin) {
+        top = topBase + margin;
+      } else {
+        top = Math.max(topBase + margin, Math.min(top, maxTop));
       }
+
+      var arrowLeft = leftBase + triggerCenter - left;
+      arrowLeft = Math.max(18, Math.min(arrowLeft, tooltipRect.width - 18));
 
       glossaryTooltip.style.left = left + 'px';
       glossaryTooltip.style.top = top + 'px';
+      glossaryTooltip.style.setProperty('--glossary-arrow-left', arrowLeft + 'px');
     }
 
     if (document.readyState === 'loading') {
