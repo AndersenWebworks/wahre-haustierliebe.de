@@ -11,6 +11,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#adoption"
     },
     {
+      "key": "aktivstall",
+      "title": "Aktivstall",
+      "summary": "Pferdehaltung, die Bewegung, Fressplätze und Ruhebereiche bewusst über Laufwege organisiert.",
+      "description": "Pferdehaltung, bei der Futter, Wasser, Liegebereiche und Auslauf so angeordnet sind, dass Pferde sich im Alltag viel bewegen. Ein Aktivstall ist nur gut, wenn Herdenmanagement, Platz, Liegeflächen und Futterzugang wirklich passen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#aktivstall"
+    },
+    {
       "key": "albinismus",
       "title": "Albinismus",
       "summary": "Pigmentmangel, der bei Tieren je nach Art zu Lichtempfindlichkeit, Sehproblemen und Zuchtrisiken führen kann.",
@@ -116,6 +123,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#cites"
     },
     {
+      "key": "d-und-c-potenz",
+      "title": "D- und C-Potenz",
+      "summary": "Homöopathische Verdünnungsstufen: D bedeutet 1:10 pro Schritt, C bedeutet 1:100 pro Schritt.",
+      "description": "Homöopathische Verdünnungsangabe. D-Potenzen werden pro Schritt im Verhältnis 1:10 verdünnt, C-Potenzen im Verhältnis 1:100. Hohe Potenzen enthalten rechnerisch oft keinen Ausgangsstoff mehr.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#d-und-c-potenz"
+    },
+    {
       "key": "einzelgaenger",
       "title": "Einzelgänger",
       "summary": "Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet.",
@@ -128,6 +142,13 @@
       "summary": "Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will.",
       "description": "Tiere, die allein jagen, etwa Katzen. Einzeljagd bedeutet nicht automatisch, dass ein Tier sozial isoliert leben möchte.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#einzeljaeger"
+    },
+    {
+      "key": "ellbogendysplasie",
+      "title": "Ellbogendysplasie",
+      "summary": "Fehlentwicklung des Ellbogengelenks, besonders bei größeren Hunden relevant und oft erblich mitbedingt.",
+      "description": "Fehlentwicklung des Ellbogengelenks beim Hund. Sie kann Lahmheit, Schmerzen und Arthrose verursachen und ist bei vielen größeren Rassen ein wichtiger Punkt in Gesundheitsuntersuchungen der Zucht.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#ellbogendysplasie"
     },
     {
       "key": "evidenzbasierte-medizin",
@@ -186,6 +207,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#gefahrtier"
     },
     {
+      "key": "gefahrtierliste",
+      "title": "Gefahrtierliste",
+      "summary": "Landes- oder kommunal geregelte Liste von Tierarten, deren Haltung besondere Auflagen haben kann.",
+      "description": "Liste von Tierarten, deren Haltung wegen möglicher Gefahren besondere Anforderungen, Erlaubnisse oder Verbote auslösen kann. Gefahrtierlisten sind nicht bundesweit einheitlich, sondern regional geregelt.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#gefahrtierliste"
+    },
+    {
       "key": "gendefekt",
       "title": "Gendefekt",
       "summary": "Erbliche Veränderung, die Gesundheit, Körperbau oder normale Funktion eines Tieres beeinträchtigen kann.",
@@ -214,6 +242,20 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#harnroehrenverschluss"
     },
     {
+      "key": "harnstopp",
+      "title": "Harnstopp",
+      "summary": "Alltagswort für blockierten oder unmöglichen Urinabsatz. Besonders bei Katern ein akuter Notfall.",
+      "description": "Alltagswort für blockierten oder unmöglichen Urinabsatz, meist durch einen Harnröhrenverschluss. Wenn ein Tier nicht urinieren kann, ist das kein Beobachtungsfall, sondern ein sofortiger tierärztlicher Notfall.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#harnstopp"
+    },
+    {
+      "key": "harnwegserkrankung",
+      "title": "Harnwegserkrankung",
+      "summary": "Erkrankung von Blase, Harnröhre oder ableitenden Harnwegen. Bei Katzen oft ein Grund für Unsauberkeit.",
+      "description": "Erkrankung von Blase, Harnröhre oder anderen ableitenden Harnwegen. Bei Katzen können Schmerzen, häufiges Aufsuchen des Katzenklos, Blut im Urin oder Unsauberkeit darauf hinweisen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#harnwegserkrankung"
+    },
+    {
       "key": "hecheln",
       "title": "Hecheln",
       "summary": "Schnelle Atmung über Maul und Zunge. Bei Hunden wichtig zur Kühlung, bei Stress oder Hitze aber ein Warnsignal.",
@@ -226,6 +268,13 @@
       "summary": "Tierart, die soziale Sicherheit aus einer Gruppe zieht. Alleinhaltung erzeugt oft massiven Stress.",
       "description": "Tierart, die in Gruppen lebt und soziale Sicherheit aus Herde oder Verband zieht. Bei Herdentieren ist isolierte Einzelhaltung meist stark belastend.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#herdentier"
+    },
+    {
+      "key": "herkunftsnachweis",
+      "title": "Herkunftsnachweis",
+      "summary": "Nachweis der legalen Herkunft eines Tieres, besonders wichtig bei geschützten Arten und Exoten.",
+      "description": "Dokument oder Beleg, der die legale Herkunft eines Tieres nachvollziehbar macht. Bei geschützten Arten können Herkunftsnachweise, CITES-Papiere oder behördliche Unterlagen entscheidend sein.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#herkunftsnachweis"
     },
     {
       "key": "hitzschlag",
@@ -242,6 +291,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#homoeopathie"
     },
     {
+      "key": "hufrehe",
+      "title": "Hufrehe",
+      "summary": "Schmerzhafte Entzündung im Hufbereich des Pferdes, die schnell schwer und chronisch werden kann.",
+      "description": "Schmerzhafte Erkrankung im Hufbereich des Pferdes. Hufrehe kann akut lebensgefährlich werden, bleibende Schäden verursachen und braucht sofortige fachliche Behandlung sowie gutes Fütterungs- und Haltungsmanagement.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#hufrehe"
+    },
+    {
       "key": "hufschmied",
       "title": "Hufschmied",
       "summary": "Fachperson für Hufpflege und Beschlag. Bei Pferden gehört regelmäßige Hufversorgung zu den Grundkosten.",
@@ -256,6 +312,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#hueftdysplasie"
     },
     {
+      "key": "insulinschock",
+      "title": "Insulinschock",
+      "summary": "Gefährliche Unterzuckerung durch zu viel Insulinwirkung. Bei Hunden kann Xylit so etwas auslösen.",
+      "description": "Gefährliche Unterzuckerung, wenn zu viel Insulin wirkt oder ausgeschüttet wird. Bei Hunden kann Xylit eine massive Insulinausschüttung auslösen und dadurch sehr schnell lebensbedrohlich werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#insulinschock"
+    },
+    {
       "key": "kastration",
       "title": "Kastration",
       "summary": "Entfernung der Keimdrüsen. Verhindert Fortpflanzung und beendet die Hormonproduktion weitgehend.",
@@ -263,11 +326,25 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#kastration"
     },
     {
+      "key": "kastrationspflicht",
+      "title": "Kastrationspflicht",
+      "summary": "Rechtliche Pflicht, bestimmte Katzen kastrieren zu lassen. In Deutschland meist kommunal geregelt.",
+      "description": "Rechtliche Pflicht zur Kastration bestimmter Katzen, meist für Freigängerkatzen in einzelnen Kommunen oder Landkreisen. Es gibt keine bundesweite Einheitsregel; maßgeblich ist die örtliche Verordnung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#kastrationspflicht"
+    },
+    {
       "key": "keimdruese",
       "title": "Keimdrüsen",
       "summary": "Hoden oder Eierstöcke. Sie bilden Keimzellen und wichtige Geschlechtshormone.",
       "description": "Hoden oder Eierstöcke. Keimdrüsen bilden Keimzellen und wichtige Geschlechtshormone; bei der Kastration werden sie entfernt.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#keimdruese"
+    },
+    {
+      "key": "kennzeichnungspflicht",
+      "title": "Kennzeichnungspflicht",
+      "summary": "Pflicht, ein Tier eindeutig zu kennzeichnen, meist per Mikrochip oder Tätowierung.",
+      "description": "Pflicht, ein Tier eindeutig identifizierbar zu machen, meist durch Mikrochip oder Tätowierung. Bei Katzenschutzverordnungen gehört sie oft mit Registrierung und Kastration zusammen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#kennzeichnungspflicht"
     },
     {
       "key": "kognitive-dissonanz",
@@ -282,6 +359,27 @@
       "summary": "Sammelbegriff für Bauchschmerzen beim Pferd. Kann harmlos beginnen, aber lebensgefährlich werden.",
       "description": "Sammelbegriff für Bauchschmerzen beim Pferd. Koliken können verschiedene Ursachen haben und müssen wegen Lebensgefahr immer ernst genommen werden.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#kolik"
+    },
+    {
+      "key": "kollaps",
+      "title": "Kollaps",
+      "summary": "Plötzlicher Zusammenbruch oder starke Kreislaufschwäche. Bei Tieren immer ernst nehmen.",
+      "description": "Plötzlicher Zusammenbruch, starke Schwäche oder Kreislaufversagen. Kollaps kann viele Ursachen haben, etwa Schmerz, Hitze, Herzprobleme, Vergiftung oder Blutverlust, und sollte sofort tierärztlich abgeklärt werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#kollaps"
+    },
+    {
+      "key": "krampfanfall",
+      "title": "Krampfanfall",
+      "summary": "Unkontrollierte Muskelkrämpfe oder Bewusstseinsstörung. Nach einem Anfall tierärztlich abklären lassen.",
+      "description": "Anfall mit unkontrollierten Muskelbewegungen, Bewusstseinsveränderung, Speicheln oder Orientierungslosigkeit. Einen Krampfanfall sollte man sicher begleiten, nicht festhalten und anschließend tierärztlich abklären lassen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#krampfanfall"
+    },
+    {
+      "key": "leinenpflicht",
+      "title": "Leinenpflicht",
+      "summary": "Pflicht, Hunde in bestimmten Gebieten oder Zeiten angeleint zu führen. Regeln sind regional verschieden.",
+      "description": "Pflicht, Hunde an der Leine zu führen. Leinenpflichten unterscheiden sich je nach Bundesland, Kommune, Jahreszeit und Gebiet, etwa während Brut- und Setzzeiten oder in Naturschutzbereichen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#leinenpflicht"
     },
     {
       "key": "magendrehung",
@@ -312,6 +410,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#meldepflicht"
     },
     {
+      "key": "metaanalyse",
+      "title": "Metaanalyse",
+      "summary": "Studie, die Ergebnisse mehrerer einzelner Studien zusammen auswertet.",
+      "description": "Wissenschaftliche Auswertung, die Ergebnisse mehrerer einzelner Studien zusammenführt. Eine gute Metaanalyse kann belastbarer sein als eine einzelne Studie, hängt aber stark von Qualität und Auswahl der einbezogenen Studien ab.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#metaanalyse"
+    },
+    {
       "key": "metabolische-knochenerkrankung",
       "title": "Metabolische Knochenerkrankung",
       "summary": "Knochenerweichung bei Reptilien, meist durch UV-B-, Vitamin-D3- oder Kalziummangel.",
@@ -324,6 +429,13 @@
       "summary": "Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress.",
       "description": "Tier ist vor allem in Dämmerung oder Nacht aktiv. Bei nachtaktiven Tieren bedeutet tagsüberes Wecken häufig Stress und widerspricht dem natürlichen Rhythmus.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#nachtaktiv"
+    },
+    {
+      "key": "nosoden",
+      "title": "Nosoden",
+      "summary": "Homöopathische Mittel aus krankheitsbezogenem Ausgangsmaterial. Kein Ersatz für Impfung, Diagnostik oder Behandlung.",
+      "description": "Homöopathische Mittel, deren Ausgangsmaterial aus krankheitsbezogenen Stoffen stammen kann. Nosoden sind kein Ersatz für Impfungen, tierärztliche Diagnostik oder wirksame Behandlung.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#nosoden"
     },
     {
       "key": "notfallfonds",
@@ -445,6 +557,20 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#rassemerkmal"
     },
     {
+      "key": "raufutter",
+      "title": "Raufutter",
+      "summary": "Strukturreiches Futter wie Heu oder Gras, das für Pferde und viele Pflanzenfresser zentral ist.",
+      "description": "Strukturreiches Futter wie Heu, Gras oder Strohanteile. Für Pferde und viele Pflanzenfresser ist ausreichendes Raufutter wichtig für Verdauung, Beschäftigung und normale Fresszeiten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#raufutter"
+    },
+    {
+      "key": "registrierungspflicht",
+      "title": "Registrierungspflicht",
+      "summary": "Pflicht, ein gekennzeichnetes Tier in einem Register einzutragen, damit es zugeordnet werden kann.",
+      "description": "Pflicht, ein gekennzeichnetes Tier mit Halterdaten in einem Haustierregister einzutragen. Erst die Registrierung macht Chip oder Tätowierung für Rückvermittlung und Vollzug wirklich nutzbar.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#registrierungspflicht"
+    },
+    {
       "key": "rolligkeit",
       "title": "Rolligkeit",
       "summary": "Paarungsbereite Zyklusphase bei Katzen, oft mit Stress, Rufen und Unruhe.",
@@ -515,6 +641,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#streunerkatze"
     },
     {
+      "key": "systematischer-review",
+      "title": "Systematischer Review",
+      "summary": "Übersichtsarbeit, die Studien nach vorher festgelegten Kriterien sucht, bewertet und zusammenfasst.",
+      "description": "Wissenschaftliche Übersichtsarbeit, die vorhandene Studien nach vorher festgelegten Kriterien sucht, auswählt, bewertet und zusammenfasst. Systematische Reviews sind wichtig, um Einzelstudien nicht überzubewerten.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#systematischer-review"
+    },
+    {
       "key": "taurin",
       "title": "Taurin",
       "summary": "Für Katzen essenzieller Nährstoff, wichtig für Herz, Augen, Stoffwechsel und Fortpflanzung.",
@@ -564,6 +697,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#tierklinik"
     },
     {
+      "key": "tierphysiotherapie",
+      "title": "Tierphysiotherapie",
+      "summary": "Gezielte Bewegungstherapie und Rehabilitation für Tiere, etwa nach OPs oder bei Gelenkproblemen.",
+      "description": "Gezielte Bewegungstherapie, Rehabilitation und Funktionsarbeit für Tiere. Sie kann nach Operationen, bei Gelenkproblemen, Schmerzmanagement oder altersbedingten Einschränkungen sinnvoll sein, ersetzt aber keine tierärztliche Diagnose.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#tierphysiotherapie"
+    },
+    {
       "key": "tierschg",
       "title": "TierSchG",
       "summary": "Deutsches Tierschutzgesetz. Es regelt Grundpflichten, Verbote und Verantwortlichkeiten im Umgang mit Tieren.",
@@ -597,6 +737,13 @@
       "summary": "Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung.",
       "description": "Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter, Leitlinien und Einschätzungen zu artgerechter Tierhaltung.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#tvt"
+    },
+    {
+      "key": "unsauberkeit",
+      "title": "Unsauberkeit",
+      "summary": "Urinieren oder Kotabsatz außerhalb des vorgesehenen Platzes. Bei Katzen oft Warnsignal statt Protest.",
+      "description": "Urinieren oder Kotabsatz außerhalb des vorgesehenen Platzes. Bei Katzen ist Unsauberkeit selten bloßer Protest; häufig stecken Schmerzen, Stress, Harnwegserkrankungen oder ungeeignete Toilettenbedingungen dahinter.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#unsauberkeit"
     },
     {
       "key": "uv-b",
@@ -634,6 +781,13 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#veterinaermedizin"
     },
     {
+      "key": "vogelkundiger-tierarzt",
+      "title": "Vogelkundiger Tierarzt",
+      "summary": "Tierarzt oder Tierärztin mit besonderer Erfahrung in Vogelmedizin. Bei Vögeln oft entscheidend.",
+      "description": "Tierarzt oder Tierärztin mit besonderer Erfahrung in Vogelmedizin. Vögel verbergen Krankheiten lange und brauchen häufig spezialisierte Diagnostik; eine normale Kleintierpraxis ist nicht immer ausreichend.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#vogelkundiger-tierarzt"
+    },
+    {
       "key": "winterruhe",
       "title": "Winterruhe",
       "summary": "Kontrollierte Ruhephase bei bestimmten Tierarten, etwa europäischen Landschildkröten.",
@@ -646,6 +800,13 @@
       "summary": "Birkenzucker. Für Hunde kann schon wenig Xylit lebensgefährlich sein.",
       "description": "Birkenzucker, ein Zuckeraustauschstoff. Für Hunde kann Xylit lebensgefährlich sein, weil es schwere Unterzuckerung und Leberschäden auslösen kann.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#xylit"
+    },
+    {
+      "key": "zahnfehlstellung",
+      "title": "Zahnfehlstellung",
+      "summary": "Fehlstellung der Zähne, die Fressen, Atmung, Pflege oder Schmerzfreiheit beeinträchtigen kann.",
+      "description": "Fehlstellung der Zähne oder Kiefer. Bei Kaninchen, Meerschweinchen, brachyzephalen Hunden und Qualzuchten können Zahnfehlstellungen Fressen, Atmung, Augen, Pflege und Schmerzfreiheit stark beeinträchtigen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#zahnfehlstellung"
     },
     {
       "key": "zoohandel",
