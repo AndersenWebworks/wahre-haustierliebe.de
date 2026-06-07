@@ -30,10 +30,13 @@ Wichtig: Der aktuelle Tailnet-/Static-Server liefert Unterordner nicht automatis
 
 Derzeit pausiert: `budgie-brain/index.html` bleibt als `noindex`-Hinweisseite erhalten, ist aber nicht Teil von Navigation, Sitemap, `llms*` oder `/ai/pages.json`.
 
+Neu in Planung: `docs/tier-tamagotchi-konzept.md` hält das spätere Tier-Tamagotchi als Arbeitsunterprojekt von `wahrehaustierliebe.de` fest. Es ist noch nicht live, nicht deploybereit und ersetzt das pausierte Budgie-Brain nicht, sondern dokumentiert die neue Cutout-/Educational-Game-Richtung.
+
 ## Quellen
 
 - `src/site-source.html`: gepflegte Hauptquelle der Haustierliebe-Seite.
 - `src/budgie-source.html`: pausierte Quelle für die interaktive Budgie-Brain-Seite.
+- `docs/tier-tamagotchi-konzept.md`: interne Arbeitsdoku für das geplante Tier-Tamagotchi-Unterprojekt.
 - `references/content/annemarie-content-source.html`: unveränderte Content-Quelle aus der migrierten Annemarie-Version.
 - `references/design/Wahre Haustierliebe v2 standalone.html`: Designreferenz.
 - `references/design/Wahre Haustierliebe v4 standalone.html`: Designreferenz.

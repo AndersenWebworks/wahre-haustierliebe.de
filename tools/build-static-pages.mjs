@@ -1693,7 +1693,7 @@ function buildEvidenceBlock(page) {
   const evidence = evidenceByPage[page.id];
   if (!evidence) return '';
 
-  return `\n        <div class="article-rhythm evidence-block" data-evidence-block="${page.id}">\n          <span class="eyebrow">Quellen und Prüfstand</span>\n          <h2>Worauf diese Seite ihre Aussagen stützt</h2>\n          <div class="evidence-grid">\n            <article class="evidence-card">\n              <h3>Kernfakten</h3>\n              ${listItems(evidence.facts)}\n            </article>\n            <article class="evidence-card">\n              <h3>Primäre Quellen</h3>\n              ${sourceLinks(evidence.sources)}\n            </article>\n            <article class="evidence-card">\n              <h3>Grenzen dieser Seite</h3>\n              ${listItems(evidence.guardrails)}\n            </article>\n          </div>\n        </div>\n`;
+  return `\n        <div class="article-rhythm evidence-block" data-evidence-block="${page.id}">\n          <span class="eyebrow">Quellen und Prüfstand</span>\n          <h2>Worauf diese Seite ihre Aussagen stützt</h2>\n          <div class="evidence-grid">\n            <article class="evidence-card">\n              <h3>Kernfakten</h3>\n              ${listItems(evidence.facts)}\n            </article>\n            <article class="evidence-card">\n              <h3>Primäre Quellen</h3>\n              ${sourceLinks(evidence.sources)}\n            </article>\n            <article class="evidence-card">\n              <h3>Wichtig zu wissen</h3>\n              ${listItems(evidence.guardrails)}\n            </article>\n          </div>\n        </div>\n`;
 }
 
 function injectBeforeClosingContent(body, block) {
@@ -1758,8 +1758,10 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
 
 function normalizePublicCopy(html) {
   return html
-    .replaceAll('<h3>Nicht glätten</h3>', '<h3>Grenzen dieser Seite</h3>')
-    .replaceAll('Nicht glätten: Einzelhaltung ist keine normale Einstiegsoption.', 'Grenze dieser Seite: Einzelhaltung ist keine normale Einstiegsoption.')
+    .replaceAll('<h3>Nicht glätten</h3>', '<h3>Wichtig zu wissen</h3>')
+    .replaceAll('<h3>Grenzen dieser Seite</h3>', '<h3>Wichtig zu wissen</h3>')
+    .replaceAll('Nicht glätten: Einzelhaltung ist keine normale Einstiegsoption.', 'Wichtig zu wissen: Einzelhaltung ist keine normale Einstiegsoption.')
+    .replaceAll('Grenze dieser Seite: Einzelhaltung ist keine normale Einstiegsoption.', 'Wichtig zu wissen: Einzelhaltung ist keine normale Einstiegsoption.')
     .replaceAll('Keine Einzelhaltung als normale Option glätten.', 'Einzelhaltung ist keine normale Option.')
     .replaceAll('Nicht als neutrale Kaufberatung zwischen Tierheim und Zucht glätten.', 'Adoption nicht als beliebige Einkaufsoption neben Zucht darstellen.');
 }
