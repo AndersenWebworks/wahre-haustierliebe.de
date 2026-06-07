@@ -510,8 +510,8 @@ const BudgieEngine = (function() {
 
       // --- UV-LICHT ---
       if (!env.hasUVLight) {
-        // Ohne UV sieht der Vogel seine Artgenossen "falsch" (Federmuster unsichtbar)
-        // → Partner-Identifikation gestört, allgemein "flach" Wahrnehmung
+        // Ohne UV sieht der Vogel seine Artgenossen „falsch“ (Federmuster unsichtbar)
+        // → Partner-Identifikation gestört, allgemein „flach“ Wahrnehmung
         s.featherCondition -= 0.03;  // Sehr langsam, aber kumulativ
         if (this.environment.hasCompanion) {
           s.bondingPartner -= 0.02;  // Paarbindung leidet
@@ -946,12 +946,12 @@ const BudgieEngine = (function() {
         const words = [this.name, 'Hallo', 'Piep', 'Komm', 'Fein'];
         const word = PICK(words);
         this.vocalRepertoire.push({
-          id: 'first_word', type: 'word', label: `"${word}"`,
+          id: 'first_word', type: 'word', label: `„${word}“`,
           learnedDay: this.day,
           detail: `Klar genug, dass man es versteht. ${this.name} kann sprechen.`,
         });
         events.push(this._createEvent('milestone',
-          `${this.name} sagt "${word}"! Klar, deutlich, unverkennbar. Nur wenige Vogelarten können menschliche Sprache reproduzieren — Wellensittiche gehören dazu.`, 'positive'));
+          `${this.name} sagt „${word}“! Klar, deutlich, unverkennbar. Nur wenige Vogelarten können menschliche Sprache reproduzieren — Wellensittiche gehören dazu.`, 'positive'));
       }
 
       // === PARTNER-LERNEN (Schwarm-Vokalisationen) ===
@@ -1187,7 +1187,7 @@ const BudgieEngine = (function() {
         case 'hasUVLight':
           description = value
             ? 'UV-Lampe installiert. Die Welt sieht für den Vogel jetzt richtig aus — Farben, die Menschen nicht sehen können.'
-            : 'UV-Lampe entfernt. Der Vogel sieht seine Welt jetzt "flach".';
+            : 'UV-Lampe entfernt. Der Vogel sieht seine Welt jetzt „flach“.';
           severity = value ? 'positive' : 'warning';
           s.stress += value ? -3 : 2;
           break;

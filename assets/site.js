@@ -74,9 +74,9 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Die häufigsten Selbstlügen',
           html: `<div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
-            <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin."</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
-            <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier."</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
-            <article class="rhythm-card"><span class="eyebrow">Share-Grund</span><h3>Vor dem Kauf teilen</h3><p>Diese Seite gehört zu Menschen, die gerade „nur mal schauen" und innerlich schon entschieden haben.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin.“</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier.“</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Share-Grund</span><h3>Vor dem Kauf teilen</h3><p>Diese Seite gehört zu Menschen, die gerade „nur mal schauen“ und innerlich schon entschieden haben.</p></article>
           </div>`
         }
       ],
@@ -92,7 +92,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Allein zu Hause',
           html: `<div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht."</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Beziehung, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht.“</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Beziehung, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Ein Hund wartet auf dich.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
           </div>`
         }
@@ -113,7 +113,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm quote-band" data-enhancement="voegel-schwarm">
             <span class="eyebrow">Share-Satz</span>
             <blockquote>Ein einzelner Vogel wird nicht zahm. Er wird einsam.</blockquote>
-            <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer" geplant ist.</p>
+            <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer“ geplant ist.</p>
           </div>`
         }
       ],
@@ -132,7 +132,7 @@ function normalizeAssetUrls(root) {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm quote-band" data-enhancement="exoten-leise">
             <span class="eyebrow">Harte Wahrheit</span>
-            <blockquote>Bei Exoten heißt „pflegeleicht" oft nur: Das Tier stirbt leise.</blockquote>
+            <blockquote>Bei Exoten heißt „pflegeleicht“ oft nur: Das Tier stirbt leise.</blockquote>
             <p>Temperatur, UV-B, Feuchtigkeit, Futter und Meldepflichten sind keine Details. Sie sind die Haltung.</p>
           </div>`
         }
@@ -151,7 +151,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Die häufigsten Gegenargumente',
           html: `<div class="article-rhythm myth-truth" data-enhancement="kastration-kosten">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Einmal Babys wäre doch schön."</h3><p>Für Menschen klingt das romantisch. Für Tiere bedeutet es Hormonstress, Risiko, Nachwuchs ohne sichere Plätze und oft zusätzliches Tierheimleid.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Einmal Babys wäre doch schön.“</h3><p>Für Menschen klingt das romantisch. Für Tiere bedeutet es Hormonstress, Risiko, Nachwuchs ohne sichere Plätze und oft zusätzliches Tierheimleid.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Keine Geburt ist neutral.</h3><p>Jeder ungeplante Wurf braucht Futter, Tierarzt, Platz und verantwortungsvolle Vermittlung. Kastration verhindert Leid, bevor es anfängt.</p></div>
           </div>`
         }
@@ -187,7 +187,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="adoption-price-share">
             <span class="eyebrow">Teilbarer Moment</span>
             <h3>Der billige Welpe ist oft das teuerste Tier.</h3>
-            <p>Genau diese Rechnung sollte jemand sehen, bevor er bei Kleinanzeigen ein „Schnäppchen" anklickt.</p>
+            <p>Genau diese Rechnung sollte jemand sehen, bevor er bei Kleinanzeigen ein „Schnäppchen“ anklickt.</p>
             <div class="share-bar">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Der billige Welpe ist oft das teuerste Tier. Lies das, bevor du über Kleinanzeigen kaufst:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -201,7 +201,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm decision-band" data-enhancement="selbsttest-share">
             <span class="eyebrow">Vorher teilen</span>
             <h3>Der beste Zeitpunkt für diesen Test ist vor dem Tier.</h3>
-            <p>Schick ihn jemandem, der gerade „nur mal guckt". Nach dem Kauf wird aus Einsicht viel schneller Rechtfertigung.</p>
+            <p>Schick ihn jemandem, der gerade „nur mal guckt“. Nach dem Kauf wird aus Einsicht viel schneller Rechtfertigung.</p>
           </div>`
         }
       ],
@@ -217,9 +217,9 @@ function normalizeAssetUrls(root) {
       ],
       wissen: [
         {
-          afterHeading: '„Aber bei meinem Tier hat es geholfen"',
+          afterHeading: '„Aber bei meinem Tier hat es geholfen“',
           html: `<div class="article-rhythm myth-truth" data-enhancement="wissen-korrelation">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Es wurde besser, also hat es gewirkt."</h3><p>Das ist ein verständlicher Schluss. Aber zeitliche Nähe ist kein Wirknachweis.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Es wurde besser, also hat es gewirkt.“</h3><p>Das ist ein verständlicher Schluss. Aber zeitliche Nähe ist kein Wirknachweis.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Beobachtung ist keine Studie.</h3><p>Spontanheilung, Futterwechsel, Schonung oder echte Behandlung werden oft den Globuli zugeschrieben.</p></div>
           </div>`
         },
@@ -233,7 +233,7 @@ function normalizeAssetUrls(root) {
             <div class="article-split-copy">
               <span class="eyebrow">Konkreter Ausweg</span>
               <h3>Beobachten, dokumentieren, untersuchen lassen.</h3>
-              <p>Der hilfreiche Schritt ist nicht „irgendetwas geben", sondern Symptome ernst nehmen, Veränderungen notieren und rechtzeitig tierärztlich abklären.</p>
+              <p>Der hilfreiche Schritt ist nicht „irgendetwas geben“, sondern Symptome ernst nehmen, Veränderungen notieren und rechtzeitig tierärztlich abklären.</p>
               <button class="btn btn-primary" onclick="navigateTo('notfall')">Warnsignale prüfen</button>
             </div>
           </div>`
@@ -257,7 +257,7 @@ function normalizeAssetUrls(root) {
           afterHeading: 'Die Entscheidung fällt im Bauch',
           html: `<div class="article-rhythm share-callout" data-enhancement="mensch-frueh-teilen">
             <span class="eyebrow">Für den Moment vor dem Kauf</span>
-            <h3>Schick das jemandem, der gerade „nur mal schaut".</h3>
+            <h3>Schick das jemandem, der gerade „nur mal schaut“.</h3>
             <p>Genau dann ist noch genug Abstand da, um Alltag, Geld, Zeit und Verantwortung ehrlich zu prüfen.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Vor dem Haustierkauf: Die ehrlichste Frage ist nicht, welches Tier du willst, sondern welches Leben du ihm geben kannst:')">WhatsApp</button>
@@ -272,7 +272,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Ein Hund braucht Aufgaben, die ihn ruhiger und sicherer machen.</h3>
-            <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen", sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
+            <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen“, sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
             <div class="argument-grid">
               <article class="rhythm-card"><span class="eyebrow">Nasenarbeit</span><h3>Suchen statt hochdrehen</h3><p>Futterbeutel, Geruchsspuren oder versteckte Leckerchen lasten viele Hunde besser aus als immer mehr Tempo.</p></article>
               <article class="rhythm-card"><span class="eyebrow">Alltagssignale</span><h3>Nützlich trainieren</h3><p>Rückruf, Decke, Warten, Tauschen und ruhiges Anleinen sind keine Kunststücke, sondern echte Sicherheit im Alltag.</p></article>
@@ -284,7 +284,7 @@ function normalizeAssetUrls(root) {
           afterHeading: 'Bevor du dich entscheidest',
           html: `<div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
-            <h3>Ein Hund wartet nicht auf „später". Er wartet jeden Tag.</h3>
+            <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
             <p>Diese Seite gehört zu Menschen, die den Hundewunsch ernst meinen und deshalb zuerst ihren Alltag prüfen sollten.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
@@ -310,7 +310,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Einzeljäger bedeutet nicht Einzelgänger',
           html: `<div class="article-rhythm myth-truth" data-enhancement="katzen-einzeljaeger">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Katzen sind Einzelgänger."</h3><p>Der Satz wird oft benutzt, um Einzelhaltung in der Wohnung bequem zu machen.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Katzen sind Einzelgänger.“</h3><p>Der Satz wird oft benutzt, um Einzelhaltung in der Wohnung bequem zu machen.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Sie jagen allein, leben aber nicht automatisch allein.</h3><p>Viele Katzen brauchen passende Artgenossen, Rückzugsorte und eine Wohnung, die mehr bietet als Sofa und Futternapf.</p></div>
           </div>`
         },
@@ -319,7 +319,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="katzen-kastration-share">
             <span class="eyebrow">Kastration teilen</span>
             <h3>2 Millionen Streunerkatzen sind kein Naturproblem.</h3>
-            <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Dieser Fakt muss vor dem nächsten „einmal Babys"-Satz sichtbar werden.</p>
+            <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Dieser Fakt muss vor dem nächsten „einmal Babys“-Satz sichtbar werden.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', '2 Millionen Streunerkatzen in Deutschland: Kastration ist praktischer Tierschutz. Lies das:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -331,7 +331,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Schwarmvögel gehören nicht allein',
           html: `<div class="article-rhythm myth-truth" data-enhancement="voegel-einzelhaltung">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein einzelner Vogel wird zahmer."</h3><p>Er richtet sich verzweifelt auf Menschen aus, weil kein Artgenosse antwortet.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein einzelner Vogel wird zahmer.“</h3><p>Er richtet sich verzweifelt auf Menschen aus, weil kein Artgenosse antwortet.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Zahmkeit darf keine Einsamkeit kosten.</h3><p>Mindestens ein passender Partner, Freiflug und Schwarmverhalten sind keine Extras, sondern Grundbedürfnisse.</p></div>
           </div>`
         },
@@ -347,7 +347,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Vögel brauchen Reize, die zu Schwarm, Flug und Futtersuche passen.</h3>
-            <p>Der wichtigste „Trick" ist nicht, dass ein Vogel etwas für Menschen vorführt. Wichtig ist eine Umgebung, in der er selbst aktiv sein kann.</p>
+            <p>Der wichtigste „Trick“ ist nicht, dass ein Vogel etwas für Menschen vorführt. Wichtig ist eine Umgebung, in der er selbst aktiv sein kann.</p>
             <div class="argument-grid">
               <article class="rhythm-card"><span class="eyebrow">Futtersuche</span><h3>Erarbeiten lassen</h3><p>Kräuter, Gräser, Kolbenhirse oder Futter an wechselnden Stellen regen natürliches Suchen und Knabbern an.</p></article>
               <article class="rhythm-card"><span class="eyebrow">Klettern</span><h3>Frische Zweige</h3><p>Ungiftige Naturäste, Schaukeln und Landeplätze machen den Raum interessanter als Plastikstangen im Käfig.</p></article>
@@ -373,14 +373,14 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Kaninchen',
           html: `<div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Kleintiere sind gute Einstiegstiere."</h3><p>Sie wirken handlich, billig und unkompliziert. Genau das macht sie so oft zu Fehlkäufen.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Kleintiere sind gute Einstiegstiere.“</h3><p>Sie wirken handlich, billig und unkompliziert. Genau das macht sie so oft zu Fehlkäufen.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Klein heißt nicht einfach.</h3><p>Fläche, Artgenossen, Zähne, Kastration, Tierarzt und Ruhe sind bei vielen Kleintieren anspruchsvoller als erwartet.</p></div>
           </div>`
         },
         {
           afterHeading: 'Hamster',
           html: `<div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
-            <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich".</span></article>
+            <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
             <article class="signal-card" data-nr="02"><strong>Zähne</strong><span>Kaninchen und Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt.</span></article>
             <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
           </div>`
@@ -411,7 +411,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Fische',
           html: `<div class="article-rhythm myth-truth" data-enhancement="exoten-goldfisch">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas."</h3><p>Das Glas ist ein Symbol für falsche Haustierbilder, nicht für einfache Haltung.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas.“</h3><p>Das Glas ist ein Symbol für falsche Haustierbilder, nicht für einfache Haltung.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Filter, Volumen, Wasserwerte.</h3><p>Fische sind nicht pflegeleicht, nur weil sie leise sterben. Aquariumhaltung ist Biologie plus Technik.</p></div>
           </div>`
         }
@@ -472,7 +472,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Was ist Qualzucht',
           html: `<div class="article-rhythm myth-truth" data-enhancement="qualzucht-rassestandard">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Rassestandard heißt gesund."</h3><p>Standards beschreiben oft Aussehen. Sie garantieren nicht, dass ein Körper gut funktioniert.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Rassestandard heißt gesund.“</h3><p>Standards beschreiben oft Aussehen. Sie garantieren nicht, dass ein Körper gut funktioniert.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Funktion schlägt Form.</h3><p>Atmung, Bewegung, Wahrnehmung und Schmerzfreiheit müssen wichtiger sein als ein niedliches Merkmal.</p></div>
           </div>`
         }
@@ -482,7 +482,7 @@ function normalizeAssetUrls(root) {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm compare-mini" data-enhancement="adoption-serioes">
             <div class="compare-card good"><strong>Seriös</strong><span>Schutzvertrag, Vorkontrolle, ehrliche Infos, Rücknahmezusage.</span></div>
-            <div class="compare-card risk"><strong>Prüfen</strong><span>Druck, Mitleid, „sofort mitnehmen" oder fehlende Gesundheitsinfos.</span></div>
+            <div class="compare-card risk"><strong>Prüfen</strong><span>Druck, Mitleid, „sofort mitnehmen“ oder fehlende Gesundheitsinfos.</span></div>
             <div class="compare-card bad"><strong>Finger weg</strong><span>Kofferraum, Parkplatz, mehrere Rassen, kein Muttertier, Bargeld-Druck.</span></div>
           </div>`
         }
@@ -508,7 +508,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="wissen-mythen-share">
             <span class="eyebrow">Mythen stoppen</span>
             <h3>Ein harmloser Satz kann schlechte Haltung normal machen.</h3>
-            <p>Teile die Mythenliste, wenn jemand mit „das war schon immer so" argumentiert.</p>
+            <p>Teile die Mythenliste, wenn jemand mit „das war schon immer so“ argumentiert.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Haustier-Mythen: Was stimmt wirklich und was schadet Tieren?')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
