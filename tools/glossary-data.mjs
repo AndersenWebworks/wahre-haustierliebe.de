@@ -652,8 +652,8 @@ export const glossaryTerms = [
   {
     key: 'vergiftung',
     title: 'Vergiftung',
-    summary: 'Aufnahme oder Kontakt mit giftigen Stoffen. Verpackung sichern und sofort tierärztlich anrufen.',
-    description: 'Aufnahme oder Kontakt mit giftigen Stoffen. Bei Verdacht: Verpackung oder Quelle sichern, Zeitpunkt und Menge notieren und sofort tierärztlich anrufen.',
+    summary: 'Aufnahme oder Kontakt mit giftigen Stoffen. Verpackung sichern und sofort eine Tierarztpraxis oder Tierklinik anrufen.',
+    description: 'Aufnahme oder Kontakt mit giftigen Stoffen. Bei Verdacht: Verpackung oder Quelle sichern, Zeitpunkt und Menge notieren und sofort eine Tierarztpraxis oder Tierklinik anrufen.',
   },
   {
     key: 'winterruhe',
