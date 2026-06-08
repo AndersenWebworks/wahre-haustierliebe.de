@@ -293,7 +293,7 @@ const evidenceByPage = {
   hunde: {
     facts: [
       'Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.',
-      'Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize.',
+      'Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.',
       'Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung.',
     ],
     sources: [
@@ -304,6 +304,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Nicht als pauschale Rasseberatung verwenden.',
+      'Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.',
       'Medizinische Symptome gehören in eine Tierarztpraxis.',
     ],
   },

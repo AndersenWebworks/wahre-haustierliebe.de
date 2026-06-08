@@ -92,7 +92,7 @@ function normalizeAssetUrls(root) {
         {
           afterHeading: 'Allein zu Hause',
           html: `<div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht.“</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Beziehung, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht.“</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Spaziergänge, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Ein Hund wartet auf dich.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
           </div>`
         }
