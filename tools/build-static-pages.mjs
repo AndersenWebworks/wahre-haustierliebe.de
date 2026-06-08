@@ -294,6 +294,7 @@ const evidenceByPage = {
     facts: [
       'Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.',
       'Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.',
+      'Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.',
       'Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung.',
     ],
     sources: [
@@ -305,6 +306,7 @@ const evidenceByPage = {
     guardrails: [
       'Nicht als pauschale Rasseberatung verwenden.',
       'Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.',
+      'Zwingerhaltung nicht als verboten darstellen; verboten ist grundsätzlich die Anbindehaltung, während Zwingerhaltung nur unter Mindestanforderungen zulässig ist.',
       'Medizinische Symptome gehören in eine Tierarztpraxis.',
     ],
   },
@@ -916,7 +918,7 @@ const socialCopyByPage = {
 const keywordByPage = {
   startseite: ['Haustierhaltung', 'Tierwohl', 'Tierschutz', 'Adoption', 'Qualzucht', 'Tiernotfall'],
   mensch: ['Haustier anschaffen', 'Haustierkauf', 'Verantwortung', 'Kosten', 'Alltag'],
-  hunde: ['Hund halten', 'Hund anschaffen', 'Hundekosten', 'Alleinbleiben', 'Erziehung'],
+  hunde: ['Hund halten', 'Hund anschaffen', 'Hundekosten', 'Alleinbleiben', 'Erziehung', 'Zwingerhaltung'],
   katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
   voegel: ['Vögel halten', 'Wellensittiche', 'Schwarmhaltung', 'Freiflug', 'UV-Licht'],
   kleintiere: ['Kleintiere halten', 'Kaninchen', 'Meerschweinchen', 'Hamster', 'Ratten'],

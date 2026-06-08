@@ -747,6 +747,7 @@ export const glossaryAnnotationsByPage = {
     { from: 'Gebärmutterentzündung (<a href="#glossar" onclick="navigateTo(\'glossar\');return false">Pyometra</a>)', to: `Gebärmutterentzündung (${mark('pyometra', 'Pyometra')})` },
     { from: 'Die Kosten nach der aktuellen Gebührenordnung für Tierärzte (GOT 2022):', to: `Die Kosten nach der aktuellen ${mark('got', 'Gebührenordnung für Tierärzte')} (GOT 2022):` },
     { from: 'Die <a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer">Tierschutz-Hundeverordnung</a> regelt Mindestanforderungen', to: `Die <a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer">${mark('tierschutz-hundeverordnung', 'Tierschutz-Hundeverordnung')}</a> regelt Mindestanforderungen` },
+    { from: 'Seit der Reform ist vor allem die Anbindehaltung grundsätzlich verboten.', to: `Seit der Reform ist vor allem die ${mark('anbindehaltung', 'Anbindehaltung')} grundsätzlich verboten.` },
     { from: 'Hüftdysplasie (HD) und Ellbogendysplasie (ED)', to: `${mark('hueftdysplasie', 'Hüftdysplasie (HD)')} und ${mark('ellbogendysplasie', 'Ellbogendysplasie (ED)')}` },
     { from: 'Manche Hunderassen – <a href="#qualzucht" onclick="navigateTo(\'qualzucht\');return false">Möpse, Französische Bulldoggen, Teacup-Hunde</a> –', to: `Manche Hunderassen – <a href="#qualzucht" onclick="navigateTo('qualzucht');return false">${mark('qualzucht', 'Möpse, Französische Bulldoggen, Teacup-Hunde')}</a> –` },
   ],
