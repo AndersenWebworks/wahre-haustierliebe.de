@@ -251,6 +251,7 @@ const publicPages = pages.filter((page) => !page.onHold);
 const sectionPages = publicPages.filter((page) => !page.standalone && !page.staticOnly);
 const pageIds = sectionPages.map((page) => page.id);
 const glossaryTermByKey = new Map(glossaryTerms.map((term) => [term.key, term]));
+let staticCssForInline = '';
 
 const faqByPage = {
   hunde: [
@@ -1794,6 +1795,12 @@ function buildCriticalCss(prefix) {
 }
 
 function buildStylesheetLinks(prefix) {
+  if (staticCssForInline) {
+    return `<style data-static-css>
+${staticCssForInline}
+  </style>`;
+  }
+
   return `${buildCriticalCss(prefix)}\n  <link rel="preload" href="${prefix}assets/site.css" as="style" onload="this.onload=null;this.rel='stylesheet'">\n  <noscript><link rel="stylesheet" href="${prefix}assets/site.css"></noscript>`;
 }
 
@@ -2474,6 +2481,7 @@ async function main() {
   const commonAfterSections = source.slice(footerMarker, scriptMarker).trimEnd();
   const script = rewriteScript(rawScript);
   const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n`;
+  staticCssForInline = staticCss;
 
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
