@@ -1,5 +1,5 @@
 var staticPageRoutes = {
-  "startseite": "/",
+  "startseite": "/index.html",
   "impressum": "/impressum/index.html",
   "datenschutz": "/datenschutz/index.html",
   "kontakt": "/kontakt/index.html",

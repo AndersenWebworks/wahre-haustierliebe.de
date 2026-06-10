@@ -5,7 +5,7 @@
   "pages": [
     {
       "id": "startseite",
-      "url": "https://wahre-haustierliebe.de/",
+      "url": "https://wahre-haustierliebe.de/index.html",
       "title": "Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung",
       "description": "Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.",
       "intent": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung",

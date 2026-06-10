@@ -15,7 +15,7 @@
 
 ## Important URLs
 
-- Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung: https://wahre-haustierliebe.de/
+- Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung: https://wahre-haustierliebe.de/index.html
 - Impressum - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/impressum/index.html
 - Datenschutzerklärung: https://wahre-haustierliebe.de/datenschutz/index.html
 - Kontakt - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kontakt/index.html
@@ -43,7 +43,7 @@
 
 ## Page Intent
 
-- https://wahre-haustierliebe.de/ - Startseite und Orientierung für verantwortungsvolle Haustierhaltung
+- https://wahre-haustierliebe.de/index.html - Startseite und Orientierung für verantwortungsvolle Haustierhaltung
 - https://wahre-haustierliebe.de/impressum/index.html - Anbieterkennzeichnung und rechtliche Kontaktangaben
 - https://wahre-haustierliebe.de/datenschutz/index.html - Datenschutzinformationen nach DSGVO für die Website
 - https://wahre-haustierliebe.de/kontakt/index.html - Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe

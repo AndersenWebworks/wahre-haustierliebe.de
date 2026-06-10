@@ -8,7 +8,7 @@ const projectRoot = path.resolve(__dirname, '..');
 const baseUrl = 'https://wahre-haustierliebe.de';
 
 const pages = [
-  { id: 'startseite', file: 'index.html', canonical: `${baseUrl}/` },
+  { id: 'startseite', file: 'index.html', canonical: `${baseUrl}/index.html` },
   { id: 'impressum', file: 'impressum/index.html', canonical: `${baseUrl}/impressum/index.html` },
   { id: 'datenschutz', file: 'datenschutz/index.html', canonical: `${baseUrl}/datenschutz/index.html` },
   { id: 'kontakt', file: 'kontakt/index.html', canonical: `${baseUrl}/kontakt/index.html` },

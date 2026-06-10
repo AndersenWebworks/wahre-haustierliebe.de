@@ -943,7 +943,7 @@ const keywordByPage = {
 };
 
 function pagePath(page) {
-  return page.slug ? `/${page.slug}/index.html` : '/';
+  return page.slug ? `/${page.slug}/index.html` : '/index.html';
 }
 
 function canonicalUrl(page) {
@@ -1067,8 +1067,25 @@ function imageDimensions(relativePath) {
   return result;
 }
 
+function responsiveImageCandidates(relativePath) {
+  if (relativePath !== 'assets/images/optimized/tierheim-hund.jpg') return [];
+
+  return [
+    'assets/images/optimized/tierheim-hund-360.jpg',
+    'assets/images/optimized/tierheim-hund-480.jpg',
+    'assets/images/optimized/tierheim-hund-600.jpg',
+    'assets/images/optimized/tierheim-hund.jpg',
+  ]
+    .map((candidate) => {
+      const dimensions = imageDimensions(candidate);
+      if (!dimensions) return null;
+      return { src: candidate, width: dimensions.width };
+    })
+    .filter(Boolean);
+}
+
 function addImageAttributes(html) {
-  return html.replace(/<img\b([^>]*?)>/g, (match, attrs) => {
+  return html.replace(/<img\b([^>]*?)>/g, (match, attrs, offset) => {
     const srcMatch = attrs.match(/\bsrc="([^"]+)"/);
     if (!srcMatch) return match;
 
@@ -1082,6 +1099,20 @@ function addImageAttributes(html) {
 
     if (optimizedSrc !== relativeSrc) {
       nextAttrs = nextAttrs.replace(`src="${rawSrc}"`, `src="${withAssetPrefix(optimizedSrc, rawSrc)}"`);
+    }
+
+    const candidates = responsiveImageCandidates(optimizedSrc);
+    if (candidates.length && !/\bsrcset=/.test(nextAttrs)) {
+      const srcset = candidates
+        .map((candidate) => `${withAssetPrefix(candidate.src, rawSrc)} ${candidate.width}w`)
+        .join(', ');
+      nextAttrs += ` srcset="${srcset}"`;
+      if (!/\bsizes=/.test(nextAttrs)) {
+        const isHeroImage = /\bhero-lead-image\b/.test(html.slice(Math.max(0, offset - 220), offset + match.length));
+        nextAttrs += isHeroImage
+          ? ' sizes="(max-width: 768px) calc(100vw - 5rem), (max-width: 980px) calc(100vw - 7rem), 43vw"'
+          : ' sizes="(max-width: 768px) calc(100vw - 2.5rem), 360px"';
+      }
     }
 
     if (dimensions && !/\bwidth=/.test(nextAttrs)) {
@@ -1733,8 +1764,8 @@ function injectGeoBlocks(body, page) {
 
 function buildCriticalCss(prefix) {
   return `<style data-critical-css>
-    @font-face{font-family:"Bricolage Grotesque";src:url("${prefix}assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-style:normal;font-display:swap}
-    @font-face{font-family:"Plus Jakarta Sans";src:url("${prefix}assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+    @font-face{font-family:"Bricolage Grotesque";src:url("${prefix}assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-style:normal;font-display:optional}
+    @font-face{font-family:"Plus Jakarta Sans";src:url("${prefix}assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");font-weight:400 800;font-style:normal;font-display:optional}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--primary:#1F3A2F;--primary-dark:#14241D;--primary-light:#E8F5EF;--secondary:#C04A3A;--accent:#E89A4B;--accent-light:#FFF4CC;--bg:#FBF8F2;--white:#FFFEFA;--border:rgba(31,58,47,.14);--text:#1A2A22;--text-muted:#3D5046;--text-light:#6B7F75;--shadow:0 8px 28px rgba(31,58,47,.09);--shadow-lg:0 18px 50px rgba(31,58,47,.13);--radius:20px;--radius-lg:32px;--font-heading:"Bricolage Grotesque",system-ui,sans-serif;--font-body:"Plus Jakarta Sans",system-ui,sans-serif;--max-width:1240px}
     body{font-family:var(--font-body);color:var(--text);background:var(--bg);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -1818,8 +1849,6 @@ function buildHead(page, prefix) {
   <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">
   <link rel="canonical" href="${canonical}">
 ${buildIconLinks(prefix)}
-  <link rel="preload" href="${prefix}assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="${prefix}assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   ${buildStylesheetLinks(prefix)}
   ${schema}
 </head>`;
