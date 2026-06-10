@@ -282,6 +282,138 @@
       height: 15px;
     }
 
+    .selection-action.is-visible {
+      display: inline-flex;
+    }
+
+    .annotation-marker {
+      position: absolute;
+      z-index: 18;
+      border: 2px solid rgba(49, 93, 58, .78);
+      border-radius: 8px;
+      background: rgba(220, 235, 214, .22);
+      pointer-events: none;
+    }
+
+    .annotation-marker::after {
+      content: attr(data-number);
+      position: absolute;
+      top: -13px;
+      right: -13px;
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--white);
+      font-size: .78rem;
+      font-weight: 900;
+      box-shadow: 0 8px 18px rgba(22, 45, 27, .22);
+    }
+
+    .inline-composer {
+      position: fixed;
+      z-index: 60;
+      display: none;
+      width: min(390px, calc(100vw - 24px));
+      border: 1px solid rgba(49, 93, 58, .2);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .inline-composer.is-open {
+      display: block;
+    }
+
+    .composer-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 15px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .composer-head strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--forest);
+      font-size: .9rem;
+    }
+
+    .composer-head span {
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+
+    .composer-body {
+      display: grid;
+      gap: 10px;
+      padding: 12px 15px 15px;
+    }
+
+    .composer-body textarea {
+      min-height: 96px;
+    }
+
+    .composer-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .export-strip {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 35;
+      display: none;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid rgba(49, 93, 58, .2);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, .94);
+      box-shadow: 0 12px 28px rgba(22, 45, 27, .16);
+      padding: 8px 10px 8px 13px;
+    }
+
+    .export-strip.is-visible {
+      display: flex;
+    }
+
+    .export-strip span {
+      color: var(--forest);
+      font-size: .84rem;
+      font-weight: 800;
+    }
+
+    .hotspot-card,
+    .hotspot-media {
+      position: relative;
+      cursor: crosshair;
+    }
+
+    .hotspot-card {
+      margin: 22px 0 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 248, .76);
+      padding: 16px 18px;
+    }
+
+    .hotspot-media {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 18px 0 28px;
+    }
+
     .drawer {
       position: fixed;
       inset: 0;
@@ -552,6 +684,20 @@
       .drawer.is-open {
         place-items: end stretch;
       }
+
+      .inline-composer {
+        left: 12px !important;
+        right: 12px !important;
+        bottom: 12px !important;
+        top: auto !important;
+        width: auto;
+      }
+
+      .export-strip {
+        left: 12px;
+        right: 12px;
+        justify-content: space-between;
+      }
     }
   </style>
 </head>
@@ -594,6 +740,8 @@
           </button>
         </section>
 
+        <img class="hotspot-media" src="../assets/images/tierheim-hund.jpg" alt="Hund im Tierheim-Auslauf" data-annotation-label="Bild: Hund im Tierheim-Auslauf">
+
         <section class="annotatable" data-section-id="kinder-verantwortung" data-section-title="Kinder und Verantwortung">
           <h3>Kinder und Verantwortung</h3>
           <p>Kinder können mithelfen, aber sie können die Verantwortung nicht tragen. Die Entscheidung für ein Tier ist immer eine Entscheidung der Erwachsenen. Wenn die Erwachsenen keine Zeit, kein Geld oder keine Kraft haben, ist das Tier am Ende der Leidtragende.</p>
@@ -617,20 +765,25 @@
             <span>Hinweis geben</span>
           </button>
         </section>
+
+        <div class="hotspot-card" data-annotation-label="Infokasten: Whitespace und Kartenwirkung">
+          <strong>Beispielkasten für UI-Hinweise</strong>
+          <p>Diese Fläche ist absichtlich als klickbarer UI-Bereich da. Erik oder Annemarie können hier direkt kommentieren, wenn Abstand, Gewichtung oder Gestaltung nicht passt.</p>
+        </div>
       </article>
 
       <aside class="sidebar" aria-label="Demo-Erklärung">
         <div class="side-note">
-          <strong>Abschnittshinweis</strong>
-          Der Button steht im Leserand. Er bleibt klein, aber lesbar: <code>Hinweis geben</code>.
+          <strong>Direkt kommentieren</strong>
+          Text markieren, Bild anklicken oder in einen Abschnitt klicken. Das Kommentarfeld öffnet sich an der Stelle.
         </div>
         <div class="side-note">
-          <strong>Textmarkierung</strong>
-          Markiere einen Satz im Artikel. Dann erscheint ein kleiner Kontextbutton.
+          <strong>Freie Fläche</strong>
+          Mit gedrückter Alt-Taste einen Bereich ziehen, z. B. für Whitespace oder Layoutstellen.
         </div>
         <div class="side-note">
-          <strong>Formularbezug</strong>
-          Die markierte Stelle erscheint im Formular als Zitat, bevor der Nutzer schreibt.
+          <strong>Export</strong>
+          Gespeicherte Kommentare bleiben markiert und lassen sich als JSON oder Markdown exportieren.
         </div>
       </aside>
     </main>
@@ -644,120 +797,187 @@
     <span>Hinweis zur Textstelle</span>
   </button>
 
-  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="formTitle">
-    <div class="dialog">
-      <div class="dialog-head">
-        <div>
-          <h2 id="formTitle">Hinweis senden</h2>
-          <p>Der Hinweis geht an die Redaktion und wird nicht automatisch veröffentlicht.</p>
-        </div>
-        <button class="close" type="button" aria-label="Formular schließen" id="closeDialog">×</button>
+  <div class="inline-composer" id="composer" role="dialog" aria-labelledby="composerTitle">
+    <div class="composer-head">
+      <div>
+        <strong id="composerTitle">Kommentar zur Markierung</strong>
+        <span id="composerContext">Direkt an der Seite erfasst.</span>
       </div>
-
-      <form class="annotation-form" id="annotationForm">
-        <div class="context-line" id="contextLine" aria-live="polite"></div>
-
-        <div class="quote-box" id="quoteBox">
-          <span id="quoteLabel">Ausgewählte Textstelle</span>
-          <blockquote id="quoteText"></blockquote>
-        </div>
-
-        <label>
-          Was sollen wir prüfen?
-          <textarea id="message" required placeholder="Zum Beispiel: Diese Formulierung ist missverständlich, hier fehlt eine Quelle, oder dieser Punkt sollte genauer erklärt werden."></textarea>
-          <span class="small-help">Anonym ist in Ordnung. Quellen oder konkrete Hinweise helfen uns bei der Prüfung.</span>
-        </label>
-
-        <label>
-          E-Mail für Rückmeldung, freiwillig
-          <input id="email" type="email" autocomplete="email" placeholder="name@example.de">
-          <span class="small-help">Ohne E-Mail können wir den Hinweis prüfen, aber nicht persönlich antworten.</span>
-        </label>
-
-        <label class="honey-field" aria-hidden="true">
-          Website
-          <input id="website" tabindex="-1" autocomplete="off">
-        </label>
-
-        <div class="dialog-actions">
-          <button class="secondary" type="button" id="cancelDialog">Abbrechen</button>
-          <button class="primary" type="submit">Hinweis absenden</button>
-        </div>
-      </form>
-
-      <div class="result" id="result">
-        <h3>So würde die Redaktionsmail aussehen</h3>
-        <p class="small-help">In der echten MVP-Version würde daraus eine Mail an Erik und Annemarie entstehen.</p>
-        <pre class="mail-preview" id="mailPreview"></pre>
-      </div>
+      <button class="close" type="button" aria-label="Kommentar schließen" id="closeComposer">×</button>
     </div>
+    <form class="composer-body" id="annotationForm">
+      <div class="quote-box is-visible">
+        <span id="quoteLabel">Markierung</span>
+        <blockquote id="quoteText"></blockquote>
+      </div>
+      <label>
+        Kommentar
+        <textarea id="message" required placeholder="Zum Beispiel: hier weniger Abstand, diese Formulierung weicher, Bild austauschen, Button kleiner."></textarea>
+      </label>
+      <div class="composer-actions">
+        <button class="secondary" type="button" id="cancelComposer">Abbrechen</button>
+        <button class="primary" type="submit">Speichern</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="export-strip" id="exportStrip" aria-live="polite">
+    <span id="exportCount">0 Kommentare</span>
+    <button class="secondary" type="button" id="exportJson">JSON</button>
+    <button class="primary" type="button" id="exportMarkdown">Markdown</button>
   </div>
 
   <script>
-    const drawer = document.getElementById("drawer");
+    const composer = document.getElementById("composer");
     const form = document.getElementById("annotationForm");
-    const contextLine = document.getElementById("contextLine");
-    const quoteBox = document.getElementById("quoteBox");
     const quoteLabel = document.getElementById("quoteLabel");
     const quoteText = document.getElementById("quoteText");
     const selectionAction = document.getElementById("selectionAction");
-    const result = document.getElementById("result");
-    const mailPreview = document.getElementById("mailPreview");
+    const exportStrip = document.getElementById("exportStrip");
+    const exportCount = document.getElementById("exportCount");
     const message = document.getElementById("message");
-    const email = document.getElementById("email");
-    const website = document.getElementById("website");
 
     let activeContext = null;
-    let openedAt = 0;
-
-    function getSectionData(section, selectedText) {
-      return {
-        sectionId: section.dataset.sectionId,
-        sectionTitle: section.dataset.sectionTitle,
-        selectedText: selectedText.trim(),
-        page: "experiments/annotation-flow-demo.html"
-      };
-    }
+    const annotations = [];
 
     function trimText(text) {
       return text.replace(/\s+/g, " ").trim();
     }
 
-    function openDialog(context) {
+    function getSectionData(section, selectedText = "") {
+      const rect = section.getBoundingClientRect();
+      return {
+        type: selectedText ? "text" : "section",
+        sectionId: section.dataset.sectionId,
+        sectionTitle: section.dataset.sectionTitle,
+        selectedText: selectedText.trim(),
+        label: selectedText ? "Textstelle" : section.dataset.sectionTitle,
+        page: "experiments/annotation-flow-demo.html",
+        rect: rectToPage(rect)
+      };
+    }
+
+    function rectToPage(rect) {
+      return {
+        x: Math.round(rect.left + window.scrollX),
+        y: Math.round(rect.top + window.scrollY),
+        width: Math.round(rect.width),
+        height: Math.round(rect.height)
+      };
+    }
+
+    function getCssPath(element) {
+      const parts = [];
+      let node = element;
+      while (node && node.nodeType === 1 && node !== document.body) {
+        let part = node.tagName.toLowerCase();
+        if (node.id) {
+          part += "#" + node.id;
+          parts.unshift(part);
+          break;
+        }
+        if (node.className && typeof node.className === "string") {
+          const firstClass = node.className.trim().split(/\s+/).filter(Boolean)[0];
+          if (firstClass) part += "." + firstClass;
+        }
+        const parent = node.parentElement;
+        if (parent) {
+          const siblings = Array.from(parent.children).filter((child) => child.tagName === node.tagName);
+          if (siblings.length > 1) part += `:nth-of-type(${siblings.indexOf(node) + 1})`;
+        }
+        parts.unshift(part);
+        node = parent;
+      }
+      return parts.join(" > ");
+    }
+
+    function getElementData(element) {
+      const rect = element.getBoundingClientRect();
+      const label = element.dataset.annotationLabel || element.alt || trimText(element.textContent || "") || element.tagName.toLowerCase();
+      return {
+        type: element.tagName === "IMG" ? "image" : "element",
+        label: label.slice(0, 110),
+        selector: getCssPath(element),
+        selectedText: element.tagName === "IMG" ? (element.alt || element.currentSrc || element.src) : trimText(element.textContent || "").slice(0, 220),
+        page: "experiments/annotation-flow-demo.html",
+        rect: rectToPage(rect)
+      };
+    }
+
+    function openComposer(context, clientRect) {
       activeContext = context;
-      openedAt = Date.now();
-      result.classList.remove("is-visible");
       form.reset();
 
-      contextLine.innerHTML = `
-        <span>Demo-Seite</span>
-        <span>${context.sectionTitle}</span>
-        <span>${context.sectionId}</span>
-      `;
+      quoteLabel.textContent = context.type === "area" ? "Freier Bereich" : context.type === "image" ? "Bild" : context.type === "element" ? "UI-Element" : "Textstelle";
+      quoteText.textContent = context.selectedText ? "„" + context.selectedText + "“" : context.label;
 
-      if (context.selectedText) {
-        quoteLabel.textContent = "Ausgewählte Textstelle";
-        quoteText.textContent = "„" + context.selectedText + "“";
-        quoteBox.classList.add("is-visible");
-      } else {
-        quoteLabel.textContent = "Abschnitt";
-        quoteText.textContent = context.sectionTitle;
-        quoteBox.classList.add("is-visible");
-      }
+      const width = 390;
+      const x = Math.max(12, Math.min(clientRect.left, window.innerWidth - width - 12));
+      const y = clientRect.bottom + 10 < window.innerHeight - 220 ? clientRect.bottom + 10 : Math.max(12, clientRect.top - 250);
+      composer.style.left = x + "px";
+      composer.style.top = y + "px";
 
-      drawer.classList.add("is-open");
+      composer.classList.add("is-open");
       message.focus();
     }
 
-    function closeDialog() {
-      drawer.classList.remove("is-open");
-      selectionAction.style.display = "none";
+    function closeComposer() {
+      composer.classList.remove("is-open");
+      selectionAction.classList.remove("is-visible");
+    }
+
+    function addMarker(context) {
+      const marker = document.createElement("div");
+      marker.className = "annotation-marker";
+      marker.dataset.number = annotations.length;
+      marker.style.left = context.rect.x + "px";
+      marker.style.top = context.rect.y + "px";
+      marker.style.width = context.rect.width + "px";
+      marker.style.height = context.rect.height + "px";
+      document.body.appendChild(marker);
+    }
+
+    function updateExport() {
+      exportCount.textContent = annotations.length === 1 ? "1 Kommentar" : `${annotations.length} Kommentare`;
+      exportStrip.classList.toggle("is-visible", annotations.length > 0);
+    }
+
+    function saveFile(name, content, type) {
+      const blob = new Blob([content], { type });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = name;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    function buildMarkdown() {
+      const lines = [
+        "# Änderungsbundle: Annotation-Demo",
+        "",
+        "URL: experiments/annotation-flow-demo.html",
+        `Export: ${new Date().toISOString()}`,
+        ""
+      ];
+      annotations.forEach((item, index) => {
+        lines.push(`## ${index + 1}. ${item.label}`);
+        lines.push("");
+        lines.push(`Typ: ${item.type}`);
+        if (item.selectedText) lines.push(`Markierung: ${item.selectedText}`);
+        if (item.selector) lines.push(`Selector: ${item.selector}`);
+        lines.push(`Position: x ${item.rect.x}, y ${item.rect.y}, ${item.rect.width} x ${item.rect.height}`);
+        lines.push("");
+        lines.push(item.comment);
+        lines.push("");
+      });
+      return lines.join("\n");
     }
 
     document.querySelectorAll(".section-action").forEach((button) => {
-      button.addEventListener("click", () => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
         const section = button.closest(".annotatable");
-        openDialog(getSectionData(section, ""));
+        openComposer(getSectionData(section), button.getBoundingClientRect());
       });
     });
 
@@ -766,7 +986,7 @@
       const selectedText = trimText(selection ? selection.toString() : "");
 
       if (!selectedText || selectedText.length < 8) {
-        selectionAction.style.display = "none";
+        selectionAction.classList.remove("is-visible");
         return;
       }
 
@@ -775,7 +995,7 @@
       const section = element && element.closest ? element.closest(".annotatable") : null;
 
       if (!section) {
-        selectionAction.style.display = "none";
+        selectionAction.classList.remove("is-visible");
         return;
       }
 
@@ -786,64 +1006,115 @@
       selectionAction.dataset.selectedText = selectedText;
       selectionAction.style.left = Math.max(12, Math.min(rect.left, window.innerWidth - 238)) + "px";
       selectionAction.style.top = Math.max(rect.top - 48, 12) + "px";
-      selectionAction.style.display = "inline-flex";
+      selectionAction.classList.add("is-visible");
     });
 
     selectionAction.addEventListener("click", () => {
       const section = document.querySelector(`[data-section-id="${selectionAction.dataset.sectionId}"]`);
       if (!section) return;
-      openDialog(getSectionData(section, selectionAction.dataset.selectedText || ""));
+      const selection = window.getSelection();
+      const rect = selection && selection.rangeCount ? selection.getRangeAt(0).getBoundingClientRect() : selectionAction.getBoundingClientRect();
+      const context = getSectionData(section, selectionAction.dataset.selectedText || "");
+      context.rect = rectToPage(rect);
+      openComposer(context, rect);
     });
 
-    document.getElementById("closeDialog").addEventListener("click", closeDialog);
-    document.getElementById("cancelDialog").addEventListener("click", closeDialog);
-
-    drawer.addEventListener("click", (event) => {
-      if (event.target === drawer) closeDialog();
+    document.querySelectorAll(".hotspot-card, .hotspot-media").forEach((element) => {
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        openComposer(getElementData(element), element.getBoundingClientRect());
+      });
     });
+
+    document.querySelectorAll(".annotatable").forEach((section) => {
+      section.addEventListener("click", (event) => {
+        if (event.target.closest("button")) return;
+        const selection = window.getSelection();
+        if (selection && trimText(selection.toString()).length >= 8) return;
+        openComposer(getSectionData(section), section.getBoundingClientRect());
+      });
+    });
+
+    let areaDraft = null;
+
+    document.addEventListener("pointerdown", (event) => {
+      if (!event.altKey || composer.contains(event.target) || event.target.closest("button, a, input, textarea")) return;
+      event.preventDefault();
+      areaDraft = {
+        startX: event.pageX,
+        startY: event.pageY,
+        marker: document.createElement("div")
+      };
+      areaDraft.marker.className = "annotation-marker";
+      areaDraft.marker.dataset.number = "+";
+      document.body.appendChild(areaDraft.marker);
+    });
+
+    document.addEventListener("pointermove", (event) => {
+      if (!areaDraft) return;
+      const x = Math.min(areaDraft.startX, event.pageX);
+      const y = Math.min(areaDraft.startY, event.pageY);
+      const width = Math.abs(event.pageX - areaDraft.startX);
+      const height = Math.abs(event.pageY - areaDraft.startY);
+      Object.assign(areaDraft.marker.style, {
+        left: x + "px",
+        top: y + "px",
+        width: width + "px",
+        height: height + "px"
+      });
+    });
+
+    document.addEventListener("pointerup", (event) => {
+      if (!areaDraft) return;
+      const marker = areaDraft.marker;
+      const rect = marker.getBoundingClientRect();
+      const pageRect = rectToPage(rect);
+      marker.remove();
+      areaDraft = null;
+      if (pageRect.width < 18 || pageRect.height < 18) return;
+      openComposer({
+        type: "area",
+        label: "Freier Bereich",
+        selectedText: "",
+        page: "experiments/annotation-flow-demo.html",
+        rect: pageRect
+      }, rect);
+    });
+
+    document.getElementById("closeComposer").addEventListener("click", closeComposer);
+    document.getElementById("cancelComposer").addEventListener("click", closeComposer);
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && drawer.classList.contains("is-open")) closeDialog();
+      if (event.key === "Escape" && composer.classList.contains("is-open")) closeComposer();
     });
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+      if (!activeContext) return;
 
-      const secondsOpen = Math.round((Date.now() - openedAt) / 1000);
-      const spamStatus = website.value ? "Honeypot ausgefüllt: würde blockiert" : "Honeypot leer";
-      const timingStatus = secondsOpen < 2 ? "Sehr schnell: würde genauer geprüft" : "Zeitprüfung unauffällig";
-      const contact = email.value.trim() || "anonym";
+      annotations.push({
+        id: `ann_${String(annotations.length + 1).padStart(3, "0")}`,
+        createdAt: new Date().toISOString(),
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight,
+          scrollX: window.scrollX,
+          scrollY: window.scrollY
+        },
+        ...activeContext,
+        comment: message.value.trim()
+      });
+      addMarker(activeContext);
+      updateExport();
+      closeComposer();
+    });
 
-      mailPreview.textContent =
-`Betreff: Wa(h)re Haustier(liebe): Hinweis zu "${activeContext.sectionTitle}"
+    document.getElementById("exportJson").addEventListener("click", () => {
+      saveFile("annotation-demo-bundle.json", JSON.stringify({ annotations }, null, 2), "application/json");
+    });
 
-Seite:
-${activeContext.page}
-
-Abschnitt:
-${activeContext.sectionTitle}
-
-Abschnitts-ID:
-${activeContext.sectionId}
-
-Zitat:
-${activeContext.selectedText || "(kein markierter Text, Hinweis zum gesamten Abschnitt)"}
-
-Hinweis:
-${message.value.trim()}
-
-Kontakt:
-${contact}
-
-Bot-Schutz:
-${spamStatus}
-${timingStatus}
-
-Redaktioneller Status:
-neu`;
-
-      result.classList.add("is-visible");
-      result.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    document.getElementById("exportMarkdown").addEventListener("click", () => {
+      saveFile("annotation-demo-bundle.md", buildMarkdown(), "text/markdown");
     });
   </script>
 </body>

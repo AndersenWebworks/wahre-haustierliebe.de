@@ -631,6 +631,364 @@
       }
     }
 
+    /* ========== MITMACHEN / HINWEISE ========== */
+    .section-feedback-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-feedback-heading > h2 {
+      margin: 0;
+    }
+
+    .section-feedback-action,
+    .selection-feedback-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      min-height: 2.25rem;
+      border: 1px solid rgba(42, 123, 111, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 254, 250, 0.84);
+      color: var(--primary-dark);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(31, 58, 47, 0.07);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .section-feedback-action {
+      flex: 0 0 auto;
+      margin-top: 0.18rem;
+      padding: 0.42rem 0.7rem;
+      opacity: 0.72;
+    }
+
+    .section-feedback-action:hover,
+    .section-feedback-action:focus-visible,
+    .selection-feedback-button:hover,
+    .selection-feedback-button:focus-visible {
+      opacity: 1;
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .feedback-action-mark {
+      width: 1.1rem;
+      height: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(42, 123, 111, 0.1);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .selection-feedback-button {
+      position: fixed;
+      z-index: 2400;
+      padding: 0.5rem 0.78rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0.35rem);
+    }
+
+    .selection-feedback-button.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .feedback-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2600;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      background: rgba(26, 42, 34, 0.42);
+    }
+
+    .feedback-modal[hidden] {
+      display: none;
+    }
+
+    .feedback-dialog {
+      width: min(56rem, calc(100vw - 2.5rem));
+      max-height: min(24rem, calc(100dvh - 2.5rem));
+      overflow: auto;
+      border: 1px solid rgba(42, 123, 111, 0.16);
+      border-radius: 1.25rem;
+      background: var(--white);
+      box-shadow: 0 24px 70px rgba(31, 58, 47, 0.22);
+    }
+
+    .feedback-dialog-head {
+      padding: 1rem 1.25rem 0.7rem;
+    }
+
+    .feedback-dialog-body {
+      padding: 0.85rem 1.25rem 1.05rem;
+    }
+
+    .feedback-dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feedback-dialog-body {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.72fr) minmax(22rem, 1.28fr);
+      gap: 0.65rem 1rem;
+      align-items: start;
+    }
+
+    .feedback-dialog-head h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.12;
+    }
+
+    .feedback-dialog-head p {
+      margin: 0.12rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      line-height: 1.32;
+    }
+
+    .feedback-dialog-head p a {
+      color: var(--primary-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    .feedback-close {
+      flex: 0 0 auto;
+      width: 1.95rem;
+      height: 1.95rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .feedback-context,
+    .feedback-quote {
+      margin: 0;
+      padding: 0.62rem 0.72rem;
+      border: 1px solid rgba(42, 123, 111, 0.1);
+      border-radius: 0.95rem;
+      background: rgba(228, 244, 238, 0.74);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.34;
+    }
+
+    .feedback-dialog-body form {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      min-width: 0;
+    }
+
+    .feedback-quote strong,
+    .feedback-context strong {
+      display: block;
+      margin-bottom: 0.14rem;
+      color: var(--primary-dark);
+      font-size: 0.78rem;
+      line-height: 1.15;
+    }
+
+    .feedback-quote blockquote {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      border-radius: 0;
+      color: var(--text);
+      font-style: normal;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+
+    .feedback-field {
+      display: grid;
+      gap: 0.22rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feedback-field label {
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .feedback-field textarea,
+    .feedback-field input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.32;
+      padding: 0.52rem 0.62rem;
+    }
+
+    .feedback-field textarea {
+      min-height: 5rem;
+      resize: vertical;
+    }
+
+    .feedback-field textarea:focus,
+    .feedback-field input:focus {
+      outline: none;
+      border-color: rgba(42, 123, 111, 0.58);
+      box-shadow: 0 0 0 3px rgba(42, 123, 111, 0.1);
+    }
+
+    .feedback-field small {
+      color: var(--text-light);
+      font-size: 0.82rem;
+    }
+
+    .feedback-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+
+    .feedback-actions .btn {
+      min-height: 2.35rem;
+      padding: 0.56rem 0.88rem;
+      font-size: 0.86rem;
+      line-height: 1.1;
+    }
+
+    .feedback-status {
+      margin: 0.35rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .feedback-status.is-success {
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .feedback-status.is-error {
+      color: var(--secondary);
+      font-weight: 800;
+    }
+
+    .mitmachen-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .mitmachen-step {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 254, 250, 0.92);
+      box-shadow: var(--shadow);
+    }
+
+    .mitmachen-step strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 760px) {
+      .section-feedback-heading {
+        display: block;
+      }
+
+      .section-feedback-action {
+        margin: 0.35rem 0 0.25rem;
+      }
+
+      .selection-feedback-button {
+        left: 1rem !important;
+        right: 1rem !important;
+        bottom: 1rem !important;
+        top: auto !important;
+        width: calc(100vw - 2rem);
+      }
+
+      .feedback-modal {
+        align-items: end;
+        place-items: end center;
+        padding: 0.5rem;
+      }
+
+      .feedback-dialog {
+        width: 100%;
+        max-height: calc(100dvh - 1rem);
+        border-radius: 18px 18px 0 0;
+      }
+
+      .feedback-dialog-body {
+        display: block;
+      }
+
+      .feedback-dialog-body form {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .feedback-context,
+      .feedback-quote {
+        margin-bottom: 0.55rem;
+      }
+
+      .feedback-dialog-head {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: var(--white);
+      }
+
+      .feedback-actions .btn {
+        width: 100%;
+      }
+
+      .mitmachen-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ========== ANIMAL NAV GRID ========== */
     .animal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
     .animal-card {
@@ -4485,6 +4843,7 @@
               </svg>
             </a>
           </li>
+          <li><a class="nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a></li>
           <li><button type="button" class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
         </ul>
       </nav>
@@ -4512,6 +4871,7 @@
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
+    <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
     <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
     <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
@@ -4551,7 +4911,7 @@
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>
 
-        <h2>Soziale Bedürfnisse: Mehr als Futter und Gassi</h2><div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-1">Soziale Bedürfnisse: Mehr als Futter und Gassi</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Ein Hund braucht Aufgaben, die ihn ruhiger und sicherer machen.</h3>
             <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen“, sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
@@ -4571,11 +4931,11 @@
           <li>Kontakt zu anderen Hunden (<span class="glossary-term" data-glossary-key="sozialisation" data-glossary-title="Sozialisation" data-glossary-text="Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen und Artgenossen kennenlernen." data-glossary-href="../glossar/index.html#sozialisation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Sozialverhalten</span> muss gelernt und gepflegt werden)</li>
         </ul>
 
-        <h2>Garten ist Bonus, nicht Ersatz</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-2">Garten ist Bonus, nicht Ersatz</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ein Garten ist gut, wenn ein Hund zusätzlich schnüffeln, dösen oder spielen kann. Er ersetzt aber nicht den täglichen Auslauf in anderer Umgebung. Die Tierschutz-Hundeverordnung verlangt ausreichend Auslauf im Freien, Umgang mit der Betreuungsperson und regelmäßig möglichen Kontakt zu Artgenossen. Auslauf und Sozialkontakte müssen zu Rasse, Alter und Gesundheitszustand des Hundes passen.</p>
         <p>Wichtig ist deshalb nicht eine starre Minutenformel, sondern die Wirkung: Der Hund muss raus aus der immer gleichen Haltungsumgebung. Ein Garten ist schnell bekanntes Revier. Spaziergänge bringen neue Gerüche, Orientierung, Bewegung, Begegnungen und gemeinsames Erkunden. Genau das fehlt, wenn ein Hund zwar draußen ist, aber sein Grundstück praktisch nie verlässt.</p>
 
-        <h2>Allein zu Hause: Die ehrliche Rechnung</h2><div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-3">Allein zu Hause: Die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht.“</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Spaziergänge, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Ein Hund wartet auf dich.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
           </div>
@@ -4586,7 +4946,7 @@
           <p><strong>Wer an den meisten Tagen 8 Stunden oder länger außer Haus ist</strong> und niemand sich um den Hund kümmert, für den passt ein Hund in dieser Lebensphase nicht. Das ist keine Moralkeule – das ist Tierschutzrealität.</p>
         </div>
 
-        <h2>Was ein Hund kostet – die ehrliche Rechnung</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-4">Was ein Hund kostet – die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
           <tbody>
@@ -4603,17 +4963,17 @@
         </table>
         <p class="text-muted">Angaben: Durchschnittswerte für mittelgroße Hunde. Große Rassen, chronische Erkrankungen oder Spezialfutter können deutlich teurer werden. Quelle: Zusammenstellung aus Angaben des <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbundes</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a> und der <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>.</p>
 
-        <h2>Kastration</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-5">Kastration</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Kastration ist beim Hund keine Routine, sondern eine Einzelfallentscheidung – anders als bei <a href="../katzen/index.html">Katzen</a>. Bei Rüden kann sie sinnvoll sein, wenn hormonbedingtes Problemverhalten vorliegt (Aggression, exzessives Markieren, Streunen). Bei Hündinnen schützt sie vor Gebärmutterentzündung (<span class="glossary-term" data-glossary-key="pyometra" data-glossary-title="Pyometra" data-glossary-text="Gebärmuttervereiterung. Lebensbedrohlich und bei unkastrierten Hündinnen und Katzen ein Notfall." data-glossary-href="../glossar/index.html#pyometra" aria-describedby="glossary-term-popover" tabindex="0" role="button">Pyometra</span>) und senkt das Risiko für Mammatumoren, wenn sie vor der zweiten Läufigkeit erfolgt. Ausführliche Infos zu Eingriffsarten, Kosten und Mythen findest du auf der Seite <a href="../kastration/index.html">Kastration</a>.</p>
         <p>Die Kosten nach der aktuellen <span class="glossary-term" data-glossary-key="got" data-glossary-title="GOT" data-glossary-text="Gebührenordnung für Tierärzte. Sie regelt, wie tierärztliche Leistungen in Deutschland abgerechnet werden." data-glossary-href="../glossar/index.html#got" aria-describedby="glossary-term-popover" tabindex="0" role="button">Gebührenordnung für Tierärzte</span> (GOT 2022): <strong>Rüde ca. 200–400 Euro, Hündin ca. 400–800 Euro</strong> – abhängig von Größe, Gewicht und Praxis.</p>
 
-        <h2>Hofhaltung und Zwinger</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-6">Hofhaltung und Zwinger</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Auf dem Land weit verbreitet: der Hund lebt draußen, auf dem Hof, vielleicht im Zwinger. Das ist nicht automatisch verboten, aber es ist auch kein Freibrief. Die <a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tierschutz-hundeverordnung" data-glossary-title="Tierschutz-Hundeverordnung" data-glossary-text="Deutsche Verordnung mit Mindestanforderungen an Hundehaltung, etwa Auslauf, Sozialkontakt und Zwingerhaltung." data-glossary-href="../glossar/index.html#tierschutz-hundeverordnung" aria-describedby="glossary-term-popover">Tierschutz-Hundeverordnung</span></a> regelt Mindestanforderungen: Zwingergröße abhängig von der Schulterhöhe, ausreichend Auslauf im Freien außerhalb des Zwingers, Witterungsschutz, Umgang mit einer Betreuungsperson und regelmäßig möglichen Kontakt zu Artgenossen.</p>
         <p>Wichtig: Seit der Reform ist vor allem die <span class="glossary-term" data-glossary-key="anbindehaltung" data-glossary-title="Anbindehaltung" data-glossary-text="Haltung, bei der ein Tier dauerhaft oder lange angebunden ist und sich kaum frei bewegen kann." data-glossary-href="../glossar/index.html#anbindehaltung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Anbindehaltung</span> grundsätzlich verboten. Zwingerhaltung bleibt rechtlich möglich, aber nur als enger Rahmen, nicht als Dauerersatz für Alltag, Beziehung und Bewegung. Ein Hund, der den größten Teil seines Lebens allein hinter Gittern oder auf demselben Hofstück verbringt, bekommt nicht das, was die Verordnung eigentlich meint.</p>
         <p>Dass man solche Haltungen trotzdem noch sieht, liegt nicht daran, dass sie automatisch in Ordnung wären. Oft wird erst kontrolliert, wenn jemand konkrete Hinweise gibt. Dazu kommt die alte Hofhund-Logik: „Der hat doch Platz und frische Luft.“ Platz ersetzt aber keinen Auslauf außerhalb, keine Beschäftigung und keinen sozialen Anschluss.</p>
         <p>Problematisch wird es, wenn der Hund als Alarmanlage gehalten wird. Den ganzen Tag allein auf dem Hof, ohne Beschäftigung, ohne echte Beziehung zu Menschen. Ein Hund, der nur bellt, wenn jemand kommt, und ansonsten allein existiert, ist kein glücklicher Hund – egal wie groß der Garten ist. Mehr über <a href="../mensch/index.html">die Psychologie hinter solcher Tierhaltung</a>.</p>
 
-        <h2>Häufige Gesundheitsprobleme</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-7">Häufige Gesundheitsprobleme</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="accordion-group">
           <div class="accordion">
             <button class="accordion-header" onclick="toggleAccordion(this)" id="accordion-0-button" type="button" aria-controls="accordion-0-panel" aria-expanded="false">Übergewicht – das häufigste Gesundheitsproblem</button>
@@ -4641,7 +5001,7 @@
           </div>
         </div>
 
-        <h2>Bevor du dich entscheidest</h2><div class="article-rhythm share-callout" data-enhancement="hunde-share">
+        <div class="section-feedback-heading"><h2 id="hinweis-hunde-8">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-8" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
             <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
             <p>Diese Seite gehört zu Menschen, die den Hundewunsch ernst meinen und deshalb zuerst ihren Alltag prüfen sollten.</p>
@@ -4805,4 +5165,4 @@
   <script src="../assets/site.js" defer=""></script>
 
 
-</body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle oder Link optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>

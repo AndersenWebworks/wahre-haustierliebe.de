@@ -631,6 +631,364 @@
       }
     }
 
+    /* ========== MITMACHEN / HINWEISE ========== */
+    .section-feedback-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-feedback-heading > h2 {
+      margin: 0;
+    }
+
+    .section-feedback-action,
+    .selection-feedback-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      min-height: 2.25rem;
+      border: 1px solid rgba(42, 123, 111, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 254, 250, 0.84);
+      color: var(--primary-dark);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(31, 58, 47, 0.07);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .section-feedback-action {
+      flex: 0 0 auto;
+      margin-top: 0.18rem;
+      padding: 0.42rem 0.7rem;
+      opacity: 0.72;
+    }
+
+    .section-feedback-action:hover,
+    .section-feedback-action:focus-visible,
+    .selection-feedback-button:hover,
+    .selection-feedback-button:focus-visible {
+      opacity: 1;
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .feedback-action-mark {
+      width: 1.1rem;
+      height: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(42, 123, 111, 0.1);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .selection-feedback-button {
+      position: fixed;
+      z-index: 2400;
+      padding: 0.5rem 0.78rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0.35rem);
+    }
+
+    .selection-feedback-button.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .feedback-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2600;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      background: rgba(26, 42, 34, 0.42);
+    }
+
+    .feedback-modal[hidden] {
+      display: none;
+    }
+
+    .feedback-dialog {
+      width: min(56rem, calc(100vw - 2.5rem));
+      max-height: min(24rem, calc(100dvh - 2.5rem));
+      overflow: auto;
+      border: 1px solid rgba(42, 123, 111, 0.16);
+      border-radius: 1.25rem;
+      background: var(--white);
+      box-shadow: 0 24px 70px rgba(31, 58, 47, 0.22);
+    }
+
+    .feedback-dialog-head {
+      padding: 1rem 1.25rem 0.7rem;
+    }
+
+    .feedback-dialog-body {
+      padding: 0.85rem 1.25rem 1.05rem;
+    }
+
+    .feedback-dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feedback-dialog-body {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.72fr) minmax(22rem, 1.28fr);
+      gap: 0.65rem 1rem;
+      align-items: start;
+    }
+
+    .feedback-dialog-head h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.12;
+    }
+
+    .feedback-dialog-head p {
+      margin: 0.12rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      line-height: 1.32;
+    }
+
+    .feedback-dialog-head p a {
+      color: var(--primary-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    .feedback-close {
+      flex: 0 0 auto;
+      width: 1.95rem;
+      height: 1.95rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .feedback-context,
+    .feedback-quote {
+      margin: 0;
+      padding: 0.62rem 0.72rem;
+      border: 1px solid rgba(42, 123, 111, 0.1);
+      border-radius: 0.95rem;
+      background: rgba(228, 244, 238, 0.74);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.34;
+    }
+
+    .feedback-dialog-body form {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      min-width: 0;
+    }
+
+    .feedback-quote strong,
+    .feedback-context strong {
+      display: block;
+      margin-bottom: 0.14rem;
+      color: var(--primary-dark);
+      font-size: 0.78rem;
+      line-height: 1.15;
+    }
+
+    .feedback-quote blockquote {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      border-radius: 0;
+      color: var(--text);
+      font-style: normal;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+
+    .feedback-field {
+      display: grid;
+      gap: 0.22rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feedback-field label {
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .feedback-field textarea,
+    .feedback-field input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.32;
+      padding: 0.52rem 0.62rem;
+    }
+
+    .feedback-field textarea {
+      min-height: 5rem;
+      resize: vertical;
+    }
+
+    .feedback-field textarea:focus,
+    .feedback-field input:focus {
+      outline: none;
+      border-color: rgba(42, 123, 111, 0.58);
+      box-shadow: 0 0 0 3px rgba(42, 123, 111, 0.1);
+    }
+
+    .feedback-field small {
+      color: var(--text-light);
+      font-size: 0.82rem;
+    }
+
+    .feedback-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+
+    .feedback-actions .btn {
+      min-height: 2.35rem;
+      padding: 0.56rem 0.88rem;
+      font-size: 0.86rem;
+      line-height: 1.1;
+    }
+
+    .feedback-status {
+      margin: 0.35rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .feedback-status.is-success {
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .feedback-status.is-error {
+      color: var(--secondary);
+      font-weight: 800;
+    }
+
+    .mitmachen-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .mitmachen-step {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 254, 250, 0.92);
+      box-shadow: var(--shadow);
+    }
+
+    .mitmachen-step strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 760px) {
+      .section-feedback-heading {
+        display: block;
+      }
+
+      .section-feedback-action {
+        margin: 0.35rem 0 0.25rem;
+      }
+
+      .selection-feedback-button {
+        left: 1rem !important;
+        right: 1rem !important;
+        bottom: 1rem !important;
+        top: auto !important;
+        width: calc(100vw - 2rem);
+      }
+
+      .feedback-modal {
+        align-items: end;
+        place-items: end center;
+        padding: 0.5rem;
+      }
+
+      .feedback-dialog {
+        width: 100%;
+        max-height: calc(100dvh - 1rem);
+        border-radius: 18px 18px 0 0;
+      }
+
+      .feedback-dialog-body {
+        display: block;
+      }
+
+      .feedback-dialog-body form {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .feedback-context,
+      .feedback-quote {
+        margin-bottom: 0.55rem;
+      }
+
+      .feedback-dialog-head {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: var(--white);
+      }
+
+      .feedback-actions .btn {
+        width: 100%;
+      }
+
+      .mitmachen-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ========== ANIMAL NAV GRID ========== */
     .animal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
     .animal-card {
@@ -4468,6 +4826,7 @@
               </svg>
             </a>
           </li>
+          <li><a class="nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a></li>
           <li><button type="button" class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
         </ul>
       </nav>
@@ -4495,6 +4854,7 @@
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
+    <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
     <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
     <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
@@ -4530,14 +4890,14 @@
           </ul>
         </div>
 
-        <h2>Einzeljäger bedeutet nicht Einzelgänger</h2><div class="article-rhythm myth-truth" data-enhancement="katzen-einzeljaeger">
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-1">Einzeljäger bedeutet nicht Einzelgänger</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="katzen-einzeljaeger">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Katzen sind Einzelgänger.“</h3><p>Der Satz wird oft benutzt, um Einzelhaltung in der Wohnung bequem zu machen.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Sie jagen allein, leben aber nicht automatisch allein.</h3><p>Viele Katzen brauchen passende Artgenossen, Rückzugsorte und eine Wohnung, die mehr bietet als Sofa und Futternapf.</p></div>
           </div>
         <p>Einer der hartnäckigsten Mythen: Katzen seien Einzelgänger. Falsch. Katzen sind <strong>Einzeljäger</strong> – sie jagen allein. Das heißt aber nicht, dass sie allein leben wollen. In der Natur bilden Katzen lose Gruppen, schlafen zusammen, putzen sich gegenseitig, teilen Ressourcen.</p>
         <p>Besonders bei reiner Wohnungshaltung ist ein passender Artgenosse oft entscheidend für das Wohlbefinden. Betonung auf <em>passend</em>: Nicht jede Katze versteht sich mit jeder anderen. Alter, Temperament, <span class="glossary-term" data-glossary-key="sozialisation" data-glossary-title="Sozialisation" data-glossary-text="Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen und Artgenossen kennenlernen." data-glossary-href="../glossar/index.html#sozialisation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Sozialisierung</span> spielen eine große Rolle. Zwei Katzen zusammenzuwerfen und zu hoffen, dass es klappt, kann genauso stressig sein wie Einzelhaltung.</p>
 
-        <h2>Wohnungshaltung – ein Kompromiss, keine Ideallösung</h2><div class="article-rhythm" data-enhancement="katzen-beschaeftigung">
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-2">Wohnungshaltung – ein Kompromiss, keine Ideallösung</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="katzen-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Wohnungskatzen brauchen Jagd, Kontrolle und Rückzug.</h3>
             <p>Spielzeug allein reicht nicht. Entscheidend ist, ob die Katze wählen, beobachten, jagen, klettern und sich ungestört zurückziehen kann.</p>
@@ -4558,7 +4918,7 @@
           <li>Mindestens ein Katzenklo pro Katze plus eines extra – an ruhigen Standorten</li>
         </ul>
 
-        <h2>Kastration – warum sie bei Katzen Pflicht sein sollte</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-3">Kastration – warum sie bei Katzen Pflicht sein sollte</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="warning-box">
           <h3>2 Millionen Streunerkatzen in Deutschland</h3>
           <p>Die meisten sind Nachkommen von unkastrierten Freigängerkatzen. Eine einzige unkastrierte Katze kann in wenigen Jahren für Hunderte Nachkommen verantwortlich sein. Kastration ist der wirksamste Tierschutz, den es gibt.</p>
@@ -4575,7 +4935,7 @@
         <p>Kastration beseitigt diese Probleme, senkt den Stresslevel deutlich und schützt vor unkontrollierter Vermehrung. Die Kosten nach GOT 2022: <strong>Kater ca. 80–150 Euro, Katze ca. 120–250 Euro</strong>. Im Verhältnis zu den Folgekosten einer ungewollten <span class="glossary-term" data-glossary-key="traechtigkeit" data-glossary-title="Trächtigkeit" data-glossary-text="Schwangerschaft bei Tieren. Ungewollte Trächtigkeit erzeugt Verantwortung und Gesundheitsrisiken." data-glossary-href="../glossar/index.html#traechtigkeit" aria-describedby="glossary-term-popover" tabindex="0" role="button">Trächtigkeit</span> oder einer Gebärmutterentzündung ist das wenig. Alles Weitere – auch die häufigsten Gegenargumente und warum sie nicht halten – auf der Seite <a href="../kastration/index.html">Kastration</a>.</p>
         <p>In einigen Landkreisen gilt bereits eine Kastrations- und Kennzeichnungspflicht für Freigängerkatzen. Im Landkreis Mecklenburgische Seenplatte etwa in Röbel, Malchow und Waren. Im Landkreis Ludwigslust-Parchim hat der Kreistag eine Kastrationspflicht bisher abgelehnt – zum Nachteil der Streunerkatzen vor Ort.</p>
 
-        <h2>Stilles Leiden erkennen</h2><div class="article-rhythm argument-grid" data-enhancement="katzen-still">
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-4">Stilles Leiden erkennen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm argument-grid" data-enhancement="katzen-still">
             <article class="rhythm-card"><span class="eyebrow">Signal</span><h3>Rückzug</h3><p>Wenn eine Katze plötzlich weniger Kontakt sucht, ist das kein Charakterwechsel, sondern ein Warnsignal.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Signal</span><h3>Unsauberkeit</h3><p>Das ist selten Protest. Häufig stecken Stress, Schmerzen oder Harnwegserkrankungen dahinter.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Handlung</span><h3>Früher prüfen</h3><p>Lieber einmal zu viel zum Tierarzt als eine stille Erkrankung zu spät sehen.</p></article>
@@ -4593,7 +4953,7 @@
         </ul>
         <p>Im Zweifel gilt: Lieber einmal zu oft zum Tierarzt als einmal zu wenig. Auf der <a href="../notfall/index.html">Notfall-Seite</a> findest du die wichtigsten Warnsignale und Erste-Hilfe-Maßnahmen.</p>
 
-        <h2>Kosten – die ehrliche Rechnung</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-5">Kosten – die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
           <tbody>
@@ -4609,12 +4969,12 @@
         </table>
         <p class="text-muted">Bei zwei Katzen (empfohlen bei Wohnungshaltung) verdoppeln sich die laufenden Kosten annähernd. Auch bei Katzen gilt: <a href="../qualzucht/index.html">Qualzuchtrassen wie Perserkatzen oder Scottish Folds</a> verursachen höhere und häufigere Tierarztkosten.</p>
 
-        <h2>Streunerkatzen – und warum dich das etwas angeht</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-6">Streunerkatzen – und warum dich das etwas angeht</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a> kümmert sich ehrenamtlich um Streunerkatzen im Raum Plau am See, Goldberg und Karow in Mecklenburg-Vorpommern. Im Jahr 2025 wurden 86 Katzen versorgt, 48 kastriert und 74 erfolgreich vermittelt – von einer Handvoll Ehrenamtlicher mit begrenzten Mitteln.</p>
         <p>Streunerkatzen sind kein abstraktes Problem. Sie leben in Gartenanlagen, auf Bauernhöfen, an Futterstellen. Viele sind Nachkommen von Hauskatzen, deren Halter die Kastration „nicht für nötig“ hielten. Jede unkastrierte Freigängerkatze verschärft das Problem.</p>
         <p>Wenn du im Wald ein getigertes Katzenjunges findest, kann es außerdem eine Europäische Wildkatze sein. Für solche Funde gilt eine andere Logik als bei Streunerkatzen: nicht anfassen, nicht füttern, nicht mitnehmen. Die konkrete Checkliste steht auf der Seite <a href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>.</p>
 
-        <h2>Bevor du dich entscheidest</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-katzen-7">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-katzen-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul class="checklist">
           <li>Ich bin bereit, 15–20 Jahre Verantwortung für diese Katze zu tragen.</li>
           <li>Ich werde die Katze <span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Keimdrüsen. Verhindert Fortpflanzung und beendet die Hormonproduktion weitgehend." data-glossary-href="../glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">kastrieren</span> und <span class="glossary-term" data-glossary-key="chippen" data-glossary-title="Chippen" data-glossary-text="Einsetzen eines Mikrochips unter die Haut, damit ein Tier eindeutig identifizierbar ist." data-glossary-href="../glossar/index.html#chippen" aria-describedby="glossary-term-popover" tabindex="0" role="button">chippen</span> lassen.</li>
@@ -4771,4 +5131,4 @@
   <script src="../assets/site.js" defer=""></script>
 
 
-</body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle oder Link optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>

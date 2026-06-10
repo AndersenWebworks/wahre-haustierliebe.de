@@ -3,6 +3,7 @@ var staticPageRoutes = {
   "impressum": "/impressum/index.html",
   "datenschutz": "/datenschutz/index.html",
   "kontakt": "/kontakt/index.html",
+  "mitmachen": "/mitmachen/index.html",
   "mensch": "/mensch/index.html",
   "hunde": "/hunde/index.html",
   "katzen": "/katzen/index.html",
@@ -1022,6 +1023,431 @@ function normalizeAssetUrls(root) {
       }
     }
 
+    var feedbackModal = null;
+    var feedbackForm = null;
+    var feedbackStatus = null;
+    var feedbackSelectionButton = null;
+    var feedbackSelectionRange = null;
+    var feedbackState = {};
+    var feedbackReady = false;
+
+    function initCollaborationFlow() {
+      if (feedbackReady) return;
+      feedbackReady = true;
+      var sectionCount = decorateFeedbackSections();
+      if (!sectionCount) return;
+      ensureFeedbackModal();
+      initSelectionFeedback();
+    }
+
+    function collaborationPageSelector() {
+      return '.page:not(#startseite):not(#kontakt):not(#impressum):not(#datenschutz):not(#mitmachen):not(#selbsttest)';
+    }
+
+    function collapseText(value) {
+      var source = String(value || '');
+      var result = '';
+      var pendingSpace = false;
+      for (var index = 0; index < source.length; index += 1) {
+        var code = source.charCodeAt(index);
+        var isSpace = code === 9 || code === 10 || code === 11 || code === 12 || code === 13 || code === 32 || code === 160;
+        if (isSpace) {
+          pendingSpace = result.length > 0;
+          continue;
+        }
+        if (pendingSpace) {
+          result += ' ';
+          pendingSpace = false;
+        }
+        result += source.charAt(index);
+      }
+      return result;
+    }
+
+    function limitText(value, maxLength) {
+      var text = collapseText(value);
+      if (text.length <= maxLength) return text;
+      return text.slice(0, maxLength - 1) + '…';
+    }
+
+    function feedbackPageForNode(node) {
+      if (!node) return null;
+      var element = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+      if (!element) return null;
+      return element.closest(collaborationPageSelector());
+    }
+
+    function sectionTitleForElement(element) {
+      if (!element) return '';
+      var current = element.nodeType === Node.ELEMENT_NODE ? element : element.parentElement;
+      while (current) {
+        var previous = current.previousElementSibling;
+        while (previous) {
+          if (previous.matches && previous.matches('.section-feedback-heading')) {
+            var wrapped = previous.querySelector('h2');
+            return wrapped ? collapseText(wrapped.textContent) : '';
+          }
+          if (previous.matches && previous.matches('h2')) return collapseText(previous.textContent);
+          previous = previous.previousElementSibling;
+        }
+        if (current.matches && current.matches('.container')) break;
+        current = current.parentElement;
+      }
+      return '';
+    }
+
+    function pageTitleFor(page) {
+      if (!page) return document.title;
+      var heading = page.querySelector('.hero h1, h1');
+      return heading ? collapseText(heading.textContent) : document.title;
+    }
+
+    function decorateFeedbackSections() {
+      var count = 0;
+      document.querySelectorAll(collaborationPageSelector()).forEach(function(page) {
+        page.querySelectorAll('.section > .container > .section-feedback-heading').forEach(function(wrapper) {
+          var heading = wrapper.querySelector('h2');
+          var button = wrapper.querySelector('.section-feedback-action');
+          if (!heading || !button) return;
+          bindSectionFeedbackButton(button, page, heading);
+          count += 1;
+        });
+
+        page.querySelectorAll('.section > .container > h2').forEach(function(heading, index) {
+          if (!heading.id) heading.id = 'hinweis-' + (page.id || 'seite') + '-' + (index + 1);
+
+          var parent = heading.parentElement;
+          var wrapper = document.createElement('div');
+          wrapper.className = 'section-feedback-heading';
+          parent.insertBefore(wrapper, heading);
+          wrapper.appendChild(heading);
+
+          var button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'section-feedback-action';
+          button.dataset.feedbackSection = heading.id;
+          button.setAttribute('aria-label', 'Hinweis zu diesem Abschnitt senden');
+          button.innerHTML = '<span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span>';
+          bindSectionFeedbackButton(button, page, heading);
+          wrapper.appendChild(button);
+          count += 1;
+        });
+      });
+      return count;
+    }
+
+    function bindSectionFeedbackButton(button, page, heading) {
+      if (!button || button._feedbackBound) return;
+      button._feedbackBound = true;
+      button.addEventListener('click', function() {
+        openFeedbackDialog({
+          mode: 'section',
+          pageId: page.id || '',
+          pageTitle: pageTitleFor(page),
+          sectionTitle: collapseText(heading.textContent),
+          selectedText: '',
+          sourceUrl: window.location.href.split('#')[0] + '#' + heading.id
+        }, button);
+      });
+    }
+
+    function ensureFeedbackModal() {
+      feedbackModal = document.getElementById('feedback-modal');
+      if (!feedbackModal) {
+        feedbackModal = document.createElement('div');
+        feedbackModal.id = 'feedback-modal';
+        feedbackModal.className = 'feedback-modal';
+        feedbackModal.hidden = true;
+        feedbackModal.innerHTML = [
+          '<div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">',
+          '  <div class="feedback-dialog-head">',
+          '    <div>',
+          '      <h2 id="feedback-title">Hinweis geben</h2>',
+          '      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>',
+          '    </div>',
+          '    <button type="button" class="feedback-close" data-feedback-close aria-label="Hinweisformular schließen">×</button>',
+          '  </div>',
+          '  <div class="feedback-dialog-body">',
+          '    <div class="feedback-context" data-feedback-context></div>',
+          '    <div class="feedback-quote" data-feedback-quote-wrap hidden><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote></blockquote></div>',
+          '    <form data-feedback-form novalidate>',
+          '      <div class="feedback-field">',
+          '        <label for="feedback-message">Dein Hinweis</label>',
+          '        <textarea id="feedback-message" name="message" required placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>',
+          '      </div>',
+          '      <div class="feedback-field">',
+          '        <label for="feedback-source">Quelle oder Link optional</label>',
+          '        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">',
+          '      </div>',
+          '      <div class="sr-only" aria-hidden="true">',
+          '        <label for="feedback-website">Website</label>',
+          '        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">',
+          '      </div>',
+          '      <div class="feedback-actions">',
+          '        <button type="submit" class="btn btn-primary" data-feedback-submit>Mail-Entwurf öffnen</button>',
+          '        <button type="button" class="btn btn-outline" data-feedback-close>Abbrechen</button>',
+          '      </div>',
+          '      <p class="feedback-status" data-feedback-status aria-live="polite"></p>',
+          '    </form>',
+          '  </div>',
+          '</div>'
+        ].join('');
+        document.body.appendChild(feedbackModal);
+      }
+
+      feedbackForm = feedbackModal.querySelector('[data-feedback-form]');
+      feedbackStatus = feedbackModal.querySelector('[data-feedback-status]');
+
+      feedbackModal.querySelectorAll('[data-feedback-close]').forEach(function(closeButton) {
+        closeButton.addEventListener('click', closeFeedbackDialog);
+      });
+
+      feedbackModal.addEventListener('click', function(event) {
+        if (event.target === feedbackModal) closeFeedbackDialog();
+      });
+
+      if (feedbackForm) {
+        feedbackForm.addEventListener('submit', submitFeedbackForm);
+      }
+    }
+
+    function initSelectionFeedback() {
+      feedbackSelectionButton = document.getElementById('selection-feedback-button');
+      if (!feedbackSelectionButton) {
+        feedbackSelectionButton = document.createElement('button');
+        feedbackSelectionButton.type = 'button';
+        feedbackSelectionButton.id = 'selection-feedback-button';
+        feedbackSelectionButton.className = 'selection-feedback-button';
+        feedbackSelectionButton.innerHTML = '<span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span>';
+        document.body.appendChild(feedbackSelectionButton);
+      }
+
+      feedbackSelectionButton.addEventListener('click', function() {
+        var selection = window.getSelection ? window.getSelection() : null;
+        var range = feedbackSelectionRange || (selection && selection.rangeCount ? selection.getRangeAt(0) : null);
+        if (!range) return;
+        var page = feedbackPageForNode(range.commonAncestorContainer);
+        if (!page) return;
+        openFeedbackDialog({
+          mode: 'selection',
+          pageId: page.id || '',
+          pageTitle: pageTitleFor(page),
+          sectionTitle: sectionTitleForElement(range.commonAncestorContainer),
+          selectedText: limitText(range.toString(), 1200),
+          sourceUrl: window.location.href.split('#')[0]
+        }, feedbackSelectionButton);
+        hideSelectionFeedbackButton();
+      });
+
+      document.addEventListener('mouseup', scheduleSelectionFeedbackCheck);
+      document.addEventListener('keyup', scheduleSelectionFeedbackCheck);
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && feedbackModal && !feedbackModal.hidden) {
+          closeFeedbackDialog();
+        }
+      });
+      document.addEventListener('touchend', scheduleSelectionFeedbackCheck, { passive: true });
+      document.addEventListener('scroll', hideSelectionFeedbackButton, { passive: true });
+    }
+
+    function scheduleSelectionFeedbackCheck() {
+      window.setTimeout(updateSelectionFeedbackButton, 40);
+    }
+
+    function updateSelectionFeedbackButton() {
+      if (!feedbackSelectionButton || (feedbackModal && !feedbackModal.hidden)) return;
+      var selection = window.getSelection ? window.getSelection() : null;
+      if (!selection || selection.isCollapsed || !selection.rangeCount) {
+        hideSelectionFeedbackButton();
+        return;
+      }
+
+      var range = selection.getRangeAt(0);
+      var page = feedbackPageForNode(range.commonAncestorContainer);
+      var selectedText = collapseText(range.toString());
+      if (!page || selectedText.length < 3) {
+        hideSelectionFeedbackButton();
+        return;
+      }
+
+      feedbackSelectionRange = range.cloneRange();
+      var rect = range.getBoundingClientRect();
+      if (!rect || rect.bottom < 0 || rect.top > window.innerHeight || (rect.width < 1 && rect.height < 1)) {
+        hideSelectionFeedbackButton();
+        return;
+      }
+      var buttonWidth = feedbackSelectionButton.offsetWidth || 190;
+      var buttonHeight = feedbackSelectionButton.offsetHeight || 40;
+      var left = Math.max(12, Math.min(rect.left + (rect.width / 2) - (buttonWidth / 2), window.innerWidth - buttonWidth - 12));
+      var top = Math.max(76, Math.min(rect.top - buttonHeight - 10, window.innerHeight - buttonHeight - 12));
+      feedbackSelectionButton.style.left = left + 'px';
+      feedbackSelectionButton.style.top = top + 'px';
+      feedbackSelectionButton.classList.add('is-visible');
+    }
+
+    function hideSelectionFeedbackButton() {
+      if (feedbackSelectionButton) feedbackSelectionButton.classList.remove('is-visible');
+    }
+
+    function setFeedbackStatus(message, state) {
+      if (!feedbackStatus) return;
+      feedbackStatus.textContent = message || '';
+      feedbackStatus.classList.toggle('is-success', state === 'success');
+      feedbackStatus.classList.toggle('is-error', state === 'error');
+    }
+
+    function openFeedbackDialog(state, trigger) {
+      ensureFeedbackModal();
+      feedbackState = state || {};
+      feedbackState.trigger = trigger || null;
+
+      var context = feedbackModal.querySelector('[data-feedback-context]');
+      var quoteWrap = feedbackModal.querySelector('[data-feedback-quote-wrap]');
+      var quote = feedbackModal.querySelector('[data-feedback-quote]');
+      var contextHtml = '<strong>Bezug</strong>' + escapeFeedbackHtml(feedbackState.pageTitle || 'Aktuelle Seite');
+      if (feedbackState.sectionTitle) {
+        contextHtml += '<br>Abschnitt: ' + escapeFeedbackHtml(feedbackState.sectionTitle);
+      }
+      context.innerHTML = contextHtml;
+
+      if (feedbackState.selectedText) {
+        quote.textContent = '„' + feedbackState.selectedText + '“';
+        quoteWrap.hidden = false;
+      } else {
+        quote.textContent = '';
+        quoteWrap.hidden = true;
+      }
+
+      if (feedbackForm) feedbackForm.reset();
+      setFeedbackStatus('', '');
+      feedbackModal.hidden = false;
+      document.body.classList.add('feedback-open');
+      window.setTimeout(function() {
+        var message = feedbackModal.querySelector('#feedback-message');
+        if (message) message.focus();
+      }, 0);
+    }
+
+    function closeFeedbackDialog() {
+      if (!feedbackModal) return;
+      feedbackModal.hidden = true;
+      document.body.classList.remove('feedback-open');
+      if (feedbackState.trigger && typeof feedbackState.trigger.focus === 'function') {
+        feedbackState.trigger.focus();
+      }
+    }
+
+    function escapeFeedbackHtml(value) {
+      return String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function feedbackMailSubject(payload) {
+      var target = payload.sectionTitle || payload.pageTitle || 'Website';
+      return 'Wa(h)re Haustierliebe: Hinweis zu ' + target;
+    }
+
+    function feedbackMailBody(payload) {
+      var lines = [
+        'Hallo Annemarie und Erik,',
+        '',
+        'ich habe einen Hinweis zu Wa(h)re Haustier(liebe):',
+        '',
+        'Hinweis',
+        '-------',
+        payload.message || '-',
+        ''
+      ];
+
+      if (payload.selectedText) {
+        lines.push(
+          'Ausgewählte Textstelle',
+          '----------------------',
+          '„' + payload.selectedText + '“',
+          ''
+        );
+      }
+
+      if (payload.source) {
+        lines.push(
+          'Quelle oder Link',
+          '----------------',
+          payload.source,
+          ''
+        );
+      }
+
+      lines.push(
+        'Bezug',
+        '-----',
+        'Seite: ' + (payload.pageTitle || '-'),
+        'Abschnitt: ' + (payload.sectionTitle || '-'),
+        'URL: ' + (payload.sourceUrl || window.location.href),
+        '',
+        'Zeitpunkt: ' + new Date().toISOString(),
+        '',
+        'Viele Grüße'
+      );
+
+      return lines.join('\n');
+    }
+
+    function openFeedbackMailDraft(payload) {
+      var to = 'mail@andersen-webworks.de';
+      var href = 'mailto:' + to + '?subject=' + encodeURIComponent(feedbackMailSubject(payload)) + '&body=' + encodeURIComponent(feedbackMailBody(payload));
+      window.location.href = href;
+    }
+
+    function submitFeedbackForm(event) {
+      event.preventDefault();
+      if (!feedbackForm) return;
+      if (!feedbackForm.checkValidity()) {
+        feedbackForm.reportValidity();
+        return;
+      }
+
+      var data = new FormData(feedbackForm);
+      if (data.get('website')) {
+        setFeedbackStatus('Danke. Dein Hinweis wurde vorbereitet.', 'success');
+        return;
+      }
+
+      var payload = {
+        pageId: feedbackState.pageId || '',
+        pageTitle: feedbackState.pageTitle || '',
+        sectionTitle: feedbackState.sectionTitle || '',
+        selectedText: feedbackState.selectedText || '',
+        sourceUrl: feedbackState.sourceUrl || window.location.href,
+        message: String(data.get('message') || ''),
+        source: String(data.get('source') || '')
+      };
+      var submit = feedbackForm.querySelector('[data-feedback-submit]');
+      var previousLabel = submit ? submit.textContent : '';
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = 'Mail-Entwurf wird geöffnet ...';
+      }
+      setFeedbackStatus('Wir öffnen dein E-Mail-Programm mit einem vorbereiteten Entwurf.', '');
+
+      try {
+        openFeedbackMailDraft(payload);
+        setFeedbackStatus('Danke für den Hinweis. Bitte prüfe den Mail-Entwurf kurz und sende ihn in deinem E-Mail-Programm ab.', 'success');
+      } catch (error) {
+        setFeedbackStatus('Der Mail-Entwurf konnte nicht automatisch geöffnet werden. Schreibe uns bitte direkt an mail@andersen-webworks.de.', 'error');
+      } finally {
+        window.setTimeout(function() {
+          if (submit) {
+            submit.disabled = false;
+            submit.textContent = previousLabel;
+          }
+        }, 600);
+      }
+    }
+
     var glossaryTooltip = null;
     var activeGlossaryTrigger = null;
     var glossaryTooltipReady = false;
@@ -1361,6 +1787,7 @@ function normalizeAssetUrls(root) {
         progressBar.setAttribute('aria-valuemin', '0');
         progressBar.setAttribute('aria-valuemax', String(TEST_TOTAL_QUESTIONS));
       }
+      initCollaborationFlow();
     }
 
     // ===== MOBILE NAV =====

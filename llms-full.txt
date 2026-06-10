@@ -19,6 +19,7 @@
 - Impressum - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/impressum/index.html
 - Datenschutzerklärung: https://wahre-haustierliebe.de/datenschutz/index.html
 - Kontakt - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kontakt/index.html
+- Mitmachen! - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/mitmachen/index.html
 - Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?: https://wahre-haustierliebe.de/mensch/index.html
 - Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
 - Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: https://wahre-haustierliebe.de/katzen/index.html
@@ -48,6 +49,7 @@
 - https://wahre-haustierliebe.de/impressum/index.html - Anbieterkennzeichnung und rechtliche Kontaktangaben
 - https://wahre-haustierliebe.de/datenschutz/index.html - Datenschutzinformationen nach DSGVO für die Website
 - https://wahre-haustierliebe.de/kontakt/index.html - Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe
+- https://wahre-haustierliebe.de/mitmachen/index.html - Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen
 - https://wahre-haustierliebe.de/mensch/index.html - Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen
 - https://wahre-haustierliebe.de/hunde/index.html - Hund anschaffen oder Hundehaltung verbessern
 - https://wahre-haustierliebe.de/katzen/index.html - Katze anschaffen oder Katzenhaltung artgerechter machen

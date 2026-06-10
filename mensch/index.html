@@ -631,6 +631,364 @@
       }
     }
 
+    /* ========== MITMACHEN / HINWEISE ========== */
+    .section-feedback-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-feedback-heading > h2 {
+      margin: 0;
+    }
+
+    .section-feedback-action,
+    .selection-feedback-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      min-height: 2.25rem;
+      border: 1px solid rgba(42, 123, 111, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 254, 250, 0.84);
+      color: var(--primary-dark);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(31, 58, 47, 0.07);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .section-feedback-action {
+      flex: 0 0 auto;
+      margin-top: 0.18rem;
+      padding: 0.42rem 0.7rem;
+      opacity: 0.72;
+    }
+
+    .section-feedback-action:hover,
+    .section-feedback-action:focus-visible,
+    .selection-feedback-button:hover,
+    .selection-feedback-button:focus-visible {
+      opacity: 1;
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .feedback-action-mark {
+      width: 1.1rem;
+      height: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(42, 123, 111, 0.1);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .selection-feedback-button {
+      position: fixed;
+      z-index: 2400;
+      padding: 0.5rem 0.78rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0.35rem);
+    }
+
+    .selection-feedback-button.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .feedback-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2600;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      background: rgba(26, 42, 34, 0.42);
+    }
+
+    .feedback-modal[hidden] {
+      display: none;
+    }
+
+    .feedback-dialog {
+      width: min(56rem, calc(100vw - 2.5rem));
+      max-height: min(24rem, calc(100dvh - 2.5rem));
+      overflow: auto;
+      border: 1px solid rgba(42, 123, 111, 0.16);
+      border-radius: 1.25rem;
+      background: var(--white);
+      box-shadow: 0 24px 70px rgba(31, 58, 47, 0.22);
+    }
+
+    .feedback-dialog-head {
+      padding: 1rem 1.25rem 0.7rem;
+    }
+
+    .feedback-dialog-body {
+      padding: 0.85rem 1.25rem 1.05rem;
+    }
+
+    .feedback-dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feedback-dialog-body {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.72fr) minmax(22rem, 1.28fr);
+      gap: 0.65rem 1rem;
+      align-items: start;
+    }
+
+    .feedback-dialog-head h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.12;
+    }
+
+    .feedback-dialog-head p {
+      margin: 0.12rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      line-height: 1.32;
+    }
+
+    .feedback-dialog-head p a {
+      color: var(--primary-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    .feedback-close {
+      flex: 0 0 auto;
+      width: 1.95rem;
+      height: 1.95rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .feedback-context,
+    .feedback-quote {
+      margin: 0;
+      padding: 0.62rem 0.72rem;
+      border: 1px solid rgba(42, 123, 111, 0.1);
+      border-radius: 0.95rem;
+      background: rgba(228, 244, 238, 0.74);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.34;
+    }
+
+    .feedback-dialog-body form {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      min-width: 0;
+    }
+
+    .feedback-quote strong,
+    .feedback-context strong {
+      display: block;
+      margin-bottom: 0.14rem;
+      color: var(--primary-dark);
+      font-size: 0.78rem;
+      line-height: 1.15;
+    }
+
+    .feedback-quote blockquote {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      border-radius: 0;
+      color: var(--text);
+      font-style: normal;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+
+    .feedback-field {
+      display: grid;
+      gap: 0.22rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feedback-field label {
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .feedback-field textarea,
+    .feedback-field input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.32;
+      padding: 0.52rem 0.62rem;
+    }
+
+    .feedback-field textarea {
+      min-height: 5rem;
+      resize: vertical;
+    }
+
+    .feedback-field textarea:focus,
+    .feedback-field input:focus {
+      outline: none;
+      border-color: rgba(42, 123, 111, 0.58);
+      box-shadow: 0 0 0 3px rgba(42, 123, 111, 0.1);
+    }
+
+    .feedback-field small {
+      color: var(--text-light);
+      font-size: 0.82rem;
+    }
+
+    .feedback-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+
+    .feedback-actions .btn {
+      min-height: 2.35rem;
+      padding: 0.56rem 0.88rem;
+      font-size: 0.86rem;
+      line-height: 1.1;
+    }
+
+    .feedback-status {
+      margin: 0.35rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .feedback-status.is-success {
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .feedback-status.is-error {
+      color: var(--secondary);
+      font-weight: 800;
+    }
+
+    .mitmachen-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .mitmachen-step {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 254, 250, 0.92);
+      box-shadow: var(--shadow);
+    }
+
+    .mitmachen-step strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 760px) {
+      .section-feedback-heading {
+        display: block;
+      }
+
+      .section-feedback-action {
+        margin: 0.35rem 0 0.25rem;
+      }
+
+      .selection-feedback-button {
+        left: 1rem !important;
+        right: 1rem !important;
+        bottom: 1rem !important;
+        top: auto !important;
+        width: calc(100vw - 2rem);
+      }
+
+      .feedback-modal {
+        align-items: end;
+        place-items: end center;
+        padding: 0.5rem;
+      }
+
+      .feedback-dialog {
+        width: 100%;
+        max-height: calc(100dvh - 1rem);
+        border-radius: 18px 18px 0 0;
+      }
+
+      .feedback-dialog-body {
+        display: block;
+      }
+
+      .feedback-dialog-body form {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .feedback-context,
+      .feedback-quote {
+        margin-bottom: 0.55rem;
+      }
+
+      .feedback-dialog-head {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: var(--white);
+      }
+
+      .feedback-actions .btn {
+        width: 100%;
+      }
+
+      .mitmachen-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ========== ANIMAL NAV GRID ========== */
     .animal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
     .animal-card {
@@ -4451,6 +4809,7 @@
               </svg>
             </a>
           </li>
+          <li><a class="nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a></li>
           <li><button type="button" class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
         </ul>
       </nav>
@@ -4478,6 +4837,7 @@
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
+    <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
     <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
     <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
@@ -4522,7 +4882,7 @@
           <p style="margin-bottom: 0;">Die meisten Menschen kaufen ein Tier, ohne vorher zu recherchieren. Du nicht. Du liest. Du fragst dich, ob du bereit bist. Das allein zeigt mehr Verantwortungsbewusstsein als 90 % der Tierhalter je aufbringen. Was auch immer du nach dem Lesen entscheidest – du gehst mit offenen Augen in diese Entscheidung.</p>
         </div>
 
-        <h2>Die Entscheidung fällt im Bauch, nicht im Kopf</h2><div class="article-rhythm share-callout" data-enhancement="mensch-frueh-teilen">
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-1">Die Entscheidung fällt im Bauch, nicht im Kopf</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="mensch-frueh-teilen">
             <span class="eyebrow">Für den Moment vor dem Kauf</span>
             <h3>Schick das jemandem, der gerade „nur mal schaut“.</h3>
             <p>Genau dann ist noch genug Abstand da, um Alltag, Geld, Zeit und Verantwortung ehrlich zu prüfen.</p>
@@ -4534,11 +4894,11 @@
         <p>„Ich will einen <a href="../hunde/index.html">Hund</a>.“ Das ist ein Satz über den Menschen, nicht über den Hund. Hinter dem Wunsch steckt meistens etwas: Einsamkeit, Kindheitserinnerungen, das Bild vom treuen Begleiter auf Spaziergängen, das niedliche Welpen-Video auf Instagram. Das Tier wird zum Versprechen – auf Nähe, Routine, bedingungslose Zuneigung.</p>
         <p>Dass dieses Versprechen Gegenleistungen fordert, wird oft verdrängt. Nicht aus Bosheit oder Dummheit. Sondern weil der emotionale Impuls stärker ist als der rationale Abgleich mit dem eigenen Alltag. Wer sich verliebt hat – in ein Tier, ein Bild, eine Vorstellung –, rechnet nicht nach, ob das Budget für Tierarztrechnungen reicht.</p>
 
-        <h2>Die Kompetenz-Illusion</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-2">Die Kompetenz-Illusion</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Die meisten Menschen überschätzen ihr Wissen dramatisch. Sie sind mit einem Hund aufgewachsen, also „wissen sie, wie Hunde funktionieren“. In Wirklichkeit wissen sie, wie sich ihre Kindheit angefühlt hat. Die Perspektive des Tieres war nie Teil der Gleichung. Niemand hat ihnen als Kind erklärt, dass der Familienhund den ganzen Tag allein war, während alle in der Schule oder bei der Arbeit saßen.</p>
         <p>Das gilt für alle Tierarten. Wer als Kind einen <a href="../kleintiere/index.html">Hamster</a> im Kinderzimmer hatte, weiß nicht, wie Hamsterhaltung funktioniert – sondern wie es war, einen Hamster im Kinderzimmer zu haben. Das sind zwei verschiedene Dinge.</p>
 
-        <h2>Die Acht-Stunden-Lüge</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-3">Die Acht-Stunden-Lüge</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="warning-box">
           <h3>Stiller Stress sieht aus wie Gehorsam</h3>
           <p>Ein <a href="../hunde/index.html" style="color:inherit;text-decoration:underline">Hund</a>, der acht Stunden still in der Ecke liegt, hat nicht gelernt, allein zu sein. Er hat aufgehört, darauf zu hoffen, dass jemand kommt. Das sieht für uns nach einem „braven Hund“ aus. Für den Hund ist es Resignation.</p>
@@ -4546,17 +4906,17 @@
         <p>Das ist das gefährlichste Missverständnis in der Tierhaltung: Die Abwesenheit von sichtbarem Leid wird mit Wohlbefinden gleichgesetzt. Der Hund hat nicht in die Wohnung gepinkelt, also geht es ihm gut. Die Katze schläft den ganzen Tag, also ist sie zufrieden. Der Wellensittich sitzt still auf der Stange, also braucht er nichts.</p>
         <p>Tiere – besonders <span class="glossary-term" data-glossary-key="beutetier" data-glossary-title="Beutetier" data-glossary-text="Tierart, die in der Natur gejagt wird und Schwäche oft instinktiv verbirgt." data-glossary-href="../glossar/index.html#beutetier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Beutetiere</span> wie <a href="../voegel/index.html">Vögel</a> und <a href="../kleintiere/index.html">Kaninchen</a> – verbergen Schmerz und Stress instinktiv. Ein Tier, das leidet, sieht oft aus wie ein Tier, das „pflegeleicht“ ist. Wer nur darauf achtet, ob das Tier Probleme <em>macht</em>, verpasst die Frage, ob das Tier Probleme <em>hat</em>.</p>
 
-        <h2>Tierhaltung ist egoistisch</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-4">Tierhaltung ist egoistisch</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Das klingt hart, aber es stimmt. Und es ist nicht mal verwerflich – solange man sich dessen bewusst ist.</p>
         <p>Das Tier hat sich nicht ausgesucht, bei dir zu leben. Du hast es ausgesucht. Es kann nicht kündigen, sich nicht beschweren, nicht ausziehen. Dieses Machtgefälle erzeugt eine Pflicht. Ähnlich wie bei Kindern: Du hast dich für dieses Lebewesen entschieden, jetzt schuldest du ihm alles.</p>
         <p>Das heißt nicht, dass man keine Tiere halten sollte. Es heißt, dass man die Entscheidung mit offenen Augen treffen muss. Nicht als Lifestyle-Accessoire, nicht als Trostpflaster, nicht als Projekt für die Kinder. Sondern als bewusste Übernahme von Verantwortung für ein empfindendes Wesen – über Jahre, manchmal Jahrzehnte.</p>
 
-        <h2>Warum sich das Muster wiederholt</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-5">Warum sich das Muster wiederholt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Viele Menschen, die ein Tier abgeben, holen sich bald darauf ein neues. Warum?</p>
         <p>Weil der Wunsch nach Tier nicht verschwunden ist. Die Einsamkeit ist noch da, die Sehnsucht nach Nähe auch. Und weil die Verantwortung externalisiert wird: „Das Tier war schwierig.“ „Die Rasse war falsch.“ „Wir hatten Pech.“ Selten: „Ich war nicht vorbereitet.“</p>
         <p>Das ist keine Boshaftigkeit. Es ist <span class="glossary-term" data-glossary-key="kognitive-dissonanz" data-glossary-title="Kognitive Dissonanz" data-glossary-text="Innerer Widerspruch zwischen Selbstbild und Realität, den Menschen oft durch Ausreden oder Umdeutung entschärfen." data-glossary-href="../glossar/index.html#kognitive-dissonanz" aria-describedby="glossary-term-popover" tabindex="0" role="button">kognitive Dissonanz</span> – ein psychologischer Schutzmechanismus. Wer sich eingestehen müsste, dass er einem Lebewesen geschadet hat, verlagert die Schuld lieber nach außen. Und weil sich an der Lebenssituation nichts geändert hat, passiert beim nächsten Tier dasselbe.</p>
 
-        <h2>Die häufigsten Selbstlügen – und was dahinter steckt</h2><div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-6">Die häufigsten Selbstlügen – und was dahinter steckt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
             <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin.“</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier.“</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Share-Grund</span><h3>Vor dem Kauf teilen</h3><p>Diese Seite gehört zu Menschen, die gerade „nur mal schauen“ und innerlich schon entschieden haben.</p></article>
@@ -4610,14 +4970,14 @@
           </div>
         </div>
 
-        <h2>Kein Tier ist auch Tierliebe</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-7">Kein Tier ist auch Tierliebe</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="highlight-box">
           <h3>Das ehrlichste Nein ist mehr wert als ein halbherziges Ja</h3>
           <p>Wenn dein Alltag nicht zu einem Tier passt – wenn du zehn Stunden arbeitest, viel reist, wenig Platz hast, knapp bei Kasse bist –, dann ist die Entscheidung, <strong>kein</strong> Tier zu halten, kein Versagen. Sie ist ein Akt von Verantwortung.</p>
         </div>
         <p>Wir müssen aufhören, Tierverzicht als Schwäche darzustellen. Wer sagt „Ich hätte gern einen Hund, aber mein Leben gibt das gerade nicht her“, hat mehr Empathie für das Tier als jemand, der trotzdem einen holt und hofft, dass es irgendwie klappt.</p>
 
-        <h2>Was wirklich hilft</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-8">Was wirklich hilft</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-8" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Tierliebe wird nicht besser, wenn man Menschen beschämt. Hilfreicher ist eine ruhige, ehrliche Einordnung: Was braucht das Tier, was kostet es wirklich, und passt das zum eigenen Alltag? So wird aus einem spontanen Wunsch eine verantwortliche Entscheidung.</p>
         <ul>
           <li><strong>Die Perspektive des Tieres.</strong> Nicht als Vorwurf, sondern als Maßstab: Wie viel Nähe, Ruhe, Platz, Beschäftigung und medizinische Versorgung braucht dieses Tier?</li>
@@ -4626,7 +4986,7 @@
           <li><strong>Gute Beispiele.</strong> Verantwortliche Haltung, Kastration, Adoption oder der Gang zur Tierarztpraxis helfen am meisten, wenn sie selbstverständlich vorgelebt werden.</li>
         </ul>
 
-        <h2>Wenn es doch nicht klappt</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-mensch-9">Wenn es doch nicht klappt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-9" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Es gibt Situationen, in denen Tierhaltung trotz bester Absichten scheitert. Jobverlust, Krankheit, Trennung, ein Umzug in eine Wohnung, die keine Tiere erlaubt. Das passiert. Das ist kein Verbrechen.</p>
         <p>Was ein Verbrechen ist: das Tier aussetzen, im Wald anbinden, am Rastplatz zurücklassen. Aussetzen ist nach dem Tierschutzgesetz strafbar und kann mit einer Geldstrafe bis zu 25.000 Euro geahndet werden.</p>
         <p>Der richtige Weg: <strong>Das Tierheim kontaktieren.</strong> Ehrlich sein. Hilfe annehmen. Viele Tierheime und Tierschutzorganisationen vermitteln Tiere weiter und bieten Beratung an, wenn die Situation noch nicht aussichtslos ist. Und manchmal gibt es Lösungen, an die man allein nicht gedacht hat – eine Pflegestelle, vorübergehende Betreuung, finanzielle Unterstützung. Mehr zum Ablauf einer Adoption findest du unter <a href="../adoption/index.html">Adoption statt Kauf</a>.</p>
@@ -4765,4 +5125,4 @@
   <script src="../assets/site.js" defer=""></script>
 
 
-</body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle oder Link optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>

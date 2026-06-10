@@ -61,6 +61,14 @@ const pages = [
     staticOnly: true,
   },
   {
+    id: 'mitmachen',
+    slug: 'mitmachen',
+    title: 'Mitmachen! - Wa(h)re Haustier(liebe)',
+    description: 'Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.',
+    intent: 'Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen',
+    priority: '0.55',
+  },
+  {
     id: 'mensch',
     slug: 'mensch',
     title: 'Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?',
@@ -956,6 +964,11 @@ const socialCopyByPage = {
     title: 'Noch nicht bereit für ein Tier',
     description: 'Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie Tierschutz trotzdem geht.',
   },
+  mitmachen: {
+    eyebrow: 'Wissen darf besser werden',
+    title: 'Mitmachen!',
+    description: 'Korrekturen, Quellen und Hinweise helfen, Wa(h)re Haustier(liebe) fachlich sauber und lebendig zu halten.',
+  },
   'budgie-brain': {
     eyebrow: 'Interaktive Vogelhaltung',
     title: 'Budgie Brain',
@@ -979,6 +992,7 @@ const keywordByPage = {
   notfall: ['Tiernotfall', 'Vergiftung', 'Atemnot', 'Tierarzt', 'Warnsignale'],
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
   kontakt: ['Kontakt', 'Haltungsfragen', 'Haustierberatung', 'Tierschutz', 'Privates Projekt'],
+  mitmachen: ['Mitmachen', 'Korrekturhinweis', 'Quellenhinweis', 'Tierschutz-Wiki', 'redaktionelle Prüfung'],
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
   glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
   'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],

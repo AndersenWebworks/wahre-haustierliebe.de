@@ -631,6 +631,364 @@
       }
     }
 
+    /* ========== MITMACHEN / HINWEISE ========== */
+    .section-feedback-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-feedback-heading > h2 {
+      margin: 0;
+    }
+
+    .section-feedback-action,
+    .selection-feedback-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      min-height: 2.25rem;
+      border: 1px solid rgba(42, 123, 111, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 254, 250, 0.84);
+      color: var(--primary-dark);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(31, 58, 47, 0.07);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .section-feedback-action {
+      flex: 0 0 auto;
+      margin-top: 0.18rem;
+      padding: 0.42rem 0.7rem;
+      opacity: 0.72;
+    }
+
+    .section-feedback-action:hover,
+    .section-feedback-action:focus-visible,
+    .selection-feedback-button:hover,
+    .selection-feedback-button:focus-visible {
+      opacity: 1;
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .feedback-action-mark {
+      width: 1.1rem;
+      height: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(42, 123, 111, 0.1);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .selection-feedback-button {
+      position: fixed;
+      z-index: 2400;
+      padding: 0.5rem 0.78rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0.35rem);
+    }
+
+    .selection-feedback-button.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .feedback-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2600;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      background: rgba(26, 42, 34, 0.42);
+    }
+
+    .feedback-modal[hidden] {
+      display: none;
+    }
+
+    .feedback-dialog {
+      width: min(56rem, calc(100vw - 2.5rem));
+      max-height: min(24rem, calc(100dvh - 2.5rem));
+      overflow: auto;
+      border: 1px solid rgba(42, 123, 111, 0.16);
+      border-radius: 1.25rem;
+      background: var(--white);
+      box-shadow: 0 24px 70px rgba(31, 58, 47, 0.22);
+    }
+
+    .feedback-dialog-head {
+      padding: 1rem 1.25rem 0.7rem;
+    }
+
+    .feedback-dialog-body {
+      padding: 0.85rem 1.25rem 1.05rem;
+    }
+
+    .feedback-dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feedback-dialog-body {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.72fr) minmax(22rem, 1.28fr);
+      gap: 0.65rem 1rem;
+      align-items: start;
+    }
+
+    .feedback-dialog-head h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.12;
+    }
+
+    .feedback-dialog-head p {
+      margin: 0.12rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      line-height: 1.32;
+    }
+
+    .feedback-dialog-head p a {
+      color: var(--primary-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    .feedback-close {
+      flex: 0 0 auto;
+      width: 1.95rem;
+      height: 1.95rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .feedback-context,
+    .feedback-quote {
+      margin: 0;
+      padding: 0.62rem 0.72rem;
+      border: 1px solid rgba(42, 123, 111, 0.1);
+      border-radius: 0.95rem;
+      background: rgba(228, 244, 238, 0.74);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.34;
+    }
+
+    .feedback-dialog-body form {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      min-width: 0;
+    }
+
+    .feedback-quote strong,
+    .feedback-context strong {
+      display: block;
+      margin-bottom: 0.14rem;
+      color: var(--primary-dark);
+      font-size: 0.78rem;
+      line-height: 1.15;
+    }
+
+    .feedback-quote blockquote {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      border-radius: 0;
+      color: var(--text);
+      font-style: normal;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+
+    .feedback-field {
+      display: grid;
+      gap: 0.22rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feedback-field label {
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .feedback-field textarea,
+    .feedback-field input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.32;
+      padding: 0.52rem 0.62rem;
+    }
+
+    .feedback-field textarea {
+      min-height: 5rem;
+      resize: vertical;
+    }
+
+    .feedback-field textarea:focus,
+    .feedback-field input:focus {
+      outline: none;
+      border-color: rgba(42, 123, 111, 0.58);
+      box-shadow: 0 0 0 3px rgba(42, 123, 111, 0.1);
+    }
+
+    .feedback-field small {
+      color: var(--text-light);
+      font-size: 0.82rem;
+    }
+
+    .feedback-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+
+    .feedback-actions .btn {
+      min-height: 2.35rem;
+      padding: 0.56rem 0.88rem;
+      font-size: 0.86rem;
+      line-height: 1.1;
+    }
+
+    .feedback-status {
+      margin: 0.35rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .feedback-status.is-success {
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .feedback-status.is-error {
+      color: var(--secondary);
+      font-weight: 800;
+    }
+
+    .mitmachen-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .mitmachen-step {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 254, 250, 0.92);
+      box-shadow: var(--shadow);
+    }
+
+    .mitmachen-step strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 760px) {
+      .section-feedback-heading {
+        display: block;
+      }
+
+      .section-feedback-action {
+        margin: 0.35rem 0 0.25rem;
+      }
+
+      .selection-feedback-button {
+        left: 1rem !important;
+        right: 1rem !important;
+        bottom: 1rem !important;
+        top: auto !important;
+        width: calc(100vw - 2rem);
+      }
+
+      .feedback-modal {
+        align-items: end;
+        place-items: end center;
+        padding: 0.5rem;
+      }
+
+      .feedback-dialog {
+        width: 100%;
+        max-height: calc(100dvh - 1rem);
+        border-radius: 18px 18px 0 0;
+      }
+
+      .feedback-dialog-body {
+        display: block;
+      }
+
+      .feedback-dialog-body form {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .feedback-context,
+      .feedback-quote {
+        margin-bottom: 0.55rem;
+      }
+
+      .feedback-dialog-head {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: var(--white);
+      }
+
+      .feedback-actions .btn {
+        width: 100%;
+      }
+
+      .mitmachen-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ========== ANIMAL NAV GRID ========== */
     .animal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
     .animal-card {
@@ -4480,6 +4838,7 @@
               </svg>
             </a>
           </li>
+          <li><a class="nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a></li>
           <li><button type="button" class="nav-link nav-share" onclick="shareThis('copy')">Teilen</button></li>
         </ul>
       </nav>
@@ -4507,6 +4866,7 @@
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
+    <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
     <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
     <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
@@ -4536,11 +4896,11 @@
           <p>Ein scheinbar verlassenes Katzenjunges im Wald bitte nicht anfassen, nicht füttern und nicht mit nach Hause nehmen. Wildkatzenmütter lassen ihre Jungen zeitweise allein, während sie jagen. Das sieht für Menschen schnell nach Notfall aus, ist aber oft normales Verhalten.</p>
         </div>
 
-        <h2>Warum dieses Thema wichtig ist</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-1">Warum dieses Thema wichtig ist</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Junge Europäische Wildkatzen sehen getigerten Hauskatzenjungen zum Verwechseln ähnlich. Genau deshalb werden sie immer wieder gut gemeint eingesammelt und in Tierarztpraxen, Tierheimen oder privaten Haushalten abgegeben. Für das Tier kann das gefährlich werden: Stress, falsches Futter, Kontakt zu Hauskatzenkrankheiten und ungeeignete Unterbringung senken seine Chancen.</p>
         <p>Die Europäische Wildkatze ist keine verwilderte Hauskatze. Sie ist ein eigenes Wildtier, lebt vor allem in strukturreichen Wäldern und ist in Deutschland besonders geschützt. Eine gesunde Wildkatze aus der Natur mitzunehmen, ist deshalb nicht nur falsch, sondern rechtlich problematisch.</p>
 
-        <h2>Was du sofort tun solltest</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-2">Was du sofort tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ol class="checklist">
           <li><strong>Abstand halten.</strong> Leise zurückgehen, Kinder und Hunde fernhalten, nicht locken.</li>
           <li><strong>Nicht anfassen.</strong> Nicht hochnehmen, nicht streicheln, nicht in eine Box setzen.</li>
@@ -4556,7 +4916,7 @@
           <p>Akut ist es, wenn das Tier sichtbar verletzt ist, auf einer Straße sitzt, von Hund oder Katze bedroht wird, stark unterkühlt wirkt, laut schreiend Menschen hinterherläuft oder die Mutter nach fachkundiger Einschätzung nicht zurückkommt. Dann nicht selbst herumprobieren, sondern sofort eine zuständige Stelle anrufen und deren Anweisung befolgen.</p>
         </div>
 
-        <h2>Wildkatze oder Hauskatze? Merkmale im Vergleich</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-3">Wildkatze oder Hauskatze? Merkmale im Vergleich</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Diese Merkmale sind Hinweise, keine sichere Bestimmung. Junge Wildkatzen sind in den ersten Lebensmonaten stärker gezeichnet als erwachsene Tiere. Auch Fachleute können im Einzelfall unsicher sein; sicher ist am Ende nur eine genetische Untersuchung.</p>
 
         <table class="cost-table">
@@ -4576,7 +4936,7 @@
           </tbody>
         </table>
 
-        <h2>Was du nicht tun solltest</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-4">Was du nicht tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul>
           <li><strong>Nicht „retten“, weil es allein ist.</strong> Allein gefunden heißt bei Wildtieren nicht automatisch verlassen.</li>
           <li><strong>Nicht in ein Tierheim bringen, wenn Wildkatzenverdacht besteht.</strong> Dort kann Kontakt zu Hauskatzenkrankheiten gefährlich werden.</li>
@@ -4585,11 +4945,11 @@
           <li><strong>Nicht auf Social Media nach Laienmeinungen entscheiden.</strong> Fotos können helfen, aber die Entscheidung gehört zu fachkundigen Stellen.</li>
         </ul>
 
-        <h2>Der Geruchsmythos: bitte sauber bleiben</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-5">Der Geruchsmythos: bitte sauber bleiben</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Der Satz „Wenn ein Mensch ein Jungtier berührt, nimmt die Mutter es immer nicht mehr an“ ist so pauschal nicht seriös. Bei Jungvögeln stimmt er in dieser Form zum Beispiel nicht; die Elterntiere versorgen sie in der Regel weiter. Bei manchen Säugetierfunden kann menschlicher Geruch oder längeres Handling dagegen eine Rolle spielen. Für Wildkatzen sollte man daraus aber keine einfache „einmal berührt, für immer verstoßen“-Regel machen.</p>
         <p>Bei Wildkatzen geht es vor allem um Störung, Stress, falsche Versorgung, Krankheitsrisiken, Artenschutzrecht und darum, dass die Mutter wegen Menschen in der Nähe nicht zurückkommt. Deshalb bleibt die praktische Regel klar: nicht anfassen. Falls es aus Versehen passiert ist, nicht weiter herumprobieren, sondern das Tier wieder möglichst nah am Fundort lassen, Abstand nehmen und fachkundige Hilfe kontaktieren.</p>
 
-        <h2>Wenn du es schon mitgenommen hast</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-6">Wenn du es schon mitgenommen hast</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Dann ist der nächste richtige Schritt nicht Schuldgefühl, sondern Schadensbegrenzung:</p>
         <ol class="checklist">
           <li>Tier ruhig, warm, dunkel und getrennt von Haustieren unterbringen.</li>
@@ -4599,7 +4959,7 @@
           <li>Fundort, Uhrzeit, Fotos und bisherige Handlungen ehrlich nennen.</li>
         </ol>
 
-        <h2>Wen du kontaktieren kannst</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-7">Wen du kontaktieren kannst</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Deutschlandweit ist die BUND-Übersicht mit Wildkatzen-Ansprechpartnern ein guter Einstieg. Zusätzlich helfen je nach Region Wildtierbeauftragte, Untere Naturschutzbehörden, Forststellen oder spezialisierte Wildtierauffangstationen. Bei Verletzungen ist eine Tierarztpraxis wichtig, aber mit dem klaren Hinweis: Es könnte eine Wildkatze sein.</p>
         <ul>
           <li><a href="https://www.bund.net/themen/tiere-pflanzen/wildkatze/bund-ansprechpartnerinnen/" target="_blank" rel="noopener noreferrer">BUND: Ansprechpartnerinnen und Ansprechpartner für die Wildkatze</a></li>
@@ -4772,4 +5132,4 @@
   <script src="../assets/site.js" defer=""></script>
 
 
-</body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle oder Link optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>

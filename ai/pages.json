@@ -101,6 +101,31 @@
       }
     },
     {
+      "id": "mitmachen",
+      "url": "https://wahre-haustierliebe.de/mitmachen/index.html",
+      "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
+      "description": "Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.",
+      "intent": "Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen",
+      "keywords": [
+        "Mitmachen",
+        "Korrekturhinweis",
+        "Quellenhinweis",
+        "Tierschutz-Wiki",
+        "redaktionelle Prüfung"
+      ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
+      "social": {
+        "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
+        "description": "Korrekturen, Quellen und Hinweise helfen, Wa(h)re Haustier(liebe) fachlich sauber und lebendig zu halten.",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
+        "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "mensch",
       "url": "https://wahre-haustierliebe.de/mensch/index.html",
       "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",
