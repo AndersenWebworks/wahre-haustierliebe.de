@@ -1,26 +1,4 @@
 
-    @font-face {
-      font-family: "Bricolage Grotesque";
-      src: url("../assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");
-      font-weight: 500 800;
-      font-style: normal;
-      font-display: optional;
-    }
-    @font-face {
-      font-family: "Plus Jakarta Sans";
-      src: url("../assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
-      font-weight: 400 800;
-      font-style: normal;
-      font-display: optional;
-    }
-    @font-face {
-      font-family: "Caveat";
-      src: url("../assets/fonts/caveat-latin.woff2") format("woff2");
-      font-weight: 600 700;
-      font-style: normal;
-      font-display: optional;
-    }
-
     /* ========== RESET & BASE ========== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -2837,9 +2815,9 @@
       --shadow-lg: 0 18px 50px rgba(31, 58, 47, 0.13);
       --radius: 20px;
       --radius-lg: 32px;
-      --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
-      --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
-      --font-hand: "Caveat", cursive;
+      --font-heading: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-hand: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       --max-width: 1240px;
       --reading-width: 740px;
     }
