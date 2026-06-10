@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Annotation-Demo | Wa(h)re Haustier(liebe)</title>
+  <style>
+    :root {
+      --paper: #fbf7ef;
+      --paper-2: #f2eadb;
+      --ink: #20241f;
+      --muted: #687063;
+      --line: #ded4c0;
+      --forest: #315d3a;
+      --forest-2: #50745a;
+      --mint: #dcebd6;
+      --rose: #b35f5a;
+      --white: #fffdf8;
+      --shadow: 0 18px 48px rgba(36, 43, 32, .12);
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+      line-height: 1.62;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 22px 72px;
+    }
+
+    .demo-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      padding: 12px 0 26px;
+      border-bottom: 1px solid rgba(49, 93, 58, .18);
+    }
+
+    .brand {
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand strong {
+      font-family: Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 2.25rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .mode-label {
+      border: 1px solid rgba(49, 93, 58, .28);
+      border-radius: 999px;
+      color: var(--forest);
+      font-size: .82rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 9px 12px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(260px, .62fr);
+      gap: 34px;
+      align-items: start;
+      padding: 46px 0 28px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      max-width: 820px;
+      font-family: Georgia, serif;
+      font-size: clamp(2.25rem, 5vw, 4.8rem);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      color: #41493d;
+      font-size: clamp(1.03rem, 2vw, 1.24rem);
+    }
+
+    .quiet-panel {
+      align-self: stretch;
+      border-left: 3px solid var(--forest);
+      background: rgba(255, 253, 248, .62);
+      padding: 18px 20px;
+      box-shadow: 0 1px 0 rgba(49, 93, 58, .08);
+    }
+
+    .quiet-panel h2 {
+      margin: 0 0 8px;
+      font-size: .98rem;
+      line-height: 1.25;
+    }
+
+    .quiet-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 780px) minmax(250px, 1fr);
+      gap: 42px;
+      align-items: start;
+    }
+
+    article {
+      min-width: 0;
+    }
+
+    .article-kicker {
+      margin: 0 0 10px;
+      color: var(--forest);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .article-title {
+      margin: 0 0 22px;
+      font-family: Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .annotatable {
+      position: relative;
+      margin: 0 0 28px;
+      padding: 2px 138px 2px 18px;
+      border-left: 2px solid transparent;
+      transition: border-color .18s ease, background .18s ease;
+    }
+
+    .annotatable:hover,
+    .annotatable:focus-within {
+      border-left-color: rgba(49, 93, 58, .22);
+      background: linear-gradient(90deg, rgba(220, 235, 214, .35), transparent 42%);
+    }
+
+    .annotatable p,
+    .annotatable ul {
+      margin: 0 0 12px;
+    }
+
+    .annotatable h3 {
+      margin: 0 0 10px;
+      font-size: 1.24rem;
+      line-height: 1.24;
+    }
+
+    .section-action {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: max-content;
+      max-width: 190px;
+      min-height: 32px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(49, 93, 58, .66);
+      font-size: .82rem;
+      font-weight: 700;
+      line-height: 1.1;
+      padding: 7px 9px;
+      opacity: .74;
+      transition: opacity .18s ease, color .18s ease, background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .section-action svg {
+      width: 15px;
+      height: 15px;
+      flex: 0 0 auto;
+      stroke-width: 2;
+    }
+
+    .annotatable:hover .section-action,
+    .section-action:hover,
+    .section-action:focus-visible {
+      opacity: 1;
+      color: var(--forest);
+      background: rgba(255, 253, 248, .9);
+      border-color: rgba(49, 93, 58, .2);
+      transform: translateX(2px);
+    }
+
+    .section-action:focus-visible,
+    .selection-action:focus-visible,
+    .primary:focus-visible,
+    .secondary:focus-visible,
+    .close:focus-visible {
+      outline: 3px solid rgba(80, 116, 90, .32);
+      outline-offset: 2px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .side-note {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .side-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: .94rem;
+    }
+
+    .side-note code {
+      border-radius: 6px;
+      background: var(--paper-2);
+      color: var(--forest);
+      font-size: .82rem;
+      padding: 2px 5px;
+    }
+
+    .selection-action {
+      position: fixed;
+      z-index: 30;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(49, 93, 58, .24);
+      border-radius: 999px;
+      background: var(--forest);
+      color: var(--white);
+      box-shadow: 0 10px 26px rgba(22, 45, 27, .25);
+      font-size: .86rem;
+      font-weight: 800;
+      line-height: 1;
+      padding: 10px 12px;
+    }
+
+    .selection-action svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .drawer {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      background: rgba(31, 37, 28, .38);
+      padding: 18px;
+    }
+
+    .drawer.is-open {
+      display: grid;
+      place-items: end center;
+    }
+
+    .dialog {
+      width: min(720px, 100%);
+      max-height: min(820px, calc(100vh - 36px));
+      overflow: auto;
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .dialog-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      padding: 22px 24px 18px;
+    }
+
+    .dialog-head h2 {
+      margin: 0 0 4px;
+      font-family: Georgia, serif;
+      font-size: 1.65rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .dialog-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .close {
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(32, 36, 31, .16);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--ink);
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .annotation-form {
+      display: grid;
+      gap: 16px;
+      padding: 20px 24px 24px;
+    }
+
+    .quote-box {
+      display: none;
+      border-left: 3px solid var(--forest);
+      background: #f5f1e8;
+      padding: 13px 15px;
+    }
+
+    .quote-box.is-visible {
+      display: block;
+    }
+
+    .quote-box span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--forest);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .quote-box blockquote {
+      margin: 0;
+      color: #33392f;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.48;
+    }
+
+    .context-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .context-line span {
+      border-radius: 999px;
+      background: var(--paper-2);
+      padding: 5px 8px;
+    }
+
+    label {
+      display: grid;
+      gap: 7px;
+      color: var(--ink);
+      font-size: .92rem;
+      font-weight: 800;
+    }
+
+    textarea,
+    input {
+      width: 100%;
+      border: 1px solid rgba(49, 93, 58, .24);
+      border-radius: 8px;
+      background: #fffefa;
+      color: var(--ink);
+      padding: 11px 12px;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .small-help {
+      color: var(--muted);
+      font-size: .84rem;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .honey-field {
+      position: absolute;
+      left: -100vw;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    .dialog-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .primary,
+    .secondary {
+      min-height: 42px;
+      border-radius: 999px;
+      font-weight: 800;
+      padding: 10px 15px;
+    }
+
+    .primary {
+      border: 1px solid var(--forest);
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .secondary {
+      border: 1px solid rgba(49, 93, 58, .2);
+      background: transparent;
+      color: var(--forest);
+    }
+
+    .result {
+      display: none;
+      border-top: 1px solid var(--line);
+      background: #f8f4ea;
+      padding: 18px 24px 22px;
+    }
+
+    .result.is-visible {
+      display: block;
+    }
+
+    .result h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .mail-preview {
+      margin: 12px 0 0;
+      white-space: pre-wrap;
+      border: 1px solid rgba(49, 93, 58, .16);
+      border-radius: 8px;
+      background: var(--white);
+      color: #343a31;
+      font-family: "Cascadia Mono", Consolas, monospace;
+      font-size: .82rem;
+      line-height: 1.45;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    ::selection {
+      background: var(--mint);
+      color: var(--ink);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .page-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        grid-row: 1;
+      }
+
+      .section-action {
+        position: static;
+        margin-top: 2px;
+        margin-left: -2px;
+        padding-left: 0;
+      }
+
+      .annotatable {
+        padding-right: 0;
+      }
+
+      .annotatable:hover .section-action,
+      .section-action:hover,
+      .section-action:focus-visible {
+        transform: none;
+        background: transparent;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .shell {
+        padding-inline: 16px;
+      }
+
+      .demo-top {
+        align-items: start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .annotatable {
+        padding-left: 12px;
+      }
+
+      .dialog-head,
+      .annotation-form,
+      .result {
+        padding-inline: 18px;
+      }
+
+      .drawer {
+        padding: 10px;
+      }
+
+      .drawer.is-open {
+        place-items: end stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="demo-top">
+      <div class="brand">
+        <strong>Wa(h)re Haustier(liebe)</strong>
+        <span>Interne Dummy-Seite für das Mitwirkungs-Konzept</span>
+      </div>
+      <span class="mode-label">Nicht live · Demo</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="article-kicker">Konzeptprobe</p>
+        <h1 id="page-title">Hinweise geben, ohne dass die Seite laut wird.</h1>
+        <p>Diese Testseite zeigt den geplanten Ablauf: Leser können Abschnitte ruhig kommentieren oder eine konkrete Textstelle markieren. Im Formular bleibt der Bezug sichtbar.</p>
+      </div>
+      <aside class="quiet-panel" aria-label="Kurze Erklärung">
+        <h2>So soll es sich anfühlen</h2>
+        <p>Der Hinweis ist da, wenn man ihn braucht. Er drängt sich nicht vor den Inhalt und erklärt trotzdem, wofür er da ist.</p>
+      </aside>
+    </section>
+
+    <main class="page-grid">
+      <article aria-label="Demo-Artikel">
+        <p class="article-kicker">Beispielartikel</p>
+        <h2 class="article-title">Warum „einfach mal ein Haustier“ fast nie einfach ist</h2>
+
+        <section class="annotatable" data-section-id="anschaffung-ehrlichkeit" data-section-title="Ehrliche Anschaffungsprüfung">
+          <h3>Ehrliche Anschaffungsprüfung</h3>
+          <p>Ein Haustier ist keine spontane Belohnung, kein Trostpflaster und kein Projekt für ein paar Wochen. Wer ein Tier aufnimmt, übernimmt Verantwortung für Alltag, Kosten, Pflege, Krankheit und schwierige Phasen.</p>
+          <button class="section-action" type="button" aria-label="Hinweis zu diesem Abschnitt senden" title="Hinweis zu diesem Abschnitt senden">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+              <path d="m9 11 2 2 4-5"></path>
+            </svg>
+            <span>Hinweis geben</span>
+          </button>
+        </section>
+
+        <section class="annotatable" data-section-id="kinder-verantwortung" data-section-title="Kinder und Verantwortung">
+          <h3>Kinder und Verantwortung</h3>
+          <p>Kinder können mithelfen, aber sie können die Verantwortung nicht tragen. Die Entscheidung für ein Tier ist immer eine Entscheidung der Erwachsenen. Wenn die Erwachsenen keine Zeit, kein Geld oder keine Kraft haben, ist das Tier am Ende der Leidtragende.</p>
+          <button class="section-action" type="button" aria-label="Hinweis zu diesem Abschnitt senden" title="Hinweis zu diesem Abschnitt senden">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+              <path d="m9 11 2 2 4-5"></path>
+            </svg>
+            <span>Hinweis geben</span>
+          </button>
+        </section>
+
+        <section class="annotatable" data-section-id="kosten-tierarzt" data-section-title="Kosten und Tierarzt">
+          <h3>Kosten und Tierarzt</h3>
+          <p>Die Anschaffung ist selten der teure Teil. Futter, Einrichtung, Rücklagen, Versicherung, Medikamente und Tierarztbesuche zählen über Jahre. Wer nur den Kaufpreis sieht, rechnet am Tier vorbei.</p>
+          <button class="section-action" type="button" aria-label="Hinweis zu diesem Abschnitt senden" title="Hinweis zu diesem Abschnitt senden">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+              <path d="m9 11 2 2 4-5"></path>
+            </svg>
+            <span>Hinweis geben</span>
+          </button>
+        </section>
+      </article>
+
+      <aside class="sidebar" aria-label="Demo-Erklärung">
+        <div class="side-note">
+          <strong>Abschnittshinweis</strong>
+          Der Button steht im Leserand. Er bleibt klein, aber lesbar: <code>Hinweis geben</code>.
+        </div>
+        <div class="side-note">
+          <strong>Textmarkierung</strong>
+          Markiere einen Satz im Artikel. Dann erscheint ein kleiner Kontextbutton.
+        </div>
+        <div class="side-note">
+          <strong>Formularbezug</strong>
+          Die markierte Stelle erscheint im Formular als Zitat, bevor der Nutzer schreibt.
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <button class="selection-action" type="button" id="selectionAction">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 20h9"></path>
+      <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+    </svg>
+    <span>Hinweis zur Textstelle</span>
+  </button>
+
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+    <div class="dialog">
+      <div class="dialog-head">
+        <div>
+          <h2 id="formTitle">Hinweis senden</h2>
+          <p>Der Hinweis geht an die Redaktion und wird nicht automatisch veröffentlicht.</p>
+        </div>
+        <button class="close" type="button" aria-label="Formular schließen" id="closeDialog">×</button>
+      </div>
+
+      <form class="annotation-form" id="annotationForm">
+        <div class="context-line" id="contextLine" aria-live="polite"></div>
+
+        <div class="quote-box" id="quoteBox">
+          <span id="quoteLabel">Ausgewählte Textstelle</span>
+          <blockquote id="quoteText"></blockquote>
+        </div>
+
+        <label>
+          Was sollen wir prüfen?
+          <textarea id="message" required placeholder="Zum Beispiel: Diese Formulierung ist missverständlich, hier fehlt eine Quelle, oder dieser Punkt sollte genauer erklärt werden."></textarea>
+          <span class="small-help">Anonym ist in Ordnung. Quellen oder konkrete Hinweise helfen uns bei der Prüfung.</span>
+        </label>
+
+        <label>
+          E-Mail für Rückmeldung, freiwillig
+          <input id="email" type="email" autocomplete="email" placeholder="name@example.de">
+          <span class="small-help">Ohne E-Mail können wir den Hinweis prüfen, aber nicht persönlich antworten.</span>
+        </label>
+
+        <label class="honey-field" aria-hidden="true">
+          Website
+          <input id="website" tabindex="-1" autocomplete="off">
+        </label>
+
+        <div class="dialog-actions">
+          <button class="secondary" type="button" id="cancelDialog">Abbrechen</button>
+          <button class="primary" type="submit">Hinweis absenden</button>
+        </div>
+      </form>
+
+      <div class="result" id="result">
+        <h3>So würde die Redaktionsmail aussehen</h3>
+        <p class="small-help">In der echten MVP-Version würde daraus eine Mail an Erik und Annemarie entstehen.</p>
+        <pre class="mail-preview" id="mailPreview"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const drawer = document.getElementById("drawer");
+    const form = document.getElementById("annotationForm");
+    const contextLine = document.getElementById("contextLine");
+    const quoteBox = document.getElementById("quoteBox");
+    const quoteLabel = document.getElementById("quoteLabel");
+    const quoteText = document.getElementById("quoteText");
+    const selectionAction = document.getElementById("selectionAction");
+    const result = document.getElementById("result");
+    const mailPreview = document.getElementById("mailPreview");
+    const message = document.getElementById("message");
+    const email = document.getElementById("email");
+    const website = document.getElementById("website");
+
+    let activeContext = null;
+    let openedAt = 0;
+
+    function getSectionData(section, selectedText) {
+      return {
+        sectionId: section.dataset.sectionId,
+        sectionTitle: section.dataset.sectionTitle,
+        selectedText: selectedText.trim(),
+        page: "experiments/annotation-flow-demo.html"
+      };
+    }
+
+    function trimText(text) {
+      return text.replace(/\s+/g, " ").trim();
+    }
+
+    function openDialog(context) {
+      activeContext = context;
+      openedAt = Date.now();
+      result.classList.remove("is-visible");
+      form.reset();
+
+      contextLine.innerHTML = `
+        <span>Demo-Seite</span>
+        <span>${context.sectionTitle}</span>
+        <span>${context.sectionId}</span>
+      `;
+
+      if (context.selectedText) {
+        quoteLabel.textContent = "Ausgewählte Textstelle";
+        quoteText.textContent = "„" + context.selectedText + "“";
+        quoteBox.classList.add("is-visible");
+      } else {
+        quoteLabel.textContent = "Abschnitt";
+        quoteText.textContent = context.sectionTitle;
+        quoteBox.classList.add("is-visible");
+      }
+
+      drawer.classList.add("is-open");
+      message.focus();
+    }
+
+    function closeDialog() {
+      drawer.classList.remove("is-open");
+      selectionAction.style.display = "none";
+    }
+
+    document.querySelectorAll(".section-action").forEach((button) => {
+      button.addEventListener("click", () => {
+        const section = button.closest(".annotatable");
+        openDialog(getSectionData(section, ""));
+      });
+    });
+
+    document.addEventListener("selectionchange", () => {
+      const selection = window.getSelection();
+      const selectedText = trimText(selection ? selection.toString() : "");
+
+      if (!selectedText || selectedText.length < 8) {
+        selectionAction.style.display = "none";
+        return;
+      }
+
+      const anchorNode = selection.anchorNode;
+      const element = anchorNode && anchorNode.nodeType === 3 ? anchorNode.parentElement : anchorNode;
+      const section = element && element.closest ? element.closest(".annotatable") : null;
+
+      if (!section) {
+        selectionAction.style.display = "none";
+        return;
+      }
+
+      const range = selection.getRangeAt(0);
+      const rect = range.getBoundingClientRect();
+      selectionAction.dataset.sectionId = section.dataset.sectionId;
+      selectionAction.dataset.sectionTitle = section.dataset.sectionTitle;
+      selectionAction.dataset.selectedText = selectedText;
+      selectionAction.style.left = Math.max(12, Math.min(rect.left, window.innerWidth - 238)) + "px";
+      selectionAction.style.top = Math.max(rect.top - 48, 12) + "px";
+      selectionAction.style.display = "inline-flex";
+    });
+
+    selectionAction.addEventListener("click", () => {
+      const section = document.querySelector(`[data-section-id="${selectionAction.dataset.sectionId}"]`);
+      if (!section) return;
+      openDialog(getSectionData(section, selectionAction.dataset.selectedText || ""));
+    });
+
+    document.getElementById("closeDialog").addEventListener("click", closeDialog);
+    document.getElementById("cancelDialog").addEventListener("click", closeDialog);
+
+    drawer.addEventListener("click", (event) => {
+      if (event.target === drawer) closeDialog();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && drawer.classList.contains("is-open")) closeDialog();
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const secondsOpen = Math.round((Date.now() - openedAt) / 1000);
+      const spamStatus = website.value ? "Honeypot ausgefüllt: würde blockiert" : "Honeypot leer";
+      const timingStatus = secondsOpen < 2 ? "Sehr schnell: würde genauer geprüft" : "Zeitprüfung unauffällig";
+      const contact = email.value.trim() || "anonym";
+
+      mailPreview.textContent =
+`Betreff: Wa(h)re Haustier(liebe): Hinweis zu "${activeContext.sectionTitle}"
+
+Seite:
+${activeContext.page}
+
+Abschnitt:
+${activeContext.sectionTitle}
+
+Abschnitts-ID:
+${activeContext.sectionId}
+
+Zitat:
+${activeContext.selectedText || "(kein markierter Text, Hinweis zum gesamten Abschnitt)"}
+
+Hinweis:
+${message.value.trim()}
+
+Kontakt:
+${contact}
+
+Bot-Schutz:
+${spamStatus}
+${timingStatus}
+
+Redaktioneller Status:
+neu`;
+
+      result.classList.add("is-visible");
+      result.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
