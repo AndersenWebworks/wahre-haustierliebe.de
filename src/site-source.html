@@ -5970,7 +5970,7 @@
           </div>
         </div>
         <div>
-          <h4 style="color: var(--white); margin-top: 0;">Tierarten</h4>
+          <h3 style="color: var(--white); margin-top: 0;">Tierarten</h3>
           <p><a href="#hunde" onclick="navigateTo('hunde');return false">Hunde</a></p>
           <p><a href="#katzen" onclick="navigateTo('katzen');return false">Katzen</a></p>
           <p><a href="#voegel" onclick="navigateTo('voegel');return false">Vögel</a></p>
@@ -5979,7 +5979,7 @@
           <p><a href="#pferde" onclick="navigateTo('pferde');return false">Pferde</a></p>
         </div>
         <div>
-          <h4 style="color: var(--white); margin-top: 0;">Wissen</h4>
+          <h3 style="color: var(--white); margin-top: 0;">Wissen</h3>
           <p><a href="#kastration" onclick="navigateTo('kastration');return false">Kastration</a></p>
           <p><a href="#qualzucht" onclick="navigateTo('qualzucht');return false">Qualzucht</a></p>
           <p><a href="#adoption" onclick="navigateTo('adoption');return false">Adoption</a></p>
@@ -7001,6 +7001,7 @@
       }
       glossaryTooltip.className = 'glossary-term-popover';
       glossaryTooltip.setAttribute('role', 'tooltip');
+      glossaryTooltip.setAttribute('aria-label', 'Glossarbegriff');
       glossaryTooltip.textContent = '';
       glossaryTooltipReady = true;
 

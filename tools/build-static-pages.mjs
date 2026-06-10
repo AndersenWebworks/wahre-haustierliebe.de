@@ -1093,7 +1093,7 @@ function addImageAttributes(html) {
     if (!/\bdecoding=/.test(nextAttrs)) {
       nextAttrs += ' decoding="async"';
     }
-    if (!/\bfetchpriority=/.test(nextAttrs) && (/\bloading="eager"/.test(nextAttrs) || /\bclass="[^"]*\bhero-brand-logo\b/.test(nextAttrs))) {
+    if (!/\bfetchpriority=/.test(nextAttrs) && /\bloading="eager"/.test(nextAttrs)) {
       nextAttrs += ' fetchpriority="high"';
     }
 
@@ -1731,6 +1731,50 @@ function injectGeoBlocks(body, page) {
   return `${injectBeforeClosingContent(injectBeforeClosingContent(mainBody, buildFaqBlock(page)), buildEvidenceBlock(page))}${rest}`;
 }
 
+function buildCriticalCss(prefix) {
+  return `<style data-critical-css>
+    @font-face{font-family:"Bricolage Grotesque";src:url("${prefix}assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-style:normal;font-display:swap}
+    @font-face{font-family:"Plus Jakarta Sans";src:url("${prefix}assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#1F3A2F;--primary-dark:#14241D;--primary-light:#E8F5EF;--secondary:#C04A3A;--accent:#E89A4B;--accent-light:#FFF4CC;--bg:#FBF8F2;--white:#FFFEFA;--border:rgba(31,58,47,.14);--text:#1A2A22;--text-muted:#3D5046;--text-light:#6B7F75;--shadow:0 8px 28px rgba(31,58,47,.09);--shadow-lg:0 18px 50px rgba(31,58,47,.13);--radius:20px;--radius-lg:32px;--font-heading:"Bricolage Grotesque",system-ui,sans-serif;--font-body:"Plus Jakarta Sans",system-ui,sans-serif;--max-width:1240px}
+    body{font-family:var(--font-body);color:var(--text);background:var(--bg);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:var(--primary);text-decoration:none}
+    img{max-width:100%;height:auto}
+    h1,h2,h3,h4,.site-logo{font-family:var(--font-heading);letter-spacing:-.018em;overflow-wrap:break-word}
+    .container{max-width:var(--max-width);margin:0 auto;padding-left:clamp(1.25rem,5vw,3.5rem);padding-right:clamp(1.25rem,5vw,3.5rem)}
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(251,248,242,.94);border-bottom:1px solid rgba(31,58,47,.10);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+    .header-inner{height:74px;max-width:var(--max-width);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between}
+    .site-logo{display:inline-flex;align-items:center;gap:.62rem;color:var(--primary);font-size:1.24rem;font-weight:800;line-height:1.05;white-space:nowrap}
+    .site-logo-image{width:2.45rem;height:2.45rem;object-fit:contain;background:var(--primary-light);border-radius:.85rem;flex-shrink:0}
+    .site-logo-text{display:inline-flex;align-items:baseline;white-space:nowrap}.brand-red{color:var(--secondary)}
+    .nav-links{display:flex;align-items:center;gap:.25rem;list-style:none}.nav-link{border:0;background:transparent;border-radius:999px;color:var(--text-muted);font:700 .92rem var(--font-body);padding:.65rem .9rem;white-space:nowrap}
+    .hamburger,.mobile-nav{display:none}
+    #startseite .hero{min-height:calc(100vh - 74px);padding:clamp(3rem,7vh,5rem) 0 clamp(3.5rem,7vh,5.25rem);background:radial-gradient(circle at 94% 8%,rgba(255,217,107,.28),transparent 19rem),linear-gradient(135deg,#B8E6D5 0%,#E8F5EF 46%,#FBF8F2 100%);color:var(--text);overflow:hidden}
+    #startseite .hero .container{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);align-items:center;gap:clamp(3rem,6vw,5.5rem)}
+    #startseite .hero h1{color:var(--primary);font-size:clamp(3.6rem,6.4vw,5.55rem);line-height:.96;max-width:10.8ch;margin:0 0 1.75rem;font-weight:800;letter-spacing:-.035em;hyphens:none;overflow-wrap:normal}
+    #startseite .hero p{color:var(--text-muted);max-width:36rem;font-size:clamp(1.12rem,1.55vw,1.35rem);line-height:1.62;margin:0 0 1.6rem}
+    .hero-brand-logo{display:none}
+    .hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3.15rem;padding:.85rem 1.45rem;border-radius:999px;border:0;font:700 .95rem var(--font-body)}.btn-primary,.btn-white{background:var(--primary);color:var(--white)}.btn-outline{background:rgba(251,248,242,.4);border:2px solid var(--primary);color:var(--primary)}
+    .hero-visual-card{position:relative;min-height:530px;padding:1.25rem;border-radius:var(--radius-lg);background:linear-gradient(145deg,rgba(255,254,250,.64),rgba(184,230,213,.42)),repeating-linear-gradient(135deg,rgba(31,58,47,.06) 0 1px,transparent 1px 22px);box-shadow:0 28px 75px rgba(31,58,47,.13);display:grid;grid-template-rows:minmax(300px,1fr) auto;gap:.85rem}
+    .hero-lead-image{position:relative;width:100%;height:100%;min-width:0;margin:0;overflow:hidden;border-radius:calc(var(--radius-lg) - 8px);background:var(--primary-light)}
+    .hero-lead-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--image-position,center 50%)}
+    .hero-tape{position:absolute;top:.75rem;left:2rem;z-index:3;border-radius:8px;background:#FFD96B;color:var(--primary-dark);padding:.45rem .85rem;font-weight:800;transform:rotate(-3deg)}
+    @media (max-width:980px){#startseite .hero{min-height:0}#startseite .hero .container{display:flex;flex-direction:column;align-items:stretch}#startseite .hero h1,#startseite .hero p{max-width:100%;width:100%}.hero-visual-card{min-height:520px}}
+    @media (max-width:768px){.header-inner{height:64px}.nav-links{display:none}.hamburger{display:block;background:transparent;border:0;font-size:1.5rem}.site-logo-image{width:2.65rem;height:2.42rem}#startseite .hero{padding:3.25rem 0}#startseite .hero h1{font-size:clamp(2.55rem,13vw,4rem);line-height:.98}.hero-visual-card{min-height:0;padding-top:3.8rem}.hero-lead-image{min-height:320px}}
+  </style>`;
+}
+
+function buildStylesheetLinks(prefix) {
+  return `${buildCriticalCss(prefix)}\n  <link rel="preload" href="${prefix}assets/site.css" as="style" onload="this.onload=null;this.rel='stylesheet'">\n  <noscript><link rel="stylesheet" href="${prefix}assets/site.css"></noscript>`;
+}
+
+function restoreAsyncCssLinks(html) {
+  return html.replace(
+    /<link rel="stylesheet" href="([^"]*assets\/site\.css)" as="style" onload="this\.onload=null;this\.rel='stylesheet'">/g,
+    '<link rel="preload" href="$1" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">',
+  );
+}
+
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
   const copy = socialCopy(page);
@@ -1741,7 +1785,44 @@ function buildHead(page, prefix) {
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
 
-  return `<!DOCTYPE html>\n<html lang="de">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>${escapeHtml(page.title)}</title>\n  <meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(keywords)}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">\n  <meta property="og:url" content="${canonical}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonical}">\n${buildIconLinks(prefix)}\n  <link rel="preload" href="${prefix}assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>\n  <link rel="preload" href="${prefix}assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>\n  <link rel="stylesheet" href="${prefix}assets/site.css">\n  ${schema}\n</head>`;
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(page.title)}</title>
+  <meta name="description" content="${escapeAttr(page.description)}">
+  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
+  <meta name="application-name" content="${siteName}">
+  <meta name="theme-color" content="#f7efe3">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="keywords" content="${escapeAttr(keywords)}">
+  <meta property="og:title" content="${escapeAttr(copy.title)}">
+  <meta property="og:description" content="${escapeAttr(copy.description)}">
+  <meta property="og:type" content="${page.id === 'startseite' ? 'website' : 'article'}">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:image" content="${image}">
+  <meta property="og:image:secure_url" content="${image}">
+  <meta property="og:image:type" content="${social.type}">
+  <meta property="og:image:width" content="${social.width}">
+  <meta property="og:image:height" content="${social.height}">
+  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">
+  <meta property="og:site_name" content="${siteName}">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:updated_time" content="${lastmod}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeAttr(copy.title)}">
+  <meta name="twitter:description" content="${escapeAttr(copy.description)}">
+  <meta name="twitter:image" content="${image}">
+  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">
+  <link rel="canonical" href="${canonical}">
+${buildIconLinks(prefix)}
+  <link rel="preload" href="${prefix}assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${prefix}assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  ${buildStylesheetLinks(prefix)}
+  ${schema}
+</head>`;
 }
 
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
@@ -1756,7 +1837,7 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
   body = addImageAttributes(body);
   body = body.replace(new RegExp(`<section id="${page.id}" class="page(?: active)?">`), `<section id="${page.id}" class="page active">`);
 
-  return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${body}\n  <script src="${prefix}assets/site.js"></script>\n</body>\n</html>\n`;
+  return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${body}\n  <script src="${prefix}assets/site.js" defer></script>\n</body>\n</html>\n`;
 }
 
 function normalizePublicCopy(html) {
@@ -1903,8 +1984,11 @@ async function prerenderSectionPages() {
     const page = await context.newPage();
     await page.goto(pathToFileURL(pageFile).href, { waitUntil: 'load' });
     await page.waitForTimeout(250);
-    const html = await page.evaluate(() => `<!DOCTYPE html>\n${document.documentElement.outerHTML}\n`);
-    await fs.writeFile(pageFile, stripTrailingWhitespace(addImageAttributes(transformLinks(html, pageConfig))), 'utf8');
+    const html = await page.evaluate(() => {
+      document.getElementById('glossary-term-popover')?.remove();
+      return `<!DOCTYPE html>\n${document.documentElement.outerHTML}\n`;
+    });
+    await fs.writeFile(pageFile, stripTrailingWhitespace(restoreAsyncCssLinks(addImageAttributes(transformLinks(html, pageConfig)))), 'utf8');
     await context.close();
   }
 

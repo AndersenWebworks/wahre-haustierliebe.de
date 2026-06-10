@@ -37,7 +37,38 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="stylesheet" href="../assets/site.css">
+  <style data-critical-css="">
+    @font-face{font-family:"Bricolage Grotesque";src:url("../assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-style:normal;font-display:swap}
+    @font-face{font-family:"Plus Jakarta Sans";src:url("../assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#1F3A2F;--primary-dark:#14241D;--primary-light:#E8F5EF;--secondary:#C04A3A;--accent:#E89A4B;--accent-light:#FFF4CC;--bg:#FBF8F2;--white:#FFFEFA;--border:rgba(31,58,47,.14);--text:#1A2A22;--text-muted:#3D5046;--text-light:#6B7F75;--shadow:0 8px 28px rgba(31,58,47,.09);--shadow-lg:0 18px 50px rgba(31,58,47,.13);--radius:20px;--radius-lg:32px;--font-heading:"Bricolage Grotesque",system-ui,sans-serif;--font-body:"Plus Jakarta Sans",system-ui,sans-serif;--max-width:1240px}
+    body{font-family:var(--font-body);color:var(--text);background:var(--bg);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:var(--primary);text-decoration:none}
+    img{max-width:100%;height:auto}
+    h1,h2,h3,h4,.site-logo{font-family:var(--font-heading);letter-spacing:-.018em;overflow-wrap:break-word}
+    .container{max-width:var(--max-width);margin:0 auto;padding-left:clamp(1.25rem,5vw,3.5rem);padding-right:clamp(1.25rem,5vw,3.5rem)}
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(251,248,242,.94);border-bottom:1px solid rgba(31,58,47,.10);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+    .header-inner{height:74px;max-width:var(--max-width);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between}
+    .site-logo{display:inline-flex;align-items:center;gap:.62rem;color:var(--primary);font-size:1.24rem;font-weight:800;line-height:1.05;white-space:nowrap}
+    .site-logo-image{width:2.45rem;height:2.45rem;object-fit:contain;background:var(--primary-light);border-radius:.85rem;flex-shrink:0}
+    .site-logo-text{display:inline-flex;align-items:baseline;white-space:nowrap}.brand-red{color:var(--secondary)}
+    .nav-links{display:flex;align-items:center;gap:.25rem;list-style:none}.nav-link{border:0;background:transparent;border-radius:999px;color:var(--text-muted);font:700 .92rem var(--font-body);padding:.65rem .9rem;white-space:nowrap}
+    .hamburger,.mobile-nav{display:none}
+    #startseite .hero{min-height:calc(100vh - 74px);padding:clamp(3rem,7vh,5rem) 0 clamp(3.5rem,7vh,5.25rem);background:radial-gradient(circle at 94% 8%,rgba(255,217,107,.28),transparent 19rem),linear-gradient(135deg,#B8E6D5 0%,#E8F5EF 46%,#FBF8F2 100%);color:var(--text);overflow:hidden}
+    #startseite .hero .container{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);align-items:center;gap:clamp(3rem,6vw,5.5rem)}
+    #startseite .hero h1{color:var(--primary);font-size:clamp(3.6rem,6.4vw,5.55rem);line-height:.96;max-width:10.8ch;margin:0 0 1.75rem;font-weight:800;letter-spacing:-.035em;hyphens:none;overflow-wrap:normal}
+    #startseite .hero p{color:var(--text-muted);max-width:36rem;font-size:clamp(1.12rem,1.55vw,1.35rem);line-height:1.62;margin:0 0 1.6rem}
+    .hero-brand-logo{display:none}
+    .hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3.15rem;padding:.85rem 1.45rem;border-radius:999px;border:0;font:700 .95rem var(--font-body)}.btn-primary,.btn-white{background:var(--primary);color:var(--white)}.btn-outline{background:rgba(251,248,242,.4);border:2px solid var(--primary);color:var(--primary)}
+    .hero-visual-card{position:relative;min-height:530px;padding:1.25rem;border-radius:var(--radius-lg);background:linear-gradient(145deg,rgba(255,254,250,.64),rgba(184,230,213,.42)),repeating-linear-gradient(135deg,rgba(31,58,47,.06) 0 1px,transparent 1px 22px);box-shadow:0 28px 75px rgba(31,58,47,.13);display:grid;grid-template-rows:minmax(300px,1fr) auto;gap:.85rem}
+    .hero-lead-image{position:relative;width:100%;height:100%;min-width:0;margin:0;overflow:hidden;border-radius:calc(var(--radius-lg) - 8px);background:var(--primary-light)}
+    .hero-lead-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--image-position,center 50%)}
+    .hero-tape{position:absolute;top:.75rem;left:2rem;z-index:3;border-radius:8px;background:#FFD96B;color:var(--primary-dark);padding:.45rem .85rem;font-weight:800;transform:rotate(-3deg)}
+    @media (max-width:980px){#startseite .hero{min-height:0}#startseite .hero .container{display:flex;flex-direction:column;align-items:stretch}#startseite .hero h1,#startseite .hero p{max-width:100%;width:100%}.hero-visual-card{min-height:520px}}
+    @media (max-width:768px){.header-inner{height:64px}.nav-links{display:none}.hamburger{display:block;background:transparent;border:0;font-size:1.5rem}.site-logo-image{width:2.65rem;height:2.42rem}#startseite .hero{padding:3.25rem 0}#startseite .hero h1{font-size:clamp(2.55rem,13vw,4rem);line-height:.98}.hero-visual-card{min-height:0;padding-top:3.8rem}.hero-lead-image{min-height:320px}}
+  </style>
+  <link rel="preload" href="../assets/site.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../assets/site.css"></noscript>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -191,7 +222,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="../index.html" aria-label="Wa(h)re Haustier(liebe) Startseite">
-        <img class="site-logo-image" src="../assets/images/optimized/wahre-haustierliebe-mark.png" alt="" aria-hidden="true" width="280" height="258" decoding="async">
+        <img class="site-logo-image" src="../assets/images/optimized/wahre-haustierliebe-mark.png" alt="" aria-hidden="true" width="64" height="59" decoding="async">
         <span class="site-logo-text"><span class="brand-dark">Wa</span><span class="brand-red">(h)</span><span class="brand-dark">re Haustier</span><span class="brand-red">(liebe)</span></span>
       </a>
       <nav aria-label="Hauptnavigation">
@@ -277,7 +308,7 @@
       <div class="container"><div class="article-hero-copy">
         <h1>Exoten – technisch anspruchsvoll, nichts für Anfänger</h1>
         <p>Reptilien, Schildkröten, Fische: Sie sind leise, machen nichts kaputt – und sterben leise, wenn die Haltung nicht stimmt.</p>
-      <div class="article-kicker"><span>Technik ist Haltung</span><span>UV-B</span><span>Meldepflichten</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen" data-share-reason="Das Bild soll Faszination mit Verantwortung koppeln." style="--image-position: center 45%;"><img src="../assets/images/optimized/bearded-dragon-terrarium.jpg" alt="Bartagame im Terrarium als Bild für Technik, Licht und Klima" loading="eager" decoding="async" width="1000" height="702" fetchpriority="high"><figcaption class="context-caption">Leise Tiere brauchen oft die präziseste Technik.</figcaption></figure></div>
+      <div class="article-kicker"><span>Technik ist Haltung</span><span>UV-B</span><span>Meldepflichten</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen" data-share-reason="Das Bild soll Faszination mit Verantwortung koppeln." style="--image-position: center 45%;"><img src="../assets/images/optimized/bearded-dragon-terrarium.jpg" alt="Bartagame im Terrarium als Bild für Technik, Licht und Klima" loading="eager" decoding="async" width="960" height="674" fetchpriority="high"><figcaption class="context-caption">Leise Tiere brauchen oft die präziseste Technik.</figcaption></figure></div>
     </div>
 
     <div class="section">
@@ -379,7 +410,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img class="footer-brand-logo" src="../assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="720" height="480" decoding="async">
+          <img class="footer-brand-logo" src="../assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="360" height="240" decoding="async">
           <p>Ehrliche, faktenbasierte Aufklärung über Tierhaltung. Kein erhobener Zeigefinger – sondern alles, was du wissen musst, bevor und während du Verantwortung für ein Lebewesen trägst.</p>
           <p>Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir unterstützen die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a></p>
           <p>Neuigkeiten und kurze Denkanstöße gibt es auch auf <a href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">Instagram: @wahrehaustierliebe</a>.</p>
@@ -391,7 +422,7 @@
           </div>
         </div>
         <div>
-          <h4 style="color: var(--white); margin-top: 0;">Tierarten</h4>
+          <h3 style="color: var(--white); margin-top: 0;">Tierarten</h3>
           <p><a href="../hunde/index.html">Hunde</a></p>
           <p><a href="../katzen/index.html">Katzen</a></p>
           <p><a href="../voegel/index.html">Vögel</a></p>
@@ -400,7 +431,7 @@
           <p><a href="../pferde/index.html">Pferde</a></p>
         </div>
         <div>
-          <h4 style="color: var(--white); margin-top: 0;">Wissen</h4>
+          <h3 style="color: var(--white); margin-top: 0;">Wissen</h3>
           <p><a href="../kastration/index.html">Kastration</a></p>
           <p><a href="../qualzucht/index.html">Qualzucht</a></p>
           <p><a href="../adoption/index.html">Adoption</a></p>
@@ -450,7 +481,7 @@
 
   <!-- Scroll-to-top -->
   <button type="button" class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Nach oben scrollen">↑</button>
-  <script src="../assets/site.js"></script>
+  <script src="../assets/site.js" defer=""></script>
 
 
-<div id="glossary-term-popover" class="glossary-term-popover" role="tooltip"></div></body></html>
+</body></html>

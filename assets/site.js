@@ -1037,6 +1037,7 @@ function normalizeAssetUrls(root) {
       }
       glossaryTooltip.className = 'glossary-term-popover';
       glossaryTooltip.setAttribute('role', 'tooltip');
+      glossaryTooltip.setAttribute('aria-label', 'Glossarbegriff');
       glossaryTooltip.textContent = '';
       glossaryTooltipReady = true;
 
