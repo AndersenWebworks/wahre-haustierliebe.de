@@ -21,6 +21,7 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `notfall/index.html`
 - `notfall/tierarzt-notdienst/index.html`
 - `wissen/index.html`
+- `wildkatzenbaby-gefunden/index.html`
 - `noch-nicht-bereit/index.html`
 - `kontakt/index.html`
 - `impressum/index.html`

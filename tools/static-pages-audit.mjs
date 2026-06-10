@@ -32,6 +32,7 @@ const pages = [
   { id: 'realhaltung', file: 'realhaltung/index.html', canonical: `${baseUrl}/realhaltung/index.html` },
   { id: 'zucht-und-vermehrung', file: 'zucht-und-vermehrung/index.html', canonical: `${baseUrl}/zucht-und-vermehrung/index.html` },
   { id: 'wildtierhaltung', file: 'wildtierhaltung/index.html', canonical: `${baseUrl}/wildtierhaltung/index.html` },
+  { id: 'wildkatzenbaby-gefunden', file: 'wildkatzenbaby-gefunden/index.html', canonical: `${baseUrl}/wildkatzenbaby-gefunden/index.html` },
   { id: 'noch-nicht-bereit', file: 'noch-nicht-bereit/index.html', canonical: `${baseUrl}/noch-nicht-bereit/index.html` },
 ];
 

@@ -29,6 +29,7 @@ const articlePages = [
   'realhaltung',
   'zucht-und-vermehrung',
   'wildtierhaltung',
+  'wildkatzenbaby-gefunden',
   'noch-nicht-bereit',
 ];
 
@@ -52,6 +53,7 @@ const pageFiles = {
   realhaltung: 'realhaltung/index.html',
   'zucht-und-vermehrung': 'zucht-und-vermehrung/index.html',
   wildtierhaltung: 'wildtierhaltung/index.html',
+  'wildkatzenbaby-gefunden': 'wildkatzenbaby-gefunden/index.html',
   'noch-nicht-bereit': 'noch-nicht-bereit/index.html',
 };
 

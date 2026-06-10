@@ -11,7 +11,7 @@ const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
 const siteName = 'Wa(h)re Haustier(liebe)';
-const lastmod = '2026-06-07';
+const lastmod = '2026-06-10';
 const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Wa(h)re Haustier(liebe)">
   <path fill="#b91f2f" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Z"/>
   <path fill="#8f1524" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Zm0-3.1.8-.7c6.1-5 9.5-8.3 9.5-13.9 0-3-2.1-5.1-4.9-5.1-2.3 0-4 1.4-4.8 4.1h-1.2c-.8-2.7-2.5-4.1-4.8-4.1-2.8 0-4.9 2.1-4.9 5.1 0 5.6 3.4 8.9 9.5 13.9l.8.7Z" opacity=".65"/>
@@ -227,6 +227,14 @@ const pages = [
     staticOnly: true,
   },
   {
+    id: 'wildkatzenbaby-gefunden',
+    slug: 'wildkatzenbaby-gefunden',
+    title: 'Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln',
+    description: 'Wildkatzenjunge werden leicht mit Hauskatzen verwechselt. Woran du sie erkennst, warum Mitnehmen schadet und welche Schritte wirklich helfen.',
+    intent: 'Wildkatzenjunge erkennen und bei einem Fund richtig handeln',
+    priority: '0.8',
+  },
+  {
     id: 'noch-nicht-bereit',
     slug: 'noch-nicht-bereit',
     title: 'Noch nicht bereit für ein Tier: Warten kann Tierliebe sein',
@@ -260,6 +268,10 @@ const faqByPage = {
   ],
   katzen: [
     ['Warum sollte ich meine Katze kastrieren lassen?', 'Kastration schützt vor Stress, hormonbedingten Erkrankungen und unkontrollierter Vermehrung. Besonders bei Freigängern ist sie praktischer Tierschutz.'],
+  ],
+  'wildkatzenbaby-gefunden': [
+    ['Soll ich ein scheinbar verlassenes Wildkatzenbaby mitnehmen?', 'Nein. Abstand halten, Fundort merken, nach einigen Stunden aus der Ferne prüfen und fachkundige Stellen kontaktieren.'],
+    ['Kann man junge Wildkatzen sicher von Hauskatzen unterscheiden?', 'Mit bloßem Auge oft nicht sicher. Merkmale sind nur Hinweise; eine sichere Bestimmung gelingt über DNA.'],
   ],
   voegel: [
     ['Kann man Wellensittiche allein halten?', 'Nein. Wellensittiche sind Schwarmvögel und brauchen mindestens einen Artgenossen, ausreichend Flugraum und Beschäftigung.'],
@@ -587,6 +599,29 @@ const evidenceByPage = {
       'Nicht aus Legalität eine Haltungsempfehlung ableiten.',
     ],
   },
+  'wildkatzenbaby-gefunden': {
+    facts: [
+      'Wildkatzenjunge werden immer wieder mit getigerten Hauskatzenjungen verwechselt; junge Tiere sind mit bloßem Auge oft nicht sicher bestimmbar.',
+      'Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.',
+      'Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.',
+      'Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren.',
+    ],
+    sources: [
+      ['BUND: Projekt Vorsicht Wildkatze', 'https://www.bund.net/themen/tiere-pflanzen/projekt-vorsicht-wildkatze/'],
+      ['BUND: Handlungsleitfaden Vorsicht Verwechslungsgefahr', 'https://www.bund.net/fileadmin/user_upload_bund/publikationen/wildkatze/handlungsleitfaden-wildkatze-vorsicht-verwechslungsgefahr-bund.pdf'],
+      ['BUND Thüringen: Vorsicht Wildkatze', 'https://www.bund-thueringen.de/wildkatze/vorsicht-verwechslungsgefahr/'],
+      ['BUND NRW: Wild- oder Hauskatze?', 'https://www.bund-nrw.de/themen/wildkatze/europaeische-wildkatze/wild-oder-hauskatze/'],
+      ['BfN: Artenportrait Felis silvestris', 'https://www.bfn.de/artenportraits/felis-silvestris'],
+      ['Wildkatze Baden-Württemberg: Wildkätzchen gefunden?', 'https://www.wildkatze-bw.de/wildkatze/wildkaetzchen-gefunden'],
+      ['NABU Hamburg: Jungvögel und Menschengeruch', 'https://hamburg.nabu.de/tiere-und-pflanzen/wildtiere-schuetzen/hunde.html'],
+    ],
+    guardrails: [
+      'Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.',
+      'Merkmale nur als Hinweise erklären, nicht als sichere Laienbestimmung.',
+      'Keine Anleitung zur privaten Wildtieraufzucht geben.',
+      'Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.',
+    ],
+  },
   'noch-nicht-bereit': {
     facts: [
       'Warten verhindert Tierleid, wenn Zeit, Geld, Wohnsituation oder Stabilität noch nicht passen.',
@@ -783,6 +818,13 @@ const firstContentImageByPage = {
     type: 'image/jpeg',
     alt: 'Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung.',
   },
+  'wildkatzenbaby-gefunden': {
+    src: 'assets/images/european-wildcat.jpg',
+    width: 1496,
+    height: 1729,
+    type: 'image/jpeg',
+    alt: 'Europäische Wildkatze mit typischen Merkmalen wie breitem Kopf, fleischfarbener Nase und dichtem Fell.',
+  },
   'noch-nicht-bereit': {
     src: 'assets/images/cat-soft-carrier.jpg',
     width: 1254,
@@ -904,6 +946,11 @@ const socialCopyByPage = {
     title: 'Private Wildtierhaltung: legal heißt nicht vertretbar',
     description: 'Bundesrecht, Landesrecht, Exoten, Gefahrtierhaltung und Wildschutz für Deutschland verständlich eingeordnet.',
   },
+  'wildkatzenbaby-gefunden': {
+    eyebrow: 'Wildkatzenjunge im Wald',
+    title: 'Wildkatzenbaby gefunden?',
+    description: 'Nicht mitnehmen: Abstand halten, Fundort sichern, richtig unterscheiden und fachkundige Hilfe holen.',
+  },
   'noch-nicht-bereit': {
     eyebrow: 'Warten kann Tierliebe sein',
     title: 'Noch nicht bereit für ein Tier',
@@ -939,6 +986,7 @@ const keywordByPage = {
   realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
   'zucht-und-vermehrung': ['Zucht', 'Vermehrung', 'Züchter', 'Tierheim', 'Adoption'],
   wildtierhaltung: ['Wildtierhaltung', 'Exoten', 'Gefahrtier', 'Wildschutz', 'Deutschland'],
+  'wildkatzenbaby-gefunden': ['Wildkatzenbaby gefunden', 'Wildkätzchen', 'Wildkatze oder Hauskatze', 'Wildkatzenjunge', 'Wildtierfund'],
   'noch-nicht-bereit': ['noch nicht bereit', 'Tierschutz unterstützen', 'Haustier warten'],
   'budgie-brain': ['Budgie Brain', 'Wellensittich Simulation', 'Schwarm', 'Freiflug', 'Stress'],
 };
@@ -2327,7 +2375,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'katzen', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
+  const important = ['hunde', 'katzen', 'wildkatzenbaby-gefunden', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',

@@ -388,6 +388,21 @@
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
   },
   {
+    "id": "european-wildcat",
+    "localPath": "assets/images/european-wildcat.jpg",
+    "fileTitle": "Felis silvestris silvestris.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Felis_silvestris_silvestris.jpg",
+    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Felis_silvestris_silvestris.jpg",
+    "author": "Michael Gäbler",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "usedFor": [
+      "article-hero-wildkatzenbaby-gefunden"
+    ],
+    "alt": "Europäische Wildkatze mit typischen Merkmalen wie breitem Kopf, fleischfarbener Nase und dichtem Fell",
+    "modifications": "Local copy from Wikimedia; cropped by CSS where displayed."
+  },
+  {
     "id": "wahre-haustierliebe-logo",
     "localPath": "assets/images/wahre-haustierliebe-logo.png",
     "fileTitle": "Wa(h)re Haustier(liebe) logo",

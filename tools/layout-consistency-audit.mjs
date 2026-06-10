@@ -30,6 +30,7 @@ const pages = [
   { id: 'realhaltung', file: 'realhaltung/index.html' },
   { id: 'zucht-und-vermehrung', file: 'zucht-und-vermehrung/index.html' },
   { id: 'wildtierhaltung', file: 'wildtierhaltung/index.html' },
+  { id: 'wildkatzenbaby-gefunden', file: 'wildkatzenbaby-gefunden/index.html' },
   { id: 'noch-nicht-bereit', file: 'noch-nicht-bereit/index.html' },
 ];
 

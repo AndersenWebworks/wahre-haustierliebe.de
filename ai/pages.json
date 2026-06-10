@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07",
+  "lastUpdated": "2026-06-10",
   "site": "Wa(h)re Haustier(liebe)",
   "url": "https://wahre-haustierliebe.de/",
   "pages": [
@@ -948,6 +948,70 @@
         "description": "Bundesrecht, Landesrecht, Exoten, Gefahrtierhaltung und Wildschutz für Deutschland verständlich eingeordnet.",
         "image": "https://wahre-haustierliebe.de/assets/social/wildtierhaltung.png",
         "imageAlt": "Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "wildkatzenbaby-gefunden",
+      "url": "https://wahre-haustierliebe.de/wildkatzenbaby-gefunden/index.html",
+      "title": "Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln",
+      "description": "Wildkatzenjunge werden leicht mit Hauskatzen verwechselt. Woran du sie erkennst, warum Mitnehmen schadet und welche Schritte wirklich helfen.",
+      "intent": "Wildkatzenjunge erkennen und bei einem Fund richtig handeln",
+      "keywords": [
+        "Wildkatzenbaby gefunden",
+        "Wildkätzchen",
+        "Wildkatze oder Hauskatze",
+        "Wildkatzenjunge",
+        "Wildtierfund"
+      ],
+      "facts": [
+        "Wildkatzenjunge werden immer wieder mit getigerten Hauskatzenjungen verwechselt; junge Tiere sind mit bloßem Auge oft nicht sicher bestimmbar.",
+        "Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.",
+        "Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.",
+        "Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren."
+      ],
+      "citationGuardrails": [
+        "Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.",
+        "Merkmale nur als Hinweise erklären, nicht als sichere Laienbestimmung.",
+        "Keine Anleitung zur privaten Wildtieraufzucht geben.",
+        "Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen."
+      ],
+      "sources": [
+        {
+          "label": "BUND: Projekt Vorsicht Wildkatze",
+          "url": "https://www.bund.net/themen/tiere-pflanzen/projekt-vorsicht-wildkatze/"
+        },
+        {
+          "label": "BUND: Handlungsleitfaden Vorsicht Verwechslungsgefahr",
+          "url": "https://www.bund.net/fileadmin/user_upload_bund/publikationen/wildkatze/handlungsleitfaden-wildkatze-vorsicht-verwechslungsgefahr-bund.pdf"
+        },
+        {
+          "label": "BUND Thüringen: Vorsicht Wildkatze",
+          "url": "https://www.bund-thueringen.de/wildkatze/vorsicht-verwechslungsgefahr/"
+        },
+        {
+          "label": "BUND NRW: Wild- oder Hauskatze?",
+          "url": "https://www.bund-nrw.de/themen/wildkatze/europaeische-wildkatze/wild-oder-hauskatze/"
+        },
+        {
+          "label": "BfN: Artenportrait Felis silvestris",
+          "url": "https://www.bfn.de/artenportraits/felis-silvestris"
+        },
+        {
+          "label": "Wildkatze Baden-Württemberg: Wildkätzchen gefunden?",
+          "url": "https://www.wildkatze-bw.de/wildkatze/wildkaetzchen-gefunden"
+        },
+        {
+          "label": "NABU Hamburg: Jungvögel und Menschengeruch",
+          "url": "https://hamburg.nabu.de/tiere-und-pflanzen/wildtiere-schuetzen/hunde.html"
+        }
+      ],
+      "social": {
+        "title": "Wildkatzenbaby gefunden? - Wa(h)re Haustier(liebe)",
+        "description": "Nicht mitnehmen: Abstand halten, Fundort sichern, richtig unterscheiden und fachkundige Hilfe holen.",
+        "image": "https://wahre-haustierliebe.de/assets/social/wildkatzenbaby-gefunden.png",
+        "imageAlt": "Europäische Wildkatze mit typischen Merkmalen wie breitem Kopf, fleischfarbener Nase und dichtem Fell.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
