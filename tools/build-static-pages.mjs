@@ -731,11 +731,11 @@ const firstContentImageByPage = {
     alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.',
   },
   'hund-im-buero': {
-    src: 'assets/images/vet-office-with-dog.jpg',
-    width: 2048,
-    height: 1536,
+    src: 'assets/images/dog-resting-under-table.jpg',
+    width: 1280,
+    height: 853,
     type: 'image/jpeg',
-    alt: 'Hund in einer ruhigen Praxisumgebung als Bild für kontrollierte, betreute Innenräume.',
+    alt: 'Hund liegt ruhig unter einem Tisch auf einem Teppich.',
   },
   katzen: {
     src: 'assets/images/two-cats-window.jpg',

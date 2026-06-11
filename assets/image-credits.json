@@ -1,5 +1,22 @@
 [
   {
+    "id": "dog-resting-under-table",
+    "localPath": "assets/images/dog-resting-under-table.jpg",
+    "fileTitle": "Dog resting peacefully closeup.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dog_resting_peacefully_closeup.jpg",
+    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_resting_peacefully_closeup.jpg",
+    "author": "Shixart1985",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "usedFor": [
+      "start-insight-hund-im-buero",
+      "article-hero-hund-im-buero",
+      "social-card-hund-im-buero"
+    ],
+    "alt": "Hund liegt ruhig unter einem Tisch auf einem Teppich",
+    "modifications": "Local thumbnail copy from Wikimedia; optimized derivative generated from Wikimedia thumbnail; cropped by CSS where displayed."
+  },
+  {
     "id": "vet-office-with-dog",
     "localPath": "assets/images/vet-office-with-dog.jpg",
     "fileTitle": "Veterinary Office with dog.JPG",
