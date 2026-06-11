@@ -4887,7 +4887,7 @@
 
     <div class="section section-alt">
       <div class="container">
-        <h2 class="text-center">Was suchst du?</h2>
+        <div class="section-feedback-heading"><h2 class="text-center" id="hinweis-startseite-1">Was suchst du?</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-startseite-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="door-grid">
           <a class="door-card" href="mensch/index.html">
             <span class="door-mark">01</span>
@@ -4925,7 +4925,7 @@
 
     <div class="section">
       <div class="container">
-        <h2 class="text-center">Drei Dinge, die man sofort teilen sollte</h2>
+        <div class="section-feedback-heading"><h2 class="text-center" id="hinweis-startseite-2">Drei Dinge, die man sofort teilen sollte</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-startseite-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p class="text-center text-muted">Nicht als Vorwurf. Als kurzer Perspektivwechsel für Menschen, die Tiere lieben, aber ein Detail übersehen.</p>
         <div class="insight-grid">
           <article class="insight-card image-context-card" data-image-purpose="Aha-Karte Katzen: Ruhe kann Rückzug, Langeweile oder Überforderung sein" data-share-reason="Der Satz soll Katzenhalter erreichen, die stilles Verhalten zu schnell als Zufriedenheit lesen.">
@@ -4967,7 +4967,7 @@
 
     <div class="section" id="tierarten-start">
       <div class="container">
-        <h2 class="text-center">Tierarten-Übersicht</h2>
+        <div class="section-feedback-heading"><h2 class="text-center" id="hinweis-startseite-3">Tierarten-Übersicht</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-startseite-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p class="text-center text-muted">Wähle eine Tierart für ausführliche Infos zu Haltung, Kosten und häufigen Fehlern.</p>
         <div class="animal-grid">
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Hunde: Training und Beschäftigung statt Hundeporträt" data-share-reason="Der Klick soll vom Wunschhund zum Zeit- und Alltagscheck führen." href="hunde/index.html"><img class="animal-card-img" src="assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training und Beschäftigung" loading="lazy" width="960" height="643" decoding="async"><span class="animal-card-caption">Training und Zeit</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></a>
@@ -4982,7 +4982,7 @@
 
     <div class="section section-alt">
       <div class="container text-center">
-        <h2>Warum diese Seite?</h2>
+        <div class="section-feedback-heading"><h2 id="hinweis-startseite-4">Warum diese Seite?</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-startseite-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p style="max-width: 750px; margin: 0 auto 1.5rem;">Wir gehen davon aus, dass jeder Mensch, der sich ein Tier holt, nur das Beste für dieses Tier will. Wenn es trotzdem schiefläuft, liegt das meistens nicht an bösem Willen – sondern an fehlenden Informationen. Diese Seite liefert genau die. Ehrlich, manchmal unbequem, aber immer im Sinne der Tiere.</p>
         <p style="max-width: 750px; margin: 0 auto 1.5rem;" class="text-muted">Ein privates Projekt von zwei Tierfreunden aus Mecklenburg-Vorpommern. Wir sind weder Verein noch Organisation – nur zwei Menschen, denen Tierschutz am Herzen liegt. Deshalb diese Seite, und deshalb unterstützen wir auch die <a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a>, die sich ehrenamtlich um Streunerkatzen in unserer Region kümmert.</p>
 
@@ -5108,4 +5108,4 @@
   <script src="assets/site.js" defer=""></script>
 
 
-</body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>

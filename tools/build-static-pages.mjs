@@ -265,6 +265,7 @@ const pages = [
 const pageById = new Map(pages.map((page) => [page.id, page]));
 const publicPages = pages.filter((page) => !page.onHold);
 const sectionPages = publicPages.filter((page) => !page.standalone && !page.staticOnly);
+const prerenderPages = publicPages.filter((page) => !page.standalone);
 const pageIds = sectionPages.map((page) => page.id);
 const glossaryTermByKey = new Map(glossaryTerms.map((term) => [term.key, term]));
 let staticCssForInline = '';
@@ -2074,7 +2075,7 @@ async function prerenderSectionPages() {
   const chromium = await loadChromium();
   const browser = await chromium.launch();
 
-  for (const pageConfig of sectionPages) {
+  for (const pageConfig of prerenderPages) {
     const pageFile = outputPathFor(pageConfig);
     const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
     const page = await context.newPage();
@@ -2579,7 +2580,7 @@ async function main() {
 
   console.log(JSON.stringify({
     pages: pages.length,
-    prerendered: sectionPages.length,
+    prerendered: prerenderPages.length,
     socialImages: new Set(pages.map((page) => socialImagePath(page))).size,
     source: path.relative(projectRoot, sourcePath),
     outputs: pages.map((page) => path.relative(projectRoot, outputPathFor(page)).replaceAll('\\', '/')),

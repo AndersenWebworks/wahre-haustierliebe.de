@@ -6472,7 +6472,7 @@
         </div>
 
         <h2>Was danach passiert</h2>
-        <p>Nichts wird automatisch veröffentlicht. Wir lesen Hinweise redaktionell, prüfen Quellen und ändern Inhalte nur, wenn sie fachlich tragen. Wenn du deine E-Mail-Adresse angibst, können wir bei Rückfragen antworten oder dir später sagen, was daraus geworden ist. Ohne E-Mail bleibt dein Hinweis anonym.</p>
+        <p>Nichts wird automatisch veröffentlicht. Wir lesen Hinweise redaktionell, prüfen Quellen und ändern Inhalte nur, wenn sie fachlich tragen. Wenn du den Entwurf von einer Adresse sendest, unter der wir dich erreichen dürfen, können wir bei Rückfragen antworten oder dir später sagen, was daraus geworden ist.</p>
 
         <h2>Warum kein Kommentarfeld?</h2>
         <p>Weil diese Seite kein Diskussionsforum werden soll. Uns geht es nicht um möglichst viele Meinungen unter einem Artikel, sondern um bessere Inhalte. Darum läuft Mitwirkung hier leise: präziser Hinweis, Mail an uns, redaktionelle Prüfung.</p>
@@ -7546,14 +7546,15 @@
     function initCollaborationFlow() {
       if (feedbackReady) return;
       feedbackReady = true;
-      var sectionCount = decorateFeedbackSections();
-      if (!sectionCount) return;
+      var page = document.querySelector(collaborationPageSelector());
+      if (!page) return;
+      decorateFeedbackSections();
       ensureFeedbackModal();
       initSelectionFeedback();
     }
 
     function collaborationPageSelector() {
-      return '.page:not(#startseite):not(#kontakt):not(#impressum):not(#datenschutz):not(#mitmachen):not(#selbsttest)';
+      return '.page';
     }
 
     function collapseText(value) {

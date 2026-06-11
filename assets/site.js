@@ -1034,14 +1034,15 @@ function normalizeAssetUrls(root) {
     function initCollaborationFlow() {
       if (feedbackReady) return;
       feedbackReady = true;
-      var sectionCount = decorateFeedbackSections();
-      if (!sectionCount) return;
+      var page = document.querySelector(collaborationPageSelector());
+      if (!page) return;
+      decorateFeedbackSections();
       ensureFeedbackModal();
       initSelectionFeedback();
     }
 
     function collaborationPageSelector() {
-      return '.page:not(#startseite):not(#kontakt):not(#impressum):not(#datenschutz):not(#mitmachen):not(#selbsttest)';
+      return '.page';
     }
 
     function collapseText(value) {
