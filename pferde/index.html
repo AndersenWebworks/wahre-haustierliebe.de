@@ -728,21 +728,21 @@
     }
 
     .feedback-dialog {
-      width: min(56rem, calc(100vw - 2.5rem));
-      max-height: min(24rem, calc(100dvh - 2.5rem));
+      width: min(42rem, calc(100vw - 2.5rem));
+      max-height: min(90dvh, calc(100dvh - 2.5rem));
       overflow: auto;
       border: 1px solid rgba(42, 123, 111, 0.16);
-      border-radius: 1.25rem;
+      border-radius: 1rem;
       background: var(--white);
-      box-shadow: 0 24px 70px rgba(31, 58, 47, 0.22);
+      box-shadow: 0 22px 60px rgba(31, 58, 47, 0.2);
     }
 
     .feedback-dialog-head {
-      padding: 1rem 1.25rem 0.7rem;
+      padding: 0.82rem 1rem 0.68rem;
     }
 
     .feedback-dialog-body {
-      padding: 0.85rem 1.25rem 1.05rem;
+      padding: 0.8rem 1rem 0.95rem;
     }
 
     .feedback-dialog-head {
@@ -755,14 +755,19 @@
 
     .feedback-dialog-body {
       display: grid;
-      grid-template-columns: minmax(14rem, 0.72fr) minmax(22rem, 1.28fr);
-      gap: 0.65rem 1rem;
+      grid-template-columns: 1fr;
+      gap: 0.62rem;
       align-items: start;
+    }
+
+    .feedback-dialog-body:has(.feedback-quote:not([hidden])) {
+      grid-template-columns: minmax(13rem, 0.72fr) minmax(20rem, 1.28fr);
+      gap: 0.65rem 0.9rem;
     }
 
     .feedback-dialog-head h2 {
       margin: 0;
-      font-size: 1.18rem;
+      font-size: 1.08rem;
       line-height: 1.12;
     }
 
@@ -783,8 +788,8 @@
 
     .feedback-close {
       flex: 0 0 auto;
-      width: 1.95rem;
-      height: 1.95rem;
+      width: 1.75rem;
+      height: 1.75rem;
       border: 1px solid var(--border);
       border-radius: 50%;
       background: var(--white);
@@ -797,19 +802,25 @@
     .feedback-context,
     .feedback-quote {
       margin: 0;
-      padding: 0.62rem 0.72rem;
+      padding: 0.58rem 0.65rem;
       border: 1px solid rgba(42, 123, 111, 0.1);
-      border-radius: 0.95rem;
-      background: rgba(228, 244, 238, 0.74);
+      border-radius: 0.75rem;
+      background: rgba(228, 244, 238, 0.62);
       color: var(--text-muted);
-      font-size: 0.8rem;
-      line-height: 1.34;
+      font-size: 0.78rem;
+      line-height: 1.32;
     }
 
     .feedback-dialog-body form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.5rem 0.65rem;
+      min-width: 0;
+    }
+
+    .feedback-dialog-body:has(.feedback-quote:not([hidden])) form {
       grid-column: 2;
       grid-row: 1 / span 2;
-      min-width: 0;
     }
 
     .feedback-quote strong,
@@ -819,6 +830,14 @@
       color: var(--primary-dark);
       font-size: 0.78rem;
       line-height: 1.15;
+    }
+
+    .feedback-context span {
+      display: block;
+    }
+
+    .feedback-context span + span {
+      margin-top: 0.1rem;
     }
 
     .feedback-quote blockquote {
@@ -838,12 +857,16 @@
     .feedback-field {
       display: grid;
       gap: 0.22rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
+    }
+
+    .feedback-field:first-child {
+      grid-column: 1 / -1;
     }
 
     .feedback-field label {
       color: var(--primary-dark);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 800;
     }
 
@@ -855,13 +878,13 @@
       background: var(--white);
       color: var(--text);
       font-family: inherit;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       line-height: 1.32;
-      padding: 0.52rem 0.62rem;
+      padding: 0.48rem 0.58rem;
     }
 
     .feedback-field textarea {
-      min-height: 5rem;
+      min-height: 4.2rem;
       resize: vertical;
     }
 
@@ -882,18 +905,20 @@
       flex-wrap: wrap;
       gap: 0.45rem;
       align-items: center;
-      margin-top: 0.4rem;
+      align-self: end;
+      margin: 0;
     }
 
     .feedback-actions .btn {
-      min-height: 2.35rem;
-      padding: 0.56rem 0.88rem;
-      font-size: 0.86rem;
+      min-height: 2.25rem;
+      padding: 0.5rem 0.82rem;
+      font-size: 0.84rem;
       line-height: 1.1;
     }
 
     .feedback-status {
-      margin: 0.35rem 0 0;
+      grid-column: 1 / -1;
+      margin: 0;
       color: var(--text-muted);
       font-size: 0.82rem;
     }
@@ -959,11 +984,22 @@
         border-radius: 18px 18px 0 0;
       }
 
+      .feedback-dialog-head {
+        padding: 0.85rem 1rem 0.7rem;
+      }
+
+      .feedback-dialog-body {
+        padding: 0.75rem 1rem 1rem;
+      }
+
       .feedback-dialog-body {
         display: block;
       }
 
       .feedback-dialog-body form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.55rem;
         grid-column: auto;
         grid-row: auto;
       }
@@ -5062,4 +5098,4 @@
   <script src="../assets/site.js" defer=""></script>
 
 
-<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle oder Link optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>

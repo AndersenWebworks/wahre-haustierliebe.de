@@ -1176,7 +1176,7 @@ function normalizeAssetUrls(root) {
           '        <textarea id="feedback-message" name="message" required placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>',
           '      </div>',
           '      <div class="feedback-field">',
-          '        <label for="feedback-source">Quelle oder Link optional</label>',
+          '        <label for="feedback-source">Quelle optional</label>',
           '        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">',
           '      </div>',
           '      <div class="sr-only" aria-hidden="true">',
@@ -1304,9 +1304,9 @@ function normalizeAssetUrls(root) {
       var context = feedbackModal.querySelector('[data-feedback-context]');
       var quoteWrap = feedbackModal.querySelector('[data-feedback-quote-wrap]');
       var quote = feedbackModal.querySelector('[data-feedback-quote]');
-      var contextHtml = '<strong>Bezug</strong>' + escapeFeedbackHtml(feedbackState.pageTitle || 'Aktuelle Seite');
+      var contextHtml = '<strong>Bezug</strong><span>' + escapeFeedbackHtml(feedbackState.pageTitle || 'Aktuelle Seite') + '</span>';
       if (feedbackState.sectionTitle) {
-        contextHtml += '<br>Abschnitt: ' + escapeFeedbackHtml(feedbackState.sectionTitle);
+        contextHtml += '<span>Abschnitt: ' + escapeFeedbackHtml(feedbackState.sectionTitle) + '</span>';
       }
       context.innerHTML = contextHtml;
 
