@@ -12,6 +12,7 @@ const { chromium } = playwright.default ?? playwright;
 const articlePages = [
   'mensch',
   'hunde',
+  'hund-im-buero',
   'katzen',
   'voegel',
   'kleintiere',
@@ -36,6 +37,7 @@ const articlePages = [
 const pageFiles = {
   mensch: 'mensch/index.html',
   hunde: 'hunde/index.html',
+  'hund-im-buero': 'hund-im-buero/index.html',
   katzen: 'katzen/index.html',
   voegel: 'voegel/index.html',
   kleintiere: 'kleintiere/index.html',

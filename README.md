@@ -9,6 +9,7 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `index.html`
 - `mensch/index.html`
 - `hunde/index.html`
+- `hund-im-buero/index.html`
 - `katzen/index.html`
 - `voegel/index.html`
 - `kleintiere/index.html`

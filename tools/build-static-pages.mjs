@@ -11,7 +11,7 @@ const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
 const siteName = 'Wa(h)re Haustier(liebe)';
-const lastmod = '2026-06-10';
+const lastmod = '2026-06-11';
 const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Wa(h)re Haustier(liebe)">
   <path fill="#b91f2f" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Z"/>
   <path fill="#8f1524" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Zm0-3.1.8-.7c6.1-5 9.5-8.3 9.5-13.9 0-3-2.1-5.1-4.9-5.1-2.3 0-4 1.4-4.8 4.1h-1.2c-.8-2.7-2.5-4.1-4.8-4.1-2.8 0-4.9 2.1-4.9 5.1 0 5.6 3.4 8.9 9.5 13.9l.8.7Z" opacity=".65"/>
@@ -83,6 +83,14 @@ const pages = [
     description: 'Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.',
     intent: 'Hund anschaffen oder Hundehaltung verbessern',
     priority: '0.9',
+  },
+  {
+    id: 'hund-im-buero',
+    slug: 'hund-im-buero',
+    title: 'Hund im Büro: Wann ein Bürohund wirklich passt',
+    description: 'Bürohund ehrlich prüfen: Rückzugsort, Ruhe, Regeln, Pausen, Zustimmung im Team und Warnzeichen, dass der Arbeitsplatz für den Hund zu viel ist.',
+    intent: 'Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen',
+    priority: '0.8',
   },
   {
     id: 'katzen',
@@ -275,6 +283,10 @@ const faqByPage = {
     ['Wie lange darf ein Hund allein zu Hause bleiben?', 'Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.'],
     ['Was kostet ein Hund im Monat?', 'Für einen mittelgroßen Hund sind laufend etwa 100-200 Euro pro Monat realistisch. Über ein Hundeleben können 12.000-20.000 Euro zusammenkommen.'],
   ],
+  'hund-im-buero': [
+    ['Ist ein Hund im Büro automatisch besser als Alleinbleiben?', 'Nein. Ein Büro kann eine gute Lösung sein, wenn der Hund dort wirklich zur Ruhe kommt, betreut wird und einen geschützten Platz hat. Ist er dauerhaft gestresst, ist eine andere Betreuung fairer.'],
+    ['Darf ein Bürohund in einer Box liegen?', 'Als freiwilliger, offener Rückzugsort kann eine Box sinnvoll sein. Als geschlossene Aufbewahrung über Stunden ist sie kein fairer Büroalltag und kann tierschutzrechtlich problematisch sein.'],
+  ],
   katzen: [
     ['Warum sollte ich meine Katze kastrieren lassen?', 'Kastration schützt vor Stress, hormonbedingten Erkrankungen und unkontrollierter Vermehrung. Besonders bei Freigängern ist sie praktischer Tierschutz.'],
   ],
@@ -330,6 +342,30 @@ const evidenceByPage = {
       'Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.',
       'Zwingerhaltung nicht als verboten darstellen; verboten ist grundsätzlich die Anbindehaltung, während Zwingerhaltung nur unter Mindestanforderungen zulässig ist.',
       'Medizinische Symptome gehören in eine Tierarztpraxis.',
+    ],
+  },
+  'hund-im-buero': {
+    facts: [
+      'Ein Bürohund profitiert nur, wenn der Arbeitsplatz hundegerecht organisiert ist und der Hund dort tatsächlich entspannen kann.',
+      'Rückzugsort, frisches Wasser, geplante Pausen, Aufsicht und klare Regeln für Kolleginnen und Kollegen sind Grundbedingungen.',
+      'Genehmigung, Zustimmung im Team, Hygiene, Sicherheit, Allergien, Ängste und hundefreie Bereiche gehören vorab geklärt.',
+      'Ein Hund darf nicht als Stimmungsmacher, Pausenclown oder dauerhaft verfügbare Attraktion behandelt werden.',
+      'Verschlossene Boxen über längere Zeit sind kein Ersatz für Ruhe, Betreuung, Bewegung und einen freiwillig nutzbaren Rückzugsort.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Aktionstag Kollege Hund', 'https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hunde-im-buero-aktionstag-kollege-hund/'],
+      ['Deutscher Tierschutzbund: Leitfaden für hundefreundliche Arbeitsplätze', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Kollege_Hund_Leitfaden_fuer_hundefreundliche_Arbeitsplaetze.pdf'],
+      ['Deutscher Tierschutzbund: Richtlinien und Guidelines für Hunde im Büro', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Kollege_Hund__Richtlinien_und_Guidelines_fuer_Hunde_im_Buero.pdf'],
+      ['Tierschutz-Hundeverordnung § 2', 'https://www.gesetze-im-internet.de/tierschhuv/__2.html'],
+      ['DGUV top eins: Hund am Arbeitsplatz', 'https://topeins.dguv.de/recht/hunde-am-arbeitsplatz/'],
+      ['Bayerisches LGL: Hundeboxen und Tierschutz', 'https://www.lgl.bayern.de/tiergesundheit/tierschutz/jb22_tierschutzwidriges_zubehoer.htm'],
+      ['TASSO e. V.: Körpersprache beim Hund', 'https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund'],
+    ],
+    guardrails: [
+      'Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.',
+      'Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.',
+      'Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.',
+      'Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.',
     ],
   },
   katzen: {
@@ -694,6 +730,13 @@ const firstContentImageByPage = {
     type: 'image/jpeg',
     alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.',
   },
+  'hund-im-buero': {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Hund in einer ruhigen Praxisumgebung als Bild für kontrollierte, betreute Innenräume.',
+  },
   katzen: {
     src: 'assets/images/two-cats-window.jpg',
     width: 843,
@@ -860,6 +903,11 @@ const socialCopyByPage = {
     title: 'Hund halten: Zeit, Kosten, Alltag',
     description: 'Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.',
   },
+  'hund-im-buero': {
+    eyebrow: 'Bürohund ehrlich prüfen',
+    title: 'Hund im Büro: passt das wirklich?',
+    description: 'Fünf Fragen zu Ruhe, Rückzug, Regeln, Pausen und Stresssignalen, bevor ein Hund mit ins Büro kommt.',
+  },
   katzen: {
     eyebrow: 'Katzenhaltung ohne Wunschbild',
     title: 'Katzen halten: Wohnung, Freigang, Kastration',
@@ -981,6 +1029,7 @@ const keywordByPage = {
   startseite: ['Haustierhaltung', 'Tierwohl', 'Tierschutz', 'Adoption', 'Qualzucht', 'Tiernotfall'],
   mensch: ['Haustier anschaffen', 'Haustierkauf', 'Verantwortung', 'Kosten', 'Alltag'],
   hunde: ['Hund halten', 'Hund anschaffen', 'Hundekosten', 'Alleinbleiben', 'Erziehung', 'Zwingerhaltung'],
+  'hund-im-buero': ['Hund im Büro', 'Bürohund', 'Kollege Hund', 'Hund am Arbeitsplatz', 'Hundehaltung'],
   katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
   voegel: ['Vögel halten', 'Wellensittiche', 'Schwarmhaltung', 'Freiflug', 'UV-Licht'],
   kleintiere: ['Kleintiere halten', 'Kaninchen', 'Meerschweinchen', 'Hamster', 'Ratten'],

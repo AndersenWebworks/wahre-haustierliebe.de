@@ -6,6 +6,7 @@ var staticPageRoutes = {
   "mitmachen": "/mitmachen/index.html",
   "mensch": "/mensch/index.html",
   "hunde": "/hunde/index.html",
+  "hund-im-buero": "/hund-im-buero/index.html",
   "katzen": "/katzen/index.html",
   "voegel": "/voegel/index.html",
   "kleintiere": "/kleintiere/index.html",
@@ -48,6 +49,7 @@ function normalizeAssetUrls(root) {
     var articleHeroImages = {
       'mensch': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Katze in Transporttasche als Bild für ehrliche Vorbereitung vor dem Einzug', position: 'center 46%', caption: 'Ein Tier zieht nicht in ein Gefühl ein, sondern in einen vorbereiteten Alltag.', purpose: 'Mensch-Seite: Vorbereitung und Verantwortung statt spontanes Wunschbild zeigen', shareReason: 'Das Bild soll den Satz stützen: Vor einem Tier kommt die ehrliche Entscheidung.' },
       'hunde': { src: 'assets/images/golden-retriever-agility-jump.jpg', alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung', position: 'center 48%', caption: 'Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.', purpose: 'Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen', shareReason: 'Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen.' },
+      'hund-im-buero': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund in einer ruhigen Praxisumgebung als Bild für kontrollierte, betreute Innenräume', position: 'center 55%', caption: 'Mitnehmen reicht nicht. Der Hund muss auch im Büro wirklich zur Ruhe kommen.', purpose: 'Bürohund-Seite: betreute Innenräume und Ruhe statt niedlicher Bürohund-Inszenierung zeigen', shareReason: 'Das Bild soll die Checkliste als echte Prüfung statt Feelgood-Thema rahmen.' },
       'katzen': { src: 'assets/images/two-cats-window.jpg', alt: 'Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung', position: 'center 48%', caption: 'Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.', purpose: 'Katzen-Seite: stille Bedürfnisse sichtbar machen', shareReason: 'Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer.' },
       'voegel': { src: 'assets/images/voegel-voliere-02.jpg', alt: 'Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum', position: 'center 44%', caption: 'Schwarm, Flugraum und Reize sind kein Extra.', purpose: 'Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen', shareReason: 'Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen.' },
       'kleintiere': { src: 'assets/images/guinea-pig-habitat.jpg', alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung', position: 'center 50%', caption: 'Kleintiere brauchen Fläche, Struktur und Artgenossen.', purpose: 'Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen', shareReason: 'Das Bild soll den Mythos vom einfachen Einstiegstier brechen.' },
@@ -625,6 +627,7 @@ function normalizeAssetUrls(root) {
       var labels = {
         mensch: ['Vor dem Kauf', 'Selbstlügen prüfen', 'Verzicht ist erlaubt'],
         hunde: ['4–5 h allein', '12–20 Tsd. €', 'Beziehung täglich'],
+        'hund-im-buero': ['Rückzug', 'klare Regeln', 'Stress sehen'],
         katzen: ['Nicht allein denken', 'Kastration schützt', 'Leises Leiden'],
         voegel: ['Schwarm statt Spiegel', 'UV-Licht', 'Freiflug'],
         kleintiere: ['Klein ist nicht einfach', 'Fläche', 'Zähne und Tierarzt'],
@@ -1164,7 +1167,7 @@ function normalizeAssetUrls(root) {
           '  <div class="feedback-dialog-head">',
           '    <div>',
           '      <h2 id="feedback-title">Hinweis geben</h2>',
-          '      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/">Mitmachen-Seite</a>.</p>',
+          '      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/index.html">Mitmachen-Seite</a>.</p>',
           '    </div>',
           '    <button type="button" class="feedback-close" data-feedback-close aria-label="Hinweisformular schließen">×</button>',
           '  </div>',

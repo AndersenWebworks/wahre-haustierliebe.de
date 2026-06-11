@@ -22,6 +22,7 @@
 - Mitmachen! - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/mitmachen/index.html
 - Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?: https://wahre-haustierliebe.de/mensch/index.html
 - Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
+- Hund im Büro: Wann ein Bürohund wirklich passt: https://wahre-haustierliebe.de/hund-im-buero/index.html
 - Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: https://wahre-haustierliebe.de/katzen/index.html
 - Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler: https://wahre-haustierliebe.de/voegel/index.html
 - Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten: https://wahre-haustierliebe.de/kleintiere/index.html
@@ -52,6 +53,7 @@
 - https://wahre-haustierliebe.de/mitmachen/index.html - Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen
 - https://wahre-haustierliebe.de/mensch/index.html - Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen
 - https://wahre-haustierliebe.de/hunde/index.html - Hund anschaffen oder Hundehaltung verbessern
+- https://wahre-haustierliebe.de/hund-im-buero/index.html - Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen
 - https://wahre-haustierliebe.de/katzen/index.html - Katze anschaffen oder Katzenhaltung artgerechter machen
 - https://wahre-haustierliebe.de/voegel/index.html - Vogelhaltung und Wellensittichhaltung prüfen
 - https://wahre-haustierliebe.de/kleintiere/index.html - Kaninchen, Meerschweinchen, Hamster oder Ratten verantwortungsvoll halten
@@ -105,6 +107,28 @@ Sources:
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
 - Tierschutz-Hundeverordnung: https://www.gesetze-im-internet.de/tierschhuv/
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
+
+### Hund im Büro: Wann ein Bürohund wirklich passt
+URL: https://wahre-haustierliebe.de/hund-im-buero/index.html
+Facts:
+- Ein Bürohund profitiert nur, wenn der Arbeitsplatz hundegerecht organisiert ist und der Hund dort tatsächlich entspannen kann.
+- Rückzugsort, frisches Wasser, geplante Pausen, Aufsicht und klare Regeln für Kolleginnen und Kollegen sind Grundbedingungen.
+- Genehmigung, Zustimmung im Team, Hygiene, Sicherheit, Allergien, Ängste und hundefreie Bereiche gehören vorab geklärt.
+- Ein Hund darf nicht als Stimmungsmacher, Pausenclown oder dauerhaft verfügbare Attraktion behandelt werden.
+- Verschlossene Boxen über längere Zeit sind kein Ersatz für Ruhe, Betreuung, Bewegung und einen freiwillig nutzbaren Rückzugsort.
+Do not flatten:
+- Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.
+- Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.
+- Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.
+- Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.
+Sources:
+- Deutscher Tierschutzbund: Aktionstag Kollege Hund: https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hunde-im-buero-aktionstag-kollege-hund/
+- Deutscher Tierschutzbund: Leitfaden für hundefreundliche Arbeitsplätze: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Kollege_Hund_Leitfaden_fuer_hundefreundliche_Arbeitsplaetze.pdf
+- Deutscher Tierschutzbund: Richtlinien und Guidelines für Hunde im Büro: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Kollege_Hund__Richtlinien_und_Guidelines_fuer_Hunde_im_Buero.pdf
+- Tierschutz-Hundeverordnung § 2: https://www.gesetze-im-internet.de/tierschhuv/__2.html
+- DGUV top eins: Hund am Arbeitsplatz: https://topeins.dguv.de/recht/hunde-am-arbeitsplatz/
+- Bayerisches LGL: Hundeboxen und Tierschutz: https://www.lgl.bayern.de/tiergesundheit/tierschutz/jb22_tierschutzwidriges_zubehoer.htm
+- TASSO e. V.: Körpersprache beim Hund: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund
 
 ### Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale
 URL: https://wahre-haustierliebe.de/katzen/index.html
@@ -397,5 +421,5 @@ Sources:
 
 ## Last Updated
 
-2026-06-10
+2026-06-11
 

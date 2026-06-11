@@ -12,8 +12,10 @@ const pages = [
   { id: 'impressum', file: 'impressum/index.html', canonical: `${baseUrl}/impressum/index.html` },
   { id: 'datenschutz', file: 'datenschutz/index.html', canonical: `${baseUrl}/datenschutz/index.html` },
   { id: 'kontakt', file: 'kontakt/index.html', canonical: `${baseUrl}/kontakt/index.html` },
+  { id: 'mitmachen', file: 'mitmachen/index.html', canonical: `${baseUrl}/mitmachen/index.html` },
   { id: 'mensch', file: 'mensch/index.html', canonical: `${baseUrl}/mensch/index.html` },
   { id: 'hunde', file: 'hunde/index.html', canonical: `${baseUrl}/hunde/index.html` },
+  { id: 'hund-im-buero', file: 'hund-im-buero/index.html', canonical: `${baseUrl}/hund-im-buero/index.html` },
   { id: 'katzen', file: 'katzen/index.html', canonical: `${baseUrl}/katzen/index.html` },
   { id: 'voegel', file: 'voegel/index.html', canonical: `${baseUrl}/voegel/index.html` },
   { id: 'kleintiere', file: 'kleintiere/index.html', canonical: `${baseUrl}/kleintiere/index.html` },
@@ -59,6 +61,11 @@ function isExternalHref(href) {
 function fileForHref(page, href) {
   const clean = stripHash(href);
   if (!clean || clean === '.') return path.join(projectRoot, page.file);
+  if (clean.startsWith('/')) {
+    let rooted = path.join(projectRoot, clean.slice(1));
+    if (clean.endsWith('/') || !path.extname(clean)) rooted = path.join(rooted, 'index.html');
+    return rooted;
+  }
   const baseDir = path.dirname(path.join(projectRoot, page.file));
   let resolved = path.resolve(baseDir, clean);
   if (clean.endsWith('/') || !path.extname(clean)) resolved = path.join(resolved, 'index.html');

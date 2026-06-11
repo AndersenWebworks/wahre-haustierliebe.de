@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-10",
+  "lastUpdated": "2026-06-11",
   "site": "Wa(h)re Haustier(liebe)",
   "url": "https://wahre-haustierliebe.de/",
   "pages": [
@@ -215,6 +215,71 @@
         "description": "Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde.png",
         "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "hund-im-buero",
+      "url": "https://wahre-haustierliebe.de/hund-im-buero/index.html",
+      "title": "Hund im Büro: Wann ein Bürohund wirklich passt",
+      "description": "Bürohund ehrlich prüfen: Rückzugsort, Ruhe, Regeln, Pausen, Zustimmung im Team und Warnzeichen, dass der Arbeitsplatz für den Hund zu viel ist.",
+      "intent": "Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen",
+      "keywords": [
+        "Hund im Büro",
+        "Bürohund",
+        "Kollege Hund",
+        "Hund am Arbeitsplatz",
+        "Hundehaltung"
+      ],
+      "facts": [
+        "Ein Bürohund profitiert nur, wenn der Arbeitsplatz hundegerecht organisiert ist und der Hund dort tatsächlich entspannen kann.",
+        "Rückzugsort, frisches Wasser, geplante Pausen, Aufsicht und klare Regeln für Kolleginnen und Kollegen sind Grundbedingungen.",
+        "Genehmigung, Zustimmung im Team, Hygiene, Sicherheit, Allergien, Ängste und hundefreie Bereiche gehören vorab geklärt.",
+        "Ein Hund darf nicht als Stimmungsmacher, Pausenclown oder dauerhaft verfügbare Attraktion behandelt werden.",
+        "Verschlossene Boxen über längere Zeit sind kein Ersatz für Ruhe, Betreuung, Bewegung und einen freiwillig nutzbaren Rückzugsort."
+      ],
+      "citationGuardrails": [
+        "Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.",
+        "Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.",
+        "Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.",
+        "Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Aktionstag Kollege Hund",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hunde-im-buero-aktionstag-kollege-hund/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Leitfaden für hundefreundliche Arbeitsplätze",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Kollege_Hund_Leitfaden_fuer_hundefreundliche_Arbeitsplaetze.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Richtlinien und Guidelines für Hunde im Büro",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Kollege_Hund__Richtlinien_und_Guidelines_fuer_Hunde_im_Buero.pdf"
+        },
+        {
+          "label": "Tierschutz-Hundeverordnung § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschhuv/__2.html"
+        },
+        {
+          "label": "DGUV top eins: Hund am Arbeitsplatz",
+          "url": "https://topeins.dguv.de/recht/hunde-am-arbeitsplatz/"
+        },
+        {
+          "label": "Bayerisches LGL: Hundeboxen und Tierschutz",
+          "url": "https://www.lgl.bayern.de/tiergesundheit/tierschutz/jb22_tierschutzwidriges_zubehoer.htm"
+        },
+        {
+          "label": "TASSO e. V.: Körpersprache beim Hund",
+          "url": "https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund"
+        }
+      ],
+      "social": {
+        "title": "Hund im Büro: passt das wirklich? - Wa(h)re Haustier(liebe)",
+        "description": "Fünf Fragen zu Ruhe, Rückzug, Regeln, Pausen und Stresssignalen, bevor ein Hund mit ins Büro kommt.",
+        "image": "https://wahre-haustierliebe.de/assets/social/hund-im-buero.png",
+        "imageAlt": "Hund in einer ruhigen Praxisumgebung als Bild für kontrollierte, betreute Innenräume.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
