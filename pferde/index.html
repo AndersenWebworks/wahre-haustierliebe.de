@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4813,13 +4941,50 @@
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item active" data-page="pferde" href="../pferde/index.html" aria-current="page">Pferde</a>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+                <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item active" data-page="pferde" href="../pferde/index.html" aria-current="page">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
@@ -4828,9 +4993,7 @@
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4859,26 +5022,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link active" data-page="pferde" href="../pferde/index.html" aria-current="page">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+        <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link active" data-page="pferde" href="../pferde/index.html" aria-current="page">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4897,7 +5101,7 @@
         <h1>Pferde – eine Koppel allein reicht nicht</h1>
         <p>Auf dem Land hat gefühlt jeder zweite Pferde auf seinem Grundstück. Ob das dem Tier gerecht wird, fragt kaum jemand.</p>
       <div class="article-kicker"><span>Herde</span><span>Bewegung</span><span>Kosten über Jahre</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen" data-share-reason="Das Bild soll die große Verpflichtung konkret machen." style="--image-position: center 50%;"><img src="../assets/images/optimized/horse-paddocks-shelter.jpg" alt="Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme" loading="eager" decoding="async" width="640" height="480" fetchpriority="high"><figcaption class="context-caption">Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#pferde-herdentiere-keine-solisten">Herdentiere, keine Solisten</a></li><li><a href="#pferde-platzbedarf-die-unbequeme-wahrheit">Platzbedarf – die unbequeme Wahrheit</a></li><li><a href="#pferde-haltungsformen">Haltungsformen</a></li><li><a href="#pferde-kosten-pro-monat-nicht-pro-jahr">Kosten – pro Monat, nicht pro Jahr</a></li><li><a href="#pferde-reitbeteiligung-der-ehrlichere-einstieg">Reitbeteiligung – der ehrlichere Einstieg</a></li><li><a href="#pferde-bevor-du-dich-entscheidest">Bevor du dich entscheidest</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4916,11 +5120,11 @@
             <div class="metric-card"><strong>Herde</strong><span>Ein Pferd ist kein Solist. Sozialkontakt ist Grundbedürfnis.</span></div>
           </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-pferde-1">Herdentiere, keine Solisten</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-pferde-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="pferde-herdentiere-keine-solisten">Herdentiere, keine Solisten</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-herdentiere-keine-solisten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Pferde sind <span class="glossary-term" data-glossary-key="fluchttier" data-glossary-title="Fluchttier" data-glossary-text="Tier, das auf Gefahr zuerst mit Flucht reagiert und Festhalten oder Hochheben oft als Bedrohung erlebt." data-glossary-href="../glossar/index.html#fluchttier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Fluchttiere</span> und <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die soziale Sicherheit aus einer Gruppe zieht. Alleinhaltung erzeugt oft massiven Stress." data-glossary-href="../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. In der Natur leben sie in Familienverbänden, fressen zusammen, ruhen zusammen, bewegen sich zusammen. Ein Pferd allein auf einer Koppel ist ein Pferd in Isolation. Chronischer Stress, <span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Stereotypien (Koppen, Weben, Boxenlaufen)</span> und <span class="glossary-term" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren oft ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit." data-glossary-href="../glossar/index.html#apathie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Apathie</span> sind die Folge.</p>
         <p><strong>Mindestens ein <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenosse</span></strong> ist Pflicht. Andere Tiere (Esel, Ponys, Ziegen) können ein Pferd begleiten, ersetzen aber keinen echten Artgenossen der gleichen Art.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-pferde-2">Platzbedarf – die unbequeme Wahrheit</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-pferde-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="pferde-beschaeftigung">
+        <div class="section-feedback-heading"><h2 id="pferde-platzbedarf-die-unbequeme-wahrheit">Platzbedarf – die unbequeme Wahrheit</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-platzbedarf-die-unbequeme-wahrheit" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="pferde-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Pferde brauchen Bewegung, Beziehung und ruhige Lernmomente.</h3>
             <p>Beschäftigung ersetzt keine Herde und keine Fläche. Sie kann aber helfen, Vertrauen, Körpergefühl und Alltagssicherheit aufzubauen.</p>
@@ -4933,7 +5137,7 @@
         <p>Die <a href="https://www.pferdesport-deutschland.de/tierschutz/tierschutz" target="_blank" rel="noopener noreferrer">Leitlinien zur Pferdehaltung, auf die die FN verweist</a>, empfehlen für einen Offenstall mit Auslauf und Weide <strong>mindestens 150 m² befestigte Fläche pro Pferd</strong> plus Weidezugang. Für reine Weidehaltung werden je nach Bodenbeschaffenheit <strong>1.000–2.000 m² pro Pferd</strong> genannt – und selbst das ist ein Mindestmaß.</p>
         <p>Wildpferde legen 15–30 km am Tag zurück. Sie grasen dabei im Schritt – eine natürliche Kombination aus Bewegung und Nahrungsaufnahme, die keine Koppel der Welt vollständig ersetzen kann. Tägliches Reiten oder Bewegen ist Pflicht, nicht Bonus.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-pferde-3">Haltungsformen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-pferde-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm compare-mini" data-enhancement="pferde-haltung">
+        <div class="section-feedback-heading"><h2 id="pferde-haltungsformen">Haltungsformen</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-haltungsformen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm compare-mini" data-enhancement="pferde-haltung">
             <div class="compare-card good"><strong>Offenstall</strong><span>Bewegung, Luft, Herde und Rückzug zusammen gedacht.</span></div>
             <div class="compare-card risk"><strong>Box</strong><span>Nur mit viel Auslauf, Sozialkontakt und täglicher Bewegung vertretbar.</span></div>
             <div class="compare-card bad"><strong>Anbindung</strong><span>Dauerhafte Fixierung passt nicht zu einem Lauftier.</span></div>
@@ -4942,7 +5146,7 @@
         <p><strong><span class="glossary-term" data-glossary-key="boxenhaltung" data-glossary-title="Boxenhaltung" data-glossary-text="Pferdehaltung in Einzelboxen. Nur vertretbar, wenn täglich viel Bewegung und Sozialkontakt gesichert sind." data-glossary-href="../glossar/index.html#boxenhaltung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Boxenhaltung</span>:</strong> In vielen Reitställen Standard. Eine 3 × 3 m Box ist für ein Pferd, das in der Natur Kilometer zurücklegt, eine Zelle. Boxenhaltung ist nur vertretbar, wenn täglich mehrstündiger Auslauf und Sozialkontakt gewährleistet sind.</p>
         <p><strong><span class="glossary-term" data-glossary-key="anbindehaltung" data-glossary-title="Anbindehaltung" data-glossary-text="Haltung, bei der ein Tier dauerhaft oder lange angebunden ist und sich kaum frei bewegen kann." data-glossary-href="../glossar/index.html#anbindehaltung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Anbindehaltung</span>:</strong> In Teilen Deutschlands noch verbreitet, von Tierschutzorganisationen wie dem <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbund</a> klar abgelehnt. Das Tier kann sich nicht drehen, nicht liegen, nicht mit Artgenossen interagieren.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-pferde-4">Kosten – pro Monat, nicht pro Jahr</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-pferde-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="pferde-kosten-pro-monat-nicht-pro-jahr">Kosten – pro Monat, nicht pro Jahr</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-kosten-pro-monat-nicht-pro-jahr" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Monatlich</th></tr></thead>
           <tbody>
@@ -4957,7 +5161,7 @@
         </table>
         <p class="text-muted">Nicht eingerechnet: Reitunterricht, Turniergebühren, Notfall-OPs (<span class="glossary-term" data-glossary-key="kolik" data-glossary-title="Kolik" data-glossary-text="Sammelbegriff für Bauchschmerzen beim Pferd. Kann harmlos beginnen, aber lebensgefährlich werden." data-glossary-href="../glossar/index.html#kolik" aria-describedby="glossary-term-popover" tabindex="0" role="button">Koliken</span>: 3.000–10.000 Euro), <span class="glossary-term" data-glossary-key="hufrehe" data-glossary-title="Hufrehe" data-glossary-text="Schmerzhafte Entzündung im Hufbereich des Pferdes, die schnell schwer und chronisch werden kann." data-glossary-href="../glossar/index.html#hufrehe" aria-describedby="glossary-term-popover" tabindex="0" role="button">Hufreheschübe</span>, chronische Erkrankungen. Quelle: Zusammenstellung aus <a href="https://www.pferdesport-deutschland.de/tierschutz/tierschutz" target="_blank" rel="noopener noreferrer">FN</a>-Empfehlungen und Erhebungen der Pferdekostenstudie. Was dich die <a href="../mensch/index.html">Psychologie hinter der Entscheidung für ein Tier</a> lehrt: Kosten werden fast immer unterschätzt.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-pferde-5">Reitbeteiligung – der ehrlichere Einstieg</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-pferde-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="pferde-reitbeteiligung">
+        <div class="section-feedback-heading"><h2 id="pferde-reitbeteiligung-der-ehrlichere-einstieg">Reitbeteiligung – der ehrlichere Einstieg</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-reitbeteiligung-der-ehrlichere-einstieg" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="pferde-reitbeteiligung">
             <span class="eyebrow">Ehrlicher Einstieg</span>
             <h3>Eine Reitbeteiligung ist oft tierlieber als ein eigenes Pferd.</h3>
             <p>Wer Verantwortung lernen will, muss nicht sofort Besitz erzeugen. Zeit, Pflege und Verlässlichkeit zählen mehr als Eigentum.</p>
@@ -4968,7 +5172,7 @@
           </div>
         <p>Wer ein Pferd will, aber bei den Kosten, dem Zeitaufwand oder der Erfahrung unsicher ist: Eine Reitbeteiligung ist kein Kompromiss, sondern oft die bessere Wahl. Du teilst dir die Versorgung und die Kosten mit dem Besitzer, sammelst Erfahrung im Alltag mit einem Pferd und merkst nach ein paar Monaten, ob du wirklich bereit bist – oder ob die Vorstellung schöner war als die Realität. Viele Pferdebesitzer suchen aktiv nach zuverlässigen Reitbeteiligungen, weil sie Hilfe bei der täglichen Versorgung brauchen.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-pferde-6">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-pferde-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="pferde-bevor-du-dich-entscheidest">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-bevor-du-dich-entscheidest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul class="checklist">
           <li>Ich bin bereit, 25–35 Jahre Verantwortung zu tragen.</li>
           <li>Ich habe ein monatliches Budget von mindestens 400 Euro plus Rücklagen für Notfälle.</li>
@@ -4994,7 +5198,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Kosten nie nur als Kaufpreis darstellen.</li><li>Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.</li></ul>
+              <ul><li>Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.</li><li>Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.</li></ul>
             </article>
           </div>
         </div>

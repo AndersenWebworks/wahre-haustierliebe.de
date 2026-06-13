@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4846,13 +4974,50 @@
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item active" data-page="hunde" href="../hunde/index.html" aria-current="page">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item active" data-page="hunde" href="../hunde/index.html" aria-current="page">Hundehaltung</a>
+                <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
@@ -4861,9 +5026,7 @@
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4892,26 +5055,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link active" data-page="hunde" href="../hunde/index.html" aria-current="page">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link active" data-page="hunde" href="../hunde/index.html" aria-current="page">Hundehaltung</a>
+        <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4930,7 +5134,7 @@
         <h1>Hunde – was du wirklich wissen musst</h1>
         <p>Hunde sind Rudeltiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
       <div class="article-kicker"><span>4–5 h allein</span><span>12–20 Tsd. €</span><span>Beziehung täglich</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen" data-share-reason="Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen." style="--image-position: center 48%;"><img src="../assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung" loading="eager" decoding="async" width="960" height="643" fetchpriority="high"><figcaption class="context-caption">Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hunde-soziale-bedurfnisse-mehr-als-futter-und-gassi">Soziale Bedürfnisse: Mehr als Futter und Gassi</a></li><li><a href="#hunde-garten-ist-bonus-nicht-ersatz">Garten ist Bonus, nicht Ersatz</a></li><li><a href="#hunde-allein-zu-hause-die-ehrliche-rechnung">Allein zu Hause: Die ehrliche Rechnung</a></li><li><a href="#hunde-was-ein-hund-kostet-die-ehrliche-rechnung">Was ein Hund kostet – die ehrliche Rechnung</a></li><li><a href="#hunde-kastration">Kastration</a></li><li><a href="#hunde-hofhaltung-und-zwinger">Hofhaltung und Zwinger</a></li><li><a href="#hunde-haufige-gesundheitsprobleme">Häufige Gesundheitsprobleme</a></li><li><a href="#hunde-bevor-du-dich-entscheidest">Bevor du dich entscheidest</a></li><li><a href="#hunde-haufige-fragen">Häufige Fragen</a></li><li><a href="#hunde-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4949,7 +5153,7 @@
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-1">Soziale Bedürfnisse: Mehr als Futter und Gassi</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
+        <div class="section-feedback-heading"><h2 id="hunde-soziale-bedurfnisse-mehr-als-futter-und-gassi">Soziale Bedürfnisse: Mehr als Futter und Gassi</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-soziale-bedurfnisse-mehr-als-futter-und-gassi" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Ein Hund braucht Aufgaben, die ihn ruhiger und sicherer machen.</h3>
             <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen“, sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
@@ -4969,11 +5173,11 @@
           <li>Kontakt zu anderen Hunden (<span class="glossary-term" data-glossary-key="sozialisation" data-glossary-title="Sozialisation" data-glossary-text="Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen und Artgenossen kennenlernen." data-glossary-href="../glossar/index.html#sozialisation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Sozialverhalten</span> muss gelernt und gepflegt werden)</li>
         </ul>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-2">Garten ist Bonus, nicht Ersatz</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hunde-garten-ist-bonus-nicht-ersatz">Garten ist Bonus, nicht Ersatz</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-garten-ist-bonus-nicht-ersatz" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ein Garten ist gut, wenn ein Hund zusätzlich schnüffeln, dösen oder spielen kann. Er ersetzt aber nicht den täglichen Auslauf in anderer Umgebung. Die Tierschutz-Hundeverordnung verlangt ausreichend Auslauf im Freien, Umgang mit der Betreuungsperson und regelmäßig möglichen Kontakt zu Artgenossen. Auslauf und Sozialkontakte müssen zu Rasse, Alter und Gesundheitszustand des Hundes passen.</p>
         <p>Wichtig ist deshalb nicht eine starre Minutenformel, sondern die Wirkung: Der Hund muss raus aus der immer gleichen Haltungsumgebung. Ein Garten ist schnell bekanntes Revier. Spaziergänge bringen neue Gerüche, Orientierung, Bewegung, Begegnungen und gemeinsames Erkunden. Genau das fehlt, wenn ein Hund zwar draußen ist, aber sein Grundstück praktisch nie verlässt.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-3">Allein zu Hause: Die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
+        <div class="section-feedback-heading"><h2 id="hunde-allein-zu-hause-die-ehrliche-rechnung">Allein zu Hause: Die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-allein-zu-hause-die-ehrliche-rechnung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht.“</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Spaziergänge, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Ein Hund wartet auf dich.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
           </div>
@@ -4989,7 +5193,7 @@
           <p><strong>Wer an den meisten Tagen 8 Stunden oder länger außer Haus ist</strong> und niemand sich um den Hund kümmert, für den passt ein Hund in dieser Lebensphase nicht. Das ist keine Moralkeule – das ist Tierschutzrealität.</p>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-4">Was ein Hund kostet – die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hunde-was-ein-hund-kostet-die-ehrliche-rechnung">Was ein Hund kostet – die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-was-ein-hund-kostet-die-ehrliche-rechnung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
           <tbody>
@@ -5006,17 +5210,17 @@
         </table>
         <p class="text-muted">Angaben: Durchschnittswerte für mittelgroße Hunde. Große Rassen, chronische Erkrankungen oder Spezialfutter können deutlich teurer werden. Quelle: Zusammenstellung aus Angaben des <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbundes</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a> und der <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-5">Kastration</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hunde-kastration">Kastration</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-kastration" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Kastration ist beim Hund keine Routine, sondern eine Einzelfallentscheidung – anders als bei <a href="../katzen/index.html">Katzen</a>. Bei Rüden kann sie sinnvoll sein, wenn hormonbedingtes Problemverhalten vorliegt (Aggression, exzessives Markieren, Streunen). Bei Hündinnen schützt sie vor Gebärmutterentzündung (<span class="glossary-term" data-glossary-key="pyometra" data-glossary-title="Pyometra" data-glossary-text="Gebärmuttervereiterung. Lebensbedrohlich und bei unkastrierten Hündinnen und Katzen ein Notfall." data-glossary-href="../glossar/index.html#pyometra" aria-describedby="glossary-term-popover" tabindex="0" role="button">Pyometra</span>) und senkt das Risiko für Mammatumoren, wenn sie vor der zweiten Läufigkeit erfolgt. Ausführliche Infos zu Eingriffsarten, Kosten und Mythen findest du auf der Seite <a href="../kastration/index.html">Kastration</a>.</p>
         <p>Die Kosten nach der aktuellen <span class="glossary-term" data-glossary-key="got" data-glossary-title="GOT" data-glossary-text="Gebührenordnung für Tierärzte. Sie regelt, wie tierärztliche Leistungen in Deutschland abgerechnet werden." data-glossary-href="../glossar/index.html#got" aria-describedby="glossary-term-popover" tabindex="0" role="button">Gebührenordnung für Tierärzte</span> (GOT 2022): <strong>Rüde ca. 200–400 Euro, Hündin ca. 400–800 Euro</strong> – abhängig von Größe, Gewicht und Praxis.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-6">Hofhaltung und Zwinger</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hunde-hofhaltung-und-zwinger">Hofhaltung und Zwinger</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-hofhaltung-und-zwinger" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Auf dem Land weit verbreitet: der Hund lebt draußen, auf dem Hof, vielleicht im Zwinger. Das ist nicht automatisch verboten, aber es ist auch kein Freibrief. Die <a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tierschutz-hundeverordnung" data-glossary-title="Tierschutz-Hundeverordnung" data-glossary-text="Deutsche Verordnung mit Mindestanforderungen an Hundehaltung, etwa Auslauf, Sozialkontakt und Zwingerhaltung." data-glossary-href="../glossar/index.html#tierschutz-hundeverordnung" aria-describedby="glossary-term-popover">Tierschutz-Hundeverordnung</span></a> regelt Mindestanforderungen: Zwingergröße abhängig von der Schulterhöhe, ausreichend Auslauf im Freien außerhalb des Zwingers, Witterungsschutz, Umgang mit einer Betreuungsperson und regelmäßig möglichen Kontakt zu Artgenossen.</p>
         <p>Wichtig: Seit der Reform ist vor allem die <span class="glossary-term" data-glossary-key="anbindehaltung" data-glossary-title="Anbindehaltung" data-glossary-text="Haltung, bei der ein Tier dauerhaft oder lange angebunden ist und sich kaum frei bewegen kann." data-glossary-href="../glossar/index.html#anbindehaltung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Anbindehaltung</span> grundsätzlich verboten. Zwingerhaltung bleibt rechtlich möglich, aber nur als enger Rahmen, nicht als Dauerersatz für Alltag, Beziehung und Bewegung. Ein Hund, der den größten Teil seines Lebens allein hinter Gittern oder auf demselben Hofstück verbringt, bekommt nicht das, was die Verordnung eigentlich meint.</p>
         <p>Dass man solche Haltungen trotzdem noch sieht, liegt nicht daran, dass sie automatisch in Ordnung wären. Oft wird erst kontrolliert, wenn jemand konkrete Hinweise gibt. Dazu kommt die alte Hofhund-Logik: „Der hat doch Platz und frische Luft.“ Platz ersetzt aber keinen Auslauf außerhalb, keine Beschäftigung und keinen sozialen Anschluss.</p>
         <p>Problematisch wird es, wenn der Hund als Alarmanlage gehalten wird. Den ganzen Tag allein auf dem Hof, ohne Beschäftigung, ohne echte Beziehung zu Menschen. Ein Hund, der nur bellt, wenn jemand kommt, und ansonsten allein existiert, ist kein glücklicher Hund – egal wie groß der Garten ist. Mehr über <a href="../mensch/index.html">die Psychologie hinter solcher Tierhaltung</a>.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-7">Häufige Gesundheitsprobleme</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hunde-haufige-gesundheitsprobleme">Häufige Gesundheitsprobleme</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-haufige-gesundheitsprobleme" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="accordion-group">
           <div class="accordion">
             <button class="accordion-header" onclick="toggleAccordion(this)" id="accordion-0-button" type="button" aria-controls="accordion-0-panel" aria-expanded="false">Übergewicht – das häufigste Gesundheitsproblem</button>
@@ -5044,10 +5248,10 @@
           </div>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hunde-8">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hunde-8" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="hunde-share">
+        <div class="section-feedback-heading"><h2 id="hunde-bevor-du-dich-entscheidest">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-bevor-du-dich-entscheidest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
             <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
-            <p>Diese Seite gehört zu Menschen, die den Hundewunsch ernst meinen und deshalb zuerst ihren Alltag prüfen sollten.</p>
+            <p>Diese Seite ist für Menschen, die den Hundewunsch ernst meinen und zuerst ihren Alltag prüfen.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -5069,7 +5273,7 @@
 
         <div class="article-rhythm faq-block" data-faq-block="hunde">
           <span class="eyebrow">Kurz beantwortet</span>
-          <h2>Häufige Fragen</h2>
+          <h2 id="hunde-haufige-fragen">Häufige Fragen</h2>
           <div class="faq-list">
             <details class="faq-item">
               <summary>Wie lange darf ein Hund allein zu Hause bleiben?</summary>
@@ -5084,7 +5288,7 @@
 
         <div class="article-rhythm evidence-block" data-evidence-block="hunde">
           <span class="eyebrow">Quellen und Prüfstand</span>
-          <h2>Worauf diese Seite ihre Aussagen stützt</h2>
+          <h2 id="hunde-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</h2>
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
@@ -5096,7 +5300,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Nicht als pauschale Rasseberatung verwenden.</li><li>Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.</li><li>Zwingerhaltung nicht als verboten darstellen; verboten ist grundsätzlich die Anbindehaltung, während Zwingerhaltung nur unter Mindestanforderungen zulässig ist.</li><li>Medizinische Symptome gehören in eine Tierarztpraxis.</li></ul>
+              <ul><li>Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.</li><li>Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.</li><li>Zwingerhaltung ist rechtlich nur unter Mindestanforderungen möglich; grundsätzlich verboten ist die Anbindehaltung.</li><li>Medizinische Symptome gehören in eine Tierarztpraxis.</li></ul>
             </article>
           </div>
         </div>

@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4812,13 +4940,50 @@
           <li><a class="nav-link active" data-page="mensch" href="../mensch/index.html" aria-current="page">Mensch</a></li>
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+                <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
@@ -4827,9 +4992,7 @@
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4858,26 +5021,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link active" data-page="mensch" href="../mensch/index.html" aria-current="page">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+        <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4896,7 +5100,7 @@
         <h1>Warum wir Tiere wollen – und warum das nicht reicht</h1>
         <p>Die Entscheidung für ein Tier ist fast immer emotional. Das ist menschlich. Aber ein Tier braucht mehr als gute Absichten.</p>
       <div class="article-kicker"><span>Vor dem Kauf</span><span>Selbstlügen prüfen</span><span>Verzicht ist erlaubt</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Mensch-Seite: Vorbereitung und Verantwortung statt spontanes Wunschbild zeigen" data-share-reason="Das Bild soll den Satz stützen: Vor einem Tier kommt die ehrliche Entscheidung." style="--image-position: center 46%;"><img src="../assets/images/optimized/cat-carrier-square.jpg" alt="Katze in Transporttasche als Bild für ehrliche Vorbereitung vor dem Einzug" loading="eager" decoding="async" width="960" height="955" fetchpriority="high"><figcaption class="context-caption">Ein Tier zieht nicht in ein Gefühl ein, sondern in einen vorbereiteten Alltag.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#mensch-die-entscheidung-fallt-im-bauch-nicht-im-kopf">Die Entscheidung fällt im Bauch, nicht im Kopf</a></li><li><a href="#mensch-die-kompetenz-illusion">Die Kompetenz-Illusion</a></li><li><a href="#mensch-die-acht-stunden-luge">Die Acht-Stunden-Lüge</a></li><li><a href="#mensch-tierhaltung-ist-egoistisch">Tierhaltung ist egoistisch</a></li><li><a href="#mensch-warum-sich-das-muster-wiederholt">Warum sich das Muster wiederholt</a></li><li><a href="#mensch-die-haufigsten-selbstlugen-und-was-dahinter-steckt">Die häufigsten Selbstlügen – und was dahinter steckt</a></li><li><a href="#mensch-kein-tier-ist-auch-tierliebe">Kein Tier ist auch Tierliebe</a></li><li><a href="#mensch-was-wirklich-hilft">Was wirklich hilft</a></li><li><a href="#mensch-wenn-es-doch-nicht-klappt">Wenn es doch nicht klappt</a></li><li><a href="#mensch-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4920,7 +5124,7 @@
           <p style="margin-bottom: 0;">Die meisten Menschen kaufen ein Tier, ohne vorher zu recherchieren. Du nicht. Du liest. Du fragst dich, ob du bereit bist. Das allein zeigt mehr Verantwortungsbewusstsein als 90 % der Tierhalter je aufbringen. Was auch immer du nach dem Lesen entscheidest – du gehst mit offenen Augen in diese Entscheidung.</p>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-1">Die Entscheidung fällt im Bauch, nicht im Kopf</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="mensch-frueh-teilen">
+        <div class="section-feedback-heading"><h2 id="mensch-die-entscheidung-fallt-im-bauch-nicht-im-kopf">Die Entscheidung fällt im Bauch, nicht im Kopf</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-die-entscheidung-fallt-im-bauch-nicht-im-kopf" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="mensch-frueh-teilen">
             <span class="eyebrow">Für den Moment vor dem Kauf</span>
             <h3>Schick das jemandem, der gerade „nur mal schaut“.</h3>
             <p>Genau dann ist noch genug Abstand da, um Alltag, Geld, Zeit und Verantwortung ehrlich zu prüfen.</p>
@@ -4932,11 +5136,11 @@
         <p>„Ich will einen <a href="../hunde/index.html">Hund</a>.“ Das ist ein Satz über den Menschen, nicht über den Hund. Hinter dem Wunsch steckt meistens etwas: Einsamkeit, Kindheitserinnerungen, das Bild vom treuen Begleiter auf Spaziergängen, das niedliche Welpen-Video auf Instagram. Das Tier wird zum Versprechen – auf Nähe, Routine, bedingungslose Zuneigung.</p>
         <p>Dass dieses Versprechen Gegenleistungen fordert, wird oft verdrängt. Nicht aus Bosheit oder Dummheit. Sondern weil der emotionale Impuls stärker ist als der rationale Abgleich mit dem eigenen Alltag. Wer sich verliebt hat – in ein Tier, ein Bild, eine Vorstellung –, rechnet nicht nach, ob das Budget für Tierarztrechnungen reicht.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-2">Die Kompetenz-Illusion</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-die-kompetenz-illusion">Die Kompetenz-Illusion</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-die-kompetenz-illusion" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Die meisten Menschen überschätzen ihr Wissen dramatisch. Sie sind mit einem Hund aufgewachsen, also „wissen sie, wie Hunde funktionieren“. In Wirklichkeit wissen sie, wie sich ihre Kindheit angefühlt hat. Die Perspektive des Tieres war nie Teil der Gleichung. Niemand hat ihnen als Kind erklärt, dass der Familienhund den ganzen Tag allein war, während alle in der Schule oder bei der Arbeit saßen.</p>
         <p>Das gilt für alle Tierarten. Wer als Kind einen <a href="../kleintiere/index.html">Hamster</a> im Kinderzimmer hatte, weiß nicht, wie Hamsterhaltung funktioniert – sondern wie es war, einen Hamster im Kinderzimmer zu haben. Das sind zwei verschiedene Dinge.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-3">Die Acht-Stunden-Lüge</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-die-acht-stunden-luge">Die Acht-Stunden-Lüge</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-die-acht-stunden-luge" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="warning-box">
           <h3>Stiller Stress sieht aus wie Gehorsam</h3>
           <p>Ein <a href="../hunde/index.html" style="color:inherit;text-decoration:underline">Hund</a>, der acht Stunden still in der Ecke liegt, hat nicht gelernt, allein zu sein. Er hat aufgehört, darauf zu hoffen, dass jemand kommt. Das sieht für uns nach einem „braven Hund“ aus. Für den Hund ist es Resignation.</p>
@@ -4944,17 +5148,17 @@
         <p>Das ist das gefährlichste Missverständnis in der Tierhaltung: Die Abwesenheit von sichtbarem Leid wird mit Wohlbefinden gleichgesetzt. Der Hund hat nicht in die Wohnung gepinkelt, also geht es ihm gut. Die Katze schläft den ganzen Tag, also ist sie zufrieden. Der Wellensittich sitzt still auf der Stange, also braucht er nichts.</p>
         <p>Tiere – besonders <span class="glossary-term" data-glossary-key="beutetier" data-glossary-title="Beutetier" data-glossary-text="Tierart, die in der Natur gejagt wird und Schwäche oft instinktiv verbirgt." data-glossary-href="../glossar/index.html#beutetier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Beutetiere</span> wie <a href="../voegel/index.html">Vögel</a> und <a href="../kleintiere/index.html">Kaninchen</a> – verbergen Schmerz und Stress instinktiv. Ein Tier, das leidet, sieht oft aus wie ein Tier, das „pflegeleicht“ ist. Wer nur darauf achtet, ob das Tier Probleme <em>macht</em>, verpasst die Frage, ob das Tier Probleme <em>hat</em>.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-4">Tierhaltung ist egoistisch</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-tierhaltung-ist-egoistisch">Tierhaltung ist egoistisch</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-tierhaltung-ist-egoistisch" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Das klingt hart, aber es stimmt. Und es ist nicht mal verwerflich – solange man sich dessen bewusst ist.</p>
         <p>Das Tier hat sich nicht ausgesucht, bei dir zu leben. Du hast es ausgesucht. Es kann nicht kündigen, sich nicht beschweren, nicht ausziehen. Dieses Machtgefälle erzeugt eine Pflicht. Ähnlich wie bei Kindern: Du hast dich für dieses Lebewesen entschieden, jetzt schuldest du ihm alles.</p>
         <p>Das heißt nicht, dass man keine Tiere halten sollte. Es heißt, dass man die Entscheidung mit offenen Augen treffen muss. Nicht als Lifestyle-Accessoire, nicht als Trostpflaster, nicht als Projekt für die Kinder. Sondern als bewusste Übernahme von Verantwortung für ein empfindendes Wesen – über Jahre, manchmal Jahrzehnte.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-5">Warum sich das Muster wiederholt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-warum-sich-das-muster-wiederholt">Warum sich das Muster wiederholt</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-warum-sich-das-muster-wiederholt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Viele Menschen, die ein Tier abgeben, holen sich bald darauf ein neues. Warum?</p>
         <p>Weil der Wunsch nach Tier nicht verschwunden ist. Die Einsamkeit ist noch da, die Sehnsucht nach Nähe auch. Und weil die Verantwortung externalisiert wird: „Das Tier war schwierig.“ „Die Rasse war falsch.“ „Wir hatten Pech.“ Selten: „Ich war nicht vorbereitet.“</p>
         <p>Das ist keine Boshaftigkeit. Es ist <span class="glossary-term" data-glossary-key="kognitive-dissonanz" data-glossary-title="Kognitive Dissonanz" data-glossary-text="Innerer Widerspruch zwischen Selbstbild und Realität, den Menschen oft durch Ausreden oder Umdeutung entschärfen." data-glossary-href="../glossar/index.html#kognitive-dissonanz" aria-describedby="glossary-term-popover" tabindex="0" role="button">kognitive Dissonanz</span> – ein psychologischer Schutzmechanismus. Wer sich eingestehen müsste, dass er einem Lebewesen geschadet hat, verlagert die Schuld lieber nach außen. Und weil sich an der Lebenssituation nichts geändert hat, passiert beim nächsten Tier dasselbe.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-6">Die häufigsten Selbstlügen – und was dahinter steckt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
+        <div class="section-feedback-heading"><h2 id="mensch-die-haufigsten-selbstlugen-und-was-dahinter-steckt">Die häufigsten Selbstlügen – und was dahinter steckt</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-die-haufigsten-selbstlugen-und-was-dahinter-steckt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
             <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin.“</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier.“</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Share-Grund</span><h3>Vor dem Kauf teilen</h3><p>Diese Seite gehört zu Menschen, die gerade „nur mal schauen“ und innerlich schon entschieden haben.</p></article>
@@ -5008,14 +5212,14 @@
           </div>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-7">Kein Tier ist auch Tierliebe</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-kein-tier-ist-auch-tierliebe">Kein Tier ist auch Tierliebe</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-kein-tier-ist-auch-tierliebe" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="highlight-box">
           <h3>Das ehrlichste Nein ist mehr wert als ein halbherziges Ja</h3>
           <p>Wenn dein Alltag nicht zu einem Tier passt – wenn du zehn Stunden arbeitest, viel reist, wenig Platz hast, knapp bei Kasse bist –, dann ist die Entscheidung, <strong>kein</strong> Tier zu halten, kein Versagen. Sie ist ein Akt von Verantwortung.</p>
         </div>
         <p>Wir müssen aufhören, Tierverzicht als Schwäche darzustellen. Wer sagt „Ich hätte gern einen Hund, aber mein Leben gibt das gerade nicht her“, hat mehr Empathie für das Tier als jemand, der trotzdem einen holt und hofft, dass es irgendwie klappt.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-8">Was wirklich hilft</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-8" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-was-wirklich-hilft">Was wirklich hilft</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-was-wirklich-hilft" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Tierliebe wird nicht besser, wenn man Menschen beschämt. Hilfreicher ist eine ruhige, ehrliche Einordnung: Was braucht das Tier, was kostet es wirklich, und passt das zum eigenen Alltag? So wird aus einem spontanen Wunsch eine verantwortliche Entscheidung.</p>
         <ul>
           <li><strong>Die Perspektive des Tieres.</strong> Nicht als Vorwurf, sondern als Maßstab: Wie viel Nähe, Ruhe, Platz, Beschäftigung und medizinische Versorgung braucht dieses Tier?</li>
@@ -5024,7 +5228,7 @@
           <li><strong>Gute Beispiele.</strong> Verantwortliche Haltung, Kastration, Adoption oder der Gang zur Tierarztpraxis helfen am meisten, wenn sie selbstverständlich vorgelebt werden.</li>
         </ul>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-mensch-9">Wenn es doch nicht klappt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-mensch-9" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="mensch-wenn-es-doch-nicht-klappt">Wenn es doch nicht klappt</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-wenn-es-doch-nicht-klappt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Es gibt Situationen, in denen Tierhaltung trotz bester Absichten scheitert. Jobverlust, Krankheit, Trennung, ein Umzug in eine Wohnung, die keine Tiere erlaubt. Das passiert. Das ist kein Verbrechen.</p>
         <p>Was ein Verbrechen ist: das Tier aussetzen, im Wald anbinden, am Rastplatz zurücklassen. Aussetzen ist nach dem Tierschutzgesetz strafbar und kann mit einer Geldstrafe bis zu 25.000 Euro geahndet werden.</p>
         <p>Der richtige Weg: <strong>Das Tierheim kontaktieren.</strong> Ehrlich sein. Hilfe annehmen. Viele Tierheime und Tierschutzorganisationen vermitteln Tiere weiter und bieten Beratung an, wenn die Situation noch nicht aussichtslos ist. Und manchmal gibt es Lösungen, an die man allein nicht gedacht hat – eine Pflegestelle, vorübergehende Betreuung, finanzielle Unterstützung. Mehr zum Ablauf einer Adoption findest du unter <a href="../adoption/index.html">Adoption statt Kauf</a>.</p>
@@ -5036,7 +5240,7 @@
 
         <div class="article-rhythm evidence-block" data-evidence-block="mensch">
           <span class="eyebrow">Quellen und Prüfstand</span>
-          <h2>Worauf diese Seite ihre Aussagen stützt</h2>
+          <h2 id="mensch-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</h2>
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
@@ -5048,7 +5252,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Nicht als psychologischen Eignungstest zitieren.</li><li>Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.</li></ul>
+              <ul><li>Die Seite ersetzt keinen psychologischen Eignungstest.</li><li>Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.</li></ul>
             </article>
           </div>
         </div>

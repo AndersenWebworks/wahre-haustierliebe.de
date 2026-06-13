@@ -320,7 +320,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Nicht als psychologischen Eignungstest zitieren.',
+      'Die Seite ersetzt keinen psychologischen Eignungstest.',
       'Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.',
     ],
   },
@@ -338,9 +338,9 @@ const evidenceByPage = {
       ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
     ],
     guardrails: [
-      'Nicht als pauschale Rasseberatung verwenden.',
+      'Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.',
       'Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.',
-      'Zwingerhaltung nicht als verboten darstellen; verboten ist grundsätzlich die Anbindehaltung, während Zwingerhaltung nur unter Mindestanforderungen zulässig ist.',
+      'Zwingerhaltung ist rechtlich nur unter Mindestanforderungen möglich; grundsätzlich verboten ist die Anbindehaltung.',
       'Medizinische Symptome gehören in eine Tierarztpraxis.',
     ],
   },
@@ -362,7 +362,7 @@ const evidenceByPage = {
       ['TASSO e. V.: Körpersprache beim Hund', 'https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund'],
     ],
     guardrails: [
-      'Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.',
+      'Ein Bürohund braucht Zustimmung, Regeln und einen passenden Arbeitsplatz; die Seite ersetzt keine Rechtsberatung.',
       'Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.',
       'Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.',
       'Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.',
@@ -380,7 +380,7 @@ const evidenceByPage = {
       ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
     ],
     guardrails: [
-      'Wohnungshaltung nicht als Ideal darstellen, sondern als Kompromiss mit Bedingungen.',
+      'Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.',
       'Keine Ferndiagnose bei Verhaltensänderungen.',
     ],
   },
@@ -396,7 +396,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Einzelhaltung ist keine normale Option.',
-      'Nicht nur Käfiggröße zitieren; Sozialkontakt und Freiflug gehören dazu.',
+      'Käfiggröße allein reicht nicht; Sozialkontakt und täglicher Freiflug gehören zur Haltung.',
     ],
   },
   kleintiere: {
@@ -410,7 +410,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Nicht als Käfig-Mindestmaß-Liste verkürzen.',
+      'Die Fläche ist nur ein Teil der Haltung; Ruhe, Artgenossen, Futter und Tierarztzugang zählen genauso.',
       'Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.',
     ],
   },
@@ -442,7 +442,7 @@ const evidenceByPage = {
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
     guardrails: [
-      'Kosten nie nur als Kaufpreis darstellen.',
+      'Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.',
       'Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.',
     ],
   },
@@ -458,7 +458,7 @@ const evidenceByPage = {
       ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
     ],
     guardrails: [
-      'Nicht als pauschale OP-Empfehlung für jedes Tier zitieren.',
+      'Kastration muss je nach Tierart und Einzelfall eingeordnet werden.',
       'Medizinische Entscheidung immer tierärztlich abklären.',
     ],
   },
@@ -474,7 +474,7 @@ const evidenceByPage = {
       ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
     ],
     guardrails: [
-      'Nicht als Angriff auf einzelne Halter formulieren.',
+      'Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.',
       'Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken.',
     ],
   },
@@ -490,7 +490,7 @@ const evidenceByPage = {
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
     guardrails: [
-      'Adoption nicht als beliebige Einkaufsoption neben Zucht darstellen.',
+      'Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.',
       'Seriöse Adoption braucht Zeit und ehrliche Beratung.',
     ],
   },
@@ -505,7 +505,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Nicht als psychometrischen Test zitieren.',
+      'Der Selbsttest ist eine Entscheidungshilfe, kein psychometrisches Gutachten.',
       'Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen.',
     ],
   },
@@ -549,8 +549,8 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Keine medizinischen Empfehlungen als Behandlung zitieren.',
-      'Mythen nicht als gleichwertige Gegenposition darstellen.',
+      'Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.',
+      'Mythen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.',
     ],
   },
   glossar: {
@@ -565,7 +565,7 @@ const evidenceByPage = {
       ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
     ],
     guardrails: [
-      'Nicht als vollständiges veterinärmedizinisches Lexikon zitieren.',
+      'Das Glossar erklärt Begriffe knapp und ersetzt kein veterinärmedizinisches Nachschlagewerk.',
       'Bei Symptomen immer auf tierärztliche Abklärung verweisen.',
     ],
   },
@@ -595,7 +595,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Nicht als individueller Futterplan verwenden.',
+      'Die Seite erklärt Grundsätze und ersetzt keinen individuellen Futterplan.',
       'Vegane Tierernährung nicht pauschal empfehlen.',
     ],
   },
@@ -610,7 +610,7 @@ const evidenceByPage = {
       ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
     ],
     guardrails: [
-      'Nicht als reine Kostenwarnung verkürzen.',
+      'Kosten sind wichtig, aber Realhaltung meint auch Zeit, Raum, Beziehung und Belastbarkeit.',
       'Normalität immer gegen Tierbedürfnisse prüfen.',
     ],
   },
@@ -625,7 +625,7 @@ const evidenceByPage = {
       ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
     ],
     guardrails: [
-      'Nicht als Gleichsetzung aller Züchter mit illegalen Vermehrern formulieren.',
+      'Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; zusätzliche Tierproduktion bleibt trotzdem ethisch erklärungsbedürftig.',
       'Die ethische Position der Seite nicht neutralisieren.',
     ],
   },
@@ -662,7 +662,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.',
-      'Merkmale nur als Hinweise erklären, nicht als sichere Laienbestimmung.',
+      'Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.',
       'Keine Anleitung zur privaten Wildtieraufzucht geben.',
       'Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.',
     ],
@@ -693,7 +693,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Nicht als vollständiges Haltungsprotokoll zitieren.',
+      'Die Seite gibt Orientierung und ersetzt kein vollständiges Haltungsprotokoll.',
       'Immer auf echte Vogelhaltung mit Artgenossen und Freiflug zurückführen.',
     ],
   },
@@ -1597,7 +1597,14 @@ function prefixAssets(html, prefix) {
 
 function rewriteScript(script) {
   let next = script;
-  const routeMap = Object.fromEntries(publicPages.map((page) => [page.id, pagePath(page)]));
+  const routeMap = {
+    ...Object.fromEntries(publicPages.map((page) => [page.id, pagePath(page)])),
+    'voegel-kuechenluft-und-daempfe-sind-lebensgefahr': `${pagePath(pageById.get('voegel'))}#voegel-kuechenluft-und-daempfe-sind-lebensgefahr`,
+    'voegel-freiflug-ist-nicht-optional': `${pagePath(pageById.get('voegel'))}#voegel-freiflug-ist-nicht-optional`,
+    'kleintiere-kaninchen': `${pagePath(pageById.get('kleintiere'))}#kleintiere-kaninchen`,
+    'kleintiere-meerschweinchen': `${pagePath(pageById.get('kleintiere'))}#kleintiere-meerschweinchen`,
+    'kleintiere-hamster': `${pagePath(pageById.get('kleintiere'))}#kleintiere-hamster`,
+  };
 
   next = `var staticPageRoutes = ${JSON.stringify(routeMap, null, 2)};\n` +
     `function staticRouteFor(page) {\n` +
@@ -1622,6 +1629,14 @@ function rewriteScript(script) {
     /function navigateTo\(page\) \{[\s\S]*?history\.replaceState\(null, '', page === 'startseite' \? location\.pathname : '#' \+ page\);\s*\}/,
     `function navigateTo(page) {\n` +
     `      if (document.body && document.body.dataset.staticSite === 'true') {\n` +
+    `        var target = document.getElementById(page);\n` +
+    `        if (target && !target.classList.contains('page')) {\n` +
+    `          scrollElementIntoView(target, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });\n` +
+    `          closeMobileNav();\n` +
+    `          closeDropdowns();\n` +
+    `          history.replaceState(null, '', '#' + page);\n` +
+    `          return;\n` +
+    `        }\n` +
     `        window.location.href = staticRouteFor(page);\n` +
     `        return;\n` +
     `      }\n` +
@@ -1653,7 +1668,7 @@ function rewriteScript(script) {
     `      if (document.body && document.body.dataset.staticSite === 'true') {\n` +
     `        var pageId = document.body.dataset.pageId || 'startseite';\n` +
     `        var hash = location.hash.slice(1);\n` +
-    `        if (hash && staticPageRoutes[hash] && hash !== pageId) {\n` +
+    `        if (hash && staticPageRoutes[hash] && !staticPageRoutes[hash].includes('#') && hash !== pageId) {\n` +
     `          window.location.replace(staticRouteFor(hash));\n` +
     `          return;\n` +
     `        }\n` +
@@ -1663,6 +1678,8 @@ function rewriteScript(script) {
     `          if (active) link.setAttribute('aria-current', 'page');\n` +
     `          else link.removeAttribute('aria-current');\n` +
     `        });\n` +
+    `        var staticPage = document.querySelector('.page');\n` +
+    `        if (staticPage) buildArticleToc(staticPage);\n` +
     `        document.querySelectorAll('.dropdown').forEach(function(dropdown) {\n` +
     `          var hasActive = dropdown.querySelector('[aria-current=\"page\"]');\n` +
     `          var toggle = dropdown.querySelector('.dropdown-toggle');\n` +
@@ -1993,7 +2010,7 @@ function normalizePublicCopy(html) {
     .replaceAll('Nicht glätten: Einzelhaltung ist keine normale Einstiegsoption.', 'Wichtig zu wissen: Einzelhaltung ist keine normale Einstiegsoption.')
     .replaceAll('Grenze dieser Seite: Einzelhaltung ist keine normale Einstiegsoption.', 'Wichtig zu wissen: Einzelhaltung ist keine normale Einstiegsoption.')
     .replaceAll('Keine Einzelhaltung als normale Option glätten.', 'Einzelhaltung ist keine normale Option.')
-    .replaceAll('Nicht als neutrale Kaufberatung zwischen Tierheim und Zucht glätten.', 'Adoption nicht als beliebige Einkaufsoption neben Zucht darstellen.');
+    .replaceAll('Nicht als neutrale Kaufberatung zwischen Tierheim und Zucht glätten.', 'Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.');
 }
 
 function ensureStaticSectionIdentity(section, page) {
@@ -2399,7 +2416,7 @@ function buildLlmsFull() {
     '',
     ...publicPages.map((page) => `- ${canonicalUrl(page)} - ${page.intent}`),
     '',
-    '## Page Facts and Guardrails',
+    '## Page Facts and Boundaries',
     '',
     ...pagesWithEvidence.flatMap((page) => {
       const evidence = evidenceByPage[page.id];
@@ -2408,7 +2425,7 @@ function buildLlmsFull() {
         `URL: ${canonicalUrl(page)}`,
         'Facts:',
         ...evidence.facts.map((fact) => `- ${fact}`),
-        'Do not flatten:',
+        'Important boundaries:',
         ...evidence.guardrails.map((guardrail) => `- ${guardrail}`),
         'Sources:',
         ...evidence.sources.map(([label, url]) => `- ${label}: ${url}`),
@@ -2525,7 +2542,7 @@ function buildAiSite() {
       'Sichtbare HTML-Seiten sind die Primärquelle.',
       'Startseite und Social-Fallback verwenden das offizielle Logo.',
       'Alle öffentlichen Seiten liefern Canonical, JSON-LD, Open Graph, X/Twitter Cards und maschinenlesbare AI-Dateien.',
-      'Fachseiten enthalten sichtbare Quellen-und-Prüfstand-Blöcke mit Kernfakten, Primärquellen und Zitiergrenzen.',
+      'Fachseiten enthalten sichtbare Quellen-und-Prüfstand-Blöcke mit Kernfakten, Primärquellen und wichtigen Grenzen.',
     ],
     socialPreview: {
       defaultImage: socialImageUrl(pageById.get('startseite')),

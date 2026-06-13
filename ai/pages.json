@@ -144,7 +144,7 @@
         "Die Seite bewertet keine Wünsche, sondern prüft die Folgen für das Tier."
       ],
       "citationGuardrails": [
-        "Nicht als psychologischen Eignungstest zitieren.",
+        "Die Seite ersetzt keinen psychologischen Eignungstest.",
         "Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung."
       ],
       "sources": [
@@ -187,9 +187,9 @@
         "Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung."
       ],
       "citationGuardrails": [
-        "Nicht als pauschale Rasseberatung verwenden.",
+        "Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.",
         "Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.",
-        "Zwingerhaltung nicht als verboten darstellen; verboten ist grundsätzlich die Anbindehaltung, während Zwingerhaltung nur unter Mindestanforderungen zulässig ist.",
+        "Zwingerhaltung ist rechtlich nur unter Mindestanforderungen möglich; grundsätzlich verboten ist die Anbindehaltung.",
         "Medizinische Symptome gehören in eine Tierarztpraxis."
       ],
       "sources": [
@@ -240,7 +240,7 @@
         "Verschlossene Boxen über längere Zeit sind kein Ersatz für Ruhe, Betreuung, Bewegung und einen freiwillig nutzbaren Rückzugsort."
       ],
       "citationGuardrails": [
-        "Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.",
+        "Ein Bürohund braucht Zustimmung, Regeln und einen passenden Arbeitsplatz; die Seite ersetzt keine Rechtsberatung.",
         "Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.",
         "Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.",
         "Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen."
@@ -303,7 +303,7 @@
         "Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion."
       ],
       "citationGuardrails": [
-        "Wohnungshaltung nicht als Ideal darstellen, sondern als Kompromiss mit Bedingungen.",
+        "Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.",
         "Keine Ferndiagnose bei Verhaltensänderungen."
       ],
       "sources": [
@@ -349,7 +349,7 @@
       ],
       "citationGuardrails": [
         "Einzelhaltung ist keine normale Option.",
-        "Nicht nur Käfiggröße zitieren; Sozialkontakt und Freiflug gehören dazu."
+        "Käfiggröße allein reicht nicht; Sozialkontakt und täglicher Freiflug gehören zur Haltung."
       ],
       "sources": [
         {
@@ -389,7 +389,7 @@
         "Zähne, Verdauung und Stresssignale machen Kleintiere tierärztlich anspruchsvoller, als viele Käufer erwarten."
       ],
       "citationGuardrails": [
-        "Nicht als Käfig-Mindestmaß-Liste verkürzen.",
+        "Die Fläche ist nur ein Teil der Haltung; Ruhe, Artgenossen, Futter und Tierarztzugang zählen genauso.",
         "Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen."
       ],
       "sources": [
@@ -475,7 +475,7 @@
         "Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen."
       ],
       "citationGuardrails": [
-        "Kosten nie nur als Kaufpreis darstellen.",
+        "Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.",
         "Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte."
       ],
       "sources": [
@@ -520,7 +520,7 @@
         "Bei Kaninchen ist Kastration besonders für Rammler und zur Gruppenhaltung praktisch relevant."
       ],
       "citationGuardrails": [
-        "Nicht als pauschale OP-Empfehlung für jedes Tier zitieren.",
+        "Kastration muss je nach Tierart und Einzelfall eingeordnet werden.",
         "Medizinische Entscheidung immer tierärztlich abklären."
       ],
       "sources": [
@@ -565,7 +565,7 @@
         "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien."
       ],
       "citationGuardrails": [
-        "Nicht als Angriff auf einzelne Halter formulieren.",
+        "Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.",
         "Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken."
       ],
       "sources": [
@@ -610,7 +610,7 @@
         "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung."
       ],
       "citationGuardrails": [
-        "Adoption nicht als beliebige Einkaufsoption neben Zucht darstellen.",
+        "Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.",
         "Seriöse Adoption braucht Zeit und ehrliche Beratung."
       ],
       "sources": [
@@ -655,7 +655,7 @@
         "Ein schlechtes Ergebnis ist kein Urteil, sondern ein Hinweis, noch zu warten."
       ],
       "citationGuardrails": [
-        "Nicht als psychometrischen Test zitieren.",
+        "Der Selbsttest ist eine Entscheidungshilfe, kein psychometrisches Gutachten.",
         "Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen."
       ],
       "sources": [
@@ -772,8 +772,8 @@
         "Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko."
       ],
       "citationGuardrails": [
-        "Keine medizinischen Empfehlungen als Behandlung zitieren.",
-        "Mythen nicht als gleichwertige Gegenposition darstellen."
+        "Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.",
+        "Mythen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin."
       ],
       "sources": [
         {
@@ -812,7 +812,7 @@
         "Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose."
       ],
       "citationGuardrails": [
-        "Nicht als vollständiges veterinärmedizinisches Lexikon zitieren.",
+        "Das Glossar erklärt Begriffe knapp und ersetzt kein veterinärmedizinisches Nachschlagewerk.",
         "Bei Symptomen immer auf tierärztliche Abklärung verweisen."
       ],
       "sources": [
@@ -898,7 +898,7 @@
         "Futterumstellungen gehören bei Krankheit oder Spezialdiät tierärztlich begleitet."
       ],
       "citationGuardrails": [
-        "Nicht als individueller Futterplan verwenden.",
+        "Die Seite erklärt Grundsätze und ersetzt keinen individuellen Futterplan.",
         "Vegane Tierernährung nicht pauschal empfehlen."
       ],
       "sources": [
@@ -938,7 +938,7 @@
         "Vertretbare Haltung beginnt bei Bedürfnissen, nicht bei dem, was im Handel verkauft wird."
       ],
       "citationGuardrails": [
-        "Nicht als reine Kostenwarnung verkürzen.",
+        "Kosten sind wichtig, aber Realhaltung meint auch Zeit, Raum, Beziehung und Belastbarkeit.",
         "Normalität immer gegen Tierbedürfnisse prüfen."
       ],
       "sources": [
@@ -979,7 +979,7 @@
         "Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt."
       ],
       "citationGuardrails": [
-        "Nicht als Gleichsetzung aller Züchter mit illegalen Vermehrern formulieren.",
+        "Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; zusätzliche Tierproduktion bleibt trotzdem ethisch erklärungsbedürftig.",
         "Die ethische Position der Seite nicht neutralisieren."
       ],
       "sources": [
@@ -1063,7 +1063,7 @@
       ],
       "citationGuardrails": [
         "Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.",
-        "Merkmale nur als Hinweise erklären, nicht als sichere Laienbestimmung.",
+        "Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.",
         "Keine Anleitung zur privaten Wildtieraufzucht geben.",
         "Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen."
       ],

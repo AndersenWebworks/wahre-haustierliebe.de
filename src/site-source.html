@@ -166,20 +166,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -190,7 +220,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -226,9 +257,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -447,10 +517,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -458,7 +527,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1097,6 +1175,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2129,6 +2209,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2322,8 +2451,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4113,9 +4241,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4123,7 +4250,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4629,13 +4757,50 @@
           <li><button type="button" class="nav-link" data-page="mensch" onclick="navigateTo('mensch')">Mensch</button></li>
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <button type="button" class="dropdown-item" data-page="hunde" onclick="navigateTo('hunde')">Hunde</button>
-              <button type="button" class="dropdown-item" data-page="katzen" onclick="navigateTo('katzen')">Katzen</button>
-              <button type="button" class="dropdown-item" data-page="voegel" onclick="navigateTo('voegel')">Vögel</button>
-              <button type="button" class="dropdown-item" data-page="kleintiere" onclick="navigateTo('kleintiere')">Kleintiere</button>
-              <button type="button" class="dropdown-item" data-page="exoten" onclick="navigateTo('exoten')">Exoten</button>
-              <button type="button" class="dropdown-item" data-page="pferde" onclick="navigateTo('pferde')">Pferde</button>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <button type="button" class="dropdown-item" data-page="hunde" onclick="navigateTo('hunde')">Hundehaltung</button>
+                <button type="button" class="dropdown-item" data-page="hund-im-buero" onclick="navigateTo('hund-im-buero')">Hund im Büro</button>
+                <button type="button" class="dropdown-item" data-page="hitzefalle-auto" onclick="navigateTo('hitzefalle-auto')">Hitzefalle Auto</button>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <button type="button" class="dropdown-item" data-page="katzen" onclick="navigateTo('katzen')">Katzenhaltung</button>
+                <button type="button" class="dropdown-item" data-page="wildkatzenbaby-gefunden" onclick="navigateTo('wildkatzenbaby-gefunden')">Wildkatzenbaby gefunden?</button>
+                <button type="button" class="dropdown-item" data-page="ernaehrung-taurin" onclick="navigateTo('ernaehrung-taurin')">Ernährung &amp; Taurin</button>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <button type="button" class="dropdown-item" data-page="voegel" onclick="navigateTo('voegel')">Vogelhaltung</button>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <button type="button" class="dropdown-item" data-page="kleintiere" onclick="navigateTo('kleintiere')">Kleintierhaltung</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <button type="button" class="dropdown-item" data-page="pferde" onclick="navigateTo('pferde')">Pferde</button>
+                <button type="button" class="dropdown-item" data-page="exoten" onclick="navigateTo('exoten')">Exoten</button>
+                <button type="button" class="dropdown-item" data-page="wildtierhaltung" onclick="navigateTo('wildtierhaltung')">Private Wildtierhaltung</button>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <button type="button" class="dropdown-item" data-page="selbsttest" onclick="navigateTo('selbsttest')">Selbsttest</button>
+                <button type="button" class="dropdown-item" data-page="noch-nicht-bereit" onclick="navigateTo('noch-nicht-bereit')">Noch nicht bereit?</button>
+                <button type="button" class="dropdown-item" data-page="realhaltung" onclick="navigateTo('realhaltung')">Realhaltung</button>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
@@ -4644,9 +4809,7 @@
               <button type="button" class="dropdown-item" data-page="kastration" onclick="navigateTo('kastration')">Kastration</button>
               <button type="button" class="dropdown-item" data-page="qualzucht" onclick="navigateTo('qualzucht')">Qualzucht</button>
               <button type="button" class="dropdown-item" data-page="adoption" onclick="navigateTo('adoption')">Adoption</button>
-              <button type="button" class="dropdown-item" data-page="hund-im-buero" onclick="navigateTo('hund-im-buero')">Hund im Büro</button>
-              <button type="button" class="dropdown-item" data-page="noch-nicht-bereit" onclick="navigateTo('noch-nicht-bereit')">Noch nicht bereit?</button>
-              <button type="button" class="dropdown-item" data-page="wildkatzenbaby-gefunden" onclick="navigateTo('wildkatzenbaby-gefunden')">Wildkatzenbaby gefunden?</button>
+              <button type="button" class="dropdown-item" data-page="zucht-und-vermehrung" onclick="navigateTo('zucht-und-vermehrung')">Zucht &amp; Vermehrung</button>
               <button type="button" class="dropdown-item" data-page="wissen" onclick="navigateTo('wissen')">Mythen &amp; Homöopathie</button>
               <button type="button" class="dropdown-item" data-page="glossar" onclick="navigateTo('glossar')">Glossar</button>
             </div>
@@ -4675,26 +4838,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <button type="button" class="mobile-nav-link" data-page="startseite" onclick="navigateTo('startseite')">Start</button>
     <button type="button" class="mobile-nav-link" data-page="mensch" onclick="navigateTo('mensch')">Mensch &amp; Tier</button>
-    <div class="mobile-nav-sub">
-      <button type="button" class="mobile-nav-link" data-page="hunde" onclick="navigateTo('hunde')">Hunde</button>
-      <button type="button" class="mobile-nav-link" data-page="katzen" onclick="navigateTo('katzen')">Katzen</button>
-      <button type="button" class="mobile-nav-link" data-page="voegel" onclick="navigateTo('voegel')">Vögel</button>
-      <button type="button" class="mobile-nav-link" data-page="kleintiere" onclick="navigateTo('kleintiere')">Kleintiere</button>
-      <button type="button" class="mobile-nav-link" data-page="exoten" onclick="navigateTo('exoten')">Exoten</button>
-      <button type="button" class="mobile-nav-link" data-page="pferde" onclick="navigateTo('pferde')">Pferde</button>
-    </div>
-    <button type="button" class="mobile-nav-link" data-page="kastration" onclick="navigateTo('kastration')">Kastration</button>
-    <button type="button" class="mobile-nav-link" data-page="qualzucht" onclick="navigateTo('qualzucht')">Qualzucht</button>
-    <button type="button" class="mobile-nav-link" data-page="adoption" onclick="navigateTo('adoption')">Adoption</button>
-    <button type="button" class="mobile-nav-link" data-page="hund-im-buero" onclick="navigateTo('hund-im-buero')">Hund im Büro</button>
-    <button type="button" class="mobile-nav-link" data-page="noch-nicht-bereit" onclick="navigateTo('noch-nicht-bereit')">Noch nicht bereit?</button>
-    <button type="button" class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" onclick="navigateTo('wildkatzenbaby-gefunden')">Wildkatzenbaby gefunden?</button>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <button type="button" class="mobile-nav-link" data-page="hunde" onclick="navigateTo('hunde')">Hundehaltung</button>
+        <button type="button" class="mobile-nav-link" data-page="hund-im-buero" onclick="navigateTo('hund-im-buero')">Hund im Büro</button>
+        <button type="button" class="mobile-nav-link" data-page="hitzefalle-auto" onclick="navigateTo('hitzefalle-auto')">Hitzefalle Auto</button>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <button type="button" class="mobile-nav-link" data-page="katzen" onclick="navigateTo('katzen')">Katzenhaltung</button>
+        <button type="button" class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" onclick="navigateTo('wildkatzenbaby-gefunden')">Wildkatzenbaby gefunden?</button>
+        <button type="button" class="mobile-nav-link" data-page="ernaehrung-taurin" onclick="navigateTo('ernaehrung-taurin')">Ernährung &amp; Taurin</button>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <button type="button" class="mobile-nav-link" data-page="voegel" onclick="navigateTo('voegel')">Vogelhaltung</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <button type="button" class="mobile-nav-link" data-page="kleintiere" onclick="navigateTo('kleintiere')">Kleintierhaltung</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <button type="button" class="mobile-nav-link" data-page="pferde" onclick="navigateTo('pferde')">Pferde</button>
+        <button type="button" class="mobile-nav-link" data-page="exoten" onclick="navigateTo('exoten')">Exoten</button>
+        <button type="button" class="mobile-nav-link" data-page="wildtierhaltung" onclick="navigateTo('wildtierhaltung')">Private Wildtierhaltung</button>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <button type="button" class="mobile-nav-link" data-page="kastration" onclick="navigateTo('kastration')">Kastration</button>
+        <button type="button" class="mobile-nav-link" data-page="qualzucht" onclick="navigateTo('qualzucht')">Qualzucht</button>
+        <button type="button" class="mobile-nav-link" data-page="adoption" onclick="navigateTo('adoption')">Adoption</button>
+        <button type="button" class="mobile-nav-link" data-page="zucht-und-vermehrung" onclick="navigateTo('zucht-und-vermehrung')">Zucht &amp; Vermehrung</button>
+        <button type="button" class="mobile-nav-link" data-page="realhaltung" onclick="navigateTo('realhaltung')">Realhaltung</button>
+        <button type="button" class="mobile-nav-link" data-page="wissen" onclick="navigateTo('wissen')">Mythen &amp; Homöopathie</button>
+        <button type="button" class="mobile-nav-link" data-page="glossar" onclick="navigateTo('glossar')">Glossar</button>
+      </div>
+    </details>
     <button type="button" class="mobile-nav-link" data-page="selbsttest" onclick="navigateTo('selbsttest')">Selbsttest</button>
     <button type="button" class="mobile-nav-link" data-page="notfall" onclick="navigateTo('notfall')">Notfall</button>
     <button type="button" class="mobile-nav-link" data-page="kontakt" onclick="navigateTo('kontakt')">Kontakt</button>
     <button type="button" class="mobile-nav-link" data-page="mitmachen" onclick="navigateTo('mitmachen')">Mitmachen!</button>
-    <button type="button" class="mobile-nav-link" data-page="wissen" onclick="navigateTo('wissen')">Mythen &amp; Homöopathie</button>
-    <button type="button" class="mobile-nav-link" data-page="glossar" onclick="navigateTo('glossar')">Glossar</button>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -5407,8 +5611,14 @@
         <p>Vögel besitzen vier Zapfentypen in der Netzhaut, Menschen nur drei. Der vierte Zapfen nimmt ultraviolettes Licht wahr. Unter normalem Innenraumlicht fehlt UV – für den Vogel bedeutet das: Die Farben der Artgenossen sehen falsch aus, die Futterbewertung ist gestört, die Partnerwahl wird beeinträchtigt.</p>
         <p>Für Vögel, die in Innenräumen leben, ist eine Tageslichtlampe mit UV-Anteil Pflicht. Normale Leuchtmittel reichen nicht. Die Lampe sollte 10–12 Stunden am Tag leuchten und danach komplett ausgeschaltet werden – Vögel brauchen auch Dunkelheit zum Schlafen.</p>
 
-        <h2>Freiflug ist nicht optional</h2>
-        <p>Ein Käfig ist ein Schlafplatz und Rückzugsort. Nicht mehr. Vögel brauchen täglich mehrere Stunden sicheren Freiflug in einem vogelsicheren Raum (Fenster geschlossen oder gesichert, keine offenen Töpfe, keine Ventilatoren, keine giftigen Pflanzen, kein Teflon in der Küche).</p>
+        <h2 id="voegel-kuechenluft-und-daempfe-sind-lebensgefahr">Küchenluft und Dämpfe sind Lebensgefahr</h2>
+        <div class="warning-box">
+          <h3>Teflon kann Vögel in Minuten töten</h3>
+          <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küche, Rauch, Duftstoffe und Vogelzimmer gehören getrennt.</p>
+        </div>
+
+        <h2 id="voegel-freiflug-ist-nicht-optional">Freiflug ist nicht optional</h2>
+        <p>Ein Käfig ist ein Schlafplatz und Rückzugsort. Nicht mehr. Vögel brauchen täglich mehrere Stunden sicheren Freiflug in einem vogelsicheren Raum (Fenster geschlossen oder gesichert, keine offenen Töpfe, keine Ventilatoren, keine giftigen Pflanzen, kein Zugang zur Küche).</p>
         <p>Eine Außenvoliere – wenn möglich mit beheizbarem Schutzhaus – ist die beste Haltungsform. Frische Luft, natürliches UV-Licht und Witterungsreize stärken das Immunsystem und das Wohlbefinden enorm.</p>
 
         <h2>Spiegel und Plastikvögel ersetzen keinen Partner</h2>
@@ -5458,7 +5668,7 @@
           </ul>
         </div>
 
-        <h2>Kaninchen</h2>
+        <h2 id="kleintiere-kaninchen">Kaninchen</h2>
         <p>Kaninchen sind keine Kuscheltiere. Sie sind Fluchttiere mit einem starken Bedürfnis nach Sicherheit, Platz und Artgenossen.</p>
         <p><strong>Platz:</strong> Die <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz (TVT)</a> empfiehlt mindestens 2–3 m² pro Kaninchen als dauerhaften Lebensraum – nicht als Auslauf, sondern als Grundfläche, die immer zugänglich ist. Handelsübliche Käfige (0,5–1 m²) sind Tierquälerei in Plastik.</p>
         <p><strong>Artgenossen:</strong> Kaninchen sind Gruppentiere. Einzelhaltung verursacht Einsamkeit, Stress und Verhaltensstörungen. Mindestens zwei Tiere – idealerweise ein kastrierter Rüde und eine Häsin.</p>
@@ -5466,12 +5676,13 @@
         <p><strong>Zähne:</strong> Kaninchenzähne wachsen lebenslang. Falsches Futter führt zu Zahnfehlstellungen, die extrem schmerzhaft sind und teure tierärztliche Behandlung erfordern.</p>
         <p><strong>Kastration:</strong> Rammler sollten kastriert werden, um Aggressionen und unkontrollierte Vermehrung zu vermeiden. Wichtig zu wissen: Etwa 60 % der unkastrierten Häsinnen über 3 Jahre entwickeln Gebärmuttertumoren – ein ernsthaftes Argument auch für die <a href="#kastration" onclick="navigateTo('kastration');return false">Kastration</a> weiblicher Tiere.</p>
 
-        <h2>Meerschweinchen</h2>
+        <h2 id="kleintiere-meerschweinchen">Meerschweinchen</h2>
         <p>Alles, was für Kaninchen gilt, gilt in ähnlicher Form für Meerschweinchen – mit einem entscheidenden Unterschied: <strong>Kaninchen und Meerschweinchen <a href="#wissen" onclick="navigateTo('wissen');return false">gehören nicht zusammen</a>.</strong> Sie sprechen verschiedene Körpersprachen, haben unterschiedliche Sozialstrukturen, und der Kaninchentritt kann ein Meerschweinchen ernsthaft verletzen.</p>
         <p>Meerschweinchen brauchen Meerschweinchen. Mindestens zwei, besser drei oder mehr. Sie sind tagaktiv (gut für Kinder – im Gegensatz zu Hamstern), aber immer noch Fluchttiere, die nicht gern hochgehoben werden.</p>
         <p><strong>Vitamin C:</strong> Meerschweinchen können – wie Menschen – kein eigenes Vitamin C bilden. Sie brauchen täglich vitaminreiches Frischfutter (Paprika, Petersilie, Fenchel). Vitamin-C-Mangel führt zu Skorbut.</p>
+        <p><strong>Zähne:</strong> Auch Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt. Gewichtsverlust, Speicheln oder langsames Kauen sind Warnzeichen, nicht bloß wählerisches Fressverhalten.</p>
 
-        <h2>Hamster</h2>
+        <h2 id="kleintiere-hamster">Hamster</h2>
         <p>Hamster sind nachtaktiv. Sie schlafen tagsüber und werden abends aktiv. Wer seinen Hamster tagsüber weckt – weil die Kinder ihn sehen wollen –, verursacht chronischen Stress.</p>
         <p><strong>Einzelgänger:</strong> Die meisten Hamsterarten (Goldhamster, Teddyhamster) sind strikte Einzelgänger. Gemeinsame Haltung führt zu Revierkämpfen und schweren Verletzungen.</p>
         <p><strong>Platz:</strong> Mindestens 100 × 50 cm Grundfläche (besser mehr), 30 cm tiefe Einstreu zum Graben, ein Laufrad mit mindestens 28 cm Durchmesser (Goldhamster) oder 20 cm (Zwerghamster), Verstecke und Tunnel.</p>
@@ -6840,7 +7051,7 @@
           html: `<div class="article-rhythm share-callout" data-enhancement="adoption-price-share">
             <span class="eyebrow">Teilbarer Moment</span>
             <h3>Der billige Welpe ist oft das teuerste Tier.</h3>
-            <p>Genau diese Rechnung sollte jemand sehen, bevor er bei Kleinanzeigen ein „Schnäppchen“ anklickt.</p>
+            <p>Diese Rechnung gehört vor den Kleinanzeigen-Klick, nicht erst nach dem ersten Tierarztbesuch.</p>
             <div class="share-bar">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Der billige Welpe ist oft das teuerste Tier. Lies das, bevor du über Kleinanzeigen kaufst:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -6938,7 +7149,7 @@
           html: `<div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
             <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
-            <p>Diese Seite gehört zu Menschen, die den Hundewunsch ernst meinen und deshalb zuerst ihren Alltag prüfen sollten.</p>
+            <p>Diese Seite ist für Menschen, die den Hundewunsch ernst meinen und zuerst ihren Alltag prüfen.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -6989,13 +7200,6 @@
           </div>`
         },
         {
-          afterHeading: 'Freiflug ist nicht optional',
-          html: `<div class="article-rhythm warning-box" data-enhancement="voegel-teflon">
-            <h3>Teflon kann Vögel in Minuten töten</h3>
-            <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küchenluft und Vogelzimmer gehören getrennt.</p>
-          </div>`
-        },
-        {
           afterHeading: 'Spiegel und Plastikvögel ersetzen keinen Partner',
           html: `<div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
@@ -7034,7 +7238,7 @@
           afterHeading: 'Hamster',
           html: `<div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
             <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
-            <article class="signal-card" data-nr="02"><strong>Zähne</strong><span>Kaninchen und Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt.</span></article>
+            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Tagsüberes Wecken stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
             <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
           </div>`
         }
@@ -7450,22 +7654,101 @@
     }
 
     // ===== ROUTING =====
+    var staticPageSlugs = {
+      'startseite': '',
+      'mensch': 'mensch/',
+      'hunde': 'hunde/',
+      'hund-im-buero': 'hund-im-buero/',
+      'katzen': 'katzen/',
+      'wildkatzenbaby-gefunden': 'wildkatzenbaby-gefunden/',
+      'voegel': 'voegel/',
+      'kleintiere': 'kleintiere/',
+      'exoten': 'exoten/',
+      'pferde': 'pferde/',
+      'kastration': 'kastration/',
+      'qualzucht': 'qualzucht/',
+      'adoption': 'adoption/',
+      'selbsttest': 'selbsttest/',
+      'notfall': 'notfall/',
+      'wissen': 'wissen/',
+      'glossar': 'glossar/',
+      'kontakt': 'kontakt/',
+      'mitmachen': 'mitmachen/',
+      'noch-nicht-bereit': 'noch-nicht-bereit/',
+      'datenschutz': 'datenschutz/',
+      'impressum': 'impressum/',
+      'hitzefalle-auto': 'hitzefalle-auto/',
+      'ernaehrung-taurin': 'ernaehrung-taurin/',
+      'realhaltung': 'realhaltung/',
+      'zucht-und-vermehrung': 'zucht-und-vermehrung/',
+      'wildtierhaltung': 'wildtierhaltung/',
+      'tierarzt-notdienst': 'notfall/tierarzt-notdienst/'
+    };
+
+    var sectionPageSlugs = {
+      'voegel-kuechenluft-und-daempfe-sind-lebensgefahr': 'voegel/#voegel-kuechenluft-und-daempfe-sind-lebensgefahr',
+      'voegel-freiflug-ist-nicht-optional': 'voegel/#voegel-freiflug-ist-nicht-optional',
+      'kleintiere-kaninchen': 'kleintiere/#kleintiere-kaninchen',
+      'kleintiere-meerschweinchen': 'kleintiere/#kleintiere-meerschweinchen',
+      'kleintiere-hamster': 'kleintiere/#kleintiere-hamster'
+    };
+
+    function siteRootPrefix() {
+      var pathname = location.pathname.replace(/\/index\.html$/, '/');
+      if (location.protocol === 'file:') {
+        var marker = '/wahre-haustierliebe.de/';
+        var markerIndex = pathname.toLowerCase().indexOf(marker);
+        if (markerIndex !== -1) pathname = pathname.slice(markerIndex + marker.length - 1);
+      }
+      var depth = pathname.split('/').filter(Boolean).length;
+      return depth > 0 ? '../'.repeat(depth) : '';
+    }
+
+    function navigateToStaticPage(page) {
+      var slug = staticPageSlugs[page] || sectionPageSlugs[page];
+      if (!slug) return false;
+      window.location.href = siteRootPrefix() + slug;
+      return true;
+    }
+
     function navigateTo(page) {
       hideGlossaryTooltip();
       var target = document.getElementById(page);
       if (target && !target.classList.contains('page')) {
+        var parentPage = target.closest('.page');
+        if (parentPage && !parentPage.classList.contains('active')) {
+          document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+          parentPage.classList.add('active');
+          document.querySelectorAll('[data-page]').forEach(function(l) {
+            l.classList.remove('active');
+            l.removeAttribute('aria-current');
+          });
+          document.querySelectorAll('[data-page="' + parentPage.id + '"]').forEach(function(link) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+          });
+          buildArticleToc(parentPage);
+        }
         scrollElementIntoView(target, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
         closeMobileNav();
         closeDropdowns();
         return;
       }
 
+      if (!target && navigateToStaticPage(page)) return;
+
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-      document.querySelectorAll('.nav-link[data-page]').forEach(function(l) { l.classList.remove('active'); });
+      document.querySelectorAll('[data-page]').forEach(function(l) {
+        l.classList.remove('active');
+        l.removeAttribute('aria-current');
+      });
       if (target) {
         target.classList.add('active');
-        var link = document.querySelector('.nav-link[data-page="' + page + '"]');
-        if (link) link.classList.add('active');
+        document.querySelectorAll('[data-page="' + page + '"]').forEach(function(link) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        });
+        buildArticleToc(target);
       }
       window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
       closeMobileNav();
@@ -7477,6 +7760,54 @@
       var hash = location.hash.slice(1);
       if (hash) navigateTo(hash);
     });
+
+    function slugifyHeading(text, fallback) {
+      var slug = text.toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/ß/g, 'ss')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+      return slug || fallback;
+    }
+
+    function buildArticleToc(page) {
+      if (!page || page.id === 'startseite') return;
+      var existing = page.querySelector('.article-toc');
+      if (existing) existing.remove();
+      var headings = Array.from(page.querySelectorAll(':scope > .section h2')).filter(function(heading) {
+        return heading.textContent.trim().length > 0;
+      });
+      if (headings.length < 4) return;
+      var list = document.createElement('ol');
+      list.className = 'article-toc-list';
+      headings.forEach(function(heading, index) {
+        if (!heading.id) heading.id = page.id + '-' + slugifyHeading(heading.textContent.trim(), 'abschnitt-' + (index + 1));
+        var item = document.createElement('li');
+        var link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          scrollElementIntoView(heading, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + heading.id);
+        });
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+      var toc = document.createElement('nav');
+      toc.className = 'article-toc';
+      toc.setAttribute('aria-label', 'Inhalt dieser Seite');
+      var details = document.createElement('details');
+      details.open = window.matchMedia('(min-width: 769px)').matches;
+      var summary = document.createElement('summary');
+      summary.textContent = 'Auf dieser Seite';
+      details.appendChild(summary);
+      details.appendChild(list);
+      toc.appendChild(details);
+      var hero = page.querySelector(':scope > .hero');
+      if (hero) hero.insertAdjacentElement('afterend', toc);
+    }
 
     document.addEventListener('DOMContentLoaded', function() {
       hydrateArticleHeroImages();

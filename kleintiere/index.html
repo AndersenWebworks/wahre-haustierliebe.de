@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4828,13 +4956,50 @@
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item active" data-page="kleintiere" href="../kleintiere/index.html" aria-current="page">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+                <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item active" data-page="kleintiere" href="../kleintiere/index.html" aria-current="page">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
@@ -4843,9 +5008,7 @@
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4874,26 +5037,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link active" data-page="kleintiere" href="../kleintiere/index.html" aria-current="page">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+        <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link active" data-page="kleintiere" href="../kleintiere/index.html" aria-current="page">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4912,7 +5116,7 @@
         <h1>Kleintiere – kein Einstiegstier, kein Kinderspielzeug</h1>
         <p>Kaninchen, Meerschweinchen, Hamster, Ratten – sie wirken pflegeleicht. Sind sie nicht.</p>
       <div class="article-kicker"><span>Klein ist nicht einfach</span><span>Fläche</span><span>Zähne und Tierarzt</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen" data-share-reason="Das Bild soll den Mythos vom einfachen Einstiegstier brechen." style="--image-position: center 50%;"><img src="../assets/images/optimized/guinea-pig-habitat.jpg" alt="Kleintier-Habitat mit Struktur statt Spielzeughaltung" loading="eager" decoding="async" width="800" height="600" fetchpriority="high"><figcaption class="context-caption">Kleintiere brauchen Fläche, Struktur und Artgenossen.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-kaninchen">Kaninchen</a></li><li><a href="#kleintiere-meerschweinchen">Meerschweinchen</a></li><li><a href="#kleintiere-hamster">Hamster</a></li><li><a href="#kleintiere-ratten">Ratten</a></li><li><a href="#kleintiere-degus-und-chinchillas">Degus und Chinchillas</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4940,7 +5144,7 @@
             <div class="compare-card risk"><strong>Ratten</strong><span>Intelligent, sozial, kurzlebig. Brauchen Gruppe, Höhe und Beschäftigung.</span></div>
           </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-kleintiere-1">Kaninchen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-kleintiere-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
+        <div class="section-feedback-heading"><h2 id="kleintiere-kaninchen">Kaninchen</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-kaninchen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Kleintiere sind gute Einstiegstiere.“</h3><p>Sie wirken handlich, billig und unkompliziert. Genau das macht sie so oft zu Fehlkäufen.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Klein heißt nicht einfach.</h3><p>Fläche, Artgenossen, Zähne, Kastration, Tierarzt und Ruhe sind bei vielen Kleintieren anspruchsvoller als erwartet.</p></div>
           </div>
@@ -4951,14 +5155,15 @@
         <p><strong>Zähne:</strong> Kaninchenzähne wachsen lebenslang. Falsches Futter führt zu <span class="glossary-term" data-glossary-key="zahnfehlstellung" data-glossary-title="Zahnfehlstellung" data-glossary-text="Fehlstellung der Zähne, die Fressen, Atmung, Pflege oder Schmerzfreiheit beeinträchtigen kann." data-glossary-href="../glossar/index.html#zahnfehlstellung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Zahnfehlstellungen</span>, die extrem schmerzhaft sind und teure tierärztliche Behandlung erfordern.</p>
         <p><strong>Kastration:</strong> Rammler sollten kastriert werden, um Aggressionen und unkontrollierte Vermehrung zu vermeiden. Wichtig zu wissen: Etwa 60 % der unkastrierten Häsinnen über 3 Jahre entwickeln Gebärmuttertumoren – ein ernsthaftes Argument auch für die <a href="../kastration/index.html">Kastration</a> weiblicher Tiere.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-kleintiere-2">Meerschweinchen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-kleintiere-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="kleintiere-meerschweinchen">Meerschweinchen</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-meerschweinchen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Alles, was für Kaninchen gilt, gilt in ähnlicher Form für Meerschweinchen – mit einem entscheidenden Unterschied: <strong>Kaninchen und Meerschweinchen <a href="../wissen/index.html">gehören nicht zusammen</a>.</strong> Sie sprechen verschiedene Körpersprachen, haben unterschiedliche Sozialstrukturen, und der Kaninchentritt kann ein Meerschweinchen ernsthaft verletzen.</p>
         <p>Meerschweinchen brauchen Meerschweinchen. Mindestens zwei, besser drei oder mehr. Sie sind tagaktiv (gut für Kinder – im Gegensatz zu Hamstern), aber immer noch Fluchttiere, die nicht gern hochgehoben werden.</p>
         <p><strong>Vitamin C:</strong> Meerschweinchen können – wie Menschen – kein eigenes Vitamin C bilden. Sie brauchen täglich vitaminreiches Frischfutter (Paprika, Petersilie, Fenchel). Vitamin-C-Mangel führt zu <span class="glossary-term" data-glossary-key="skorbut" data-glossary-title="Skorbut" data-glossary-text="Krankheit durch Vitamin-C-Mangel. Bei Meerschweinchen relevant, weil sie Vitamin C nicht selbst bilden." data-glossary-href="../glossar/index.html#skorbut" aria-describedby="glossary-term-popover" tabindex="0" role="button">Skorbut</span>.</p>
+        <p><strong>Zähne:</strong> Auch Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt. Gewichtsverlust, Speicheln oder langsames Kauen sind Warnzeichen, nicht bloß wählerisches Fressverhalten.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-kleintiere-3">Hamster</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-kleintiere-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
+        <div class="section-feedback-heading"><h2 id="kleintiere-hamster">Hamster</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-hamster" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
             <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
-            <article class="signal-card" data-nr="02"><strong>Zähne</strong><span>Kaninchen und Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt.</span></article>
+            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Tagsüberes Wecken stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
             <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
           </div>
         <p>Hamster sind <span class="glossary-term" data-glossary-key="nachtaktiv" data-glossary-title="Nachtaktiv" data-glossary-text="Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress." data-glossary-href="../glossar/index.html#nachtaktiv" aria-describedby="glossary-term-popover" tabindex="0" role="button">nachtaktiv</span>. Sie schlafen tagsüber und werden abends aktiv. Wer seinen Hamster tagsüber weckt – weil die Kinder ihn sehen wollen –, verursacht chronischen Stress.</p>
@@ -4966,14 +5171,14 @@
         <p><strong>Platz:</strong> Mindestens 100 × 50 cm Grundfläche (besser mehr), 30 cm tiefe Einstreu zum Graben, ein Laufrad mit mindestens 28 cm Durchmesser (Goldhamster) oder 20 cm (Zwerghamster), Verstecke und Tunnel.</p>
         <p><strong>Kein Kindertier:</strong> Ein Tier, das man selten sieht, nicht anfassen soll und das bei Weckversuchen beißt, ist kein geeignetes Haustier für Kinder. Hamster sind Beobachtungstiere für geduldige Erwachsene.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-kleintiere-4">Ratten</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-kleintiere-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="kleintiere-ratten">Ratten</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-ratten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ratten sind das Gegenteil ihres Rufs: reinlich, intelligent, sozial und lernfähig. Sie erkennen ihren Namen, lernen Tricks und bauen echte Bindungen zu ihren Menschen auf.</p>
         <p><strong>Hochsozial:</strong> Ratten dürfen niemals allein gehalten werden. Mindestens zwei, besser drei oder mehr. Einzelhaltung verursacht Depressionen und Verhaltensstörungen.</p>
         <p><strong>Platz:</strong> Große, hohe Voliere mit mehreren Ebenen, Klettermöglichkeiten und Häuschen. Täglicher Auslauf außerhalb des Käfigs. Ein Hamsterkäfig reicht bei Weitem nicht.</p>
         <p><strong>Lebenserwartung:</strong> 2–3 Jahre. Das ist die größte Herausforderung bei Ratten: Man baut in kurzer Zeit eine starke Bindung auf und verliert das Tier viel zu früh. Tumore sind bei Ratten extrem verbreitet – tierärztliche Behandlung (OPs) können pro Tumor 100–300 Euro kosten.</p>
         <p><strong>Reinlich:</strong> Heimratten legen feste Toilettenecken an und putzen sich ausgiebig. Der typische „Rattengeruch“ entsteht durch zu kleine Käfige und seltene Reinigung – nicht durch die Tiere selbst.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-kleintiere-5">Degus und Chinchillas</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-kleintiere-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="kleintiere-degus-und-chinchillas">Degus und Chinchillas</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-degus-und-chinchillas" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Beide Arten sind anspruchsvoller, als die meisten Menschen ahnen.</p>
         <p><strong>Degus</strong> sind tagaktive Kolonietiere aus Südamerika. Sie brauchen riesige Volieren, Artgenossen (mindestens 2–3) und zuckerfreies Futter – Degus neigen stark zu Diabetes. Lebenserwartung: 5–8 Jahre.</p>
         <p><strong>Chinchillas</strong> sind nachtaktiv und extrem hitzeempfindlich – Temperaturen über 25 °C können tödlich sein. Sie brauchen Staubbäder mit speziellem Chinchilla-Sand (kein Wasser!), große, hohe Volieren und können <strong>15–20 Jahre</strong> alt werden. Das ist eine Verpflichtung, die mit der eines <a href="../hunde/index.html">Hundes</a> vergleichbar ist.</p>
@@ -5007,7 +5212,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Nicht als Käfig-Mindestmaß-Liste verkürzen.</li><li>Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.</li></ul>
+              <ul><li>Die Fläche ist nur ein Teil der Haltung; Ruhe, Artgenossen, Futter und Tierarztzugang zählen genauso.</li><li>Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.</li></ul>
             </article>
           </div>
         </div>

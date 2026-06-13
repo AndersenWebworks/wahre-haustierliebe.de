@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4828,13 +4956,50 @@
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item active" data-page="voegel" href="../voegel/index.html" aria-current="page">Vögel</a>
-              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+                <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item active" data-page="voegel" href="../voegel/index.html" aria-current="page">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
@@ -4843,9 +5008,7 @@
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4874,26 +5037,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link active" data-page="voegel" href="../voegel/index.html" aria-current="page">Vögel</a>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+        <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link active" data-page="voegel" href="../voegel/index.html" aria-current="page">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4912,7 +5116,7 @@
         <h1>Vögel – <span class="glossary-term" data-glossary-key="schwarmvogel" data-glossary-title="Schwarmvogel" data-glossary-text="Vogelart, die in Gruppen lebt und Artgenossen braucht." data-glossary-href="../glossar/index.html#schwarmvogel" aria-describedby="glossary-term-popover" tabindex="0" role="button">Schwarmtiere</span>, keine Dekoration</h1>
         <p>Ein einzelner Wellensittich im Käfig ist kein Haustier. Es ist ein einsames Tier in einer Zelle.</p>
       <div class="article-kicker"><span>Schwarm statt Spiegel</span><span>UV-Licht</span><span>Freiflug</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen" data-share-reason="Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen." style="--image-position: center 44%;"><img src="../assets/images/optimized/voegel-voliere-02.jpg" alt="Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum" loading="eager" decoding="async" width="960" height="638" fetchpriority="high"><figcaption class="context-caption">Schwarm, Flugraum und Reize sind kein Extra.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#voegel-schwarmvogel-gehoren-nicht-allein-in-einen-kafig">Schwarmvögel gehören nicht allein in einen Käfig</a></li><li><a href="#voegel-uv-licht-der-sinn-den-wir-nicht-sehen">UV-Licht: Der Sinn, den wir nicht sehen</a></li><li><a href="#voegel-kuechenluft-und-daempfe-sind-lebensgefahr">Küchenluft und Dämpfe sind Lebensgefahr</a></li><li><a href="#voegel-freiflug-ist-nicht-optional">Freiflug ist nicht optional</a></li><li><a href="#voegel-spiegel-und-plastikvogel-ersetzen-keinen-partner">Spiegel und Plastikvögel ersetzen keinen Partner</a></li><li><a href="#voegel-krankheit-verbergen-beutetier-instinkt">Krankheit verbergen: Beutetier-Instinkt</a></li><li><a href="#voegel-schauwellensittiche-qualzucht-mit-federn">Schauwellensittiche – Qualzucht mit Federn</a></li><li><a href="#voegel-bevor-du-dich-entscheidest">Bevor du dich entscheidest</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4931,7 +5135,7 @@
             <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer“ geplant ist.</p>
           </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-1">Schwarmvögel gehören nicht allein in einen Käfig</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="voegel-einzelhaltung">
+        <div class="section-feedback-heading"><h2 id="voegel-schwarmvogel-gehoren-nicht-allein-in-einen-kafig">Schwarmvögel gehören nicht allein in einen Käfig</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-schwarmvogel-gehoren-nicht-allein-in-einen-kafig" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="voegel-einzelhaltung">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein einzelner Vogel wird zahmer.“</h3><p>Er richtet sich verzweifelt auf Menschen aus, weil kein Artgenosse antwortet.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Zahmkeit darf keine Einsamkeit kosten.</h3><p>Mindestens ein passender Partner, Freiflug und Schwarmverhalten sind keine Extras, sondern Grundbedürfnisse.</p></div>
           </div>
@@ -4939,18 +5143,21 @@
         <p>Wellensittiche, Nymphensittiche, Kanarienvögel, Zebrafinken und die meisten Papageienarten sind <span class="glossary-term" data-glossary-key="obligat-sozial" data-glossary-title="Obligat sozial" data-glossary-text="Tierart braucht Artgenossen zwingend. Alleinhaltung ist dann kein kleiner Kompromiss." data-glossary-href="../glossar/index.html#obligat-sozial" aria-describedby="glossary-term-popover" tabindex="0" role="button">obligat soziale Tiere</span>. Einzelhaltung verursacht chronischen Stress, Verhaltensstörungen (<span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Federrupfen, stereotypisches Kopfwippen</span>, <span class="glossary-term" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren oft ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit." data-glossary-href="../glossar/index.html#apathie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Apathie</span>) und verkürzt die Lebenserwartung.</p>
         <p><strong>Mindestens paarweise halten.</strong> Noch besser: ein kleiner Schwarm ab vier Tieren.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-2">UV-Licht: Der Sinn, den wir nicht sehen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="voegel-uv-licht-der-sinn-den-wir-nicht-sehen">UV-Licht: Der Sinn, den wir nicht sehen</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-uv-licht-der-sinn-den-wir-nicht-sehen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Vögel besitzen vier Zapfentypen in der Netzhaut, Menschen nur drei. Der vierte Zapfen nimmt ultraviolettes Licht wahr. Unter normalem Innenraumlicht fehlt UV – für den Vogel bedeutet das: Die Farben der Artgenossen sehen falsch aus, die Futterbewertung ist gestört, die Partnerwahl wird beeinträchtigt.</p>
         <p>Für Vögel, die in Innenräumen leben, ist eine Tageslichtlampe mit UV-Anteil Pflicht. Normale Leuchtmittel reichen nicht. Die Lampe sollte 10–12 Stunden am Tag leuchten und danach komplett ausgeschaltet werden – Vögel brauchen auch Dunkelheit zum Schlafen.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-3">Freiflug ist nicht optional</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm warning-box" data-enhancement="voegel-teflon">
-            <h3>Teflon kann Vögel in Minuten töten</h3>
-            <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küchenluft und Vogelzimmer gehören getrennt.</p>
-          </div>
-        <p>Ein Käfig ist ein Schlafplatz und Rückzugsort. Nicht mehr. Vögel brauchen täglich mehrere Stunden sicheren <span class="glossary-term" data-glossary-key="freiflug" data-glossary-title="Freiflug" data-glossary-text="Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum." data-glossary-href="../glossar/index.html#freiflug" aria-describedby="glossary-term-popover" tabindex="0" role="button">Freiflug</span> in einem vogelsicheren Raum (Fenster geschlossen oder gesichert, keine offenen Töpfe, keine Ventilatoren, keine giftigen Pflanzen, kein <span class="glossary-term" data-glossary-key="ptfe" data-glossary-title="PTFE" data-glossary-text="Beschichtungsstoff, der bei Überhitzung giftige Dämpfe bilden kann. Für Vögel besonders gefährlich." data-glossary-href="../glossar/index.html#ptfe" aria-describedby="glossary-term-popover" tabindex="0" role="button">Teflon</span> in der Küche).</p>
+        <div class="section-feedback-heading"><h2 id="voegel-kuechenluft-und-daempfe-sind-lebensgefahr">Küchenluft und Dämpfe sind Lebensgefahr</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="warning-box">
+          <h3>Teflon kann Vögel in Minuten töten</h3>
+          <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küche, Rauch, Duftstoffe und Vogelzimmer gehören getrennt.</p>
+        </div>
+
+        <div class="section-feedback-heading"><h2 id="voegel-freiflug-ist-nicht-optional">Freiflug ist nicht optional</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-freiflug-ist-nicht-optional" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Ein Käfig ist ein Schlafplatz und Rückzugsort. Nicht mehr. Vögel brauchen täglich mehrere Stunden sicheren <span class="glossary-term" data-glossary-key="freiflug" data-glossary-title="Freiflug" data-glossary-text="Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum." data-glossary-href="../glossar/index.html#freiflug" aria-describedby="glossary-term-popover" tabindex="0" role="button">Freiflug</span> in einem vogelsicheren Raum (Fenster geschlossen oder gesichert, keine offenen Töpfe, keine Ventilatoren, keine giftigen Pflanzen, kein Zugang zur Küche).</p>
         <p>Eine Außenvoliere – wenn möglich mit beheizbarem Schutzhaus – ist die beste Haltungsform. Frische Luft, natürliches UV-Licht und Witterungsreize stärken das Immunsystem und das Wohlbefinden enorm.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-4">Spiegel und Plastikvögel ersetzen keinen Partner</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
+        <div class="section-feedback-heading"><h2 id="voegel-spiegel-und-plastikvogel-ersetzen-keinen-partner">Spiegel und Plastikvögel ersetzen keinen Partner</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-spiegel-und-plastikvogel-ersetzen-keinen-partner" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Vögel brauchen Reize, die zu Schwarm, Flug und Futtersuche passen.</h3>
             <p>Der wichtigste „Trick“ ist nicht, dass ein Vogel etwas für Menschen vorführt. Wichtig ist eine Umgebung, in der er selbst aktiv sein kann.</p>
@@ -4962,21 +5169,21 @@
           </div>
         <p>Ein Spiegel im Käfig ist keine Gesellschaft. Der Vogel erkennt sein Spiegelbild nicht als sich selbst und versucht, mit dem „anderen Vogel“ zu interagieren, der nie antwortet. Das führt zu Frustration, Aggressivität und Kropfentzündungen (durch Fütterungsversuche am Spiegel). Plastikvögel sind genauso sinnlos.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-5">Krankheit verbergen: Beutetier-Instinkt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="voegel-krankheit-verbergen-beutetier-instinkt">Krankheit verbergen: Beutetier-Instinkt</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-krankheit-verbergen-beutetier-instinkt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>In der Natur bedeutet Schwäche zeigen: gefressen werden. Deshalb verbergen Vögel Krankheitssymptome, bis sie nicht mehr können. Wenn dein Wellensittich aufgeplustert auf der Stange sitzt, wenig frisst oder am Käfigboden hockt, ist das ein <strong><a href="../notfall/index.html">Notfall</a></strong> – nicht ein „schlechter Tag“.</p>
         <p>Regelmäßige Beobachtung ist entscheidend: Frisst der Vogel? Wie sieht der Kot aus? Sind die Federn in Ordnung? Ist der Vogel aktiv? Veränderungen im Verhalten sind oft das einzige Frühwarnsystem.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-6">Schauwellensittiche – Qualzucht mit Federn</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="voegel-schauwellensittiche-qualzucht-mit-federn">Schauwellensittiche – Qualzucht mit Federn</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-schauwellensittiche-qualzucht-mit-federn" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Schauwellensittiche (auch „Standard“-Wellensittiche) werden auf Größe und Kopfgefieder gezüchtet. Das Ergebnis: übermäßig langes Stirngefieder, das den Vögeln die Sicht verdeckt. Manche Schauwellensittiche können kaum noch sehen und sind dadurch unsicher, stressanfällig und in ihrer Bewegungsfreiheit eingeschränkt. Das ist <a href="../qualzucht/index.html">Qualzucht</a> – auch wenn es unter Züchtern als „Rassestandard“ gilt.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-voegel-7">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-voegel-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="voegel-bevor-du-dich-entscheidest">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-bevor-du-dich-entscheidest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul class="checklist">
           <li>Ich halte Vögel mindestens paarweise, besser in einem kleinen Schwarm.</li>
           <li>Ich kann täglich mehrere Stunden sicheren Freiflug ermöglichen.</li>
           <li>Ich habe eine UV-Lampe mit Tageslichtspektrum (oder eine Außenvoliere).</li>
           <li>Ich bin bereit, 8–15 Jahre (Wellensittiche) oder 20–60 Jahre (Papageien) Verantwortung zu tragen.</li>
           <li>Ich kenne einen <span class="glossary-term" data-glossary-key="vogelkundiger-tierarzt" data-glossary-title="Vogelkundiger Tierarzt" data-glossary-text="Tierarzt oder Tierärztin mit besonderer Erfahrung in Vogelmedizin. Bei Vögeln oft entscheidend." data-glossary-href="../glossar/index.html#vogelkundiger-tierarzt" aria-describedby="glossary-term-popover" tabindex="0" role="button">vogelkundigen Tierarzt</span> in meiner Nähe.</li>
-          <li>Meine Wohnung ist vogelsicher (kein Teflon in der Küche, keine giftigen Pflanzen).</li>
+          <li>Meine Wohnung ist vogelsicher (kein <span class="glossary-term" data-glossary-key="ptfe" data-glossary-title="PTFE" data-glossary-text="Beschichtungsstoff, der bei Überhitzung giftige Dämpfe bilden kann. Für Vögel besonders gefährlich." data-glossary-href="../glossar/index.html#ptfe" aria-describedby="glossary-term-popover" tabindex="0" role="button">Teflon</span> in der Küche, keine giftigen Pflanzen).</li>
         </ul>
       </div>
     </div>
@@ -5006,7 +5213,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Einzelhaltung ist keine normale Option.</li><li>Nicht nur Käfiggröße zitieren; Sozialkontakt und Freiflug gehören dazu.</li></ul>
+              <ul><li>Einzelhaltung ist keine normale Option.</li><li>Käfiggröße allein reicht nicht; Sozialkontakt und täglicher Freiflug gehören zur Haltung.</li></ul>
             </article>
           </div>
         </div>

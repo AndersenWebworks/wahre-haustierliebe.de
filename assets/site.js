@@ -26,7 +26,12 @@ var staticPageRoutes = {
   "zucht-und-vermehrung": "/zucht-und-vermehrung/index.html",
   "wildtierhaltung": "/wildtierhaltung/index.html",
   "wildkatzenbaby-gefunden": "/wildkatzenbaby-gefunden/index.html",
-  "noch-nicht-bereit": "/noch-nicht-bereit/index.html"
+  "noch-nicht-bereit": "/noch-nicht-bereit/index.html",
+  "voegel-kuechenluft-und-daempfe-sind-lebensgefahr": "/voegel/index.html#voegel-kuechenluft-und-daempfe-sind-lebensgefahr",
+  "voegel-freiflug-ist-nicht-optional": "/voegel/index.html#voegel-freiflug-ist-nicht-optional",
+  "kleintiere-kaninchen": "/kleintiere/index.html#kleintiere-kaninchen",
+  "kleintiere-meerschweinchen": "/kleintiere/index.html#kleintiere-meerschweinchen",
+  "kleintiere-hamster": "/kleintiere/index.html#kleintiere-hamster"
 };
 function staticRouteFor(page) {
   var target = staticPageRoutes[page] || '/';
@@ -192,7 +197,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="adoption-price-share">
             <span class="eyebrow">Teilbarer Moment</span>
             <h3>Der billige Welpe ist oft das teuerste Tier.</h3>
-            <p>Genau diese Rechnung sollte jemand sehen, bevor er bei Kleinanzeigen ein „Schnäppchen“ anklickt.</p>
+            <p>Diese Rechnung gehört vor den Kleinanzeigen-Klick, nicht erst nach dem ersten Tierarztbesuch.</p>
             <div class="share-bar">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Der billige Welpe ist oft das teuerste Tier. Lies das, bevor du über Kleinanzeigen kaufst:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -290,7 +295,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
             <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
-            <p>Diese Seite gehört zu Menschen, die den Hundewunsch ernst meinen und deshalb zuerst ihren Alltag prüfen sollten.</p>
+            <p>Diese Seite ist für Menschen, die den Hundewunsch ernst meinen und zuerst ihren Alltag prüfen.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -341,13 +346,6 @@ function normalizeAssetUrls(root) {
           </div>`
         },
         {
-          afterHeading: 'Freiflug ist nicht optional',
-          html: `<div class="article-rhythm warning-box" data-enhancement="voegel-teflon">
-            <h3>Teflon kann Vögel in Minuten töten</h3>
-            <p>Beschichtete Pfannen und andere PTFE-Oberflächen setzen beim Überhitzen Dämpfe frei, die für Vögel im selben Raum lebensgefährlich sind. Küchenluft und Vogelzimmer gehören getrennt.</p>
-          </div>`
-        },
-        {
           afterHeading: 'Spiegel und Plastikvögel ersetzen keinen Partner',
           html: `<div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
@@ -386,7 +384,7 @@ function normalizeAssetUrls(root) {
           afterHeading: 'Hamster',
           html: `<div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
             <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
-            <article class="signal-card" data-nr="02"><strong>Zähne</strong><span>Kaninchen und Meerschweinchen brauchen frühe Kontrolle, bevor Fressen sichtbar schwerfällt.</span></article>
+            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Tagsüberes Wecken stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
             <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
           </div>`
         }
@@ -804,8 +802,73 @@ function normalizeAssetUrls(root) {
     }
 
     // ===== ROUTING =====
+    var staticPageSlugs = {
+      'startseite': '',
+      'mensch': 'mensch/',
+      'hunde': 'hunde/',
+      'hund-im-buero': 'hund-im-buero/',
+      'katzen': 'katzen/',
+      'wildkatzenbaby-gefunden': 'wildkatzenbaby-gefunden/',
+      'voegel': 'voegel/',
+      'kleintiere': 'kleintiere/',
+      'exoten': 'exoten/',
+      'pferde': 'pferde/',
+      'kastration': 'kastration/',
+      'qualzucht': 'qualzucht/',
+      'adoption': 'adoption/',
+      'selbsttest': 'selbsttest/',
+      'notfall': 'notfall/',
+      'wissen': 'wissen/',
+      'glossar': 'glossar/',
+      'kontakt': 'kontakt/',
+      'mitmachen': 'mitmachen/',
+      'noch-nicht-bereit': 'noch-nicht-bereit/',
+      'datenschutz': 'datenschutz/',
+      'impressum': 'impressum/',
+      'hitzefalle-auto': 'hitzefalle-auto/',
+      'ernaehrung-taurin': 'ernaehrung-taurin/',
+      'realhaltung': 'realhaltung/',
+      'zucht-und-vermehrung': 'zucht-und-vermehrung/',
+      'wildtierhaltung': 'wildtierhaltung/',
+      'tierarzt-notdienst': 'notfall/tierarzt-notdienst/'
+    };
+
+    var sectionPageSlugs = {
+      'voegel-kuechenluft-und-daempfe-sind-lebensgefahr': 'voegel/#voegel-kuechenluft-und-daempfe-sind-lebensgefahr',
+      'voegel-freiflug-ist-nicht-optional': 'voegel/#voegel-freiflug-ist-nicht-optional',
+      'kleintiere-kaninchen': 'kleintiere/#kleintiere-kaninchen',
+      'kleintiere-meerschweinchen': 'kleintiere/#kleintiere-meerschweinchen',
+      'kleintiere-hamster': 'kleintiere/#kleintiere-hamster'
+    };
+
+    function siteRootPrefix() {
+      var pathname = location.pathname.replace(/\/index\.html$/, '/');
+      if (location.protocol === 'file:') {
+        var marker = '/wahre-haustierliebe.de/';
+        var markerIndex = pathname.toLowerCase().indexOf(marker);
+        if (markerIndex !== -1) pathname = pathname.slice(markerIndex + marker.length - 1);
+      }
+      var depth = pathname.split('/').filter(Boolean).length;
+      return depth > 0 ? '../'.repeat(depth) : '';
+    }
+
+    function navigateToStaticPage(page) {
+      var slug = staticPageSlugs[page] || sectionPageSlugs[page];
+      if (!slug) return false;
+      window.location.href = siteRootPrefix() + slug;
+      return true;
+    }
+
     function navigateTo(page) {
       if (document.body && document.body.dataset.staticSite === 'true') {
+        var target = document.getElementById(page);
+        if (target && !target.classList.contains('page')) {
+          scrollElementIntoView(target, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+          closeMobileNav();
+          closeDropdowns();
+          history.replaceState(null, '', '#' + page);
+          return;
+        }
         window.location.href = staticRouteFor(page);
         return;
       }
@@ -828,6 +891,54 @@ function normalizeAssetUrls(root) {
       if (hash) navigateTo(hash);
     });
 
+    function slugifyHeading(text, fallback) {
+      var slug = text.toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/ß/g, 'ss')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+      return slug || fallback;
+    }
+
+    function buildArticleToc(page) {
+      if (!page || page.id === 'startseite') return;
+      var existing = page.querySelector('.article-toc');
+      if (existing) existing.remove();
+      var headings = Array.from(page.querySelectorAll(':scope > .section h2')).filter(function(heading) {
+        return heading.textContent.trim().length > 0;
+      });
+      if (headings.length < 4) return;
+      var list = document.createElement('ol');
+      list.className = 'article-toc-list';
+      headings.forEach(function(heading, index) {
+        if (!heading.id) heading.id = page.id + '-' + slugifyHeading(heading.textContent.trim(), 'abschnitt-' + (index + 1));
+        var item = document.createElement('li');
+        var link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          scrollElementIntoView(heading, { behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + heading.id);
+        });
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+      var toc = document.createElement('nav');
+      toc.className = 'article-toc';
+      toc.setAttribute('aria-label', 'Inhalt dieser Seite');
+      var details = document.createElement('details');
+      details.open = window.matchMedia('(min-width: 769px)').matches;
+      var summary = document.createElement('summary');
+      summary.textContent = 'Auf dieser Seite';
+      details.appendChild(summary);
+      details.appendChild(list);
+      toc.appendChild(details);
+      var hero = page.querySelector(':scope > .hero');
+      if (hero) hero.insertAdjacentElement('afterend', toc);
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       hydrateArticleHeroImages();
       hydrateArticleEnhancements();
@@ -839,7 +950,7 @@ function normalizeAssetUrls(root) {
       if (document.body && document.body.dataset.staticSite === 'true') {
         var pageId = document.body.dataset.pageId || 'startseite';
         var hash = location.hash.slice(1);
-        if (hash && staticPageRoutes[hash] && hash !== pageId) {
+        if (hash && staticPageRoutes[hash] && !staticPageRoutes[hash].includes('#') && hash !== pageId) {
           window.location.replace(staticRouteFor(hash));
           return;
         }
@@ -849,6 +960,8 @@ function normalizeAssetUrls(root) {
           if (active) link.setAttribute('aria-current', 'page');
           else link.removeAttribute('aria-current');
         });
+        var staticPage = document.querySelector('.page');
+        if (staticPage) buildArticleToc(staticPage);
         document.querySelectorAll('.dropdown').forEach(function(dropdown) {
           var hasActive = dropdown.querySelector('[aria-current="page"]');
           var toggle = dropdown.querySelector('.dropdown-toggle');

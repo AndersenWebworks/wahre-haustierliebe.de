@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4840,25 +4968,60 @@
           <li><a class="nav-link" data-page="startseite" href="../index.html">Start</a></li>
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
-            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+                <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item active" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html" aria-current="page">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
-            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="wissen-menu" aria-current="page">Wissen</button>
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="wissen-menu">Wissen</button>
             <div class="dropdown-menu" id="wissen-menu">
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item active" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html" aria-current="page">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4887,26 +5050,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link active" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html" aria-current="page">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+        <a class="mobile-nav-link" data-page="hund-im-buero" href="../hund-im-buero/index.html">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link active" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html" aria-current="page">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4925,7 +5129,7 @@
         <h1>Wildkatzenbaby gefunden? Bitte nicht mitnehmen.</h1>
         <p>Ein getigertes Kätzchen im Wald ist nicht automatisch eine ausgesetzte Hauskatze. Manchmal ist der beste Schutz: Abstand halten, Standort merken und Fachleute einschalten.</p>
       <div class="article-kicker"><span>Nicht mitnehmen</span><span>Merkmale prüfen</span><span>Fachstelle rufen</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Wildkatzenbaby-Seite: Verwechslungsgefahr sichtbar machen und Abstand als Hilfe rahmen" data-share-reason="Das Bild soll aus dem Reflex „mitnehmen“ die Entscheidung „erst prüfen“ machen." style="--image-position: center 36%;"><img src="../assets/images/european-wildcat.jpg" alt="Europäische Wildkatze mit typischen Merkmalen wie breitem Kopf, fleischfarbener Nase und dichtem Fell" loading="eager" decoding="async" width="1496" height="1729" fetchpriority="high"><figcaption class="context-caption">Gut gemeinte Hilfe beginnt manchmal damit, ein Jungtier nicht anzufassen.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#wildkatzenbaby-gefunden-warum-dieses-thema-wichtig-ist">Warum dieses Thema wichtig ist</a></li><li><a href="#wildkatzenbaby-gefunden-was-du-sofort-tun-solltest">Was du sofort tun solltest</a></li><li><a href="#wildkatzenbaby-gefunden-wildkatze-oder-hauskatze-merkmale-im-vergleich">Wildkatze oder Hauskatze? Merkmale im Vergleich</a></li><li><a href="#wildkatzenbaby-gefunden-was-du-nicht-tun-solltest">Was du nicht tun solltest</a></li><li><a href="#wildkatzenbaby-gefunden-der-geruchsmythos-bitte-sauber-bleiben">Der Geruchsmythos: bitte sauber bleiben</a></li><li><a href="#wildkatzenbaby-gefunden-wenn-du-es-schon-mitgenommen-hast">Wenn du es schon mitgenommen hast</a></li><li><a href="#wildkatzenbaby-gefunden-wen-du-kontaktieren-kannst">Wen du kontaktieren kannst</a></li><li><a href="#wildkatzenbaby-gefunden-haufige-fragen">Häufige Fragen</a></li><li><a href="#wildkatzenbaby-gefunden-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4934,11 +5138,11 @@
           <p>Ein scheinbar verlassenes Katzenjunges im Wald bitte nicht anfassen, nicht füttern und nicht mit nach Hause nehmen. Wildkatzenmütter lassen ihre Jungen zeitweise allein, während sie jagen. Das sieht für Menschen schnell nach Notfall aus, ist aber oft normales Verhalten.</p>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-1">Warum dieses Thema wichtig ist</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-warum-dieses-thema-wichtig-ist">Warum dieses Thema wichtig ist</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-warum-dieses-thema-wichtig-ist" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Junge Europäische Wildkatzen sehen getigerten Hauskatzenjungen zum Verwechseln ähnlich. Genau deshalb werden sie immer wieder gut gemeint eingesammelt und in Tierarztpraxen, Tierheimen oder privaten Haushalten abgegeben. Für das Tier kann das gefährlich werden: Stress, falsches Futter, Kontakt zu Hauskatzenkrankheiten und ungeeignete Unterbringung senken seine Chancen.</p>
         <p>Die Europäische Wildkatze ist keine verwilderte Hauskatze. Sie ist ein eigenes Wildtier, lebt vor allem in strukturreichen Wäldern und ist in Deutschland besonders geschützt. Eine gesunde Wildkatze aus der Natur mitzunehmen, ist deshalb nicht nur falsch, sondern rechtlich problematisch.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-2">Was du sofort tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-was-du-sofort-tun-solltest">Was du sofort tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-was-du-sofort-tun-solltest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ol class="checklist">
           <li><strong>Abstand halten.</strong> Leise zurückgehen, Kinder und Hunde fernhalten, nicht locken.</li>
           <li><strong>Nicht anfassen.</strong> Nicht hochnehmen, nicht streicheln, nicht in eine Box setzen.</li>
@@ -4954,7 +5158,7 @@
           <p>Akut ist es, wenn das Tier sichtbar verletzt ist, auf einer Straße sitzt, von Hund oder Katze bedroht wird, stark unterkühlt wirkt, laut schreiend Menschen hinterherläuft oder die Mutter nach fachkundiger Einschätzung nicht zurückkommt. Dann nicht selbst herumprobieren, sondern sofort eine zuständige Stelle anrufen und deren Anweisung befolgen.</p>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-3">Wildkatze oder Hauskatze? Merkmale im Vergleich</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-wildkatze-oder-hauskatze-merkmale-im-vergleich">Wildkatze oder Hauskatze? Merkmale im Vergleich</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-wildkatze-oder-hauskatze-merkmale-im-vergleich" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Diese Merkmale sind Hinweise, keine sichere Bestimmung. Junge Wildkatzen sind in den ersten Lebensmonaten stärker gezeichnet als erwachsene Tiere. Auch Fachleute können im Einzelfall unsicher sein; sicher ist am Ende nur eine genetische Untersuchung.</p>
 
         <table class="cost-table">
@@ -4974,7 +5178,7 @@
           </tbody>
         </table>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-4">Was du nicht tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-was-du-nicht-tun-solltest">Was du nicht tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-was-du-nicht-tun-solltest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul>
           <li><strong>Nicht „retten“, weil es allein ist.</strong> Allein gefunden heißt bei Wildtieren nicht automatisch verlassen.</li>
           <li><strong>Nicht in ein Tierheim bringen, wenn Wildkatzenverdacht besteht.</strong> Dort kann Kontakt zu Hauskatzenkrankheiten gefährlich werden.</li>
@@ -4983,11 +5187,11 @@
           <li><strong>Nicht auf Social Media nach Laienmeinungen entscheiden.</strong> Fotos können helfen, aber die Entscheidung gehört zu fachkundigen Stellen.</li>
         </ul>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-5">Der Geruchsmythos: bitte sauber bleiben</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-der-geruchsmythos-bitte-sauber-bleiben">Der Geruchsmythos: bitte sauber bleiben</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-der-geruchsmythos-bitte-sauber-bleiben" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Der Satz „Wenn ein Mensch ein Jungtier berührt, nimmt die Mutter es immer nicht mehr an“ ist so pauschal nicht seriös. Bei Jungvögeln stimmt er in dieser Form zum Beispiel nicht; die Elterntiere versorgen sie in der Regel weiter. Bei manchen Säugetierfunden kann menschlicher Geruch oder längeres Handling dagegen eine Rolle spielen. Für Wildkatzen sollte man daraus aber keine einfache „einmal berührt, für immer verstoßen“-Regel machen.</p>
         <p>Bei Wildkatzen geht es vor allem um Störung, Stress, falsche Versorgung, Krankheitsrisiken, Artenschutzrecht und darum, dass die Mutter wegen Menschen in der Nähe nicht zurückkommt. Deshalb bleibt die praktische Regel klar: nicht anfassen. Falls es aus Versehen passiert ist, nicht weiter herumprobieren, sondern das Tier wieder möglichst nah am Fundort lassen, Abstand nehmen und fachkundige Hilfe kontaktieren.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-6">Wenn du es schon mitgenommen hast</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-wenn-du-es-schon-mitgenommen-hast">Wenn du es schon mitgenommen hast</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-wenn-du-es-schon-mitgenommen-hast" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Dann ist der nächste richtige Schritt nicht Schuldgefühl, sondern Schadensbegrenzung:</p>
         <ol class="checklist">
           <li>Tier ruhig, warm, dunkel und getrennt von Haustieren unterbringen.</li>
@@ -4997,7 +5201,7 @@
           <li>Fundort, Uhrzeit, Fotos und bisherige Handlungen ehrlich nennen.</li>
         </ol>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-wildkatzenbaby-gefunden-7">Wen du kontaktieren kannst</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildkatzenbaby-gefunden-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-wen-du-kontaktieren-kannst">Wen du kontaktieren kannst</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-wen-du-kontaktieren-kannst" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Deutschlandweit ist die BUND-Übersicht mit Wildkatzen-Ansprechpartnern ein guter Einstieg. Zusätzlich helfen je nach Region Wildtierbeauftragte, Untere Naturschutzbehörden, Forststellen oder spezialisierte Wildtierauffangstationen. Bei Verletzungen ist eine Tierarztpraxis wichtig, aber mit dem klaren Hinweis: Es könnte eine Wildkatze sein.</p>
         <ul>
           <li><a href="https://www.bund.net/themen/tiere-pflanzen/wildkatze/bund-ansprechpartnerinnen/" target="_blank" rel="noopener noreferrer">BUND: Ansprechpartnerinnen und Ansprechpartner für die Wildkatze</a></li>
@@ -5028,7 +5232,7 @@
 
         <div class="article-rhythm faq-block" data-faq-block="wildkatzenbaby-gefunden">
           <span class="eyebrow">Kurz beantwortet</span>
-          <h2>Häufige Fragen</h2>
+          <h2 id="wildkatzenbaby-gefunden-haufige-fragen">Häufige Fragen</h2>
           <div class="faq-list">
             <details class="faq-item">
               <summary>Soll ich ein scheinbar verlassenes Wildkatzenbaby mitnehmen?</summary>
@@ -5043,7 +5247,7 @@
 
         <div class="article-rhythm evidence-block" data-evidence-block="wildkatzenbaby-gefunden">
           <span class="eyebrow">Quellen und Prüfstand</span>
-          <h2>Worauf diese Seite ihre Aussagen stützt</h2>
+          <h2 id="wildkatzenbaby-gefunden-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</h2>
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
@@ -5055,7 +5259,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.</li><li>Merkmale nur als Hinweise erklären, nicht als sichere Laienbestimmung.</li><li>Keine Anleitung zur privaten Wildtieraufzucht geben.</li><li>Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.</li></ul>
+              <ul><li>Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.</li><li>Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.</li><li>Keine Anleitung zur privaten Wildtieraufzucht geben.</li><li>Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.</li></ul>
             </article>
           </div>
         </div>

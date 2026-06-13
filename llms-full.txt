@@ -75,7 +75,7 @@
 - https://wahre-haustierliebe.de/wildkatzenbaby-gefunden/index.html - Wildkatzenjunge erkennen und bei einem Fund richtig handeln
 - https://wahre-haustierliebe.de/noch-nicht-bereit/index.html - Verantwortlich warten statt vorschnell ein Tier anschaffen
 
-## Page Facts and Guardrails
+## Page Facts and Boundaries
 
 ### Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?
 URL: https://wahre-haustierliebe.de/mensch/index.html
@@ -83,8 +83,8 @@ Facts:
 - Ein Tier zieht in einen konkreten Alltag ein: Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen vor der Anschaffung passen.
 - Ein verantwortliches Nein verhindert späteres Abgeben, Aussetzen oder dauerhafte Minimalversorgung.
 - Die Seite bewertet keine Wünsche, sondern prüft die Folgen für das Tier.
-Do not flatten:
-- Nicht als psychologischen Eignungstest zitieren.
+Important boundaries:
+- Die Seite ersetzt keinen psychologischen Eignungstest.
 - Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.
 Sources:
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
@@ -97,10 +97,10 @@ Facts:
 - Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.
 - Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.
 - Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung.
-Do not flatten:
-- Nicht als pauschale Rasseberatung verwenden.
+Important boundaries:
+- Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.
 - Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.
-- Zwingerhaltung nicht als verboten darstellen; verboten ist grundsätzlich die Anbindehaltung, während Zwingerhaltung nur unter Mindestanforderungen zulässig ist.
+- Zwingerhaltung ist rechtlich nur unter Mindestanforderungen möglich; grundsätzlich verboten ist die Anbindehaltung.
 - Medizinische Symptome gehören in eine Tierarztpraxis.
 Sources:
 - TASSO e. V.: https://www.tasso.net
@@ -116,8 +116,8 @@ Facts:
 - Genehmigung, Zustimmung im Team, Hygiene, Sicherheit, Allergien, Ängste und hundefreie Bereiche gehören vorab geklärt.
 - Ein Hund darf nicht als Stimmungsmacher, Pausenclown oder dauerhaft verfügbare Attraktion behandelt werden.
 - Verschlossene Boxen über längere Zeit sind kein Ersatz für Ruhe, Betreuung, Bewegung und einen freiwillig nutzbaren Rückzugsort.
-Do not flatten:
-- Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.
+Important boundaries:
+- Ein Bürohund braucht Zustimmung, Regeln und einen passenden Arbeitsplatz; die Seite ersetzt keine Rechtsberatung.
 - Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.
 - Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.
 - Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.
@@ -136,8 +136,8 @@ Facts:
 - Katzen sind Einzeljäger, aber nicht automatisch Einzelgänger.
 - Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.
 - Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.
-Do not flatten:
-- Wohnungshaltung nicht als Ideal darstellen, sondern als Kompromiss mit Bedingungen.
+Important boundaries:
+- Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.
 - Keine Ferndiagnose bei Verhaltensänderungen.
 Sources:
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -150,9 +150,9 @@ Facts:
 - Wellensittiche und viele andere Heimvögel brauchen Artgenossen, Flugraum und Beschäftigung.
 - Ein einzelner Vogel wirkt oft zahm, weil ihm ein artgleicher Sozialpartner fehlt.
 - Licht, Luftqualität und sichere Freiflugbereiche sind Teil der Haltung, nicht Dekoration.
-Do not flatten:
+Important boundaries:
 - Einzelhaltung ist keine normale Option.
-- Nicht nur Käfiggröße zitieren; Sozialkontakt und Freiflug gehören dazu.
+- Käfiggröße allein reicht nicht; Sozialkontakt und täglicher Freiflug gehören zur Haltung.
 Sources:
 - Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -163,8 +163,8 @@ Facts:
 - Kaninchen, Meerschweinchen und Ratten sind soziale Tiere und brauchen passende Artgenossen.
 - Hamster sind nachtaktive Einzelgänger und keine einfachen Kindertiere.
 - Zähne, Verdauung und Stresssignale machen Kleintiere tierärztlich anspruchsvoller, als viele Käufer erwarten.
-Do not flatten:
-- Nicht als Käfig-Mindestmaß-Liste verkürzen.
+Important boundaries:
+- Die Fläche ist nur ein Teil der Haltung; Ruhe, Artgenossen, Futter und Tierarztzugang zählen genauso.
 - Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.
 Sources:
 - Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
@@ -176,7 +176,7 @@ Facts:
 - Exotenhaltung steht und fällt mit Temperatur, UV-B, Luftfeuchtigkeit, Futter und tierärztlicher Fachkunde.
 - Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.
 - Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden.
-Do not flatten:
+Important boundaries:
 - Legalität nicht mit Vertretbarkeit gleichsetzen.
 - Keine Haltungsparameter ohne konkrete Art ableiten.
 Sources:
@@ -190,8 +190,8 @@ Facts:
 - Pferde brauchen Herde, Bewegung, Raufutter, Witterungsschutz und langfristig tragbare Kosten.
 - Reiten ersetzt keine pferdegerechte Haltung.
 - Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen.
-Do not flatten:
-- Kosten nie nur als Kaufpreis darstellen.
+Important boundaries:
+- Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.
 - Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.
 Sources:
 - FN: Tierschutz im Pferdesport: https://www.pferdesport-deutschland.de/tierschutz/tierschutz
@@ -204,8 +204,8 @@ Facts:
 - Kastration verhindert bei Katzen unkontrollierte Vermehrung und reduziert Streunerleid.
 - Beim Hund ist Kastration eine Einzelfallentscheidung und kein Ersatz für Training oder Haltungsarbeit.
 - Bei Kaninchen ist Kastration besonders für Rammler und zur Gruppenhaltung praktisch relevant.
-Do not flatten:
-- Nicht als pauschale OP-Empfehlung für jedes Tier zitieren.
+Important boundaries:
+- Kastration muss je nach Tierart und Einzelfall eingeordnet werden.
 - Medizinische Entscheidung immer tierärztlich abklären.
 Sources:
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -218,8 +218,8 @@ Facts:
 - Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.
 - Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.
 - Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.
-Do not flatten:
-- Nicht als Angriff auf einzelne Halter formulieren.
+Important boundaries:
+- Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.
 - Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken.
 Sources:
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
@@ -232,8 +232,8 @@ Facts:
 - Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.
 - Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.
 - Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.
-Do not flatten:
-- Adoption nicht als beliebige Einkaufsoption neben Zucht darstellen.
+Important boundaries:
+- Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
 - Seriöse Adoption braucht Zeit und ehrliche Beratung.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
@@ -246,8 +246,8 @@ Facts:
 - Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.
 - Strenge Antworten schützen das Tier vor späterer Überforderung.
 - Ein schlechtes Ergebnis ist kein Urteil, sondern ein Hinweis, noch zu warten.
-Do not flatten:
-- Nicht als psychometrischen Test zitieren.
+Important boundaries:
+- Der Selbsttest ist eine Entscheidungshilfe, kein psychometrisches Gutachten.
 - Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen.
 Sources:
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
@@ -259,7 +259,7 @@ Facts:
 - Atemnot, Krämpfe, Vergiftungsverdacht, starke Blutung, Zusammenbruch und Harnstopp sind sofortige Tierarztfälle.
 - Bei Vergiftung Verpackung oder Substanz sichern und nicht eigenmächtig Erbrechen auslösen.
 - Notdienste sind regional organisiert; vor der Fahrt immer anrufen.
-Do not flatten:
+Important boundaries:
 - Immer klar sagen: keine tierärztliche Diagnose.
 - Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.
 Sources:
@@ -272,7 +272,7 @@ Facts:
 - Deutschland hat keine einheitliche zentrale Notdienstsuche für alle Regionen.
 - Landestierärztekammern und regionale Systeme sind der verlässlichere Einstieg als allgemeine Suchmaschinen.
 - Vor der Fahrt muss die Praxis oder Klinik telefonisch bestätigen, dass sie erreichbar ist.
-Do not flatten:
+Important boundaries:
 - Keine Garantie für Öffnungszeiten oder Erreichbarkeit geben.
 - Bei akuten Notfällen nicht erst lange sortieren, sondern telefonieren.
 Sources:
@@ -284,9 +284,9 @@ Facts:
 - Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.
 - Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.
 - Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.
-Do not flatten:
-- Keine medizinischen Empfehlungen als Behandlung zitieren.
-- Mythen nicht als gleichwertige Gegenposition darstellen.
+Important boundaries:
+- Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.
+- Mythen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -297,8 +297,8 @@ Facts:
 - Das Glossar erklärt zentrale Begriffe aus Haltung, Tiermedizin und Tierschutz kurz und alltagstauglich.
 - Begriffe wie Pyometra, Brachyzephalie, GOT, TNR oder TierSchG werden als Einstieg erklärt.
 - Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose.
-Do not flatten:
-- Nicht als vollständiges veterinärmedizinisches Lexikon zitieren.
+Important boundaries:
+- Das Glossar erklärt Begriffe knapp und ersetzt kein veterinärmedizinisches Nachschlagewerk.
 - Bei Symptomen immer auf tierärztliche Abklärung verweisen.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
@@ -311,7 +311,7 @@ Facts:
 - Autos heizen sich auch bei milden Außentemperaturen schnell gefährlich auf.
 - Hunde können Hitzestress nicht zuverlässig durch Schwitzen ausgleichen.
 - Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe.
-Do not flatten:
+Important boundaries:
 - Keine Rechtsberatung zum Einschlagen von Scheiben geben.
 - Bei Hitzschlag nicht mit Eiswasser schocken.
 Sources:
@@ -324,8 +324,8 @@ Facts:
 - Katzen sind obligate Karnivoren und auf eine passende Taurinversorgung angewiesen.
 - Hunde und Katzen haben unterschiedliche Ernährungsphysiologie.
 - Futterumstellungen gehören bei Krankheit oder Spezialdiät tierärztlich begleitet.
-Do not flatten:
-- Nicht als individueller Futterplan verwenden.
+Important boundaries:
+- Die Seite erklärt Grundsätze und ersetzt keinen individuellen Futterplan.
 - Vegane Tierernährung nicht pauschal empfehlen.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
@@ -337,8 +337,8 @@ Facts:
 - Übliche Haltung ist nicht automatisch artgerecht.
 - Der Kaufpreis ist fast nie der größte Kostenblock eines Haustieres.
 - Vertretbare Haltung beginnt bei Bedürfnissen, nicht bei dem, was im Handel verkauft wird.
-Do not flatten:
-- Nicht als reine Kostenwarnung verkürzen.
+Important boundaries:
+- Kosten sind wichtig, aber Realhaltung meint auch Zeit, Raum, Beziehung und Belastbarkeit.
 - Normalität immer gegen Tierbedürfnisse prüfen.
 Sources:
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
@@ -350,8 +350,8 @@ Facts:
 - Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.
 - Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.
 - Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.
-Do not flatten:
-- Nicht als Gleichsetzung aller Züchter mit illegalen Vermehrern formulieren.
+Important boundaries:
+- Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; zusätzliche Tierproduktion bleibt trotzdem ethisch erklärungsbedürftig.
 - Die ethische Position der Seite nicht neutralisieren.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
@@ -363,7 +363,7 @@ Facts:
 - Legalität bedeutet nicht, dass private Wildtier- oder Exotenhaltung vertretbar ist.
 - Gefahrtier- und Artenschutzfragen hängen von Bundesland, Art und Herkunft ab.
 - Wildtiere brauchen Schutz vor Haustieren, Leinenpflicht und vermeidbarem Stress.
-Do not flatten:
+Important boundaries:
 - Keine Rechtsberatung zu Gefahrtierlisten geben.
 - Nicht aus Legalität eine Haltungsempfehlung ableiten.
 Sources:
@@ -377,9 +377,9 @@ Facts:
 - Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.
 - Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.
 - Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren.
-Do not flatten:
+Important boundaries:
 - Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.
-- Merkmale nur als Hinweise erklären, nicht als sichere Laienbestimmung.
+- Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.
 - Keine Anleitung zur privaten Wildtieraufzucht geben.
 - Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.
 Sources:
@@ -397,7 +397,7 @@ Facts:
 - Warten verhindert Tierleid, wenn Zeit, Geld, Wohnsituation oder Stabilität noch nicht passen.
 - Tierliebe kann auch über Ehrenamt, Patenschaften, Pflegestellen oder Spenden wirken.
 - Ein späterer Einzug wird besser, wenn Rücklagen, Wissen und Betreuung vorher stehen.
-Do not flatten:
+Important boundaries:
 - Nicht beschämen; die Seite soll entlasten und Verantwortung normalisieren.
 - Keine Anschaffung drängen, wenn die Bedingungen nicht passen.
 Sources:

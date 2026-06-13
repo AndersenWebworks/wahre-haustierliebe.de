@@ -190,20 +190,50 @@
     .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-lg);
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 220px;
+      padding: 0.65rem;
       display: none;
       z-index: 100;
     }
+    .mega-menu {
+      width: min(920px, calc(100vw - 2rem));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem;
+    }
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+    .dropdown:hover .mega-menu, .dropdown.open .mega-menu { display: grid; }
+    .mega-column {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      background: #fffdf9;
+    }
+    .mega-column-title {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .mega-column-note {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
     .dropdown-item {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.55rem;
       color: var(--text);
       font-size: 0.9rem;
       cursor: pointer;
@@ -214,7 +244,8 @@
       font-family: var(--font-body);
       transition: var(--transition);
     }
-    .dropdown-item:hover { background: var(--primary-light); color: var(--primary); }
+    .dropdown-item:hover,
+    .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .hamburger {
       display: none;
       background: none;
@@ -250,9 +281,48 @@
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    .mobile-nav-link:hover { color: var(--primary); }
-    .mobile-nav-sub { padding-left: 1.5rem; }
-    .mobile-nav-sub .mobile-nav-link { font-size: 0.95rem; color: var(--text-muted); }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active { color: var(--primary); }
+    .mobile-nav-link.active { font-weight: 700; }
+    .mobile-nav-group {
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-group summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 0;
+      color: var(--text);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mobile-nav-group summary::-webkit-details-marker { display: none; }
+    .mobile-nav-group summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .mobile-nav-group[open] summary::after { content: '\2212'; }
+    .mobile-nav-sub {
+      padding: 0 0 0.65rem 0.85rem;
+    }
+    .mobile-nav-sub .mobile-nav-link {
+      padding: 0.55rem 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      border-bottom: 0;
+    }
+    .mobile-nav-note {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: -0.15rem;
+      margin-bottom: 0.35rem;
+    }
 
     /* ========== HERO ========== */
     .hero {
@@ -471,10 +541,9 @@
     .test-question h3 { margin-top: 0; font-size: 1.05rem; }
     .test-options { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .test-option {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 1rem;
+      display: block;
+      position: relative;
+      padding: 0.6rem 1rem 0.6rem 2.95rem;
       border: 2px solid var(--border);
       border-radius: var(--radius);
       cursor: pointer;
@@ -482,7 +551,16 @@
       font-size: 0.95rem;
     }
     .test-option:hover { border-color: var(--primary); background: var(--primary-light); }
-    .test-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+    .test-option input {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      transform: translateY(-50%);
+      accent-color: var(--primary);
+    }
     .test-option.selected { border-color: var(--primary); background: var(--primary-light); }
     .test-result {
       background: var(--white);
@@ -1121,6 +1199,8 @@
       .hamburger { display: block; }
       .grid-2 { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .article-toc { padding: 0.85rem 1rem 0; }
+      .article-toc-list { columns: 1; }
       .hero { padding: 3rem 0 2.5rem; }
       .hero h1 { font-size: 1.75rem; }
       .stats-bar { gap: 1.5rem; }
@@ -2153,6 +2233,55 @@
       background: var(--white);
     }
 
+    .article-toc {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem 0;
+    }
+    .article-toc details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fffdf9;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .article-toc summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .article-toc summary::-webkit-details-marker { display: none; }
+    .article-toc summary::after {
+      content: '+';
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .article-toc details[open] summary::after { content: '\2212'; }
+    .article-toc-list {
+      columns: 2;
+      column-gap: 1.5rem;
+      padding: 0 1rem 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .article-toc-list li {
+      break-inside: avoid;
+      margin: 0;
+    }
+    .article-toc-list a {
+      display: inline-block;
+      padding: 0.22rem 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
     .page:not(#startseite) h2 {
       padding-top: 0.35rem;
       border-top: 1px solid rgba(31, 58, 47, 0.12);
@@ -2346,8 +2475,7 @@
     }
 
     .checklist li {
-      display: flex;
-      gap: 0.8rem;
+      display: block;
       padding: 0.85rem 1rem 0.85rem 2.8rem;
       border-bottom: 1px solid rgba(31, 58, 47, 0.1);
     }
@@ -4137,9 +4265,8 @@
     }
 
     #selbsttest .test-option {
-      align-items: flex-start;
       min-height: 4.25rem;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 0.9rem 3rem;
       border-color: rgba(31, 58, 47, 0.16);
       color: var(--text);
       line-height: 1.5;
@@ -4147,7 +4274,8 @@
 
     #selbsttest .test-option input {
       flex: 0 0 auto;
-      margin-top: 0.22rem;
+      top: 1.12rem;
+      transform: none;
     }
 
     #selbsttest .test-step-status {
@@ -4840,25 +4968,60 @@
           <li><a class="nav-link" data-page="startseite" href="../index.html">Start</a></li>
           <li><a class="nav-link" data-page="mensch" href="../mensch/index.html">Mensch</a></li>
           <li class="dropdown">
-            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu">Tierarten</button>
-            <div class="dropdown-menu" id="tierarten-menu">
-              <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hunde</a>
-              <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzen</a>
-              <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vögel</a>
-              <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-              <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
-              <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
+            <div class="dropdown-menu mega-menu" id="tierarten-menu">
+              <div class="mega-column">
+                <strong class="mega-column-title">Hunde</strong>
+                <a class="dropdown-item" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+                <a class="dropdown-item active" data-page="hund-im-buero" href="../hund-im-buero/index.html" aria-current="page">Hund im Büro</a>
+                <a class="dropdown-item" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+                <span class="mega-column-note">Alltag, Alleinbleiben, Kosten, Arbeit und akute Sommerrisiken.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Katzen</strong>
+                <a class="dropdown-item" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+                <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+                <a class="dropdown-item" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+                <span class="mega-column-note">Wohnung, Freigang, Kastration, Streuner und Verwechslungsfälle.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vögel</strong>
+                <a class="dropdown-item" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+                <button type="button" class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+                <button type="button" class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+                <span class="mega-column-note">Schwarm, Flugraum, UV-Licht und Gefahren in Innenräumen.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Kleintiere</strong>
+                <a class="dropdown-item" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+                <button type="button" class="dropdown-item" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+                <button type="button" class="dropdown-item" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+                <span class="mega-column-note">Fluchttiere, Platz, Artgenossen, Zähne und echte Ruhe.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Pferde &amp; Exoten</strong>
+                <a class="dropdown-item" data-page="pferde" href="../pferde/index.html">Pferde</a>
+                <a class="dropdown-item" data-page="exoten" href="../exoten/index.html">Exoten</a>
+                <a class="dropdown-item" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+                <span class="mega-column-note">Herde, Technik, Spezialwissen und Grenzen privater Haltung.</span>
+              </div>
+              <div class="mega-column">
+                <strong class="mega-column-title">Vor der Entscheidung</strong>
+                <a class="dropdown-item" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
+                <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
+                <a class="dropdown-item" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+                <span class="mega-column-note">Erst Alltag prüfen, dann ein Tier ins Leben holen.</span>
+              </div>
             </div>
           </li>
           <li class="dropdown">
-            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="wissen-menu" aria-current="page">Wissen</button>
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="wissen-menu">Wissen</button>
             <div class="dropdown-menu" id="wissen-menu">
               <a class="dropdown-item" data-page="kastration" href="../kastration/index.html">Kastration</a>
               <a class="dropdown-item" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
               <a class="dropdown-item" data-page="adoption" href="../adoption/index.html">Adoption</a>
-              <a class="dropdown-item active" data-page="hund-im-buero" href="../hund-im-buero/index.html" aria-current="page">Hund im Büro</a>
-              <a class="dropdown-item" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
               <a class="dropdown-item" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
               <a class="dropdown-item" data-page="glossar" href="../glossar/index.html">Glossar</a>
             </div>
@@ -4887,26 +5050,67 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a class="mobile-nav-link" data-page="startseite" href="../index.html">Start</a>
     <a class="mobile-nav-link" data-page="mensch" href="../mensch/index.html">Mensch &amp; Tier</a>
-    <div class="mobile-nav-sub">
-      <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hunde</a>
-      <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzen</a>
-      <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vögel</a>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere</a>
-      <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
-      <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
-    </div>
-    <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
-    <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
-    <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
-    <a class="mobile-nav-link active" data-page="hund-im-buero" href="../hund-im-buero/index.html" aria-current="page">Hund im Büro</a>
-    <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../noch-nicht-bereit/index.html">Noch nicht bereit?</a>
-    <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+    <details class="mobile-nav-group">
+      <summary>Hunde</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="hunde" href="../hunde/index.html">Hundehaltung</a>
+        <a class="mobile-nav-link active" data-page="hund-im-buero" href="../hund-im-buero/index.html" aria-current="page">Hund im Büro</a>
+        <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../hitzefalle-auto/index.html">Hitzefalle Auto</a>
+        <span class="mobile-nav-note">Alltag, Alleinbleiben, Arbeit, Kosten und Sommerrisiken.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Katzen</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="katzen" href="../katzen/index.html">Katzenhaltung</a>
+        <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
+        <span class="mobile-nav-note">Wohnung, Freigang, Kastration, Streuner und Wildkatzenverdacht.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Vögel</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="voegel" href="../voegel/index.html">Vogelhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" onclick="navigateTo('voegel-kuechenluft-und-daempfe-sind-lebensgefahr')">Küchenluft &amp; Teflon</button>
+        <button type="button" class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" onclick="navigateTo('voegel-freiflug-ist-nicht-optional')">Freiflug</button>
+        <span class="mobile-nav-note">Schwarm, Licht, Flugraum und Gefahren in Innenräumen.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Kleintiere</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kleintiere" href="../kleintiere/index.html">Kleintierhaltung</a>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-kaninchen" onclick="navigateTo('kleintiere-kaninchen')">Kaninchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-meerschweinchen" onclick="navigateTo('kleintiere-meerschweinchen')">Meerschweinchen</button>
+        <button type="button" class="mobile-nav-link" data-page="kleintiere-hamster" onclick="navigateTo('kleintiere-hamster')">Hamster</button>
+        <span class="mobile-nav-note">Fluchttiere, Platz, Gruppenhaltung, Zähne und Ruhe.</span>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Pferde &amp; Exoten</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="pferde" href="../pferde/index.html">Pferde</a>
+        <a class="mobile-nav-link" data-page="exoten" href="../exoten/index.html">Exoten</a>
+        <a class="mobile-nav-link" data-page="wildtierhaltung" href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>
+      </div>
+    </details>
+    <details class="mobile-nav-group">
+      <summary>Wissen &amp; Verantwortung</summary>
+      <div class="mobile-nav-sub">
+        <a class="mobile-nav-link" data-page="kastration" href="../kastration/index.html">Kastration</a>
+        <a class="mobile-nav-link" data-page="qualzucht" href="../qualzucht/index.html">Qualzucht</a>
+        <a class="mobile-nav-link" data-page="adoption" href="../adoption/index.html">Adoption</a>
+        <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
+        <a class="mobile-nav-link" data-page="realhaltung" href="../realhaltung/index.html">Realhaltung</a>
+        <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
+        <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
+      </div>
+    </details>
     <a class="mobile-nav-link" data-page="selbsttest" href="../selbsttest/index.html">Selbsttest</a>
     <a class="mobile-nav-link" data-page="notfall" href="../notfall/index.html">Notfall</a>
     <a class="mobile-nav-link" data-page="kontakt" href="../kontakt/index.html">Kontakt</a>
     <a class="mobile-nav-link" data-page="mitmachen" href="../mitmachen/index.html">Mitmachen!</a>
-    <a class="mobile-nav-link" data-page="wissen" href="../wissen/index.html">Mythen &amp; Homöopathie</a>
-    <a class="mobile-nav-link" data-page="glossar" href="../glossar/index.html">Glossar</a>
     <a class="mobile-nav-link mobile-nav-social" href="https://www.instagram.com/wahrehaustierliebe/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
@@ -4925,7 +5129,7 @@
         <h1>Hund im Büro: Wann ein Bürohund wirklich passt</h1>
         <p>Ein Hund im Büro kann gut sein. Aber nur, wenn der Arbeitsplatz nicht nur für Menschen angenehmer wird, sondern auch für den Hund fair bleibt.</p>
       <div class="article-kicker"><span>Rückzug</span><span>klare Regeln</span><span>Stress sehen</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Bürohund-Seite: echten Rückzug und Ruhe statt niedlicher Bürohund-Inszenierung zeigen" data-share-reason="Das Bild soll die Checkliste als echte Prüfung statt Feelgood-Thema rahmen." style="--image-position: center 52%;"><img src="../assets/images/optimized/dog-resting-under-table.jpg" alt="Hund liegt ruhig unter einem Tisch auf einem Teppich" loading="eager" decoding="async" width="960" height="640" fetchpriority="high"><figcaption class="context-caption">Mitnehmen reicht nicht. Der Hund muss auch im Büro wirklich zur Ruhe kommen.</figcaption></figure></div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hund-im-buero-die-richtige-frage-ist-nicht-finden-wir-es-schon">Die richtige Frage ist nicht: Finden wir es schön?</a></li><li><a href="#hund-im-buero-funf-fragen-bevor-ein-hund-mit-ins-buro-kommt">Fünf Fragen, bevor ein Hund mit ins Büro kommt</a></li><li><a href="#hund-im-buero-nicht-nur-hundesache-der-arbeitsplatz-muss-zustimmen">Nicht nur Hundesache: Der Arbeitsplatz muss zustimmen</a></li><li><a href="#hund-im-buero-langsam-anfangen-statt-ganzen-tag-ausprobieren">Langsam anfangen statt ganzen Tag ausprobieren</a></li><li><a href="#hund-im-buero-ein-guter-buroplatz-sieht-langweilig-aus">Ein guter Büroplatz sieht langweilig aus</a></li><li><a href="#hund-im-buero-box-decke-korbchen-ruckzug-heisst-freiwillig">Box, Decke, Körbchen: Rückzug heißt freiwillig</a></li><li><a href="#hund-im-buero-regeln-fur-menschen">Regeln für Menschen</a></li><li><a href="#hund-im-buero-warnzeichen-wenn-brav-eigentlich-stress-ist">Warnzeichen: Wenn „brav“ eigentlich Stress ist</a></li><li><a href="#hund-im-buero-wann-der-hund-besser-nicht-mitkommt">Wann der Hund besser nicht mitkommt</a></li><li><a href="#hund-im-buero-haufige-fragen">Häufige Fragen</a></li><li><a href="#hund-im-buero-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -4941,7 +5145,7 @@
           </ul>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-1">Die richtige Frage ist nicht: Finden wir es schön?</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-die-richtige-frage-ist-nicht-finden-wir-es-schon">Die richtige Frage ist nicht: Finden wir es schön?</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-die-richtige-frage-ist-nicht-finden-wir-es-schon" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Der Aktionstag „Kollege Hund“ macht sichtbar, dass Hunde am Arbeitsplatz für Menschen viel Gutes tun können: Sie bringen Bewegung in Pausen, machen Begegnungen weicher und können das Büroklima verbessern. Das ist aber nur die menschliche Seite.</p>
         <p>Für den Hund zählt eine andere Frage: Kann er dort schlafen, sich entziehen, sicher sein und in seinem Tempo durch den Tag kommen? Wenn er dauernd angeschaut, gerufen, gestreichelt oder herumgeführt wird, ist das kein guter Arbeitstag. Dann arbeitet der Hund mit, obwohl niemand ihn bezahlt hat.</p>
 
@@ -4950,7 +5154,7 @@
           <p>Er braucht Ruhe, Rückzug und Menschen, die akzeptieren, dass ein Hund nicht den ganzen Tag verfügbar sein muss.</p>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-2">Fünf Fragen, bevor ein Hund mit ins Büro kommt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-funf-fragen-bevor-ein-hund-mit-ins-buro-kommt">Fünf Fragen, bevor ein Hund mit ins Büro kommt</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-funf-fragen-bevor-ein-hund-mit-ins-buro-kommt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ol class="checklist">
           <li><strong>Kann der Hund wirklich schlafen?</strong> Nicht nur kurz dösen, sondern länger ungestört ruhen. Wenn ständig jemand vorbeigeht, ihn anspricht oder über ihn steigt, ist der Platz falsch.</li>
           <li><strong>Hat er einen festen Rückzugsort?</strong> Nicht mitten im Laufweg, nicht neben der Kaffeemaschine, nicht in der Sonne, nicht im Durchzug. Der Hund muss dort freiwillig hingehen und wieder herausgehen können.</li>
@@ -4965,22 +5169,22 @@
           <div class="metric-card"><strong>Regeln</strong><span>Alle Menschen wissen, was erlaubt ist: nicht füttern, nicht locken, nicht ungefragt anfassen.</span></div>
         </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-3">Nicht nur Hundesache: Der Arbeitsplatz muss zustimmen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-nicht-nur-hundesache-der-arbeitsplatz-muss-zustimmen">Nicht nur Hundesache: Der Arbeitsplatz muss zustimmen</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-nicht-nur-hundesache-der-arbeitsplatz-muss-zustimmen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ein Bürohund ist keine private Einzelentscheidung. Arbeitgeber, direkte Kolleginnen und Kollegen und je nach Betrieb auch Hausordnung, Arbeitsschutz, Hygiene, Besucherbereiche und Fluchtwege müssen mitgedacht werden. Ein Hund darf nicht einfach mitgebracht werden, nur weil er zu Hause lieb ist.</p>
         <p>Sauber geregelt werden sollten mindestens: wer verantwortlich ist, welche Bereiche hundefrei bleiben, wie mit Allergien oder Angst umgegangen wird, ob eine Hundehaftpflicht besteht, was bei Feueralarm, Besuch, Krankheit, Läufigkeit oder Konflikten passiert und wann die Erlaubnis wieder endet.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-4">Langsam anfangen statt ganzen Tag ausprobieren</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-langsam-anfangen-statt-ganzen-tag-ausprobieren">Langsam anfangen statt ganzen Tag ausprobieren</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-langsam-anfangen-statt-ganzen-tag-ausprobieren" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ein guter Einstieg ist keine Acht-Stunden-Probe. Besser ist ein kurzer, ruhiger Test mit klarer Betreuung und danach ein ehrlicher Blick: Konnte der Hund schlafen, trinken, sich lösen, Abstand nehmen und nach dem Bürotag normal herunterfahren? Erst wenn das mehrfach trägt, wird aus Mitkommen Alltag.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-5">Ein guter Büroplatz sieht langweilig aus</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-5" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-ein-guter-buroplatz-sieht-langweilig-aus">Ein guter Büroplatz sieht langweilig aus</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-ein-guter-buroplatz-sieht-langweilig-aus" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Für Menschen wirkt ein guter Bürohund oft fast unspektakulär: Er liegt auf seiner Decke, trinkt, geht in Pausen raus und wird sonst in Ruhe gelassen. Genau das ist der Punkt. Je mehr der Hund Attraktion ist, desto eher wird aus Mitnahme eine Belastung.</p>
         <p>Der Platz sollte ruhig, zugfrei, nicht zu warm, nicht im Durchgang und nicht direkt an Türen, Druckern oder lauten Geräten liegen. Wasser muss erreichbar sein. Kabel, Pflanzen, Papierkörbe, Reinigungsmittel und Futterreste gehören außer Reichweite.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-6">Box, Decke, Körbchen: Rückzug heißt freiwillig</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-6" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-box-decke-korbchen-ruckzug-heisst-freiwillig">Box, Decke, Körbchen: Rückzug heißt freiwillig</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-box-decke-korbchen-ruckzug-heisst-freiwillig" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Eine offene Box, Decke oder ein Körbchen kann dem Hund Sicherheit geben, wenn sie wirklich sein Bereich ist. Problematisch wird es, wenn die Box verschlossen wird und den Bewegungsradius über längere Zeit ersetzt. Dann ist das kein Rückzugsort mehr, sondern Unterbringung.</p>
         <p>Wenn ein Hund im Büro nur funktioniert, weil er eingesperrt wird, passt der Büroalltag nicht. Dann braucht es eine andere Lösung: Homeoffice, Betreuung, Hundesitter, kürzere Bürotage oder die ehrliche Entscheidung, ihn an bestimmten Tagen nicht mitzunehmen.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-7">Regeln für Menschen</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-7" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-regeln-fur-menschen">Regeln für Menschen</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-regeln-fur-menschen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Die wichtigste Bürohund-Regel betrifft nicht den Hund, sondern die Menschen. Alle müssen wissen, was erlaubt ist und was nicht.</p>
         <ul>
           <li>Nicht ungefragt anfassen, hochnehmen, rufen oder locken.</li>
@@ -4991,11 +5195,11 @@
           <li>Eine verantwortliche Betreuungsperson benennen, auch für kurze Abwesenheiten.</li>
         </ul>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-8">Warnzeichen: Wenn „brav“ eigentlich Stress ist</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-8" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-warnzeichen-wenn-brav-eigentlich-stress-ist">Warnzeichen: Wenn „brav“ eigentlich Stress ist</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-warnzeichen-wenn-brav-eigentlich-stress-ist" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Viele Hunde eskalieren nicht laut. Sie halten aus. Darum muss man genau hinsehen. Warnzeichen können sein: hecheln ohne Hitze oder Bewegung, Zittern, ständiges Gähnen, Lefzenlecken, Wegdrehen, Verstecken, Jaulen, Bellen, Herumlaufen, Futterverweigerung oder ein Hund, der den ganzen Tag nicht richtig schläft.</p>
         <p>Ein einzelnes Signal beweist noch keinen Stress. Der Zusammenhang zählt. Auch das Gegenteil kann täuschen: Ein Hund, der stundenlang reglos liegt, ist nicht automatisch entspannt. Entscheidend ist, ob er freiwillig ruht, sich lösen kann, trinkt, normal frisst und nach dem Bürotag nicht völlig überdreht oder erschöpft ist.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-hund-im-buero-9">Wann der Hund besser nicht mitkommt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hund-im-buero-9" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="section-feedback-heading"><h2 id="hund-im-buero-wann-der-hund-besser-nicht-mitkommt">Wann der Hund besser nicht mitkommt</h2><button type="button" class="section-feedback-action" data-feedback-section="hund-im-buero-wann-der-hund-besser-nicht-mitkommt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul>
           <li>Bei langen Meetings, in denen niemand verantwortlich auf ihn achten kann.</li>
           <li>Bei viel Besuch, Lärm, Umbau, Hitze oder sehr engen Räumen.</li>
@@ -5014,7 +5218,7 @@
 
         <div class="article-rhythm faq-block" data-faq-block="hund-im-buero">
           <span class="eyebrow">Kurz beantwortet</span>
-          <h2>Häufige Fragen</h2>
+          <h2 id="hund-im-buero-haufige-fragen">Häufige Fragen</h2>
           <div class="faq-list">
             <details class="faq-item">
               <summary>Ist ein Hund im Büro automatisch besser als Alleinbleiben?</summary>
@@ -5029,7 +5233,7 @@
 
         <div class="article-rhythm evidence-block" data-evidence-block="hund-im-buero">
           <span class="eyebrow">Quellen und Prüfstand</span>
-          <h2>Worauf diese Seite ihre Aussagen stützt</h2>
+          <h2 id="hund-im-buero-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</h2>
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
@@ -5041,7 +5245,7 @@
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>
-              <ul><li>Nicht als pauschale Erlaubnis oder Rechtsberatung zum Hund am Arbeitsplatz zitieren.</li><li>Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.</li><li>Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.</li><li>Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.</li></ul>
+              <ul><li>Ein Bürohund braucht Zustimmung, Regeln und einen passenden Arbeitsplatz; die Seite ersetzt keine Rechtsberatung.</li><li>Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.</li><li>Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.</li><li>Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.</li></ul>
             </article>
           </div>
         </div>
