@@ -86,7 +86,7 @@ const pages = [
   },
   {
     id: 'hund-im-buero',
-    slug: 'hund-im-buero',
+    slug: 'hunde/hund-im-buero',
     title: 'Hund im Büro: Wann ein Bürohund wirklich passt',
     description: 'Bürohund ehrlich prüfen: Rückzugsort, Ruhe, Regeln, Pausen, Zustimmung im Team und Warnzeichen, dass der Arbeitsplatz für den Hund zu viel ist.',
     intent: 'Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen',
@@ -244,7 +244,7 @@ const pages = [
   },
   {
     id: 'wildkatzenbaby-gefunden',
-    slug: 'wildkatzenbaby-gefunden',
+    slug: 'katzen/wildkatzenbaby-gefunden',
     title: 'Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln',
     description: 'Wildkatzenjunge werden leicht mit Hauskatzen verwechselt. Woran du sie erkennst, warum Mitnehmen schadet und welche Schritte wirklich helfen.',
     intent: 'Wildkatzenjunge erkennen und bei einem Fund richtig handeln',
@@ -269,6 +269,59 @@ const pages = [
     onHold: true,
   },
 ];
+
+const topicPages = [
+  ['hunde-soziale-beduerfnisse', 'hunde', 'hunde/soziale-beduerfnisse', 'Soziale Bedürfnisse beim Hund', 'Warum Hunde mehr brauchen als Futter, Garten und kurze Gassirunden.', 'Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.'],
+  ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.'],
+  ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.'],
+  ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.'],
+  ['hunde-kastration', 'hunde', 'hunde/kastration', 'Kastration beim Hund', 'Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.', 'Kastration beim Hund als Einzelfallentscheidung verstehen.'],
+  ['hunde-hofhaltung-und-zwinger', 'hunde', 'hunde/hofhaltung-und-zwinger', 'Hofhaltung und Zwinger', 'Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.', 'Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.'],
+  ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.'],
+  ['hunde-entscheidung', 'hunde', 'hunde/entscheidung', 'Bevor ein Hund einzieht', 'Die wichtigsten Fragen, bevor aus dem Wunsch nach einem Hund echte Verantwortung wird.', 'Entscheidung vor der Hundeadoption oder Anschaffung prüfen.'],
+  ['katzen-sozialverhalten', 'katzen', 'katzen/sozialverhalten', 'Katzen sind keine einfachen Einzelgänger', 'Warum Katzen zwar allein jagen, aber trotzdem Sozialkontakt, Struktur und ein passendes Revier brauchen.', 'Sozialverhalten von Katzen verstehen.'],
+  ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnungshaltung bei Katzen', 'Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.', 'Wohnungshaltung für Katzen artgerechter gestalten.'],
+  ['katzen-kastration', 'katzen', 'katzen/kastration', 'Kastration bei Katzen', 'Warum Kastration bei Katzen praktischer Tierschutz ist und ungewolltes Leid verhindert.', 'Kastration bei Katzen verstehen.'],
+  ['katzen-stilles-leiden', 'katzen', 'katzen/stilles-leiden', 'Stilles Leiden bei Katzen erkennen', 'Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.', 'Warnsignale bei Katzen erkennen.'],
+  ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was Katzen wirklich kosten', 'Futter, Streu, Tierarzt, Rücklagen und Alltag: Katzen sind keine günstigen Nebenbei-Tiere.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.'],
+  ['katzen-streunerkatzen', 'katzen', 'katzen/streunerkatzen', 'Streunerkatzen und Verantwortung', 'Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.', 'Streunerkatzen und Kastration einordnen.'],
+  ['katzen-entscheidung', 'katzen', 'katzen/entscheidung', 'Bevor eine Katze einzieht', 'Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.', 'Entscheidung vor der Katzenadoption oder Anschaffung prüfen.'],
+  ['voegel-schwarmhaltung', 'voegel', 'voegel/schwarmhaltung', 'Schwarmhaltung bei Vögeln', 'Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.', 'Schwarmhaltung bei Vögeln verstehen.'],
+  ['voegel-uv-licht', 'voegel', 'voegel/uv-licht', 'UV-Licht für Vögel', 'Warum normales Fensterglas wichtiges UV-Licht blockiert und Vögel gezielte Lichtversorgung brauchen.', 'UV-Licht und Lichtbedarf bei Vögeln einordnen.'],
+  ['voegel-kuechenluft-und-daempfe-sind-lebensgefahr', 'voegel', 'voegel/kuechenluft-teflon', 'Küchenluft und Teflon sind Lebensgefahr', 'Warum Dämpfe aus Pfannen, Backöfen und Küchenluft für Vögel tödlich sein können.', 'Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen.'],
+  ['voegel-freiflug-ist-nicht-optional', 'voegel', 'voegel/freiflug', 'Freiflug ist nicht optional', 'Warum Vögel täglich sicheren Flugraum brauchen und ein Käfig allein kein Lebensraum ist.', 'Freiflug und Flugraum für Vögel planen.'],
+  ['voegel-partnerersatz', 'voegel', 'voegel/partnerersatz', 'Spiegel und Plastikvögel ersetzen keinen Partner', 'Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.', 'Falschen Partnerersatz bei Vögeln vermeiden.'],
+  ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.'],
+  ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
+  ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
+  ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung verantwortungsvoll planen.'],
+  ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen halten', 'Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.', 'Meerschweinchenhaltung verantwortungsvoll planen.'],
+  ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Hamster halten', 'Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.', 'Hamsterhaltung realistisch prüfen.'],
+  ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
+  ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.'],
+  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.', 'Reptilienhaltung realistisch prüfen.'],
+  ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.', 'Schildkrötenhaltung realistisch prüfen.'],
+  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.', 'Fischhaltung und Aquarium realistisch prüfen.'],
+  ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.'],
+  ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.'],
+  ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.'],
+  ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.', 'Pferdekosten realistisch einschätzen.'],
+  ['pferde-reitbeteiligung', 'pferde', 'pferde/reitbeteiligung', 'Reitbeteiligung als ehrlicher Einstieg', 'Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.', 'Reitbeteiligung als Alternative zum eigenen Pferd prüfen.'],
+  ['pferde-entscheidung', 'pferde', 'pferde/entscheidung', 'Bevor ein Pferd einzieht', 'Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.', 'Entscheidung vor dem eigenen Pferd prüfen.'],
+].map(([id, sourcePage, slug, title, description, intent]) => ({
+  id,
+  sourcePage,
+  sourceAnchor: id,
+  slug,
+  title: `${title} - Wa(h)re Haustier(liebe)`,
+  description,
+  intent,
+  priority: '0.72',
+  topicPage: true,
+}));
+
+const firstKnowledgeIndex = pages.findIndex((page) => page.id === 'kastration');
+pages.splice(firstKnowledgeIndex, 0, ...topicPages);
 
 const pageById = new Map(pages.map((page) => [page.id, page]));
 const publicPages = pages.filter((page) => !page.onHold);
@@ -1091,7 +1144,8 @@ function socialImagePath(page) {
 }
 
 function sourceSocialImage(page) {
-  return page.id === 'startseite' ? defaultSocialImage : firstContentImageByPage[page.id] || defaultSocialImage;
+  if (page.id === 'startseite') return defaultSocialImage;
+  return firstContentImageByPage[page.id] || firstContentImageByPage[page.sourcePage] || defaultSocialImage;
 }
 
 function socialImage(page) {
@@ -1112,7 +1166,7 @@ function socialImageUrl(page) {
 }
 
 function pageKeywords(page) {
-  return keywordByPage[page.id] || [page.intent, 'Haustierhaltung', 'Tierwohl'].filter(Boolean);
+  return keywordByPage[page.id] || keywordByPage[page.sourcePage] || [page.intent, 'Haustierhaltung', 'Tierwohl'].filter(Boolean);
 }
 
 function outputPathFor(page) {
@@ -1308,7 +1362,8 @@ function validateGlossaryData() {
 }
 
 function applyGlossaryAnnotations(html, currentPage) {
-  const annotations = glossaryAnnotationsByPage[currentPage.id] || [];
+  const annotations = glossaryAnnotationsByPage[currentPage.topicPage ? currentPage.sourcePage : currentPage.id] || [];
+  const strict = !currentPage.topicPage && !hubPageIds.has(currentPage.id);
   let next = html;
   const missing = [];
 
@@ -1322,7 +1377,7 @@ function applyGlossaryAnnotations(html, currentPage) {
     next = `${next.slice(0, index)}${annotation.to}${next.slice(index + annotation.from.length)}`;
   });
 
-  if (missing.length) {
+  if (strict && missing.length) {
     throw new Error(`Missing glossary annotation anchors on ${currentPage.id}:\n- ${missing.join('\n- ')}`);
   }
 
@@ -1520,6 +1575,96 @@ function extractSection(source, id) {
   return source.slice(start, end).trim();
 }
 
+const hubPageIds = new Set(['hunde', 'katzen', 'voegel', 'kleintiere', 'exoten', 'pferde']);
+
+function topicChildrenFor(pageId) {
+  return topicPages.filter((topic) => topic.sourcePage === pageId);
+}
+
+function buildAnimalHubSection(page) {
+  const children = topicChildrenFor(page.id);
+  const introByPage = {
+    hunde: 'Hundehaltung ist kein einzelnes Thema. Alleinbleiben, Kosten, Auslauf, Gesundheit, Büroalltag und Zwingerhaltung sind eigene Entscheidungen mit eigenen Risiken.',
+    katzen: 'Katzenhaltung wirkt oft leise und unkompliziert. Genau deshalb brauchen Wohnung, Sozialkontakt, Kastration, Kosten, Streunerfragen und Warnsignale eigene Aufmerksamkeit.',
+    voegel: 'Vogelhaltung scheitert selten an einem großen Fehler, sondern an vielen unterschätzten Grundbedingungen: Schwarm, Licht, Flugraum, Luft und frühe Krankheitserkennung.',
+    kleintiere: 'Kleintiere sind kein Sammelbegriff für einfache Haustiere. Kaninchen, Meerschweinchen, Hamster, Ratten, Degus und Chinchillas brauchen sehr unterschiedliche Haltungsformen.',
+    exoten: 'Exoten sind keine stille Nebenbei-Haltung. Reptilien, Schildkröten und Fische hängen an Technik, Klima, Licht, Wasserwerten und Fachwissen.',
+    pferde: 'Pferdehaltung ist ein eigener Lebensbereich: Herde, Fläche, Bewegung, Stallform, Kosten und Versorgung tragen über Jahrzehnte.',
+  };
+  const titleByPage = {
+    hunde: 'Hunde',
+    katzen: 'Katzen',
+    voegel: 'Vögel',
+    kleintiere: 'Kleintiere',
+    exoten: 'Exoten',
+    pferde: 'Pferde',
+  };
+  const cards = children.map((child) => `
+          <article class="card">
+            <div class="card-body">
+              <h3>${escapeHtml(child.title.replace(` - ${siteName}`, ''))}</h3>
+              <p>${escapeHtml(child.description)}</p>
+              <span class="card-link" onclick="navigateTo('${child.id}')">Thema öffnen</span>
+            </div>
+          </article>`).join('');
+
+  return `<section id="${page.id}" class="page">
+    <div class="hero">
+      <div class="container">
+        <h1>${escapeHtml(titleByPage[page.id])}</h1>
+        <p>${escapeHtml(introByPage[page.id])}</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="info-box">
+          <h3>So ist dieser Bereich aufgebaut</h3>
+          <p>${escapeHtml(introByPage[page.id])}</p>
+          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
+        </div>
+        <div class="grid-3">
+${cards}
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function extractTopicSection(source, page) {
+  const parent = pageById.get(page.sourcePage);
+  if (!parent) throw new Error(`Missing topic parent for ${page.id}: ${page.sourcePage}`);
+
+  const parentSection = extractSection(source, page.sourcePage);
+  const headingPattern = new RegExp(`<h2([^>]*)id="${page.sourceAnchor}"([^>]*)>[\\s\\S]*?<\\/h2>`);
+  const heading = headingPattern.exec(parentSection);
+  if (!heading) throw new Error(`Missing topic anchor for ${page.id}: ${page.sourceAnchor}`);
+
+  const start = heading.index;
+  const nextHeading = parentSection.indexOf('<h2', start + heading[0].length);
+  const fallbackEnd = parentSection.lastIndexOf('</div>\n    </div>\n  </section>');
+  const end = nextHeading === -1 ? fallbackEnd : nextHeading;
+  if (end === -1 || end <= start) throw new Error(`Could not determine topic end for ${page.id}`);
+
+  const topicHtml = parentSection.slice(start, end).trim();
+  const parentLabel = parent.title.split(':')[0].replace(' halten', '');
+  return `<section id="${page.id}" class="page">
+    <div class="hero">
+      <div class="container">
+        <h1>${escapeHtml(page.title.replace(` - ${siteName}`, ''))}</h1>
+        <p>${escapeHtml(page.description)}</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <p class="text-muted"><a href="#${parent.id}" onclick="navigateTo('${parent.id}');return false">Zurück zur Übersicht: ${escapeHtml(parentLabel)}</a></p>
+${topicHtml}
+      </div>
+    </div>
+  </section>`;
+}
+
 function stripButtonOnlyAttributes(attrs) {
   return attrs
     .replace(/\s*onclick="[^"]*"/g, '')
@@ -1599,11 +1744,6 @@ function rewriteScript(script) {
   let next = script;
   const routeMap = {
     ...Object.fromEntries(publicPages.map((page) => [page.id, pagePath(page)])),
-    'voegel-kuechenluft-und-daempfe-sind-lebensgefahr': `${pagePath(pageById.get('voegel'))}#voegel-kuechenluft-und-daempfe-sind-lebensgefahr`,
-    'voegel-freiflug-ist-nicht-optional': `${pagePath(pageById.get('voegel'))}#voegel-freiflug-ist-nicht-optional`,
-    'kleintiere-kaninchen': `${pagePath(pageById.get('kleintiere'))}#kleintiere-kaninchen`,
-    'kleintiere-meerschweinchen': `${pagePath(pageById.get('kleintiere'))}#kleintiere-meerschweinchen`,
-    'kleintiere-hamster': `${pagePath(pageById.get('kleintiere'))}#kleintiere-hamster`,
   };
 
   next = `var staticPageRoutes = ${JSON.stringify(routeMap, null, 2)};\n` +
@@ -2618,6 +2758,18 @@ async function main() {
   await generateSocialImages();
 
   for (const page of pages) {
+    if (page.topicPage) {
+      const section = extractTopicSection(source, page);
+      const html = buildHtmlPage({ page, header, section, commonAfterSections });
+      await writeFileEnsured(outputPathFor(page), html);
+      continue;
+    }
+    if (hubPageIds.has(page.id)) {
+      const section = buildAnimalHubSection(page);
+      const html = buildHtmlPage({ page, header, section, commonAfterSections });
+      await writeFileEnsured(outputPathFor(page), html);
+      continue;
+    }
     if (page.staticOnly) {
       const section = await extractStaticOnlySection(page);
       const html = buildHtmlPage({ page, header, section, commonAfterSections });

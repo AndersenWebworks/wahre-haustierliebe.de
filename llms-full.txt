@@ -22,12 +22,49 @@
 - Mitmachen! - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/mitmachen/index.html
 - Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?: https://wahre-haustierliebe.de/mensch/index.html
 - Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
-- Hund im Büro: Wann ein Bürohund wirklich passt: https://wahre-haustierliebe.de/hund-im-buero/index.html
+- Hund im Büro: Wann ein Bürohund wirklich passt: https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html
 - Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: https://wahre-haustierliebe.de/katzen/index.html
 - Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler: https://wahre-haustierliebe.de/voegel/index.html
 - Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten: https://wahre-haustierliebe.de/kleintiere/index.html
 - Exoten halten: Terrarium, Technik, UV-B und Verantwortung: https://wahre-haustierliebe.de/exoten/index.html
 - Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung: https://wahre-haustierliebe.de/pferde/index.html
+- Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/soziale-beduerfnisse/index.html
+- Garten ist kein Ersatz für Auslauf - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/garten-auslauf/index.html
+- Hund allein zu Hause - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/allein-zu-hause/index.html
+- Was ein Hund wirklich kostet - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/kosten/index.html
+- Kastration beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/kastration/index.html
+- Hofhaltung und Zwinger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/index.html
+- Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/gesundheit/index.html
+- Bevor ein Hund einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/entscheidung/index.html
+- Katzen sind keine einfachen Einzelgänger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html
+- Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html
+- Kastration bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/kastration/index.html
+- Stilles Leiden bei Katzen erkennen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/stilles-leiden/index.html
+- Was Katzen wirklich kosten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/kosten/index.html
+- Streunerkatzen und Verantwortung - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/streunerkatzen/index.html
+- Bevor eine Katze einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/entscheidung/index.html
+- Schwarmhaltung bei Vögeln - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/schwarmhaltung/index.html
+- UV-Licht für Vögel - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/uv-licht/index.html
+- Küchenluft und Teflon sind Lebensgefahr - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/index.html
+- Freiflug ist nicht optional - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/freiflug/index.html
+- Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/partnerersatz/index.html
+- Krankheit bei Vögeln erkennen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/krankheit-erkennen/index.html
+- Schauwellensittiche und Qualzucht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/qualzucht/index.html
+- Bevor Vögel einziehen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/entscheidung/index.html
+- Kaninchen halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html
+- Meerschweinchen halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html
+- Hamster halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/hamster/index.html
+- Ratten halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/ratten/index.html
+- Degus und Chinchillas halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html
+- Reptilien halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/exoten/reptilien/index.html
+- Schildkröten halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/exoten/schildkroeten/index.html
+- Fische halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/exoten/fische/index.html
+- Pferde brauchen Herde - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/herde/index.html
+- Platzbedarf bei Pferden - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/platzbedarf/index.html
+- Haltungsformen bei Pferden - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/haltungsformen/index.html
+- Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/kosten/index.html
+- Reitbeteiligung als ehrlicher Einstieg - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/reitbeteiligung/index.html
+- Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/entscheidung/index.html
 - Kastration bei Haustieren: Tierschutz, Kosten und Mythen: https://wahre-haustierliebe.de/kastration/index.html
 - Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen: https://wahre-haustierliebe.de/qualzucht/index.html
 - Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
@@ -41,7 +78,7 @@
 - Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen: https://wahre-haustierliebe.de/realhaltung/index.html
 - Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist: https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html
 - Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar: https://wahre-haustierliebe.de/wildtierhaltung/index.html
-- Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln: https://wahre-haustierliebe.de/wildkatzenbaby-gefunden/index.html
+- Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln: https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html
 - Noch nicht bereit für ein Tier: Warten kann Tierliebe sein: https://wahre-haustierliebe.de/noch-nicht-bereit/index.html
 
 ## Page Intent
@@ -53,12 +90,49 @@
 - https://wahre-haustierliebe.de/mitmachen/index.html - Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen
 - https://wahre-haustierliebe.de/mensch/index.html - Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen
 - https://wahre-haustierliebe.de/hunde/index.html - Hund anschaffen oder Hundehaltung verbessern
-- https://wahre-haustierliebe.de/hund-im-buero/index.html - Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen
+- https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html - Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen
 - https://wahre-haustierliebe.de/katzen/index.html - Katze anschaffen oder Katzenhaltung artgerechter machen
 - https://wahre-haustierliebe.de/voegel/index.html - Vogelhaltung und Wellensittichhaltung prüfen
 - https://wahre-haustierliebe.de/kleintiere/index.html - Kaninchen, Meerschweinchen, Hamster oder Ratten verantwortungsvoll halten
 - https://wahre-haustierliebe.de/exoten/index.html - Exotische Haustiere und Terrarientiere prüfen
 - https://wahre-haustierliebe.de/pferde/index.html - Pferdehaltung und Pferdekauf realistisch prüfen
+- https://wahre-haustierliebe.de/hunde/soziale-beduerfnisse/index.html - Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.
+- https://wahre-haustierliebe.de/hunde/garten-auslauf/index.html - Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.
+- https://wahre-haustierliebe.de/hunde/allein-zu-hause/index.html - Alleinbleiben und Betreuung für Hunde planen.
+- https://wahre-haustierliebe.de/hunde/kosten/index.html - Hundekosten vor der Anschaffung realistisch einschätzen.
+- https://wahre-haustierliebe.de/hunde/kastration/index.html - Kastration beim Hund als Einzelfallentscheidung verstehen.
+- https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/index.html - Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.
+- https://wahre-haustierliebe.de/hunde/gesundheit/index.html - Gesundheitsrisiken bei Hunden erkennen und vorbeugen.
+- https://wahre-haustierliebe.de/hunde/entscheidung/index.html - Entscheidung vor der Hundeadoption oder Anschaffung prüfen.
+- https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html - Sozialverhalten von Katzen verstehen.
+- https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html - Wohnungshaltung für Katzen artgerechter gestalten.
+- https://wahre-haustierliebe.de/katzen/kastration/index.html - Kastration bei Katzen verstehen.
+- https://wahre-haustierliebe.de/katzen/stilles-leiden/index.html - Warnsignale bei Katzen erkennen.
+- https://wahre-haustierliebe.de/katzen/kosten/index.html - Katzenkosten vor der Anschaffung realistisch einschätzen.
+- https://wahre-haustierliebe.de/katzen/streunerkatzen/index.html - Streunerkatzen und Kastration einordnen.
+- https://wahre-haustierliebe.de/katzen/entscheidung/index.html - Entscheidung vor der Katzenadoption oder Anschaffung prüfen.
+- https://wahre-haustierliebe.de/voegel/schwarmhaltung/index.html - Schwarmhaltung bei Vögeln verstehen.
+- https://wahre-haustierliebe.de/voegel/uv-licht/index.html - UV-Licht und Lichtbedarf bei Vögeln einordnen.
+- https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/index.html - Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen.
+- https://wahre-haustierliebe.de/voegel/freiflug/index.html - Freiflug und Flugraum für Vögel planen.
+- https://wahre-haustierliebe.de/voegel/partnerersatz/index.html - Falschen Partnerersatz bei Vögeln vermeiden.
+- https://wahre-haustierliebe.de/voegel/krankheit-erkennen/index.html - Krankheitszeichen bei Vögeln ernst nehmen.
+- https://wahre-haustierliebe.de/voegel/qualzucht/index.html - Qualzucht bei Heimvögeln erkennen.
+- https://wahre-haustierliebe.de/voegel/entscheidung/index.html - Entscheidung vor der Vogelhaltung prüfen.
+- https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html - Kaninchenhaltung verantwortungsvoll planen.
+- https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html - Meerschweinchenhaltung verantwortungsvoll planen.
+- https://wahre-haustierliebe.de/kleintiere/hamster/index.html - Hamsterhaltung realistisch prüfen.
+- https://wahre-haustierliebe.de/kleintiere/ratten/index.html - Rattenhaltung verantwortungsvoll planen.
+- https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html - Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.
+- https://wahre-haustierliebe.de/exoten/reptilien/index.html - Reptilienhaltung realistisch prüfen.
+- https://wahre-haustierliebe.de/exoten/schildkroeten/index.html - Schildkrötenhaltung realistisch prüfen.
+- https://wahre-haustierliebe.de/exoten/fische/index.html - Fischhaltung und Aquarium realistisch prüfen.
+- https://wahre-haustierliebe.de/pferde/herde/index.html - Sozialkontakt und Herdenhaltung bei Pferden verstehen.
+- https://wahre-haustierliebe.de/pferde/platzbedarf/index.html - Fläche und Bewegung bei Pferdehaltung prüfen.
+- https://wahre-haustierliebe.de/pferde/haltungsformen/index.html - Pferdehaltungsformen vergleichen.
+- https://wahre-haustierliebe.de/pferde/kosten/index.html - Pferdekosten realistisch einschätzen.
+- https://wahre-haustierliebe.de/pferde/reitbeteiligung/index.html - Reitbeteiligung als Alternative zum eigenen Pferd prüfen.
+- https://wahre-haustierliebe.de/pferde/entscheidung/index.html - Entscheidung vor dem eigenen Pferd prüfen.
 - https://wahre-haustierliebe.de/kastration/index.html - Kastration bei Haustieren verstehen und entscheiden
 - https://wahre-haustierliebe.de/qualzucht/index.html - Qualzucht verstehen und beim Tierkauf vermeiden
 - https://wahre-haustierliebe.de/adoption/index.html - Tier aus dem Tierheim adoptieren statt kaufen
@@ -72,7 +146,7 @@
 - https://wahre-haustierliebe.de/realhaltung/index.html - Realistische Haltung und Kosten vor der Anschaffung prüfen
 - https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html - Zucht, Vermehrung und Adoption einordnen
 - https://wahre-haustierliebe.de/wildtierhaltung/index.html - Private Wildtierhaltung, Exoten und Wildschutz verstehen
-- https://wahre-haustierliebe.de/wildkatzenbaby-gefunden/index.html - Wildkatzenjunge erkennen und bei einem Fund richtig handeln
+- https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html - Wildkatzenjunge erkennen und bei einem Fund richtig handeln
 - https://wahre-haustierliebe.de/noch-nicht-bereit/index.html - Verantwortlich warten statt vorschnell ein Tier anschaffen
 
 ## Page Facts and Boundaries
@@ -109,7 +183,7 @@ Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
 ### Hund im Büro: Wann ein Bürohund wirklich passt
-URL: https://wahre-haustierliebe.de/hund-im-buero/index.html
+URL: https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html
 Facts:
 - Ein Bürohund profitiert nur, wenn der Arbeitsplatz hundegerecht organisiert ist und der Hund dort tatsächlich entspannen kann.
 - Rückzugsort, frisches Wasser, geplante Pausen, Aufsicht und klare Regeln für Kolleginnen und Kollegen sind Grundbedingungen.
@@ -371,7 +445,7 @@ Sources:
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 
 ### Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln
-URL: https://wahre-haustierliebe.de/wildkatzenbaby-gefunden/index.html
+URL: https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html
 Facts:
 - Wildkatzenjunge werden immer wieder mit getigerten Hauskatzenjungen verwechselt; junge Tiere sind mit bloßem Auge oft nicht sicher bestimmbar.
 - Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.
