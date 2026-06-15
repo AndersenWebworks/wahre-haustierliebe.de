@@ -73,6 +73,7 @@
 - Tierärztlichen Notdienst finden: Bundesländer-Übersicht: https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html
 - Tiermythen und Homöopathie: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
 - Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
+- Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?: https://wahre-haustierliebe.de/tiere-und-urlaub/index.html
 - Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
 - Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
 - Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen: https://wahre-haustierliebe.de/realhaltung/index.html
@@ -141,6 +142,7 @@
 - https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html - Tierärztlichen Notdienst nach Bundesland finden
 - https://wahre-haustierliebe.de/wissen/index.html - Tierhaltungsmythen und Homöopathie bei Tieren prüfen
 - https://wahre-haustierliebe.de/glossar/index.html - Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen
+- https://wahre-haustierliebe.de/tiere-und-urlaub/index.html - Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen
 - https://wahre-haustierliebe.de/hitzefalle-auto/index.html - Sommerhitze und Hund im Auto einschätzen
 - https://wahre-haustierliebe.de/ernaehrung-taurin/index.html - Tierernährung, vegane Ernährung und Taurin verstehen
 - https://wahre-haustierliebe.de/realhaltung/index.html - Realistische Haltung und Kosten vor der Anschaffung prüfen
@@ -379,6 +381,25 @@ Sources:
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
 - Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
 
+### Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?
+URL: https://wahre-haustierliebe.de/tiere-und-urlaub/index.html
+Facts:
+- Urlaub mit Haustier ist keine reine Komfortfrage; entscheidend sind Tierart, Charakter, Gesundheit, Reiseweg, Klima, Unterkunft und zuverlässige Betreuung.
+- Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.
+- Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten.
+Important boundaries:
+- Nicht behaupten, jedes Tier müsse zu Hause bleiben oder jeder Hund reise gern mit.
+- Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.
+- Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.
+Sources:
+- Deutscher Tierschutzbund: Urlaub mit Hund: https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/urlaub-mit-hund/
+- TASSO: Tierbetreuung im Urlaub: https://www.tasso.net/Service/Wissensportal/Urlaub-Reisen-mit-Tier/Urlaub-ohne-Tier
+- BMLEH: Tipps zur Reiseplanung mit Tieren: https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reiseplanung-tiere.html
+- Tierschutzgesetz § 3: https://www.gesetze-im-internet.de/tierschg/__3.html
+- Tierschutzgesetz § 18: https://www.gesetze-im-internet.de/tierschg/__18.html
+- SWR: Tierheime voll, mehr Haustiere ausgesetzt: https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html
+- Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025: https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen
+
 ### Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind
 URL: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
 Facts:
@@ -495,5 +516,5 @@ Sources:
 
 ## Last Updated
 
-2026-06-11
+2026-06-15
 

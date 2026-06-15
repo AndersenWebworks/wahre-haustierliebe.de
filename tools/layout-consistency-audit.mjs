@@ -25,12 +25,13 @@ const pages = [
   { id: 'notfall', file: 'notfall/index.html' },
   { id: 'wissen', file: 'wissen/index.html' },
   { id: 'glossar', file: 'glossar/index.html' },
+  { id: 'tiere-und-urlaub', file: 'tiere-und-urlaub/index.html' },
   { id: 'hitzefalle-auto', file: 'hitzefalle-auto/index.html' },
   { id: 'ernaehrung-taurin', file: 'ernaehrung-taurin/index.html' },
   { id: 'realhaltung', file: 'realhaltung/index.html' },
   { id: 'zucht-und-vermehrung', file: 'zucht-und-vermehrung/index.html' },
   { id: 'wildtierhaltung', file: 'wildtierhaltung/index.html' },
-  { id: 'wildkatzenbaby-gefunden', file: 'wildkatzenbaby-gefunden/index.html' },
+  { id: 'wildkatzenbaby-gefunden', file: 'katzen/wildkatzenbaby-gefunden/index.html' },
   { id: 'noch-nicht-bereit', file: 'noch-nicht-bereit/index.html' },
 ];
 

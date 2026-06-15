@@ -9,7 +9,7 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `index.html`
 - `mensch/index.html`
 - `hunde/index.html`
-- `hund-im-buero/index.html`
+- `hunde/hund-im-buero/index.html`
 - `katzen/index.html`
 - `voegel/index.html`
 - `kleintiere/index.html`
@@ -22,7 +22,8 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `notfall/index.html`
 - `notfall/tierarzt-notdienst/index.html`
 - `wissen/index.html`
-- `wildkatzenbaby-gefunden/index.html`
+- `tiere-und-urlaub/index.html`
+- `katzen/wildkatzenbaby-gefunden/index.html`
 - `noch-nicht-bereit/index.html`
 - `kontakt/index.html`
 - `impressum/index.html`

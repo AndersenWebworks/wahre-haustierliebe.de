@@ -11,7 +11,7 @@ const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
 const siteName = 'Wa(h)re Haustier(liebe)';
-const lastmod = '2026-06-11';
+const lastmod = '2026-06-15';
 const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Wa(h)re Haustier(liebe)">
   <path fill="#b91f2f" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Z"/>
   <path fill="#8f1524" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Zm0-3.1.8-.7c6.1-5 9.5-8.3 9.5-13.9 0-3-2.1-5.1-4.9-5.1-2.3 0-4 1.4-4.8 4.1h-1.2c-.8-2.7-2.5-4.1-4.8-4.1-2.8 0-4.9 2.1-4.9 5.1 0 5.6 3.4 8.9 9.5 13.9l.8.7Z" opacity=".65"/>
@@ -198,6 +198,14 @@ const pages = [
     priority: '0.8',
   },
   {
+    id: 'tiere-und-urlaub',
+    slug: 'tiere-und-urlaub',
+    title: 'Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?',
+    description: 'Urlaub mit Haustieren tierschutzgerecht planen: Mitnehmen, Betreuung, Tierpension, Reiseformalitäten, Hitze, Flugreisen und Aussetzen richtig einordnen.',
+    intent: 'Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen',
+    priority: '0.8',
+  },
+  {
     id: 'hitzefalle-auto',
     slug: 'hitzefalle-auto',
     title: 'Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind',
@@ -271,7 +279,7 @@ const pages = [
 ];
 
 const topicPages = [
-  ['hunde-soziale-beduerfnisse', 'hunde', 'hunde/soziale-beduerfnisse', 'Soziale Bedürfnisse beim Hund', 'Warum Hunde mehr brauchen als Futter, Garten und kurze Gassirunden.', 'Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.'],
+  ['hunde-soziale-beduerfnisse', 'hunde', 'hunde/soziale-beduerfnisse', 'Soziale Bedürfnisse beim Hund', 'Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.', 'Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.'],
   ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.'],
   ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.'],
   ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.'],
@@ -358,6 +366,11 @@ const faqByPage = {
   ],
   wissen: [
     ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es keinen belastbaren Wirksamkeitsnachweis über den Placebo-Effekt hinaus. Die größte Gefahr ist verlorene Zeit, wenn echte Diagnostik oder Behandlung verzögert wird.'],
+  ],
+  'tiere-und-urlaub': [
+    ['Sollte mein Tier mit in den Urlaub?', 'Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.'],
+    ['Wie früh sollte ich Betreuung organisieren?', 'So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche.'],
+    ['Darf man ein Tier aussetzen, wenn man keine Betreuung findet?', 'Nein. Ein Haustier auszusetzen oder zurückzulassen, um sich der Verantwortung zu entziehen, ist nach dem Tierschutzgesetz verboten.'],
   ],
 };
 
@@ -620,6 +633,27 @@ const evidenceByPage = {
     guardrails: [
       'Das Glossar erklärt Begriffe knapp und ersetzt kein veterinärmedizinisches Nachschlagewerk.',
       'Bei Symptomen immer auf tierärztliche Abklärung verweisen.',
+    ],
+  },
+  'tiere-und-urlaub': {
+    facts: [
+      'Urlaub mit Haustier ist keine reine Komfortfrage; entscheidend sind Tierart, Charakter, Gesundheit, Reiseweg, Klima, Unterkunft und zuverlässige Betreuung.',
+      'Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.',
+      'Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Urlaub mit Hund', 'https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/urlaub-mit-hund/'],
+      ['TASSO: Tierbetreuung im Urlaub', 'https://www.tasso.net/Service/Wissensportal/Urlaub-Reisen-mit-Tier/Urlaub-ohne-Tier'],
+      ['BMLEH: Tipps zur Reiseplanung mit Tieren', 'https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reiseplanung-tiere.html'],
+      ['Tierschutzgesetz § 3', 'https://www.gesetze-im-internet.de/tierschg/__3.html'],
+      ['Tierschutzgesetz § 18', 'https://www.gesetze-im-internet.de/tierschg/__18.html'],
+      ['SWR: Tierheime voll, mehr Haustiere ausgesetzt', 'https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html'],
+      ['Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025', 'https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen'],
+    ],
+    guardrails: [
+      'Nicht behaupten, jedes Tier müsse zu Hause bleiben oder jeder Hund reise gern mit.',
+      'Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.',
+      'Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.',
     ],
   },
   'hitzefalle-auto': {
@@ -888,6 +922,13 @@ const firstContentImageByPage = {
     type: 'image/jpeg',
     alt: 'Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen.',
   },
+  'tiere-und-urlaub': {
+    src: 'assets/images/cat-soft-carrier.jpg',
+    width: 1254,
+    height: 1638,
+    type: 'image/jpeg',
+    alt: 'Katze in einer weichen Transportbox als Bild für Urlaubsplanung und Betreuung.',
+  },
   'hitzefalle-auto': {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
@@ -1031,6 +1072,11 @@ const socialCopyByPage = {
     title: 'Glossar für Tierhaltung und Tierschutz',
     description: 'Wichtige Begriffe rund um Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz erklärt.',
   },
+  'tiere-und-urlaub': {
+    eyebrow: 'Urlaub mit Haustier planen',
+    title: 'Erst das Tier einplanen',
+    description: 'Mitnehmen, Betreuung oder Tierpension: wie Urlaub für Haustiere nicht zur Stress- oder Aussetzungsfalle wird.',
+  },
   'hitzefalle-auto': {
     eyebrow: 'Hund im Auto',
     title: 'Zehn Minuten können lebensgefährlich sein',
@@ -1098,6 +1144,7 @@ const keywordByPage = {
   mitmachen: ['Mitmachen', 'Korrekturhinweis', 'Quellenhinweis', 'Tierschutz-Wiki', 'redaktionelle Prüfung'],
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
   glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
+  'tiere-und-urlaub': ['Haustiere Urlaub', 'Tierbetreuung', 'Tierpension', 'Urlaub mit Hund', 'Tiere aussetzen'],
   'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],
   'ernaehrung-taurin': ['Tierernährung', 'Taurin', 'Katzenfutter', 'Hundefutter', 'vegane Tierernährung'],
   realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
@@ -2596,7 +2643,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'katzen', 'wildkatzenbaby-gefunden', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
+  const important = ['hunde', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',

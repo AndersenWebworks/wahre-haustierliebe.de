@@ -25,6 +25,7 @@ const articlePages = [
   'notfall',
   'wissen',
   'glossar',
+  'tiere-und-urlaub',
   'hitzefalle-auto',
   'ernaehrung-taurin',
   'realhaltung',
@@ -37,7 +38,7 @@ const articlePages = [
 const pageFiles = {
   mensch: 'mensch/index.html',
   hunde: 'hunde/index.html',
-  'hund-im-buero': 'hund-im-buero/index.html',
+  'hund-im-buero': 'hunde/hund-im-buero/index.html',
   katzen: 'katzen/index.html',
   voegel: 'voegel/index.html',
   kleintiere: 'kleintiere/index.html',
@@ -50,12 +51,13 @@ const pageFiles = {
   notfall: 'notfall/index.html',
   wissen: 'wissen/index.html',
   glossar: 'glossar/index.html',
+  'tiere-und-urlaub': 'tiere-und-urlaub/index.html',
   'hitzefalle-auto': 'hitzefalle-auto/index.html',
   'ernaehrung-taurin': 'ernaehrung-taurin/index.html',
   realhaltung: 'realhaltung/index.html',
   'zucht-und-vermehrung': 'zucht-und-vermehrung/index.html',
   wildtierhaltung: 'wildtierhaltung/index.html',
-  'wildkatzenbaby-gefunden': 'wildkatzenbaby-gefunden/index.html',
+  'wildkatzenbaby-gefunden': 'katzen/wildkatzenbaby-gefunden/index.html',
   'noch-nicht-bereit': 'noch-nicht-bereit/index.html',
 };
 

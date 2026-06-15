@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-15",
   "site": "Wa(h)re Haustier(liebe)",
   "url": "https://wahre-haustierliebe.de/",
   "pages": [
@@ -505,7 +505,7 @@
       "id": "hunde-soziale-beduerfnisse",
       "url": "https://wahre-haustierliebe.de/hunde/soziale-beduerfnisse/index.html",
       "title": "Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe)",
-      "description": "Warum Hunde mehr brauchen als Futter, Garten und kurze Gassirunden.",
+      "description": "Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.",
       "intent": "Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.",
       "keywords": [
         "Hund halten",
@@ -520,7 +520,7 @@
       "sources": [],
       "social": {
         "title": "Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe)",
-        "description": "Warum Hunde mehr brauchen als Futter, Garten und kurze Gassirunden.",
+        "description": "Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-soziale-beduerfnisse.png",
         "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
         "imageWidth": 1200,
@@ -1767,6 +1767,68 @@
         "description": "Wichtige Begriffe rund um Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz erklärt.",
         "image": "https://wahre-haustierliebe.de/assets/social/glossar.png",
         "imageAlt": "Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "tiere-und-urlaub",
+      "url": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html",
+      "title": "Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?",
+      "description": "Urlaub mit Haustieren tierschutzgerecht planen: Mitnehmen, Betreuung, Tierpension, Reiseformalitäten, Hitze, Flugreisen und Aussetzen richtig einordnen.",
+      "intent": "Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen",
+      "keywords": [
+        "Haustiere Urlaub",
+        "Tierbetreuung",
+        "Tierpension",
+        "Urlaub mit Hund",
+        "Tiere aussetzen"
+      ],
+      "facts": [
+        "Urlaub mit Haustier ist keine reine Komfortfrage; entscheidend sind Tierart, Charakter, Gesundheit, Reiseweg, Klima, Unterkunft und zuverlässige Betreuung.",
+        "Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.",
+        "Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten."
+      ],
+      "citationGuardrails": [
+        "Nicht behaupten, jedes Tier müsse zu Hause bleiben oder jeder Hund reise gern mit.",
+        "Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.",
+        "Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Urlaub mit Hund",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/urlaub-mit-hund/"
+        },
+        {
+          "label": "TASSO: Tierbetreuung im Urlaub",
+          "url": "https://www.tasso.net/Service/Wissensportal/Urlaub-Reisen-mit-Tier/Urlaub-ohne-Tier"
+        },
+        {
+          "label": "BMLEH: Tipps zur Reiseplanung mit Tieren",
+          "url": "https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reiseplanung-tiere.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 3",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__3.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 18",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__18.html"
+        },
+        {
+          "label": "SWR: Tierheime voll, mehr Haustiere ausgesetzt",
+          "url": "https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html"
+        },
+        {
+          "label": "Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025",
+          "url": "https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen"
+        }
+      ],
+      "social": {
+        "title": "Erst das Tier einplanen - Wa(h)re Haustier(liebe)",
+        "description": "Mitnehmen, Betreuung oder Tierpension: wie Urlaub für Haustiere nicht zur Stress- oder Aussetzungsfalle wird.",
+        "image": "https://wahre-haustierliebe.de/assets/social/tiere-und-urlaub.png",
+        "imageAlt": "Katze in einer weichen Transportbox als Bild für Urlaubsplanung und Betreuung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }

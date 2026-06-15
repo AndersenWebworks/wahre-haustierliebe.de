@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-15",
   "entries": [
     {
       "question": "Wie lange darf ein Hund allein zu Hause bleiben?",
@@ -55,6 +55,21 @@
       "question": "Hilft Homöopathie bei Tieren?",
       "answer": "Für Homöopathie gibt es keinen belastbaren Wirksamkeitsnachweis über den Placebo-Effekt hinaus. Die größte Gefahr ist verlorene Zeit, wenn echte Diagnostik oder Behandlung verzögert wird.",
       "source": "https://wahre-haustierliebe.de/wissen/index.html"
+    },
+    {
+      "question": "Sollte mein Tier mit in den Urlaub?",
+      "answer": "Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Wie früh sollte ich Betreuung organisieren?",
+      "answer": "So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Darf man ein Tier aussetzen, wenn man keine Betreuung findet?",
+      "answer": "Nein. Ein Haustier auszusetzen oder zurückzulassen, um sich der Verantwortung zu entziehen, ist nach dem Tierschutzgesetz verboten.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
     }
   ]
 }

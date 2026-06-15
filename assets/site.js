@@ -57,6 +57,7 @@ var staticPageRoutes = {
   "tierarzt-notdienst": "/notfall/tierarzt-notdienst/index.html",
   "wissen": "/wissen/index.html",
   "glossar": "/glossar/index.html",
+  "tiere-und-urlaub": "/tiere-und-urlaub/index.html",
   "hitzefalle-auto": "/hitzefalle-auto/index.html",
   "ernaehrung-taurin": "/ernaehrung-taurin/index.html",
   "realhaltung": "/realhaltung/index.html",
@@ -99,6 +100,7 @@ function normalizeAssetUrls(root) {
       'notfall': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
       'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leiden müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
       'glossar': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für Nachschlagewissen zur Tierhaltung', position: 'center 48%', caption: 'Begriffe sind nur hilfreich, wenn sie zu besseren Entscheidungen führen.', purpose: 'Glossar-Seite: Fachbegriffe als Einstieg in verantwortliche Tierhaltung zeigen', shareReason: 'Das Bild soll Nachschlagewissen ruhig und wiedererkennbar rahmen.' },
+      'tiere-und-urlaub': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Urlaubsplanung und Betreuung', position: 'center 46%', caption: 'Urlaub beginnt für dein Tier nicht am Reisetag, sondern mit deiner Planung.', purpose: 'Tiere-und-Urlaub-Seite: Planung, Betreuung und Verantwortung vor dem Kofferpacken zeigen', shareReason: 'Das Bild soll den Impuls auslösen, vor dem Urlaub an das Tier zu denken.' },
       'wildkatzenbaby-gefunden': { src: 'assets/images/european-wildcat.jpg', alt: 'Europäische Wildkatze mit typischen Merkmalen wie breitem Kopf, fleischfarbener Nase und dichtem Fell', position: 'center 36%', caption: 'Gut gemeinte Hilfe beginnt manchmal damit, ein Jungtier nicht anzufassen.', purpose: 'Wildkatzenbaby-Seite: Verwechslungsgefahr sichtbar machen und Abstand als Hilfe rahmen', shareReason: 'Das Bild soll aus dem Reflex „mitnehmen“ die Entscheidung „erst prüfen“ machen.' },
       'noch-nicht-bereit': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang', position: 'center 46%', caption: 'Warten kann die tierliebste Entscheidung sein.', purpose: 'Noch-nicht-bereit-Seite: verantwortliches Warten statt Scheitern zeigen', shareReason: 'Das Bild soll Tierverzicht als Fürsorge normalisieren.' }
     };
