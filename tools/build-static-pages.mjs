@@ -908,6 +908,13 @@ const firstContentImageByPage = {
     type: 'image/jpeg',
     alt: 'Zwei Katzen sitzen gemeinsam am Fenster als ruhiges Bild für Fragen und Kontakt.',
   },
+  mitmachen: {
+    src: 'assets/images/animal-shelter-fundraiser.jpg',
+    width: 1920,
+    height: 1372,
+    type: 'image/jpeg',
+    alt: 'Tierschutzaktion als Bild für Hinweise, Korrekturen und gemeinsame Verbesserung.',
+  },
   wissen: {
     src: 'assets/images/goldfish-aquarium.jpg',
     width: 1920,
@@ -979,6 +986,268 @@ const firstContentImageByPage = {
     alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang.',
   },
 };
+
+Object.assign(firstContentImageByPage, {
+  'hunde-soziale-beduerfnisse': {
+    src: 'assets/images/dog-resting-under-table.jpg',
+    width: 1280,
+    height: 853,
+    type: 'image/jpeg',
+    alt: 'Hund ruht in Menschennähe als Bild für Bindung, Rückzug und soziale Bedürfnisse.',
+  },
+  'hunde-garten-auslauf': {
+    src: 'assets/images/golden-retriever-agility-jump.jpg',
+    width: 2000,
+    height: 1339,
+    type: 'image/jpeg',
+    alt: 'Hund in Bewegung als Bild für Auslauf, Reize und Beschäftigung außerhalb des Gartens.',
+  },
+  'hunde-allein-zu-hause': {
+    src: 'assets/images/dog-resting-under-table.jpg',
+    width: 1280,
+    height: 853,
+    type: 'image/jpeg',
+    alt: 'Ruhender Hund als Bild für Pausen, Betreuung und Alleinbleiben.',
+  },
+  'hunde-kosten': {
+    src: 'assets/images/golden-retriever-agility-jump.jpg',
+    width: 2000,
+    height: 1339,
+    type: 'image/jpeg',
+    alt: 'Aktiver Hund als Bild für die laufenden Kosten von Training, Alltag und Versorgung.',
+  },
+  'hunde-kastration': {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Hund in einer Tierarztpraxis als Bild für medizinische Abwägung statt Routineentscheidung.',
+  },
+  'hunde-hofhaltung-und-zwinger': {
+    src: 'assets/images/dog-resting-under-table.jpg',
+    width: 1280,
+    height: 853,
+    type: 'image/jpeg',
+    alt: 'Hund in geschützter Nähe als Gegenbild zu isolierter Hof- und Zwingerhaltung.',
+  },
+  'hunde-gesundheit': {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Hund in einer Tierarztpraxis als Bild für Vorsorge und frühes Handeln.',
+  },
+  'hunde-entscheidung': {
+    src: 'assets/images/tierheim-hund.jpg',
+    width: 960,
+    height: 1280,
+    type: 'image/jpeg',
+    alt: 'Hund im Tierheim als Bild für die Entscheidung vor der Anschaffung.',
+  },
+  'katzen-sozialverhalten': {
+    src: 'assets/images/two-cats-window.jpg',
+    width: 843,
+    height: 954,
+    type: 'image/jpeg',
+    alt: 'Zwei Katzen am Fenster als Bild für Sozialkontakt und eigenes Revier.',
+  },
+  'katzen-wohnungshaltung': {
+    src: 'assets/images/cat-scratching-post.jpg',
+    width: 1215,
+    height: 1600,
+    type: 'image/jpeg',
+    alt: 'Katze auf einem Kratzbaum als Bild für strukturierte Wohnungshaltung.',
+  },
+  'katzen-kastration': {
+    src: 'assets/images/feral-cat-tnr.jpg',
+    width: 432,
+    height: 324,
+    type: 'image/jpeg',
+    alt: 'Kastrierte Streunerkatze als Bild für praktischen Katzenschutz.',
+  },
+  'katzen-stilles-leiden': {
+    src: 'assets/images/cat-window-perch.jpg',
+    width: 1280,
+    height: 960,
+    type: 'image/jpeg',
+    alt: 'Katze am Fenster als Bild für leise Signale, Rückzug und genaue Beobachtung.',
+  },
+  'katzen-kosten': {
+    src: 'assets/images/cat-carrier-square.jpg',
+    width: 1400,
+    height: 1394,
+    type: 'image/jpeg',
+    alt: 'Katze in einer Transporttasche als Bild für Tierarztwege und Rücklagen.',
+  },
+  'katzen-streunerkatzen': {
+    src: 'assets/images/feral-cat-tnr.jpg',
+    width: 432,
+    height: 324,
+    type: 'image/jpeg',
+    alt: 'Streunerkatze mit markiertem Ohr als Bild für TNR und Verantwortung.',
+  },
+  'katzen-entscheidung': {
+    src: 'assets/images/two-cats-window.jpg',
+    width: 843,
+    height: 954,
+    type: 'image/jpeg',
+    alt: 'Zwei Katzen am Fenster als Bild für eine vorbereitete Katzenentscheidung.',
+  },
+  'voegel-schwarmhaltung': {
+    src: 'assets/images/voegel-voliere.jpg',
+    width: 1600,
+    height: 1064,
+    type: 'image/jpeg',
+    alt: 'Wellensittiche in einer Voliere als Bild für Schwarmhaltung.',
+  },
+  'voegel-uv-licht': {
+    src: 'assets/images/vogel-wellensittich.jpg',
+    width: 600,
+    height: 401,
+    type: 'image/jpeg',
+    alt: 'Wellensittich als Bild für Licht, Wahrnehmung und UV-Bedarf.',
+  },
+  'voegel-kuechenluft-und-daempfe-sind-lebensgefahr': {
+    src: 'assets/images/voegel-voliere-02.jpg',
+    width: 1600,
+    height: 1064,
+    type: 'image/jpeg',
+    alt: 'Wellensittiche in einer Voliere als Bild für empfindliche Atemwege und sichere Räume.',
+  },
+  'voegel-freiflug-ist-nicht-optional': {
+    src: 'assets/images/voegel-voliere.jpg',
+    width: 1600,
+    height: 1064,
+    type: 'image/jpeg',
+    alt: 'Wellensittiche mit Raum und Ästen als Bild für Bewegung und Freiflug.',
+  },
+  'voegel-partnerersatz': {
+    src: 'assets/images/vogel-wellensittich.jpg',
+    width: 600,
+    height: 401,
+    type: 'image/jpeg',
+    alt: 'Wellensittich als Bild für echte Artgenossen statt falschen Partnerersatz.',
+  },
+  'voegel-krankheit-erkennen': {
+    src: 'assets/images/vet-office-with-dog.jpg',
+    width: 2048,
+    height: 1536,
+    type: 'image/jpeg',
+    alt: 'Tierarztpraxis als Bild für schnelle Abklärung bei leisen Krankheitssignalen.',
+  },
+  'voegel-qualzucht': {
+    src: 'assets/images/vogel-wellensittich.jpg',
+    width: 600,
+    height: 401,
+    type: 'image/jpeg',
+    alt: 'Wellensittich als Bild für Zuchtmerkmale und genaue Beobachtung.',
+  },
+  'voegel-entscheidung': {
+    src: 'assets/images/voegel-voliere-02.jpg',
+    width: 1600,
+    height: 1064,
+    type: 'image/jpeg',
+    alt: 'Mehrere Wellensittiche in einer Voliere als Bild für die Entscheidung vor der Vogelhaltung.',
+  },
+  'kleintiere-kaninchen': {
+    src: 'assets/images/rabbit-adoption-enclosure.jpg',
+    width: 1920,
+    height: 1280,
+    type: 'image/jpeg',
+    alt: 'Kaninchen in einem Außengehege als Bild für Platz und artgerechte Unterbringung.',
+  },
+  'kleintiere-meerschweinchen': {
+    src: 'assets/images/kleintiere-zwei-meerschweinchen.jpg',
+    width: 1200,
+    height: 800,
+    type: 'image/jpeg',
+    alt: 'Zwei Meerschweinchen zusammen im Gras als Bild für Gruppenhaltung.',
+  },
+  'kleintiere-hamster': {
+    src: 'assets/images/hamster-home-built-enclosure.png',
+    width: 1280,
+    height: 685,
+    type: 'image/png',
+    alt: 'Großes Hamstergehege als Bild für Platz, Einstreu und Struktur.',
+  },
+  'kleintiere-ratten': {
+    src: 'assets/images/rat-cage-01.jpg',
+    width: 640,
+    height: 480,
+    type: 'image/jpeg',
+    alt: 'Strukturierter Rattenkäfig als Bild für Einrichtung und Beschäftigung.',
+  },
+  'kleintiere-degus-und-chinchillas': {
+    src: 'assets/images/guinea-pig-habitat.jpg',
+    width: 800,
+    height: 599,
+    type: 'image/jpeg',
+    alt: 'Strukturiertes Kleintier-Habitat als Bild für Raum, Rückzug und Spezialwissen.',
+  },
+  'exoten-reptilien': {
+    src: 'assets/images/bearded-dragon-terrarium.jpg',
+    width: 1000,
+    height: 702,
+    type: 'image/jpeg',
+    alt: 'Bartagame im Terrarium als Bild für Reptilienhaltung mit Licht und Temperaturzonen.',
+  },
+  'exoten-schildkroeten': {
+    src: 'assets/images/exot-bartagame.jpg',
+    width: 330,
+    height: 212,
+    type: 'image/jpeg',
+    alt: 'Reptil als Bild für langfristige Verantwortung und fachkundige Exotenhaltung.',
+  },
+  'exoten-fische': {
+    src: 'assets/images/goldfish-aquarium.jpg',
+    width: 1920,
+    height: 1309,
+    type: 'image/jpeg',
+    alt: 'Goldfische im Aquarium als Bild für Wasserwerte, Technik und Pflege.',
+  },
+  'pferde-herde': {
+    src: 'assets/images/horse-herd-pasture.jpg',
+    width: 1024,
+    height: 683,
+    type: 'image/jpeg',
+    alt: 'Pferdeherde auf einer Weide als Bild für Sozialkontakt.',
+  },
+  'pferde-platzbedarf': {
+    src: 'assets/images/horse-paddocks-shelter.jpg',
+    width: 640,
+    height: 480,
+    type: 'image/jpeg',
+    alt: 'Pferdekoppeln mit Unterständen als Bild für Fläche und Bewegung.',
+  },
+  'pferde-haltungsformen': {
+    src: 'assets/images/horse-paddocks-shelter.jpg',
+    width: 640,
+    height: 480,
+    type: 'image/jpeg',
+    alt: 'Pferdekoppeln mit Unterständen als Bild für unterschiedliche Haltungsformen.',
+  },
+  'pferde-kosten': {
+    src: 'assets/images/horse-herd-pasture.jpg',
+    width: 1024,
+    height: 683,
+    type: 'image/jpeg',
+    alt: 'Pferdeherde auf einer Weide als Bild für laufende Verantwortung und Kosten.',
+  },
+  'pferde-reitbeteiligung': {
+    src: 'assets/images/horse-paddocks-shelter.jpg',
+    width: 640,
+    height: 480,
+    type: 'image/jpeg',
+    alt: 'Pferdekoppeln mit Unterständen als Bild für einen realistischen Einstieg in Pferdeverantwortung.',
+  },
+  'pferde-entscheidung': {
+    src: 'assets/images/horse-herd-pasture.jpg',
+    width: 1024,
+    height: 683,
+    type: 'image/jpeg',
+    alt: 'Pferdeherde auf einer Weide als Bild für die Entscheidung vor dem eigenen Pferd.',
+  },
+});
 
 const socialCopyByPage = {
   startseite: {
@@ -2156,11 +2425,98 @@ ${buildIconLinks(prefix)}
 </head>`;
 }
 
+const articleHeroPositionByImage = {
+  'assets/images/cat-carrier-square.jpg': 'center 46%',
+  'assets/images/golden-retriever-agility-jump.jpg': 'center 48%',
+  'assets/images/dog-resting-under-table.jpg': 'center 52%',
+  'assets/images/two-cats-window.jpg': 'center 48%',
+  'assets/images/cat-scratching-post.jpg': 'center 48%',
+  'assets/images/cat-window-perch.jpg': 'center 44%',
+  'assets/images/feral-cat-tnr.jpg': 'center 44%',
+  'assets/images/voegel-voliere.jpg': 'center 44%',
+  'assets/images/voegel-voliere-02.jpg': 'center 44%',
+  'assets/images/vogel-wellensittich.jpg': 'center 42%',
+  'assets/images/guinea-pig-habitat.jpg': 'center 50%',
+  'assets/images/kleintiere-zwei-meerschweinchen.jpg': 'center 48%',
+  'assets/images/hamster-home-built-enclosure.png': 'center 55%',
+  'assets/images/rat-cage-01.jpg': 'center 50%',
+  'assets/images/rabbit-adoption-enclosure.jpg': 'center 48%',
+  'assets/images/bearded-dragon-terrarium.jpg': 'center 45%',
+  'assets/images/exot-bartagame.jpg': 'center 45%',
+  'assets/images/goldfish-aquarium.jpg': 'center 48%',
+  'assets/images/horse-herd-pasture.jpg': 'center 50%',
+  'assets/images/horse-paddocks-shelter.jpg': 'center 50%',
+  'assets/images/qualzucht-mops.jpg': 'center 34%',
+  'assets/images/tierheim-hund.jpg': 'center 45%',
+  'assets/images/cats-cat-tree-pair.jpg': 'center 46%',
+  'assets/images/vet-office-with-dog.jpg': 'center 50%',
+  'assets/images/cat-soft-carrier.jpg': 'center 46%',
+  'assets/images/animal-shelter-fundraiser.jpg': 'center 48%',
+  'assets/images/european-wildcat.jpg': 'center 36%',
+};
+
+function articleHeroImage(page) {
+  if (page.id === 'startseite') return null;
+  return firstContentImageByPage[page.id] || firstContentImageByPage[page.sourcePage] || null;
+}
+
+function injectArticleHeroMedia(body, page) {
+  const image = articleHeroImage(page);
+  if (!image) return body;
+
+  if (page.id === 'kontakt') {
+    const h1 = 'Über & Kontakt';
+    const caption = image.alt.replace(/\.$/, '');
+    const position = articleHeroPositionByImage[image.src] || 'center 45%';
+    const purpose = `${h1}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
+    const shareReason = 'Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.';
+    const hero = `<div class="hero">
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>${escapeHtml(h1)}</h1>
+          <p>${escapeHtml(page.description)}</p>
+        </div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:${escapeAttr(position)};" data-image-purpose="${escapeAttr(purpose)}" data-share-reason="${escapeAttr(shareReason)}">
+          <img src="${image.src}" alt="${escapeAttr(image.alt)}" loading="eager">
+          <figcaption>${escapeHtml(caption)}</figcaption>
+        </figure>
+      </div>
+    </div>`;
+
+    return body.replace(/<div class="hero"[\s\S]*?<nav class="article-toc"/, `${hero}<nav class="article-toc"`);
+  }
+
+  if (body.includes('<figure class="article-hero-media')) return body;
+
+  const heroContainerPattern = new RegExp(`(<section id="${page.id}" class="page(?: active)?">[\\s\\S]*?<div class="hero"[^>]*>\\s*<div class="container">)([\\s\\S]*?)(\\s*</div>\\s*</div>)`);
+  const match = heroContainerPattern.exec(body);
+  if (!match) return body;
+
+  const copy = match[2].trim();
+  const caption = image.alt.replace(/\.$/, '');
+  const position = articleHeroPositionByImage[image.src] || 'center 45%';
+  const purpose = `${page.title.replace(` - ${siteName}`, '')}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
+  const shareReason = `Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.`;
+  const media = `
+        <figure class="article-hero-media image-context-card" style="--image-position:${escapeAttr(position)};" data-image-purpose="${escapeAttr(purpose)}" data-share-reason="${escapeAttr(shareReason)}">
+          <img src="${image.src}" alt="${escapeAttr(image.alt)}" loading="eager">
+          <figcaption>${escapeHtml(caption)}</figcaption>
+        </figure>`;
+
+  const copyHtml = copy.includes('article-hero-copy')
+    ? `${copy}\n        </div>`
+    : `<div class="article-hero-copy">\n${copy.split('\n').map((line) => `          ${line}`).join('\n')}\n        </div>`;
+
+  return body.replace(match[0], `${match[1]}\n        ${copyHtml}\n${media}\n      </div>\n    </div>`);
+}
+
 function buildHtmlPage({ page, header, section, commonAfterSections }) {
   const prefix = assetPrefixFor(page);
   const routePrefix = prefixForSlug(page.slug);
   let body = `${header}\n\n  <main id="main-content" tabindex="-1">\n${section}\n  </main>\n\n${commonAfterSections}`;
   body = injectGeoBlocks(body, page);
+  body = injectArticleHeroMedia(body, page);
   body = normalizePublicCopy(body);
   body = hydrateGlossary(body, page);
   body = transformLinks(body, page);
@@ -2777,7 +3133,7 @@ async function main() {
   const header = source.slice(bodyStart + '<body>'.length, firstSection).trimEnd();
   const commonAfterSections = source.slice(footerMarker, scriptMarker).trimEnd();
   const script = rewriteScript(rawScript);
-  const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n`;
+  const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }\n@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }\n`;
   staticCssForInline = staticCss;
 
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
@@ -2799,7 +3155,8 @@ async function main() {
       continue;
     }
     if (page.staticOnly) {
-      const section = await extractStaticOnlySection(page);
+      const hasSourceSection = source.includes(`<section id="${page.id}" class="page`);
+      const section = hasSourceSection ? extractSection(source, page.id) : await extractStaticOnlySection(page);
       const html = buildHtmlPage({ page, header, section, commonAfterSections });
       await writeFileEnsured(outputPathFor(page), html);
       continue;

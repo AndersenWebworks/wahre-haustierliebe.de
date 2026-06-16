@@ -11,7 +11,10 @@
     "usedFor": [
       "start-insight-hund-im-buero",
       "article-hero-hund-im-buero",
-      "social-card-hund-im-buero"
+      "social-card-hund-im-buero",
+      "article-hero-hunde-soziale-beduerfnisse",
+      "article-hero-hunde-allein-zu-hause",
+      "article-hero-hunde-hofhaltung-und-zwinger"
     ],
     "alt": "Hund liegt ruhig unter einem Tisch auf einem Teppich",
     "modifications": "Local thumbnail copy from Wikimedia; optimized derivative generated from Wikimedia thumbnail; cropped by CSS where displayed."
@@ -28,7 +31,10 @@
     "usedFor": [
       "start-insight-notfall",
       "article-hero-notfall",
-      "wissen-evidenz"
+      "wissen-evidenz",
+      "article-hero-hunde-kastration",
+      "article-hero-hunde-gesundheit",
+      "article-hero-voegel-krankheit-erkennen"
     ],
     "alt": "Hund sitzt ruhig in einer Tierarztpraxis",
     "modifications": "Local copy; cropped by CSS where displayed."
@@ -44,7 +50,8 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "usedFor": [
       "start-insight-katzen",
-      "article-hero-katzen"
+      "article-hero-katzen",
+      "article-hero-katzen-stilles-leiden"
     ],
     "alt": "Katze sitzt auf einer Fensterbank und blickt nach draußen",
     "modifications": "Local copy; cropped by CSS where displayed."
@@ -60,7 +67,9 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
     "usedFor": [
       "animal-card-hunde",
-      "article-hero-hunde"
+      "article-hero-hunde",
+      "article-hero-hunde-garten-auslauf",
+      "article-hero-hunde-kosten"
     ],
     "alt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung",
     "modifications": "Local copy from Wikimedia; cropped by CSS where displayed."
@@ -76,7 +85,8 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "usedFor": [
       "animal-card-katzen",
-      "article-hero-selbsttest"
+      "article-hero-selbsttest",
+      "article-hero-katzen-wohnungshaltung"
     ],
     "alt": "Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung",
     "modifications": "Local copy; cropped by CSS where displayed."
@@ -92,7 +102,8 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
     "usedFor": [
       "article-hero-mensch",
-      "support-card-pflegestelle"
+      "support-card-pflegestelle",
+      "article-hero-katzen-kosten"
     ],
     "alt": "Katze blickt aus einer Transporttasche",
     "modifications": "Local resized copy; cropped by CSS where displayed."
@@ -107,7 +118,8 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "usedFor": [
-      "start-insight-kleintiere"
+      "start-insight-kleintiere",
+      "article-hero-kleintiere-hamster"
     ],
     "alt": "Großes selbst gebautes Hamstergehege mit Einstreu, Laufrad und Verstecken",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -138,7 +150,8 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "usedFor": [
       "article-hero-kleintiere",
-      "support-card-ehrenamt"
+      "support-card-ehrenamt",
+      "article-hero-kleintiere-degus-und-chinchillas"
     ],
     "alt": "Strukturiertes Kleintier-Habitat mit Verstecken",
     "modifications": "Cropped by CSS where displayed."
@@ -154,7 +167,9 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "usedFor": [
       "animal-card-voegel",
-      "article-hero-voegel"
+      "article-hero-voegel",
+      "article-hero-voegel-schwarmhaltung",
+      "article-hero-voegel-freiflug"
     ],
     "alt": "Mehrere Wellensittiche in einer Voliere mit Ästen",
     "modifications": "Local copy; cropped by CSS where displayed."
@@ -170,7 +185,8 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "usedFor": [
       "animal-card-kleintiere",
-      "article-hero-noch-nicht-bereit"
+      "article-hero-noch-nicht-bereit",
+      "article-hero-kleintiere-meerschweinchen"
     ],
     "alt": "Zwei Meerschweinchen zusammen im Gras",
     "modifications": "Local copy; cropped by CSS where displayed."
@@ -185,7 +201,10 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "usedFor": [
-      "article-hero-wissen"
+      "article-hero-wissen",
+      "article-hero-voegel-uv-licht",
+      "article-hero-voegel-partnerersatz",
+      "article-hero-voegel-qualzucht"
     ],
     "alt": "Wellensittich",
     "modifications": "Cropped by CSS where displayed."
@@ -201,7 +220,8 @@
     "licenseUrl": "https://artlibre.org/licence/lal/en",
     "usedFor": [
       "animal-card-exoten",
-      "article-hero-exoten"
+      "article-hero-exoten",
+      "article-hero-exoten-schildkroeten"
     ],
     "alt": "Bartagame",
     "modifications": "Cropped by CSS where displayed."
@@ -217,7 +237,10 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "usedFor": [
       "animal-card-pferde",
-      "article-hero-pferde"
+      "article-hero-pferde",
+      "article-hero-pferde-herde",
+      "article-hero-pferde-kosten",
+      "article-hero-pferde-entscheidung"
     ],
     "alt": "Pferdeherde auf einer Weide",
     "modifications": "Local resized copy; cropped by CSS where displayed."
@@ -249,7 +272,8 @@
     "usedFor": [
       "start-hero",
       "article-hero-adoption",
-      "support-card-gassi-service"
+      "support-card-gassi-service",
+      "article-hero-hunde-entscheidung"
     ],
     "alt": "Hund im Tierheim als Bild für echte Bedürfnisse vor dem Kauf",
     "modifications": "Cropped by CSS where displayed."
@@ -264,7 +288,8 @@
     "license": "Public domain",
     "licenseUrl": "",
     "usedFor": [
-      "support-card-patenschaften"
+      "support-card-patenschaften",
+      "article-hero-mitmachen"
     ],
     "alt": "Tierschutzaktion als Beispiel für Patenschaften und Unterstützung",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -279,7 +304,8 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "usedFor": [
-      "support-card-ehrenamt"
+      "support-card-ehrenamt",
+      "article-hero-kleintiere-ratten"
     ],
     "alt": "Strukturierter Kleintierkäfig als Beispiel für praktische Tierheimarbeit",
     "modifications": "Local thumbnail copy from Wikimedia; displayed with object-fit contain."
@@ -294,7 +320,8 @@
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
     "usedFor": [
-      "qualzucht-adoption-alternative"
+      "qualzucht-adoption-alternative",
+      "article-hero-kleintiere-kaninchen"
     ],
     "alt": "Kaninchen wird vor einer Adoption in einem Außengehege gehalten",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -309,7 +336,10 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "usedFor": [
-      "article-hero-katzen"
+      "article-hero-katzen",
+      "article-hero-katzen-sozialverhalten",
+      "article-hero-katzen-entscheidung",
+      "article-hero-kontakt"
     ],
     "alt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -324,7 +354,9 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "usedFor": [
-      "article-hero-voegel"
+      "article-hero-voegel",
+      "article-hero-voegel-kuechenluft-teflon",
+      "article-hero-voegel-entscheidung"
     ],
     "alt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -339,7 +371,8 @@
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
     "usedFor": [
-      "article-hero-exoten"
+      "article-hero-exoten",
+      "article-hero-exoten-reptilien"
     ],
     "alt": "Bartagame im Terrarium als Bild für Technik, Licht und Klima",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -354,7 +387,10 @@
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "usedFor": [
-      "article-hero-pferde"
+      "article-hero-pferde",
+      "article-hero-pferde-platzbedarf",
+      "article-hero-pferde-haltungsformen",
+      "article-hero-pferde-reitbeteiligung"
     ],
     "alt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -369,7 +405,9 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "usedFor": [
-      "article-hero-kastration"
+      "article-hero-kastration",
+      "article-hero-katzen-kastration",
+      "article-hero-katzen-streunerkatzen"
     ],
     "alt": "Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."
@@ -399,7 +437,8 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "usedFor": [
-      "article-hero-wissen"
+      "article-hero-wissen",
+      "article-hero-exoten-fische"
     ],
     "alt": "Goldfische im Aquarium als Bild für hartnäckige Haustiermythen",
     "modifications": "Local thumbnail copy from Wikimedia; cropped by CSS where displayed."

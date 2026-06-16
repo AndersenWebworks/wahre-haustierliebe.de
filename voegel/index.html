@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5193,10 +5195,17 @@
   <main id="main-content" tabindex="-1">
 <section id="voegel" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #4A8B3B 0%, #2E6625 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Vögel – <span class="glossary-term" data-glossary-key="schwarmvogel" data-glossary-title="Schwarmvogel" data-glossary-text="Vogelart, die in Gruppen lebt und Artgenossen braucht." data-glossary-href="../glossar/index.html#schwarmvogel" aria-describedby="glossary-term-popover" tabindex="0" role="button">Schwarmtiere</span>, keine Dekoration</h1>
-        <p>Ein einzelner Wellensittich im Käfig ist kein Haustier. Es ist ein einsames Tier in einer Zelle.</p>
-      <div class="article-kicker"><span>Schwarm statt Spiegel</span><span>UV-Licht</span><span>Freiflug</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen" data-share-reason="Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen." style="--image-position: center 44%;"><img src="../assets/images/optimized/voegel-voliere-02.jpg" alt="Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum" loading="eager" decoding="async" width="960" height="638" fetchpriority="high"><figcaption class="context-caption">Schwarm, Flugraum und Reize sind kein Extra.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Vögel – <span class="glossary-term" data-glossary-key="schwarmvogel" data-glossary-title="Schwarmvogel" data-glossary-text="Vogelart, die in Gruppen lebt und Artgenossen braucht." data-glossary-href="../glossar/index.html#schwarmvogel" aria-describedby="glossary-term-popover" tabindex="0" role="button">Schwarmtiere</span>, keine Dekoration</h1>
+                  <p>Ein einzelner Wellensittich im Käfig ist kein Haustier. Es ist ein einsames Tier in einer Zelle.</p>
+        <div class="article-kicker"><span>Schwarm statt Spiegel</span><span>UV-Licht</span><span>Freiflug</span></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 44%;" data-image-purpose="Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/voegel-voliere-02.jpg" alt="Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum." loading="eager" width="960" height="638" decoding="async" fetchpriority="high">
+          <figcaption>Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5211,10 +5213,17 @@
   <main id="main-content" tabindex="-1">
 <section id="hunde" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #7B5C3A 0%, #5A3F25 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Hunde – was du wirklich wissen musst</h1>
-        <p>Hunde sind Rudeltiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
-      <div class="article-kicker"><span>4–5 h allein</span><span>12–20 Tsd. €</span><span>Beziehung täglich</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen" data-share-reason="Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen." style="--image-position: center 48%;"><img src="../assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung" loading="eager" decoding="async" width="960" height="643" fetchpriority="high"><figcaption class="context-caption">Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Hunde – was du wirklich wissen musst</h1>
+                  <p>Hunde sind Rudeltiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
+        <div class="article-kicker"><span>4–5 h allein</span><span>12–20 Tsd. €</span><span>Beziehung täglich</span></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung." loading="eager" width="960" height="643" decoding="async" fetchpriority="high">
+          <figcaption>Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

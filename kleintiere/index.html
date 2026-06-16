@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5193,10 +5195,17 @@
   <main id="main-content" tabindex="-1">
 <section id="kleintiere" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #8B6B3D 0%, #6B4E2A 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Kleintiere – kein Einstiegstier, kein Kinderspielzeug</h1>
-        <p>Kaninchen, Meerschweinchen, Hamster, Ratten – sie wirken pflegeleicht. Sind sie nicht.</p>
-      <div class="article-kicker"><span>Klein ist nicht einfach</span><span>Fläche</span><span>Zähne und Tierarzt</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen" data-share-reason="Das Bild soll den Mythos vom einfachen Einstiegstier brechen." style="--image-position: center 50%;"><img src="../assets/images/optimized/guinea-pig-habitat.jpg" alt="Kleintier-Habitat mit Struktur statt Spielzeughaltung" loading="eager" decoding="async" width="800" height="600" fetchpriority="high"><figcaption class="context-caption">Kleintiere brauchen Fläche, Struktur und Artgenossen.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Kleintiere – kein Einstiegstier, kein Kinderspielzeug</h1>
+                  <p>Kaninchen, Meerschweinchen, Hamster, Ratten – sie wirken pflegeleicht. Sind sie nicht.</p>
+        <div class="article-kicker"><span>Klein ist nicht einfach</span><span>Fläche</span><span>Zähne und Tierarzt</span></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/guinea-pig-habitat.jpg" alt="Kleintier-Habitat mit Struktur statt Spielzeughaltung." loading="eager" width="800" height="600" decoding="async" fetchpriority="high">
+          <figcaption>Kleintier-Habitat mit Struktur statt Spielzeughaltung</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

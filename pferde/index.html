@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5178,10 +5180,17 @@
   <main id="main-content" tabindex="-1">
 <section id="pferde" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #6B5940 0%, #4A3D2B 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Pferde – eine Koppel allein reicht nicht</h1>
-        <p>Auf dem Land hat gefühlt jeder zweite Pferde auf seinem Grundstück. Ob das dem Tier gerecht wird, fragt kaum jemand.</p>
-      <div class="article-kicker"><span>Herde</span><span>Bewegung</span><span>Kosten über Jahre</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen" data-share-reason="Das Bild soll die große Verpflichtung konkret machen." style="--image-position: center 50%;"><img src="../assets/images/optimized/horse-paddocks-shelter.jpg" alt="Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme" loading="eager" decoding="async" width="640" height="480" fetchpriority="high"><figcaption class="context-caption">Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Pferde – eine Koppel allein reicht nicht</h1>
+                  <p>Auf dem Land hat gefühlt jeder zweite Pferde auf seinem Grundstück. Ob das dem Tier gerecht wird, fragt kaum jemand.</p>
+        <div class="article-kicker"><span>Herde</span><span>Bewegung</span><span>Kosten über Jahre</span></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/horse-paddocks-shelter.jpg" alt="Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme." loading="eager" width="640" height="480" decoding="async" fetchpriority="high">
+          <figcaption>Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5170,10 +5172,17 @@
   <main id="main-content" tabindex="-1">
 <section id="glossar" class="page active">
     <div class="hero" style="background: linear-gradient(135deg, #5A5A6B 0%, #3D3D4A 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Glossar für Tierhaltung und Tierschutz</h1>
-        <p>Fachbegriffe kurz erklärt, damit du schneller verstehst, worum es auf den Haltungsseiten geht.</p>
-      <div class="article-kicker"><a href="#begriffe">Begriffe</a><a href="#glossary-search">Suche</a><a href="#begriffe">Tierschutzwissen</a></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Glossar-Seite: Fachbegriffe als Einstieg in verantwortliche Tierhaltung zeigen" data-share-reason="Das Bild soll Nachschlagewissen ruhig und wiedererkennbar rahmen." style="--image-position: center 48%;"><img src="../assets/images/optimized/goldfish-aquarium.jpg" alt="Goldfische im Aquarium als Bild für Nachschlagewissen zur Tierhaltung" loading="eager" decoding="async" width="960" height="654" fetchpriority="high"><figcaption class="context-caption">Begriffe sind nur hilfreich, wenn sie zu besseren Entscheidungen führen.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Glossar für Tierhaltung und Tierschutz</h1>
+                  <p>Fachbegriffe kurz erklärt, damit du schneller verstehst, worum es auf den Haltungsseiten geht.</p>
+        <div class="article-kicker"><a href="#begriffe">Begriffe</a><a href="#glossary-search">Suche</a><a href="#begriffe">Tierschutzwissen</a></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Glossar für Tierhaltung und Tierschutz: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/goldfish-aquarium.jpg" alt="Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen." loading="eager" width="960" height="654" decoding="async" fetchpriority="high">
+          <figcaption>Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

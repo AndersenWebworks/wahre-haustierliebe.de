@@ -119,8 +119,8 @@
       "social": {
         "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
         "description": "Korrekturen, Quellen und Hinweise helfen, Wa(h)re Haustier(liebe) fachlich sauber und lebendig zu halten.",
-        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
-        "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
+        "image": "https://wahre-haustierliebe.de/assets/social/mitmachen.png",
+        "imageAlt": "Tierschutzaktion als Bild für Hinweise, Korrekturen und gemeinsame Verbesserung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -522,7 +522,7 @@
         "title": "Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe)",
         "description": "Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-soziale-beduerfnisse.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Hund ruht in Menschennähe als Bild für Bindung, Rückzug und soziale Bedürfnisse.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -548,7 +548,7 @@
         "title": "Garten ist kein Ersatz für Auslauf - Wa(h)re Haustier(liebe)",
         "description": "Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-garten-auslauf.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Hund in Bewegung als Bild für Auslauf, Reize und Beschäftigung außerhalb des Gartens.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -574,7 +574,7 @@
         "title": "Hund allein zu Hause - Wa(h)re Haustier(liebe)",
         "description": "Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-allein-zu-hause.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Ruhender Hund als Bild für Pausen, Betreuung und Alleinbleiben.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -600,7 +600,7 @@
         "title": "Was ein Hund wirklich kostet - Wa(h)re Haustier(liebe)",
         "description": "Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-kosten.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Aktiver Hund als Bild für die laufenden Kosten von Training, Alltag und Versorgung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -626,7 +626,7 @@
         "title": "Kastration beim Hund - Wa(h)re Haustier(liebe)",
         "description": "Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-kastration.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Hund in einer Tierarztpraxis als Bild für medizinische Abwägung statt Routineentscheidung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -652,7 +652,7 @@
         "title": "Hofhaltung und Zwinger - Wa(h)re Haustier(liebe)",
         "description": "Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-hofhaltung-und-zwinger.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Hund in geschützter Nähe als Gegenbild zu isolierter Hof- und Zwingerhaltung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -678,7 +678,7 @@
         "title": "Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe)",
         "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-gesundheit.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Hund in einer Tierarztpraxis als Bild für Vorsorge und frühes Handeln.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -704,7 +704,7 @@
         "title": "Bevor ein Hund einzieht - Wa(h)re Haustier(liebe)",
         "description": "Die wichtigsten Fragen, bevor aus dem Wunsch nach einem Hund echte Verantwortung wird.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-entscheidung.png",
-        "imageAlt": "Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.",
+        "imageAlt": "Hund im Tierheim als Bild für die Entscheidung vor der Anschaffung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -729,7 +729,7 @@
         "title": "Katzen sind keine einfachen Einzelgänger - Wa(h)re Haustier(liebe)",
         "description": "Warum Katzen zwar allein jagen, aber trotzdem Sozialkontakt, Struktur und ein passendes Revier brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-sozialverhalten.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Zwei Katzen am Fenster als Bild für Sozialkontakt und eigenes Revier.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -754,7 +754,7 @@
         "title": "Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe)",
         "description": "Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-wohnungshaltung.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Katze auf einem Kratzbaum als Bild für strukturierte Wohnungshaltung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -779,7 +779,7 @@
         "title": "Kastration bei Katzen - Wa(h)re Haustier(liebe)",
         "description": "Warum Kastration bei Katzen praktischer Tierschutz ist und ungewolltes Leid verhindert.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-kastration.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Kastrierte Streunerkatze als Bild für praktischen Katzenschutz.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -804,7 +804,7 @@
         "title": "Stilles Leiden bei Katzen erkennen - Wa(h)re Haustier(liebe)",
         "description": "Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-stilles-leiden.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Katze am Fenster als Bild für leise Signale, Rückzug und genaue Beobachtung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -829,7 +829,7 @@
         "title": "Was Katzen wirklich kosten - Wa(h)re Haustier(liebe)",
         "description": "Futter, Streu, Tierarzt, Rücklagen und Alltag: Katzen sind keine günstigen Nebenbei-Tiere.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-kosten.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Katze in einer Transporttasche als Bild für Tierarztwege und Rücklagen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -854,7 +854,7 @@
         "title": "Streunerkatzen und Verantwortung - Wa(h)re Haustier(liebe)",
         "description": "Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-streunerkatzen.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Streunerkatze mit markiertem Ohr als Bild für TNR und Verantwortung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -879,7 +879,7 @@
         "title": "Bevor eine Katze einzieht - Wa(h)re Haustier(liebe)",
         "description": "Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-entscheidung.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.",
+        "imageAlt": "Zwei Katzen am Fenster als Bild für eine vorbereitete Katzenentscheidung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -904,7 +904,7 @@
         "title": "Schwarmhaltung bei Vögeln - Wa(h)re Haustier(liebe)",
         "description": "Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-schwarmhaltung.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Wellensittiche in einer Voliere als Bild für Schwarmhaltung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -929,7 +929,7 @@
         "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
         "description": "Warum normales Fensterglas wichtiges UV-Licht blockiert und Vögel gezielte Lichtversorgung brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-uv-licht.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Wellensittich als Bild für Licht, Wahrnehmung und UV-Bedarf.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -954,7 +954,7 @@
         "title": "Küchenluft und Teflon sind Lebensgefahr - Wa(h)re Haustier(liebe)",
         "description": "Warum Dämpfe aus Pfannen, Backöfen und Küchenluft für Vögel tödlich sein können.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-kuechenluft-und-daempfe-sind-lebensgefahr.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Wellensittiche in einer Voliere als Bild für empfindliche Atemwege und sichere Räume.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -979,7 +979,7 @@
         "title": "Freiflug ist nicht optional - Wa(h)re Haustier(liebe)",
         "description": "Warum Vögel täglich sicheren Flugraum brauchen und ein Käfig allein kein Lebensraum ist.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-freiflug-ist-nicht-optional.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Wellensittiche mit Raum und Ästen als Bild für Bewegung und Freiflug.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1004,7 +1004,7 @@
         "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
         "description": "Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-partnerersatz.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Wellensittich als Bild für echte Artgenossen statt falschen Partnerersatz.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1029,7 +1029,7 @@
         "title": "Krankheit bei Vögeln erkennen - Wa(h)re Haustier(liebe)",
         "description": "Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-krankheit-erkennen.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Tierarztpraxis als Bild für schnelle Abklärung bei leisen Krankheitssignalen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1054,7 +1054,7 @@
         "title": "Schauwellensittiche und Qualzucht - Wa(h)re Haustier(liebe)",
         "description": "Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-qualzucht.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Wellensittich als Bild für Zuchtmerkmale und genaue Beobachtung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1079,7 +1079,7 @@
         "title": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
         "description": "Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-entscheidung.png",
-        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.",
+        "imageAlt": "Mehrere Wellensittiche in einer Voliere als Bild für die Entscheidung vor der Vogelhaltung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1104,7 +1104,7 @@
         "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-kaninchen.png",
-        "imageAlt": "Kleintier-Habitat mit Struktur statt Spielzeughaltung.",
+        "imageAlt": "Kaninchen in einem Außengehege als Bild für Platz und artgerechte Unterbringung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1129,7 +1129,7 @@
         "title": "Meerschweinchen halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-meerschweinchen.png",
-        "imageAlt": "Kleintier-Habitat mit Struktur statt Spielzeughaltung.",
+        "imageAlt": "Zwei Meerschweinchen zusammen im Gras als Bild für Gruppenhaltung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1154,7 +1154,7 @@
         "title": "Hamster halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-hamster.png",
-        "imageAlt": "Kleintier-Habitat mit Struktur statt Spielzeughaltung.",
+        "imageAlt": "Großes Hamstergehege als Bild für Platz, Einstreu und Struktur.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1179,7 +1179,7 @@
         "title": "Ratten halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png",
-        "imageAlt": "Kleintier-Habitat mit Struktur statt Spielzeughaltung.",
+        "imageAlt": "Strukturierter Rattenkäfig als Bild für Einrichtung und Beschäftigung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1204,7 +1204,7 @@
         "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png",
-        "imageAlt": "Kleintier-Habitat mit Struktur statt Spielzeughaltung.",
+        "imageAlt": "Strukturiertes Kleintier-Habitat als Bild für Raum, Rückzug und Spezialwissen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1229,7 +1229,7 @@
         "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png",
-        "imageAlt": "Bartagame im Terrarium als Bild für Technik, Licht und Klima.",
+        "imageAlt": "Bartagame im Terrarium als Bild für Reptilienhaltung mit Licht und Temperaturzonen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1254,7 +1254,7 @@
         "title": "Schildkröten halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-schildkroeten.png",
-        "imageAlt": "Bartagame im Terrarium als Bild für Technik, Licht und Klima.",
+        "imageAlt": "Reptil als Bild für langfristige Verantwortung und fachkundige Exotenhaltung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1279,7 +1279,7 @@
         "title": "Fische halten - Wa(h)re Haustier(liebe)",
         "description": "Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-fische.png",
-        "imageAlt": "Bartagame im Terrarium als Bild für Technik, Licht und Klima.",
+        "imageAlt": "Goldfische im Aquarium als Bild für Wasserwerte, Technik und Pflege.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1304,7 +1304,7 @@
         "title": "Pferde brauchen Herde - Wa(h)re Haustier(liebe)",
         "description": "Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-herde.png",
-        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
+        "imageAlt": "Pferdeherde auf einer Weide als Bild für Sozialkontakt.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1329,7 +1329,7 @@
         "title": "Platzbedarf bei Pferden - Wa(h)re Haustier(liebe)",
         "description": "Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-platzbedarf.png",
-        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
+        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Fläche und Bewegung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1354,7 +1354,7 @@
         "title": "Haltungsformen bei Pferden - Wa(h)re Haustier(liebe)",
         "description": "Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-haltungsformen.png",
-        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
+        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für unterschiedliche Haltungsformen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1379,7 +1379,7 @@
         "title": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
         "description": "Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-kosten.png",
-        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
+        "imageAlt": "Pferdeherde auf einer Weide als Bild für laufende Verantwortung und Kosten.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1404,7 +1404,7 @@
         "title": "Reitbeteiligung als ehrlicher Einstieg - Wa(h)re Haustier(liebe)",
         "description": "Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-reitbeteiligung.png",
-        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
+        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für einen realistischen Einstieg in Pferdeverantwortung.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1429,7 +1429,7 @@
         "title": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
         "description": "Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-entscheidung.png",
-        "imageAlt": "Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.",
+        "imageAlt": "Pferdeherde auf einer Weide als Bild für die Entscheidung vor dem eigenen Pferd.",
         "imageWidth": 1200,
         "imageHeight": 630
       }

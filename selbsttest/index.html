@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5177,10 +5179,17 @@
   <main id="main-content" tabindex="-1">
 <section id="selbsttest" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #5A6B3A 0%, #3D4A25 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Bist du bereit für ein Tier?</h1>
-        <p>15 ehrliche Fragen. Keine Moralkeule, aber auch kein Schönreden. Antworte so, wie dein Leben wirklich aussieht – nicht so, wie du es dir wünschst.</p>
-      <div class="article-kicker"><span>15 Fragen</span><span>Ehrlich antworten</span><span>Vor dem Tier</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen" data-share-reason="Das Bild soll den Test als Entscheidungshilfe greifbar machen." style="--image-position: center 46%;"><img src="../assets/images/optimized/cats-cat-tree-pair.jpg" alt="Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung" loading="eager" decoding="async" width="960" height="754" fetchpriority="high"><figcaption class="context-caption">Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Bist du bereit für ein Tier?</h1>
+                  <p>15 ehrliche Fragen. Keine Moralkeule, aber auch kein Schönreden. Antworte so, wie dein Leben wirklich aussieht – nicht so, wie du es dir wünschst.</p>
+        <div class="article-kicker"><span>15 Fragen</span><span>Ehrlich antworten</span><span>Vor dem Tier</span></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 46%;" data-image-purpose="Haustier-Selbsttest: Bin ich bereit für ein Tier?: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/cats-cat-tree-pair.jpg" alt="Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung." loading="eager" width="960" height="754" decoding="async" fetchpriority="high">
+          <figcaption>Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

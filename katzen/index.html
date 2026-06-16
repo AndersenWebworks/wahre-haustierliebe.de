@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5194,10 +5196,17 @@
   <main id="main-content" tabindex="-1">
 <section id="katzen" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #6B5B73 0%, #4A3D54 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Katzen – <span class="glossary-term" data-glossary-key="einzeljaeger" data-glossary-title="Einzeljäger" data-glossary-text="Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will." data-glossary-href="../glossar/index.html#einzeljaeger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzeljäger</span>, aber keine <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet." data-glossary-href="../glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzelgänger</span></h1>
-        <p>Katzen sind Meister darin, Stress und Schmerz zu verbergen. Was nach einem pflegeleichten Tier aussieht, kann ein stilles Leiden sein.</p>
-      <div class="article-kicker"><span>Nicht allein denken</span><span>Kastration schützt</span><span>Leises Leiden</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Katzen-Seite: stille Bedürfnisse sichtbar machen" data-share-reason="Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer." style="--image-position: center 48%;"><img src="../assets/images/optimized/two-cats-window.jpg" alt="Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung" loading="eager" decoding="async" width="843" height="954" fetchpriority="high"><figcaption class="context-caption">Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Katzen – <span class="glossary-term" data-glossary-key="einzeljaeger" data-glossary-title="Einzeljäger" data-glossary-text="Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will." data-glossary-href="../glossar/index.html#einzeljaeger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzeljäger</span>, aber keine <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet." data-glossary-href="../glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzelgänger</span></h1>
+                  <p>Katzen sind Meister darin, Stress und Schmerz zu verbergen. Was nach einem pflegeleichten Tier aussieht, kann ein stilles Leiden sein.</p>
+        <div class="article-kicker"><span>Nicht allein denken</span><span>Kastration schützt</span><span>Leises Leiden</span></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/two-cats-window.jpg" alt="Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung." loading="eager" width="843" height="954" decoding="async" fetchpriority="high">
+          <figcaption>Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="section">

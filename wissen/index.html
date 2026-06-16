@@ -4813,6 +4813,8 @@
 .static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
+.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
   </style>
   <script type="application/ld+json">
@@ -5185,10 +5187,17 @@
   <main id="main-content" tabindex="-1">
 <section id="wissen" class="page active" data-enhancements-hydrated="true">
     <div class="hero" style="background: linear-gradient(135deg, #5A5A6B 0%, #3D3D4A 100%);">
-      <div class="container"><div class="article-hero-copy">
-        <h1>Mythen, Irrtümer und Homöopathie</h1>
-        <p>Was stimmt wirklich? Die häufigsten Fehlannahmen über Haustiere und warum <span class="glossary-term" data-glossary-key="globuli" data-glossary-title="Globuli" data-glossary-text="Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar." data-glossary-href="../glossar/index.html#globuli" aria-describedby="glossary-term-popover" tabindex="0" role="button">Globuli</span> kein Tierschutz sind.</p>
-      <div class="article-kicker"><a href="#mythen">Mythen</a><a href="#globuli">Globuli</a></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen" data-share-reason="Das Bild soll einen bekannten Mythos sofort teilbar machen." style="--image-position: center 48%;"><img src="../assets/images/optimized/goldfish-aquarium.jpg" alt="Goldfische im Aquarium als Bild für hartnäckige Haustiermythen" loading="eager" decoding="async" width="960" height="654" fetchpriority="high"><figcaption class="context-caption">Mythen klingen harmlos, bis Tiere darunter leiden müssen.</figcaption></figure></div>
+      <div class="container">
+        <div class="article-hero-copy">
+          <h1>Mythen, Irrtümer und Homöopathie</h1>
+                  <p>Was stimmt wirklich? Die häufigsten Fehlannahmen über Haustiere und warum <span class="glossary-term" data-glossary-key="globuli" data-glossary-title="Globuli" data-glossary-text="Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar." data-glossary-href="../glossar/index.html#globuli" aria-describedby="glossary-term-popover" tabindex="0" role="button">Globuli</span> kein Tierschutz sind.</p>
+        <div class="article-kicker"><a href="#mythen">Mythen</a><a href="#globuli">Globuli</a></div></div>
+
+        <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Tiermythen und Homöopathie: Was stimmt wirklich?: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+          <img src="../assets/images/optimized/goldfish-aquarium.jpg" alt="Goldfische im Aquarium als Bild für hartnäckige Haustiermythen." loading="eager" width="960" height="654" decoding="async" fetchpriority="high">
+          <figcaption>Goldfische im Aquarium als Bild für hartnäckige Haustiermythen</figcaption>
+        </figure>
+      </div>
     </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#mythen">Die häufigsten Irrtümer</a></li><li><a href="#globuli">Homöopathie bei Tieren – warum Globuli kein Tierschutz sind</a></li><li><a href="#wissen-haufige-fragen">Häufige Fragen</a></li><li><a href="#wissen-worauf-diese-seite-ihre-aussagen-stutzt">Worauf diese Seite ihre Aussagen stützt</a></li></ol></details></nav>
 
     <div class="section">
