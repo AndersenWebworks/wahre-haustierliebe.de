@@ -58,10 +58,23 @@ const tabState = await desktopPage.evaluate(() => ({
   activeTab: document.querySelector('.browse-tab.is-active')?.dataset.browseTab || '',
   activePanel: document.querySelector('.browse-panel.is-active')?.dataset.browsePanel || '',
   visibleItems: Array.from(document.querySelectorAll('.browse-panel.is-active .dropdown-item')).map((item) => item.textContent.trim()),
+  featuredInHead: document.querySelectorAll('.browse-panel.is-active .browse-panel-head .dropdown-item-featured').length,
+  featuredInGrid: document.querySelectorAll('.browse-panel.is-active .browse-panel-grid .dropdown-item-featured').length,
 }));
 if (tabState.activeTab !== 'voegel' || tabState.activePanel !== 'voegel') issue('desktop-tab-switch-failed', tabState);
 if (!tabState.visibleItems.includes('Freiflug')) issue('desktop-tab-content-missing', tabState);
+if (tabState.featuredInHead !== 0 || tabState.featuredInGrid !== 1) issue('desktop-overview-placement', tabState);
 await capture(desktopPage, 'desktop-tierarten-panel');
+
+await desktopPage.click('[data-browse-tab="katzen"]');
+await desktopPage.waitForLoadState('load');
+const tabClickState = await desktopPage.evaluate(() => ({
+  path: window.location.pathname,
+  title: document.querySelector('h1')?.textContent.trim() || '',
+  menuOpen: document.getElementById('tierarten-menu') ? getComputedStyle(document.getElementById('tierarten-menu')).display !== 'none' : false,
+}));
+if (!tabClickState.path.endsWith('/katzen/') && !tabClickState.path.endsWith('/katzen/index.html') && !tabClickState.title.includes('Katzen')) issue('desktop-tab-click-overview-failed', tabClickState);
+if (tabClickState.menuOpen) issue('desktop-tab-click-menu-still-open', tabClickState);
 
 await desktopPage.click('.nav-link-search');
 await desktopPage.fill('#site-search-input', 'Teflon');

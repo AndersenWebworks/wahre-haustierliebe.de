@@ -2417,6 +2417,12 @@ function normalizeAssetUrls(root) {
             setBrowsePanel(menu, tab.dataset.browseTab);
           });
           tab.addEventListener('click', function() {
+            var page = tab.dataset.page;
+            if (page) {
+              closeDropdowns();
+              navigateTo(page);
+              return;
+            }
             setBrowsePanel(menu, tab.dataset.browseTab);
           });
         });
@@ -2428,7 +2434,6 @@ function normalizeAssetUrls(root) {
       menu.querySelectorAll('[data-browse-tab]').forEach(function(tab) {
         var active = tab.dataset.browseTab === key;
         tab.classList.toggle('is-active', active);
-        tab.setAttribute('aria-selected', active ? 'true' : 'false');
       });
       menu.querySelectorAll('[data-browse-panel]').forEach(function(panel) {
         panel.classList.toggle('is-active', panel.dataset.browsePanel === key);

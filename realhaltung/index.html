@@ -264,10 +264,6 @@
     .browse-panel { display: none; }
     .browse-panel.is-active { display: block; }
     .browse-panel-head {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 1rem;
       margin-bottom: 0.85rem;
       padding-bottom: 0.8rem;
       border-bottom: 1px solid var(--border);
@@ -307,9 +303,21 @@
     .dropdown-item:hover,
     .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .dropdown-item-featured {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       font-weight: 800;
-      background: #FFFCF7;
+      background: #F8F6F2;
+      border: 1px solid var(--border);
       border-radius: var(--radius);
+      margin-bottom: 0.25rem;
+      padding: 0.68rem 0.75rem;
+    }
+    .dropdown-item-featured::after {
+      content: '→';
+      color: var(--primary);
+      font-weight: 900;
     }
     .site-search {
       display: none;
@@ -5198,18 +5206,19 @@
           <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu">Tierarten</button>
             <div class="dropdown-menu browse-menu" id="tierarten-menu">
-              <div class="browse-tabs" role="tablist" aria-label="Tierarten">
-                <button type="button" class="browse-tab is-active" data-browse-tab="hunde" role="tab" aria-selected="true"><strong>Hunde</strong><span>Alltag, Kosten, Alleinbleiben</span></button>
-                <button type="button" class="browse-tab" data-browse-tab="katzen" role="tab" aria-selected="false"><strong>Katzen</strong><span>Wohnung, Freigang, Kastration</span></button>
-                <button type="button" class="browse-tab" data-browse-tab="voegel" role="tab" aria-selected="false"><strong>Vögel</strong><span>Schwarm, Flugraum, Luft</span></button>
-                <button type="button" class="browse-tab" data-browse-tab="kleintiere" role="tab" aria-selected="false"><strong>Kleintiere</strong><span>Fläche, Zähne, Ruhe</span></button>
-                <button type="button" class="browse-tab" data-browse-tab="pferde" role="tab" aria-selected="false"><strong>Pferde</strong><span>Herde, Stall, Jahrzehnte</span></button>
-                <button type="button" class="browse-tab" data-browse-tab="exoten" role="tab" aria-selected="false"><strong>Exoten</strong><span>Technik, Klima, Wissen</span></button>
+              <div class="browse-tabs" aria-label="Tierarten">
+                <button type="button" class="browse-tab is-active" data-browse-tab="hunde" data-page="hunde"><strong>Hunde</strong><span>Alltag, Kosten, Alleinbleiben</span></button>
+                <button type="button" class="browse-tab" data-browse-tab="katzen" data-page="katzen"><strong>Katzen</strong><span>Wohnung, Freigang, Kastration</span></button>
+                <button type="button" class="browse-tab" data-browse-tab="voegel" data-page="voegel"><strong>Vögel</strong><span>Schwarm, Flugraum, Luft</span></button>
+                <button type="button" class="browse-tab" data-browse-tab="kleintiere" data-page="kleintiere"><strong>Kleintiere</strong><span>Fläche, Zähne, Ruhe</span></button>
+                <button type="button" class="browse-tab" data-browse-tab="pferde" data-page="pferde"><strong>Pferde</strong><span>Herde, Stall, Jahrzehnte</span></button>
+                <button type="button" class="browse-tab" data-browse-tab="exoten" data-page="exoten"><strong>Exoten</strong><span>Technik, Klima, Wissen</span></button>
               </div>
               <div class="browse-panels">
                 <div class="browse-panel is-active" data-browse-panel="hunde" role="tabpanel">
-                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Hundethemen</strong><p class="browse-panel-note">Vom Wunschhund zur tragfähigen Alltagsentscheidung.</p></div><a class="dropdown-item dropdown-item-featured" data-page="hunde" href="../hunde/index.html">Übersicht</a></div>
+                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Hundethemen</strong><p class="browse-panel-note">Vom Wunschhund zur tragfähigen Alltagsentscheidung.</p></div></div>
                   <div class="browse-panel-grid">
+                    <a class="dropdown-item dropdown-item-featured" data-page="hunde" href="../hunde/index.html">Hunde-Übersicht</a>
                     <a class="dropdown-item" data-page="hunde-soziale-beduerfnisse" href="../hunde/soziale-beduerfnisse/index.html">Soziale Bedürfnisse</a>
                     <a class="dropdown-item" data-page="hunde-garten-auslauf" href="../hunde/garten-auslauf/index.html">Garten &amp; Auslauf</a>
                     <a class="dropdown-item" data-page="hunde-allein-zu-hause" href="../hunde/allein-zu-hause/index.html">Alleinbleiben</a>
@@ -5223,8 +5232,9 @@
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="katzen" role="tabpanel">
-                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Katzenthemen</strong><p class="browse-panel-note">Leise Warnsignale, echte Kosten und verantwortlicher Freigang.</p></div><a class="dropdown-item dropdown-item-featured" data-page="katzen" href="../katzen/index.html">Übersicht</a></div>
+                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Katzenthemen</strong><p class="browse-panel-note">Leise Warnsignale, echte Kosten und verantwortlicher Freigang.</p></div></div>
                   <div class="browse-panel-grid">
+                    <a class="dropdown-item dropdown-item-featured" data-page="katzen" href="../katzen/index.html">Katzen-Übersicht</a>
                     <a class="dropdown-item" data-page="katzen-sozialverhalten" href="../katzen/sozialverhalten/index.html">Sozialverhalten</a>
                     <a class="dropdown-item" data-page="katzen-wohnungshaltung" href="../katzen/wohnungshaltung/index.html">Wohnungshaltung</a>
                     <a class="dropdown-item" data-page="katzen-kastration" href="../katzen/kastration/index.html">Kastration</a>
@@ -5237,8 +5247,9 @@
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="voegel" role="tabpanel">
-                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Vogelthemen</strong><p class="browse-panel-note">Schwarm, Licht, Flugraum und unsichtbare Gefahren in Innenräumen.</p></div><a class="dropdown-item dropdown-item-featured" data-page="voegel" href="../voegel/index.html">Übersicht</a></div>
+                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Vogelthemen</strong><p class="browse-panel-note">Schwarm, Licht, Flugraum und unsichtbare Gefahren in Innenräumen.</p></div></div>
                   <div class="browse-panel-grid">
+                    <a class="dropdown-item dropdown-item-featured" data-page="voegel" href="../voegel/index.html">Vögel-Übersicht</a>
                     <a class="dropdown-item" data-page="voegel-schwarmhaltung" href="../voegel/schwarmhaltung/index.html">Schwarmhaltung</a>
                     <a class="dropdown-item" data-page="voegel-uv-licht" href="../voegel/uv-licht/index.html">UV-Licht</a>
                     <a class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" href="../voegel/kuechenluft-teflon/index.html">Küchenluft &amp; Teflon</a>
@@ -5250,8 +5261,9 @@
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="kleintiere" role="tabpanel">
-                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Kleintierthemen</strong><p class="browse-panel-note">Keine einfachen Kindertiere, sondern Spezialisten mit klaren Bedürfnissen.</p></div><a class="dropdown-item dropdown-item-featured" data-page="kleintiere" href="../kleintiere/index.html">Übersicht</a></div>
+                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Kleintierthemen</strong><p class="browse-panel-note">Keine einfachen Kindertiere, sondern Spezialisten mit klaren Bedürfnissen.</p></div></div>
                   <div class="browse-panel-grid">
+                    <a class="dropdown-item dropdown-item-featured" data-page="kleintiere" href="../kleintiere/index.html">Kleintiere-Übersicht</a>
                     <a class="dropdown-item" data-page="kleintiere-kaninchen" href="../kleintiere/kaninchen/index.html">Kaninchen</a>
                     <a class="dropdown-item" data-page="kleintiere-meerschweinchen" href="../kleintiere/meerschweinchen/index.html">Meerschweinchen</a>
                     <a class="dropdown-item" data-page="kleintiere-hamster" href="../kleintiere/hamster/index.html">Hamster</a>
@@ -5260,8 +5272,9 @@
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="pferde" role="tabpanel">
-                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Pferdethemen</strong><p class="browse-panel-note">Herde, Fläche, Stallform und Verantwortung über Jahrzehnte.</p></div><a class="dropdown-item dropdown-item-featured" data-page="pferde" href="../pferde/index.html">Übersicht</a></div>
+                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Pferdethemen</strong><p class="browse-panel-note">Herde, Fläche, Stallform und Verantwortung über Jahrzehnte.</p></div></div>
                   <div class="browse-panel-grid">
+                    <a class="dropdown-item dropdown-item-featured" data-page="pferde" href="../pferde/index.html">Pferde-Übersicht</a>
                     <a class="dropdown-item" data-page="pferde-herde" href="../pferde/herde/index.html">Herde</a>
                     <a class="dropdown-item" data-page="pferde-platzbedarf" href="../pferde/platzbedarf/index.html">Platzbedarf</a>
                     <a class="dropdown-item" data-page="pferde-haltungsformen" href="../pferde/haltungsformen/index.html">Haltungsformen</a>
@@ -5271,8 +5284,9 @@
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="exoten" role="tabpanel">
-                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Exotenthemen</strong><p class="browse-panel-note">Technik, Klima, Fachwissen und die Grenze privater Haltung.</p></div><a class="dropdown-item dropdown-item-featured" data-page="exoten" href="../exoten/index.html">Übersicht</a></div>
+                  <div class="browse-panel-head"><div><strong class="browse-panel-title">Exotenthemen</strong><p class="browse-panel-note">Technik, Klima, Fachwissen und die Grenze privater Haltung.</p></div></div>
                   <div class="browse-panel-grid">
+                    <a class="dropdown-item dropdown-item-featured" data-page="exoten" href="../exoten/index.html">Exoten-Übersicht</a>
                     <a class="dropdown-item" data-page="exoten-reptilien" href="../exoten/reptilien/index.html">Reptilien</a>
                     <a class="dropdown-item" data-page="exoten-schildkroeten" href="../exoten/schildkroeten/index.html">Schildkröten</a>
                     <a class="dropdown-item" data-page="exoten-fische" href="../exoten/fische/index.html">Fische</a>

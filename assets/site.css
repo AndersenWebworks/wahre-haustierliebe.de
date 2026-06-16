@@ -226,10 +226,6 @@
     .browse-panel { display: none; }
     .browse-panel.is-active { display: block; }
     .browse-panel-head {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 1rem;
       margin-bottom: 0.85rem;
       padding-bottom: 0.8rem;
       border-bottom: 1px solid var(--border);
@@ -269,9 +265,21 @@
     .dropdown-item:hover,
     .dropdown-item.active { background: var(--primary-light); color: var(--primary); }
     .dropdown-item-featured {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       font-weight: 800;
-      background: #FFFCF7;
+      background: #F8F6F2;
+      border: 1px solid var(--border);
       border-radius: var(--radius);
+      margin-bottom: 0.25rem;
+      padding: 0.68rem 0.75rem;
+    }
+    .dropdown-item-featured::after {
+      content: '→';
+      color: var(--primary);
+      font-weight: 900;
     }
     .site-search {
       display: none;
