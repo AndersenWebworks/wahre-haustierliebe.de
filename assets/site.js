@@ -66,6 +66,404 @@ var staticPageRoutes = {
   "wildkatzenbaby-gefunden": "/katzen/wildkatzenbaby-gefunden/index.html",
   "noch-nicht-bereit": "/noch-nicht-bereit/index.html"
 };
+var staticSiteSearchIndex = [
+  {
+    "id": "startseite",
+    "title": "Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung",
+    "description": "Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.",
+    "terms": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung startseite"
+  },
+  {
+    "id": "impressum",
+    "title": "Impressum - Wa(h)re Haustier(liebe)",
+    "description": "Impressum und Anbieterkennzeichnung für Wa(h)re Haustier(liebe), das private Informationsprojekt von Jan-Erik Andersen und Annemarie Andersen.",
+    "terms": "Anbieterkennzeichnung und rechtliche Kontaktangaben impressum impressum"
+  },
+  {
+    "id": "datenschutz",
+    "title": "Datenschutzerklärung",
+    "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.",
+    "terms": "Datenschutzinformationen nach DSGVO für die Website datenschutz datenschutz"
+  },
+  {
+    "id": "kontakt",
+    "title": "Kontakt - Wa(h)re Haustier(liebe)",
+    "description": "Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktmöglichkeiten für Fragen, Anregungen oder Unterstützungsbedarf.",
+    "terms": "Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe kontakt kontakt"
+  },
+  {
+    "id": "mitmachen",
+    "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
+    "description": "Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.",
+    "terms": "Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen mitmachen mitmachen"
+  },
+  {
+    "id": "mensch",
+    "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",
+    "description": "Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation, Wunschbilder und Verantwortung prüfen, bevor ein Tier einzieht.",
+    "terms": "Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen mensch mensch"
+  },
+  {
+    "id": "hunde",
+    "title": "Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen",
+    "description": "Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.",
+    "terms": "Hund anschaffen oder Hundehaltung verbessern hunde hunde"
+  },
+  {
+    "id": "hund-im-buero",
+    "title": "Hund im Büro: Wann ein Bürohund wirklich passt",
+    "description": "Bürohund ehrlich prüfen: Rückzugsort, Ruhe, Regeln, Pausen, Zustimmung im Team und Warnzeichen, dass der Arbeitsplatz für den Hund zu viel ist.",
+    "terms": "Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen hunde/hund-im-buero hund im buero"
+  },
+  {
+    "id": "katzen",
+    "title": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
+    "description": "Katzenhaltung ehrlich erklärt: Wohnungsgestaltung, Sozialkontakt, Freigang, Kastration, Tierarztkosten und leise Anzeichen für Stress oder Krankheit.",
+    "terms": "Katze anschaffen oder Katzenhaltung artgerechter machen katzen katzen"
+  },
+  {
+    "id": "voegel",
+    "title": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
+    "description": "Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.",
+    "terms": "Vogelhaltung und Wellensittichhaltung prüfen voegel voegel"
+  },
+  {
+    "id": "kleintiere",
+    "title": "Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten",
+    "description": "Kleintiere sind keine einfachen Einstiegstiere: Fläche, Gruppenhaltung, Zähne, Tierarztkosten und typische Haltungsfehler im Überblick.",
+    "terms": "Kaninchen, Meerschweinchen, Hamster oder Ratten verantwortungsvoll halten kleintiere kleintiere"
+  },
+  {
+    "id": "exoten",
+    "title": "Exoten halten: Terrarium, Technik, UV-B und Verantwortung",
+    "description": "Exotenhaltung ehrlich erklärt: Licht, Temperatur, Feuchtigkeit, Futter, Meldepflichten, Tierarztzugang und warum Faszination nicht reicht.",
+    "terms": "Exotische Haustiere und Terrarientiere prüfen exoten exoten"
+  },
+  {
+    "id": "pferde",
+    "title": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
+    "description": "Pferdehaltung realistisch prüfen: Herdenkontakt, tägliche Bewegung, Stallformen, Kosten, Tierarzt, Hufschmied und jahrzehntelange Verantwortung.",
+    "terms": "Pferdehaltung und Pferdekauf realistisch prüfen pferde pferde"
+  },
+  {
+    "id": "hunde-soziale-beduerfnisse",
+    "title": "Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe)",
+    "description": "Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.",
+    "terms": "Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen. hunde/soziale-beduerfnisse hunde soziale beduerfnisse"
+  },
+  {
+    "id": "hunde-garten-auslauf",
+    "title": "Garten ist kein Ersatz für Auslauf - Wa(h)re Haustier(liebe)",
+    "description": "Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.",
+    "terms": "Garten, Auslauf und Umweltreize für Hunde realistisch prüfen. hunde/garten-auslauf hunde garten auslauf"
+  },
+  {
+    "id": "hunde-allein-zu-hause",
+    "title": "Hund allein zu Hause - Wa(h)re Haustier(liebe)",
+    "description": "Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.",
+    "terms": "Alleinbleiben und Betreuung für Hunde planen. hunde/allein-zu-hause hunde allein zu hause"
+  },
+  {
+    "id": "hunde-kosten",
+    "title": "Was ein Hund wirklich kostet - Wa(h)re Haustier(liebe)",
+    "description": "Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.",
+    "terms": "Hundekosten vor der Anschaffung realistisch einschätzen. hunde/kosten hunde kosten"
+  },
+  {
+    "id": "hunde-kastration",
+    "title": "Kastration beim Hund - Wa(h)re Haustier(liebe)",
+    "description": "Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.",
+    "terms": "Kastration beim Hund als Einzelfallentscheidung verstehen. hunde/kastration hunde kastration"
+  },
+  {
+    "id": "hunde-hofhaltung-und-zwinger",
+    "title": "Hofhaltung und Zwinger - Wa(h)re Haustier(liebe)",
+    "description": "Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.",
+    "terms": "Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen. hunde/hofhaltung-und-zwinger hunde hofhaltung und zwinger"
+  },
+  {
+    "id": "hunde-gesundheit",
+    "title": "Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe)",
+    "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.",
+    "terms": "Gesundheitsrisiken bei Hunden erkennen und vorbeugen. hunde/gesundheit hunde gesundheit"
+  },
+  {
+    "id": "hunde-entscheidung",
+    "title": "Bevor ein Hund einzieht - Wa(h)re Haustier(liebe)",
+    "description": "Die wichtigsten Fragen, bevor aus dem Wunsch nach einem Hund echte Verantwortung wird.",
+    "terms": "Entscheidung vor der Hundeadoption oder Anschaffung prüfen. hunde/entscheidung hunde entscheidung"
+  },
+  {
+    "id": "katzen-sozialverhalten",
+    "title": "Katzen sind keine einfachen Einzelgänger - Wa(h)re Haustier(liebe)",
+    "description": "Warum Katzen zwar allein jagen, aber trotzdem Sozialkontakt, Struktur und ein passendes Revier brauchen.",
+    "terms": "Sozialverhalten von Katzen verstehen. katzen/sozialverhalten katzen sozialverhalten"
+  },
+  {
+    "id": "katzen-wohnungshaltung",
+    "title": "Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe)",
+    "description": "Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.",
+    "terms": "Wohnungshaltung für Katzen artgerechter gestalten. katzen/wohnungshaltung katzen wohnungshaltung"
+  },
+  {
+    "id": "katzen-kastration",
+    "title": "Kastration bei Katzen - Wa(h)re Haustier(liebe)",
+    "description": "Warum Kastration bei Katzen praktischer Tierschutz ist und ungewolltes Leid verhindert.",
+    "terms": "Kastration bei Katzen verstehen. katzen/kastration katzen kastration"
+  },
+  {
+    "id": "katzen-stilles-leiden",
+    "title": "Stilles Leiden bei Katzen erkennen - Wa(h)re Haustier(liebe)",
+    "description": "Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.",
+    "terms": "Warnsignale bei Katzen erkennen. katzen/stilles-leiden katzen stilles leiden"
+  },
+  {
+    "id": "katzen-kosten",
+    "title": "Was Katzen wirklich kosten - Wa(h)re Haustier(liebe)",
+    "description": "Futter, Streu, Tierarzt, Rücklagen und Alltag: Katzen sind keine günstigen Nebenbei-Tiere.",
+    "terms": "Katzenkosten vor der Anschaffung realistisch einschätzen. katzen/kosten katzen kosten"
+  },
+  {
+    "id": "katzen-streunerkatzen",
+    "title": "Streunerkatzen und Verantwortung - Wa(h)re Haustier(liebe)",
+    "description": "Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.",
+    "terms": "Streunerkatzen und Kastration einordnen. katzen/streunerkatzen katzen streunerkatzen"
+  },
+  {
+    "id": "katzen-entscheidung",
+    "title": "Bevor eine Katze einzieht - Wa(h)re Haustier(liebe)",
+    "description": "Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.",
+    "terms": "Entscheidung vor der Katzenadoption oder Anschaffung prüfen. katzen/entscheidung katzen entscheidung"
+  },
+  {
+    "id": "voegel-schwarmhaltung",
+    "title": "Schwarmhaltung bei Vögeln - Wa(h)re Haustier(liebe)",
+    "description": "Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.",
+    "terms": "Schwarmhaltung bei Vögeln verstehen. voegel/schwarmhaltung voegel schwarmhaltung"
+  },
+  {
+    "id": "voegel-uv-licht",
+    "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
+    "description": "Warum normales Fensterglas wichtiges UV-Licht blockiert und Vögel gezielte Lichtversorgung brauchen.",
+    "terms": "UV-Licht und Lichtbedarf bei Vögeln einordnen. voegel/uv-licht voegel uv licht"
+  },
+  {
+    "id": "voegel-kuechenluft-und-daempfe-sind-lebensgefahr",
+    "title": "Küchenluft und Teflon sind Lebensgefahr - Wa(h)re Haustier(liebe)",
+    "description": "Warum Dämpfe aus Pfannen, Backöfen und Küchenluft für Vögel tödlich sein können.",
+    "terms": "Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen. voegel/kuechenluft-teflon voegel kuechenluft und daempfe sind lebensgefahr"
+  },
+  {
+    "id": "voegel-freiflug-ist-nicht-optional",
+    "title": "Freiflug ist nicht optional - Wa(h)re Haustier(liebe)",
+    "description": "Warum Vögel täglich sicheren Flugraum brauchen und ein Käfig allein kein Lebensraum ist.",
+    "terms": "Freiflug und Flugraum für Vögel planen. voegel/freiflug voegel freiflug ist nicht optional"
+  },
+  {
+    "id": "voegel-partnerersatz",
+    "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
+    "description": "Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.",
+    "terms": "Falschen Partnerersatz bei Vögeln vermeiden. voegel/partnerersatz voegel partnerersatz"
+  },
+  {
+    "id": "voegel-krankheit-erkennen",
+    "title": "Krankheit bei Vögeln erkennen - Wa(h)re Haustier(liebe)",
+    "description": "Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.",
+    "terms": "Krankheitszeichen bei Vögeln ernst nehmen. voegel/krankheit-erkennen voegel krankheit erkennen"
+  },
+  {
+    "id": "voegel-qualzucht",
+    "title": "Schauwellensittiche und Qualzucht - Wa(h)re Haustier(liebe)",
+    "description": "Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.",
+    "terms": "Qualzucht bei Heimvögeln erkennen. voegel/qualzucht voegel qualzucht"
+  },
+  {
+    "id": "voegel-entscheidung",
+    "title": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
+    "description": "Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
+    "terms": "Entscheidung vor der Vogelhaltung prüfen. voegel/entscheidung voegel entscheidung"
+  },
+  {
+    "id": "kleintiere-kaninchen",
+    "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.",
+    "terms": "Kaninchenhaltung verantwortungsvoll planen. kleintiere/kaninchen kleintiere kaninchen"
+  },
+  {
+    "id": "kleintiere-meerschweinchen",
+    "title": "Meerschweinchen halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.",
+    "terms": "Meerschweinchenhaltung verantwortungsvoll planen. kleintiere/meerschweinchen kleintiere meerschweinchen"
+  },
+  {
+    "id": "kleintiere-hamster",
+    "title": "Hamster halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.",
+    "terms": "Hamsterhaltung realistisch prüfen. kleintiere/hamster kleintiere hamster"
+  },
+  {
+    "id": "kleintiere-ratten",
+    "title": "Ratten halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.",
+    "terms": "Rattenhaltung verantwortungsvoll planen. kleintiere/ratten kleintiere ratten"
+  },
+  {
+    "id": "kleintiere-degus-und-chinchillas",
+    "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.",
+    "terms": "Degus und Chinchillas als anspruchsvolle Kleintiere einordnen. kleintiere/degus-chinchillas kleintiere degus und chinchillas"
+  },
+  {
+    "id": "exoten-reptilien",
+    "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.",
+    "terms": "Reptilienhaltung realistisch prüfen. exoten/reptilien exoten reptilien"
+  },
+  {
+    "id": "exoten-schildkroeten",
+    "title": "Schildkröten halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.",
+    "terms": "Schildkrötenhaltung realistisch prüfen. exoten/schildkroeten exoten schildkroeten"
+  },
+  {
+    "id": "exoten-fische",
+    "title": "Fische halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.",
+    "terms": "Fischhaltung und Aquarium realistisch prüfen. exoten/fische exoten fische"
+  },
+  {
+    "id": "pferde-herde",
+    "title": "Pferde brauchen Herde - Wa(h)re Haustier(liebe)",
+    "description": "Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.",
+    "terms": "Sozialkontakt und Herdenhaltung bei Pferden verstehen. pferde/herde pferde herde"
+  },
+  {
+    "id": "pferde-platzbedarf",
+    "title": "Platzbedarf bei Pferden - Wa(h)re Haustier(liebe)",
+    "description": "Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.",
+    "terms": "Fläche und Bewegung bei Pferdehaltung prüfen. pferde/platzbedarf pferde platzbedarf"
+  },
+  {
+    "id": "pferde-haltungsformen",
+    "title": "Haltungsformen bei Pferden - Wa(h)re Haustier(liebe)",
+    "description": "Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.",
+    "terms": "Pferdehaltungsformen vergleichen. pferde/haltungsformen pferde haltungsformen"
+  },
+  {
+    "id": "pferde-kosten",
+    "title": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
+    "description": "Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.",
+    "terms": "Pferdekosten realistisch einschätzen. pferde/kosten pferde kosten"
+  },
+  {
+    "id": "pferde-reitbeteiligung",
+    "title": "Reitbeteiligung als ehrlicher Einstieg - Wa(h)re Haustier(liebe)",
+    "description": "Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.",
+    "terms": "Reitbeteiligung als Alternative zum eigenen Pferd prüfen. pferde/reitbeteiligung pferde reitbeteiligung"
+  },
+  {
+    "id": "pferde-entscheidung",
+    "title": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
+    "description": "Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.",
+    "terms": "Entscheidung vor dem eigenen Pferd prüfen. pferde/entscheidung pferde entscheidung"
+  },
+  {
+    "id": "kastration",
+    "title": "Kastration bei Haustieren: Tierschutz, Kosten und Mythen",
+    "description": "Kastration schützt Tiere und verhindert Leid: Fakten zu Katzen, Hunden, Kaninchen, Kosten, Kastrationspflicht und typischen Gegenargumenten.",
+    "terms": "Kastration bei Haustieren verstehen und entscheiden kastration kastration"
+  },
+  {
+    "id": "qualzucht",
+    "title": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
+    "description": "Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.",
+    "terms": "Qualzucht verstehen und beim Tierkauf vermeiden qualzucht qualzucht"
+  },
+  {
+    "id": "adoption",
+    "title": "Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind",
+    "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, unseriöse Quellen und warum Zucht den Markt weiter füllt.",
+    "terms": "Tier aus dem Tierheim adoptieren statt kaufen adoption adoption"
+  },
+  {
+    "id": "selbsttest",
+    "title": "Haustier-Selbsttest: Bin ich bereit für ein Tier?",
+    "description": "15 ehrliche Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.",
+    "terms": "Selbsttest vor Haustieranschaffung selbsttest selbsttest"
+  },
+  {
+    "id": "notfall",
+    "title": "Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst",
+    "description": "Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.",
+    "terms": "Tiermedizinische Warnsignale und Notfallentscheidung notfall notfall"
+  },
+  {
+    "id": "tierarzt-notdienst",
+    "title": "Tierärztlichen Notdienst finden: Bundesländer-Übersicht",
+    "description": "Offizielle Kammern, Notrufnummern und regionale Notdienst-Systeme nach Bundesland: tierärztlichen Notdienst finden und vor der Fahrt telefonisch prüfen.",
+    "terms": "Tierärztlichen Notdienst nach Bundesland finden notfall/tierarzt-notdienst tierarzt notdienst"
+  },
+  {
+    "id": "wissen",
+    "title": "Tiermythen und Homöopathie: Was stimmt wirklich?",
+    "description": "Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, verständlich und ohne Werbeinteresse eingeordnet.",
+    "terms": "Tierhaltungsmythen und Homöopathie bei Tieren prüfen wissen wissen"
+  },
+  {
+    "id": "glossar",
+    "title": "Glossar für Tierhaltung und Tierschutz",
+    "description": "Wichtige Begriffe rund um artgerechte Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz und verständlich erklärt.",
+    "terms": "Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen glossar glossar"
+  },
+  {
+    "id": "tiere-und-urlaub",
+    "title": "Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?",
+    "description": "Urlaub mit Haustieren tierschutzgerecht planen: Mitnehmen, Betreuung, Tierpension, Reiseformalitäten, Hitze, Flugreisen und Aussetzen richtig einordnen.",
+    "terms": "Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen tiere-und-urlaub tiere und urlaub"
+  },
+  {
+    "id": "hitzefalle-auto",
+    "title": "Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind",
+    "description": "Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.",
+    "terms": "Sommerhitze und Hund im Auto einschätzen hitzefalle-auto hitzefalle auto"
+  },
+  {
+    "id": "ernaehrung-taurin",
+    "title": "Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt",
+    "description": "Warum Hunde und Katzen ernährungsphysiologisch verschieden sind, was Taurin bei Katzen leistet und warum Katzen- und Hundefutter nicht austauschbar sind.",
+    "terms": "Tierernährung, vegane Ernährung und Taurin verstehen ernaehrung-taurin ernaehrung taurin"
+  },
+  {
+    "id": "realhaltung",
+    "title": "Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen",
+    "description": "Typische Haustierhaltung gegen wirklich vertretbare Haltung: Warum normal nicht automatisch artgerecht ist und der Kaufpreis nie die echten Kosten zeigt.",
+    "terms": "Realistische Haltung und Kosten vor der Anschaffung prüfen realhaltung realhaltung"
+  },
+  {
+    "id": "zucht-und-vermehrung",
+    "title": "Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist",
+    "description": "Unterschied zwischen Züchter und Vermehrer, warum zusätzliche Haustierproduktion problematisch bleibt und warum Adoption die konsequentere Entscheidung ist.",
+    "terms": "Zucht, Vermehrung und Adoption einordnen zucht-und-vermehrung zucht und vermehrung"
+  },
+  {
+    "id": "wildtierhaltung",
+    "title": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
+    "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.",
+    "terms": "Private Wildtierhaltung, Exoten und Wildschutz verstehen wildtierhaltung wildtierhaltung"
+  },
+  {
+    "id": "wildkatzenbaby-gefunden",
+    "title": "Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln",
+    "description": "Wildkatzenjunge werden leicht mit Hauskatzen verwechselt. Woran du sie erkennst, warum Mitnehmen schadet und welche Schritte wirklich helfen.",
+    "terms": "Wildkatzenjunge erkennen und bei einem Fund richtig handeln katzen/wildkatzenbaby-gefunden wildkatzenbaby gefunden"
+  },
+  {
+    "id": "noch-nicht-bereit",
+    "title": "Noch nicht bereit für ein Tier: Warten kann Tierliebe sein",
+    "description": "Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie du trotzdem Tierschutz unterstützen kannst.",
+    "terms": "Verantwortlich warten statt vorschnell ein Tier anschaffen noch-nicht-bereit noch nicht bereit"
+  }
+];
 function staticRouteFor(page) {
   var target = staticPageRoutes[page] || '/';
   var prefix = document.body ? (document.body.dataset.routePrefix || '') : '';
@@ -972,16 +1370,16 @@ function normalizeAssetUrls(root) {
         return;
       }
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-      document.querySelectorAll('.nav-link[data-page]').forEach(function(l) { l.classList.remove('active'); });
+      document.querySelectorAll('[data-page]').forEach(function(l) { l.classList.remove('active'); l.removeAttribute('aria-current'); });
       var target = document.getElementById(page);
       if (target) {
         target.classList.add('active');
-        var link = document.querySelector('.nav-link[data-page="' + page + '"]');
-        if (link) link.classList.add('active');
+        document.querySelectorAll('[data-page="' + page + '"]').forEach(function(link) { link.classList.add('active'); link.setAttribute('aria-current', 'page'); });
       }
       window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
       closeMobileNav();
       closeDropdowns();
+      closeSiteSearch();
       history.replaceState(null, '', page === 'startseite' ? location.pathname : '#' + page);
     }
 
@@ -1979,6 +2377,8 @@ function normalizeAssetUrls(root) {
     function initAccessibilityState() {
       initDropdowns();
       initAccordions();
+      initBrowseNavigation();
+      initSiteSearch();
       var mobileNav = document.getElementById('mobile-nav');
       if (mobileNav) mobileNav.setAttribute('aria-hidden', mobileNav.classList.contains('open') ? 'false' : 'true');
       var hamburger = document.querySelector('.hamburger');
@@ -2006,6 +2406,177 @@ function normalizeAssetUrls(root) {
       initCollaborationFlow();
     }
 
+    function initBrowseNavigation() {
+      document.querySelectorAll('.browse-menu').forEach(function(menu) {
+        var tabs = Array.from(menu.querySelectorAll('[data-browse-tab]'));
+        tabs.forEach(function(tab) {
+          tab.addEventListener('mouseenter', function() {
+            setBrowsePanel(menu, tab.dataset.browseTab);
+          });
+          tab.addEventListener('focus', function() {
+            setBrowsePanel(menu, tab.dataset.browseTab);
+          });
+          tab.addEventListener('click', function() {
+            setBrowsePanel(menu, tab.dataset.browseTab);
+          });
+        });
+      });
+    }
+
+    function setBrowsePanel(menu, key) {
+      if (!menu || !key) return;
+      menu.querySelectorAll('[data-browse-tab]').forEach(function(tab) {
+        var active = tab.dataset.browseTab === key;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      menu.querySelectorAll('[data-browse-panel]').forEach(function(panel) {
+        panel.classList.toggle('is-active', panel.dataset.browsePanel === key);
+      });
+    }
+
+    function pageHrefFor(pageId) {
+      if (typeof staticRouteFor === 'function') return staticRouteFor(pageId);
+      var slug = staticPageSlugs[pageId] || sectionPageSlugs[pageId] || '';
+      return siteRootPrefix() + slug;
+    }
+
+    function searchTitleFromPage(page) {
+      var heading = page.querySelector('h1');
+      return heading ? heading.textContent.trim() : page.id;
+    }
+
+    function searchDescriptionFromPage(page) {
+      var heroText = page.querySelector('.hero p');
+      return heroText ? heroText.textContent.trim() : '';
+    }
+
+    function siteSearchEntries() {
+      if (Array.isArray(window.staticSiteSearchIndex)) return window.staticSiteSearchIndex;
+      return Array.from(document.querySelectorAll('.page[id]')).map(function(page) {
+        return {
+          id: page.id,
+          title: searchTitleFromPage(page),
+          description: searchDescriptionFromPage(page),
+          terms: page.textContent.slice(0, 600)
+        };
+      });
+    }
+
+    function normalizeSearchValue(value) {
+      return String(value || '').toLocaleLowerCase('de-DE').trim();
+    }
+
+    function scoreSearchEntry(entry, query) {
+      if (!query) return 0;
+      var title = normalizeSearchValue(entry.title);
+      var description = normalizeSearchValue(entry.description);
+      var terms = normalizeSearchValue(entry.terms);
+      var score = 0;
+      if (title.indexOf(query) !== -1) score += 8;
+      if (description.indexOf(query) !== -1) score += 4;
+      if (terms.indexOf(query) !== -1) score += 2;
+      query.split(' ').filter(Boolean).forEach(function(part) {
+        if (part.length < 2) return;
+        if (title.indexOf(part) !== -1) score += 3;
+        if (description.indexOf(part) !== -1) score += 1;
+        if (terms.indexOf(part) !== -1) score += 1;
+      });
+      return score;
+    }
+
+    function renderSearchResults(query, list, options) {
+      if (!list) return;
+      var normalized = normalizeSearchValue(query);
+      list.textContent = '';
+      if (!normalized) {
+        var empty = document.createElement('li');
+        empty.className = 'site-search-empty';
+        empty.textContent = options && options.emptyText ? options.emptyText : 'Gib ein Tier, ein Thema oder ein Warnsignal ein.';
+        list.appendChild(empty);
+        return;
+      }
+      var results = siteSearchEntries().map(function(entry) {
+        return Object.assign({ score: scoreSearchEntry(entry, normalized) }, entry);
+      }).filter(function(entry) {
+        return entry.score > 0;
+      }).sort(function(a, b) {
+        return b.score - a.score || a.title.localeCompare(b.title, 'de-DE');
+      }).slice(0, options && options.limit ? options.limit : 8);
+
+      if (!results.length) {
+        var noHit = document.createElement('li');
+        noHit.className = 'site-search-empty';
+        noHit.textContent = 'Kein Treffer. Versuch es mit einer Tierart oder einem kürzeren Begriff.';
+        list.appendChild(noHit);
+        return;
+      }
+
+      results.forEach(function(entry) {
+        var item = document.createElement('li');
+        var link = document.createElement('a');
+        link.className = 'site-search-result';
+        link.href = pageHrefFor(entry.id);
+        link.innerHTML = '<strong></strong><span></span>';
+        link.querySelector('strong').textContent = entry.title.replace(' - Wa(h)re Haustier(liebe)', '');
+        link.querySelector('span').textContent = entry.description || 'Thema öffnen';
+        link.addEventListener('click', function(event) {
+          if (document.body && document.body.dataset.staticSite === 'true') return;
+          event.preventDefault();
+          navigateTo(entry.id);
+          closeSiteSearch();
+        });
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+    }
+
+    function initSiteSearch() {
+      var desktopInput = document.getElementById('site-search-input');
+      var desktopResults = document.getElementById('site-search-results');
+      var mobileInput = document.getElementById('mobile-site-search-input');
+      var mobileResults = document.getElementById('mobile-site-search-results');
+      if (desktopInput && desktopResults) {
+        renderSearchResults('', desktopResults);
+        desktopInput.addEventListener('input', function() {
+          renderSearchResults(desktopInput.value, desktopResults);
+        });
+      }
+      if (mobileInput && mobileResults) {
+        renderSearchResults('', mobileResults, { limit: 5, emptyText: 'Direkt suchen, statt durch Gruppen zu tippen.' });
+        mobileInput.addEventListener('input', function() {
+          renderSearchResults(mobileInput.value, mobileResults, { limit: 5 });
+        });
+      }
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('#site-search, .nav-link-search')) closeSiteSearch();
+      });
+    }
+
+    function toggleSiteSearch() {
+      var panel = document.getElementById('site-search');
+      var button = document.querySelector('.nav-link-search');
+      var input = document.getElementById('site-search-input');
+      if (!panel) return;
+      var open = !panel.classList.contains('open');
+      panel.classList.toggle('open', open);
+      panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+      if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) {
+        closeDropdowns();
+        if (input) input.focus();
+      }
+    }
+
+    function closeSiteSearch() {
+      var panel = document.getElementById('site-search');
+      var button = document.querySelector('.nav-link-search');
+      if (!panel) return;
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    }
+
     // ===== MOBILE NAV =====
     function toggleMobileNav() {
       var nav = document.getElementById('mobile-nav');
@@ -2016,8 +2587,9 @@ function normalizeAssetUrls(root) {
       nav.setAttribute('aria-hidden', open ? 'false' : 'true');
       if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
       if (open) {
-        var firstLink = nav.querySelector('.mobile-nav-link');
-        if (firstLink) firstLink.focus();
+        openMobileNavPanel('root');
+        var firstInput = nav.querySelector('#mobile-site-search-input');
+        if (firstInput) firstInput.focus();
       }
     }
     function closeMobileNav() {
@@ -2031,6 +2603,17 @@ function normalizeAssetUrls(root) {
         button.setAttribute('aria-expanded', 'false');
         if (wasOpen) button.focus();
       }
+    }
+    function openMobileNavPanel(panel) {
+      var nav = document.getElementById('mobile-nav');
+      if (!nav) return;
+      var target = panel || 'root';
+      nav.querySelectorAll('[data-mobile-nav-view]').forEach(function(view) {
+        view.classList.toggle('is-active', view.dataset.mobileNavView === target);
+      });
+      nav.scrollTop = 0;
+      var heading = nav.querySelector('[data-mobile-nav-view="' + target + '"] .mobile-nav-link, [data-mobile-nav-view="' + target + '"] .site-search-input, [data-mobile-nav-view="' + target + '"] .mobile-nav-back');
+      if (heading) heading.focus();
     }
     function closeDropdowns(except) {
       document.querySelectorAll('.dropdown').forEach(function(d) {

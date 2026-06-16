@@ -1897,6 +1897,27 @@ function topicChildrenFor(pageId) {
   return topicPages.filter((topic) => topic.sourcePage === pageId);
 }
 
+function buildTopicSiblingNav(page) {
+  const parent = pageById.get(page.sourcePage);
+  const siblings = topicChildrenFor(page.sourcePage).filter((topic) => topic.id !== page.id);
+  if (!parent || !siblings.length) return '';
+  const siblingLinks = siblings.map((topic) => `
+          <a class="topic-context-link" href="#${topic.id}" onclick="navigateTo('${topic.id}');return false">
+            <strong>${escapeHtml(topic.title.replace(` - ${siteName}`, ''))}</strong>
+            <span>${escapeHtml(topic.description)}</span>
+          </a>`).join('');
+  return `
+        <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
+          <div class="topic-context-head">
+            <span class="eyebrow">${escapeHtml(parent.title.split(':')[0].replace(' halten', ''))}</span>
+            <h2>Weitere Themen in diesem Bereich</h2>
+          </div>
+          <div class="topic-context-grid">
+${siblingLinks}
+          </div>
+        </nav>`;
+}
+
 function buildAnimalHubSection(source, page) {
   const children = topicChildrenFor(page.id);
   const cards = children.map((child) => `
@@ -1957,6 +1978,7 @@ function extractTopicSection(source, page) {
         <div id="${page.sourceAnchor}" class="topic-page-content">
 ${topicHtml}
         </div>
+${buildTopicSiblingNav(page)}
       </div>
     </div>
   </section>`;
@@ -2044,6 +2066,12 @@ function rewriteScript(script) {
   };
 
   next = `var staticPageRoutes = ${JSON.stringify(routeMap, null, 2)};\n` +
+    `var staticSiteSearchIndex = ${JSON.stringify(publicPages.map((page) => ({
+      id: page.id,
+      title: page.title,
+      description: page.description,
+      terms: [page.intent, page.slug, page.id.replaceAll('-', ' ')].filter(Boolean).join(' '),
+    })), null, 2)};\n` +
     `function staticRouteFor(page) {\n` +
     `  var target = staticPageRoutes[page] || '/';\n` +
     `  var prefix = document.body ? (document.body.dataset.routePrefix || '') : '';\n` +
@@ -2078,16 +2106,16 @@ function rewriteScript(script) {
     `        return;\n` +
     `      }\n` +
     `      document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });\n` +
-    `      document.querySelectorAll('.nav-link[data-page]').forEach(function(l) { l.classList.remove('active'); });\n` +
+    `      document.querySelectorAll('[data-page]').forEach(function(l) { l.classList.remove('active'); l.removeAttribute('aria-current'); });\n` +
     `      var target = document.getElementById(page);\n` +
     `      if (target) {\n` +
     `        target.classList.add('active');\n` +
-    `        var link = document.querySelector('.nav-link[data-page="' + page + '"]');\n` +
-    `        if (link) link.classList.add('active');\n` +
+    `        document.querySelectorAll('[data-page="' + page + '"]').forEach(function(link) { link.classList.add('active'); link.setAttribute('aria-current', 'page'); });\n` +
     `      }\n` +
     `      window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });\n` +
     `      closeMobileNav();\n` +
     `      closeDropdowns();\n` +
+    `      closeSiteSearch();\n` +
     `      history.replaceState(null, '', page === 'startseite' ? location.pathname : '#' + page);\n` +
     `    }`
   );
