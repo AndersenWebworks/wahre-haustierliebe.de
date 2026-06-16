@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="voegel-schwarmhaltung" class="page active">
+<section id="voegel-schwarmhaltung" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Schwarmhaltung bei Vögeln</h1>
@@ -5091,10 +5127,19 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../voegel/index.html">Zurück zur Übersicht: Vögel</a></p>
-<div class="section-feedback-heading"><h2 id="voegel-schwarmhaltung">Schwarmvögel gehören nicht allein in einen Käfig</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-schwarmhaltung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="voegel-schwarmhaltung" class="topic-page-content">
+<h2 id="voegel-schwarmhaltung">Schwarmvögel gehören nicht allein in einen Käfig</h2><div class="article-rhythm myth-truth" data-enhancement="voegel-einzelhaltung">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein einzelner Vogel wird zahmer.“</h3><p>Er richtet sich verzweifelt auf Menschen aus, weil kein Artgenosse antwortet.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Zahmkeit darf keine Einsamkeit kosten.</h3><p>Mindestens ein passender Partner, Freiflug und Schwarmverhalten sind keine Extras, sondern Grundbedürfnisse.</p></div>
+          </div><div class="article-rhythm quote-band" data-enhancement="voegel-schwarm">
+            <span class="eyebrow">Share-Satz</span>
+            <blockquote>Ein einzelner Vogel wird nicht zahm. Er wird einsam.</blockquote>
+            <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer“ geplant ist.</p>
+          </div>
         <p>Der hartnäckigste Mythos: Ein einzelner Wellensittich werde zahmer und „spreche“ besser. In Wahrheit spricht ein einzelner Wellensittich nicht, weil er sein Talent entfaltet – er vokalisiert, weil er verzweifelt nach einem Artgenossen sucht. Der Kontaktruf eines einsamen Wellensittichs ist kein niedlicher Partytrick. Es ist ein Hilferuf.</p>
         <p>Wellensittiche, Nymphensittiche, Kanarienvögel, Zebrafinken und die meisten Papageienarten sind <span class="glossary-term" data-glossary-key="obligat-sozial" data-glossary-title="Obligat sozial" data-glossary-text="Tierart braucht Artgenossen zwingend. Alleinhaltung ist dann kein kleiner Kompromiss." data-glossary-href="../../glossar/index.html#obligat-sozial" aria-describedby="glossary-term-popover" tabindex="0" role="button">obligat soziale Tiere</span>. Einzelhaltung verursacht chronischen Stress, Verhaltensstörungen (<span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Federrupfen, stereotypisches Kopfwippen</span>, <span class="glossary-term" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren oft ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit." data-glossary-href="../../glossar/index.html#apathie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Apathie</span>) und verkürzt die Lebenserwartung.</p>
         <p><strong>Mindestens paarweise halten.</strong> Noch besser: ein kleiner Schwarm ab vier Tieren.</p>
+        </div>
       </div>
     </div>
   </section>

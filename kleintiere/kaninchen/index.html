@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="kleintiere-kaninchen" class="page active">
+<section id="kleintiere-kaninchen" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Kaninchen halten</h1>
@@ -5091,13 +5127,18 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../kleintiere/index.html">Zurück zur Übersicht: Kleintiere</a></p>
-<div class="section-feedback-heading"><h2 id="kleintiere-kaninchen">Kaninchen</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-kaninchen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="kleintiere-kaninchen" class="topic-page-content">
+<h2 id="kleintiere-kaninchen">Kaninchen</h2><div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Kleintiere sind gute Einstiegstiere.“</h3><p>Sie wirken handlich, billig und unkompliziert. Genau das macht sie so oft zu Fehlkäufen.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Klein heißt nicht einfach.</h3><p>Fläche, Artgenossen, Zähne, Kastration, Tierarzt und Ruhe sind bei vielen Kleintieren anspruchsvoller als erwartet.</p></div>
+          </div>
         <p>Kaninchen sind keine Kuscheltiere. Sie sind Fluchttiere mit einem starken Bedürfnis nach Sicherheit, Platz und <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenossen</span>.</p>
         <p><strong>Platz:</strong> Die <a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> empfiehlt mindestens 2–3 m² pro Kaninchen als dauerhaften Lebensraum – nicht als Auslauf, sondern als Grundfläche, die immer zugänglich ist. Handelsübliche Käfige (0,5–1 m²) sind Tierquälerei in Plastik.</p>
         <p><strong>Artgenossen:</strong> Kaninchen sind Gruppentiere. Einzelhaltung verursacht Einsamkeit, Stress und <span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Verhaltensstörungen</span>. Mindestens zwei Tiere – idealerweise ein kastrierter Rüde und eine Häsin.</p>
         <p><strong>Ernährung:</strong> Hauptfutter ist Heu – nicht Trockenfutter aus der Zoohandlung. Dazu täglich frisches Grünfutter (Gräser, Kräuter, Gemüse). Trockenfutter-Pellets sind oft zu energiereich und verursachen Zahnprobleme.</p>
         <p><strong>Zähne:</strong> Kaninchenzähne wachsen lebenslang. Falsches Futter führt zu <span class="glossary-term" data-glossary-key="zahnfehlstellung" data-glossary-title="Zahnfehlstellung" data-glossary-text="Fehlstellung der Zähne, die Fressen, Atmung, Pflege oder Schmerzfreiheit beeinträchtigen kann." data-glossary-href="../../glossar/index.html#zahnfehlstellung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Zahnfehlstellungen</span>, die extrem schmerzhaft sind und teure tierärztliche Behandlung erfordern.</p>
         <p><strong>Kastration:</strong> Rammler sollten kastriert werden, um Aggressionen und unkontrollierte Vermehrung zu vermeiden. Wichtig zu wissen: Etwa 60 % der unkastrierten Häsinnen über 3 Jahre entwickeln Gebärmuttertumoren – ein ernsthaftes Argument auch für die <a href="../../kastration/index.html">Kastration</a> weiblicher Tiere.</p>
+        </div>
       </div>
     </div>
   </section>

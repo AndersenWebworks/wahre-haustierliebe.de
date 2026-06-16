@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5156,19 +5192,24 @@
 
   <main id="main-content" tabindex="-1">
 <section id="kleintiere" class="page active" data-enhancements-hydrated="true">
-    <div class="hero">
+    <div class="hero" style="background: linear-gradient(135deg, #8B6B3D 0%, #6B4E2A 100%);">
       <div class="container"><div class="article-hero-copy">
-        <h1>Kleintiere</h1>
-        <p>Kleintiere sind kein Sammelbegriff für einfache Haustiere. Kaninchen, Meerschweinchen, Hamster, Ratten, Degus und Chinchillas brauchen sehr unterschiedliche Haltungsformen.</p>
+        <h1>Kleintiere – kein Einstiegstier, kein Kinderspielzeug</h1>
+        <p>Kaninchen, Meerschweinchen, Hamster, Ratten – sie wirken pflegeleicht. Sind sie nicht.</p>
       <div class="article-kicker"><span>Klein ist nicht einfach</span><span>Fläche</span><span>Zähne und Tierarzt</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen" data-share-reason="Das Bild soll den Mythos vom einfachen Einstiegstier brechen." style="--image-position: center 50%;"><img src="../assets/images/optimized/guinea-pig-habitat.jpg" alt="Kleintier-Habitat mit Struktur statt Spielzeughaltung" loading="eager" decoding="async" width="800" height="600" fetchpriority="high"><figcaption class="context-caption">Kleintiere brauchen Fläche, Struktur und Artgenossen.</figcaption></figure></div>
     </div>
 
     <div class="section">
       <div class="container">
         <div class="info-box">
-          <h3>So ist dieser Bereich aufgebaut</h3>
-          <p>Kleintiere sind kein Sammelbegriff für einfache Haustiere. Kaninchen, Meerschweinchen, Hamster, Ratten, Degus und Chinchillas brauchen sehr unterschiedliche Haltungsformen.</p>
-          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
+          <h3>Auf einen Blick</h3>
+          <ul>
+            <li>Die meisten Kleintiere sind <span class="glossary-term" data-glossary-key="fluchttier" data-glossary-title="Fluchttier" data-glossary-text="Tier, das auf Gefahr zuerst mit Flucht reagiert und Festhalten oder Hochheben oft als Bedrohung erlebt." data-glossary-href="../glossar/index.html#fluchttier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Fluchttiere</span>. Sie mögen kein Hochheben, Festhalten oder laute Umgebungen.</li>
+            <li>Handelsübliche Käfige sind fast immer zu klein. Kaninchen brauchen mind. 2–3 m² pro Tier – dauerhaft.</li>
+            <li>Kaninchen und Meerschweinchen verstehen sich nicht – sie sprechen verschiedene Sprachen.</li>
+            <li>Hamster sind nachtaktiv und Einzelgänger. Sie sind das Gegenteil eines Kindertiers.</li>
+            <li>Ratten sind hochsozial und intelligent – aber sie leben nur 2–3 Jahre.</li>
+          </ul>
         </div><div class="article-rhythm" data-enhancement="kleintiere-beschaeftigung">
             <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
             <h3>Kleintiere brauchen Struktur, nicht Kinderzimmer-Bespaßung.</h3>
@@ -5183,14 +5224,15 @@
             <div class="compare-card risk"><strong>Kaninchen</strong><span>Gruppenhaltung, viel Fläche, hohe Tierarztkosten bei Zähnen und Gebärmutter.</span></div>
             <div class="compare-card risk"><strong>Ratten</strong><span>Intelligent, sozial, kurzlebig. Brauchen Gruppe, Höhe und Beschäftigung.</span></div>
           </div>
-        <div class="grid-3">
+        <div class="info-box">
+          <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
+          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
+        </div>
+        <div class="grid-3 animal-topic-grid">
 
           <article class="card">
             <div class="card-body">
-              <h3>Kaninchen halten</h3><div class="article-rhythm myth-truth" data-enhancement="kleintiere-kinder">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Kleintiere sind gute Einstiegstiere.“</h3><p>Sie wirken handlich, billig und unkompliziert. Genau das macht sie so oft zu Fehlkäufen.</p></div>
-            <div class="truth"><span class="eyebrow">Fakt</span><h3>Klein heißt nicht einfach.</h3><p>Fläche, Artgenossen, Zähne, Kastration, Tierarzt und Ruhe sind bei vielen Kleintieren anspruchsvoller als erwartet.</p></div>
-          </div>
+              <h3>Kaninchen halten</h3>
               <p>Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.</p>
               <a class="card-link" href="../kleintiere/kaninchen/index.html">Thema öffnen</a>
             </div>
@@ -5204,11 +5246,7 @@
           </article>
           <article class="card">
             <div class="card-body">
-              <h3>Hamster halten</h3><div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
-            <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
-            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Tagsüberes Wecken stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
-            <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
-          </div>
+              <h3>Hamster halten</h3>
               <p>Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.</p>
               <a class="card-link" href="../kleintiere/hamster/index.html">Thema öffnen</a>
             </div>

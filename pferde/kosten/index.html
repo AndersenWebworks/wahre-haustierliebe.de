@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5091,7 +5127,8 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../pferde/index.html">Zurück zur Übersicht: Pferde</a></p>
-<div class="section-feedback-heading"><h2 id="pferde-kosten">Kosten – pro Monat, nicht pro Jahr</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-kosten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="pferde-kosten" class="topic-page-content">
+<h2 id="pferde-kosten">Kosten – pro Monat, nicht pro Jahr</h2>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Monatlich</th></tr></thead>
           <tbody>
@@ -5105,6 +5142,7 @@
           </tbody>
         </table>
         <p class="text-muted">Nicht eingerechnet: Reitunterricht, Turniergebühren, Notfall-OPs (<span class="glossary-term" data-glossary-key="kolik" data-glossary-title="Kolik" data-glossary-text="Sammelbegriff für Bauchschmerzen beim Pferd. Kann harmlos beginnen, aber lebensgefährlich werden." data-glossary-href="../../glossar/index.html#kolik" aria-describedby="glossary-term-popover" tabindex="0" role="button">Koliken</span>: 3.000–10.000 Euro), <span class="glossary-term" data-glossary-key="hufrehe" data-glossary-title="Hufrehe" data-glossary-text="Schmerzhafte Entzündung im Hufbereich des Pferdes, die schnell schwer und chronisch werden kann." data-glossary-href="../../glossar/index.html#hufrehe" aria-describedby="glossary-term-popover" tabindex="0" role="button">Hufreheschübe</span>, chronische Erkrankungen. Quelle: Zusammenstellung aus <a href="https://www.pferdesport-deutschland.de/tierschutz/tierschutz" target="_blank" rel="noopener noreferrer">FN</a>-Empfehlungen und Erhebungen der Pferdekostenstudie. Was dich die <a href="../../mensch/index.html">Psychologie hinter der Entscheidung für ein Tier</a> lehrt: Kosten werden fast immer unterschätzt.</p>
+        </div>
       </div>
     </div>
   </section>

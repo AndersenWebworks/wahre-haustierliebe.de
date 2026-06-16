@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="katzen-stilles-leiden" class="page active">
+<section id="katzen-stilles-leiden" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Stilles Leiden bei Katzen erkennen</h1>
@@ -5091,7 +5127,12 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../katzen/index.html">Zurück zur Übersicht: Katzen</a></p>
-<div class="section-feedback-heading"><h2 id="katzen-stilles-leiden">Stilles Leiden erkennen</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-stilles-leiden" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="katzen-stilles-leiden" class="topic-page-content">
+<h2 id="katzen-stilles-leiden">Stilles Leiden erkennen</h2><div class="article-rhythm argument-grid" data-enhancement="katzen-still">
+            <article class="rhythm-card"><span class="eyebrow">Signal</span><h3>Rückzug</h3><p>Wenn eine Katze plötzlich weniger Kontakt sucht, ist das kein Charakterwechsel, sondern ein Warnsignal.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Signal</span><h3>Unsauberkeit</h3><p>Das ist selten Protest. Häufig stecken Stress, Schmerzen oder Harnwegserkrankungen dahinter.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Handlung</span><h3>Früher prüfen</h3><p>Lieber einmal zu viel zum Tierarzt als eine stille Erkrankung zu spät sehen.</p></article>
+          </div>
         <p>Katzen sind Beutetiere. Schwäche zu zeigen hieße in der Natur: zum Opfer zu werden. Deshalb verbergen Katzen Schmerzen und Unwohlsein, bis es nicht mehr geht. Wenn eine Katze sichtbar krank wirkt, ist sie meistens schon länger krank.</p>
         <p>Warnsignale, die auf Stress oder Krankheit hindeuten können:</p>
         <ul>
@@ -5104,6 +5145,7 @@
           <li>Verstärktes Miauen oder andere Lautäußerungen</li>
         </ul>
         <p>Im Zweifel gilt: Lieber einmal zu oft zum Tierarzt als einmal zu wenig. Auf der <a href="../../notfall/index.html">Notfall-Seite</a> findest du die wichtigsten Warnsignale und Erste-Hilfe-Maßnahmen.</p>
+        </div>
       </div>
     </div>
   </section>

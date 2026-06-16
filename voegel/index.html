@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5156,25 +5192,30 @@
 
   <main id="main-content" tabindex="-1">
 <section id="voegel" class="page active" data-enhancements-hydrated="true">
-    <div class="hero">
+    <div class="hero" style="background: linear-gradient(135deg, #4A8B3B 0%, #2E6625 100%);">
       <div class="container"><div class="article-hero-copy">
-        <h1>Vögel</h1>
-        <p>Vogelhaltung scheitert selten an einem großen Fehler, sondern an vielen unterschätzten Grundbedingungen: Schwarm, Licht, Flugraum, Luft und frühe Krankheitserkennung.</p>
+        <h1>Vögel – <span class="glossary-term" data-glossary-key="schwarmvogel" data-glossary-title="Schwarmvogel" data-glossary-text="Vogelart, die in Gruppen lebt und Artgenossen braucht." data-glossary-href="../glossar/index.html#schwarmvogel" aria-describedby="glossary-term-popover" tabindex="0" role="button">Schwarmtiere</span>, keine Dekoration</h1>
+        <p>Ein einzelner Wellensittich im Käfig ist kein Haustier. Es ist ein einsames Tier in einer Zelle.</p>
       <div class="article-kicker"><span>Schwarm statt Spiegel</span><span>UV-Licht</span><span>Freiflug</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen" data-share-reason="Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen." style="--image-position: center 44%;"><img src="../assets/images/optimized/voegel-voliere-02.jpg" alt="Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum" loading="eager" decoding="async" width="960" height="638" fetchpriority="high"><figcaption class="context-caption">Schwarm, Flugraum und Reize sind kein Extra.</figcaption></figure></div>
     </div>
 
     <div class="section">
       <div class="container">
         <div class="info-box">
-          <h3>So ist dieser Bereich aufgebaut</h3>
-          <p>Vogelhaltung scheitert selten an einem großen Fehler, sondern an vielen unterschätzten Grundbedingungen: Schwarm, Licht, Flugraum, Luft und frühe Krankheitserkennung.</p>
-          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
-        </div><div class="article-rhythm quote-band" data-enhancement="voegel-schwarm">
-            <span class="eyebrow">Share-Satz</span>
-            <blockquote>Ein einzelner Vogel wird nicht zahm. Er wird einsam.</blockquote>
-            <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer“ geplant ist.</p>
-          </div>
-        <div class="grid-3">
+          <h3>Auf einen Blick</h3>
+          <ul>
+            <li>Wellensittiche, Nymphensittiche und die meisten Papageienarten sind Schwarmvögel. Einzelhaltung ist Tierquälerei.</li>
+            <li>Vögel brauchen täglich mehrere Stunden <span class="glossary-term" data-glossary-key="freiflug" data-glossary-title="Freiflug" data-glossary-text="Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum." data-glossary-href="../glossar/index.html#freiflug" aria-describedby="glossary-term-popover" tabindex="0" role="button">Freiflug</span> in einem gesicherten Raum.</li>
+            <li>Vögel sehen <span class="glossary-term" data-glossary-key="uv-b" data-glossary-title="UV-B-Strahlung" data-glossary-text="Ultraviolette Strahlung, die viele Reptilien und Vögel für Vitamin-D3-Bildung und normale Wahrnehmung brauchen." data-glossary-href="../glossar/index.html#uv-b" aria-describedby="glossary-term-popover" tabindex="0" role="button">UV-Licht</span> (4 Zapfentypen statt 3 wie beim Menschen). Ohne UV-Lampe fehlt ihnen ein ganzer Sinn.</li>
+            <li>Wellensittiche werden 8–15 Jahre alt. Das sind keine Wegwerftiere.</li>
+            <li>Vögel verbergen Krankheit instinktiv. Wenn ein Vogel krank aussieht, ist er oft schon lange krank.</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
+          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
+        </div>
+        <div class="grid-3 animal-topic-grid">
 
           <article class="card">
             <div class="card-body">
@@ -5206,16 +5247,7 @@
           </article>
           <article class="card">
             <div class="card-body">
-              <h3>Spiegel und Plastikvögel ersetzen keinen Partner</h3><div class="article-rhythm" data-enhancement="voegel-beschaeftigung">
-            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
-            <h3>Vögel brauchen Reize, die zu Schwarm, Flug und Futtersuche passen.</h3>
-            <p>Der wichtigste „Trick“ ist nicht, dass ein Vogel etwas für Menschen vorführt. Wichtig ist eine Umgebung, in der er selbst aktiv sein kann.</p>
-            <div class="argument-grid">
-              <article class="rhythm-card"><span class="eyebrow">Futtersuche</span><h3>Erarbeiten lassen</h3><p>Kräuter, Gräser, Kolbenhirse oder Futter an wechselnden Stellen regen natürliches Suchen und Knabbern an.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Klettern</span><h3>Frische Zweige</h3><p>Ungiftige Naturäste, Schaukeln und Landeplätze machen den Raum interessanter als Plastikstangen im Käfig.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Schwarm</span><h3>Gemeinsam statt zahm erzwingen</h3><p>Rituale, Ansprache und freiwilliges Targettraining können bereichern. Ein Partner bleibt trotzdem unersetzlich.</p></article>
-            </div>
-          </div>
+              <h3>Spiegel und Plastikvögel ersetzen keinen Partner</h3>
               <p>Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.</p>
               <a class="card-link" href="../voegel/partnerersatz/index.html">Thema öffnen</a>
             </div>

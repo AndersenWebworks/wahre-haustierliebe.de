@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5095,11 +5131,13 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../hunde/index.html">Zurück zur Übersicht: Hund</a></p>
-<div class="section-feedback-heading"><h2 id="hunde-hofhaltung-und-zwinger">Hofhaltung und Zwinger</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-hofhaltung-und-zwinger" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="hunde-hofhaltung-und-zwinger" class="topic-page-content">
+<h2 id="hunde-hofhaltung-und-zwinger">Hofhaltung und Zwinger</h2>
         <p>Auf dem Land weit verbreitet: der Hund lebt draußen, auf dem Hof, vielleicht im Zwinger. Das ist nicht automatisch verboten, aber es ist auch kein Freibrief. Die <a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tierschutz-hundeverordnung" data-glossary-title="Tierschutz-Hundeverordnung" data-glossary-text="Deutsche Verordnung mit Mindestanforderungen an Hundehaltung, etwa Auslauf, Sozialkontakt und Zwingerhaltung." data-glossary-href="../../glossar/index.html#tierschutz-hundeverordnung" aria-describedby="glossary-term-popover">Tierschutz-Hundeverordnung</span></a> regelt Mindestanforderungen: Zwingergröße abhängig von der Schulterhöhe, ausreichend Auslauf im Freien außerhalb des Zwingers, Witterungsschutz, Umgang mit einer Betreuungsperson und regelmäßig möglichen Kontakt zu Artgenossen.</p>
         <p>Wichtig: Seit der Reform ist vor allem die <span class="glossary-term" data-glossary-key="anbindehaltung" data-glossary-title="Anbindehaltung" data-glossary-text="Haltung, bei der ein Tier dauerhaft oder lange angebunden ist und sich kaum frei bewegen kann." data-glossary-href="../../glossar/index.html#anbindehaltung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Anbindehaltung</span> grundsätzlich verboten. Zwingerhaltung bleibt rechtlich möglich, aber nur als enger Rahmen, nicht als Dauerersatz für Alltag, Beziehung und Bewegung. Ein Hund, der den größten Teil seines Lebens allein hinter Gittern oder auf demselben Hofstück verbringt, bekommt nicht das, was die Verordnung eigentlich meint.</p>
         <p>Dass man solche Haltungen trotzdem noch sieht, liegt nicht daran, dass sie automatisch in Ordnung wären. Oft wird erst kontrolliert, wenn jemand konkrete Hinweise gibt. Dazu kommt die alte Hofhund-Logik: „Der hat doch Platz und frische Luft.“ Platz ersetzt aber keinen Auslauf außerhalb, keine Beschäftigung und keinen sozialen Anschluss.</p>
         <p>Problematisch wird es, wenn der Hund als Alarmanlage gehalten wird. Den ganzen Tag allein auf dem Hof, ohne Beschäftigung, ohne echte Beziehung zu Menschen. Ein Hund, der nur bellt, wenn jemand kommt, und ansonsten allein existiert, ist kein glücklicher Hund – egal wie groß der Garten ist. Mehr über <a href="../../mensch/index.html">die Psychologie hinter solcher Tierhaltung</a>.</p>
+        </div>
       </div>
     </div>
   </section>

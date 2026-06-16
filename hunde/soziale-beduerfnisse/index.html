@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5084,7 +5120,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="hunde-soziale-beduerfnisse" class="page active">
+<section id="hunde-soziale-beduerfnisse" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Soziale Bedürfnisse beim Hund</h1>
@@ -5095,7 +5131,17 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../hunde/index.html">Zurück zur Übersicht: Hund</a></p>
-<div class="section-feedback-heading"><h2 id="hunde-soziale-beduerfnisse">Soziale Bedürfnisse: Mehr als Futter und Gassi</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-soziale-beduerfnisse" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="hunde-soziale-beduerfnisse" class="topic-page-content">
+<h2 id="hunde-soziale-beduerfnisse">Soziale Bedürfnisse: Mehr als Futter und Gassi</h2><div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Ein Hund braucht Aufgaben, die ihn ruhiger und sicherer machen.</h3>
+            <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen“, sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Nasenarbeit</span><h3>Suchen statt hochdrehen</h3><p>Futterbeutel, Geruchsspuren oder versteckte Leckerchen lasten viele Hunde besser aus als immer mehr Tempo.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Alltagssignale</span><h3>Nützlich trainieren</h3><p>Rückruf, Decke, Warten, Tauschen und ruhiges Anleinen sind keine Kunststücke, sondern echte Sicherheit im Alltag.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Ruhe</span><h3>Entspannung lernen</h3><p>Nach Beschäftigung braucht ein Hund Schlaf und Reizpause. Dauerprogramm macht viele Hunde nicht glücklich, sondern nervös.</p></article>
+            </div>
+          </div>
         <p>Hunde sind hochsoziale Tiere. In der Natur leben sie in Familienverbänden, schlafen zusammen, jagen zusammen, kommunizieren ständig. Ein Hund, der den Großteil des Tages allein verbringt, lebt gegen seine Natur.</p>
         <p>Was Hunde brauchen – jeden Tag:</p>
         <ul>
@@ -5105,6 +5151,7 @@
           <li>Einen festen Tagesrhythmus mit verlässlichen Strukturen</li>
           <li>Kontakt zu anderen Hunden (<span class="glossary-term" data-glossary-key="sozialisation" data-glossary-title="Sozialisation" data-glossary-text="Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen und Artgenossen kennenlernen." data-glossary-href="../../glossar/index.html#sozialisation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Sozialverhalten</span> muss gelernt und gepflegt werden)</li>
         </ul>
+        </div>
       </div>
     </div>
   </section>

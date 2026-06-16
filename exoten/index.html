@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5141,42 +5177,38 @@
 
   <main id="main-content" tabindex="-1">
 <section id="exoten" class="page active" data-enhancements-hydrated="true">
-    <div class="hero">
+    <div class="hero" style="background: linear-gradient(135deg, #5B7A3A 0%, #3D5425 100%);">
       <div class="container"><div class="article-hero-copy">
-        <h1>Exoten</h1>
-        <p>Exoten sind keine stille Nebenbei-Haltung. Reptilien, Schildkröten und Fische hängen an Technik, Klima, Licht, Wasserwerten und Fachwissen.</p>
+        <h1>Exoten – technisch anspruchsvoll, nichts für Anfänger</h1>
+        <p>Reptilien, Schildkröten, Fische: Sie sind leise, machen nichts kaputt – und sterben leise, wenn die Haltung nicht stimmt.</p>
       <div class="article-kicker"><span>Technik ist Haltung</span><span>UV-B</span><span>Meldepflichten</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen" data-share-reason="Das Bild soll Faszination mit Verantwortung koppeln." style="--image-position: center 45%;"><img src="../assets/images/optimized/bearded-dragon-terrarium.jpg" alt="Bartagame im Terrarium als Bild für Technik, Licht und Klima" loading="eager" decoding="async" width="960" height="674" fetchpriority="high"><figcaption class="context-caption">Leise Tiere brauchen oft die präziseste Technik.</figcaption></figure></div>
     </div>
 
     <div class="section">
       <div class="container">
         <div class="info-box">
-          <h3>So ist dieser Bereich aufgebaut</h3>
-          <p>Exoten sind keine stille Nebenbei-Haltung. Reptilien, Schildkröten und Fische hängen an Technik, Klima, Licht, Wasserwerten und Fachwissen.</p>
-          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
+          <h3>Auf einen Blick</h3>
+          <ul>
+            <li>Reptilien brauchen <span class="glossary-term" data-glossary-key="uv-b" data-glossary-title="UV-B-Strahlung" data-glossary-text="Ultraviolette Strahlung, die viele Reptilien und Vögel für Vitamin-D3-Bildung und normale Wahrnehmung brauchen." data-glossary-href="../glossar/index.html#uv-b" aria-describedby="glossary-term-popover" tabindex="0" role="button">UV-B-Strahlung</span> für die Vitamin-D3-Synthese. Ohne UV-B: Knochenerweichung und Tod.</li>
+            <li>Europäische Landschildkröten werden 50–80 Jahre alt. Manche über 100.</li>
+            <li>Goldfische brauchen mindestens 200 Liter – das klassische Goldfischglas ist tierschutzwidrig.</li>
+            <li>Die laufenden Technikkosten für Terrarien (Beleuchtung, Heizung, Luftfeuchtigkeit) werden massiv unterschätzt.</li>
+            <li>Kleine Fehler in der Exotenhaltung verursachen irreparable Organschäden.</li>
+          </ul>
         </div><div class="article-rhythm quote-band" data-enhancement="exoten-leise">
             <span class="eyebrow">Harte Wahrheit</span>
             <blockquote>Bei Exoten heißt „pflegeleicht“ oft nur: Das Tier stirbt leise.</blockquote>
             <p>Temperatur, UV-B, Feuchtigkeit, Futter und Meldepflichten sind keine Details. Sie sind die Haltung.</p>
           </div>
-        <div class="grid-3">
+        <div class="info-box">
+          <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
+          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
+        </div>
+        <div class="grid-3 animal-topic-grid">
 
           <article class="card">
             <div class="card-body">
-              <h3>Reptilien halten</h3><div class="article-rhythm metric-grid" data-enhancement="exoten-technik">
-            <div class="metric-card"><strong>UV-B</strong><span>ohne passende Lampe drohen Knochen- und Organschäden.</span></div>
-            <div class="metric-card"><strong>30–60 €</strong><span>monatliche Stromkosten sind bei Terrarien kein Ausnahmefall.</span></div>
-            <div class="metric-card"><strong>täglich</strong><span>Temperatur, Feuchtigkeit, Futter und Technik prüfen.</span></div>
-          </div><div class="article-rhythm" data-enhancement="exoten-beschaeftigung">
-            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
-            <h3>Bei Exoten heißt Beschäftigung vor allem: Lebensraum richtig bauen.</h3>
-            <p>Viele Exoten wollen keine Tricks lernen. Sie brauchen Klima, Licht, Verstecke, Klettermöglichkeiten und Futterreize, die zu ihrer Art passen.</p>
-            <div class="argument-grid">
-              <article class="rhythm-card"><span class="eyebrow">Reptilien</span><h3>Zonen statt Deko</h3><p>Wärmeplätze, kühlere Bereiche, Korkröhren, Äste, Steine und Sichtschutz geben dem Tier echte Wahlmöglichkeiten.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Aquarium</span><h3>Umgebung statt Glas</h3><p>Pflanzen, Strömung, Verstecke, passende Gruppen und stabile Wasserwerte beschäftigen Fische besser als jeder Menschkontakt.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Schildkröten</span><h3>Freigehege strukturieren</h3><p>Sonnenplätze, Schatten, Futterpflanzen, Unebenheiten und Rückzug machen ein Gehege lebendiger und tiergerechter.</p></article>
-            </div>
-          </div>
+              <h3>Reptilien halten</h3>
               <p>Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.</p>
               <a class="card-link" href="../exoten/reptilien/index.html">Thema öffnen</a>
             </div>
@@ -5190,10 +5222,7 @@
           </article>
           <article class="card">
             <div class="card-body">
-              <h3>Fische halten</h3><div class="article-rhythm myth-truth" data-enhancement="exoten-goldfisch">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas.“</h3><p>Das Glas ist ein Symbol für falsche Haustierbilder, nicht für einfache Haltung.</p></div>
-            <div class="truth"><span class="eyebrow">Fakt</span><h3>Filter, Volumen, Wasserwerte.</h3><p>Fische sind nicht pflegeleicht, nur weil sie leise sterben. Aquariumhaltung ist Biologie plus Technik.</p></div>
-          </div>
+              <h3>Fische halten</h3>
               <p>Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.</p>
               <a class="card-link" href="../exoten/fische/index.html">Thema öffnen</a>
             </div>

@@ -573,6 +573,38 @@ function normalizeAssetUrls(root) {
       articleEnhancements[pageId] = (articleEnhancements[pageId] || []).concat(articleEnhancementAddons[pageId]);
     });
 
+    var enhancementTopicTargets = {
+      'hunde-allein': 'hunde-allein-zu-hause',
+      'hunde-beschaeftigung': 'hunde-soziale-beduerfnisse',
+      'hunde-share': 'hunde-entscheidung',
+      'katzen-still': 'katzen-stilles-leiden',
+      'katzen-beschaeftigung': 'katzen-wohnungshaltung',
+      'katzen-einzeljaeger': 'katzen-sozialverhalten',
+      'katzen-kastration-share': 'katzen-kastration',
+      'voegel-schwarm': 'voegel-schwarmhaltung',
+      'voegel-einzelhaltung': 'voegel-schwarmhaltung',
+      'voegel-beschaeftigung': 'voegel-partnerersatz',
+      'kleintiere-kinder': 'kleintiere-kaninchen',
+      'kleintiere-signale': 'kleintiere-hamster',
+      'exoten-beschaeftigung': 'exoten-reptilien',
+      'exoten-technik': 'exoten-reptilien',
+      'exoten-goldfisch': 'exoten-fische',
+      'pferde-beschaeftigung': 'pferde-platzbedarf',
+      'pferde-haltung': 'pferde-haltungsformen',
+      'pferde-reitbeteiligung': 'pferde-reitbeteiligung'
+    };
+
+    Object.keys(articleEnhancements).forEach(function(sourcePageId) {
+      articleEnhancements[sourcePageId] = articleEnhancements[sourcePageId].filter(function(item) {
+        var match = item.html.match(/data-enhancement="([^"]+)"/);
+        var targetPageId = match && enhancementTopicTargets[match[1]];
+        if (!targetPageId) return true;
+        articleEnhancements[targetPageId] = articleEnhancements[targetPageId] || [];
+        articleEnhancements[targetPageId].push(item);
+        return false;
+      });
+    });
+
     function hydrateArticleHeroImages() {
       Object.keys(articleHeroImages).forEach(function(pageId) {
         var page = document.getElementById(pageId);
@@ -615,6 +647,7 @@ function normalizeAssetUrls(root) {
 
     function findHeading(page, text) {
       return Array.from(page.querySelectorAll('h2, h3')).find(function(heading) {
+        if (heading.closest('.card, .rhythm-card, .metric-card, .signal-card, .compare-card, .evidence-card, .faq-item')) return false;
         return heading.textContent.replace(/\s+/g, ' ').trim().indexOf(text) !== -1;
       });
     }
@@ -626,6 +659,7 @@ function normalizeAssetUrls(root) {
 
         articleEnhancements[pageId].forEach(function(item) {
           var target = item.afterSelector ? page.querySelector(item.afterSelector) : findHeading(page, item.afterHeading);
+          if (!target && item.afterSelector) target = findHeading(page, '');
           if (!target) return;
           target.insertAdjacentHTML('afterend', item.html);
         });

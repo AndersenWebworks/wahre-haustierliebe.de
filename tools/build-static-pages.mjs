@@ -1628,24 +1628,8 @@ function topicChildrenFor(pageId) {
   return topicPages.filter((topic) => topic.sourcePage === pageId);
 }
 
-function buildAnimalHubSection(page) {
+function buildAnimalHubSection(source, page) {
   const children = topicChildrenFor(page.id);
-  const introByPage = {
-    hunde: 'Hundehaltung ist kein einzelnes Thema. Alleinbleiben, Kosten, Auslauf, Gesundheit, Büroalltag und Zwingerhaltung sind eigene Entscheidungen mit eigenen Risiken.',
-    katzen: 'Katzenhaltung wirkt oft leise und unkompliziert. Genau deshalb brauchen Wohnung, Sozialkontakt, Kastration, Kosten, Streunerfragen und Warnsignale eigene Aufmerksamkeit.',
-    voegel: 'Vogelhaltung scheitert selten an einem großen Fehler, sondern an vielen unterschätzten Grundbedingungen: Schwarm, Licht, Flugraum, Luft und frühe Krankheitserkennung.',
-    kleintiere: 'Kleintiere sind kein Sammelbegriff für einfache Haustiere. Kaninchen, Meerschweinchen, Hamster, Ratten, Degus und Chinchillas brauchen sehr unterschiedliche Haltungsformen.',
-    exoten: 'Exoten sind keine stille Nebenbei-Haltung. Reptilien, Schildkröten und Fische hängen an Technik, Klima, Licht, Wasserwerten und Fachwissen.',
-    pferde: 'Pferdehaltung ist ein eigener Lebensbereich: Herde, Fläche, Bewegung, Stallform, Kosten und Versorgung tragen über Jahrzehnte.',
-  };
-  const titleByPage = {
-    hunde: 'Hunde',
-    katzen: 'Katzen',
-    voegel: 'Vögel',
-    kleintiere: 'Kleintiere',
-    exoten: 'Exoten',
-    pferde: 'Pferde',
-  };
   const cards = children.map((child) => `
           <article class="card">
             <div class="card-body">
@@ -1655,22 +1639,17 @@ function buildAnimalHubSection(page) {
             </div>
           </article>`).join('');
 
-  return `<section id="${page.id}" class="page">
-    <div class="hero">
-      <div class="container">
-        <h1>${escapeHtml(titleByPage[page.id])}</h1>
-        <p>${escapeHtml(introByPage[page.id])}</p>
-      </div>
-    </div>
+  const sourceSection = extractSection(source, page.id);
+  const firstTopicHeading = sourceSection.indexOf('<h2');
+  if (firstTopicHeading === -1) throw new Error(`Animal hub has no first topic heading: ${page.id}`);
 
-    <div class="section">
-      <div class="container">
+  const opening = sourceSection.slice(0, firstTopicHeading).trimEnd();
+  return `${opening}
         <div class="info-box">
-          <h3>So ist dieser Bereich aufgebaut</h3>
-          <p>${escapeHtml(introByPage[page.id])}</p>
-          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
+          <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
+          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
         </div>
-        <div class="grid-3">
+        <div class="grid-3 animal-topic-grid">
 ${cards}
         </div>
       </div>
@@ -1706,7 +1685,9 @@ function extractTopicSection(source, page) {
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="#${parent.id}" onclick="navigateTo('${parent.id}');return false">Zurück zur Übersicht: ${escapeHtml(parentLabel)}</a></p>
+        <div id="${page.sourceAnchor}" class="topic-page-content">
 ${topicHtml}
+        </div>
       </div>
     </div>
   </section>`;
@@ -2812,7 +2793,7 @@ async function main() {
       continue;
     }
     if (hubPageIds.has(page.id)) {
-      const section = buildAnimalHubSection(page);
+      const section = buildAnimalHubSection(source, page);
       const html = buildHtmlPage({ page, header, section, commonAfterSections });
       await writeFileEnsured(outputPathFor(page), html);
       continue;

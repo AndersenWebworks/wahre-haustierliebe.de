@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5174,38 +5210,38 @@
 
   <main id="main-content" tabindex="-1">
 <section id="hunde" class="page active" data-enhancements-hydrated="true">
-    <div class="hero">
+    <div class="hero" style="background: linear-gradient(135deg, #7B5C3A 0%, #5A3F25 100%);">
       <div class="container"><div class="article-hero-copy">
-        <h1>Hunde</h1>
-        <p>Hundehaltung ist kein einzelnes Thema. Alleinbleiben, Kosten, Auslauf, Gesundheit, Büroalltag und Zwingerhaltung sind eigene Entscheidungen mit eigenen Risiken.</p>
+        <h1>Hunde – was du wirklich wissen musst</h1>
+        <p>Hunde sind Rudeltiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
       <div class="article-kicker"><span>4–5 h allein</span><span>12–20 Tsd. €</span><span>Beziehung täglich</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen" data-share-reason="Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen." style="--image-position: center 48%;"><img src="../assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung" loading="eager" decoding="async" width="960" height="643" fetchpriority="high"><figcaption class="context-caption">Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.</figcaption></figure></div>
     </div>
 
     <div class="section">
       <div class="container">
         <div class="info-box">
-          <h3>So ist dieser Bereich aufgebaut</h3>
-          <p>Hundehaltung ist kein einzelnes Thema. Alleinbleiben, Kosten, Auslauf, Gesundheit, Büroalltag und Zwingerhaltung sind eigene Entscheidungen mit eigenen Risiken.</p>
-          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
+          <h3>Auf einen Blick</h3>
+          <ul>
+            <li>Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein sein.</li>
+            <li>Ein Hund kostet im Laufe seines Lebens zwischen 12.000 und 20.000 Euro.</li>
+            <li>Kastration beim Rüden: ca. 200–400 Euro, bei der Hündin: ca. 400–800 Euro (<span class="glossary-term" data-glossary-key="got" data-glossary-title="GOT" data-glossary-text="Gebührenordnung für Tierärzte. Sie regelt, wie tierärztliche Leistungen in Deutschland abgerechnet werden." data-glossary-href="../glossar/index.html#got" aria-describedby="glossary-term-popover" tabindex="0" role="button">GOT 2022</span>).</li>
+            <li>Etwa 80 % der unkastrierten Rüden über 6 Jahre entwickeln Prostataprobleme.</li>
+            <li>Ein Garten ersetzt keine Spaziergänge – Hunde brauchen Auslauf, neue Reize, Gerüche und Sozialkontakte außerhalb ihres gewohnten Territoriums.</li>
+          </ul>
         </div><div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
             <div class="metric-card"><strong>4–5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
             <div class="metric-card"><strong>12–20 Tsd. €</strong><span>realistische Lebenszeitkosten, bevor chronische Krankheiten dazukommen.</span></div>
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>
-        <div class="grid-3">
+        <div class="info-box">
+          <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
+          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
+        </div>
+        <div class="grid-3 animal-topic-grid">
 
           <article class="card">
             <div class="card-body">
-              <h3>Soziale Bedürfnisse beim Hund</h3><div class="article-rhythm" data-enhancement="hunde-beschaeftigung">
-            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
-            <h3>Ein Hund braucht Aufgaben, die ihn ruhiger und sicherer machen.</h3>
-            <p>Gute Beschäftigung ist nicht „auspowern bis zum Umfallen“, sondern gemeinsame Orientierung: suchen, warten, verstehen, wieder runterfahren.</p>
-            <div class="argument-grid">
-              <article class="rhythm-card"><span class="eyebrow">Nasenarbeit</span><h3>Suchen statt hochdrehen</h3><p>Futterbeutel, Geruchsspuren oder versteckte Leckerchen lasten viele Hunde besser aus als immer mehr Tempo.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Alltagssignale</span><h3>Nützlich trainieren</h3><p>Rückruf, Decke, Warten, Tauschen und ruhiges Anleinen sind keine Kunststücke, sondern echte Sicherheit im Alltag.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Ruhe</span><h3>Entspannung lernen</h3><p>Nach Beschäftigung braucht ein Hund Schlaf und Reizpause. Dauerprogramm macht viele Hunde nicht glücklich, sondern nervös.</p></article>
-            </div>
-          </div>
+              <h3>Soziale Bedürfnisse beim Hund</h3>
               <p>Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.</p>
               <a class="card-link" href="../hunde/soziale-beduerfnisse/index.html">Thema öffnen</a>
             </div>

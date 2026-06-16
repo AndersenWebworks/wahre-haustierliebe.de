@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="exoten-reptilien" class="page active">
+<section id="exoten-reptilien" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Reptilien halten</h1>
@@ -5091,11 +5127,26 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../exoten/index.html">Zurück zur Übersicht: Exoten</a></p>
-<div class="section-feedback-heading"><h2 id="exoten-reptilien">Reptilien</h2><button type="button" class="section-feedback-action" data-feedback-section="exoten-reptilien" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="exoten-reptilien" class="topic-page-content">
+<h2 id="exoten-reptilien">Reptilien</h2><div class="article-rhythm metric-grid" data-enhancement="exoten-technik">
+            <div class="metric-card"><strong>UV-B</strong><span>ohne passende Lampe drohen Knochen- und Organschäden.</span></div>
+            <div class="metric-card"><strong>30–60 €</strong><span>monatliche Stromkosten sind bei Terrarien kein Ausnahmefall.</span></div>
+            <div class="metric-card"><strong>täglich</strong><span>Temperatur, Feuchtigkeit, Futter und Technik prüfen.</span></div>
+          </div><div class="article-rhythm" data-enhancement="exoten-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Bei Exoten heißt Beschäftigung vor allem: Lebensraum richtig bauen.</h3>
+            <p>Viele Exoten wollen keine Tricks lernen. Sie brauchen Klima, Licht, Verstecke, Klettermöglichkeiten und Futterreize, die zu ihrer Art passen.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Reptilien</span><h3>Zonen statt Deko</h3><p>Wärmeplätze, kühlere Bereiche, Korkröhren, Äste, Steine und Sichtschutz geben dem Tier echte Wahlmöglichkeiten.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Aquarium</span><h3>Umgebung statt Glas</h3><p>Pflanzen, Strömung, Verstecke, passende Gruppen und stabile Wasserwerte beschäftigen Fische besser als jeder Menschkontakt.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Schildkröten</span><h3>Freigehege strukturieren</h3><p>Sonnenplätze, Schatten, Futterpflanzen, Unebenheiten und Rückzug machen ein Gehege lebendiger und tiergerechter.</p></article>
+            </div>
+          </div>
         <p>Bartagamen, Kornnattern, Leopardgeckos – sie wirken unkompliziert. Kein Gassi, kein Bellen, kein Fellverlust. Aber hinter der scheinbaren Anspruchslosigkeit steckt ein hochkomplexes System aus Temperaturzonen, Luftfeuchtigkeit, <span class="glossary-term" data-glossary-key="uv-b" data-glossary-title="UV-B-Strahlung" data-glossary-text="Ultraviolette Strahlung, die viele Reptilien und Vögel für Vitamin-D3-Bildung und normale Wahrnehmung brauchen." data-glossary-href="../../glossar/index.html#uv-b" aria-describedby="glossary-term-popover" tabindex="0" role="button">UV-Beleuchtung</span> und artgerechter Ernährung.</p>
         <p><strong>UV-B-Strahlung</strong> ist für die meisten Reptilien lebensnotwendig. Ohne UV-B kann der Körper kein Vitamin D3 bilden, das wiederum für die Kalziumaufnahme nötig ist. Fehlt Kalzium, erweichen die Knochen (<span class="glossary-term" data-glossary-key="metabolische-knochenerkrankung" data-glossary-title="Metabolische Knochenerkrankung" data-glossary-text="Knochenerweichung bei Reptilien, meist durch UV-B-, Vitamin-D3- oder Kalziummangel." data-glossary-href="../../glossar/index.html#metabolische-knochenerkrankung" aria-describedby="glossary-term-popover" tabindex="0" role="button">metabolische Knochenerkrankung</span>). Das Tier verformt sich, kann sich nicht mehr bewegen und stirbt – langsam und qualvoll.</p>
         <p><strong><span class="glossary-term" data-glossary-key="artgerecht" data-glossary-title="Artgerecht" data-glossary-text="Haltung, die sich an den Bedürfnissen der Tierart orientiert: Platz, Sozialstruktur, Futter, Klima und Beschäftigung." data-glossary-href="../../glossar/index.html#artgerecht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Terrariengröße</span>:</strong> Faustregel: Mindestens 5× Körperlänge in der Breite, 3× in der Tiefe, 3× in der Höhe – für kletternde Arten deutlich mehr. Die meisten Terrarien, die im Handel angeboten werden, sind zu klein.</p>
         <p><strong>Technikkosten:</strong> UV-Lampen, Wärmelampen, Thermostate, Hygrometer, Nebelanlage (bei tropischen Arten) – die monatlichen Stromkosten für ein Terrarium liegen schnell bei 30–60 Euro. Dazu kommen Futter (Lebendfutter wie Heimchen, Heuschrecken: 10–30 Euro/Monat) und regelmäßiger Lampentausch.</p>
+        </div>
       </div>
     </div>
   </section>

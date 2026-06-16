@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="katzen-wohnungshaltung" class="page active">
+<section id="katzen-wohnungshaltung" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Wohnungshaltung bei Katzen</h1>
@@ -5091,7 +5127,17 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../katzen/index.html">Zurück zur Übersicht: Katzen</a></p>
-<div class="section-feedback-heading"><h2 id="katzen-wohnungshaltung">Wohnungshaltung – ein Kompromiss, keine Ideallösung</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-wohnungshaltung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="katzen-wohnungshaltung" class="topic-page-content">
+<h2 id="katzen-wohnungshaltung">Wohnungshaltung – ein Kompromiss, keine Ideallösung</h2><div class="article-rhythm" data-enhancement="katzen-beschaeftigung">
+            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
+            <h3>Wohnungskatzen brauchen Jagd, Kontrolle und Rückzug.</h3>
+            <p>Spielzeug allein reicht nicht. Entscheidend ist, ob die Katze wählen, beobachten, jagen, klettern und sich ungestört zurückziehen kann.</p>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Jagdspiel</span><h3>Richtig spielen</h3><p>Kurze Einheiten mit Lauern, Hetzen, Fangen und danach Futter passen besser zur Katze als hektisches Wedeln vor der Nase.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Futter erarbeiten</span><h3>Nicht nur Napf</h3><p>Fummelbretter, Suchspiele und versteckte Trockenfutterstücke bringen Beschäftigung in den Alltag, ohne die Katze zu überfordern.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Clicker</span><h3>Freiwillige Tricks</h3><p>Targettraining oder Pfote geben kann Spaß machen, wenn die Katze jederzeit gehen darf und die Einheit kurz bleibt.</p></article>
+            </div>
+          </div>
         <p>Reine Wohnungshaltung kann funktionieren, wenn die Bedingungen stimmen. Aber sie ist nie dasselbe wie ein sicheres Revier mit <span class="glossary-term" data-glossary-key="freigang" data-glossary-title="Freigang" data-glossary-text="Unbeaufsichtigter oder kontrollierter Zugang nach draußen, besonders bei Katzen ein wichtiger, aber riskanter Haltungsaspekt." data-glossary-href="../../glossar/index.html#freigang" aria-describedby="glossary-term-popover" tabindex="0" role="button">Freigang</span>.</p>
         <p>Was Wohnungskatzen mindestens brauchen:</p>
         <ul>
@@ -5102,6 +5148,7 @@
           <li>Rückzugsorte, an denen die Katze ungestört sein kann</li>
           <li>Mindestens ein Katzenklo pro Katze plus eines extra – an ruhigen Standorten</li>
         </ul>
+        </div>
       </div>
     </div>
   </section>

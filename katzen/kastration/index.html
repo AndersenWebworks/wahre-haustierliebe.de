@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="katzen-kastration" class="page active">
+<section id="katzen-kastration" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Kastration bei Katzen</h1>
@@ -5091,14 +5127,24 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../katzen/index.html">Zurück zur Übersicht: Katzen</a></p>
-<div class="section-feedback-heading"><h2 id="katzen-kastration">Kastration – warum sie bei Katzen Pflicht sein sollte</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-kastration" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="katzen-kastration" class="topic-page-content">
+<h2 id="katzen-kastration">Kastration – warum sie bei Katzen Pflicht sein sollte</h2>
         <div class="warning-box">
           <h3>2 Millionen Streunerkatzen in Deutschland</h3>
           <p>Die meisten sind Nachkommen von unkastrierten Freigängerkatzen. Eine einzige unkastrierte Katze kann in wenigen Jahren für Hunderte Nachkommen verantwortlich sein. Kastration ist der wirksamste Tierschutz, den es gibt.</p>
-        </div>
+        </div><div class="article-rhythm share-callout" data-enhancement="katzen-kastration-share">
+            <span class="eyebrow">Kastration teilen</span>
+            <h3>2 Millionen Streunerkatzen sind kein Naturproblem.</h3>
+            <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Dieser Fakt muss vor dem nächsten „einmal Babys“-Satz sichtbar werden.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', '2 Millionen Streunerkatzen in Deutschland: Kastration ist praktischer Tierschutz. Lies das:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>
         <p>Unkastrierte Kater markieren mit übel riechendem Urin, streunen, geraten in Revierkämpfe und tragen dabei oft schwere Verletzungen davon. Unkastrierte Katzen werden alle zwei bis drei Wochen <span class="glossary-term" data-glossary-key="rolligkeit" data-glossary-title="Rolligkeit" data-glossary-text="Paarungsbereite Zyklusphase bei Katzen, oft mit Stress, Rufen und Unruhe." data-glossary-href="../../glossar/index.html#rolligkeit" aria-describedby="glossary-term-popover" tabindex="0" role="button">rollig</span> – ein Zustand, der mit erheblichem Stress, lautem Rufen und Unruhe verbunden ist. Dazu kommen ernsthafte Gesundheitsrisiken: Gebärmutterentzündung, Zysten und ein erhöhtes Tumorrisiko.</p>
         <p>Kastration beseitigt diese Probleme, senkt den Stresslevel deutlich und schützt vor unkontrollierter Vermehrung. Die Kosten nach GOT 2022: <strong>Kater ca. 80–150 Euro, Katze ca. 120–250 Euro</strong>. Im Verhältnis zu den Folgekosten einer ungewollten <span class="glossary-term" data-glossary-key="traechtigkeit" data-glossary-title="Trächtigkeit" data-glossary-text="Schwangerschaft bei Tieren. Ungewollte Trächtigkeit erzeugt Verantwortung und Gesundheitsrisiken." data-glossary-href="../../glossar/index.html#traechtigkeit" aria-describedby="glossary-term-popover" tabindex="0" role="button">Trächtigkeit</span> oder einer Gebärmutterentzündung ist das wenig. Alles Weitere – auch die häufigsten Gegenargumente und warum sie nicht halten – auf der Seite <a href="../../kastration/index.html">Kastration</a>.</p>
         <p>In einigen Landkreisen gilt bereits eine Kastrations- und Kennzeichnungspflicht für Freigängerkatzen. Im Landkreis Mecklenburgische Seenplatte etwa in Röbel, Malchow und Waren. Im Landkreis Ludwigslust-Parchim hat der Kreistag eine Kastrationspflicht bisher abgelehnt – zum Nachteil der Streunerkatzen vor Ort.</p>
+        </div>
       </div>
     </div>
   </section>

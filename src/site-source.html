@@ -3662,6 +3662,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3742,6 +3743,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -7553,6 +7589,38 @@
       articleEnhancements[pageId] = (articleEnhancements[pageId] || []).concat(articleEnhancementAddons[pageId]);
     });
 
+    var enhancementTopicTargets = {
+      'hunde-allein': 'hunde-allein-zu-hause',
+      'hunde-beschaeftigung': 'hunde-soziale-beduerfnisse',
+      'hunde-share': 'hunde-entscheidung',
+      'katzen-still': 'katzen-stilles-leiden',
+      'katzen-beschaeftigung': 'katzen-wohnungshaltung',
+      'katzen-einzeljaeger': 'katzen-sozialverhalten',
+      'katzen-kastration-share': 'katzen-kastration',
+      'voegel-schwarm': 'voegel-schwarmhaltung',
+      'voegel-einzelhaltung': 'voegel-schwarmhaltung',
+      'voegel-beschaeftigung': 'voegel-partnerersatz',
+      'kleintiere-kinder': 'kleintiere-kaninchen',
+      'kleintiere-signale': 'kleintiere-hamster',
+      'exoten-beschaeftigung': 'exoten-reptilien',
+      'exoten-technik': 'exoten-reptilien',
+      'exoten-goldfisch': 'exoten-fische',
+      'pferde-beschaeftigung': 'pferde-platzbedarf',
+      'pferde-haltung': 'pferde-haltungsformen',
+      'pferde-reitbeteiligung': 'pferde-reitbeteiligung'
+    };
+
+    Object.keys(articleEnhancements).forEach(function(sourcePageId) {
+      articleEnhancements[sourcePageId] = articleEnhancements[sourcePageId].filter(function(item) {
+        var match = item.html.match(/data-enhancement="([^"]+)"/);
+        var targetPageId = match && enhancementTopicTargets[match[1]];
+        if (!targetPageId) return true;
+        articleEnhancements[targetPageId] = articleEnhancements[targetPageId] || [];
+        articleEnhancements[targetPageId].push(item);
+        return false;
+      });
+    });
+
     function hydrateArticleHeroImages() {
       Object.keys(articleHeroImages).forEach(function(pageId) {
         var page = document.getElementById(pageId);
@@ -7595,6 +7663,7 @@
 
     function findHeading(page, text) {
       return Array.from(page.querySelectorAll('h2, h3')).find(function(heading) {
+        if (heading.closest('.card, .rhythm-card, .metric-card, .signal-card, .compare-card, .evidence-card, .faq-item')) return false;
         return heading.textContent.replace(/\s+/g, ' ').trim().indexOf(text) !== -1;
       });
     }
@@ -7606,6 +7675,7 @@
 
         articleEnhancements[pageId].forEach(function(item) {
           var target = item.afterSelector ? page.querySelector(item.afterSelector) : findHeading(page, item.afterHeading);
+          if (!target && item.afterSelector) target = findHeading(page, '');
           if (!target) return;
           target.insertAdjacentHTML('afterend', item.html);
         });

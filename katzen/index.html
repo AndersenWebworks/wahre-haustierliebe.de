@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5157,21 +5193,30 @@
 
   <main id="main-content" tabindex="-1">
 <section id="katzen" class="page active" data-enhancements-hydrated="true">
-    <div class="hero">
+    <div class="hero" style="background: linear-gradient(135deg, #6B5B73 0%, #4A3D54 100%);">
       <div class="container"><div class="article-hero-copy">
-        <h1>Katzen</h1>
-        <p>Katzenhaltung wirkt oft leise und unkompliziert. Genau deshalb brauchen Wohnung, Sozialkontakt, Kastration, Kosten, Streunerfragen und Warnsignale eigene Aufmerksamkeit.</p>
+        <h1>Katzen – <span class="glossary-term" data-glossary-key="einzeljaeger" data-glossary-title="Einzeljäger" data-glossary-text="Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will." data-glossary-href="../glossar/index.html#einzeljaeger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzeljäger</span>, aber keine <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet." data-glossary-href="../glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzelgänger</span></h1>
+        <p>Katzen sind Meister darin, Stress und Schmerz zu verbergen. Was nach einem pflegeleichten Tier aussieht, kann ein stilles Leiden sein.</p>
       <div class="article-kicker"><span>Nicht allein denken</span><span>Kastration schützt</span><span>Leises Leiden</span></div></div><figure class="article-hero-media image-context-card" data-image-purpose="Katzen-Seite: stille Bedürfnisse sichtbar machen" data-share-reason="Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer." style="--image-position: center 48%;"><img src="../assets/images/optimized/two-cats-window.jpg" alt="Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung" loading="eager" decoding="async" width="843" height="954" fetchpriority="high"><figcaption class="context-caption">Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.</figcaption></figure></div>
     </div>
 
     <div class="section">
       <div class="container">
         <div class="info-box">
-          <h3>So ist dieser Bereich aufgebaut</h3>
-          <p>Katzenhaltung wirkt oft leise und unkompliziert. Genau deshalb brauchen Wohnung, Sozialkontakt, Kastration, Kosten, Streunerfragen und Warnsignale eigene Aufmerksamkeit.</p>
-          <p>Die Übersicht ist bewusst kurz. Die einzelnen Themen stehen auf eigenen Unterseiten, damit die Navigation mit der Seite mitwachsen kann.</p>
+          <h3>Auf einen Blick</h3>
+          <ul>
+            <li>Katzen sind keine Einzelgänger – viele brauchen einen passenden <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenossen</span>.</li>
+            <li>In Deutschland leben schätzungsweise 2 Millionen Streunerkatzen (Deutscher Tierschutzbund).</li>
+            <li>Kastration schützt vor Stress, Krankheit und unkontrollierter Vermehrung.</li>
+            <li>Kastration beim Kater: ca. 80–150 Euro, bei der Katze: ca. 120–250 Euro (GOT 2022).</li>
+            <li>Katzen verbergen Schmerz instinktiv – Verhaltensänderungen sind oft das einzige Warnsignal.</li>
+          </ul>
         </div>
-        <div class="grid-3">
+        <div class="info-box">
+          <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
+          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
+        </div>
+        <div class="grid-3 animal-topic-grid">
 
           <article class="card">
             <div class="card-body">
@@ -5182,16 +5227,7 @@
           </article>
           <article class="card">
             <div class="card-body">
-              <h3>Wohnungshaltung bei Katzen</h3><div class="article-rhythm" data-enhancement="katzen-beschaeftigung">
-            <span class="eyebrow">Beschäftigung, die wirklich guttut</span>
-            <h3>Wohnungskatzen brauchen Jagd, Kontrolle und Rückzug.</h3>
-            <p>Spielzeug allein reicht nicht. Entscheidend ist, ob die Katze wählen, beobachten, jagen, klettern und sich ungestört zurückziehen kann.</p>
-            <div class="argument-grid">
-              <article class="rhythm-card"><span class="eyebrow">Jagdspiel</span><h3>Richtig spielen</h3><p>Kurze Einheiten mit Lauern, Hetzen, Fangen und danach Futter passen besser zur Katze als hektisches Wedeln vor der Nase.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Futter erarbeiten</span><h3>Nicht nur Napf</h3><p>Fummelbretter, Suchspiele und versteckte Trockenfutterstücke bringen Beschäftigung in den Alltag, ohne die Katze zu überfordern.</p></article>
-              <article class="rhythm-card"><span class="eyebrow">Clicker</span><h3>Freiwillige Tricks</h3><p>Targettraining oder Pfote geben kann Spaß machen, wenn die Katze jederzeit gehen darf und die Einheit kurz bleibt.</p></article>
-            </div>
-          </div>
+              <h3>Wohnungshaltung bei Katzen</h3>
               <p>Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.</p>
               <a class="card-link" href="../katzen/wohnungshaltung/index.html">Thema öffnen</a>
             </div>

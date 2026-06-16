@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5095,7 +5131,8 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../hunde/index.html">Zurück zur Übersicht: Hund</a></p>
-<div class="section-feedback-heading"><h2 id="hunde-kosten">Was ein Hund kostet – die ehrliche Rechnung</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-kosten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="hunde-kosten" class="topic-page-content">
+<h2 id="hunde-kosten">Was ein Hund kostet – die ehrliche Rechnung</h2>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
           <tbody>
@@ -5111,6 +5148,7 @@
           </tbody>
         </table>
         <p class="text-muted">Angaben: Durchschnittswerte für mittelgroße Hunde. Große Rassen, chronische Erkrankungen oder Spezialfutter können deutlich teurer werden. Quelle: Zusammenstellung aus Angaben des <a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbundes</a>, <a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a> und der <a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a>.</p>
+        </div>
       </div>
     </div>
   </section>

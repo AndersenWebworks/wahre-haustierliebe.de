@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="exoten-fische" class="page active">
+<section id="exoten-fische" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Fische halten</h1>
@@ -5091,13 +5127,18 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../exoten/index.html">Zurück zur Übersicht: Exoten</a></p>
-<div class="section-feedback-heading"><h2 id="exoten-fische">Fische</h2><button type="button" class="section-feedback-action" data-feedback-section="exoten-fische" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="exoten-fische" class="topic-page-content">
+<h2 id="exoten-fische">Fische</h2><div class="article-rhythm myth-truth" data-enhancement="exoten-goldfisch">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas.“</h3><p>Das Glas ist ein Symbol für falsche Haustierbilder, nicht für einfache Haltung.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Filter, Volumen, Wasserwerte.</h3><p>Fische sind nicht pflegeleicht, nur weil sie leise sterben. Aquariumhaltung ist Biologie plus Technik.</p></div>
+          </div>
         <p>Das Goldfischglas ist seit Jahren als tierschutzwidrig eingestuft. Trotzdem hält sich das Bild hartnäckig.</p>
         <p><strong>Goldfische</strong> werden 20–30 cm groß und können 15 Jahre und älter werden. Sie brauchen mindestens 200 Liter (besser: Teichhaltung), einen leistungsstarken Filter und regelmäßige Wasserpflege. Ein Goldfisch im 10-Liter-Glas ist kein Haustier – es ist langsames Vergiften durch die eigenen Ausscheidungen.</p>
         <p><strong>Tropische Süßwasserfische</strong> brauchen beheizte Aquarien mit stabiler Wasserchemie (pH, Härte, Temperatur). Die Einlaufphase eines Aquariums dauert 4–6 Wochen, bevor die ersten Fische eingesetzt werden dürfen. Wer am gleichen Tag Aquarium und Fische kauft, riskiert Massensterben.</p>
         <p><strong>Kosten:</strong> Ein vollständig eingerichtetes 200-Liter-Aquarium (Becken, Filter, Heizung, Beleuchtung, Einrichtung) kostet 300–800 Euro. Laufende Kosten: 20–50 Euro/Monat (Strom, Futter, Wasseraufbereitung, Ersatzteile).</p>
 
         <p>Exoten sind faszinierend, aber nichts für Impulskäufe. Bevor du dich entscheidest, lies auch die Seiten zu <a href="../../qualzucht/index.html">Qualzucht</a> (Albino-Zuchtformen, Qualzucht-Goldfische) und <a href="../../notfall/index.html">Notfällen</a>. Und bedenke: Bei Reptilien und Fischen heißt <a href="../../wissen/index.html">„anspruchslos“ meistens nur „stirbt leise“</a>.</p>
+        </div>
       </div>
     </div>
   </section>

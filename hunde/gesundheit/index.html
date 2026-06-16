@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5095,7 +5131,8 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../hunde/index.html">Zurück zur Übersicht: Hund</a></p>
-<div class="section-feedback-heading"><h2 id="hunde-gesundheit">Häufige Gesundheitsprobleme</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-gesundheit" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="hunde-gesundheit" class="topic-page-content">
+<h2 id="hunde-gesundheit">Häufige Gesundheitsprobleme</h2>
         <div class="accordion-group">
           <div class="accordion">
             <button class="accordion-header" onclick="toggleAccordion(this)" id="accordion-0-button" type="button" aria-controls="accordion-0-panel" aria-expanded="false">Übergewicht – das häufigste Gesundheitsproblem</button>
@@ -5121,6 +5158,7 @@
               <p>Futtermittelunverträglichkeiten, Umweltallergien, Flohspeichelallergie – Hunde reagieren häufig mit Juckreiz, Ohrenentzündungen, Pfotenlecken oder Fellverlust. Die Diagnostik ist oft langwierig und die Behandlung teuer.</p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5091,7 +5127,8 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../pferde/index.html">Zurück zur Übersicht: Pferde</a></p>
-<div class="section-feedback-heading"><h2 id="pferde-entscheidung">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-entscheidung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="pferde-entscheidung" class="topic-page-content">
+<h2 id="pferde-entscheidung">Bevor du dich entscheidest</h2>
         <ul class="checklist">
           <li>Ich bin bereit, 25–35 Jahre Verantwortung zu tragen.</li>
           <li>Ich habe ein monatliches Budget von mindestens 400 Euro plus Rücklagen für Notfälle.</li>
@@ -5100,6 +5137,7 @@
           <li>Der Stall oder die Koppel bietet genug Platz für artgerechte Haltung.</li>
           <li>Ich habe einen Hufschmied und einen Tierarzt in erreichbarer Nähe.</li>
         </ul>
+        </div>
       </div>
     </div>
   </section>

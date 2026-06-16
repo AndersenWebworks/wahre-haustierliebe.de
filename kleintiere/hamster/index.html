@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="kleintiere-hamster" class="page active">
+<section id="kleintiere-hamster" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Hamster halten</h1>
@@ -5091,11 +5127,17 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../kleintiere/index.html">Zurück zur Übersicht: Kleintiere</a></p>
-<div class="section-feedback-heading"><h2 id="kleintiere-hamster">Hamster</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-hamster" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="kleintiere-hamster" class="topic-page-content">
+<h2 id="kleintiere-hamster">Hamster</h2><div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
+            <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
+            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Tagsüberes Wecken stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
+            <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
+          </div>
         <p>Hamster sind <span class="glossary-term" data-glossary-key="nachtaktiv" data-glossary-title="Nachtaktiv" data-glossary-text="Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress." data-glossary-href="../../glossar/index.html#nachtaktiv" aria-describedby="glossary-term-popover" tabindex="0" role="button">nachtaktiv</span>. Sie schlafen tagsüber und werden abends aktiv. Wer seinen Hamster tagsüber weckt – weil die Kinder ihn sehen wollen –, verursacht chronischen Stress.</p>
         <p><strong>Einzelgänger:</strong> Die meisten Hamsterarten (Goldhamster, Teddyhamster) sind strikte <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet." data-glossary-href="../../glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover" tabindex="0" role="button">Einzelgänger</span>. Gemeinsame Haltung führt zu Revierkämpfen und schweren Verletzungen.</p>
         <p><strong>Platz:</strong> Mindestens 100 × 50 cm Grundfläche (besser mehr), 30 cm tiefe Einstreu zum Graben, ein Laufrad mit mindestens 28 cm Durchmesser (Goldhamster) oder 20 cm (Zwerghamster), Verstecke und Tunnel.</p>
         <p><strong>Kein Kindertier:</strong> Ein Tier, das man selten sieht, nicht anfassen soll und das bei Weckversuchen beißt, ist kein geeignetes Haustier für Kinder. Hamster sind Beobachtungstiere für geduldige Erwachsene.</p>
+        </div>
       </div>
     </div>
   </section>

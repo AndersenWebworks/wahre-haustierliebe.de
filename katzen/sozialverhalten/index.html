@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5080,7 +5116,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="katzen-sozialverhalten" class="page active">
+<section id="katzen-sozialverhalten" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Katzen sind keine einfachen Einzelgänger</h1>
@@ -5091,9 +5127,14 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../katzen/index.html">Zurück zur Übersicht: Katzen</a></p>
-<div class="section-feedback-heading"><h2 id="katzen-sozialverhalten">Einzeljäger bedeutet nicht Einzelgänger</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-sozialverhalten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="katzen-sozialverhalten" class="topic-page-content">
+<h2 id="katzen-sozialverhalten">Einzeljäger bedeutet nicht Einzelgänger</h2><div class="article-rhythm myth-truth" data-enhancement="katzen-einzeljaeger">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Katzen sind Einzelgänger.“</h3><p>Der Satz wird oft benutzt, um Einzelhaltung in der Wohnung bequem zu machen.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Sie jagen allein, leben aber nicht automatisch allein.</h3><p>Viele Katzen brauchen passende Artgenossen, Rückzugsorte und eine Wohnung, die mehr bietet als Sofa und Futternapf.</p></div>
+          </div>
         <p>Einer der hartnäckigsten Mythen: Katzen seien Einzelgänger. Falsch. Katzen sind <strong>Einzeljäger</strong> – sie jagen allein. Das heißt aber nicht, dass sie allein leben wollen. In der Natur bilden Katzen lose Gruppen, schlafen zusammen, putzen sich gegenseitig, teilen Ressourcen.</p>
         <p>Besonders bei reiner Wohnungshaltung ist ein passender Artgenosse oft entscheidend für das Wohlbefinden. Betonung auf <em>passend</em>: Nicht jede Katze versteht sich mit jeder anderen. Alter, Temperament, <span class="glossary-term" data-glossary-key="sozialisation" data-glossary-title="Sozialisation" data-glossary-text="Lernphase und Erfahrungssammlung, in der Tiere Umwelt, Menschen und Artgenossen kennenlernen." data-glossary-href="../../glossar/index.html#sozialisation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Sozialisierung</span> spielen eine große Rolle. Zwei Katzen zusammenzuwerfen und zu hoffen, dass es klappt, kann genauso stressig sein wie Einzelhaltung.</p>
+        </div>
       </div>
     </div>
   </section>

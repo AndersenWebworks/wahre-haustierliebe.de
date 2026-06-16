@@ -3686,6 +3686,7 @@
     .page:not(#startseite) > .section > .container:has(.signal-grid),
     .page:not(#startseite) > .section > .container:has(.compare-mini),
     .page:not(#startseite) > .section > .container:has(.article-split),
+    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
     .page:not(#startseite) > .section > .container:has(.share-callout),
     .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
@@ -3766,6 +3767,41 @@
     .info-box h3::before { content: "Wissen"; }
     .warning-box h3::before { content: "Warnsignal"; }
     .highlight-box h3::before { content: "Vielleicht wusstest du es noch nicht"; }
+
+    .animal-topic-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: clamp(1.1rem, 2.3vw, 1.75rem);
+      align-items: stretch;
+    }
+
+    .animal-topic-grid .card {
+      min-width: 0;
+    }
+
+    .animal-topic-grid .card-body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .animal-topic-grid .card-body p {
+      margin-bottom: 0;
+    }
+
+    .animal-topic-grid .card-link {
+      margin-top: auto;
+    }
+
+    .topic-page-content {
+      max-width: min(100%, 760px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topic-page-content > :first-child {
+      margin-top: 0;
+    }
 
     .info-box,
     .warning-box,
@@ -5084,7 +5120,7 @@
   </div>
 
   <main id="main-content" tabindex="-1">
-<section id="hunde-entscheidung" class="page active">
+<section id="hunde-entscheidung" class="page active" data-enhancements-hydrated="true">
     <div class="hero">
       <div class="container">
         <h1>Bevor ein Hund einzieht</h1>
@@ -5095,7 +5131,16 @@
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../hunde/index.html">Zurück zur Übersicht: Hund</a></p>
-<div class="section-feedback-heading"><h2 id="hunde-entscheidung">Bevor du dich entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-entscheidung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div id="hunde-entscheidung" class="topic-page-content">
+<h2 id="hunde-entscheidung">Bevor du dich entscheidest</h2><div class="article-rhythm share-callout" data-enhancement="hunde-share">
+            <span class="eyebrow">Vor dem Hundekauf teilen</span>
+            <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
+            <p>Diese Seite ist für Menschen, die den Hundewunsch ernst meinen und zuerst ihren Alltag prüfen.</p>
+            <div class="share-actions">
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
+            </div>
+          </div>
         <ul class="checklist">
           <li>Ich bin mindestens 10–15 Jahre bereit, Verantwortung für diesen Hund zu tragen.</li>
           <li>Ich bin an den meisten Tagen nicht länger als 4–5 Stunden von zu Hause weg – oder habe eine zuverlässige Betreuung.</li>
@@ -5112,6 +5157,7 @@
         <div class="mt-2 text-center">
           <a class="btn btn-primary" href="../../selbsttest/index.html">Zum Selbsttest</a>
           <a class="btn btn-outline" style="margin-left: 0.5rem;" href="../../adoption/index.html">Adoption statt Kauf</a>
+        </div>
         </div>
       </div>
     </div>
