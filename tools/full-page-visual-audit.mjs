@@ -102,7 +102,6 @@ for (const viewport of viewports) {
           if (mediaRect.width < 220 || mediaRect.height < 160) issues.push(`hero-image-too-small:${Math.round(mediaRect.width)}x${Math.round(mediaRect.height)}`);
           if (!image.getAttribute('width') || !image.getAttribute('height')) issues.push('hero-image-missing-dimensions');
           if (!image.getAttribute('alt')?.trim()) issues.push('hero-image-missing-alt');
-          if (!media.querySelector('figcaption')?.textContent.trim()) issues.push('hero-image-missing-caption');
         }
       }
 

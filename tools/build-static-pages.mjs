@@ -2488,13 +2488,17 @@ function articleHeroImage(page) {
   return firstContentImageByPage[page.id] || firstContentImageByPage[page.sourcePage] || null;
 }
 
+function articleHeroCaption(image) {
+  const caption = image.caption?.trim();
+  return caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : '';
+}
+
 function injectArticleHeroMedia(body, page) {
   const image = articleHeroImage(page);
   if (!image) return body;
 
   if (page.id === 'kontakt') {
     const h1 = 'Über & Kontakt';
-    const caption = image.alt.replace(/\.$/, '');
     const position = articleHeroPositionByImage[image.src] || 'center 45%';
     const purpose = `${h1}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
     const shareReason = 'Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.';
@@ -2507,7 +2511,7 @@ function injectArticleHeroMedia(body, page) {
 
         <figure class="article-hero-media image-context-card" style="--image-position:${escapeAttr(position)};" data-image-purpose="${escapeAttr(purpose)}" data-share-reason="${escapeAttr(shareReason)}">
           <img src="${image.src}" alt="${escapeAttr(image.alt)}" loading="eager">
-          <figcaption>${escapeHtml(caption)}</figcaption>
+          ${articleHeroCaption(image)}
         </figure>
       </div>
     </div>`;
@@ -2522,14 +2526,13 @@ function injectArticleHeroMedia(body, page) {
   if (!match) return body;
 
   const copy = match[2].trim();
-  const caption = image.alt.replace(/\.$/, '');
   const position = articleHeroPositionByImage[image.src] || 'center 45%';
   const purpose = `${page.title.replace(` - ${siteName}`, '')}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
   const shareReason = `Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.`;
   const media = `
         <figure class="article-hero-media image-context-card" style="--image-position:${escapeAttr(position)};" data-image-purpose="${escapeAttr(purpose)}" data-share-reason="${escapeAttr(shareReason)}">
           <img src="${image.src}" alt="${escapeAttr(image.alt)}" loading="eager">
-          <figcaption>${escapeHtml(caption)}</figcaption>
+          ${articleHeroCaption(image)}
         </figure>`;
 
   const copyHtml = copy.includes('article-hero-copy')

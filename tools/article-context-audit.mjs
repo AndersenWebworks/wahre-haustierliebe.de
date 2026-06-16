@@ -144,7 +144,7 @@ for (const viewport of viewports) {
         const reasons = [];
         if (!card.dataset.imagePurpose || card.dataset.imagePurpose.length < 30) reasons.push('missing-image-purpose');
         if (!card.dataset.shareReason || card.dataset.shareReason.length < 30) reasons.push('missing-share-reason');
-        if (!caption || caption.textContent.trim().length < 12) reasons.push('missing-visible-caption');
+        if (!card.classList.contains('article-hero-media') && (!caption || caption.textContent.trim().length < 12)) reasons.push('missing-visible-caption');
         return reasons.length ? [{ src: img.getAttribute('src'), reasons }] : [];
       });
 
