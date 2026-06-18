@@ -143,9 +143,9 @@ const pages = [
   {
     id: 'qualzucht',
     slug: 'qualzucht',
-    title: 'Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen',
-    description: 'Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.',
-    intent: 'Qualzucht verstehen und beim Tierkauf vermeiden',
+    title: 'Qualzucht und Rassekrankheiten erkennen',
+    description: 'Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.',
+    intent: 'Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden',
     priority: '0.85',
   },
   {
@@ -532,12 +532,15 @@ const evidenceByPage = {
     facts: [
       'Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.',
       'Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.',
+      'Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.',
       'Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.',
     ],
     sources: [
       ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
-      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
-      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
+      ['BMEL: Gutachten zur Auslegung von § 11b TierSchG', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html'],
+      ['RVC VetCompass Brachycephaly', 'https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass'],
+      ['OMIA - Online Mendelian Inheritance in Animals', 'https://omia.org/home/'],
+      ['UFAW Genetic Welfare Problems', 'https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro'],
     ],
     guardrails: [
       'Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.',
@@ -663,8 +666,10 @@ const evidenceByPage = {
       'Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe.',
     ],
     sources: [
-      ['TASSO e. V.', 'https://www.tasso.net'],
-      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['TiHo Hannover: Hitzefalle Auto', 'https://www.tiho-hannover.de/universitaet/aktuelles-veroeffentlichungen/pressemitteilungen/detail/hitzefalle-auto-lebensgefahr-fuer-hunde-bereits-nach-minuten'],
+      ['Landestierschutzbeauftragte Brandenburg: Hitzestress bei Hunden', 'https://mleuv.brandenburg.de/mleuv/de/ueber-uns/landestierschutzbeauftragte/themen/hitzestress-bei-hunden/'],
+      ['ADAC: Hitze im Auto und rechtliches Vorgehen', 'https://presse.adac.de/meldungen/adac-ev/recht/hitze-im-auto-fuehrt-zu-lebensbedrohlichen-situationen.html'],
+      ['Thieme Tiermedizin: Hitzschlag beim Hund', 'https://tiermedizin.thieme.de/hund-katze-co/sommer-spezial/detail/hitzschlag-beim-hund-therapie-und-aufklaerung-921'],
     ],
     guardrails: [
       'Keine Rechtsberatung zum Einschlagen von Scheiben geben.',
@@ -1303,8 +1308,8 @@ const socialCopyByPage = {
   },
   qualzucht: {
     eyebrow: 'Zuchtmerkmale kritisch sehen',
-    title: 'Qualzucht erkennen, bevor Nachfrage Leid finanziert',
-    description: 'Atemnot, Schmerzen, Gendefekte und extreme Körperformen bei Hunden, Katzen, Kaninchen, Vögeln und Exoten.',
+    title: 'Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert',
+    description: 'Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.',
   },
   adoption: {
     eyebrow: 'Tierschutz statt Nachfrage',
@@ -1404,7 +1409,7 @@ const keywordByPage = {
   exoten: ['Exoten halten', 'Terrarium', 'UV-B', 'Reptilien', 'Meldepflicht'],
   pferde: ['Pferde halten', 'Herde', 'Stallform', 'Hufschmied', 'Pferdekosten'],
   kastration: ['Kastration', 'Kastrationspflicht', 'Tierschutz', 'Katzen', 'Kaninchen'],
-  qualzucht: ['Qualzucht', 'Rassemerkmale', 'Atemnot', 'Gendefekte', 'Tierleid'],
+  qualzucht: ['Qualzucht', 'Rassekrankheiten', 'Rassemerkmale', 'Atemnot', 'Gendefekte', 'Tierleid'],
   adoption: ['Adoption', 'Tierheim', 'Tierschutz', 'Schutzgebühr', 'Pflegestelle'],
   selbsttest: ['Haustier Selbsttest', 'bereit für ein Tier', 'Zeit', 'Geld', 'Betreuung'],
   notfall: ['Tiernotfall', 'Vergiftung', 'Atemnot', 'Tierarzt', 'Warnsignale'],

@@ -1482,11 +1482,12 @@
     {
       "id": "qualzucht",
       "url": "https://wahre-haustierliebe.de/qualzucht/index.html",
-      "title": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
-      "description": "Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.",
-      "intent": "Qualzucht verstehen und beim Tierkauf vermeiden",
+      "title": "Qualzucht und Rassekrankheiten erkennen",
+      "description": "Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
+      "intent": "Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden",
       "keywords": [
         "Qualzucht",
+        "Rassekrankheiten",
         "Rassemerkmale",
         "Atemnot",
         "Gendefekte",
@@ -1495,6 +1496,7 @@
       "facts": [
         "Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.",
         "Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.",
+        "Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.",
         "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien."
       ],
       "citationGuardrails": [
@@ -1507,17 +1509,25 @@
           "url": "https://www.gesetze-im-internet.de/tierschg/__11b.html"
         },
         {
-          "label": "Deutscher Tierschutzbund",
-          "url": "https://www.tierschutzbund.de"
+          "label": "BMEL: Gutachten zur Auslegung von § 11b TierSchG",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html"
         },
         {
-          "label": "Tierärztliche Vereinigung für Tierschutz",
-          "url": "https://www.tierschutz-tvt.de"
+          "label": "RVC VetCompass Brachycephaly",
+          "url": "https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass"
+        },
+        {
+          "label": "OMIA - Online Mendelian Inheritance in Animals",
+          "url": "https://omia.org/home/"
+        },
+        {
+          "label": "UFAW Genetic Welfare Problems",
+          "url": "https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro"
         }
       ],
       "social": {
-        "title": "Qualzucht erkennen, bevor Nachfrage Leid finanziert",
-        "description": "Atemnot, Schmerzen, Gendefekte und extreme Körperformen bei Hunden, Katzen, Kaninchen, Vögeln und Exoten.",
+        "title": "Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert",
+        "description": "Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.",
         "image": "https://wahre-haustierliebe.de/assets/social/qualzucht.png",
         "imageAlt": "Mops als Beispiel für problematische Zuchtmerkmale.",
         "imageWidth": 1200,
@@ -1857,12 +1867,20 @@
       ],
       "sources": [
         {
-          "label": "TASSO e. V.",
-          "url": "https://www.tasso.net"
+          "label": "TiHo Hannover: Hitzefalle Auto",
+          "url": "https://www.tiho-hannover.de/universitaet/aktuelles-veroeffentlichungen/pressemitteilungen/detail/hitzefalle-auto-lebensgefahr-fuer-hunde-bereits-nach-minuten"
         },
         {
-          "label": "Deutscher Tierschutzbund",
-          "url": "https://www.tierschutzbund.de"
+          "label": "Landestierschutzbeauftragte Brandenburg: Hitzestress bei Hunden",
+          "url": "https://mleuv.brandenburg.de/mleuv/de/ueber-uns/landestierschutzbeauftragte/themen/hitzestress-bei-hunden/"
+        },
+        {
+          "label": "ADAC: Hitze im Auto und rechtliches Vorgehen",
+          "url": "https://presse.adac.de/meldungen/adac-ev/recht/hitze-im-auto-fuehrt-zu-lebensbedrohlichen-situationen.html"
+        },
+        {
+          "label": "Thieme Tiermedizin: Hitzschlag beim Hund",
+          "url": "https://tiermedizin.thieme.de/hund-katze-co/sommer-spezial/detail/hitzschlag-beim-hund-therapie-und-aufklaerung-921"
         }
       ],
       "social": {

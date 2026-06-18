@@ -2,16 +2,16 @@
 <html lang="de"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen</title>
-  <meta name="description" content="Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.">
+  <title>Qualzucht und Rassekrankheiten erkennen</title>
+  <meta name="description" content="Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
   <meta name="color-scheme" content="light">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="keywords" content="Qualzucht, Rassemerkmale, Atemnot, Gendefekte, Tierleid">
-  <meta property="og:title" content="Qualzucht erkennen, bevor Nachfrage Leid finanziert">
-  <meta property="og:description" content="Atemnot, Schmerzen, Gendefekte und extreme Körperformen bei Hunden, Katzen, Kaninchen, Vögeln und Exoten.">
+  <meta name="keywords" content="Qualzucht, Rassekrankheiten, Rassemerkmale, Atemnot, Gendefekte, Tierleid">
+  <meta property="og:title" content="Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert">
+  <meta property="og:description" content="Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/qualzucht/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/qualzucht.png">
@@ -24,8 +24,8 @@
   <meta property="og:locale" content="de_DE">
   <meta property="og:updated_time" content="2026-06-15">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Qualzucht erkennen, bevor Nachfrage Leid finanziert">
-  <meta name="twitter:description" content="Atemnot, Schmerzen, Gendefekte und extreme Körperformen bei Hunden, Katzen, Kaninchen, Vögeln und Exoten.">
+  <meta name="twitter:title" content="Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert">
+  <meta name="twitter:description" content="Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/qualzucht.png">
   <meta name="twitter:image:alt" content="Mops als Beispiel für problematische Zuchtmerkmale.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/qualzucht/index.html">
@@ -787,6 +787,143 @@
     .glossary-item dt { font-weight: 700; color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 0.25rem; }
     .glossary-item dd { color: var(--text-muted); margin: 0; }
     .glossary-item.hidden { display: none; }
+
+    .breed-lexicon {
+      margin: clamp(2rem, 5vw, 3.5rem) 0;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, #fffefa 0%, #f5fbf7 100%);
+      box-shadow: var(--shadow-lg);
+    }
+    .breed-lexicon-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: end;
+      margin-bottom: 1.25rem;
+    }
+    .breed-lexicon h2 { margin-top: 0; border-top: 0 !important; }
+    .breed-lexicon-controls {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .breed-lexicon-search {
+      width: 100%;
+      padding: 0.78rem 0.95rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      font: inherit;
+      background: var(--white);
+    }
+    .breed-lexicon-search:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(42, 123, 111, 0.14);
+    }
+    .breed-filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .breed-filter {
+      border: 1px solid rgba(42, 123, 111, 0.22);
+      border-radius: 999px;
+      padding: 0.46rem 0.72rem;
+      color: var(--primary-dark);
+      background: var(--white);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .breed-filter:hover,
+    .breed-filter.is-active {
+      color: var(--white);
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+    .breed-disease-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: 0.85rem;
+    }
+    .breed-disease-card {
+      display: grid;
+      gap: 0.75rem;
+      padding: 1rem;
+      border: 1px solid rgba(31, 58, 47, 0.12);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .breed-disease-card.is-hidden { display: none; }
+    .breed-disease-card h3 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+    .breed-card-meta,
+    .breed-card-facts {
+      display: grid;
+      gap: 0.42rem;
+      margin: 0;
+    }
+    .breed-card-meta span,
+    .breed-card-facts div {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .breed-card-meta strong,
+    .breed-card-facts strong {
+      color: var(--primary-dark);
+    }
+    .severity-tag {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 0.28rem 0.55rem;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .breed-source-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.15rem;
+    }
+    .breed-source-list a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      padding: 0.32rem 0.55rem;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .breed-lexicon-status {
+      min-height: 1.35rem;
+      margin: 0.85rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+    .breed-lexicon-note {
+      margin-top: 1.1rem;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+    @media (max-width: 760px) {
+      .breed-lexicon-head { grid-template-columns: 1fr; }
+      .breed-filter { flex: 1 1 auto; }
+    }
     .glossary-term {
       color: var(--primary-dark);
       cursor: help;
@@ -2393,8 +2530,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .page:not(#startseite) .hero .container,
-    .page:not(#startseite) > .section > .container {
+    .page:not(#startseite) .hero .container {
       max-width: var(--reading-width);
     }
 
@@ -3862,18 +3998,6 @@
     }
 
     .page:not(#startseite) > .section > .container {
-      max-width: var(--reading-width);
-    }
-
-    .page:not(#startseite) > .section > .container:has(.grid-2),
-    .page:not(#startseite) > .section > .container:has(.metric-grid),
-    .page:not(#startseite) > .section > .container:has(.argument-grid),
-    .page:not(#startseite) > .section > .container:has(.signal-grid),
-    .page:not(#startseite) > .section > .container:has(.compare-mini),
-    .page:not(#startseite) > .section > .container:has(.article-split),
-    .page:not(#startseite) > .section > .container:has(.animal-topic-grid),
-    .page:not(#startseite) > .section > .container:has(.share-callout),
-    .page:not(#startseite) > .section > .container:has(table) {
       max-width: var(--max-width);
     }
 
@@ -3979,7 +4103,7 @@
     }
 
     .topic-page-content {
-      max-width: min(100%, 760px);
+      max-width: var(--max-width);
       margin-left: auto;
       margin-right: auto;
     }
@@ -4739,8 +4863,17 @@
       max-width: var(--reading-width);
     }
 
+    .topic-page-content > :where(p, ul, ol, blockquote):not(.share-bar):not(.hero-trust),
+    .article-rhythm > :where(p, ul, ol, blockquote):not(.share-bar):not(.hero-trust) {
+      max-width: var(--reading-width);
+    }
+
     .page:not(#startseite) > .section > .container > h2,
-    .page:not(#startseite) > .section > .container > h3 {
+    .page:not(#startseite) > .section > .container > h3,
+    .topic-page-content > h2,
+    .topic-page-content > h3,
+    .article-rhythm > h2,
+    .article-rhythm > h3 {
       max-width: min(100%, 980px);
     }
 
@@ -4762,6 +4895,14 @@
 
     .article-rhythm {
       margin: clamp(2rem, 4.5vh, 3rem) 0;
+    }
+
+    .page:not(#startseite) > .article-rhythm {
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(1.25rem, 5vw, 3.5rem);
+      padding-right: clamp(1.25rem, 5vw, 3.5rem);
     }
 
     .evidence-block,
@@ -5074,9 +5215,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
-  "headline": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
-  "description": "Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.",
+  "name": "Qualzucht und Rassekrankheiten erkennen",
+  "headline": "Qualzucht und Rassekrankheiten erkennen",
+  "description": "Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
   "url": "https://wahre-haustierliebe.de/qualzucht/index.html",
   "image": {
     "@type": "ImageObject",
@@ -5096,11 +5237,15 @@
   "inLanguage": "de-DE",
   "dateModified": "2026-06-15",
   "isAccessibleForFree": true,
-  "keywords": "Qualzucht, Rassemerkmale, Atemnot, Gendefekte, Tierleid",
+  "keywords": "Qualzucht, Rassekrankheiten, Rassemerkmale, Atemnot, Gendefekte, Tierleid",
   "about": [
     {
       "@type": "Thing",
       "name": "Qualzucht"
+    },
+    {
+      "@type": "Thing",
+      "name": "Rassekrankheiten"
     },
     {
       "@type": "Thing",
@@ -5148,7 +5293,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Qualzucht erkennen",
+      "name": "Qualzucht und Rassekrankheiten erkennen",
       "item": "https://wahre-haustierliebe.de/qualzucht/index.html"
     }
   ]
@@ -5158,9 +5303,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
-  "name": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
-  "description": "Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.",
+  "headline": "Qualzucht und Rassekrankheiten erkennen",
+  "name": "Qualzucht und Rassekrankheiten erkennen",
+  "description": "Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
   "url": "https://wahre-haustierliebe.de/qualzucht/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/qualzucht/index.html",
   "image": {
@@ -5183,12 +5328,16 @@
   "dateModified": "2026-06-15",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
-  "keywords": "Qualzucht, Rassemerkmale, Atemnot, Gendefekte, Tierleid",
-  "articleSection": "Qualzucht verstehen und beim Tierkauf vermeiden",
+  "keywords": "Qualzucht, Rassekrankheiten, Rassemerkmale, Atemnot, Gendefekte, Tierleid",
+  "articleSection": "Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden",
   "about": [
     {
       "@type": "Thing",
       "name": "Qualzucht"
+    },
+    {
+      "@type": "Thing",
+      "name": "Rassekrankheiten"
     },
     {
       "@type": "Thing",
@@ -5209,8 +5358,10 @@
   ],
   "citation": [
     "https://www.gesetze-im-internet.de/tierschg/__11b.html",
-    "https://www.tierschutzbund.de",
-    "https://www.tierschutz-tvt.de"
+    "https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html",
+    "https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass",
+    "https://omia.org/home/",
+    "https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro"
   ]
 }
   </script>
@@ -5462,12 +5613,12 @@
                   <p>Manche Tiere werden so gezüchtet, dass ihr Körper ein lebenslanger Nachteil ist. Die Nachfrage steuert das Angebot.</p>
         <div class="article-kicker"><span>Form darf nicht leiden</span><span>Nachfrage stoppen</span><span>Adoption</span></div></div>
 
-        <figure class="article-hero-media image-context-card" style="--image-position:center 34%;" data-image-purpose="Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
+        <figure class="article-hero-media image-context-card" style="--image-position:center 34%;" data-image-purpose="Qualzucht und Rassekrankheiten erkennen: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
           <img src="../assets/images/optimized/qualzucht-mops.jpg" alt="Mops als Beispiel für problematische Zuchtmerkmale." loading="eager" width="960" height="640" decoding="async" fetchpriority="high">
 
         </figure>
       </div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#qualzucht-was-ist-qualzucht">Was ist Qualzucht?</a></li><li><a href="#qualzucht-wenn-ein-rassestandard-zur-diagnose-wird">Wenn ein Rassestandard zur Diagnose wird</a></li><li><a href="#qualzucht-die-bekanntesten-beispiele">Die bekanntesten Beispiele</a></li><li><a href="#qualzucht-was-du-tun-kannst">Was du tun kannst</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -5484,13 +5635,192 @@
             <p>Wenn ein Tier wegen seiner Körperform schlechter atmet, sieht, läuft, frisst oder lebt, ist das kein Stil. Es ist ein angezüchteter Nachteil.</p>
           </div>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-qualzucht-1">Was ist Qualzucht?</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-qualzucht-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="qualzucht-rassestandard">
+        <div class="section-feedback-heading"><h2 id="qualzucht-was-ist-qualzucht">Was ist Qualzucht?</h2><button type="button" class="section-feedback-action" data-feedback-section="qualzucht-was-ist-qualzucht" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm myth-truth" data-enhancement="qualzucht-rassestandard">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Rassestandard heißt gesund.“</h3><p>Standards beschreiben oft Aussehen. Sie garantieren nicht, dass ein Körper gut funktioniert.</p></div>
             <div class="truth"><span class="eyebrow">Fakt</span><h3>Funktion schlägt Form.</h3><p>Atmung, Bewegung, Wahrnehmung und Schmerzfreiheit müssen wichtiger sein als ein niedliches Merkmal.</p></div>
           </div>
         <p>Qualzucht liegt vor, wenn durch Zucht körperliche Merkmale so übersteigert werden, dass das Tier darunter leidet. Das können sein: verkürzte Atemwege, deformierte Knochen, übermäßiges Fell, funktionsuntüchtige Organe. Das Tier kann sich nicht aussuchen, wie es aussieht. Es lebt mit den Konsequenzen, die Menschen ihm angezüchtet haben.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-qualzucht-2">Die bekanntesten Beispiele</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-qualzucht-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm signal-grid" data-enhancement="qualzucht-signale">
+        <div class="breed-lexicon" id="rassekrankheiten">
+          <div class="breed-lexicon-head">
+            <div>
+              <span class="eyebrow">Rassekrankheiten-Lexikon</span>
+              <h2 id="qualzucht-wenn-ein-rassestandard-zur-diagnose-wird">Wenn ein Rassestandard zur Diagnose wird</h2>
+              <p class="text-muted">Dieser erste Lexikonstand bündelt belegte Erkrankungs- und Zuchtkomplexe bei Hunden und Katzen. Er ist absichtlich streng: Ein niedliches Merkmal ist nicht harmlos, wenn Tierärztinnen und Studien dahinter Schmerz, Atemnot, Lahmheit oder Organversagen beschreiben.</p>
+            </div>
+            <div class="breed-lexicon-controls" aria-label="Rassekrankheiten filtern">
+              <input class="breed-lexicon-search" id="breed-disease-search" type="search" placeholder="Rasse, Erkrankung oder Symptom suchen ..." oninput="filterBreedDiseases()">
+              <div class="breed-filter-row" role="group" aria-label="Tierart auswählen">
+                <button class="breed-filter is-active" type="button" data-breed-filter="all" onclick="setBreedDiseaseFilter('all')">Alle</button>
+                <button class="breed-filter" type="button" data-breed-filter="hund" onclick="setBreedDiseaseFilter('hund')">Hunde</button>
+                <button class="breed-filter" type="button" data-breed-filter="katze" onclick="setBreedDiseaseFilter('katze')">Katzen</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="breed-disease-grid" id="breed-disease-list">
+            <article class="breed-disease-card" data-animal="hund" data-search="mops französische bulldogge englische bulldogge pekinese shih tzu brachyzephalie boas atemnot hitze schnarchen">
+              <span class="severity-tag">hoch belastend</span>
+              <h3>Brachyzephales Atemwegssyndrom</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Mops, Französischer Bulldogge, Englischer Bulldogge, Pekingese, Shih Tzu.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> oft schon jung sichtbar, verstärkt bei Aufregung, Hitze, Übergewicht und im Alter.</div>
+                <div><strong>Wie doll:</strong> von lauter Atmung bis Schlafproblemen, Kollaps, OP-Bedarf und Lebensgefahr bei Hitze.</div>
+                <div><strong>Wie oft:</strong> bei extrem kurzköpfigen Rassen ein Kernproblem; Studien zeigen deutlich höhere Atemwegsrisiken als bei normalnasigen Hunden.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass" target="_blank" rel="noopener noreferrer">RVC VetCompass</a><a href="https://www.nature.com/articles/s41598-020-73088-y" target="_blank" rel="noopener noreferrer">Scientific Reports</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="mops bulldogge französische bulldogge augen hornhaut ulkus lidfehlstellung trockene augen">
+              <span class="severity-tag">schmerzhaft</span>
+              <h3>Augenprobleme durch flache Gesichter</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Mops, Bulldoggen, Pekingesen und anderen kurzköpfigen Rassen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> vom Welpenalter bis ins Alter; jedes Trauma, Staub oder trockene Auge kann kippen.</div>
+                <div><strong>Wie doll:</strong> Hornhautverletzungen, chronische Reizung, Schmerzen, Sehverlust.</div>
+                <div><strong>Wie oft:</strong> deutlich gehäuft, weil große, vorstehende Augen und kurze Schädel anatomisch zusammenhängen.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL §11b-Gutachten</a><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="dackel dachshund französische bulldogge corgi bandscheibe ivdd lähmung rücken">
+              <span class="severity-tag">akut riskant</span>
+              <h3>Bandscheibenerkrankungen und Lähmungen</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Dackeln, Corgis, Französischen Bulldoggen und anderen chondrodystrophen Hunden.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> häufig im jungen bis mittleren Erwachsenenalter, teils plötzlich.</div>
+                <div><strong>Wie doll:</strong> starke Schmerzen, Koordinationsverlust, Lähmung, Notfall-OP.</div>
+                <div><strong>Wie oft:</strong> rassetypisch gehäuft; kurze Beine und veränderte Knorpelentwicklung erhöhen das Risiko.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://ofa.org/diseases/" target="_blank" rel="noopener noreferrer">OFA Diseases</a><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="cavalier king charles spaniel syringomyelie chiari kopfschmerz nacken schmerz">
+              <span class="severity-tag">chronisch schmerzhaft</span>
+              <h3>Chiari-like Malformation und Syringomyelie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Cavalier King Charles Spaniel.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> jung bis erwachsen; Symptome können mit der Zeit stärker werden.</div>
+                <div><strong>Wie doll:</strong> Nacken- und Kopfschmerz, Kratzen ohne Hautgrund, Berührungsschmerz, neurologische Ausfälle.</div>
+                <div><strong>Wie oft:</strong> beim Cavalier ein zentrales Rasseproblem; UFAW führt Dauer, Schwere und Häufigkeit als erhebliches Wohlfahrtsthema.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/cavalier-king-charles-spaniel" target="_blank" rel="noopener noreferrer">UFAW</a><a href="https://www.vetspecialists.co.uk/fact-sheets-post/syringohydromyelia-in-cavalier-king-charles-spaniels-ckcs-fact-sheet/" target="_blank" rel="noopener noreferrer">Vet Specialists</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="cavalier king charles spaniel mitralklappe herz murmur mmvd husten herzinsuffizienz">
+              <span class="severity-tag">lebensverkürzend</span>
+              <h3>Mitralklappenerkrankung</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Cavalier King Charles Spaniel, außerdem bei kleinen älteren Hunden.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> beim Cavalier oft früher als bei anderen Rassen; Kontrollen gehören in die Zucht.</div>
+                <div><strong>Wie doll:</strong> Herzgeräusch, Husten, Leistungsschwäche, Herzinsuffizienz.</div>
+                <div><strong>Wie oft:</strong> beim Cavalier deutlich überrepräsentiert; Fachquellen beschreiben die Erkrankung als häufig und rasseprägend.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://cvm.ncsu.edu/cavalier-king-charles-spaniels-research/" target="_blank" rel="noopener noreferrer">NC State</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4579365/" target="_blank" rel="noopener noreferrer">VetCompass-Studie</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="labrador golden retriever schäferhund rottweiler hüftdysplasie hd lahmheit arthrose">
+              <span class="severity-tag">häufig schmerzhaft</span>
+              <h3>Hüftdysplasie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> großen und schweren Rassen, etwa Labrador, Golden Retriever, Deutscher Schäferhund, Rottweiler.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> Wachstum bis Erwachsenenalter; Arthrose oft lebenslang.</div>
+                <div><strong>Wie doll:</strong> Lahmheit, Schmerzen, eingeschränkte Bewegung, teure Diagnostik und Therapie.</div>
+                <div><strong>Wie oft:</strong> je nach Rasse und Zuchtlinie stark unterschiedlich; Screening ist deshalb Mindeststandard seriöser Zucht.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://ofa.org/diseases/" target="_blank" rel="noopener noreferrer">OFA</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/" target="_blank" rel="noopener noreferrer">Genetische Selektion</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="labrador golden retriever rottweiler berner sennenhund ellbogendysplasie elbow dysplasia lahmheit arthrose">
+              <span class="severity-tag">früh belastend</span>
+              <h3>Ellbogendysplasie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Labrador, Golden Retriever, Rottweiler, Berner Sennenhund und weiteren großen Rassen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> teils schon in den ersten Lebensmonaten, später oft Arthrose.</div>
+                <div><strong>Wie doll:</strong> Lahmheit, chronische Schmerzen, Bewegungseinschränkung.</div>
+                <div><strong>Wie oft:</strong> rasseabhängig relevant; UFAW beschreibt frühe und lebenslange Wohlfahrtsfolgen.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/labrador-retriever-elbow-dysplasia-hco" target="_blank" rel="noopener noreferrer">UFAW Labrador</a><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/elbow-dysplasia" target="_blank" rel="noopener noreferrer">Cornell</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-search="kleinhund toy zwerg patellaluxation kniescheibe lahmheit">
+              <span class="severity-tag">bewegungsschmerz</span>
+              <h3>Patellaluxation</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> vielen Toy- und Kleinhunderassen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> jung bis erwachsen; oft zunächst intermittierendes Hüpfen oder Schonlaufen.</div>
+                <div><strong>Wie doll:</strong> von leichter Lahmheit bis dauerhaften Knieschäden und OP-Bedarf.</div>
+                <div><strong>Wie oft:</strong> bei kleinen Rassen deutlich häufiger als bei der Durchschnittspopulation; Zuchtuntersuchungen sind üblich.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://ofa.org/diseases/" target="_blank" rel="noopener noreferrer">OFA</a><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-search="scottish fold osteochondrodysplasie ocd knorpel faltohren gelenkschmerz lahmheit">
+              <span class="severity-tag">angezüchteter Defekt</span>
+              <h3>Scottish-Fold-<span class="glossary-term" data-glossary-key="osteochondrodysplasie" data-glossary-title="Osteochondrodysplasie" data-glossary-text="Erbliche Knorpel- und Knochenerkrankung, bekannt bei Scottish-Fold-Katzen." data-glossary-href="../glossar/index.html#osteochondrodysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Osteochondrodysplasie</span></h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Scottish Fold; das Faltohr ist selbst Teil des Knorpeldefekts.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> jung bis erwachsen; Veränderungen können fortschreiten.</div>
+                <div><strong>Wie doll:</strong> Gelenkschmerz, steifer Gang, verformte Gliedmaßen, eingeschränkte Lebensqualität.</div>
+                <div><strong>Wie oft:</strong> alle Faltohrkatzen tragen die Mutation; homozygote Tiere sind besonders schwer betroffen.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://vgl.ucdavis.edu/test/scottish-fold" target="_blank" rel="noopener noreferrer">UC Davis</a><a href="https://www.cats.org.uk/help-and-advice/getting-a-cat/scottish-folds" target="_blank" rel="noopener noreferrer">Cats Protection</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10685627/" target="_blank" rel="noopener noreferrer">VetCompass BMC</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-search="perser exotic shorthair brachyzephalie atemwege augen zähne tränennasen">
+              <span class="severity-tag">dauerbelastung</span>
+              <h3>Brachyzephalie bei Katzen</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Perser, Exotic Shorthair und extrem flachgesichtigen Linien.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> ab jungem Alter sichtbar; Augen, Atmung und Zähne bleiben lebenslang Thema.</div>
+                <div><strong>Wie doll:</strong> Atemprobleme, tränende oder verletzliche Augen, Zahnfehlstellungen, Fressprobleme.</div>
+                <div><strong>Wie oft:</strong> besonders bei extremen Kopfformen; der Rassetyp selbst erhöht das Risiko.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/cats/persian" target="_blank" rel="noopener noreferrer">UFAW Persian</a><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL §11b-Gutachten</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-search="perser exotic shorthair polyzystische nierenerkrankung pkd nierenversagen zysten">
+              <span class="severity-tag">organerkrankung</span>
+              <h3>Polyzystische Nierenerkrankung</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Persern und Katzen mit Perser-Abstammung.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> angeboren, Symptome oft erst später: Durst, Gewichtsverlust, Nierenwerte.</div>
+                <div><strong>Wie doll:</strong> fortschreitende Nierenschädigung bis Nierenversagen.</div>
+                <div><strong>Wie oft:</strong> historisch sehr häufig in Perserlinien; seriöse Zucht nutzt DNA-Test und Ultraschall.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/polycystic-kidney-disease" target="_blank" rel="noopener noreferrer">Cornell</a><a href="https://vgl.ucdavis.edu/test/pkd1-cat" target="_blank" rel="noopener noreferrer">UC Davis PKD1</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6716281/" target="_blank" rel="noopener noreferrer">PKD-Studie</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-search="maine coon ragdoll hypertrophe kardiomyopathie hcm herz plötzlicher tod">
+              <span class="severity-tag">lebensgefährlich</span>
+              <h3>Hypertrophe Kardiomyopathie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Maine Coon, Ragdoll und weiteren Rassekatzen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> jung bis erwachsen; Träger können lange unauffällig wirken.</div>
+                <div><strong>Wie doll:</strong> Herzvergrößerung, Thrombosen, Herzversagen, plötzlicher Tod.</div>
+                <div><strong>Wie oft:</strong> bekannte rassespezifische Mutationen; Gentest ersetzt aber keinen Herzultraschall.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://vgl.ucdavis.edu/test/maine-coon-hcm" target="_blank" rel="noopener noreferrer">UC Davis HCM</a><a href="https://hospital.cvm.ncsu.edu/services/small-animals/genetics/maine-coon-cat-hypertrophic-cardiomyopathy-hcm/" target="_blank" rel="noopener noreferrer">NC State HCM</a><a href="https://www.ufaw.org.uk/cats/maine-coon" target="_blank" rel="noopener noreferrer">UFAW Maine Coon</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-search="sphynx nacktkatze tasthaare vibrissen haarlos wärmeregulation sonnenbrand haut">
+              <span class="severity-tag">funktionsverlust</span>
+              <h3>Haarlosigkeit und fehlende Tasthaare</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Sphynx und anderen haarlosen Linien.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> ab Geburt; Schutz- und Sinnesfunktionen fehlen oder sind eingeschränkt.</div>
+                <div><strong>Wie doll:</strong> Temperaturprobleme, Sonnenbrand, Hautprobleme; fehlende Vibrissen nehmen der Katze wichtige Orientierung.</div>
+                <div><strong>Wie oft:</strong> rassetypisch, wenn Haarlosigkeit oder fehlende Tasthaare Zuchtziel sind.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf" target="_blank" rel="noopener noreferrer">Qualzuchtgutachten PDF</a><a href="https://qualzucht-datenbank.eu/weitere-informationen-einfuehrung-qualzucht/" target="_blank" rel="noopener noreferrer">QUEN</a></div>
+            </article>
+          </div>
+
+          <p class="breed-lexicon-status" id="breed-disease-status" aria-live="polite"></p>
+          <p class="breed-lexicon-note">Wichtig: „Rassekrankheit“ heißt nicht, dass jedes einzelne Tier sichtbar krank ist. Es heißt: Die Zuchtlinie trägt ein erhöhtes oder angezüchtetes Risiko. Für Käuferinnen und Käufer zählt deshalb nicht der Trostsatz „unserer atmet gut“, sondern unabhängige Diagnostik, Gesundheitsdaten der Elterntiere und die Frage, ob dieses Merkmal überhaupt weiter vermehrt werden sollte.</p>
+        </div>
+
+        <div class="section-feedback-heading"><h2 id="qualzucht-die-bekanntesten-beispiele">Die bekanntesten Beispiele</h2><button type="button" class="section-feedback-action" data-feedback-section="qualzucht-die-bekanntesten-beispiele" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm signal-grid" data-enhancement="qualzucht-signale">
             <article class="signal-card"><strong>Atmung</strong><span>Röcheln, Schnarchen und schnelle Erschöpfung sind keine niedlichen Rassemerkmale.</span></article>
             <article class="signal-card"><strong>Bewegung</strong><span>Wenn Knochen, Gelenke oder Körperform normale Bewegung verhindern, ist Schönheit Leid.</span></article>
             <article class="signal-card"><strong>Wahrnehmung</strong><span>Fell, Augen, Ohren oder Kopfgefieder dürfen Sicht, Hören und Alltag nicht behindern.</span></article>
@@ -5509,7 +5839,7 @@
         <p>Die herabhängenden Ohren sehen niedlich aus, verursachen aber bei diesen <a href="../kleintiere/index.html">Kaninchen</a> chronische Ohrenentzündungen, Gehörprobleme und Schmerzen. Die verengten Gehörgänge sind ein idealer Nährboden für Bakterien und Parasiten.</p>
 
         <h3>Scottish Fold (Katze)</h3>
-        <p>Die nach vorn gefalteten Ohren sind das Ergebnis eines <span class="glossary-term" data-glossary-key="gendefekt" data-glossary-title="Gendefekt" data-glossary-text="Erbliche Veränderung, die Gesundheit, Körperbau oder normale Funktion eines Tieres beeinträchtigen kann." data-glossary-href="../glossar/index.html#gendefekt" aria-describedby="glossary-term-popover" tabindex="0" role="button">Gendefekts</span>, der den gesamten Knorpel im Körper betrifft. Scottish Folds entwickeln eine fortschreitende Knorpelerkrankung (<span class="glossary-term" data-glossary-key="osteochondrodysplasie" data-glossary-title="Osteochondrodysplasie" data-glossary-text="Erbliche Knorpel- und Knochenerkrankung, bekannt bei Scottish-Fold-Katzen." data-glossary-href="../glossar/index.html#osteochondrodysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Osteochondrodysplasie</span>), die zu chronischen Gelenkschmerzen und eingeschränkter Beweglichkeit führt – lebenslang. In mehreren europäischen Ländern – darunter Belgien und Teile der Niederlande – ist die Zucht verboten oder stark eingeschränkt. In Schottland, dem Herkunftsland, wird ein Zuchtverbot diskutiert.</p>
+        <p>Die nach vorn gefalteten Ohren sind das Ergebnis eines <span class="glossary-term" data-glossary-key="gendefekt" data-glossary-title="Gendefekt" data-glossary-text="Erbliche Veränderung, die Gesundheit, Körperbau oder normale Funktion eines Tieres beeinträchtigen kann." data-glossary-href="../glossar/index.html#gendefekt" aria-describedby="glossary-term-popover" tabindex="0" role="button">Gendefekts</span>, der den gesamten Knorpel im Körper betrifft. Scottish Folds entwickeln eine fortschreitende Knorpelerkrankung (Osteochondrodysplasie), die zu chronischen Gelenkschmerzen und eingeschränkter Beweglichkeit führt – lebenslang. In mehreren europäischen Ländern – darunter Belgien und Teile der Niederlande – ist die Zucht verboten oder stark eingeschränkt. In Schottland, dem Herkunftsland, wird ein Zuchtverbot diskutiert.</p>
 
         <h3>Teacup-Hunde</h3>
         <p>Miniaturisierte Hunderassen (unter 1,5 kg), gezüchtet auf extreme Kleinheit. Die Folgen: brüchige Knochen, Zahnüberfüllung, Organprobleme, Unterzuckerung, offene Fontanellen (der Schädel schließt sich nicht). Viele sterben jung.</p>
@@ -5520,7 +5850,7 @@
         <h3>Albino-Reptilien</h3>
         <p>Gezielte Zucht auf <span class="glossary-term" data-glossary-key="albinismus" data-glossary-title="Albinismus" data-glossary-text="Pigmentmangel, der bei Tieren je nach Art zu Lichtempfindlichkeit, Sehproblemen und Zuchtrisiken führen kann." data-glossary-href="../glossar/index.html#albinismus" aria-describedby="glossary-term-popover" tabindex="0" role="button">Albinismus</span>. Die Tiere sind extrem lichtempfindlich, sehen schlecht und sind in ihrer natürlichen <span class="glossary-term" data-glossary-key="thermoregulation" data-glossary-title="Thermoregulation" data-glossary-text="Fähigkeit des Körpers, Temperatur zu halten oder zu steuern. Bei Qualzucht oder Hitze kann sie versagen." data-glossary-href="../glossar/index.html#thermoregulation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Thermoregulation</span> eingeschränkt.</p>
 
-        <div class="section-feedback-heading"><h2 id="hinweis-qualzucht-3">Was du tun kannst</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-qualzucht-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm article-split image-context-card" data-enhancement="qualzucht-adoption" data-image-purpose="Qualzucht-Lösungsabschnitt: Adoption als konkrete Alternative zu Nachfrage zeigen" data-share-reason="Das Bild soll den Ausweg zeigen, nicht nur das Problem bebildern.">
+        <div class="section-feedback-heading"><h2 id="qualzucht-was-du-tun-kannst">Was du tun kannst</h2><button type="button" class="section-feedback-action" data-feedback-section="qualzucht-was-du-tun-kannst" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm article-split image-context-card" data-enhancement="qualzucht-adoption" data-image-purpose="Qualzucht-Lösungsabschnitt: Adoption als konkrete Alternative zu Nachfrage zeigen" data-share-reason="Das Bild soll den Ausweg zeigen, nicht nur das Problem bebildern.">
             <figure style="--image-position:center 48%;">
               <img src="../assets/images/optimized/rabbit-adoption-enclosure.jpg" alt="Kaninchen wird vor einer Adoption in einem Außengehege gehalten" loading="lazy" width="720" height="960" decoding="async">
               <figcaption class="context-caption">Nicht kaufen. Nachfrage entziehen. Tierschutztieren eine Chance geben.</figcaption>
@@ -5547,11 +5877,11 @@
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
-              <ul><li>Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.</li><li>Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.</li><li>Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.</li></ul>
+              <ul><li>Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.</li><li>Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.</li><li>Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.</li><li>Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Primäre Quellen</h3>
-              <ul><li><a href="https://www.gesetze-im-internet.de/tierschg/__11b.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11b</a></li><li><a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a></li><li><a href="https://www.tierschutz-tvt.de" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz</a></li></ul>
+              <ul><li><a href="https://www.gesetze-im-internet.de/tierschg/__11b.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11b</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL: Gutachten zur Auslegung von § 11b TierSchG</a></li><li><a href="https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass" target="_blank" rel="noopener noreferrer">RVC VetCompass Brachycephaly</a></li><li><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA - Online Mendelian Inheritance in Animals</a></li><li><a href="https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro" target="_blank" rel="noopener noreferrer">UFAW Genetic Welfare Problems</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>

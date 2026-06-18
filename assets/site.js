@@ -375,9 +375,9 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "qualzucht",
-    "title": "Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen",
-    "description": "Qualzucht bei Hunden, Katzen, Kaninchen, Vögeln und Exoten erkennen: Atemnot, Schmerzen, Gendefekte und warum Nachfrage Leid finanziert.",
-    "terms": "Qualzucht verstehen und beim Tierkauf vermeiden qualzucht qualzucht"
+    "title": "Qualzucht und Rassekrankheiten erkennen",
+    "description": "Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
+    "terms": "Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden qualzucht qualzucht"
   },
   {
     "id": "adoption",
@@ -2659,6 +2659,36 @@ function normalizeAssetUrls(root) {
       });
       var status = document.getElementById('glossary-filter-status');
       if (status) status.textContent = visible + ' Glossar-Einträge sichtbar.';
+    }
+
+    var activeBreedDiseaseFilter = 'all';
+
+    function setBreedDiseaseFilter(filter) {
+      activeBreedDiseaseFilter = filter || 'all';
+      document.querySelectorAll('[data-breed-filter]').forEach(function(button) {
+        button.classList.toggle('is-active', button.dataset.breedFilter === activeBreedDiseaseFilter);
+      });
+      filterBreedDiseases();
+    }
+
+    function filterBreedDiseases() {
+      var search = document.getElementById('breed-disease-search');
+      var cards = document.querySelectorAll('#breed-disease-list .breed-disease-card');
+      if (!cards.length) return;
+
+      var query = search ? search.value.trim().toLowerCase() : '';
+      var visible = 0;
+      cards.forEach(function(card) {
+        var animalMatches = activeBreedDiseaseFilter === 'all' || card.dataset.animal === activeBreedDiseaseFilter;
+        var text = (card.textContent + ' ' + (card.dataset.search || '')).toLowerCase();
+        var queryMatches = !query || text.indexOf(query) !== -1;
+        var show = animalMatches && queryMatches;
+        card.classList.toggle('is-hidden', !show);
+        if (show) visible++;
+      });
+
+      var status = document.getElementById('breed-disease-status');
+      if (status) status.textContent = visible + ' Einträge sichtbar.';
     }
 
     // ===== MYTH FILTER =====

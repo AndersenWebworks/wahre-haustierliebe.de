@@ -66,7 +66,7 @@
 - Reitbeteiligung als ehrlicher Einstieg - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/reitbeteiligung/index.html
 - Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/entscheidung/index.html
 - Kastration bei Haustieren: Tierschutz, Kosten und Mythen: https://wahre-haustierliebe.de/kastration/index.html
-- Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen: https://wahre-haustierliebe.de/qualzucht/index.html
+- Qualzucht und Rassekrankheiten erkennen: https://wahre-haustierliebe.de/qualzucht/index.html
 - Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
@@ -135,7 +135,7 @@
 - https://wahre-haustierliebe.de/pferde/reitbeteiligung/index.html - Reitbeteiligung als Alternative zum eigenen Pferd prüfen.
 - https://wahre-haustierliebe.de/pferde/entscheidung/index.html - Entscheidung vor dem eigenen Pferd prüfen.
 - https://wahre-haustierliebe.de/kastration/index.html - Kastration bei Haustieren verstehen und entscheiden
-- https://wahre-haustierliebe.de/qualzucht/index.html - Qualzucht verstehen und beim Tierkauf vermeiden
+- https://wahre-haustierliebe.de/qualzucht/index.html - Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden
 - https://wahre-haustierliebe.de/adoption/index.html - Tier aus dem Tierheim adoptieren statt kaufen
 - https://wahre-haustierliebe.de/selbsttest/index.html - Selbsttest vor Haustieranschaffung
 - https://wahre-haustierliebe.de/notfall/index.html - Tiermedizinische Warnsignale und Notfallentscheidung
@@ -288,19 +288,22 @@ Sources:
 - Streunerhilfe Plau e. V.: https://streunerhilfe-plau.de
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
-### Qualzucht erkennen: Wenn Rassemerkmale Tiere leiden lassen
+### Qualzucht und Rassekrankheiten erkennen
 URL: https://wahre-haustierliebe.de/qualzucht/index.html
 Facts:
 - Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.
 - Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.
+- Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.
 - Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.
 Important boundaries:
 - Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.
 - Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken.
 Sources:
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
-- Deutscher Tierschutzbund: https://www.tierschutzbund.de
-- Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
+- BMEL: Gutachten zur Auslegung von § 11b TierSchG: https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html
+- RVC VetCompass Brachycephaly: https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass
+- OMIA - Online Mendelian Inheritance in Animals: https://omia.org/home/
+- UFAW Genetic Welfare Problems: https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro
 
 ### Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind
 URL: https://wahre-haustierliebe.de/adoption/index.html
@@ -410,8 +413,10 @@ Important boundaries:
 - Keine Rechtsberatung zum Einschlagen von Scheiben geben.
 - Bei Hitzschlag nicht mit Eiswasser schocken.
 Sources:
-- TASSO e. V.: https://www.tasso.net
-- Deutscher Tierschutzbund: https://www.tierschutzbund.de
+- TiHo Hannover: Hitzefalle Auto: https://www.tiho-hannover.de/universitaet/aktuelles-veroeffentlichungen/pressemitteilungen/detail/hitzefalle-auto-lebensgefahr-fuer-hunde-bereits-nach-minuten
+- Landestierschutzbeauftragte Brandenburg: Hitzestress bei Hunden: https://mleuv.brandenburg.de/mleuv/de/ueber-uns/landestierschutzbeauftragte/themen/hitzestress-bei-hunden/
+- ADAC: Hitze im Auto und rechtliches Vorgehen: https://presse.adac.de/meldungen/adac-ev/recht/hitze-im-auto-fuehrt-zu-lebensbedrohlichen-situationen.html
+- Thieme Tiermedizin: Hitzschlag beim Hund: https://tiermedizin.thieme.de/hund-katze-co/sommer-spezial/detail/hitzschlag-beim-hund-therapie-und-aufklaerung-921
 
 ### Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt
 URL: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
