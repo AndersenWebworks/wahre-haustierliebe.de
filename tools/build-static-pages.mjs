@@ -532,7 +532,7 @@ const evidenceByPage = {
     facts: [
       'Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.',
       'Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.',
-      'Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.',
+      'Das Rassekrankheiten-Lexikon startet mit 20 Hund- und Katze-Einträgen und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.',
       'Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.',
     ],
     sources: [
@@ -541,6 +541,8 @@ const evidenceByPage = {
       ['RVC VetCompass Brachycephaly', 'https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass'],
       ['OMIA - Online Mendelian Inheritance in Animals', 'https://omia.org/home/'],
       ['UFAW Genetic Welfare Problems', 'https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro'],
+      ['UC Davis Veterinary Genetics Laboratory', 'https://vgl.ucdavis.edu/dna-tests/cat'],
+      ['LSU Deafness in Dogs & Cats', 'https://www.lsu.edu/vetmed/deafness/index.php'],
     ],
     guardrails: [
       'Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.',
@@ -2133,6 +2135,7 @@ function rewriteScript(script) {
     `      hydrateArticleKickers();\n` +
     `      hydrateResponsiveTables();\n` +
     `      hydrateMythRows();\n` +
+    `      filterBreedDiseases();\n` +
     `      hydrateTestProgress();\n` +
     `      normalizeAssetUrls(document);\n` +
     `      if (document.body && document.body.dataset.staticSite === 'true') {\n` +

@@ -804,6 +804,31 @@
       margin-bottom: 1.25rem;
     }
     .breed-lexicon h2 { margin-top: 0; border-top: 0 !important; }
+    .breed-lexicon-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    .breed-lexicon-summary div {
+      display: grid;
+      gap: 0.15rem;
+      min-width: 0;
+      padding: 0.7rem 0.78rem;
+      border: 1px solid rgba(42, 123, 111, 0.16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+    }
+    .breed-lexicon-summary strong {
+      color: var(--primary-dark);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    .breed-lexicon-summary span {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.3;
+    }
     .breed-lexicon-controls {
       display: grid;
       gap: 0.75rem;
@@ -825,6 +850,16 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+    }
+    .breed-filter-block {
+      display: grid;
+      gap: 0.38rem;
+    }
+    .breed-filter-label {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 900;
+      line-height: 1.2;
     }
     .breed-filter {
       border: 1px solid rgba(42, 123, 111, 0.22);
@@ -850,6 +885,7 @@
     }
     .breed-disease-card {
       display: grid;
+      align-content: start;
       gap: 0.75rem;
       padding: 1rem;
       border: 1px solid rgba(31, 58, 47, 0.12);
@@ -889,7 +925,7 @@
       font-size: 0.78rem;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0;
     }
     .breed-source-list {
       display: flex;
@@ -922,7 +958,12 @@
     }
     @media (max-width: 760px) {
       .breed-lexicon-head { grid-template-columns: 1fr; }
-      .breed-filter { flex: 1 1 auto; }
+      .breed-lexicon-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .breed-filter { flex: 1 1 calc(50% - 0.5rem); }
+    }
+    @media (max-width: 460px) {
+      .breed-lexicon-summary { grid-template-columns: 1fr; }
+      .breed-filter { flex-basis: 100%; }
     }
     .glossary-term {
       color: var(--primary-dark);
@@ -5561,12 +5602,12 @@
         <p>Hilfreich sind vor allem konkrete Hinweise: eine unklare Formulierung, ein veralteter Stand, eine bessere Quelle, ein fehlender Sonderfall oder ein fachlicher Fehler. Je genauer du die Stelle benennst, desto leichter können wir sie prüfen.</p>
         <div class="mitmachen-steps">
           <article class="mitmachen-step">
-            <strong>Textstelle markieren</strong>
-            <p>Markiere einen Satz oder Absatz. Danach erscheint ein kleiner Hinweis-Button. Im Formular steht deine Auswahl als Zitat.</p>
+            <strong>Hinweis-Button nutzen</strong>
+            <p>Tippe oder klicke an der passenden Stelle auf „? Hinweis geben“. Danach öffnet sich das Formular; der Abschnitt ist dort schon als Bezug hinterlegt.</p>
           </article>
           <article class="mitmachen-step">
-            <strong>Abschnitt melden</strong>
-            <p>Wenn es um einen ganzen Themenblock geht, nutze den ruhigen Button oben rechts am Abschnitt.</p>
+            <strong>Textstelle genau nennen</strong>
+            <p>Wenn es um einen bestimmten Satz oder Absatz geht, schreib ihn im Hinweis kurz dazu oder beschreibe die Stelle so konkret wie möglich.</p>
           </article>
           <article class="mitmachen-step">
             <strong>Mail prüfen und senden</strong>

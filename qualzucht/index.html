@@ -804,6 +804,31 @@
       margin-bottom: 1.25rem;
     }
     .breed-lexicon h2 { margin-top: 0; border-top: 0 !important; }
+    .breed-lexicon-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    .breed-lexicon-summary div {
+      display: grid;
+      gap: 0.15rem;
+      min-width: 0;
+      padding: 0.7rem 0.78rem;
+      border: 1px solid rgba(42, 123, 111, 0.16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+    }
+    .breed-lexicon-summary strong {
+      color: var(--primary-dark);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    .breed-lexicon-summary span {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.3;
+    }
     .breed-lexicon-controls {
       display: grid;
       gap: 0.75rem;
@@ -825,6 +850,16 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+    }
+    .breed-filter-block {
+      display: grid;
+      gap: 0.38rem;
+    }
+    .breed-filter-label {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 900;
+      line-height: 1.2;
     }
     .breed-filter {
       border: 1px solid rgba(42, 123, 111, 0.22);
@@ -850,6 +885,7 @@
     }
     .breed-disease-card {
       display: grid;
+      align-content: start;
       gap: 0.75rem;
       padding: 1rem;
       border: 1px solid rgba(31, 58, 47, 0.12);
@@ -889,7 +925,7 @@
       font-size: 0.78rem;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0;
     }
     .breed-source-list {
       display: flex;
@@ -922,7 +958,12 @@
     }
     @media (max-width: 760px) {
       .breed-lexicon-head { grid-template-columns: 1fr; }
-      .breed-filter { flex: 1 1 auto; }
+      .breed-lexicon-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .breed-filter { flex: 1 1 calc(50% - 0.5rem); }
+    }
+    @media (max-width: 460px) {
+      .breed-lexicon-summary { grid-template-columns: 1fr; }
+      .breed-filter { flex-basis: 100%; }
     }
     .glossary-term {
       color: var(--primary-dark);
@@ -5361,7 +5402,9 @@
     "https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html",
     "https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass",
     "https://omia.org/home/",
-    "https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro"
+    "https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro",
+    "https://vgl.ucdavis.edu/dna-tests/cat",
+    "https://www.lsu.edu/vetmed/deafness/index.php"
   ]
 }
   </script>
@@ -5646,20 +5689,40 @@
             <div>
               <span class="eyebrow">Rassekrankheiten-Lexikon</span>
               <h2 id="qualzucht-wenn-ein-rassestandard-zur-diagnose-wird">Wenn ein Rassestandard zur Diagnose wird</h2>
-              <p class="text-muted">Dieser erste Lexikonstand bündelt belegte Erkrankungs- und Zuchtkomplexe bei Hunden und Katzen. Er ist absichtlich streng: Ein niedliches Merkmal ist nicht harmlos, wenn Tierärztinnen und Studien dahinter Schmerz, Atemnot, Lahmheit oder Organversagen beschreiben.</p>
+              <p class="text-muted">Dieser Lexikonstand bündelt belegte Erkrankungs- und Zuchtkomplexe bei Hunden und Katzen. Er ist absichtlich streng: Ein niedliches Merkmal ist nicht harmlos, wenn Tierärztinnen und Studien dahinter Schmerz, Atemnot, Lahmheit, Funktionsverlust oder Organversagen beschreiben.</p>
+              <div class="breed-lexicon-summary" aria-label="Stand des Rassekrankheiten-Lexikons">
+                <div><strong>20</strong><span>Start-Einträge mit Quellen</span></div>
+                <div><strong>2</strong><span>Tierarten: Hund und Katze</span></div>
+                <div><strong>5</strong><span>betroffene Körperbereiche</span></div>
+                <div><strong>1</strong><span>klare Kaufentscheidung: Nachfrage stoppen</span></div>
+              </div>
             </div>
             <div class="breed-lexicon-controls" aria-label="Rassekrankheiten filtern">
               <input class="breed-lexicon-search" id="breed-disease-search" type="search" placeholder="Rasse, Erkrankung oder Symptom suchen ..." oninput="filterBreedDiseases()">
-              <div class="breed-filter-row" role="group" aria-label="Tierart auswählen">
-                <button class="breed-filter is-active" type="button" data-breed-filter="all" onclick="setBreedDiseaseFilter('all')">Alle</button>
-                <button class="breed-filter" type="button" data-breed-filter="hund" onclick="setBreedDiseaseFilter('hund')">Hunde</button>
-                <button class="breed-filter" type="button" data-breed-filter="katze" onclick="setBreedDiseaseFilter('katze')">Katzen</button>
+              <div class="breed-filter-block">
+                <span class="breed-filter-label">Tierart</span>
+                <div class="breed-filter-row" role="group" aria-label="Tierart auswählen">
+                  <button class="breed-filter is-active" type="button" data-breed-filter="all" aria-pressed="true" onclick="setBreedDiseaseFilter('all')">Alle</button>
+                  <button class="breed-filter" type="button" data-breed-filter="hund" aria-pressed="false" onclick="setBreedDiseaseFilter('hund')">Hunde</button>
+                  <button class="breed-filter" type="button" data-breed-filter="katze" aria-pressed="false" onclick="setBreedDiseaseFilter('katze')">Katzen</button>
+                </div>
+              </div>
+              <div class="breed-filter-block">
+                <span class="breed-filter-label">Bereich</span>
+                <div class="breed-filter-row" role="group" aria-label="Betroffenen Körperbereich auswählen">
+                  <button class="breed-filter is-active" type="button" data-breed-system="all" aria-pressed="true" onclick="setBreedDiseaseSystem('all')">Alle Bereiche</button>
+                  <button class="breed-filter" type="button" data-breed-system="atem-augen" aria-pressed="false" onclick="setBreedDiseaseSystem('atem-augen')">Atmung/Augen</button>
+                  <button class="breed-filter" type="button" data-breed-system="bewegung" aria-pressed="false" onclick="setBreedDiseaseSystem('bewegung')">Bewegung</button>
+                  <button class="breed-filter" type="button" data-breed-system="herz-organe" aria-pressed="false" onclick="setBreedDiseaseSystem('herz-organe')">Herz/Organe</button>
+                  <button class="breed-filter" type="button" data-breed-system="nerven-gene" aria-pressed="false" onclick="setBreedDiseaseSystem('nerven-gene')">Nerven/Gene</button>
+                  <button class="breed-filter" type="button" data-breed-system="haut-sinne" aria-pressed="false" onclick="setBreedDiseaseSystem('haut-sinne')">Haut/Sinne</button>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="breed-disease-grid" id="breed-disease-list">
-            <article class="breed-disease-card" data-animal="hund" data-search="mops französische bulldogge englische bulldogge pekinese shih tzu brachyzephalie boas atemnot hitze schnarchen">
+            <article class="breed-disease-card" data-animal="hund" data-system="atem-augen" data-search="mops französische bulldogge englische bulldogge pekinese shih tzu brachyzephalie boas atemnot hitze schnarchen">
               <span class="severity-tag">hoch belastend</span>
               <h3>Brachyzephales Atemwegssyndrom</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Mops, Französischer Bulldogge, Englischer Bulldogge, Pekingese, Shih Tzu.</span></p>
@@ -5671,7 +5734,7 @@
               <div class="breed-source-list"><a href="https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass" target="_blank" rel="noopener noreferrer">RVC VetCompass</a><a href="https://www.nature.com/articles/s41598-020-73088-y" target="_blank" rel="noopener noreferrer">Scientific Reports</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="mops bulldogge französische bulldogge augen hornhaut ulkus lidfehlstellung trockene augen">
+            <article class="breed-disease-card" data-animal="hund" data-system="atem-augen" data-search="mops bulldogge französische bulldogge augen hornhaut ulkus lidfehlstellung trockene augen">
               <span class="severity-tag">schmerzhaft</span>
               <h3>Augenprobleme durch flache Gesichter</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Mops, Bulldoggen, Pekingesen und anderen kurzköpfigen Rassen.</span></p>
@@ -5683,7 +5746,7 @@
               <div class="breed-source-list"><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL §11b-Gutachten</a><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="dackel dachshund französische bulldogge corgi bandscheibe ivdd lähmung rücken">
+            <article class="breed-disease-card" data-animal="hund" data-system="bewegung" data-search="dackel dachshund französische bulldogge corgi bandscheibe ivdd lähmung rücken">
               <span class="severity-tag">akut riskant</span>
               <h3>Bandscheibenerkrankungen und Lähmungen</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Dackeln, Corgis, Französischen Bulldoggen und anderen chondrodystrophen Hunden.</span></p>
@@ -5695,7 +5758,7 @@
               <div class="breed-source-list"><a href="https://ofa.org/diseases/" target="_blank" rel="noopener noreferrer">OFA Diseases</a><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="cavalier king charles spaniel syringomyelie chiari kopfschmerz nacken schmerz">
+            <article class="breed-disease-card" data-animal="hund" data-system="nerven-gene" data-search="cavalier king charles spaniel syringomyelie chiari kopfschmerz nacken schmerz">
               <span class="severity-tag">chronisch schmerzhaft</span>
               <h3>Chiari-like Malformation und Syringomyelie</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Cavalier King Charles Spaniel.</span></p>
@@ -5707,7 +5770,7 @@
               <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/cavalier-king-charles-spaniel" target="_blank" rel="noopener noreferrer">UFAW</a><a href="https://www.vetspecialists.co.uk/fact-sheets-post/syringohydromyelia-in-cavalier-king-charles-spaniels-ckcs-fact-sheet/" target="_blank" rel="noopener noreferrer">Vet Specialists</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="cavalier king charles spaniel mitralklappe herz murmur mmvd husten herzinsuffizienz">
+            <article class="breed-disease-card" data-animal="hund" data-system="herz-organe" data-search="cavalier king charles spaniel mitralklappe herz murmur mmvd husten herzinsuffizienz">
               <span class="severity-tag">lebensverkürzend</span>
               <h3>Mitralklappenerkrankung</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Cavalier King Charles Spaniel, außerdem bei kleinen älteren Hunden.</span></p>
@@ -5719,7 +5782,7 @@
               <div class="breed-source-list"><a href="https://cvm.ncsu.edu/cavalier-king-charles-spaniels-research/" target="_blank" rel="noopener noreferrer">NC State</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4579365/" target="_blank" rel="noopener noreferrer">VetCompass-Studie</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="labrador golden retriever schäferhund rottweiler hüftdysplasie hd lahmheit arthrose">
+            <article class="breed-disease-card" data-animal="hund" data-system="bewegung" data-search="labrador golden retriever schäferhund rottweiler hüftdysplasie hd lahmheit arthrose">
               <span class="severity-tag">häufig schmerzhaft</span>
               <h3>Hüftdysplasie</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> großen und schweren Rassen, etwa Labrador, Golden Retriever, Deutscher Schäferhund, Rottweiler.</span></p>
@@ -5731,7 +5794,7 @@
               <div class="breed-source-list"><a href="https://ofa.org/diseases/" target="_blank" rel="noopener noreferrer">OFA</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/" target="_blank" rel="noopener noreferrer">Genetische Selektion</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="labrador golden retriever rottweiler berner sennenhund ellbogendysplasie elbow dysplasia lahmheit arthrose">
+            <article class="breed-disease-card" data-animal="hund" data-system="bewegung" data-search="labrador golden retriever rottweiler berner sennenhund ellbogendysplasie elbow dysplasia lahmheit arthrose">
               <span class="severity-tag">früh belastend</span>
               <h3>Ellbogendysplasie</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Labrador, Golden Retriever, Rottweiler, Berner Sennenhund und weiteren großen Rassen.</span></p>
@@ -5743,7 +5806,7 @@
               <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/labrador-retriever-elbow-dysplasia-hco" target="_blank" rel="noopener noreferrer">UFAW Labrador</a><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/elbow-dysplasia" target="_blank" rel="noopener noreferrer">Cornell</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="hund" data-search="kleinhund toy zwerg patellaluxation kniescheibe lahmheit">
+            <article class="breed-disease-card" data-animal="hund" data-system="bewegung" data-search="kleinhund toy zwerg patellaluxation kniescheibe lahmheit">
               <span class="severity-tag">bewegungsschmerz</span>
               <h3>Patellaluxation</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> vielen Toy- und Kleinhunderassen.</span></p>
@@ -5755,7 +5818,55 @@
               <div class="breed-source-list"><a href="https://ofa.org/diseases/" target="_blank" rel="noopener noreferrer">OFA</a><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="katze" data-search="scottish fold osteochondrodysplasie ocd knorpel faltohren gelenkschmerz lahmheit">
+            <article class="breed-disease-card" data-animal="hund" data-system="herz-organe" data-search="dobermann doberman deutsche dogge neufundländer rottweiler dogue de bordeaux dilatative kardiomyopathie dcm herz rhythmus plötzlicher tod">
+              <span class="severity-tag">lebensgefährlich</span>
+              <h3>Dilatative Kardiomyopathie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Dobermann, Deutsche Dogge, Neufundländer, Rottweiler und weiteren großen Rassen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> oft erwachsen; lange unauffällig, bis Rhythmusstörungen oder Herzschwäche sichtbar werden.</div>
+                <div><strong>Wie doll:</strong> Leistungsschwäche, Wasseransammlungen, Ohnmacht, plötzlicher Tod.</div>
+                <div><strong>Wie oft:</strong> bei einzelnen Rassen so relevant, dass Ultraschall und 24-Stunden-EKG zur verantwortlichen Zuchtkontrolle gehören.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/doberman-pinscher-dilated-cardiomyopathy" target="_blank" rel="noopener noreferrer">UFAW Dobermann</a><a href="https://www.ufaw.org.uk/dogs/newfoundland-dilated-cardiomyopathy" target="_blank" rel="noopener noreferrer">UFAW Neufundländer</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-system="nerven-gene" data-search="deutscher schäferhund corgi boxer degenerative myelopathie dm rückenmark lähmung hinterhand">
+              <span class="severity-tag">fortschreitend</span>
+              <h3>Degenerative Myelopathie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Deutschem Schäferhund, Corgi, Boxer und weiteren Rassen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> meist im Erwachsenen- bis Seniorenalter; erste Zeichen sind oft Hinterhand-Schwäche und Stolpern.</div>
+                <div><strong>Wie doll:</strong> fortschreitender Verlust von Beweglichkeit und normaler Funktion bis zur Lähmung.</div>
+                <div><strong>Wie oft:</strong> bei betroffenen Rassen rassetypisch genug, dass Gentests und Zuchtselektion eine Rolle spielen.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/german-shepherd-degenerative-myelopathy" target="_blank" rel="noopener noreferrer">UFAW Schäferhund</a><a href="https://www.ufaw.org.uk/dogs/corgi-degenerative-myelopathy" target="_blank" rel="noopener noreferrer">UFAW Corgi</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-system="haut-sinne" data-search="shar pei bulldogge falten hautfaltendermatitis haut falten entzündung entropion eingerollte lider hornhaut">
+              <span class="severity-tag">dauerreiz</span>
+              <h3>Faltenhaut und eingerollte Lider</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Shar Pei, Bulldoggen und Rassen mit extremen Hautfalten oder schwerem Gesicht.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> häufig schon bei jungen Tieren; Falten, Feuchtigkeit und Lidstellung bleiben ein Leben lang Thema.</div>
+                <div><strong>Wie doll:</strong> Hautentzündung, Juckreiz, Geruch, Hornhautreizungen, Schmerzen, teils OP-Bedarf.</div>
+                <div><strong>Wie oft:</strong> bei stark gefalteten Linien kein Zufall, sondern direkt mit dem gezüchteten Erscheinungsbild verbunden.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/dogs/shar-pei-skin-fold-dermatitis" target="_blank" rel="noopener noreferrer">UFAW Hautfalten</a><a href="https://www.ufaw.org.uk/dogs/shar-pei-entropion" target="_blank" rel="noopener noreferrer">UFAW Entropion</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="hund" data-system="haut-sinne" data-search="dalmatiner merle weiß congenital deafness taubheit hören baer test">
+              <span class="severity-tag">sinnesverlust</span>
+              <h3>Angeborene Taubheit</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Dalmatinern und weiß- oder merle-geprägten Linien verschiedener Rassen.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> ab Geburt; ohne BAER-Hörtest wird einseitige Taubheit leicht übersehen.</div>
+                <div><strong>Wie doll:</strong> eingeschränkte Kommunikation, Schreckreaktionen, Trainings- und Sicherheitsrisiken.</div>
+                <div><strong>Wie oft:</strong> LSU nennt beim Dalmatiner besonders hohe Raten; bei anderen stark betroffenen Rassen liegen gemessene Werte darunter, aber deutlich relevant.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.lsu.edu/vetmed/deafness/vetclinna.php" target="_blank" rel="noopener noreferrer">LSU Deafness</a><a href="https://www.lsu.edu/vetmed/deafness/genetics.php" target="_blank" rel="noopener noreferrer">LSU Genetics</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-system="bewegung" data-search="scottish fold osteochondrodysplasie ocd knorpel faltohren gelenkschmerz lahmheit">
               <span class="severity-tag">angezüchteter Defekt</span>
               <h3>Scottish-Fold-<span class="glossary-term" data-glossary-key="osteochondrodysplasie" data-glossary-title="Osteochondrodysplasie" data-glossary-text="Erbliche Knorpel- und Knochenerkrankung, bekannt bei Scottish-Fold-Katzen." data-glossary-href="../glossar/index.html#osteochondrodysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Osteochondrodysplasie</span></h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Scottish Fold; das Faltohr ist selbst Teil des Knorpeldefekts.</span></p>
@@ -5767,7 +5878,7 @@
               <div class="breed-source-list"><a href="https://vgl.ucdavis.edu/test/scottish-fold" target="_blank" rel="noopener noreferrer">UC Davis</a><a href="https://www.cats.org.uk/help-and-advice/getting-a-cat/scottish-folds" target="_blank" rel="noopener noreferrer">Cats Protection</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10685627/" target="_blank" rel="noopener noreferrer">VetCompass BMC</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="katze" data-search="perser exotic shorthair brachyzephalie atemwege augen zähne tränennasen">
+            <article class="breed-disease-card" data-animal="katze" data-system="atem-augen" data-search="perser exotic shorthair brachyzephalie atemwege augen zähne tränennasen">
               <span class="severity-tag">dauerbelastung</span>
               <h3>Brachyzephalie bei Katzen</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Perser, Exotic Shorthair und extrem flachgesichtigen Linien.</span></p>
@@ -5779,7 +5890,7 @@
               <div class="breed-source-list"><a href="https://www.ufaw.org.uk/cats/persian" target="_blank" rel="noopener noreferrer">UFAW Persian</a><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL §11b-Gutachten</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="katze" data-search="perser exotic shorthair polyzystische nierenerkrankung pkd nierenversagen zysten">
+            <article class="breed-disease-card" data-animal="katze" data-system="herz-organe" data-search="perser exotic shorthair polyzystische nierenerkrankung pkd nierenversagen zysten">
               <span class="severity-tag">organerkrankung</span>
               <h3>Polyzystische Nierenerkrankung</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Persern und Katzen mit Perser-Abstammung.</span></p>
@@ -5791,7 +5902,7 @@
               <div class="breed-source-list"><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/polycystic-kidney-disease" target="_blank" rel="noopener noreferrer">Cornell</a><a href="https://vgl.ucdavis.edu/test/pkd1-cat" target="_blank" rel="noopener noreferrer">UC Davis PKD1</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6716281/" target="_blank" rel="noopener noreferrer">PKD-Studie</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="katze" data-search="maine coon ragdoll hypertrophe kardiomyopathie hcm herz plötzlicher tod">
+            <article class="breed-disease-card" data-animal="katze" data-system="herz-organe" data-search="maine coon ragdoll hypertrophe kardiomyopathie hcm herz plötzlicher tod">
               <span class="severity-tag">lebensgefährlich</span>
               <h3>Hypertrophe Kardiomyopathie</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Maine Coon, Ragdoll und weiteren Rassekatzen.</span></p>
@@ -5803,7 +5914,7 @@
               <div class="breed-source-list"><a href="https://vgl.ucdavis.edu/test/maine-coon-hcm" target="_blank" rel="noopener noreferrer">UC Davis HCM</a><a href="https://hospital.cvm.ncsu.edu/services/small-animals/genetics/maine-coon-cat-hypertrophic-cardiomyopathy-hcm/" target="_blank" rel="noopener noreferrer">NC State HCM</a><a href="https://www.ufaw.org.uk/cats/maine-coon" target="_blank" rel="noopener noreferrer">UFAW Maine Coon</a></div>
             </article>
 
-            <article class="breed-disease-card" data-animal="katze" data-search="sphynx nacktkatze tasthaare vibrissen haarlos wärmeregulation sonnenbrand haut">
+            <article class="breed-disease-card" data-animal="katze" data-system="haut-sinne" data-search="sphynx nacktkatze tasthaare vibrissen haarlos wärmeregulation sonnenbrand haut">
               <span class="severity-tag">funktionsverlust</span>
               <h3>Haarlosigkeit und fehlende Tasthaare</h3>
               <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Sphynx und anderen haarlosen Linien.</span></p>
@@ -5814,9 +5925,45 @@
               </div>
               <div class="breed-source-list"><a href="https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf" target="_blank" rel="noopener noreferrer">Qualzuchtgutachten PDF</a><a href="https://qualzucht-datenbank.eu/weitere-informationen-einfuehrung-qualzucht/" target="_blank" rel="noopener noreferrer">QUEN</a></div>
             </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-system="nerven-gene" data-search="manx manx-syndrom schwanzlosigkeit spina bifida wirbelsäule kot urin lähmung">
+              <span class="severity-tag">angezüchtetes risiko</span>
+              <h3>Manx-Syndrom</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Manx und schwanzlosen Linien.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> von Geburt an; schwere Fälle fallen früh durch Wirbelsäulen- und Nervenprobleme auf.</div>
+                <div><strong>Wie doll:</strong> Spina bifida, Hinterhandprobleme, Kot- und Harninkontinenz, stark eingeschränkte Lebensqualität.</div>
+                <div><strong>Wie oft:</strong> direkt mit der Zucht auf Schwanzlosigkeit verbunden; schwere Ausprägungen sind ein zentrales Wohlfahrtsproblem der Rasse.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://www.ufaw.org.uk/cats/manx-manx-syndrome" target="_blank" rel="noopener noreferrer">UFAW Manx-Syndrom</a><a href="https://www.ufaw.org.uk/cats/manx" target="_blank" rel="noopener noreferrer">UFAW Manx</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-system="haut-sinne" data-search="abyssinier somali perser bengal progressive retinaatrophie pra netzhaut blindheit augen">
+              <span class="severity-tag">blindheitsrisiko</span>
+              <h3>Progressive Retinaatrophie</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Abyssinier, Somali, Perser, Bengal und weiteren Rassekatzen mit bekannten Varianten.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> je nach Variante sehr früh oder später; anfangs kann die Katze unauffällig wirken.</div>
+                <div><strong>Wie doll:</strong> fortschreitender Netzhautabbau bis zur Blindheit.</div>
+                <div><strong>Wie oft:</strong> für mehrere Rassen sind DNA-Tests verfügbar; verantwortliche Zucht darf bekannte Trägerlinien nicht blind weiterverpaaren.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://vgl.ucdavis.edu/breed/abyssinian" target="_blank" rel="noopener noreferrer">UC Davis Abyssinier</a><a href="https://vgl.ucdavis.edu/breed/persian" target="_blank" rel="noopener noreferrer">UC Davis Perser</a><a href="https://vgl.ucdavis.edu/dna-tests/cat" target="_blank" rel="noopener noreferrer">UC Davis Katzentests</a></div>
+            </article>
+
+            <article class="breed-disease-card" data-animal="katze" data-system="nerven-gene" data-search="devon rex sphynx kongenitales myasthenie syndrom cms muskelschwäche spasticity COLQ">
+              <span class="severity-tag">erbkrankheit</span>
+              <h3>Kongenitales Myasthenie-Syndrom</h3>
+              <p class="breed-card-meta"><span><strong>Typisch bei:</strong> Devon Rex und Sphynx.</span></p>
+              <div class="breed-card-facts">
+                <div><strong>Wann:</strong> jung; Schwäche zeigt sich besonders nach Anstrengung, Stress oder Aufregung.</div>
+                <div><strong>Wie doll:</strong> Muskelerschöpfung, auffällige Haltung, Belastungsprobleme, eingeschränkte normale Bewegung.</div>
+                <div><strong>Wie oft:</strong> autosomal-rezessive Variante; wenn zwei Trägertiere verpaart werden, sind betroffene Kitten erwartbar.</div>
+              </div>
+              <div class="breed-source-list"><a href="https://vgl.ucdavis.edu/test/sphynx-and-devon-rex-cms" target="_blank" rel="noopener noreferrer">UC Davis CMS</a><a href="https://vgl.ucdavis.edu/dna-tests/cat" target="_blank" rel="noopener noreferrer">UC Davis Katzentests</a></div>
+            </article>
           </div>
 
-          <p class="breed-lexicon-status" id="breed-disease-status" aria-live="polite"></p>
+          <p class="breed-lexicon-status" id="breed-disease-status" aria-live="polite">20 von 20 Einträgen sichtbar.</p>
           <p class="breed-lexicon-note">Wichtig: „Rassekrankheit“ heißt nicht, dass jedes einzelne Tier sichtbar krank ist. Es heißt: Die Zuchtlinie trägt ein erhöhtes oder angezüchtetes Risiko. Für Käuferinnen und Käufer zählt deshalb nicht der Trostsatz „unserer atmet gut“, sondern unabhängige Diagnostik, Gesundheitsdaten der Elterntiere und die Frage, ob dieses Merkmal überhaupt weiter vermehrt werden sollte.</p>
         </div>
 
@@ -5877,11 +6024,11 @@
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
-              <ul><li>Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.</li><li>Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.</li><li>Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.</li><li>Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.</li></ul>
+              <ul><li>Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.</li><li>Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.</li><li>Das Rassekrankheiten-Lexikon startet mit 20 Hund- und Katze-Einträgen und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.</li><li>Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Primäre Quellen</h3>
-              <ul><li><a href="https://www.gesetze-im-internet.de/tierschg/__11b.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11b</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL: Gutachten zur Auslegung von § 11b TierSchG</a></li><li><a href="https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass" target="_blank" rel="noopener noreferrer">RVC VetCompass Brachycephaly</a></li><li><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA - Online Mendelian Inheritance in Animals</a></li><li><a href="https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro" target="_blank" rel="noopener noreferrer">UFAW Genetic Welfare Problems</a></li></ul>
+              <ul><li><a href="https://www.gesetze-im-internet.de/tierschg/__11b.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11b</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">BMEL: Gutachten zur Auslegung von § 11b TierSchG</a></li><li><a href="https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass" target="_blank" rel="noopener noreferrer">RVC VetCompass Brachycephaly</a></li><li><a href="https://omia.org/home/" target="_blank" rel="noopener noreferrer">OMIA - Online Mendelian Inheritance in Animals</a></li><li><a href="https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro" target="_blank" rel="noopener noreferrer">UFAW Genetic Welfare Problems</a></li><li><a href="https://vgl.ucdavis.edu/dna-tests/cat" target="_blank" rel="noopener noreferrer">UC Davis Veterinary Genetics Laboratory</a></li><li><a href="https://www.lsu.edu/vetmed/deafness/index.php" target="_blank" rel="noopener noreferrer">LSU Deafness in Dogs &amp; Cats</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Wichtig zu wissen</h3>

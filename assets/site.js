@@ -1442,6 +1442,7 @@ function normalizeAssetUrls(root) {
       hydrateArticleKickers();
       hydrateResponsiveTables();
       hydrateMythRows();
+      filterBreedDiseases();
       hydrateTestProgress();
       normalizeAssetUrls(document);
       if (document.body && document.body.dataset.staticSite === 'true') {
@@ -2662,11 +2663,24 @@ function normalizeAssetUrls(root) {
     }
 
     var activeBreedDiseaseFilter = 'all';
+    var activeBreedDiseaseSystem = 'all';
 
     function setBreedDiseaseFilter(filter) {
       activeBreedDiseaseFilter = filter || 'all';
       document.querySelectorAll('[data-breed-filter]').forEach(function(button) {
-        button.classList.toggle('is-active', button.dataset.breedFilter === activeBreedDiseaseFilter);
+        var isActive = button.dataset.breedFilter === activeBreedDiseaseFilter;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+      filterBreedDiseases();
+    }
+
+    function setBreedDiseaseSystem(filter) {
+      activeBreedDiseaseSystem = filter || 'all';
+      document.querySelectorAll('[data-breed-system]').forEach(function(button) {
+        var isActive = button.dataset.breedSystem === activeBreedDiseaseSystem;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
       });
       filterBreedDiseases();
     }
@@ -2680,15 +2694,21 @@ function normalizeAssetUrls(root) {
       var visible = 0;
       cards.forEach(function(card) {
         var animalMatches = activeBreedDiseaseFilter === 'all' || card.dataset.animal === activeBreedDiseaseFilter;
+        var systemMatches = activeBreedDiseaseSystem === 'all' || card.dataset.system === activeBreedDiseaseSystem;
         var text = (card.textContent + ' ' + (card.dataset.search || '')).toLowerCase();
         var queryMatches = !query || text.indexOf(query) !== -1;
-        var show = animalMatches && queryMatches;
+        var show = animalMatches && systemMatches && queryMatches;
         card.classList.toggle('is-hidden', !show);
         if (show) visible++;
       });
 
       var status = document.getElementById('breed-disease-status');
-      if (status) status.textContent = visible + ' Einträge sichtbar.';
+      if (status) {
+        var total = cards.length;
+        status.textContent = visible
+          ? visible + ' von ' + total + ' Einträgen sichtbar.'
+          : 'Kein Treffer. Suchbegriff kürzen oder Tierart/Bereich zurücksetzen.';
+      }
     }
 
     // ===== MYTH FILTER =====

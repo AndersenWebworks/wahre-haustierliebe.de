@@ -1496,7 +1496,7 @@
       "facts": [
         "Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.",
         "Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.",
-        "Das Rassekrankheiten-Lexikon startet mit Hund und Katze und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.",
+        "Das Rassekrankheiten-Lexikon startet mit 20 Hund- und Katze-Einträgen und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.",
         "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien."
       ],
       "citationGuardrails": [
@@ -1523,6 +1523,14 @@
         {
           "label": "UFAW Genetic Welfare Problems",
           "url": "https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro"
+        },
+        {
+          "label": "UC Davis Veterinary Genetics Laboratory",
+          "url": "https://vgl.ucdavis.edu/dna-tests/cat"
+        },
+        {
+          "label": "LSU Deafness in Dogs & Cats",
+          "url": "https://www.lsu.edu/vetmed/deafness/index.php"
         }
       ],
       "social": {
