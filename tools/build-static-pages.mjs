@@ -152,9 +152,10 @@ const pages = [
     id: 'adoption',
     slug: 'adoption',
     title: 'Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind',
-    description: 'Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, unseriöse Quellen und warum Zucht den Markt weiter füllt.',
+    description: 'Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, Vorbereitung auf Tierheimfragen und unseriöse Quellen.',
     intent: 'Tier aus dem Tierheim adoptieren statt kaufen',
     priority: '0.9',
+    lastmod: '2026-07-01',
   },
   {
     id: 'selbsttest',
@@ -363,6 +364,7 @@ const faqByPage = {
   ],
   adoption: [
     ['Sollte ich ein Tier vom Züchter kaufen oder aus dem Tierheim adoptieren?', 'Solange viele Tiere in Tierheimen und auf Pflegestellen warten, ist Adoption die verantwortungsvollere Wahl. Sie gibt einem bestehenden Tier eine Chance und erzeugt keinen weiteren Nachschub.'],
+    ['Warum stellen Tierheime so viele Fragen?', 'Seriöse Tierheime prüfen Alltag, Wohnsituation, Erfahrung und Absicherung, damit ein Tier nicht wieder in ein unpassendes Zuhause vermittelt wird. Die Fragen sollen das Tier schützen, nicht Bewerber bloßstellen.'],
   ],
   wissen: [
     ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es keinen belastbaren Wirksamkeitsnachweis über den Placebo-Effekt hinaus. Die größte Gefahr ist verlorene Zeit, wenn echte Diagnostik oder Behandlung verzögert wird.'],
@@ -553,6 +555,7 @@ const evidenceByPage = {
     facts: [
       'Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.',
       'Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.',
+      'Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.',
       'Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.',
     ],
     sources: [
@@ -1316,7 +1319,7 @@ const socialCopyByPage = {
   adoption: {
     eyebrow: 'Tierschutz statt Nachfrage',
     title: 'Adoption statt Kauf',
-    description: 'Warum Tierheim, Pflegestelle, Schutzgebühr und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.',
+    description: 'Warum Tierheim, Pflegestelle, Schutzgebühr, Vorbereitung und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.',
   },
   selbsttest: {
     eyebrow: 'Bereit für ein Haustier?',
@@ -1437,6 +1440,10 @@ function pagePath(page) {
 
 function canonicalUrl(page) {
   return `${baseUrl}${pagePath(page)}`;
+}
+
+function pageLastmod(page) {
+  return page.lastmod || lastmod;
 }
 
 function socialCopy(page) {
@@ -2191,6 +2198,7 @@ function buildJsonLd(page) {
   const canonical = canonicalUrl(page);
   const copy = socialCopy(page);
   const social = socialImage(page);
+  const modified = pageLastmod(page);
   const image = {
     '@type': 'ImageObject',
     url: socialImageUrl(page),
@@ -2230,7 +2238,7 @@ function buildJsonLd(page) {
     thumbnailUrl: socialImageUrl(page),
     primaryImageOfPage: image,
     inLanguage: 'de-DE',
-    dateModified: lastmod,
+    dateModified: modified,
     isAccessibleForFree: true,
     keywords: pageKeywords(page).join(', '),
     about: pageKeywords(page).map((name) => ({ '@type': 'Thing', name })),
@@ -2271,7 +2279,7 @@ function buildJsonLd(page) {
           name: 'Jan-Erik Andersen',
         },
       ],
-      dateModified: lastmod,
+      dateModified: modified,
       inLanguage: 'de-DE',
       isAccessibleForFree: true,
       keywords: pageKeywords(page).join(', '),
@@ -2419,6 +2427,7 @@ function buildHead(page, prefix) {
   const social = socialImage(page);
   const image = socialImageUrl(page);
   const keywords = pageKeywords(page).join(', ');
+  const modified = pageLastmod(page);
   const schema = buildJsonLd(page)
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
@@ -2448,7 +2457,7 @@ function buildHead(page, prefix) {
   <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">
   <meta property="og:site_name" content="${siteName}">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="${lastmod}">
+  <meta property="og:updated_time" content="${modified}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeAttr(copy.title)}">
   <meta name="twitter:description" content="${escapeAttr(copy.description)}">
@@ -2690,7 +2699,7 @@ async function buildBudgiePage(page) {
 
   let html = source;
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
-  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${lastmod}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n${buildIconLinks(prefix)}\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
+  html = html.replace('<link rel="stylesheet" href="css/budgie.css">', `<meta name="description" content="${escapeAttr(page.description)}">\n  <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">\n  <meta name="application-name" content="${siteName}">\n  <meta name="theme-color" content="#f7efe3">\n  <meta name="color-scheme" content="light">\n  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">\n  <meta name="keywords" content="${escapeAttr(pageKeywords(page).join(', '))}">\n  <meta property="og:title" content="${escapeAttr(copy.title)}">\n  <meta property="og:description" content="${escapeAttr(copy.description)}">\n  <meta property="og:type" content="website">\n  <meta property="og:url" content="${canonicalUrl(page)}">\n  <meta property="og:image" content="${image}">\n  <meta property="og:image:secure_url" content="${image}">\n  <meta property="og:image:type" content="${social.type}">\n  <meta property="og:image:width" content="${social.width}">\n  <meta property="og:image:height" content="${social.height}">\n  <meta property="og:image:alt" content="${escapeAttr(copy.alt)}">\n  <meta property="og:site_name" content="${siteName}">\n  <meta property="og:locale" content="de_DE">\n  <meta property="og:updated_time" content="${pageLastmod(page)}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="${escapeAttr(copy.title)}">\n  <meta name="twitter:description" content="${escapeAttr(copy.description)}">\n  <meta name="twitter:image" content="${image}">\n  <meta name="twitter:image:alt" content="${escapeAttr(copy.alt)}">\n  <link rel="canonical" href="${canonicalUrl(page)}">\n${buildIconLinks(prefix)}\n  <link rel="stylesheet" href="${prefix}css/budgie.css">\n  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`);
   html = html.replace('<body class="budgie-page time-morning">', `<body class="budgie-page time-morning static-site" data-static-site="true" data-page-id="${page.id}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>`);
   html = html.replace('<div class="budgie-app" id="app">', '<main id="main-content" tabindex="-1"><div class="budgie-app" id="app">');
   html = html.replace('<h2>Budgie Brain</h2>', '<h1>Budgie Brain</h1>');
@@ -2912,7 +2921,7 @@ async function ensureSource() {
 }
 
 function buildSitemap() {
-  const urls = publicPages.map((page) => `  <url>\n    <loc>${canonicalUrl(page)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${page.changefreq || 'monthly'}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>`).join('\n');
+  const urls = publicPages.map((page) => `  <url>\n    <loc>${canonicalUrl(page)}</loc>\n    <lastmod>${pageLastmod(page)}</lastmod>\n    <changefreq>${page.changefreq || 'monthly'}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 

@@ -1546,7 +1546,7 @@
       "id": "adoption",
       "url": "https://wahre-haustierliebe.de/adoption/index.html",
       "title": "Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind",
-      "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, unseriöse Quellen und warum Zucht den Markt weiter füllt.",
+      "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, Vorbereitung auf Tierheimfragen und unseriöse Quellen.",
       "intent": "Tier aus dem Tierheim adoptieren statt kaufen",
       "keywords": [
         "Adoption",
@@ -1558,6 +1558,7 @@
       "facts": [
         "Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.",
         "Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.",
+        "Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.",
         "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung."
       ],
       "citationGuardrails": [
@@ -1580,7 +1581,7 @@
       ],
       "social": {
         "title": "Adoption statt Kauf - Wa(h)re Haustier(liebe)",
-        "description": "Warum Tierheim, Pflegestelle, Schutzgebühr und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.",
+        "description": "Warum Tierheim, Pflegestelle, Schutzgebühr, Vorbereitung und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/adoption.png",
         "imageAlt": "Hund im Tierheim als klares Bild für Adoption statt Kauf.",
         "imageWidth": 1200,

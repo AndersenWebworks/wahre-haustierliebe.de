@@ -382,7 +382,7 @@ var staticSiteSearchIndex = [
   {
     "id": "adoption",
     "title": "Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind",
-    "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, unseriöse Quellen und warum Zucht den Markt weiter füllt.",
+    "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, Vorbereitung auf Tierheimfragen und unseriöse Quellen.",
     "terms": "Tier aus dem Tierheim adoptieren statt kaufen adoption adoption"
   },
   {
