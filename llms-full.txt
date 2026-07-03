@@ -72,7 +72,7 @@
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
 - Tierärztlichen Notdienst finden: Bundesländer-Übersicht: https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html
-- Tiermythen und Homöopathie: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
+- Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
 - Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
 - Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?: https://wahre-haustierliebe.de/tiere-und-urlaub/index.html
 - Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
@@ -381,18 +381,23 @@ Important boundaries:
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
-### Tiermythen und Homöopathie: Was stimmt wirklich?
+### Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?
 URL: https://wahre-haustierliebe.de/wissen/index.html
 Facts:
 - Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.
-- Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.
+- Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.
 - Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.
+- Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern.
 Important boundaries:
 - Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.
-- Mythen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.
+- Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.
+- Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.
 Sources:
-- Bundestierärztekammer: https://www.bundestieraerztekammer.de
-- Deutscher Tierschutzbund: https://www.tierschutzbund.de
+- British Veterinary Association: Complementary medicine: https://www.bva.co.uk/take-action/our-policies/complementary-medicine/
+- Royal College of Veterinary Surgeons: Complementary medicines statement: https://www.rcvs.org.uk/about-us/news-and-views/college-publishes-complementary-medicines-statement
+- EASAC: Homeopathic products and practices: https://easac.eu/publications/details/homeopathic-products-and-practices
+- Royal Veterinary College: Perceptual errors in veterinary homeopathy: https://www.rvc.ac.uk/research/news/general/scientists-at-royal-veterinary-college-show-homeopathy-only-appears-to-work-because-of-perceptual-errors
+- Bundestierärztekammer: Tierleid durch falsche Diagnose: https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20150717133525
 
 ### Glossar für Tierhaltung und Tierschutz
 URL: https://wahre-haustierliebe.de/glossar/index.html

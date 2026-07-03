@@ -1765,8 +1765,8 @@
     {
       "id": "wissen",
       "url": "https://wahre-haustierliebe.de/wissen/index.html",
-      "title": "Tiermythen und Homöopathie: Was stimmt wirklich?",
-      "description": "Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, verständlich und ohne Werbeinteresse eingeordnet.",
+      "title": "Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?",
+      "description": "Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, quellenbasiert und ohne Werbeinteresse eingeordnet.",
       "intent": "Tierhaltungsmythen und Homöopathie bei Tieren prüfen",
       "keywords": [
         "Tiermythen",
@@ -1776,21 +1776,35 @@
       ],
       "facts": [
         "Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.",
-        "Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.",
-        "Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko."
+        "Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.",
+        "Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.",
+        "Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern."
       ],
       "citationGuardrails": [
         "Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.",
-        "Mythen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin."
+        "Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.",
+        "Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen."
       ],
       "sources": [
         {
-          "label": "Bundestierärztekammer",
-          "url": "https://www.bundestieraerztekammer.de"
+          "label": "British Veterinary Association: Complementary medicine",
+          "url": "https://www.bva.co.uk/take-action/our-policies/complementary-medicine/"
         },
         {
-          "label": "Deutscher Tierschutzbund",
-          "url": "https://www.tierschutzbund.de"
+          "label": "Royal College of Veterinary Surgeons: Complementary medicines statement",
+          "url": "https://www.rcvs.org.uk/about-us/news-and-views/college-publishes-complementary-medicines-statement"
+        },
+        {
+          "label": "EASAC: Homeopathic products and practices",
+          "url": "https://easac.eu/publications/details/homeopathic-products-and-practices"
+        },
+        {
+          "label": "Royal Veterinary College: Perceptual errors in veterinary homeopathy",
+          "url": "https://www.rvc.ac.uk/research/news/general/scientists-at-royal-veterinary-college-show-homeopathy-only-appears-to-work-because-of-perceptual-errors"
+        },
+        {
+          "label": "Bundestierärztekammer: Tierleid durch falsche Diagnose",
+          "url": "https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20150717133525"
         }
       ],
       "social": {

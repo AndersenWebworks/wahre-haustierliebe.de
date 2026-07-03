@@ -412,8 +412,8 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "wissen",
-    "title": "Tiermythen und Homöopathie: Was stimmt wirklich?",
-    "description": "Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, verständlich und ohne Werbeinteresse eingeordnet.",
+    "title": "Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?",
+    "description": "Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, quellenbasiert und ohne Werbeinteresse eingeordnet.",
     "terms": "Tierhaltungsmythen und Homöopathie bei Tieren prüfen wissen wissen"
   },
   {

@@ -185,10 +185,11 @@ const pages = [
   {
     id: 'wissen',
     slug: 'wissen',
-    title: 'Tiermythen und Homöopathie: Was stimmt wirklich?',
-    description: 'Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, verständlich und ohne Werbeinteresse eingeordnet.',
+    title: 'Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?',
+    description: 'Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, quellenbasiert und ohne Werbeinteresse eingeordnet.',
     intent: 'Tierhaltungsmythen und Homöopathie bei Tieren prüfen',
     priority: '0.8',
+    lastmod: '2026-07-03',
   },
   {
     id: 'glossar',
@@ -373,7 +374,7 @@ const faqByPage = {
     ['Warum stellen Tierheime so viele Fragen?', 'Seriöse Tierheime prüfen Alltag, Wohnsituation, Erfahrung und Absicherung, damit ein Tier nicht wieder in ein unpassendes Zuhause vermittelt wird. Die Fragen sollen das Tier schützen, nicht Bewerber bloßstellen.'],
   ],
   wissen: [
-    ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es keinen belastbaren Wirksamkeitsnachweis über den Placebo-Effekt hinaus. Die größte Gefahr ist verlorene Zeit, wenn echte Diagnostik oder Behandlung verzögert wird.'],
+    ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es in der Tiermedizin keinen belastbaren, anerkannten Wirksamkeitsnachweis. Das größte Risiko ist verlorene Zeit: Schmerzen, Infektionen, Atemnot, Harnprobleme oder andere Warnzeichen gehören tierärztlich abgeklärt.'],
   ],
   'tiere-und-urlaub': [
     ['Sollte mein Tier mit in den Urlaub?', 'Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.'],
@@ -642,16 +643,21 @@ const evidenceByPage = {
   wissen: {
     facts: [
       'Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.',
-      'Homöopathie ersetzt keine Diagnostik und keine wirksame Behandlung.',
+      'Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.',
       'Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.',
+      'Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern.',
     ],
     sources: [
-      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
-      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['British Veterinary Association: Complementary medicine', 'https://www.bva.co.uk/take-action/our-policies/complementary-medicine/'],
+      ['Royal College of Veterinary Surgeons: Complementary medicines statement', 'https://www.rcvs.org.uk/about-us/news-and-views/college-publishes-complementary-medicines-statement'],
+      ['EASAC: Homeopathic products and practices', 'https://easac.eu/publications/details/homeopathic-products-and-practices'],
+      ['Royal Veterinary College: Perceptual errors in veterinary homeopathy', 'https://www.rvc.ac.uk/research/news/general/scientists-at-royal-veterinary-college-show-homeopathy-only-appears-to-work-because-of-perceptual-errors'],
+      ['Bundestierärztekammer: Tierleid durch falsche Diagnose', 'https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20150717133525'],
     ],
     guardrails: [
       'Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.',
-      'Mythen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.',
+      'Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.',
+      'Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.',
     ],
   },
   glossar: {
