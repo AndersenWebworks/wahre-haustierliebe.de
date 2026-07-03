@@ -528,6 +528,62 @@
       }
     },
     {
+      "id": "hunde-stadtfest-rummel",
+      "url": "https://wahre-haustierliebe.de/hunde/stadtfest-rummel/index.html",
+      "title": "Hund auf Stadtfest, Rummel oder Weihnachtsmarkt - Wa(h)re Haustier(liebe)",
+      "description": "Warum große Veranstaltungen für Hunde oft Lärm, Enge, Stress und Fluchtgefahr bedeuten und welche Warnzeichen du ernst nehmen solltest.",
+      "intent": "Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen.",
+      "keywords": [
+        "Hund Stadtfest",
+        "Hund Rummel",
+        "Hund Weihnachtsmarkt",
+        "Hund Veranstaltung",
+        "Stresszeichen Hund"
+      ],
+      "facts": [
+        "Große Veranstaltungen sind für Hunde meist kein neutraler Ausflug, sondern eine Mischung aus Lärm, Enge, fremden Gerüchen, fremden Händen und wenig Rückzug.",
+        "Stillhalten oder brav Mitlaufen beweist nicht, dass ein Hund entspannt ist; viele Hunde zeigen Überforderung leise.",
+        "Stresszeichen müssen im Zusammenhang gelesen werden: Hecheln, Gähnen, Lefzenlecken, Ausweichen, Stehenbleiben, ständiges Scannen und Futterverweigerung können wichtige Hinweise sein.",
+        "Wenn Mitnahme unvermeidbar ist, zählen kurze Dauer, Randbereiche, Abstand, Wasser, Schatten, sichere Leine und der schnelle Abbruch bei Stress."
+      ],
+      "citationGuardrails": [
+        "Nicht jeder Hund reagiert gleich; Alter, Gesundheit, Erfahrung, Rasse, Hitze und Tagesform verändern die Belastbarkeit.",
+        "Ein einzelnes Signal ist keine Diagnose. Entscheidend sind Gesamtbild, Situation und Veränderung gegenüber dem normalen Verhalten.",
+        "Bei anhaltendem Stress, Angst, Aggression, Schmerzen, Hitzesymptomen oder Zusammenbruch gehört der Hund aus der Situation heraus und bei Bedarf tierärztlich abgeklärt.",
+        "Die Seite ersetzt keine individuelle Einschätzung durch Tierarzt, Hundetrainerin oder Verhaltenstherapie."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Haustiere weder verkleiden noch zu Umzügen mitnehmen",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/haustiere-weder-verkleiden-noch-zu-umzuegen-mitnehmen/"
+        },
+        {
+          "label": "VIER PFOTEN: Open Air Veranstaltungen bitte ohne Hund",
+          "url": "https://www.vier-pfoten.de/unseregeschichten/presse/august-2025/open-air-veranstaltungen-bitte-ohne-hund"
+        },
+        {
+          "label": "TASSO e. V.: Körpersprache beim Hund",
+          "url": "https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund"
+        },
+        {
+          "label": "ASPCApro: Canine Body Language Tips",
+          "url": "https://www.aspcapro.org/resource/canine-body-language-tips"
+        },
+        {
+          "label": "VCA: Signs Your Dog is Stressed and How to Relieve It",
+          "url": "https://vcahospitals.com/know-your-pet/signs-your-dog-is-stressed-and-how-to-relieve-it"
+        }
+      ],
+      "social": {
+        "title": "Brav mitlaufen heißt nicht entspannt sein",
+        "description": "Fünf Warnzeichen, wann Stadtfest, Rummel oder Weihnachtsmarkt für deinen Hund zu viel werden.",
+        "image": "https://wahre-haustierliebe.de/assets/social/hunde-stadtfest-rummel.png",
+        "imageAlt": "Ruhender Hund als Gegenbild zu Lärm, Gedränge und Veranstaltungsstress.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "hunde-garten-auslauf",
       "url": "https://wahre-haustierliebe.de/hunde/garten-auslauf/index.html",
       "title": "Garten ist kein Ersatz für Auslauf - Wa(h)re Haustier(liebe)",

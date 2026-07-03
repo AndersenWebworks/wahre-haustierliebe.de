@@ -281,6 +281,7 @@ const pages = [
 
 const topicPages = [
   ['hunde-soziale-beduerfnisse', 'hunde', 'hunde/soziale-beduerfnisse', 'Soziale Bedürfnisse beim Hund', 'Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.', 'Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.'],
+  ['hunde-stadtfest-rummel', 'hunde', 'hunde/stadtfest-rummel', 'Hund auf Stadtfest, Rummel oder Weihnachtsmarkt', 'Warum große Veranstaltungen für Hunde oft Lärm, Enge, Stress und Fluchtgefahr bedeuten und welche Warnzeichen du ernst nehmen solltest.', 'Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen.', { priority: '0.78', lastmod: '2026-07-03' }],
   ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.'],
   ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.'],
   ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.'],
@@ -317,7 +318,7 @@ const topicPages = [
   ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.', 'Pferdekosten realistisch einschätzen.'],
   ['pferde-reitbeteiligung', 'pferde', 'pferde/reitbeteiligung', 'Reitbeteiligung als ehrlicher Einstieg', 'Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.', 'Reitbeteiligung als Alternative zum eigenen Pferd prüfen.'],
   ['pferde-entscheidung', 'pferde', 'pferde/entscheidung', 'Bevor ein Pferd einzieht', 'Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.', 'Entscheidung vor dem eigenen Pferd prüfen.'],
-].map(([id, sourcePage, slug, title, description, intent]) => ({
+].map(([id, sourcePage, slug, title, description, intent, meta = {}]) => ({
   id,
   sourcePage,
   sourceAnchor: id,
@@ -325,8 +326,9 @@ const topicPages = [
   title: `${title} - Wa(h)re Haustier(liebe)`,
   description,
   intent,
-  priority: '0.72',
+  priority: meta.priority || '0.72',
   topicPage: true,
+  ...meta,
 }));
 
 const firstKnowledgeIndex = pages.findIndex((page) => page.id === 'kastration');
@@ -348,6 +350,10 @@ const faqByPage = {
   'hund-im-buero': [
     ['Ist ein Hund im Büro automatisch besser als Alleinbleiben?', 'Nein. Ein Büro kann eine gute Lösung sein, wenn der Hund dort wirklich zur Ruhe kommt, betreut wird und einen geschützten Platz hat. Ist er dauerhaft gestresst, ist eine andere Betreuung fairer.'],
     ['Darf ein Bürohund in einer Box liegen?', 'Als freiwilliger, offener Rückzugsort kann eine Box sinnvoll sein. Als geschlossene Aufbewahrung über Stunden ist sie kein fairer Büroalltag und kann tierschutzrechtlich problematisch sein.'],
+  ],
+  'hunde-stadtfest-rummel': [
+    ['Sollte ich meinen Hund mit aufs Stadtfest nehmen?', 'Meistens nein. Stadtfeste, Rummel, Weihnachtsmärkte und ähnliche Veranstaltungen bedeuten für Hunde oft Lärm, Enge, fremde Hände, Bodenrisiken und kaum echte Rückzugsmöglichkeiten.'],
+    ['Woran erkenne ich, dass es meinem Hund zu viel wird?', 'Achte auf starkes Hecheln ohne Hitze, Wegziehen, Stehenbleiben, Lefzenlecken, auffälliges Gähnen, ständiges Scannen, Futterverweigerung oder einen Hund, der kaum noch ansprechbar ist.'],
   ],
   katzen: [
     ['Warum sollte ich meine Katze kastrieren lassen?', 'Kastration schützt vor Stress, hormonbedingten Erkrankungen und unkontrollierter Vermehrung. Besonders bei Freigängern ist sie praktischer Tierschutz.'],
@@ -434,6 +440,27 @@ const evidenceByPage = {
       'Arbeitsrecht, Hausrecht, Allergien, Ängste und Sicherheit müssen im konkreten Betrieb geklärt werden.',
       'Bei Angst, Aggression, Überforderung, Krankheit oder dauerndem Stress ist der Bürohund keine gute Lösung.',
       'Ein ruhiger Hund ist nicht automatisch entspannt; Schlaf, Wahlfreiheit und Rückzug prüfen.',
+    ],
+  },
+  'hunde-stadtfest-rummel': {
+    facts: [
+      'Große Veranstaltungen sind für Hunde meist kein neutraler Ausflug, sondern eine Mischung aus Lärm, Enge, fremden Gerüchen, fremden Händen und wenig Rückzug.',
+      'Stillhalten oder brav Mitlaufen beweist nicht, dass ein Hund entspannt ist; viele Hunde zeigen Überforderung leise.',
+      'Stresszeichen müssen im Zusammenhang gelesen werden: Hecheln, Gähnen, Lefzenlecken, Ausweichen, Stehenbleiben, ständiges Scannen und Futterverweigerung können wichtige Hinweise sein.',
+      'Wenn Mitnahme unvermeidbar ist, zählen kurze Dauer, Randbereiche, Abstand, Wasser, Schatten, sichere Leine und der schnelle Abbruch bei Stress.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Haustiere weder verkleiden noch zu Umzügen mitnehmen', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/haustiere-weder-verkleiden-noch-zu-umzuegen-mitnehmen/'],
+      ['VIER PFOTEN: Open Air Veranstaltungen bitte ohne Hund', 'https://www.vier-pfoten.de/unseregeschichten/presse/august-2025/open-air-veranstaltungen-bitte-ohne-hund'],
+      ['TASSO e. V.: Körpersprache beim Hund', 'https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund'],
+      ['ASPCApro: Canine Body Language Tips', 'https://www.aspcapro.org/resource/canine-body-language-tips'],
+      ['VCA: Signs Your Dog is Stressed and How to Relieve It', 'https://vcahospitals.com/know-your-pet/signs-your-dog-is-stressed-and-how-to-relieve-it'],
+    ],
+    guardrails: [
+      'Nicht jeder Hund reagiert gleich; Alter, Gesundheit, Erfahrung, Rasse, Hitze und Tagesform verändern die Belastbarkeit.',
+      'Ein einzelnes Signal ist keine Diagnose. Entscheidend sind Gesamtbild, Situation und Veränderung gegenüber dem normalen Verhalten.',
+      'Bei anhaltendem Stress, Angst, Aggression, Schmerzen, Hitzesymptomen oder Zusammenbruch gehört der Hund aus der Situation heraus und bei Bedarf tierärztlich abgeklärt.',
+      'Die Seite ersetzt keine individuelle Einschätzung durch Tierarzt, Hundetrainerin oder Verhaltenstherapie.',
     ],
   },
   katzen: {
@@ -1005,6 +1032,13 @@ Object.assign(firstContentImageByPage, {
     type: 'image/jpeg',
     alt: 'Hund ruht in Menschennähe als Bild für Bindung, Rückzug und soziale Bedürfnisse.',
   },
+  'hunde-stadtfest-rummel': {
+    src: 'assets/images/dog-resting-under-table.jpg',
+    width: 1280,
+    height: 853,
+    type: 'image/jpeg',
+    alt: 'Ruhender Hund als Gegenbild zu Lärm, Gedränge und Veranstaltungsstress.',
+  },
   'hunde-garten-auslauf': {
     src: 'assets/images/golden-retriever-agility-jump.jpg',
     width: 2000,
@@ -1281,6 +1315,11 @@ const socialCopyByPage = {
     title: 'Hund im Büro: passt das wirklich?',
     description: 'Fünf Fragen zu Ruhe, Rückzug, Regeln, Pausen und Stresssignalen, bevor ein Hund mit ins Büro kommt.',
   },
+  'hunde-stadtfest-rummel': {
+    eyebrow: 'Hund auf Veranstaltungen',
+    title: 'Brav mitlaufen heißt nicht entspannt sein',
+    description: 'Fünf Warnzeichen, wann Stadtfest, Rummel oder Weihnachtsmarkt für deinen Hund zu viel werden.',
+  },
   katzen: {
     eyebrow: 'Katzenhaltung ohne Wunschbild',
     title: 'Katzen halten: Wohnung, Freigang, Kastration',
@@ -1408,6 +1447,7 @@ const keywordByPage = {
   mensch: ['Haustier anschaffen', 'Haustierkauf', 'Verantwortung', 'Kosten', 'Alltag'],
   hunde: ['Hund halten', 'Hund anschaffen', 'Hundekosten', 'Alleinbleiben', 'Erziehung', 'Zwingerhaltung'],
   'hund-im-buero': ['Hund im Büro', 'Bürohund', 'Kollege Hund', 'Hund am Arbeitsplatz', 'Hundehaltung'],
+  'hunde-stadtfest-rummel': ['Hund Stadtfest', 'Hund Rummel', 'Hund Weihnachtsmarkt', 'Hund Veranstaltung', 'Stresszeichen Hund'],
   katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
   voegel: ['Vögel halten', 'Wellensittiche', 'Schwarmhaltung', 'Freiflug', 'UV-Licht'],
   kleintiere: ['Kleintiere halten', 'Kaninchen', 'Meerschweinchen', 'Hamster', 'Ratten'],

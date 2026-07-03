@@ -29,6 +29,7 @@
 - Exoten halten: Terrarium, Technik, UV-B und Verantwortung: https://wahre-haustierliebe.de/exoten/index.html
 - Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung: https://wahre-haustierliebe.de/pferde/index.html
 - Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/soziale-beduerfnisse/index.html
+- Hund auf Stadtfest, Rummel oder Weihnachtsmarkt - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/stadtfest-rummel/index.html
 - Garten ist kein Ersatz für Auslauf - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/garten-auslauf/index.html
 - Hund allein zu Hause - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/allein-zu-hause/index.html
 - Was ein Hund wirklich kostet - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/kosten/index.html
@@ -98,6 +99,7 @@
 - https://wahre-haustierliebe.de/exoten/index.html - Exotische Haustiere und Terrarientiere prüfen
 - https://wahre-haustierliebe.de/pferde/index.html - Pferdehaltung und Pferdekauf realistisch prüfen
 - https://wahre-haustierliebe.de/hunde/soziale-beduerfnisse/index.html - Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.
+- https://wahre-haustierliebe.de/hunde/stadtfest-rummel/index.html - Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen.
 - https://wahre-haustierliebe.de/hunde/garten-auslauf/index.html - Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.
 - https://wahre-haustierliebe.de/hunde/allein-zu-hause/index.html - Alleinbleiben und Betreuung für Hunde planen.
 - https://wahre-haustierliebe.de/hunde/kosten/index.html - Hundekosten vor der Anschaffung realistisch einschätzen.
@@ -273,6 +275,25 @@ Sources:
 - FN: Tierschutz im Pferdesport: https://www.pferdesport-deutschland.de/tierschutz/tierschutz
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
+
+### Hund auf Stadtfest, Rummel oder Weihnachtsmarkt - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/hunde/stadtfest-rummel/index.html
+Facts:
+- Große Veranstaltungen sind für Hunde meist kein neutraler Ausflug, sondern eine Mischung aus Lärm, Enge, fremden Gerüchen, fremden Händen und wenig Rückzug.
+- Stillhalten oder brav Mitlaufen beweist nicht, dass ein Hund entspannt ist; viele Hunde zeigen Überforderung leise.
+- Stresszeichen müssen im Zusammenhang gelesen werden: Hecheln, Gähnen, Lefzenlecken, Ausweichen, Stehenbleiben, ständiges Scannen und Futterverweigerung können wichtige Hinweise sein.
+- Wenn Mitnahme unvermeidbar ist, zählen kurze Dauer, Randbereiche, Abstand, Wasser, Schatten, sichere Leine und der schnelle Abbruch bei Stress.
+Important boundaries:
+- Nicht jeder Hund reagiert gleich; Alter, Gesundheit, Erfahrung, Rasse, Hitze und Tagesform verändern die Belastbarkeit.
+- Ein einzelnes Signal ist keine Diagnose. Entscheidend sind Gesamtbild, Situation und Veränderung gegenüber dem normalen Verhalten.
+- Bei anhaltendem Stress, Angst, Aggression, Schmerzen, Hitzesymptomen oder Zusammenbruch gehört der Hund aus der Situation heraus und bei Bedarf tierärztlich abgeklärt.
+- Die Seite ersetzt keine individuelle Einschätzung durch Tierarzt, Hundetrainerin oder Verhaltenstherapie.
+Sources:
+- Deutscher Tierschutzbund: Haustiere weder verkleiden noch zu Umzügen mitnehmen: https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/haustiere-weder-verkleiden-noch-zu-umzuegen-mitnehmen/
+- VIER PFOTEN: Open Air Veranstaltungen bitte ohne Hund: https://www.vier-pfoten.de/unseregeschichten/presse/august-2025/open-air-veranstaltungen-bitte-ohne-hund
+- TASSO e. V.: Körpersprache beim Hund: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund
+- ASPCApro: Canine Body Language Tips: https://www.aspcapro.org/resource/canine-body-language-tips
+- VCA: Signs Your Dog is Stressed and How to Relieve It: https://vcahospitals.com/know-your-pet/signs-your-dog-is-stressed-and-how-to-relieve-it
 
 ### Kastration bei Haustieren: Tierschutz, Kosten und Mythen
 URL: https://wahre-haustierliebe.de/kastration/index.html

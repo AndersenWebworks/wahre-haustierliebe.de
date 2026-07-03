@@ -17,6 +17,7 @@ const pages = [
   { id: 'hunde', file: 'hunde/index.html', canonical: `${baseUrl}/hunde/index.html` },
   { id: 'hund-im-buero', file: 'hunde/hund-im-buero/index.html', canonical: `${baseUrl}/hunde/hund-im-buero/index.html` },
   { id: 'hunde-soziale-beduerfnisse', file: 'hunde/soziale-beduerfnisse/index.html', canonical: `${baseUrl}/hunde/soziale-beduerfnisse/index.html` },
+  { id: 'hunde-stadtfest-rummel', file: 'hunde/stadtfest-rummel/index.html', canonical: `${baseUrl}/hunde/stadtfest-rummel/index.html` },
   { id: 'hunde-garten-auslauf', file: 'hunde/garten-auslauf/index.html', canonical: `${baseUrl}/hunde/garten-auslauf/index.html` },
   { id: 'hunde-allein-zu-hause', file: 'hunde/allein-zu-hause/index.html', canonical: `${baseUrl}/hunde/allein-zu-hause/index.html` },
   { id: 'hunde-kosten', file: 'hunde/kosten/index.html', canonical: `${baseUrl}/hunde/kosten/index.html` },

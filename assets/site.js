@@ -13,6 +13,7 @@ var staticPageRoutes = {
   "exoten": "/exoten/index.html",
   "pferde": "/pferde/index.html",
   "hunde-soziale-beduerfnisse": "/hunde/soziale-beduerfnisse/index.html",
+  "hunde-stadtfest-rummel": "/hunde/stadtfest-rummel/index.html",
   "hunde-garten-auslauf": "/hunde/garten-auslauf/index.html",
   "hunde-allein-zu-hause": "/hunde/allein-zu-hause/index.html",
   "hunde-kosten": "/hunde/kosten/index.html",
@@ -150,6 +151,12 @@ var staticSiteSearchIndex = [
     "title": "Soziale Bedürfnisse beim Hund - Wa(h)re Haustier(liebe)",
     "description": "Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.",
     "terms": "Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen. hunde/soziale-beduerfnisse hunde soziale beduerfnisse"
+  },
+  {
+    "id": "hunde-stadtfest-rummel",
+    "title": "Hund auf Stadtfest, Rummel oder Weihnachtsmarkt - Wa(h)re Haustier(liebe)",
+    "description": "Warum große Veranstaltungen für Hunde oft Lärm, Enge, Stress und Fluchtgefahr bedeuten und welche Warnzeichen du ernst nehmen solltest.",
+    "terms": "Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen. hunde/stadtfest-rummel hunde stadtfest rummel"
   },
   {
     "id": "hunde-garten-auslauf",
@@ -486,6 +493,7 @@ function normalizeAssetUrls(root) {
       'mensch': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Katze in Transporttasche als Bild für ehrliche Vorbereitung vor dem Einzug', position: 'center 46%', caption: 'Ein Tier zieht nicht in ein Gefühl ein, sondern in einen vorbereiteten Alltag.', purpose: 'Mensch-Seite: Vorbereitung und Verantwortung statt spontanes Wunschbild zeigen', shareReason: 'Das Bild soll den Satz stützen: Vor einem Tier kommt die ehrliche Entscheidung.' },
       'hunde': { src: 'assets/images/golden-retriever-agility-jump.jpg', alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung', position: 'center 48%', caption: 'Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.', purpose: 'Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen', shareReason: 'Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen.' },
       'hund-im-buero': { src: 'assets/images/dog-resting-under-table.jpg', alt: 'Hund liegt ruhig unter einem Tisch auf einem Teppich', position: 'center 52%', caption: 'Mitnehmen reicht nicht. Der Hund muss auch im Büro wirklich zur Ruhe kommen.', purpose: 'Bürohund-Seite: echten Rückzug und Ruhe statt niedlicher Bürohund-Inszenierung zeigen', shareReason: 'Das Bild soll die Checkliste als echte Prüfung statt Feelgood-Thema rahmen.' },
+      'hunde-stadtfest-rummel': { src: 'assets/images/dog-resting-under-table.jpg', alt: 'Ruhender Hund als Gegenbild zu Lärm, Gedränge und Veranstaltungsstress', position: 'center 52%', caption: 'Nicht jeder Ausflug muss ein Hundeausflug sein.', purpose: 'Veranstaltungs-Seite: Ruhe als faire Alternative zu Lärm und Gedränge zeigen', shareReason: 'Das Bild soll den Impuls stärken, den Hund nicht überall mitzunehmen.' },
       'katzen': { src: 'assets/images/two-cats-window.jpg', alt: 'Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung', position: 'center 48%', caption: 'Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.', purpose: 'Katzen-Seite: stille Bedürfnisse sichtbar machen', shareReason: 'Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer.' },
       'voegel': { src: 'assets/images/voegel-voliere-02.jpg', alt: 'Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum', position: 'center 44%', caption: 'Schwarm, Flugraum und Reize sind kein Extra.', purpose: 'Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen', shareReason: 'Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen.' },
       'kleintiere': { src: 'assets/images/guinea-pig-habitat.jpg', alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung', position: 'center 50%', caption: 'Kleintiere brauchen Fläche, Struktur und Artgenossen.', purpose: 'Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen', shareReason: 'Das Bild soll den Mythos vom einfachen Einstiegstier brechen.' },
@@ -1092,6 +1100,7 @@ function normalizeAssetUrls(root) {
         mensch: ['Vor dem Kauf', 'Selbstlügen prüfen', 'Verzicht ist erlaubt'],
         hunde: ['4–5 h allein', '12–20 Tsd. €', 'Beziehung täglich'],
         'hund-im-buero': ['Rückzug', 'klare Regeln', 'Stress sehen'],
+        'hunde-stadtfest-rummel': ['Lärm', 'Gedränge', 'Stress sehen'],
         katzen: ['Nicht allein denken', 'Kastration schützt', 'Leises Leiden'],
         voegel: ['Schwarm statt Spiegel', 'UV-Licht', 'Freiflug'],
         kleintiere: ['Klein ist nicht einfach', 'Fläche', 'Zähne und Tierarzt'],
@@ -1273,6 +1282,7 @@ function normalizeAssetUrls(root) {
       'mensch': 'mensch/',
       'hunde': 'hunde/',
       'hunde-soziale-beduerfnisse': 'hunde/soziale-beduerfnisse/',
+      'hunde-stadtfest-rummel': 'hunde/stadtfest-rummel/',
       'hunde-garten-auslauf': 'hunde/garten-auslauf/',
       'hunde-allein-zu-hause': 'hunde/allein-zu-hause/',
       'hunde-kosten': 'hunde/kosten/',
