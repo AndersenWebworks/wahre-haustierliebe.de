@@ -1777,13 +1777,17 @@
       "facts": [
         "Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.",
         "Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.",
+        "Wenn Globuli als wirksame Arznei verstanden werden, bräuchten sie Einzelmittelwahl, Dosiskontrolle, Verlaufskontrolle und klare Abbruchkriterien; beiläufige Selbstbehandlung passt nicht zu dieser Logik.",
+        "Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl oder Allium-Arten können je nach Form, Konzentration und Tierart toxikologisch relevant sein.",
         "Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.",
-        "Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern."
+        "Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern.",
+        "Einzelne ergänzende Maßnahmen wie Ballaststoffe, tierärztlich geeignete Probiotika, medizinischer Honig oder EPA/DHA-Omega-3 können nur in eng begrenzten Situationen verantwortbar sein."
       ],
       "citationGuardrails": [
         "Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.",
         "Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.",
-        "Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen."
+        "Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.",
+        "Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen und Notfallgrenzen nennen."
       ],
       "sources": [
         {
@@ -1799,12 +1803,68 @@
           "url": "https://easac.eu/publications/details/homeopathic-products-and-practices"
         },
         {
+          "label": "NCCIH: Homeopathy",
+          "url": "https://www.nccih.nih.gov/health/homeopathy"
+        },
+        {
+          "label": "Samuel Hahnemann: Organon aphorisms 266-272",
+          "url": "https://www.vithoulkas.com/learning-tools/organon/organon-hahnemann/aphorisms-266-272/"
+        },
+        {
+          "label": "Samuel Hahnemann: Organon aphorisms 273-285",
+          "url": "https://www.vithoulkas.com/learning-tools/organon/organon-hahnemann/aphorisms-273-285/"
+        },
+        {
           "label": "Royal Veterinary College: Perceptual errors in veterinary homeopathy",
           "url": "https://www.rvc.ac.uk/research/news/general/scientists-at-royal-veterinary-college-show-homeopathy-only-appears-to-work-because-of-perceptual-errors"
         },
         {
           "label": "Bundestierärztekammer: Tierleid durch falsche Diagnose",
           "url": "https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20150717133525"
+        },
+        {
+          "label": "MSD Veterinary Manual: Strychnine poisoning in animals",
+          "url": "https://www.msdvetmanual.com/toxicology/rodenticide-poisoning/strychnine-poisoning-in-animals"
+        },
+        {
+          "label": "Merck Veterinary Manual: Toxicoses from human dietary and herbal supplements",
+          "url": "https://www.merckvetmanual.com/toxicology/toxicoses-from-human-vitamins-minerals-and-dietary-supplements/toxicoses-in-animals-from-human-dietary-and-herbal-supplements"
+        },
+        {
+          "label": "Pet Poison Helpline: Belladonna",
+          "url": "https://www.petpoisonhelpline.com/poison/belladonna/"
+        },
+        {
+          "label": "Pet Poison Helpline: Monkshood",
+          "url": "https://www.petpoisonhelpline.com/poison/monkshood/"
+        },
+        {
+          "label": "Pet Poison Helpline: Tea tree oil",
+          "url": "https://www.petpoisonhelpline.com/poison/tea-tree-oil/"
+        },
+        {
+          "label": "Merck Veterinary Manual: Essential oils in animals",
+          "url": "https://www.merckvetmanual.com/toxicology/toxicoses-from-household-hazards/toxicoses-from-essential-oils-in-animals"
+        },
+        {
+          "label": "Merck Veterinary Manual: Garlic and onion toxicosis",
+          "url": "https://www.merckvetmanual.com/toxicology/food-hazards/garlic-and-onion-allium-spp-toxicosis-in-animals"
+        },
+        {
+          "label": "Merck Veterinary Manual: Constipation in small animals",
+          "url": "https://www.merckvetmanual.com/digestive-system/diseases-of-the-large-intestine-in-small-animals/constipation-obstipation-and-megacolon-in-small-animals"
+        },
+        {
+          "label": "Veterinary Evidence: Probiotics in canine acute diarrhoea",
+          "url": "https://www.veterinaryevidence.org/index.php/ve/article/view/252"
+        },
+        {
+          "label": "Merck Veterinary Manual: Topical agents in wound management",
+          "url": "https://www.merckvetmanual.com/emergency-medicine-and-critical-care/wound-management-in-small-animals/topical-agents-in-wound-management-in-small-animals"
+        },
+        {
+          "label": "Ontario Veterinary College: Omega-3s in pet nutrition",
+          "url": "https://ovcpetnutrition.uoguelph.ca/2024/12/04/the-abcs-of-omega-3s/"
         }
       ],
       "social": {

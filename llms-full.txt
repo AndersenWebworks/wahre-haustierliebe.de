@@ -386,18 +386,36 @@ URL: https://wahre-haustierliebe.de/wissen/index.html
 Facts:
 - Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.
 - Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.
+- Wenn Globuli als wirksame Arznei verstanden werden, bräuchten sie Einzelmittelwahl, Dosiskontrolle, Verlaufskontrolle und klare Abbruchkriterien; beiläufige Selbstbehandlung passt nicht zu dieser Logik.
+- Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl oder Allium-Arten können je nach Form, Konzentration und Tierart toxikologisch relevant sein.
 - Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.
 - Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern.
+- Einzelne ergänzende Maßnahmen wie Ballaststoffe, tierärztlich geeignete Probiotika, medizinischer Honig oder EPA/DHA-Omega-3 können nur in eng begrenzten Situationen verantwortbar sein.
 Important boundaries:
 - Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.
 - Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.
 - Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.
+- Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen und Notfallgrenzen nennen.
 Sources:
 - British Veterinary Association: Complementary medicine: https://www.bva.co.uk/take-action/our-policies/complementary-medicine/
 - Royal College of Veterinary Surgeons: Complementary medicines statement: https://www.rcvs.org.uk/about-us/news-and-views/college-publishes-complementary-medicines-statement
 - EASAC: Homeopathic products and practices: https://easac.eu/publications/details/homeopathic-products-and-practices
+- NCCIH: Homeopathy: https://www.nccih.nih.gov/health/homeopathy
+- Samuel Hahnemann: Organon aphorisms 266-272: https://www.vithoulkas.com/learning-tools/organon/organon-hahnemann/aphorisms-266-272/
+- Samuel Hahnemann: Organon aphorisms 273-285: https://www.vithoulkas.com/learning-tools/organon/organon-hahnemann/aphorisms-273-285/
 - Royal Veterinary College: Perceptual errors in veterinary homeopathy: https://www.rvc.ac.uk/research/news/general/scientists-at-royal-veterinary-college-show-homeopathy-only-appears-to-work-because-of-perceptual-errors
 - Bundestierärztekammer: Tierleid durch falsche Diagnose: https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20150717133525
+- MSD Veterinary Manual: Strychnine poisoning in animals: https://www.msdvetmanual.com/toxicology/rodenticide-poisoning/strychnine-poisoning-in-animals
+- Merck Veterinary Manual: Toxicoses from human dietary and herbal supplements: https://www.merckvetmanual.com/toxicology/toxicoses-from-human-vitamins-minerals-and-dietary-supplements/toxicoses-in-animals-from-human-dietary-and-herbal-supplements
+- Pet Poison Helpline: Belladonna: https://www.petpoisonhelpline.com/poison/belladonna/
+- Pet Poison Helpline: Monkshood: https://www.petpoisonhelpline.com/poison/monkshood/
+- Pet Poison Helpline: Tea tree oil: https://www.petpoisonhelpline.com/poison/tea-tree-oil/
+- Merck Veterinary Manual: Essential oils in animals: https://www.merckvetmanual.com/toxicology/toxicoses-from-household-hazards/toxicoses-from-essential-oils-in-animals
+- Merck Veterinary Manual: Garlic and onion toxicosis: https://www.merckvetmanual.com/toxicology/food-hazards/garlic-and-onion-allium-spp-toxicosis-in-animals
+- Merck Veterinary Manual: Constipation in small animals: https://www.merckvetmanual.com/digestive-system/diseases-of-the-large-intestine-in-small-animals/constipation-obstipation-and-megacolon-in-small-animals
+- Veterinary Evidence: Probiotics in canine acute diarrhoea: https://www.veterinaryevidence.org/index.php/ve/article/view/252
+- Merck Veterinary Manual: Topical agents in wound management: https://www.merckvetmanual.com/emergency-medicine-and-critical-care/wound-management-in-small-animals/topical-agents-in-wound-management-in-small-animals
+- Ontario Veterinary College: Omega-3s in pet nutrition: https://ovcpetnutrition.uoguelph.ca/2024/12/04/the-abcs-of-omega-3s/
 
 ### Glossar für Tierhaltung und Tierschutz
 URL: https://wahre-haustierliebe.de/glossar/index.html
