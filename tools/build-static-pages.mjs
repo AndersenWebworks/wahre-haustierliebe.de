@@ -376,7 +376,8 @@ const faqByPage = {
   wissen: [
     ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es in der Tiermedizin keinen belastbaren, anerkannten Wirksamkeitsnachweis. Das größte Risiko ist verlorene Zeit: Schmerzen, Infektionen, Atemnot, Harnprobleme oder andere Warnzeichen gehören tierärztlich abgeklärt.'],
     ['Was würde es bedeuten, Globuli wirklich ernst zu nehmen?', 'Dann wären Globuli keine harmlosen Zuckerkügelchen zum Ausprobieren, sondern Arzneien. Man müsste Einzelmittel, passende Auswahl, kleinste Gabe, Verlaufskontrolle, Abbruchkriterien und tierärztliche Grenzen streng beachten.'],
-    ['Gibt es naturheilkundliche Mittel, die Tieren helfen können?', 'Einzelne ergänzende Maßnahmen können je nach Tierart und Beschwerde sinnvoll sein, etwa Ballaststoffe bei leichter Verstopfung, tierärztlich geeignete Probiotika bei unkompliziertem Durchfall, medizinischer Honig für bestimmte Wunden oder EPA/DHA-Omega-3 als Begleitung bei chronischen Entzündungen. Sie ersetzen keine Diagnose und keine Notfallbehandlung.'],
+    ['Gibt es naturheilkundliche Mittel, die Tieren helfen können?', 'Einzelne ergänzende Maßnahmen können je nach Tierart und Beschwerde sinnvoll sein, etwa Ballaststoffe bei leichter Verstopfung, tierärztlich geeignete Probiotika bei unkompliziertem Durchfall beim Hund, medizinischer Honig für bestimmte oberflächliche Wunden oder EPA/DHA-Omega-3 als Begleitung bei chronischen Entzündungen. Sie ersetzen keine Diagnose und keine Notfallbehandlung.'],
+    ['Welche natürlichen Stoffe sind für Tiere tabu?', 'Tabu sind zum Beispiel Teebaumöl und konzentrierte ätherische Öle bei Katzen und Vögeln, Knoblauch und Zwiebel bei Hunden und Katzen, Xylit bei Hunden, Trauben und Rosinen bei Hunden, phosphathaltige Einläufe bei Katzen sowie Nux vomica, Belladonna oder Aconitum als Urtinktur, Extrakt oder unklare Niedrigpotenz. Natürlich bedeutet nicht tierverträglich.'],
   ],
   'tiere-und-urlaub': [
     ['Sollte mein Tier mit in den Urlaub?', 'Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.'],
@@ -647,10 +648,10 @@ const evidenceByPage = {
       'Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.',
       'Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.',
       'Wenn Globuli als wirksame Arznei verstanden werden, bräuchten sie Einzelmittelwahl, Dosiskontrolle, Verlaufskontrolle und klare Abbruchkriterien; beiläufige Selbstbehandlung passt nicht zu dieser Logik.',
-      'Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl oder Allium-Arten können je nach Form, Konzentration und Tierart toxikologisch relevant sein.',
+      'Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl, Allium-Arten, Xylit, Trauben/Rosinen oder menschliche Einläufe können je nach Form, Konzentration und Tierart toxikologisch relevant sein.',
       'Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.',
       'Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern.',
-      'Einzelne ergänzende Maßnahmen wie Ballaststoffe, tierärztlich geeignete Probiotika, medizinischer Honig oder EPA/DHA-Omega-3 können nur in eng begrenzten Situationen verantwortbar sein.',
+      'Einzelne ergänzende Maßnahmen wie Ballaststoffe, tierärztlich geeignete Probiotika, medizinischer Honig, EPA/DHA-Omega-3 oder Haltungs- und Fütterungsanpassungen können nur in eng begrenzten Situationen verantwortbar sein.',
     ],
     sources: [
       ['British Veterinary Association: Complementary medicine', 'https://www.bva.co.uk/take-action/our-policies/complementary-medicine/'],
@@ -668,6 +669,10 @@ const evidenceByPage = {
       ['Pet Poison Helpline: Tea tree oil', 'https://www.petpoisonhelpline.com/poison/tea-tree-oil/'],
       ['Merck Veterinary Manual: Essential oils in animals', 'https://www.merckvetmanual.com/toxicology/toxicoses-from-household-hazards/toxicoses-from-essential-oils-in-animals'],
       ['Merck Veterinary Manual: Garlic and onion toxicosis', 'https://www.merckvetmanual.com/toxicology/food-hazards/garlic-and-onion-allium-spp-toxicosis-in-animals'],
+      ['UC Davis Veterinary Medicine: Xylitol poisoning in dogs', 'https://healthtopics.vetmed.ucdavis.edu/health-topics/xylitol-poisoning-dogs'],
+      ['Merck Veterinary Manual: Grape, raisin and tamarind toxicosis in dogs', 'https://www.merckvetmanual.com/toxicology/food-hazards/grape-raisin-and-tamarind-vitis-spp-tamarindus-spp-toxicosis-in-dogs'],
+      ['VCA Animal Hospitals: Household hazards and dangers to birds', 'https://vcahospitals.com/know-your-pet/household-hazards-and-dangers-to-birds'],
+      ['Merck Veterinary Manual: Gastric stasis in rabbits', 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits/noninfectious-diseases-of-rabbits'],
       ['Merck Veterinary Manual: Constipation in small animals', 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-large-intestine-in-small-animals/constipation-obstipation-and-megacolon-in-small-animals'],
       ['Veterinary Evidence: Probiotics in canine acute diarrhoea', 'https://www.veterinaryevidence.org/index.php/ve/article/view/252'],
       ['Merck Veterinary Manual: Topical agents in wound management', 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/wound-management-in-small-animals/topical-agents-in-wound-management-in-small-animals'],
@@ -677,7 +682,7 @@ const evidenceByPage = {
       'Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.',
       'Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.',
       'Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.',
-      'Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen und Notfallgrenzen nennen.',
+      'Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen, No-Go-Stoffe und Notfallgrenzen nennen.',
     ],
   },
   glossar: {

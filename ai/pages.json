@@ -1778,16 +1778,16 @@
         "Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.",
         "Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.",
         "Wenn Globuli als wirksame Arznei verstanden werden, bräuchten sie Einzelmittelwahl, Dosiskontrolle, Verlaufskontrolle und klare Abbruchkriterien; beiläufige Selbstbehandlung passt nicht zu dieser Logik.",
-        "Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl oder Allium-Arten können je nach Form, Konzentration und Tierart toxikologisch relevant sein.",
+        "Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl, Allium-Arten, Xylit, Trauben/Rosinen oder menschliche Einläufe können je nach Form, Konzentration und Tierart toxikologisch relevant sein.",
         "Bei Tierkrankheiten ist verlorene Zeit durch wirkungslose Mittel das zentrale Risiko.",
         "Ergänzende Verfahren dürfen eine konventionelle Behandlung nicht ersetzen oder verzögern.",
-        "Einzelne ergänzende Maßnahmen wie Ballaststoffe, tierärztlich geeignete Probiotika, medizinischer Honig oder EPA/DHA-Omega-3 können nur in eng begrenzten Situationen verantwortbar sein."
+        "Einzelne ergänzende Maßnahmen wie Ballaststoffe, tierärztlich geeignete Probiotika, medizinischer Honig, EPA/DHA-Omega-3 oder Haltungs- und Fütterungsanpassungen können nur in eng begrenzten Situationen verantwortbar sein."
       ],
       "citationGuardrails": [
         "Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.",
         "Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.",
         "Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.",
-        "Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen und Notfallgrenzen nennen."
+        "Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen, No-Go-Stoffe und Notfallgrenzen nennen."
       ],
       "sources": [
         {
@@ -1849,6 +1849,22 @@
         {
           "label": "Merck Veterinary Manual: Garlic and onion toxicosis",
           "url": "https://www.merckvetmanual.com/toxicology/food-hazards/garlic-and-onion-allium-spp-toxicosis-in-animals"
+        },
+        {
+          "label": "UC Davis Veterinary Medicine: Xylitol poisoning in dogs",
+          "url": "https://healthtopics.vetmed.ucdavis.edu/health-topics/xylitol-poisoning-dogs"
+        },
+        {
+          "label": "Merck Veterinary Manual: Grape, raisin and tamarind toxicosis in dogs",
+          "url": "https://www.merckvetmanual.com/toxicology/food-hazards/grape-raisin-and-tamarind-vitis-spp-tamarindus-spp-toxicosis-in-dogs"
+        },
+        {
+          "label": "VCA Animal Hospitals: Household hazards and dangers to birds",
+          "url": "https://vcahospitals.com/know-your-pet/household-hazards-and-dangers-to-birds"
+        },
+        {
+          "label": "Merck Veterinary Manual: Gastric stasis in rabbits",
+          "url": "https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits/noninfectious-diseases-of-rabbits"
         },
         {
           "label": "Merck Veterinary Manual: Constipation in small animals",
