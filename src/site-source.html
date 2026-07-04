@@ -5167,6 +5167,64 @@
       .cost-table td[colspan]::before {
         display: none;
       }
+
+      .care-guide-table {
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      .care-guide-table tbody {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .care-guide-table tr {
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .care-guide-table td {
+        display: block;
+        padding: 0.7rem 0.9rem;
+        border-bottom: 1px solid rgba(31, 58, 47, 0.1);
+      }
+
+      .care-guide-table td:last-child {
+        border-bottom: 0;
+      }
+
+      .care-guide-table td:first-child {
+        padding: 0.85rem 0.9rem;
+        background: var(--primary-light);
+        color: var(--primary-dark);
+        font-weight: 700;
+      }
+
+      .care-guide-table td:first-child strong {
+        display: block;
+        margin-bottom: 0.22rem;
+        font-size: 1.02rem;
+        line-height: 1.3;
+      }
+
+      .care-guide-table td:first-child br {
+        display: none;
+      }
+
+      .care-guide-table td:not(:first-child)::before {
+        display: block;
+        margin-bottom: 0.18rem;
+        color: var(--primary);
+        font-size: 0.76rem;
+        font-weight: 900;
+        line-height: 1.25;
+        text-transform: none;
+      }
     }
 
     @media (max-width: 1120px) {
@@ -7326,7 +7384,7 @@
         <p>Davon zu unterscheiden sind Methoden, bei denen tatsächlich wirksame Stoffe oder körperliche Maßnahmen eine Rolle spielen können, etwa Phytotherapie, Physiotherapie, Wundversorgung, Ernährung oder Haltungsanpassung. Auch diese Dinge sind nicht automatisch harmlos. Pflanzenstoffe können Nebenwirkungen haben, mit Medikamenten wechselwirken oder für bestimmte Tierarten giftig sein. Seriös wird es erst, wenn Diagnose, Dosierung, Risiko und Grenzen fachlich geprüft sind.</p>
 
         <h3>Wenn man Globuli wirklich ernst nimmt</h3>
-        <p>Hier wird es interessant: Wenn Homöopathie stimmen würde, wären Globuli keine harmlosen Kügelchen für „mal ausprobieren“. Dann wären sie Arzneien. Und dann müsste man sie viel strenger behandeln, als es in der alltäglichen Selbstbehandlung meistens passiert.</p>
+        <p>Hier wird es interessant: Folgt man der homöopathischen Logik, sind Globuli keine harmlosen Kügelchen für „mal ausprobieren“. Dann wären sie Arzneien. Und genau dann müsste man sie viel strenger behandeln, als es in der alltäglichen Selbstbehandlung meistens passiert.</p>
         <p>Samuel Hahnemann, der Begründer der Homöopathie, beschreibt im <em>Organon</em> keine freie Hausapotheke nach Beschwerdeliste. Er verlangt die Auswahl eines passenden Einzelmittels, die kleinstmögliche Gabe und genaue Beobachtung. Er beschreibt sogar, dass ein trocken auf die Zunge gelegtes Kügelchen bereits als kleine Gabe gilt und dass dasselbe Kügelchen in Wasser gelöst stärker wirken soll.</p>
 
         <div class="highlight-box">
@@ -7350,7 +7408,7 @@
         <h3>Konkrete Stoffe: nicht bei diesem Tier, nicht in dieser Form</h3>
         <p>Entscheidend ist die Form. Ein hochpotenzierter Globulus ist toxikologisch etwas anderes als Urtinktur, Tee, Öl, Salbe, Extrakt oder niedrig dosierte Tropfen. Bei Hochpotenzen bleibt vor allem das Risiko, dass echte Behandlung verschoben wird. Bei Urtinkturen, Extrakten, Ölen und „natürlichen Hausmitteln“ ist der Stoff selbst wieder relevant.</p>
 
-        <table class="cost-table">
+        <table class="cost-table care-guide-table">
           <thead>
             <tr>
               <th>Tier / Situation</th>
@@ -7448,7 +7506,7 @@
         <h3>Was aus Naturheilkunde wirklich übrig bleibt</h3>
         <p>Ja, es gibt ergänzende Mittel und Maßnahmen, die in bestimmten Situationen helfen können. Sie sind aber viel nüchterner, als Werbung es klingen lässt: bestimmte Tierart, konkrete Beschwerde, passende Dosis, genug Wasser, kein Notfall, keine unklare Ursache. Das ist kein Ersatz für Diagnostik, sondern manchmal eine Begleitung.</p>
 
-        <table class="cost-table">
+        <table class="cost-table care-guide-table">
           <thead>
             <tr>
               <th>Tier / Beschwerde</th>
