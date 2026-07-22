@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "project": "wahre-haustierliebe-instagram-wellensittiche-uv",
+  "audience": "Menschen mit und ohne eigene Vögel, besonders vor der Anschaffung oder dem Verschenken eines Vogels",
+  "purpose": "Erklärt die UV-Wahrnehmung von Wellensittichen, die Grenzen von Innenhaltung und konkrete Verantwortung gegenüber bereits abhängigen oder aufgenommenen Vögeln",
+  "surface": "public-copy-surface.json",
+  "attestation": "public-copy-review.json"
+}

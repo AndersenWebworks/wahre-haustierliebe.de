@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "project": "wahre-haustierliebe",
+  "audience": "Menschen, die bereits Haustiere versorgen oder vor der Entscheidung über Aufnahme, Kauf oder Zucht eines Tieres stehen",
+  "purpose": "Die öffentliche Website vermittelt konkrete Anforderungen, Folgen, Grenzen und Handlungsoptionen rund um Tierhaltung und Tierschutz",
+  "surface": ".clautz/public-copy-surface.json",
+  "attestation": ".clautz/public-copy-review.json",
+  "maxBatchChars": 60000
+}

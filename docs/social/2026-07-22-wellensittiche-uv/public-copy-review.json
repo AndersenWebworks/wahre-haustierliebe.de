@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "status": "approved",
+  "project": "wahre-haustierliebe-instagram-wellensittiche-uv",
+  "surfaceHash": "4921affb10efeae416e28d157f5e42839bda524f00bbd1ef36e3f11c439d92f8",
+  "briefHash": "01365f9f842ebe06e9b3dab3c68f4a0bb21fb604896aaba2aef2f830943218bd",
+  "pageCount": 12,
+  "reviewedAt": "2026-07-22T12:38:47.128Z",
+  "reviewer": {
+    "source": "codex_cli",
+    "model": "default",
+    "independentContext": true,
+    "batchCount": 1
+  }
+}

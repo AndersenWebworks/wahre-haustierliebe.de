@@ -15,7 +15,7 @@
 
 ## Important URLs
 
-- Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung: https://wahre-haustierliebe.de/index.html
+- Tierhaltung prüfen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/index.html
 - Impressum - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/impressum/index.html
 - Datenschutzerklärung: https://wahre-haustierliebe.de/datenschutz/index.html
 - Kontakt - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kontakt/index.html
@@ -49,6 +49,10 @@
 - Küchenluft und Teflon sind Lebensgefahr - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/index.html
 - Freiflug ist nicht optional - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/freiflug/index.html
 - Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/partnerersatz/index.html
+- Ruhe und Schlaf bei Vögeln - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/ruhe-schlaf/index.html
+- Ernährung von Wellensittichen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/ernaehrung/index.html
+- Alltag, Kosten und Betreuung bei Vögeln - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/alltag-kosten-betreuung/index.html
+- Zucht und Eiablage bei Wellensittichen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/zucht-eier/index.html
 - Krankheit bei Vögeln erkennen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/krankheit-erkennen/index.html
 - Schauwellensittiche und Qualzucht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/qualzucht/index.html
 - Bevor Vögel einziehen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/entscheidung/index.html
@@ -76,7 +80,7 @@
 - Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
 - Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?: https://wahre-haustierliebe.de/tiere-und-urlaub/index.html
 - Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
-- Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
+- Vegane Tierernährung bei Katzen und Hunden: Taurin und Nährstoffrisiken: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
 - Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen: https://wahre-haustierliebe.de/realhaltung/index.html
 - Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist: https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html
 - Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar: https://wahre-haustierliebe.de/wildtierhaltung/index.html
@@ -115,10 +119,14 @@
 - https://wahre-haustierliebe.de/katzen/streunerkatzen/index.html - Streunerkatzen und Kastration einordnen.
 - https://wahre-haustierliebe.de/katzen/entscheidung/index.html - Entscheidung vor der Katzenadoption oder Anschaffung prüfen.
 - https://wahre-haustierliebe.de/voegel/schwarmhaltung/index.html - Schwarmhaltung bei Vögeln verstehen.
-- https://wahre-haustierliebe.de/voegel/uv-licht/index.html - UV-Licht und Lichtbedarf bei Vögeln einordnen.
+- https://wahre-haustierliebe.de/voegel/uv-licht/index.html - UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen.
 - https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/index.html - Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen.
 - https://wahre-haustierliebe.de/voegel/freiflug/index.html - Freiflug und Flugraum für Vögel planen.
 - https://wahre-haustierliebe.de/voegel/partnerersatz/index.html - Falschen Partnerersatz bei Vögeln vermeiden.
+- https://wahre-haustierliebe.de/voegel/ruhe-schlaf/index.html - Ruhezeiten und Schlafbedingungen bei Heimvögeln planen.
+- https://wahre-haustierliebe.de/voegel/ernaehrung/index.html - Ernährung, Wasser und Futtersuche bei Wellensittichen einordnen.
+- https://wahre-haustierliebe.de/voegel/alltag-kosten-betreuung/index.html - Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.
+- https://wahre-haustierliebe.de/voegel/zucht-eier/index.html - Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.
 - https://wahre-haustierliebe.de/voegel/krankheit-erkennen/index.html - Krankheitszeichen bei Vögeln ernst nehmen.
 - https://wahre-haustierliebe.de/voegel/qualzucht/index.html - Qualzucht bei Heimvögeln erkennen.
 - https://wahre-haustierliebe.de/voegel/entscheidung/index.html - Entscheidung vor der Vogelhaltung prüfen.
@@ -160,7 +168,7 @@ URL: https://wahre-haustierliebe.de/mensch/index.html
 Facts:
 - Ein Tier zieht in einen konkreten Alltag ein: Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen vor der Anschaffung passen.
 - Ein verantwortliches Nein verhindert späteres Abgeben, Aussetzen oder dauerhafte Minimalversorgung.
-- Die Seite bewertet keine Wünsche, sondern prüft die Folgen für das Tier.
+- Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen für die gesamte Lebenszeit des Tieres tragbar sein.
 Important boundaries:
 - Die Seite ersetzt keinen psychologischen Eignungstest.
 - Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.
@@ -225,15 +233,21 @@ Sources:
 ### Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler
 URL: https://wahre-haustierliebe.de/voegel/index.html
 Facts:
-- Wellensittiche und viele andere Heimvögel brauchen Artgenossen, Flugraum und Beschäftigung.
-- Ein einzelner Vogel wirkt oft zahm, weil ihm ein artgleicher Sozialpartner fehlt.
-- Licht, Luftqualität und sichere Freiflugbereiche sind Teil der Haltung, nicht Dekoration.
+- Wellensittiche brauchen mindestens einen passenden Artgenossen; Gruppen ab vier Vögeln ermöglichen mehr soziale Wahl.
+- Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.
+- Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.
+- Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.
+- Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.
 Important boundaries:
-- Einzelhaltung ist keine normale Option.
-- Käfiggröße allein reicht nicht; Sozialkontakt und täglicher Freiflug gehören zur Haltung.
+- Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform.
+- Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.
+- Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.
+- Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.
 Sources:
-- Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
-- Deutscher Tierschutzbund: https://www.tierschutzbund.de
+- Deutscher Tierschutzbund: Wellensittiche richtig halten: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/
+- Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen: https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf
+- Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58
+- Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 
 ### Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten
 URL: https://wahre-haustierliebe.de/kleintiere/index.html
@@ -255,8 +269,8 @@ Facts:
 - Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.
 - Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden.
 Important boundaries:
-- Legalität nicht mit Vertretbarkeit gleichsetzen.
-- Keine Haltungsparameter ohne konkrete Art ableiten.
+- Auch eine rechtlich erlaubte Haltung kann die Bedürfnisse eines Tieres verfehlen.
+- Platz, Klima, Futter, Sozialkontakt und medizinische Versorgung müssen für die konkrete Art geprüft werden.
 Sources:
 - CITES Species+ Checklist: https://checklist.cites.org/
 - Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
@@ -270,7 +284,7 @@ Facts:
 - Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen.
 Important boundaries:
 - Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.
-- Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.
+- Ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.
 Sources:
 - FN: Tierschutz im Pferdesport: https://www.pferdesport-deutschland.de/tierschutz/tierschutz
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -314,11 +328,11 @@ URL: https://wahre-haustierliebe.de/qualzucht/index.html
 Facts:
 - Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.
 - Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.
-- Das Rassekrankheiten-Lexikon startet mit 20 Hund- und Katze-Einträgen und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.
+- Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.
 - Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.
 Important boundaries:
 - Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.
-- Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken.
+- Kaufe und bewirb keine Tiere, deren rassetypische Merkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.
 Sources:
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
 - BMEL: Gutachten zur Auslegung von § 11b TierSchG: https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html
@@ -363,7 +377,7 @@ Facts:
 - Bei Vergiftung Verpackung oder Substanz sichern und nicht eigenmächtig Erbrechen auslösen.
 - Notdienste sind regional organisiert; vor der Fahrt immer anrufen.
 Important boundaries:
-- Immer klar sagen: keine tierärztliche Diagnose.
+- Diese Seite ersetzt keine tierärztliche Diagnose.
 - Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
@@ -376,15 +390,14 @@ Facts:
 - Landestierärztekammern und regionale Systeme sind der verlässlichere Einstieg als allgemeine Suchmaschinen.
 - Vor der Fahrt muss die Praxis oder Klinik telefonisch bestätigen, dass sie erreichbar ist.
 Important boundaries:
-- Keine Garantie für Öffnungszeiten oder Erreichbarkeit geben.
-- Bei akuten Notfällen nicht erst lange sortieren, sondern telefonieren.
+- Öffnungszeiten und Erreichbarkeit können sich ändern; ruf vor der Anfahrt beim Notdienst an.
+- Bei akuten Notfällen sofort telefonieren und losfahren, statt Symptome lange online zu sortieren.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
 ### Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?
 URL: https://wahre-haustierliebe.de/wissen/index.html
 Facts:
-- Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.
 - Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.
 - Wenn Globuli als wirksame Arznei verstanden werden, bräuchten sie Einzelmittelwahl, Dosiskontrolle, Verlaufskontrolle und klare Abbruchkriterien; beiläufige Selbstbehandlung passt nicht zu dieser Logik.
 - Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl, Allium-Arten, Xylit, Trauben/Rosinen oder menschliche Einläufe können je nach Form, Konzentration und Tierart toxikologisch relevant sein.
@@ -394,8 +407,8 @@ Facts:
 Important boundaries:
 - Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.
 - Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.
-- Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.
-- Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen, No-Go-Stoffe und Notfallgrenzen nennen.
+- Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie sind unterschiedliche Verfahren mit unterschiedlicher Evidenz und unterschiedlichen Risiken.
+- Auch pflanzliche oder frei verkäufliche Mittel können je nach Tierart, Diagnose und Dosis schaden oder Wechselwirkungen auslösen.
 Sources:
 - British Veterinary Association: Complementary medicine: https://www.bva.co.uk/take-action/our-policies/complementary-medicine/
 - Royal College of Veterinary Surgeons: Complementary medicines statement: https://www.rcvs.org.uk/about-us/news-and-views/college-publishes-complementary-medicines-statement
@@ -424,12 +437,11 @@ Sources:
 ### Glossar für Tierhaltung und Tierschutz
 URL: https://wahre-haustierliebe.de/glossar/index.html
 Facts:
-- Das Glossar erklärt zentrale Begriffe aus Haltung, Tiermedizin und Tierschutz kurz und alltagstauglich.
-- Begriffe wie Pyometra, Brachyzephalie, GOT, TNR oder TierSchG werden als Einstieg erklärt.
+- Pyometra ist eine Gebärmuttervereiterung, Brachyzephalie eine zuchtbedingte Kurzköpfigkeit und GOT die Gebührenordnung für Tierärzte.
+- TNR bedeutet Fangen, Kastrieren und Zurücksetzen freilebender Katzen; das TierSchG ist das deutsche Tierschutzgesetz.
 - Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose.
 Important boundaries:
-- Das Glossar erklärt Begriffe knapp und ersetzt kein veterinärmedizinisches Nachschlagewerk.
-- Bei Symptomen immer auf tierärztliche Abklärung verweisen.
+- Bei Symptomen braucht dein Tier eine tierärztliche Untersuchung.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -442,7 +454,7 @@ Facts:
 - Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.
 - Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten.
 Important boundaries:
-- Nicht behaupten, jedes Tier müsse zu Hause bleiben oder jeder Hund reise gern mit.
+- Ob ein Tier mitreisen kann, hängt von Tierart, Gesundheit, Gewöhnung, Reiseziel, Transportdauer und Unterbringung ab.
 - Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.
 - Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.
 Sources:
@@ -461,23 +473,23 @@ Facts:
 - Hunde können Hitzestress nicht zuverlässig durch Schwitzen ausgleichen.
 - Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe.
 Important boundaries:
-- Keine Rechtsberatung zum Einschlagen von Scheiben geben.
-- Bei Hitzschlag nicht mit Eiswasser schocken.
+- Rufe Polizei oder Feuerwehr und schildere den akuten Zustand; sie entscheiden über das weitere Vorgehen am Fahrzeug.
+- Kühle ein überhitztes Tier kontrolliert mit kühlem, nicht eiskaltem Wasser und lass es sofort tierärztlich behandeln.
 Sources:
 - TiHo Hannover: Hitzefalle Auto: https://www.tiho-hannover.de/universitaet/aktuelles-veroeffentlichungen/pressemitteilungen/detail/hitzefalle-auto-lebensgefahr-fuer-hunde-bereits-nach-minuten
 - Landestierschutzbeauftragte Brandenburg: Hitzestress bei Hunden: https://mleuv.brandenburg.de/mleuv/de/ueber-uns/landestierschutzbeauftragte/themen/hitzestress-bei-hunden/
 - ADAC: Hitze im Auto und rechtliches Vorgehen: https://presse.adac.de/meldungen/adac-ev/recht/hitze-im-auto-fuehrt-zu-lebensbedrohlichen-situationen.html
 - Thieme Tiermedizin: Hitzschlag beim Hund: https://tiermedizin.thieme.de/hund-katze-co/sommer-spezial/detail/hitzschlag-beim-hund-therapie-und-aufklaerung-921
 
-### Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt
+### Vegane Tierernährung bei Katzen und Hunden: Taurin und Nährstoffrisiken
 URL: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
 Facts:
 - Katzen sind obligate Karnivoren und auf eine passende Taurinversorgung angewiesen.
 - Hunde und Katzen haben unterschiedliche Ernährungsphysiologie.
 - Futterumstellungen gehören bei Krankheit oder Spezialdiät tierärztlich begleitet.
 Important boundaries:
-- Die Seite erklärt Grundsätze und ersetzt keinen individuellen Futterplan.
-- Vegane Tierernährung nicht pauschal empfehlen.
+- Allgemeine Ernährungsgrundsätze ersetzen keinen tierärztlich auf das einzelne Tier abgestimmten Futterplan.
+- Stelle ein Tier nicht ohne tierärztliche Begleitung auf vegane Ernährung um; bei Katzen ist die sichere Versorgung mit essenziellen Nährstoffen besonders kritisch.
 Sources:
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
@@ -489,8 +501,8 @@ Facts:
 - Der Kaufpreis ist fast nie der größte Kostenblock eines Haustieres.
 - Vertretbare Haltung beginnt bei Bedürfnissen, nicht bei dem, was im Handel verkauft wird.
 Important boundaries:
-- Kosten sind wichtig, aber Realhaltung meint auch Zeit, Raum, Beziehung und Belastbarkeit.
-- Normalität immer gegen Tierbedürfnisse prüfen.
+- Zur Haltung gehören neben den Kosten auch täglich verfügbare Zeit, geeigneter Raum, Sozialkontakt und eine verlässliche Versorgung.
+- Miss auch handelsübliche oder verbreitete Haltungsformen an den Bedürfnissen der jeweiligen Tierart.
 Sources:
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 - Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
@@ -502,8 +514,8 @@ Facts:
 - Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.
 - Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.
 Important boundaries:
-- Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; zusätzliche Tierproduktion bleibt trotzdem ethisch erklärungsbedürftig.
-- Die ethische Position der Seite nicht neutralisieren.
+- Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; beide bringen jedoch zusätzliche Tiere in eine Welt, in der viele vorhandene Tiere ein Zuhause suchen.
+- Wer züchtet, übernimmt Verantwortung für Gesundheit, Unterbringung und Rücknahme jedes hervorgebrachten Tieres.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
@@ -515,8 +527,8 @@ Facts:
 - Gefahrtier- und Artenschutzfragen hängen von Bundesland, Art und Herkunft ab.
 - Wildtiere brauchen Schutz vor Haustieren, Leinenpflicht und vermeidbarem Stress.
 Important boundaries:
-- Keine Rechtsberatung zu Gefahrtierlisten geben.
-- Nicht aus Legalität eine Haltungsempfehlung ableiten.
+- Gefahrtierlisten und Genehmigungspflichten unterscheiden sich nach Bundesland und Tierart; kläre die aktuelle Rechtslage bei der zuständigen Behörde.
+- Eine rechtlich erlaubte Haltung ist nicht automatisch mit den Bedürfnissen eines Wildtiers vereinbar.
 Sources:
 - CITES Species+ Checklist: https://checklist.cites.org/
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
@@ -529,9 +541,9 @@ Facts:
 - Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.
 - Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren.
 Important boundaries:
-- Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.
+- Berührung allein führt nicht automatisch zur Verstoßung; Abstand schützt dennoch vor Störung, Stress, Ansteckung und falscher Versorgung.
 - Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.
-- Keine Anleitung zur privaten Wildtieraufzucht geben.
+- Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.
 - Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.
 Sources:
 - BUND: Projekt Vorsicht Wildkatze: https://www.bund.net/themen/tiere-pflanzen/projekt-vorsicht-wildkatze/
@@ -549,8 +561,8 @@ Facts:
 - Tierliebe kann auch über Ehrenamt, Patenschaften, Pflegestellen oder Spenden wirken.
 - Ein späterer Einzug wird besser, wenn Rücklagen, Wissen und Betreuung vorher stehen.
 Important boundaries:
-- Nicht beschämen; die Seite soll entlasten und Verantwortung normalisieren.
-- Keine Anschaffung drängen, wenn die Bedingungen nicht passen.
+- Eine Entscheidung gegen die Anschaffung ist verantwortungsvoll, wenn die Bedingungen nicht passen.
+- Schaffe kein Tier an, solange Zeit, Geld, Wohnsituation oder Betreuung nicht verlässlich geklärt sind.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
 - Streunerhilfe Plau e. V.: https://streunerhilfe-plau.de

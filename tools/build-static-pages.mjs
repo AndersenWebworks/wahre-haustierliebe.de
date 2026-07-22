@@ -1,12 +1,15 @@
 import fsSync from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { glossaryAnnotationsByPage, glossaryTerms } from './glossary-data.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
+const execFileAsync = promisify(execFile);
 const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
@@ -26,7 +29,7 @@ const pages = [
   {
     id: 'startseite',
     slug: '',
-    title: 'Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung',
+    title: 'Tierhaltung prüfen - Wa(h)re Haustier(liebe)',
     description: 'Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.',
     intent: 'Startseite und Orientierung für verantwortungsvolle Haustierhaltung',
     priority: '1.0',
@@ -161,7 +164,7 @@ const pages = [
     id: 'selbsttest',
     slug: 'selbsttest',
     title: 'Haustier-Selbsttest: Bin ich bereit für ein Tier?',
-    description: '15 ehrliche Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.',
+    description: '15 Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.',
     intent: 'Selbsttest vor Haustieranschaffung',
     priority: '0.85',
   },
@@ -219,7 +222,7 @@ const pages = [
   {
     id: 'ernaehrung-taurin',
     slug: 'ernaehrung-taurin',
-    title: 'Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt',
+    title: 'Vegane Tierernährung bei Katzen und Hunden: Taurin und Nährstoffrisiken',
     description: 'Warum Hunde und Katzen ernährungsphysiologisch verschieden sind, was Taurin bei Katzen leistet und warum Katzen- und Hundefutter nicht austauschbar sind.',
     intent: 'Tierernährung, vegane Ernährung und Taurin verstehen',
     priority: '0.8',
@@ -298,10 +301,14 @@ const topicPages = [
   ['katzen-streunerkatzen', 'katzen', 'katzen/streunerkatzen', 'Streunerkatzen und Verantwortung', 'Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.', 'Streunerkatzen und Kastration einordnen.'],
   ['katzen-entscheidung', 'katzen', 'katzen/entscheidung', 'Bevor eine Katze einzieht', 'Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.', 'Entscheidung vor der Katzenadoption oder Anschaffung prüfen.'],
   ['voegel-schwarmhaltung', 'voegel', 'voegel/schwarmhaltung', 'Schwarmhaltung bei Vögeln', 'Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.', 'Schwarmhaltung bei Vögeln verstehen.'],
-  ['voegel-uv-licht', 'voegel', 'voegel/uv-licht', 'UV-Licht für Vögel', 'Warum normales Fensterglas wichtiges UV-Licht blockiert und Vögel gezielte Lichtversorgung brauchen.', 'UV-Licht und Lichtbedarf bei Vögeln einordnen.'],
+  ['voegel-uv-licht', 'voegel', 'voegel/uv-licht', 'UV-Licht für Vögel', 'Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.', 'UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen.'],
   ['voegel-kuechenluft-und-daempfe-sind-lebensgefahr', 'voegel', 'voegel/kuechenluft-teflon', 'Küchenluft und Teflon sind Lebensgefahr', 'Warum Dämpfe aus Pfannen, Backöfen und Küchenluft für Vögel tödlich sein können.', 'Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen.'],
   ['voegel-freiflug-ist-nicht-optional', 'voegel', 'voegel/freiflug', 'Freiflug ist nicht optional', 'Warum Vögel täglich sicheren Flugraum brauchen und ein Käfig allein kein Lebensraum ist.', 'Freiflug und Flugraum für Vögel planen.'],
   ['voegel-partnerersatz', 'voegel', 'voegel/partnerersatz', 'Spiegel und Plastikvögel ersetzen keinen Partner', 'Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.', 'Falschen Partnerersatz bei Vögeln vermeiden.'],
+  ['voegel-ruhe-und-schlaf', 'voegel', 'voegel/ruhe-schlaf', 'Ruhe und Schlaf bei Vögeln', 'Warum Wellensittiche eine verlässliche Nachtruhe und einen ruhigen, dunklen Schlafbereich brauchen.', 'Ruhezeiten und Schlafbedingungen bei Heimvögeln planen.'],
+  ['voegel-ernaehrung', 'voegel', 'voegel/ernaehrung', 'Ernährung von Wellensittichen', 'Warum ein ständig voller Körnernapf nicht genügt und Futtermenge, Frischfutter, Wasser und Futtersuche zusammengehören.', 'Ernährung, Wasser und Futtersuche bei Wellensittichen einordnen.'],
+  ['voegel-alltag-kosten-betreuung', 'voegel', 'voegel/alltag-kosten-betreuung', 'Alltag, Kosten und Betreuung bei Vögeln', 'Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.', 'Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.'],
+  ['voegel-zucht-und-eier', 'voegel', 'voegel/zucht-eier', 'Zucht und Eiablage bei Wellensittichen', 'Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.', 'Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.'],
   ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.'],
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
@@ -365,6 +372,10 @@ const faqByPage = {
   ],
   voegel: [
     ['Kann man Wellensittiche allein halten?', 'Nein. Wellensittiche sind Schwarmvögel und brauchen mindestens einen Artgenossen, ausreichend Flugraum und Beschäftigung.'],
+    ['Reicht ein großer Käfig für Wellensittiche aus?', 'Nein. Selbst eine große Voliere ersetzt nicht den täglich nutzbaren Flugraum. Für zwei bis sechs Wellensittiche empfiehlt der Deutsche Tierschutzbund bei täglichem mehrstündigem Freiflug mindestens zwei Meter Länge, einen Meter Breite und zwei Meter Höhe.'],
+    ['Ersetzt eine UV-Lampe Sonnenlicht?', 'Nein. Eine geeignete, flackerfreie Vogellampe kann bei Innenhaltung fehlende Lichtanteile ergänzen. Sie ersetzt weder ungefiltertes Sonnenlicht noch wechselnde Tageslichtreize, Flugraum und frische Luft.'],
+    ['Was ist verantwortungsvoll, wenn die Vögel schon da sind?', 'Nicht wegsehen und nicht vorschnell weitergeben. Artgenossen, Flugraum, geeignetes Licht, sichere Luft, passendes Futter, Nachtruhe, vogelkundige tierärztliche Versorgung und verlässliche Betreuung müssen Schritt für Schritt gesichert werden.'],
+    ['Sollte man Wellensittiche züchten?', 'Nein. Nachwuchs schafft zusätzliche Tiere, obwohl bereits viele Wellensittiche ein Zuhause suchen. Eiablage und Aufzucht können außerdem die Henne und die Jungtiere gefährden und verlangen spezialisiertes Wissen.'],
   ],
   kleintiere: [
     ['Wie viel Platz braucht ein Kaninchen?', 'Mindestens 2-3 Quadratmeter pro Kaninchen als dauerhaft zugängliche Grundfläche plus täglichen Auslauf. Handelsübliche Käfige sind fast immer zu klein.'],
@@ -391,7 +402,7 @@ const evidenceByPage = {
     facts: [
       'Ein Tier zieht in einen konkreten Alltag ein: Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen vor der Anschaffung passen.',
       'Ein verantwortliches Nein verhindert späteres Abgeben, Aussetzen oder dauerhafte Minimalversorgung.',
-      'Die Seite bewertet keine Wünsche, sondern prüft die Folgen für das Tier.',
+      'Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen für die gesamte Lebenszeit des Tieres tragbar sein.',
     ],
     sources: [
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
@@ -485,17 +496,23 @@ const evidenceByPage = {
   },
   voegel: {
     facts: [
-      'Wellensittiche und viele andere Heimvögel brauchen Artgenossen, Flugraum und Beschäftigung.',
-      'Ein einzelner Vogel wirkt oft zahm, weil ihm ein artgleicher Sozialpartner fehlt.',
-      'Licht, Luftqualität und sichere Freiflugbereiche sind Teil der Haltung, nicht Dekoration.',
+      'Wellensittiche brauchen mindestens einen passenden Artgenossen; Gruppen ab vier Vögeln ermöglichen mehr soziale Wahl.',
+      'Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.',
+      'Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.',
+      'Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.',
+      'Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.',
     ],
     sources: [
-      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
-      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['Deutscher Tierschutzbund: Wellensittiche richtig halten', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/'],
+      ['Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen', 'https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf'],
+      ['Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
     guardrails: [
-      'Einzelhaltung ist keine normale Option.',
-      'Käfiggröße allein reicht nicht; Sozialkontakt und täglicher Freiflug gehören zur Haltung.',
+      'Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform.',
+      'Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.',
+      'Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.',
+      'Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.',
     ],
   },
   kleintiere: {
@@ -525,8 +542,8 @@ const evidenceByPage = {
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
     guardrails: [
-      'Legalität nicht mit Vertretbarkeit gleichsetzen.',
-      'Keine Haltungsparameter ohne konkrete Art ableiten.',
+      'Auch eine rechtlich erlaubte Haltung kann die Bedürfnisse eines Tieres verfehlen.',
+      'Platz, Klima, Futter, Sozialkontakt und medizinische Versorgung müssen für die konkrete Art geprüft werden.',
     ],
   },
   pferde: {
@@ -542,7 +559,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.',
-      'Haltungssysteme nicht romantisieren; Herde und Bewegung sind Kernpunkte.',
+      'Ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.',
     ],
   },
   kastration: {
@@ -565,7 +582,7 @@ const evidenceByPage = {
     facts: [
       'Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.',
       'Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.',
-      'Das Rassekrankheiten-Lexikon startet mit 20 Hund- und Katze-Einträgen und nennt Auftreten, Schwere, Häufigkeit und Quellen für belegte Zucht- und Erbkrankheitskomplexe.',
+      'Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.',
       'Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.',
     ],
     sources: [
@@ -579,7 +596,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.',
-      'Den Kaufanreiz nicht durch verharmlosende Rasseästhetik verstärken.',
+      'Kaufe und bewirb keine Tiere, deren rassetypische Merkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.',
     ],
   },
   adoption: {
@@ -625,7 +642,7 @@ const evidenceByPage = {
       ['TASSO e. V.', 'https://www.tasso.net'],
     ],
     guardrails: [
-      'Immer klar sagen: keine tierärztliche Diagnose.',
+      'Diese Seite ersetzt keine tierärztliche Diagnose.',
       'Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.',
     ],
   },
@@ -639,13 +656,12 @@ const evidenceByPage = {
       ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
     ],
     guardrails: [
-      'Keine Garantie für Öffnungszeiten oder Erreichbarkeit geben.',
-      'Bei akuten Notfällen nicht erst lange sortieren, sondern telefonieren.',
+      'Öffnungszeiten und Erreichbarkeit können sich ändern; ruf vor der Anfahrt beim Notdienst an.',
+      'Bei akuten Notfällen sofort telefonieren und losfahren, statt Symptome lange online zu sortieren.',
     ],
   },
   wissen: {
     facts: [
-      'Die Seite trennt beobachtbare Haltungsfolgen von Mythen und Wunschdenken.',
       'Homöopathie ist kein Sammelbegriff für Naturheilkunde und ersetzt keine Diagnostik, keine Schmerzbehandlung, keine Antibiotika, keine Operation und keine Impfung.',
       'Wenn Globuli als wirksame Arznei verstanden werden, bräuchten sie Einzelmittelwahl, Dosiskontrolle, Verlaufskontrolle und klare Abbruchkriterien; beiläufige Selbstbehandlung passt nicht zu dieser Logik.',
       'Beliebte Ausgangsstoffe und Naturmittel wie Nux vomica, Belladonna, Aconitum, Arnica, Teebaumöl, Allium-Arten, Xylit, Trauben/Rosinen oder menschliche Einläufe können je nach Form, Konzentration und Tierart toxikologisch relevant sein.',
@@ -681,14 +697,14 @@ const evidenceByPage = {
     guardrails: [
       'Medizinische Themen gehören im Zweifel in eine Tierarztpraxis.',
       'Mythen und persönliche Erfahrungen sind keine gleichwertige Gegenposition zu belegbarer Tiermedizin.',
-      'Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie nicht begrifflich vermischen.',
-      'Ergänzende Mittel nicht als sichere Hausmittel verkaufen; Tierart, Diagnose, Dosis, Nebenwirkungen, No-Go-Stoffe und Notfallgrenzen nennen.',
+      'Naturheilkunde, Phytotherapie, Physiotherapie und Homöopathie sind unterschiedliche Verfahren mit unterschiedlicher Evidenz und unterschiedlichen Risiken.',
+      'Auch pflanzliche oder frei verkäufliche Mittel können je nach Tierart, Diagnose und Dosis schaden oder Wechselwirkungen auslösen.',
     ],
   },
   glossar: {
     facts: [
-      'Das Glossar erklärt zentrale Begriffe aus Haltung, Tiermedizin und Tierschutz kurz und alltagstauglich.',
-      'Begriffe wie Pyometra, Brachyzephalie, GOT, TNR oder TierSchG werden als Einstieg erklärt.',
+      'Pyometra ist eine Gebärmuttervereiterung, Brachyzephalie eine zuchtbedingte Kurzköpfigkeit und GOT die Gebührenordnung für Tierärzte.',
+      'TNR bedeutet Fangen, Kastrieren und Zurücksetzen freilebender Katzen; das TierSchG ist das deutsche Tierschutzgesetz.',
       'Glossarbegriffe sind Einstiegshilfen, keine Fachliteratur und keine tierärztliche Diagnose.',
     ],
     sources: [
@@ -697,8 +713,7 @@ const evidenceByPage = {
       ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
     ],
     guardrails: [
-      'Das Glossar erklärt Begriffe knapp und ersetzt kein veterinärmedizinisches Nachschlagewerk.',
-      'Bei Symptomen immer auf tierärztliche Abklärung verweisen.',
+      'Bei Symptomen braucht dein Tier eine tierärztliche Untersuchung.',
     ],
   },
   'tiere-und-urlaub': {
@@ -717,7 +732,7 @@ const evidenceByPage = {
       ['Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025', 'https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen'],
     ],
     guardrails: [
-      'Nicht behaupten, jedes Tier müsse zu Hause bleiben oder jeder Hund reise gern mit.',
+      'Ob ein Tier mitreisen kann, hängt von Tierart, Gesundheit, Gewöhnung, Reiseziel, Transportdauer und Unterbringung ab.',
       'Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.',
       'Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.',
     ],
@@ -735,8 +750,8 @@ const evidenceByPage = {
       ['Thieme Tiermedizin: Hitzschlag beim Hund', 'https://tiermedizin.thieme.de/hund-katze-co/sommer-spezial/detail/hitzschlag-beim-hund-therapie-und-aufklaerung-921'],
     ],
     guardrails: [
-      'Keine Rechtsberatung zum Einschlagen von Scheiben geben.',
-      'Bei Hitzschlag nicht mit Eiswasser schocken.',
+      'Rufe Polizei oder Feuerwehr und schildere den akuten Zustand; sie entscheiden über das weitere Vorgehen am Fahrzeug.',
+      'Kühle ein überhitztes Tier kontrolliert mit kühlem, nicht eiskaltem Wasser und lass es sofort tierärztlich behandeln.',
     ],
   },
   'ernaehrung-taurin': {
@@ -750,8 +765,8 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Die Seite erklärt Grundsätze und ersetzt keinen individuellen Futterplan.',
-      'Vegane Tierernährung nicht pauschal empfehlen.',
+      'Allgemeine Ernährungsgrundsätze ersetzen keinen tierärztlich auf das einzelne Tier abgestimmten Futterplan.',
+      'Stelle ein Tier nicht ohne tierärztliche Begleitung auf vegane Ernährung um; bei Katzen ist die sichere Versorgung mit essenziellen Nährstoffen besonders kritisch.',
     ],
   },
   realhaltung: {
@@ -765,8 +780,8 @@ const evidenceByPage = {
       ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
     ],
     guardrails: [
-      'Kosten sind wichtig, aber Realhaltung meint auch Zeit, Raum, Beziehung und Belastbarkeit.',
-      'Normalität immer gegen Tierbedürfnisse prüfen.',
+      'Zur Haltung gehören neben den Kosten auch täglich verfügbare Zeit, geeigneter Raum, Sozialkontakt und eine verlässliche Versorgung.',
+      'Miss auch handelsübliche oder verbreitete Haltungsformen an den Bedürfnissen der jeweiligen Tierart.',
     ],
   },
   'zucht-und-vermehrung': {
@@ -780,8 +795,8 @@ const evidenceByPage = {
       ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
     ],
     guardrails: [
-      'Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; zusätzliche Tierproduktion bleibt trotzdem ethisch erklärungsbedürftig.',
-      'Die ethische Position der Seite nicht neutralisieren.',
+      'Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; beide bringen jedoch zusätzliche Tiere in eine Welt, in der viele vorhandene Tiere ein Zuhause suchen.',
+      'Wer züchtet, übernimmt Verantwortung für Gesundheit, Unterbringung und Rücknahme jedes hervorgebrachten Tieres.',
     ],
   },
   wildtierhaltung: {
@@ -795,8 +810,8 @@ const evidenceByPage = {
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
     guardrails: [
-      'Keine Rechtsberatung zu Gefahrtierlisten geben.',
-      'Nicht aus Legalität eine Haltungsempfehlung ableiten.',
+      'Gefahrtierlisten und Genehmigungspflichten unterscheiden sich nach Bundesland und Tierart; kläre die aktuelle Rechtslage bei der zuständigen Behörde.',
+      'Eine rechtlich erlaubte Haltung ist nicht automatisch mit den Bedürfnissen eines Wildtiers vereinbar.',
     ],
   },
   'wildkatzenbaby-gefunden': {
@@ -816,9 +831,9 @@ const evidenceByPage = {
       ['NABU Hamburg: Jungvögel und Menschengeruch', 'https://hamburg.nabu.de/tiere-und-pflanzen/wildtiere-schuetzen/hunde.html'],
     ],
     guardrails: [
-      'Nicht behaupten, jedes berührte Jungtier werde automatisch verstoßen; der Grund für Abstand ist Störung, Stress, Ansteckungsrisiko, falsche Versorgung und Artenschutzrecht.',
+      'Berührung allein führt nicht automatisch zur Verstoßung; Abstand schützt dennoch vor Störung, Stress, Ansteckung und falscher Versorgung.',
       'Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.',
-      'Keine Anleitung zur privaten Wildtieraufzucht geben.',
+      'Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.',
       'Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.',
     ],
   },
@@ -833,8 +848,8 @@ const evidenceByPage = {
       ['Streunerhilfe Plau e. V.', 'https://streunerhilfe-plau.de'],
     ],
     guardrails: [
-      'Nicht beschämen; die Seite soll entlasten und Verantwortung normalisieren.',
-      'Keine Anschaffung drängen, wenn die Bedingungen nicht passen.',
+      'Eine Entscheidung gegen die Anschaffung ist verantwortungsvoll, wenn die Bedingungen nicht passen.',
+      'Schaffe kein Tier an, solange Zeit, Geld, Wohnsituation oder Betreuung nicht verlässlich geklärt sind.',
     ],
   },
   'budgie-brain': {
@@ -876,14 +891,14 @@ const firstContentImageByPage = {
     width: 1400,
     height: 1394,
     type: 'image/jpeg',
-    alt: 'Katze in Transporttasche als Bild für ehrliche Vorbereitung vor dem Einzug.',
+    alt: 'Katze sitzt in einer grauen Transporttasche.',
   },
   hunde: {
     src: 'assets/images/golden-retriever-agility-jump.jpg',
     width: 2000,
     height: 1339,
     type: 'image/jpeg',
-    alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung.',
+    alt: 'Golden Retriever springt über ein Agility-Hindernis.',
   },
   'hund-im-buero': {
     src: 'assets/images/dog-resting-under-table.jpg',
@@ -897,14 +912,14 @@ const firstContentImageByPage = {
     width: 843,
     height: 954,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung.',
+    alt: 'Zwei Katzen sitzen nebeneinander auf einer Fensterbank.',
   },
   voegel: {
     src: 'assets/images/voegel-voliere-02.jpg',
     width: 1600,
     height: 1064,
     type: 'image/jpeg',
-    alt: 'Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum.',
+    alt: 'Mehrere Wellensittiche sitzen gemeinsam in einer Voliere.',
   },
   kleintiere: {
     src: 'assets/images/guinea-pig-habitat.jpg',
@@ -918,14 +933,14 @@ const firstContentImageByPage = {
     width: 1000,
     height: 702,
     type: 'image/jpeg',
-    alt: 'Bartagame im Terrarium als Bild für Technik, Licht und Klima.',
+    alt: 'Bartagame sitzt auf einem Ast im Terrarium.',
   },
   pferde: {
     src: 'assets/images/horse-paddocks-shelter.jpg',
     width: 640,
     height: 480,
     type: 'image/jpeg',
-    alt: 'Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme.',
+    alt: 'Weitläufige Pferdekoppeln mit mehreren Unterständen.',
   },
   kastration: {
     src: 'assets/images/feral-cat-tnr.jpg',
@@ -946,77 +961,77 @@ const firstContentImageByPage = {
     width: 960,
     height: 1280,
     type: 'image/jpeg',
-    alt: 'Hund im Tierheim als klares Bild für Adoption statt Kauf.',
+    alt: 'Hund blickt aus seinem Zwinger im Tierheim.',
   },
   selbsttest: {
     src: 'assets/images/cats-cat-tree-pair.jpg',
     width: 1920,
     height: 1507,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung.',
+    alt: 'Zwei Katzen liegen auf den Ebenen eines Kratzbaums.',
   },
   notfall: {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.',
+    alt: 'Hund sitzt ruhig neben einem Behandlungstisch in einer Tierarztpraxis.',
   },
   'tierarzt-notdienst': {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe.',
+    alt: 'Hund sitzt ruhig neben einem Behandlungstisch in einer Tierarztpraxis.',
   },
   kontakt: {
     src: 'assets/images/two-cats-window.jpg',
     width: 843,
     height: 954,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen sitzen gemeinsam am Fenster als ruhiges Bild für Fragen und Kontakt.',
+    alt: 'Zwei Katzen sitzen gemeinsam auf einer Fensterbank.',
   },
   mitmachen: {
     src: 'assets/images/animal-shelter-fundraiser.jpg',
     width: 1920,
     height: 1372,
     type: 'image/jpeg',
-    alt: 'Tierschutzaktion als Bild für Hinweise, Korrekturen und gemeinsame Verbesserung.',
+    alt: 'Menschen halten bei einer Tierschutzaktion Informationsschilder.',
   },
   wissen: {
     src: 'assets/images/goldfish-aquarium.jpg',
     width: 1920,
     height: 1309,
     type: 'image/jpeg',
-    alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen.',
+    alt: 'Mehrere Goldfische schwimmen in einem bepflanzten Aquarium.',
   },
   glossar: {
     src: 'assets/images/goldfish-aquarium.jpg',
     width: 1920,
     height: 1309,
     type: 'image/jpeg',
-    alt: 'Goldfische im Aquarium als ruhiges Bild für Tierhaltungsbegriffe und Nachschlagewissen.',
+    alt: 'Mehrere Goldfische schwimmen in einem bepflanzten Aquarium.',
   },
   'tiere-und-urlaub': {
     src: 'assets/images/cat-soft-carrier.jpg',
     width: 1254,
     height: 1638,
     type: 'image/jpeg',
-    alt: 'Katze in einer weichen Transportbox als Bild für Urlaubsplanung und Betreuung.',
+    alt: 'Katze schaut aus einer weichen Transportbox.',
   },
   'hitzefalle-auto': {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress.',
+    alt: 'Hund sitzt in einer Tierarztpraxis neben dem Behandlungstisch.',
   },
   'ernaehrung-taurin': {
     src: 'assets/images/two-cats-window.jpg',
     width: 843,
     height: 954,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen am Fenster als Bild für katzenspezifische Bedürfnisse.',
+    alt: 'Zwei Katzen sitzen gemeinsam auf einer Fensterbank.',
   },
   realhaltung: {
     src: 'assets/images/hamster-home-built-enclosure.png',
@@ -1030,7 +1045,7 @@ const firstContentImageByPage = {
     width: 1920,
     height: 1372,
     type: 'image/jpeg',
-    alt: 'Tierschutzaktion als Bild für vorhandene Tiere statt weiterer Produktion.',
+    alt: 'Menschen stehen bei einer Tierschutzaktion mit Informationsschildern zusammen.',
   },
   wildtierhaltung: {
     src: 'assets/images/exot-bartagame.jpg',
@@ -1051,7 +1066,7 @@ const firstContentImageByPage = {
     width: 1254,
     height: 1638,
     type: 'image/jpeg',
-    alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang.',
+    alt: 'Katze sitzt in einer weichen Transportbox.',
   },
 };
 
@@ -1061,42 +1076,42 @@ Object.assign(firstContentImageByPage, {
     width: 1280,
     height: 853,
     type: 'image/jpeg',
-    alt: 'Hund ruht in Menschennähe als Bild für Bindung, Rückzug und soziale Bedürfnisse.',
+    alt: 'Hund liegt ruhig unter einem Tisch auf einem Teppich.',
   },
   'hunde-stadtfest-rummel': {
     src: 'assets/images/dog-resting-under-table.jpg',
     width: 1280,
     height: 853,
     type: 'image/jpeg',
-    alt: 'Ruhender Hund als Gegenbild zu Lärm, Gedränge und Veranstaltungsstress.',
+    alt: 'Hund liegt unter einem Tisch auf dem Boden.',
   },
   'hunde-garten-auslauf': {
     src: 'assets/images/golden-retriever-agility-jump.jpg',
     width: 2000,
     height: 1339,
     type: 'image/jpeg',
-    alt: 'Hund in Bewegung als Bild für Auslauf, Reize und Beschäftigung außerhalb des Gartens.',
+    alt: 'Golden Retriever springt im Freien über ein Hindernis.',
   },
   'hunde-allein-zu-hause': {
     src: 'assets/images/dog-resting-under-table.jpg',
     width: 1280,
     height: 853,
     type: 'image/jpeg',
-    alt: 'Ruhender Hund als Bild für Pausen, Betreuung und Alleinbleiben.',
+    alt: 'Hund liegt ausgestreckt auf einem Teppich.',
   },
   'hunde-kosten': {
     src: 'assets/images/golden-retriever-agility-jump.jpg',
     width: 2000,
     height: 1339,
     type: 'image/jpeg',
-    alt: 'Aktiver Hund als Bild für die laufenden Kosten von Training, Alltag und Versorgung.',
+    alt: 'Golden Retriever springt über eine Agility-Hürde.',
   },
   'hunde-kastration': {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Hund in einer Tierarztpraxis als Bild für medizinische Abwägung statt Routineentscheidung.',
+    alt: 'Hund wartet ruhig in einer Tierarztpraxis.',
   },
   'hunde-hofhaltung-und-zwinger': {
     src: 'assets/images/dog-resting-under-table.jpg',
@@ -1110,217 +1125,217 @@ Object.assign(firstContentImageByPage, {
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Hund in einer Tierarztpraxis als Bild für Vorsorge und frühes Handeln.',
+    alt: 'Hund sitzt aufmerksam in einer Tierarztpraxis.',
   },
   'hunde-entscheidung': {
     src: 'assets/images/tierheim-hund.jpg',
     width: 960,
     height: 1280,
     type: 'image/jpeg',
-    alt: 'Hund im Tierheim als Bild für die Entscheidung vor der Anschaffung.',
+    alt: 'Hund sitzt hinter einem Gitter in einem Tierheim.',
   },
   'katzen-sozialverhalten': {
     src: 'assets/images/two-cats-window.jpg',
     width: 843,
     height: 954,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen am Fenster als Bild für Sozialkontakt und eigenes Revier.',
+    alt: 'Zwei Katzen beobachten gemeinsam die Umgebung am Fenster.',
   },
   'katzen-wohnungshaltung': {
     src: 'assets/images/cat-scratching-post.jpg',
     width: 1215,
     height: 1600,
     type: 'image/jpeg',
-    alt: 'Katze auf einem Kratzbaum als Bild für strukturierte Wohnungshaltung.',
+    alt: 'Katze sitzt auf der oberen Ebene eines Kratzbaums.',
   },
   'katzen-kastration': {
     src: 'assets/images/feral-cat-tnr.jpg',
     width: 432,
     height: 324,
     type: 'image/jpeg',
-    alt: 'Kastrierte Streunerkatze als Bild für praktischen Katzenschutz.',
+    alt: 'Streunerkatze mit markierter Ohrspitze nach einer Kastration.',
   },
   'katzen-stilles-leiden': {
     src: 'assets/images/cat-window-perch.jpg',
     width: 1280,
     height: 960,
     type: 'image/jpeg',
-    alt: 'Katze am Fenster als Bild für leise Signale, Rückzug und genaue Beobachtung.',
+    alt: 'Katze sitzt ruhig auf einer Fensterbank.',
   },
   'katzen-kosten': {
     src: 'assets/images/cat-carrier-square.jpg',
     width: 1400,
     height: 1394,
     type: 'image/jpeg',
-    alt: 'Katze in einer Transporttasche als Bild für Tierarztwege und Rücklagen.',
+    alt: 'Katze schaut aus einer Transporttasche.',
   },
   'katzen-streunerkatzen': {
     src: 'assets/images/feral-cat-tnr.jpg',
     width: 432,
     height: 324,
     type: 'image/jpeg',
-    alt: 'Streunerkatze mit markiertem Ohr als Bild für TNR und Verantwortung.',
+    alt: 'Streunerkatze mit markierter Ohrspitze.',
   },
   'katzen-entscheidung': {
     src: 'assets/images/two-cats-window.jpg',
     width: 843,
     height: 954,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen am Fenster als Bild für eine vorbereitete Katzenentscheidung.',
+    alt: 'Zwei Katzen sitzen nebeneinander am Fenster.',
   },
   'voegel-schwarmhaltung': {
     src: 'assets/images/voegel-voliere.jpg',
     width: 1600,
     height: 1064,
     type: 'image/jpeg',
-    alt: 'Wellensittiche in einer Voliere als Bild für Schwarmhaltung.',
+    alt: 'Mehrere Wellensittiche sitzen gemeinsam in einer Voliere.',
   },
   'voegel-uv-licht': {
     src: 'assets/images/vogel-wellensittich.jpg',
     width: 600,
     height: 401,
     type: 'image/jpeg',
-    alt: 'Wellensittich als Bild für Licht, Wahrnehmung und UV-Bedarf.',
+    alt: 'Wellensittich sitzt im hellen Licht auf einer Stange.',
   },
   'voegel-kuechenluft-und-daempfe-sind-lebensgefahr': {
     src: 'assets/images/voegel-voliere-02.jpg',
     width: 1600,
     height: 1064,
     type: 'image/jpeg',
-    alt: 'Wellensittiche in einer Voliere als Bild für empfindliche Atemwege und sichere Räume.',
+    alt: 'Mehrere Wellensittiche sitzen auf Ästen in einer Voliere.',
   },
   'voegel-freiflug-ist-nicht-optional': {
     src: 'assets/images/voegel-voliere.jpg',
     width: 1600,
     height: 1064,
     type: 'image/jpeg',
-    alt: 'Wellensittiche mit Raum und Ästen als Bild für Bewegung und Freiflug.',
+    alt: 'Wellensittiche sitzen mit Abstand auf Naturästen.',
   },
   'voegel-partnerersatz': {
     src: 'assets/images/vogel-wellensittich.jpg',
     width: 600,
     height: 401,
     type: 'image/jpeg',
-    alt: 'Wellensittich als Bild für echte Artgenossen statt falschen Partnerersatz.',
+    alt: 'Wellensittich sitzt auf einer hölzernen Stange.',
   },
   'voegel-krankheit-erkennen': {
     src: 'assets/images/vet-office-with-dog.jpg',
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Tierarztpraxis als Bild für schnelle Abklärung bei leisen Krankheitssignalen.',
+    alt: 'Behandlungsraum einer Tierarztpraxis mit Untersuchungstisch.',
   },
   'voegel-qualzucht': {
     src: 'assets/images/vogel-wellensittich.jpg',
     width: 600,
     height: 401,
     type: 'image/jpeg',
-    alt: 'Wellensittich als Bild für Zuchtmerkmale und genaue Beobachtung.',
+    alt: 'Wellensittich in seitlicher Nahaufnahme.',
   },
   'voegel-entscheidung': {
     src: 'assets/images/voegel-voliere-02.jpg',
     width: 1600,
     height: 1064,
     type: 'image/jpeg',
-    alt: 'Mehrere Wellensittiche in einer Voliere als Bild für die Entscheidung vor der Vogelhaltung.',
+    alt: 'Gruppe von Wellensittichen in einer großen Voliere.',
   },
   'kleintiere-kaninchen': {
     src: 'assets/images/rabbit-adoption-enclosure.jpg',
     width: 1920,
     height: 1280,
     type: 'image/jpeg',
-    alt: 'Kaninchen in einem Außengehege als Bild für Platz und artgerechte Unterbringung.',
+    alt: 'Kaninchen sitzt in einem begrünten Außengehege.',
   },
   'kleintiere-meerschweinchen': {
     src: 'assets/images/kleintiere-zwei-meerschweinchen.jpg',
     width: 1200,
     height: 800,
     type: 'image/jpeg',
-    alt: 'Zwei Meerschweinchen zusammen im Gras als Bild für Gruppenhaltung.',
+    alt: 'Zwei Meerschweinchen sitzen dicht beieinander im Gras.',
   },
   'kleintiere-hamster': {
     src: 'assets/images/hamster-home-built-enclosure.png',
     width: 1280,
     height: 685,
     type: 'image/png',
-    alt: 'Großes Hamstergehege als Bild für Platz, Einstreu und Struktur.',
+    alt: 'Großes Hamstergehege mit tiefer Einstreu und Verstecken.',
   },
   'kleintiere-ratten': {
     src: 'assets/images/rat-cage-01.jpg',
     width: 640,
     height: 480,
     type: 'image/jpeg',
-    alt: 'Strukturierter Rattenkäfig als Bild für Einrichtung und Beschäftigung.',
+    alt: 'Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.',
   },
   'kleintiere-degus-und-chinchillas': {
     src: 'assets/images/guinea-pig-habitat.jpg',
     width: 800,
     height: 599,
     type: 'image/jpeg',
-    alt: 'Strukturiertes Kleintier-Habitat als Bild für Raum, Rückzug und Spezialwissen.',
+    alt: 'Kleintiergehege mit Verstecken und mehreren Bereichen.',
   },
   'exoten-reptilien': {
     src: 'assets/images/bearded-dragon-terrarium.jpg',
     width: 1000,
     height: 702,
     type: 'image/jpeg',
-    alt: 'Bartagame im Terrarium als Bild für Reptilienhaltung mit Licht und Temperaturzonen.',
+    alt: 'Bartagame ruht auf einem Ast im beleuchteten Terrarium.',
   },
   'exoten-schildkroeten': {
     src: 'assets/images/exot-bartagame.jpg',
     width: 330,
     height: 212,
     type: 'image/jpeg',
-    alt: 'Reptil als Bild für langfristige Verantwortung und fachkundige Exotenhaltung.',
+    alt: 'Reptil sitzt auf einem Stein in seinem Gehege.',
   },
   'exoten-fische': {
     src: 'assets/images/goldfish-aquarium.jpg',
     width: 1920,
     height: 1309,
     type: 'image/jpeg',
-    alt: 'Goldfische im Aquarium als Bild für Wasserwerte, Technik und Pflege.',
+    alt: 'Goldfische schwimmen zwischen Pflanzen in einem Aquarium.',
   },
   'pferde-herde': {
     src: 'assets/images/horse-herd-pasture.jpg',
     width: 1024,
     height: 683,
     type: 'image/jpeg',
-    alt: 'Pferdeherde auf einer Weide als Bild für Sozialkontakt.',
+    alt: 'Mehrere Pferde stehen gemeinsam auf einer Weide.',
   },
   'pferde-platzbedarf': {
     src: 'assets/images/horse-paddocks-shelter.jpg',
     width: 640,
     height: 480,
     type: 'image/jpeg',
-    alt: 'Pferdekoppeln mit Unterständen als Bild für Fläche und Bewegung.',
+    alt: 'Pferdekoppeln erstrecken sich um mehrere Unterstände.',
   },
   'pferde-haltungsformen': {
     src: 'assets/images/horse-paddocks-shelter.jpg',
     width: 640,
     height: 480,
     type: 'image/jpeg',
-    alt: 'Pferdekoppeln mit Unterständen als Bild für unterschiedliche Haltungsformen.',
+    alt: 'Mehrere Pferdekoppeln mit offenen Unterständen.',
   },
   'pferde-kosten': {
     src: 'assets/images/horse-herd-pasture.jpg',
     width: 1024,
     height: 683,
     type: 'image/jpeg',
-    alt: 'Pferdeherde auf einer Weide als Bild für laufende Verantwortung und Kosten.',
+    alt: 'Pferdeherde grast auf einer weiten Weide.',
   },
   'pferde-reitbeteiligung': {
     src: 'assets/images/horse-paddocks-shelter.jpg',
     width: 640,
     height: 480,
     type: 'image/jpeg',
-    alt: 'Pferdekoppeln mit Unterständen als Bild für einen realistischen Einstieg in Pferdeverantwortung.',
+    alt: 'Weitläufige Pferdekoppeln mit geschützten Unterständen.',
   },
   'pferde-entscheidung': {
     src: 'assets/images/horse-herd-pasture.jpg',
     width: 1024,
     height: 683,
     type: 'image/jpeg',
-    alt: 'Pferdeherde auf einer Weide als Bild für die Entscheidung vor dem eigenen Pferd.',
+    alt: 'Pferde stehen als Gruppe auf einer großen Weide.',
   },
 });
 
@@ -1394,7 +1409,7 @@ const socialCopyByPage = {
   selbsttest: {
     eyebrow: 'Bereit für ein Haustier?',
     title: 'Der Haustier-Selbsttest',
-    description: '15 ehrliche Fragen zu Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.',
+    description: '15 Fragen zu Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.',
   },
   notfall: {
     eyebrow: 'Tier-Notfall erkennen',
@@ -2022,7 +2037,7 @@ function buildAnimalHubSection(source, page) {
   return `${opening}
         <div class="info-box">
           <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
-          <p>Jedes Thema führt dich tiefer in die Haltung, die Kosten, die typischen Irrtümer und die Frage, ob dieses Tier wirklich in deinen Alltag passt.</p>
+          <p>Prüfe Sozialkontakt, Platz, Bewegung, Futter, Gesundheit, Kosten und Betreuung für die gewählte Tierart.</p>
         </div>
         <div class="grid-3 animal-topic-grid">
 ${cards}
@@ -2409,7 +2424,7 @@ function buildEvidenceBlock(page) {
   const evidence = evidenceByPage[page.id];
   if (!evidence) return '';
 
-  return `\n        <div class="article-rhythm evidence-block" data-evidence-block="${page.id}">\n          <span class="eyebrow">Quellen und Prüfstand</span>\n          <h2>Worauf diese Seite ihre Aussagen stützt</h2>\n          <div class="evidence-grid">\n            <article class="evidence-card">\n              <h3>Kernfakten</h3>\n              ${listItems(evidence.facts)}\n            </article>\n            <article class="evidence-card">\n              <h3>Primäre Quellen</h3>\n              ${sourceLinks(evidence.sources)}\n            </article>\n            <article class="evidence-card">\n              <h3>Wichtig zu wissen</h3>\n              ${listItems(evidence.guardrails)}\n            </article>\n          </div>\n        </div>\n`;
+  return `\n        <div class="article-rhythm evidence-block" data-evidence-block="${page.id}">\n          <span class="eyebrow">Zum Vertiefen</span>\n          <h2>Fachquellen und wichtige Grenzen</h2>\n          <div class="evidence-grid">\n            <article class="evidence-card">\n              <h3>Kurz festgehalten</h3>\n              ${listItems(evidence.facts)}\n            </article>\n            <article class="evidence-card">\n              <h3>Fachquellen</h3>\n              ${sourceLinks(evidence.sources)}\n            </article>\n            <article class="evidence-card">\n              <h3>Grenzen der Einordnung</h3>\n              ${listItems(evidence.guardrails)}\n            </article>\n          </div>\n        </div>\n`;
 }
 
 function injectBeforeClosingContent(body, block) {
@@ -3299,6 +3314,19 @@ async function main() {
   await writeFileEnsured(path.join(projectRoot, 'ai', 'faq.json'), buildAiFaq());
   await writeFileEnsured(path.join(projectRoot, 'ai', 'glossary.json'), buildAiGlossary());
   await prerenderSectionPages();
+  await execFileAsync(process.execPath, [path.join(projectRoot, 'tools', 'extract-public-copy-surface.mjs')], {
+    cwd: projectRoot,
+    windowsHide: true,
+  });
+  await execFileAsync(process.execPath, [
+    'C:\\Andersen\\Webworks\\GitHub\\Webworks\\ClautzGPT\\scripts\\public-copy-guard.js',
+    'verify',
+    '--config',
+    path.join(projectRoot, 'public-copy.config.json'),
+  ], {
+    cwd: projectRoot,
+    windowsHide: true,
+  });
 
   console.log(JSON.stringify({
     pages: pages.length,

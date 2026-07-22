@@ -33,6 +33,10 @@ var staticPageRoutes = {
   "voegel-kuechenluft-und-daempfe-sind-lebensgefahr": "/voegel/kuechenluft-teflon/index.html",
   "voegel-freiflug-ist-nicht-optional": "/voegel/freiflug/index.html",
   "voegel-partnerersatz": "/voegel/partnerersatz/index.html",
+  "voegel-ruhe-und-schlaf": "/voegel/ruhe-schlaf/index.html",
+  "voegel-ernaehrung": "/voegel/ernaehrung/index.html",
+  "voegel-alltag-kosten-betreuung": "/voegel/alltag-kosten-betreuung/index.html",
+  "voegel-zucht-und-eier": "/voegel/zucht-eier/index.html",
   "voegel-krankheit-erkennen": "/voegel/krankheit-erkennen/index.html",
   "voegel-qualzucht": "/voegel/qualzucht/index.html",
   "voegel-entscheidung": "/voegel/entscheidung/index.html",
@@ -70,7 +74,7 @@ var staticPageRoutes = {
 var staticSiteSearchIndex = [
   {
     "id": "startseite",
-    "title": "Wa(h)re Haustier(liebe) - Ehrliche Aufklärung über Tierhaltung",
+    "title": "Tierhaltung prüfen - Wa(h)re Haustier(liebe)",
     "description": "Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.",
     "terms": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung startseite"
   },
@@ -251,8 +255,8 @@ var staticSiteSearchIndex = [
   {
     "id": "voegel-uv-licht",
     "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
-    "description": "Warum normales Fensterglas wichtiges UV-Licht blockiert und Vögel gezielte Lichtversorgung brauchen.",
-    "terms": "UV-Licht und Lichtbedarf bei Vögeln einordnen. voegel/uv-licht voegel uv licht"
+    "description": "Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
+    "terms": "UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen. voegel/uv-licht voegel uv licht"
   },
   {
     "id": "voegel-kuechenluft-und-daempfe-sind-lebensgefahr",
@@ -271,6 +275,30 @@ var staticSiteSearchIndex = [
     "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
     "description": "Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.",
     "terms": "Falschen Partnerersatz bei Vögeln vermeiden. voegel/partnerersatz voegel partnerersatz"
+  },
+  {
+    "id": "voegel-ruhe-und-schlaf",
+    "title": "Ruhe und Schlaf bei Vögeln - Wa(h)re Haustier(liebe)",
+    "description": "Warum Wellensittiche eine verlässliche Nachtruhe und einen ruhigen, dunklen Schlafbereich brauchen.",
+    "terms": "Ruhezeiten und Schlafbedingungen bei Heimvögeln planen. voegel/ruhe-schlaf voegel ruhe und schlaf"
+  },
+  {
+    "id": "voegel-ernaehrung",
+    "title": "Ernährung von Wellensittichen - Wa(h)re Haustier(liebe)",
+    "description": "Warum ein ständig voller Körnernapf nicht genügt und Futtermenge, Frischfutter, Wasser und Futtersuche zusammengehören.",
+    "terms": "Ernährung, Wasser und Futtersuche bei Wellensittichen einordnen. voegel/ernaehrung voegel ernaehrung"
+  },
+  {
+    "id": "voegel-alltag-kosten-betreuung",
+    "title": "Alltag, Kosten und Betreuung bei Vögeln - Wa(h)re Haustier(liebe)",
+    "description": "Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.",
+    "terms": "Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen. voegel/alltag-kosten-betreuung voegel alltag kosten betreuung"
+  },
+  {
+    "id": "voegel-zucht-und-eier",
+    "title": "Zucht und Eiablage bei Wellensittichen - Wa(h)re Haustier(liebe)",
+    "description": "Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.",
+    "terms": "Zucht, Brutreize und Eiablage bei Wellensittichen einordnen. voegel/zucht-eier voegel zucht und eier"
   },
   {
     "id": "voegel-krankheit-erkennen",
@@ -395,7 +423,7 @@ var staticSiteSearchIndex = [
   {
     "id": "selbsttest",
     "title": "Haustier-Selbsttest: Bin ich bereit für ein Tier?",
-    "description": "15 ehrliche Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.",
+    "description": "15 Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.",
     "terms": "Selbsttest vor Haustieranschaffung selbsttest selbsttest"
   },
   {
@@ -436,7 +464,7 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "ernaehrung-taurin",
-    "title": "Vegane Tierernährung, Katzen, Hunde und Taurin verständlich erklärt",
+    "title": "Vegane Tierernährung bei Katzen und Hunden: Taurin und Nährstoffrisiken",
     "description": "Warum Hunde und Katzen ernährungsphysiologisch verschieden sind, was Taurin bei Katzen leistet und warum Katzen- und Hundefutter nicht austauschbar sind.",
     "terms": "Tierernährung, vegane Ernährung und Taurin verstehen ernaehrung-taurin ernaehrung taurin"
   },
@@ -490,25 +518,25 @@ function normalizeAssetUrls(root) {
 
 
     var articleHeroImages = {
-      'mensch': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Katze in Transporttasche als Bild für ehrliche Vorbereitung vor dem Einzug', position: 'center 46%', caption: 'Ein Tier zieht nicht in ein Gefühl ein, sondern in einen vorbereiteten Alltag.', purpose: 'Mensch-Seite: Vorbereitung und Verantwortung statt spontanes Wunschbild zeigen', shareReason: 'Das Bild soll den Satz stützen: Vor einem Tier kommt die ehrliche Entscheidung.' },
-      'hunde': { src: 'assets/images/golden-retriever-agility-jump.jpg', alt: 'Hund beim Agility-Sprung als Bild für Training, Alltag und Beschäftigung', position: 'center 48%', caption: 'Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.', purpose: 'Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen', shareReason: 'Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen.' },
+      'mensch': { src: 'assets/images/cat-carrier-square.jpg', alt: 'Katze sitzt in einer grauen Transporttasche', position: 'center 46%', caption: 'Ein Tier zieht nicht in ein Gefühl ein, sondern in einen vorbereiteten Alltag.', purpose: 'Mensch-Seite: Vorbereitung und Verantwortung statt spontanes Wunschbild zeigen', shareReason: 'Das Bild soll den Satz stützen: Vor einem Tier kommt die ehrliche Entscheidung.' },
+      'hunde': { src: 'assets/images/golden-retriever-agility-jump.jpg', alt: 'Golden Retriever springt über ein Agility-Hindernis', position: 'center 48%', caption: 'Hunde brauchen Zeit, Beziehung und Alltag, nicht nur Auslauf.', purpose: 'Hunde-Seite: Alltag und Training als echte Hundehaltung zeigen', shareReason: 'Der Share-Impuls soll vom Wunschhund zur Zeitrechnung führen.' },
       'hund-im-buero': { src: 'assets/images/dog-resting-under-table.jpg', alt: 'Hund liegt ruhig unter einem Tisch auf einem Teppich', position: 'center 52%', caption: 'Mitnehmen reicht nicht. Der Hund muss auch im Büro wirklich zur Ruhe kommen.', purpose: 'Bürohund-Seite: echten Rückzug und Ruhe statt niedlicher Bürohund-Inszenierung zeigen', shareReason: 'Das Bild soll die Checkliste als echte Prüfung statt Feelgood-Thema rahmen.' },
-      'hunde-stadtfest-rummel': { src: 'assets/images/dog-resting-under-table.jpg', alt: 'Ruhender Hund als Gegenbild zu Lärm, Gedränge und Veranstaltungsstress', position: 'center 52%', caption: 'Nicht jeder Ausflug muss ein Hundeausflug sein.', purpose: 'Veranstaltungs-Seite: Ruhe als faire Alternative zu Lärm und Gedränge zeigen', shareReason: 'Das Bild soll den Impuls stärken, den Hund nicht überall mitzunehmen.' },
-      'katzen': { src: 'assets/images/two-cats-window.jpg', alt: 'Zwei Katzen sitzen gemeinsam am Fenster als Bild für soziale Wohnungshaltung', position: 'center 48%', caption: 'Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.', purpose: 'Katzen-Seite: stille Bedürfnisse sichtbar machen', shareReason: 'Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer.' },
-      'voegel': { src: 'assets/images/voegel-voliere-02.jpg', alt: 'Mehrere Wellensittiche in einer Voliere als Bild für Schwarm und Raum', position: 'center 44%', caption: 'Schwarm, Flugraum und Reize sind kein Extra.', purpose: 'Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen', shareReason: 'Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen.' },
+      'hunde-stadtfest-rummel': { src: 'assets/images/dog-resting-under-table.jpg', alt: 'Hund liegt unter einem Tisch auf dem Boden', position: 'center 52%', caption: 'Nicht jeder Ausflug muss ein Hundeausflug sein.', purpose: 'Veranstaltungs-Seite: Ruhe als faire Alternative zu Lärm und Gedränge zeigen', shareReason: 'Das Bild soll den Impuls stärken, den Hund nicht überall mitzunehmen.' },
+      'katzen': { src: 'assets/images/two-cats-window.jpg', alt: 'Zwei Katzen sitzen nebeneinander auf einer Fensterbank', position: 'center 48%', caption: 'Wohnungshaltung muss Sozialkontakt und Rückzug mitdenken.', purpose: 'Katzen-Seite: stille Bedürfnisse sichtbar machen', shareReason: 'Das Bild soll Katzenhaltung als gestaltete Umgebung rahmen, nicht als Selbstläufer.' },
+      'voegel': { src: 'assets/images/voegel-voliere-02.jpg', alt: 'Mehrere Wellensittiche sitzen gemeinsam in einer Voliere', position: 'center 44%', caption: 'Schwarm, Flugraum und Reize sind kein Extra.', purpose: 'Vögel-Seite: Schwarm und Raum statt Einzelvogel-Käfig zeigen', shareReason: 'Das Bild widerspricht dem Reflex, einen einzelnen Vogel als normales Haustier zu sehen.' },
       'kleintiere': { src: 'assets/images/guinea-pig-habitat.jpg', alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung', position: 'center 50%', caption: 'Kleintiere brauchen Fläche, Struktur und Artgenossen.', purpose: 'Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen', shareReason: 'Das Bild soll den Mythos vom einfachen Einstiegstier brechen.' },
-      'exoten': { src: 'assets/images/bearded-dragon-terrarium.jpg', alt: 'Bartagame im Terrarium als Bild für Technik, Licht und Klima', position: 'center 45%', caption: 'Leise Tiere brauchen oft die präziseste Technik.', purpose: 'Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen', shareReason: 'Das Bild soll Faszination mit Verantwortung koppeln.' },
-      'pferde': { src: 'assets/images/horse-paddocks-shelter.jpg', alt: 'Pferdekoppeln mit Unterständen als Bild für Raum und Haltungssysteme', position: 'center 50%', caption: 'Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.', purpose: 'Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen', shareReason: 'Das Bild soll die große Verpflichtung konkret machen.' },
+      'exoten': { src: 'assets/images/bearded-dragon-terrarium.jpg', alt: 'Bartagame sitzt auf einem Ast im Terrarium', position: 'center 45%', caption: 'Leise Tiere brauchen oft die präziseste Technik.', purpose: 'Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen', shareReason: 'Das Bild soll Faszination mit Verantwortung koppeln.' },
+      'pferde': { src: 'assets/images/horse-paddocks-shelter.jpg', alt: 'Weitläufige Pferdekoppeln mit mehreren Unterständen', position: 'center 50%', caption: 'Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.', purpose: 'Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen', shareReason: 'Das Bild soll die große Verpflichtung konkret machen.' },
       'kastration': { src: 'assets/images/feral-cat-tnr.jpg', alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration', position: 'center 44%', caption: 'Kastration verhindert Leid, bevor es sichtbar wird.', purpose: 'Kastrations-Seite: Prävention und Streunerkatzenkontext zeigen', shareReason: 'Das Bild macht klar, dass Kastration praktischer Tierschutz ist.' },
       'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%', caption: 'Süß darf kein Leidensmerkmal sein.', purpose: 'Qualzucht-Seite: problematische Zuchtmerkmale sachlich zeigen', shareReason: 'Das Bild soll Unbehagen erklären, ohne Clickbait zu werden.' },
-      'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als klares Bild für Adoption statt Kauf', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
-      'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen auf einem Kratzbaum als Bild für vorbereitete Haltung', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
-      'notfall': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund sitzt ruhig in einer Tierarztpraxis als Bild für rechtzeitige Hilfe', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
-      'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für hartnäckige Haustiermythen', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leiden müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
-      'glossar': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Goldfische im Aquarium als Bild für Nachschlagewissen zur Tierhaltung', position: 'center 48%', caption: 'Begriffe sind nur hilfreich, wenn sie zu besseren Entscheidungen führen.', purpose: 'Glossar-Seite: Fachbegriffe als Einstieg in verantwortliche Tierhaltung zeigen', shareReason: 'Das Bild soll Nachschlagewissen ruhig und wiedererkennbar rahmen.' },
-      'tiere-und-urlaub': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Urlaubsplanung und Betreuung', position: 'center 46%', caption: 'Urlaub beginnt für dein Tier nicht am Reisetag, sondern mit deiner Planung.', purpose: 'Tiere-und-Urlaub-Seite: Planung, Betreuung und Verantwortung vor dem Kofferpacken zeigen', shareReason: 'Das Bild soll den Impuls auslösen, vor dem Urlaub an das Tier zu denken.' },
+      'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund blickt aus seinem Zwinger im Tierheim', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
+      'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen liegen auf den Ebenen eines Kratzbaums', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
+      'notfall': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund sitzt ruhig neben einem Behandlungstisch in einer Tierarztpraxis', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
+      'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Mehrere Goldfische schwimmen in einem bepflanzten Aquarium', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leiden müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
+      'glossar': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Mehrere Goldfische schwimmen in einem bepflanzten Aquarium', position: 'center 48%', caption: 'Begriffe sind nur hilfreich, wenn sie zu besseren Entscheidungen führen.', purpose: 'Glossar-Seite: Fachbegriffe als Einstieg in verantwortliche Tierhaltung zeigen', shareReason: 'Das Bild soll Nachschlagewissen ruhig und wiedererkennbar rahmen.' },
+      'tiere-und-urlaub': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze schaut aus einer weichen Transportbox', position: 'center 46%', caption: 'Urlaub beginnt für dein Tier nicht am Reisetag, sondern mit deiner Planung.', purpose: 'Tiere-und-Urlaub-Seite: Planung, Betreuung und Verantwortung vor dem Kofferpacken zeigen', shareReason: 'Das Bild soll den Impuls auslösen, vor dem Urlaub an das Tier zu denken.' },
       'wildkatzenbaby-gefunden': { src: 'assets/images/european-wildcat.jpg', alt: 'Europäische Wildkatze mit typischen Merkmalen wie breitem Kopf, fleischfarbener Nase und dichtem Fell', position: 'center 36%', caption: 'Gut gemeinte Hilfe beginnt manchmal damit, ein Jungtier nicht anzufassen.', purpose: 'Wildkatzenbaby-Seite: Verwechslungsgefahr sichtbar machen und Abstand als Hilfe rahmen', shareReason: 'Das Bild soll aus dem Reflex „mitnehmen“ die Entscheidung „erst prüfen“ machen.' },
-      'noch-nicht-bereit': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze in einer weichen Transportbox als Bild für Warten und Übergang', position: 'center 46%', caption: 'Warten kann die tierliebste Entscheidung sein.', purpose: 'Noch-nicht-bereit-Seite: verantwortliches Warten statt Scheitern zeigen', shareReason: 'Das Bild soll Tierverzicht als Fürsorge normalisieren.' }
+      'noch-nicht-bereit': { src: 'assets/images/cat-soft-carrier.jpg', alt: 'Katze sitzt in einer weichen Transportbox', position: 'center 46%', caption: 'Warten kann die tierliebste Entscheidung sein.', purpose: 'Noch-nicht-bereit-Seite: verantwortliches Warten statt Scheitern zeigen', shareReason: 'Das Bild soll Tierverzicht als Fürsorge normalisieren.' }
     };
 
     var articleEnhancements = {
@@ -518,7 +546,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm decision-band" data-enhancement="mensch-decision">
             <span class="eyebrow">Spiegelmoment</span>
             <h3>Die wichtigste Frage ist nicht: Welches Tier will ich?</h3>
-            <p>Die wichtigste Frage ist: Welches Leben kann ich einem Tier wirklich geben? Genau an dieser Stelle wird die Seite teilbar: für Menschen, die kurz vor einer Anschaffung stehen und noch offen genug sind, ehrlich zu prüfen.</p>
+            <p>Die wichtigste Frage ist: Welches Leben kann ich einem Tier wirklich geben? Zeit, Geld, Platz, Betreuung und die Bedürfnisse der konkreten Tierart müssen zusammenpassen.</p>
           </div>`
         },
         {
@@ -526,7 +554,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
             <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin.“</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier.“</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
-            <article class="rhythm-card"><span class="eyebrow">Share-Grund</span><h3>Vor dem Kauf teilen</h3><p>Diese Seite gehört zu Menschen, die gerade „nur mal schauen“ und innerlich schon entschieden haben.</p></article>
+            <article class="rhythm-card"><span class="eyebrow">Vor der Entscheidung</span><h3>Noch einmal anhalten</h3><p>Wenn der Kauf innerlich schon feststeht, werden Einwände leicht kleingeredet. Prüfe die Anforderungen, bevor ein Tier reserviert oder angezahlt wird.</p></article>
           </div>`
         }
       ],
@@ -543,7 +571,7 @@ function normalizeAssetUrls(root) {
           afterHeading: 'Allein zu Hause',
           html: `<div class="article-rhythm myth-truth" data-enhancement="hunde-allein">
             <div class="myth"><span class="eyebrow">Mythos</span><h3>„Ein Garten reicht.“</h3><p>Ein Garten ist nach kurzer Zeit bekanntes Gelände. Er ersetzt keine Spaziergänge, keine neuen Gerüche und keine gemeinsame Erkundung.</p></div>
-            <div class="truth"><span class="eyebrow">Fakt</span><h3>Ein Hund wartet auf dich.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Acht Stunden Alleinsein sind nicht vertretbar.</h3><p>Wenn dein Alltag keine verlässliche Betreuung erlaubt, ist Warten die bessere Entscheidung als ein Hund, der acht Stunden still leidet.</p></div>
           </div>`
         }
       ],
@@ -561,9 +589,9 @@ function normalizeAssetUrls(root) {
         {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm quote-band" data-enhancement="voegel-schwarm">
-            <span class="eyebrow">Share-Satz</span>
-            <blockquote>Ein einzelner Vogel wird nicht zahm. Er wird einsam.</blockquote>
-            <p>Diese Zeile gehört direkt neben jeden Käfigkauf, bei dem „erst mal einer“ geplant ist.</p>
+            <span class="eyebrow">Einzelhaltung</span>
+            <blockquote>Auch ein zahmer Vogel braucht Artgenossen.</blockquote>
+            <p>Plane die Haltung nie mit nur einem Vogel. Menschen, Spiegel und Spielzeug ersetzen keinen artgleichen Sozialpartner.</p>
           </div>`
         }
       ],
@@ -695,7 +723,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm quote-band" data-enhancement="nicht-bereit-entlastung">
             <span class="eyebrow">Entlastung</span>
             <blockquote>Kein Tier zu nehmen kann die tierliebste Entscheidung sein.</blockquote>
-            <p>Diese Seite ist nicht das Nein gegen Tiere. Sie ist das Ja zu einem besseren Zeitpunkt.</p>
+            <p>Ein späterer Einzug ist besser als eine Anschaffung, bei der Zeit, Geld, Betreuung oder Unterbringung noch nicht verlässlich gesichert sind.</p>
           </div>`
         }
       ]
@@ -734,8 +762,8 @@ function normalizeAssetUrls(root) {
           afterHeading: 'Bevor du dich entscheidest',
           html: `<div class="article-rhythm share-callout" data-enhancement="hunde-share">
             <span class="eyebrow">Vor dem Hundekauf teilen</span>
-            <h3>Ein Hund wartet nicht auf „später“. Er wartet jeden Tag.</h3>
-            <p>Diese Seite ist für Menschen, die den Hundewunsch ernst meinen und zuerst ihren Alltag prüfen.</p>
+            <h3>Prüft euren Alltag, bevor ein Hund einzieht</h3>
+            <p>Klärt gemeinsam, wer täglich Zeit, Betreuung, Bewegung und die Kosten übernimmt – auch bei Arbeit, Krankheit und Urlaub.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Ein Hund braucht Alltag, Beziehung und Zeit. Lies das vor dem Hundekauf:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -769,7 +797,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="katzen-kastration-share">
             <span class="eyebrow">Kastration teilen</span>
             <h3>2 Millionen Streunerkatzen sind kein Naturproblem.</h3>
-            <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Dieser Fakt muss vor dem nächsten „einmal Babys“-Satz sichtbar werden.</p>
+            <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Jeder weitere ungeplante Wurf vergrößert die Zahl der Tiere, für die ein dauerhaftes Zuhause und medizinische Versorgung gebraucht werden.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', '2 Millionen Streunerkatzen in Deutschland: Kastration ist praktischer Tierschutz. Lies das:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -965,7 +993,7 @@ function normalizeAssetUrls(root) {
           html: `<div class="article-rhythm share-callout" data-enhancement="nicht-bereit-share">
             <span class="eyebrow">Entlastend teilen</span>
             <h3>Warten ist kein Scheitern. Warten kann Fürsorge sein.</h3>
-            <p>Diese Perspektive hilft Menschen, die ein Tier wollen, aber eigentlich spüren, dass gerade zu viel wackelt.</p>
+            <p>Wenn Zeit, Geld, Wohnsituation oder Betreuung gerade unsicher sind, ist Aufschieben die verantwortungsvollere Entscheidung.</p>
             <div class="share-actions">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Kein Tier zu nehmen kann die tierliebste Entscheidung sein. Lies das:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -1788,7 +1816,7 @@ function normalizeAssetUrls(root) {
           '  <div class="feedback-dialog-head">',
           '    <div>',
           '      <h2 id="feedback-title">Hinweis geben</h2>',
-          '      <p id="feedback-intro">Wir prüfen Hinweise redaktionell. Warum und wie, steht auf der <a href="/mitmachen/index.html">Mitmachen-Seite</a>.</p>',
+          '      <p id="feedback-intro">Nenne, was an dieser Stelle falsch, unklar oder unvollständig ist. Danach öffnet sich in deinem E-Mail-Programm ein vorbereiteter Entwurf.</p>',
           '    </div>',
           '    <button type="button" class="feedback-close" data-feedback-close aria-label="Hinweisformular schließen">×</button>',
           '  </div>',
@@ -1798,7 +1826,7 @@ function normalizeAssetUrls(root) {
           '    <form data-feedback-form novalidate>',
           '      <div class="feedback-field">',
           '        <label for="feedback-message">Dein Hinweis</label>',
-          '        <textarea id="feedback-message" name="message" required placeholder="Was stimmt nicht, was fehlt oder welche Quelle sollen wir prüfen?"></textarea>',
+          '        <textarea id="feedback-message" name="message" required placeholder="Beschreibe die mögliche Korrektur oder Ergänzung."></textarea>',
           '      </div>',
           '      <div class="feedback-field">',
           '        <label for="feedback-source">Quelle optional</label>',

@@ -901,7 +901,6 @@ export const glossaryAnnotationsByPage = {
     { from: 'durch Hecheln:', to: `durch ${mark('hecheln', 'Hecheln')}:` },
     { from: 'Panik oder Apathie', to: `Panik oder ${mark('apathie', 'Apathie')}` },
     { from: 'Das ist ein medizinischer Notfall.', to: `Das ist ein medizinischer ${mark('hitzschlag', 'Notfall')}.` },
-    { from: 'Bei Hitzschlag nicht mit Eiswasser schocken.', to: `Bei ${mark('hitzschlag', 'Hitzschlag')} nicht mit Eiswasser schocken.` },
   ],
   'ernaehrung-taurin': [
     { from: '<span>Taurin</span><span>obligater Karnivor</span>', to: `<span>${mark('taurin', 'Taurin')}</span><span>${mark('obligater-karnivor', 'obligater Karnivor')}</span>` },
