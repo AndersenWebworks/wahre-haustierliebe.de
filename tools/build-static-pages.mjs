@@ -368,7 +368,8 @@ const faqByPage = {
   ],
   'wildkatzenbaby-gefunden': [
     ['Soll ich ein scheinbar verlassenes Wildkatzenbaby mitnehmen?', 'Nein. Abstand halten, Fundort merken, nach einigen Stunden aus der Ferne prüfen und fachkundige Stellen kontaktieren.'],
-    ['Kann man junge Wildkatzen sicher von Hauskatzen unterscheiden?', 'Mit bloßem Auge oft nicht sicher. Merkmale sind nur Hinweise; eine sichere Bestimmung gelingt über DNA.'],
+    ['Kann man junge Wildkatzen sicher von Hauskatzen unterscheiden?', 'Mit bloßem Auge oft nicht sicher. Merkmale sind nur Hinweise; die Einordnung gehört zu einer fachkundigen Stelle und kann im Zweifel eine genetische Untersuchung erfordern.'],
+    ['Kann ich eine Europäische Wildkatze als Haustier halten?', 'Nein, nicht als Privatperson. Die Europäische Wildkatze ist ein nicht domestiziertes, besonders geschütztes Wildtier. Aufzucht und Versorgung gehören ausschließlich in fachkundige, dafür genehmigte Einrichtungen.'],
   ],
   voegel: [
     ['Kann man Wellensittiche allein halten?', 'Nein. Wellensittiche sind Schwarmvögel und brauchen mindestens einen Artgenossen, ausreichend Flugraum und Beschäftigung.'],
@@ -819,6 +820,7 @@ const evidenceByPage = {
       'Wildkatzenjunge werden immer wieder mit getigerten Hauskatzenjungen verwechselt; junge Tiere sind mit bloßem Auge oft nicht sicher bestimmbar.',
       'Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.',
       'Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.',
+      'Eine Europäische Wildkatze ist nicht domestiziert und gehört nicht in private Haustierhaltung; genehmigte Auffang- oder Artenschutzeinrichtungen sind davon zu unterscheiden.',
       'Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren.',
     ],
     sources: [
@@ -833,6 +835,7 @@ const evidenceByPage = {
     guardrails: [
       'Berührung allein führt nicht automatisch zur Verstoßung; Abstand schützt dennoch vor Störung, Stress, Ansteckung und falscher Versorgung.',
       'Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.',
+      'Eine private Aufzucht macht aus einer Wildkatze kein Haustier; überlasse Haltung, Versorgung und mögliche Auswilderung genehmigten Fachstellen.',
       'Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.',
       'Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.',
     ],
