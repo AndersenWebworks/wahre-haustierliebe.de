@@ -59,7 +59,6 @@ try {
     const content = await page.evaluate(() => {
       const selector = 'h1,h2,h3,h4,p,li,dt,dd,th,td,summary,button,label,a,input,textarea,select,option,img';
       const values = [];
-      const seen = new Set();
 
       for (const element of document.querySelectorAll(selector)) {
         if (element.closest('[aria-hidden="true"]')) continue;
@@ -73,11 +72,12 @@ try {
           element.getAttribute('placeholder'),
           element.getAttribute('alt'),
         ];
+        const seenInElement = new Set();
 
         for (const candidate of candidates) {
           const value = candidate?.trim();
-          if (!value || seen.has(value)) continue;
-          seen.add(value);
+          if (!value || seenInElement.has(value)) continue;
+          seenInElement.add(value);
           values.push(value);
         }
       }

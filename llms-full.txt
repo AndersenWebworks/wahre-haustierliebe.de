@@ -158,7 +158,7 @@
 - https://wahre-haustierliebe.de/realhaltung/index.html - Realistische Haltung und Kosten vor der Anschaffung prüfen
 - https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html - Zucht, Vermehrung und Adoption einordnen
 - https://wahre-haustierliebe.de/wildtierhaltung/index.html - Private Wildtierhaltung, Exoten und Wildschutz verstehen
-- https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html - Wildkatzenjunge erkennen und bei einem Fund richtig handeln
+- https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html - Europäische Wildkatzen richtig einordnen, nicht als Haustier behandeln und bei einem Fund richtig handeln
 - https://wahre-haustierliebe.de/noch-nicht-bereit/index.html - Verantwortlich warten statt vorschnell ein Tier anschaffen
 
 ## Page Facts and Boundaries
@@ -539,11 +539,16 @@ Facts:
 - Wildkatzenjunge werden immer wieder mit getigerten Hauskatzenjungen verwechselt; junge Tiere sind mit bloßem Auge oft nicht sicher bestimmbar.
 - Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.
 - Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.
-- Eine Europäische Wildkatze ist nicht domestiziert und gehört nicht in private Haustierhaltung; genehmigte Auffang- oder Artenschutzeinrichtungen sind davon zu unterscheiden.
+- Eine Europäische Wildkatze kann durch Handaufzucht oder Gewöhnung nicht zu einem Haustier werden; eine Fachstation ist keine private Haustierhaltung.
+- Wildkatzen werden nicht zahm; eine private Handaufzucht kann durch menschliche Prägung und fehlende natürliche Aufzucht eine spätere Auswilderung erschweren oder verhindern.
+- Für Menschen entstehen nicht bloß zusätzliche Kosten, sondern unvorhersehbare Abwehr-, Verletzungs-, Hygiene-, Betreuungs- und Haftungsrisiken.
 - Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren.
 Important boundaries:
 - Berührung allein führt nicht automatisch zur Verstoßung; Abstand schützt dennoch vor Störung, Stress, Ansteckung und falscher Versorgung.
 - Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.
+- Zähmung, Gewöhnung und Domestikation sind nicht dasselbe: Ein einzelnes Tier wird durch Handaufzucht nicht zur Hauskatze und eine Fachstation ist kein privater Haushalt.
+- Die Sicherheits- und Verhaltensrisiken sind nicht bloß eine Frage von Aufwand; eine Wildkatze bleibt ein Wildtier und kann in Bedrängnis beißen oder kratzen.
+- Die konkreten artenschutzrechtlichen Anforderungen und Zuständigkeiten können vom Einzelfall und vom Bundesland abhängen; die Seite ersetzt keine Rechtsberatung.
 - Eine private Aufzucht macht aus einer Wildkatze kein Haustier; überlasse Haltung, Versorgung und mögliche Auswilderung genehmigten Fachstellen.
 - Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.
 - Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.
@@ -554,7 +559,12 @@ Sources:
 - BUND NRW: Wild- oder Hauskatze?: https://www.bund-nrw.de/themen/wildkatze/europaeische-wildkatze/wild-oder-hauskatze/
 - BfN: Artenportrait Felis silvestris: https://www.bfn.de/artenportraits/felis-silvestris
 - Wildkatze Baden-Württemberg: Wildkätzchen gefunden?: https://www.wildkatze-bw.de/wildkatze/wildkaetzchen-gefunden
-- NABU Hamburg: Jungvögel und Menschengeruch: https://hamburg.nabu.de/tiere-und-pflanzen/wildtiere-schuetzen/hunde.html
+- Wildkatze Baden-Württemberg: Tierschutz: https://www.wildkatze-bw.de/massnahmen/tierschutz
+- FVA Wildtierinstitut: Leitfaden Wildkätzchenfund: https://www.wildkatze-bw.de/fileadmin/user_upload/FVA_Leitfaden_Wildkaetzchenfund.pdf
+- Bundesnaturschutzgesetz § 44: https://www.gesetze-im-internet.de/bnatschg_2009/__44.html
+- Bundesnaturschutzgesetz § 46: https://www.gesetze-im-internet.de/bnatschg_2009/__46.html
+- Bundesartenschutzverordnung § 7: https://www.gesetze-im-internet.de/bartschv_2005/__7.html
+- Bürgerliches Gesetzbuch § 833: https://www.gesetze-im-internet.de/bgb/__833.html
 
 ### Noch nicht bereit für ein Tier: Warten kann Tierliebe sein
 URL: https://wahre-haustierliebe.de/noch-nicht-bereit/index.html

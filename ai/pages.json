@@ -2324,8 +2324,8 @@
       "id": "wildkatzenbaby-gefunden",
       "url": "https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html",
       "title": "Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln",
-      "description": "Wildkatzenjunge werden leicht mit Hauskatzen verwechselt. Woran du sie erkennst, warum Mitnehmen schadet und welche Schritte wirklich helfen.",
-      "intent": "Wildkatzenjunge erkennen und bei einem Fund richtig handeln",
+      "description": "Warum eine Europäische Wildkatze kein Haustier werden kann, warum Mitnehmen ihr schadet und welche Schritte bei einem Fund wirklich helfen.",
+      "intent": "Europäische Wildkatzen richtig einordnen, nicht als Haustier behandeln und bei einem Fund richtig handeln",
       "keywords": [
         "Wildkatzenbaby gefunden",
         "Wildkätzchen",
@@ -2337,12 +2337,17 @@
         "Wildkatzenjunge werden immer wieder mit getigerten Hauskatzenjungen verwechselt; junge Tiere sind mit bloßem Auge oft nicht sicher bestimmbar.",
         "Ein scheinbar verlassenes Kätzchen im Wald ist nicht automatisch hilflos, weil Wildkatzenmütter ihre Jungen während der Jagd zeitweise allein lassen.",
         "Gesunde Wildkatzen dürfen nicht aus der Natur mitgenommen werden; bei verletzten Tieren müssen fachkundige Stellen und die zuständige Naturschutzbehörde einbezogen werden.",
-        "Eine Europäische Wildkatze ist nicht domestiziert und gehört nicht in private Haustierhaltung; genehmigte Auffang- oder Artenschutzeinrichtungen sind davon zu unterscheiden.",
+        "Eine Europäische Wildkatze kann durch Handaufzucht oder Gewöhnung nicht zu einem Haustier werden; eine Fachstation ist keine private Haustierhaltung.",
+        "Wildkatzen werden nicht zahm; eine private Handaufzucht kann durch menschliche Prägung und fehlende natürliche Aufzucht eine spätere Auswilderung erschweren oder verhindern.",
+        "Für Menschen entstehen nicht bloß zusätzliche Kosten, sondern unvorhersehbare Abwehr-, Verletzungs-, Hygiene-, Betreuungs- und Haftungsrisiken.",
         "Der wichtigste erste Schritt ist Abstand halten, Fundort dokumentieren, aus der Ferne prüfen und Fachstellen kontaktieren."
       ],
       "citationGuardrails": [
         "Berührung allein führt nicht automatisch zur Verstoßung; Abstand schützt dennoch vor Störung, Stress, Ansteckung und falscher Versorgung.",
         "Äußere Merkmale geben Hinweise, aber keine sichere Laienbestimmung.",
+        "Zähmung, Gewöhnung und Domestikation sind nicht dasselbe: Ein einzelnes Tier wird durch Handaufzucht nicht zur Hauskatze und eine Fachstation ist kein privater Haushalt.",
+        "Die Sicherheits- und Verhaltensrisiken sind nicht bloß eine Frage von Aufwand; eine Wildkatze bleibt ein Wildtier und kann in Bedrängnis beißen oder kratzen.",
+        "Die konkreten artenschutzrechtlichen Anforderungen und Zuständigkeiten können vom Einzelfall und vom Bundesland abhängen; die Seite ersetzt keine Rechtsberatung.",
         "Eine private Aufzucht macht aus einer Wildkatze kein Haustier; überlasse Haltung, Versorgung und mögliche Auswilderung genehmigten Fachstellen.",
         "Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.",
         "Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen."
@@ -2373,8 +2378,28 @@
           "url": "https://www.wildkatze-bw.de/wildkatze/wildkaetzchen-gefunden"
         },
         {
-          "label": "NABU Hamburg: Jungvögel und Menschengeruch",
-          "url": "https://hamburg.nabu.de/tiere-und-pflanzen/wildtiere-schuetzen/hunde.html"
+          "label": "Wildkatze Baden-Württemberg: Tierschutz",
+          "url": "https://www.wildkatze-bw.de/massnahmen/tierschutz"
+        },
+        {
+          "label": "FVA Wildtierinstitut: Leitfaden Wildkätzchenfund",
+          "url": "https://www.wildkatze-bw.de/fileadmin/user_upload/FVA_Leitfaden_Wildkaetzchenfund.pdf"
+        },
+        {
+          "label": "Bundesnaturschutzgesetz § 44",
+          "url": "https://www.gesetze-im-internet.de/bnatschg_2009/__44.html"
+        },
+        {
+          "label": "Bundesnaturschutzgesetz § 46",
+          "url": "https://www.gesetze-im-internet.de/bnatschg_2009/__46.html"
+        },
+        {
+          "label": "Bundesartenschutzverordnung § 7",
+          "url": "https://www.gesetze-im-internet.de/bartschv_2005/__7.html"
+        },
+        {
+          "label": "Bürgerliches Gesetzbuch § 833",
+          "url": "https://www.gesetze-im-internet.de/bgb/__833.html"
         }
       ],
       "social": {

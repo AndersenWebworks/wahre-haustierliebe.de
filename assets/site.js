@@ -489,8 +489,8 @@ var staticSiteSearchIndex = [
   {
     "id": "wildkatzenbaby-gefunden",
     "title": "Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln",
-    "description": "Wildkatzenjunge werden leicht mit Hauskatzen verwechselt. Woran du sie erkennst, warum Mitnehmen schadet und welche Schritte wirklich helfen.",
-    "terms": "Wildkatzenjunge erkennen und bei einem Fund richtig handeln katzen/wildkatzenbaby-gefunden wildkatzenbaby gefunden"
+    "description": "Warum eine Europäische Wildkatze kein Haustier werden kann, warum Mitnehmen ihr schadet und welche Schritte bei einem Fund wirklich helfen.",
+    "terms": "Europäische Wildkatzen richtig einordnen, nicht als Haustier behandeln und bei einem Fund richtig handeln katzen/wildkatzenbaby-gefunden wildkatzenbaby gefunden"
   },
   {
     "id": "noch-nicht-bereit",
