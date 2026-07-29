@@ -314,7 +314,7 @@ const topicPages = [
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
   ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung verantwortungsvoll planen.'],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen halten', 'Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.', 'Meerschweinchenhaltung verantwortungsvoll planen.'],
-  ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Hamster halten', 'Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.', 'Hamsterhaltung realistisch prüfen.'],
+  ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
   ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.'],
   ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.', 'Reptilienhaltung realistisch prüfen.'],
@@ -380,6 +380,12 @@ const faqByPage = {
   ],
   kleintiere: [
     ['Wie viel Platz braucht ein Kaninchen?', 'Mindestens 2-3 Quadratmeter pro Kaninchen als dauerhaft zugängliche Grundfläche plus täglichen Auslauf. Handelsübliche Käfige sind fast immer zu klein.'],
+  ],
+  'kleintiere-hamster': [
+    ['Kann ich zwei Goldhamster zusammen halten?', 'Nein. Goldhamster sind strikte Einzelgänger. Ein zweites Tier bedeutet keinen Sozialkontakt, sondern kann Revierstress, Kämpfe und schwere Verletzungen auslösen.'],
+    ['Wie groß muss ein Goldhamstergehege sein?', 'Der Deutsche Tierschutzbund empfiehlt mindestens einen Quadratmeter Grundfläche, mindestens 70 Zentimeter Höhe und mindestens 30 Zentimeter grabfähige Einstreu. Mehr Fläche und eine gute Struktur bleiben sinnvoll.'],
+    ['Ist ein Goldhamster ein gutes Haustier für Kinder?', 'Nicht für Kinder, die tagsüber spielen oder kuscheln möchten. Goldhamster schlafen am Tag, werden abends aktiv und möchten in der Regel nicht angefasst werden. Die Verantwortung muss bei Erwachsenen liegen.'],
+    ['Reicht ein großes Laufrad als Bewegungsausgleich?', 'Nein. Ein sicheres Laufrad gehört zur Einrichtung, ersetzt aber weder die große Grundfläche noch tiefe Einstreu, Verstecke und abwechslungsreiche Wege.'],
   ],
   adoption: [
     ['Sollte ich ein Tier vom Züchter kaufen oder aus dem Tierheim adoptieren?', 'Solange viele Tiere in Tierheimen und auf Pflegestellen warten, ist Adoption die verantwortungsvollere Wahl. Sie gibt einem bestehenden Tier eine Chance und erzeugt keinen weiteren Nachschub.'],
@@ -529,6 +535,27 @@ const evidenceByPage = {
     guardrails: [
       'Die Fläche ist nur ein Teil der Haltung; Ruhe, Artgenossen, Futter und Tierarztzugang zählen genauso.',
       'Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.',
+    ],
+  },
+  'kleintiere-hamster': {
+    facts: [
+      'Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.',
+      'Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.',
+      'Goldhamster sind nachtaktiv. Tagsüberes Wecken stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.',
+      'Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.',
+      'Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Alles rund um Goldhamster', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/'],
+      ['Deutscher Tierschutzbund: Broschüre zur Haltung von Goldhamstern', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf'],
+      ['TVT-Merkblatt Nr. 156: Heimtiere – Goldhamster, Stand April 2025', 'https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?did=37&download=goldhamster271024-2.pdf&no_cache=1'],
+      ['Deutscher Tierschutzbund: Positionspapier zu tierschutzwidrigem Zubehör', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Tierschutzwidriges_Zubehoer.pdf'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+    ],
+    guardrails: [
+      'Die Angaben dieser Seite beziehen sich auf Goldhamster. Zwerghamsterarten brauchen eine eigene Beurteilung ihrer Haltung.',
+      'Mindestmaße allein machen ein Gehege nicht tiergerecht; Einstreu, Rückzug, sichere Einrichtung, Ruhe und Versorgung müssen ebenfalls passen.',
+      'Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden.',
     ],
   },
   exoten: {
@@ -1037,14 +1064,14 @@ const firstContentImageByPage = {
     width: 2048,
     height: 1536,
     type: 'image/jpeg',
-    alt: 'Hund sitzt in einer Tierarztpraxis neben dem Behandlungstisch.',
+    alt: 'Hund sitzt in einer Tierarztpraxis neben einem Behandlungstisch.',
   },
   'ernaehrung-taurin': {
     src: 'assets/images/two-cats-window.jpg',
     width: 843,
     height: 954,
     type: 'image/jpeg',
-    alt: 'Zwei Katzen sitzen gemeinsam auf einer Fensterbank.',
+    alt: 'Zwei Katzen sitzen gemeinsam auf einer Fensterbank und blicken nach draußen.',
   },
   realhaltung: {
     src: 'assets/images/hamster-home-built-enclosure.png',

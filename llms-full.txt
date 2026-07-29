@@ -58,7 +58,7 @@
 - Bevor Vögel einziehen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/voegel/entscheidung/index.html
 - Kaninchen halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html
 - Meerschweinchen halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html
-- Hamster halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/hamster/index.html
+- Goldhamster halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/hamster/index.html
 - Ratten halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/ratten/index.html
 - Degus und Chinchillas halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html
 - Reptilien halten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/exoten/reptilien/index.html
@@ -132,7 +132,7 @@
 - https://wahre-haustierliebe.de/voegel/entscheidung/index.html - Entscheidung vor der Vogelhaltung prüfen.
 - https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html - Kaninchenhaltung verantwortungsvoll planen.
 - https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html - Meerschweinchenhaltung verantwortungsvoll planen.
-- https://wahre-haustierliebe.de/kleintiere/hamster/index.html - Hamsterhaltung realistisch prüfen.
+- https://wahre-haustierliebe.de/kleintiere/hamster/index.html - Goldhamsterhaltung vor der Anschaffung realistisch prüfen.
 - https://wahre-haustierliebe.de/kleintiere/ratten/index.html - Rattenhaltung verantwortungsvoll planen.
 - https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html - Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.
 - https://wahre-haustierliebe.de/exoten/reptilien/index.html - Reptilienhaltung realistisch prüfen.
@@ -308,6 +308,25 @@ Sources:
 - TASSO e. V.: Körpersprache beim Hund: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund
 - ASPCApro: Canine Body Language Tips: https://www.aspcapro.org/resource/canine-body-language-tips
 - VCA: Signs Your Dog is Stressed and How to Relieve It: https://vcahospitals.com/know-your-pet/signs-your-dog-is-stressed-and-how-to-relieve-it
+
+### Goldhamster halten - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/kleintiere/hamster/index.html
+Facts:
+- Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.
+- Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.
+- Goldhamster sind nachtaktiv. Tagsüberes Wecken stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.
+- Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.
+- Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.
+Important boundaries:
+- Die Angaben dieser Seite beziehen sich auf Goldhamster. Zwerghamsterarten brauchen eine eigene Beurteilung ihrer Haltung.
+- Mindestmaße allein machen ein Gehege nicht tiergerecht; Einstreu, Rückzug, sichere Einrichtung, Ruhe und Versorgung müssen ebenfalls passen.
+- Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden.
+Sources:
+- Deutscher Tierschutzbund: Alles rund um Goldhamster: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/
+- Deutscher Tierschutzbund: Broschüre zur Haltung von Goldhamstern: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf
+- TVT-Merkblatt Nr. 156: Heimtiere – Goldhamster, Stand April 2025: https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?did=37&download=goldhamster271024-2.pdf&no_cache=1
+- Deutscher Tierschutzbund: Positionspapier zu tierschutzwidrigem Zubehör: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Tierschutzwidriges_Zubehoer.pdf
+- Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 
 ### Kastration bei Haustieren: Tierschutz, Kosten und Mythen
 URL: https://wahre-haustierliebe.de/kastration/index.html

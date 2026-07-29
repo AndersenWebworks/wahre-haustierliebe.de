@@ -332,9 +332,9 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "kleintiere-hamster",
-    "title": "Hamster halten - Wa(h)re Haustier(liebe)",
-    "description": "Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.",
-    "terms": "Hamsterhaltung realistisch prüfen. kleintiere/hamster kleintiere hamster"
+    "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
+    "description": "Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.",
+    "terms": "Goldhamsterhaltung vor der Anschaffung realistisch prüfen. kleintiere/hamster kleintiere hamster"
   },
   {
     "id": "kleintiere-ratten",

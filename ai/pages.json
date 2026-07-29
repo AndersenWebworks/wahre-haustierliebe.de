@@ -1305,9 +1305,9 @@
     {
       "id": "kleintiere-hamster",
       "url": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html",
-      "title": "Hamster halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.",
-      "intent": "Hamsterhaltung realistisch prüfen.",
+      "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
+      "description": "Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.",
+      "intent": "Goldhamsterhaltung vor der Anschaffung realistisch prüfen.",
       "keywords": [
         "Kleintiere halten",
         "Kaninchen",
@@ -1315,12 +1315,43 @@
         "Hamster",
         "Ratten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.",
+        "Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.",
+        "Goldhamster sind nachtaktiv. Tagsüberes Wecken stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.",
+        "Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.",
+        "Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen."
+      ],
+      "citationGuardrails": [
+        "Die Angaben dieser Seite beziehen sich auf Goldhamster. Zwerghamsterarten brauchen eine eigene Beurteilung ihrer Haltung.",
+        "Mindestmaße allein machen ein Gehege nicht tiergerecht; Einstreu, Rückzug, sichere Einrichtung, Ruhe und Versorgung müssen ebenfalls passen.",
+        "Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Alles rund um Goldhamster",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre zur Haltung von Goldhamstern",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf"
+        },
+        {
+          "label": "TVT-Merkblatt Nr. 156: Heimtiere – Goldhamster, Stand April 2025",
+          "url": "https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?did=37&download=goldhamster271024-2.pdf&no_cache=1"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Positionspapier zu tierschutzwidrigem Zubehör",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Tierschutzwidriges_Zubehoer.pdf"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        }
+      ],
       "social": {
-        "title": "Hamster halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Hamster nachtaktive Einzelgänger sind und keine einfachen Kindertiere.",
+        "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
+        "description": "Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-hamster.png",
         "imageAlt": "Großes Hamstergehege mit tiefer Einstreu und Verstecken.",
         "imageWidth": 1200,
@@ -2152,7 +2183,7 @@
         "title": "Zehn Minuten können lebensgefährlich sein",
         "description": "Warum Autos sich schnell aufheizen, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.",
         "image": "https://wahre-haustierliebe.de/assets/social/hitzefalle-auto.png",
-        "imageAlt": "Hund sitzt in einer Tierarztpraxis neben dem Behandlungstisch.",
+        "imageAlt": "Hund sitzt in einer Tierarztpraxis neben einem Behandlungstisch.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -2193,7 +2224,7 @@
         "title": "Katzen, Hunde, vegane Ernährung und Taurin",
         "description": "Warum Katzen und Hunde ernährungsphysiologisch verschieden sind und Futter nicht einfach austauschbar ist.",
         "image": "https://wahre-haustierliebe.de/assets/social/ernaehrung-taurin.png",
-        "imageAlt": "Zwei Katzen sitzen gemeinsam auf einer Fensterbank.",
+        "imageAlt": "Zwei Katzen sitzen gemeinsam auf einer Fensterbank und blicken nach draußen.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
