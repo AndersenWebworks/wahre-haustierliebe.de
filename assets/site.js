@@ -527,7 +527,7 @@ function normalizeAssetUrls(root) {
       'kleintiere': { src: 'assets/images/guinea-pig-habitat.jpg', alt: 'Kleintier-Habitat mit Struktur statt Spielzeughaltung', position: 'center 50%', caption: 'Kleintiere brauchen Fläche, Struktur und Artgenossen.', purpose: 'Kleintier-Seite: Haltungskontext statt Kinderzimmerbild zeigen', shareReason: 'Das Bild soll den Mythos vom einfachen Einstiegstier brechen.' },
       'exoten': { src: 'assets/images/bearded-dragon-terrarium.jpg', alt: 'Bartagame sitzt auf einem Ast im Terrarium', position: 'center 45%', caption: 'Leise Tiere brauchen oft die präziseste Technik.', purpose: 'Exoten-Seite: Klima, Licht und Fachwissen sichtbar machen', shareReason: 'Das Bild soll Faszination mit Verantwortung koppeln.' },
       'pferde': { src: 'assets/images/horse-paddocks-shelter.jpg', alt: 'Weitläufige Pferdekoppeln mit mehreren Unterständen', position: 'center 50%', caption: 'Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.', purpose: 'Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen', shareReason: 'Das Bild soll die große Verpflichtung konkret machen.' },
-      'kastration': { src: 'assets/images/feral-cat-tnr.jpg', alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration', position: 'center 44%', caption: 'Kastration verhindert Leid, bevor es sichtbar wird.', purpose: 'Kastrations-Seite: Prävention und Streunerkatzenkontext zeigen', shareReason: 'Das Bild macht klar, dass Kastration praktischer Tierschutz ist.' },
+      'kastration': { src: 'assets/images/feral-cat-tnr.jpg', alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration', position: 'center 44%', caption: 'Bei Katzen schützt Kastration das einzelne Tier und verhindert weiteren ungewollten Nachwuchs.', purpose: 'Kastrations-Seite: Prävention und Streunerkatzenkontext zeigen', shareReason: 'Das Bild verbindet die Gesundheitsentscheidung mit dem Streunerkatzenschutz.' },
       'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%', caption: 'Süß darf kein Leidensmerkmal sein.', purpose: 'Qualzucht-Seite: problematische Zuchtmerkmale sachlich zeigen', shareReason: 'Das Bild soll Unbehagen erklären, ohne Clickbait zu werden.' },
       'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund blickt aus seinem Zwinger im Tierheim', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
       'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen liegen auf den Ebenen eines Kratzbaums', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
@@ -627,10 +627,10 @@ function normalizeAssetUrls(root) {
       ],
       kastration: [
         {
-          afterHeading: 'Die häufigsten Gegenargumente',
+          afterHeading: 'Die häufigsten Irrtümer',
           html: `<div class="article-rhythm myth-truth" data-enhancement="kastration-kosten">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Einmal Babys wäre doch schön.“</h3><p>Für Menschen klingt das romantisch. Für Tiere bedeutet es Hormonstress, Risiko, Nachwuchs ohne sichere Plätze und oft zusätzliches Tierheimleid.</p></div>
-            <div class="truth"><span class="eyebrow">Fakt</span><h3>Keine Geburt ist neutral.</h3><p>Jeder ungeplante Wurf braucht Futter, Tierarzt, Platz und verantwortungsvolle Vermittlung. Kastration verhindert Leid, bevor es anfängt.</p></div>
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Einmal Nachwuchs ist gesund.“</h3><p>Für einen gesundheitlichen Vorteil durch einen Wurf gibt es keinen Beleg. Trächtigkeit und Geburt bringen eigene Risiken mit.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Der richtige Zeitpunkt zählt.</h3><p>Bei Katzen schützt die frühe Kastration besonders vor Gesäugetumoren. Beim Hund kann zu frühes Operieren dagegen neue Risiken schaffen.</p></div>
           </div>`
         }
       ],
@@ -926,9 +926,9 @@ function normalizeAssetUrls(root) {
         {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm metric-grid" data-enhancement="kastration-kompakt">
-            <div class="metric-card"><strong>80–250 €</strong><span>typische Katzen-Kastration nach GOT, je nach Geschlecht und Praxis.</span></div>
-            <div class="metric-card"><strong>vorher</strong><span>Prävention wirkt, bevor Rolligkeit, Kämpfe oder Nachwuchs da sind.</span></div>
-            <div class="metric-card"><strong>TNR</strong><span>Fangen, kastrieren, zurücksetzen ist praktischer Streunerkatzenschutz.</span></div>
+            <div class="metric-card"><strong>5,7 %</strong><span>Sterblichkeit unter den Katzen mit Pyometra in einer großen schwedischen Studie.</span></div>
+            <div class="metric-card"><strong>80–90 %</strong><span>der Gesäugetumoren bei Katzen sind bösartig.</span></div>
+            <div class="metric-card"><strong>Einzelfall</strong><span>Beim Hund bestimmen Anlass, Rasse, Geschlecht, Alter und Größe die Abwägung.</span></div>
           </div>`
         }
       ],
