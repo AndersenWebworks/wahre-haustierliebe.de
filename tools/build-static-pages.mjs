@@ -351,6 +351,10 @@ const glossaryTermByKey = new Map(glossaryTerms.map((term) => [term.key, term]))
 let staticCssForInline = '';
 
 const faqByPage = {
+  kastration: [
+    ['Sollte eine Hündin oder Katze vor der Kastration einmal Junge bekommen?', 'Nein. Für einen gesundheitlichen oder seelischen Vorteil durch einen Wurf gibt es keinen tiermedizinischen Beleg. Bei Katzen sprechen die Vorteile meist für eine Kastration vor der Fortpflanzung; bei Hündinnen muss der passende Zeitpunkt individuell nach Rasse, Größe, Alter, Entwicklung und Gesundheit festgelegt werden.'],
+    ['Schützt ein Wurf vor einer Gebärmuttervereiterung?', 'Nein. Eine frühere Trächtigkeit verhindert keine spätere Pyometra. Die Erkrankung hängt mit hormonellen Einflüssen auf die Gebärmutter zusammen, nicht mit angeblicher Kinderlosigkeit.'],
+  ],
   hunde: [
     ['Wie lange darf ein Hund allein zu Hause bleiben?', 'Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.'],
     ['Was kostet ein Hund im Monat?', 'Für einen mittelgroßen Hund sind laufend etwa 100-200 Euro pro Monat realistisch. Über ein Hundeleben können 12.000-20.000 Euro zusammenkommen.'],
@@ -593,6 +597,8 @@ const evidenceByPage = {
   kastration: {
     facts: [
       'Wohnungshaltung verhindert bei Katzen eine Paarung, aber weder hormonelle Zyklen noch Erkrankungen von Eierstöcken, Gebärmutter oder Gesäuge.',
+      'Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.',
+      'Trächtigkeit, Geburt und Aufzucht können unter anderem Schwergeburt, Kaiserschnitt, Gebärmutter- oder Gesäugeentzündungen, Kalziummangel und den Verlust von Jungtieren mit sich bringen.',
       'Bei Katzen überwiegen für die meisten nicht zur Zucht vorgesehenen Tiere die Vorteile der Kastration; der konkrete Zeitpunkt hängt von Entwicklung und Gesundheit ab.',
       'Eine frühe Kastration senkt bei weiblichen Katzen das Risiko für Mammakarzinome deutlich; etwa 80 bis 90 Prozent der Gesäugetumoren bei Katzen sind bösartig.',
       'Bei Hündinnen verhindert die Kastration Pyometra, kann aber unter anderem Harninkontinenz sowie rasse- und altersabhängige Gelenk- oder Tumorrisiken begünstigen.',
@@ -601,6 +607,10 @@ const evidenceByPage = {
     ],
     sources: [
       ['WSAVA: Reproduction Control Guidelines 2024', 'https://wsava.org/global-guidelines/reproduction-guidelines/'],
+      ['AVMA: Spaying and Neutering', 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering'],
+      ['International Cat Care: Why do I need to neuter my cat?', 'https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat'],
+      ['Merck Veterinary Manual: Geburt bei Hündinnen und Kätzinnen', 'https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs-and-cats/labor-delivery-and-postpartum-care-in-bitches-and-queens'],
+      ['Merck Veterinary Manual: Schwergeburt bei Hund und Katze', 'https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-small-animal/dystocia-in-small-animals'],
       ['Hagman et al. 2014: Pyometra bei Katzen', 'https://pubmed.ncbi.nlm.nih.gov/24726694/'],
       ['Overley et al. 2005: Kastration und Mammakarzinom bei Katzen', 'https://pubmed.ncbi.nlm.nih.gov/16095174/'],
       ['Merck Veterinary Manual: Mammary Tumors in Cats', 'https://www.merckvetmanual.com/reproductive-system/mammary-tumors-in-cats/mammary-tumors-in-cats'],
@@ -616,6 +626,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Statistische Risiken aus Studien sind keine exakte Vorhersage für das einzelne Tier.',
+      'Die Widerlegung des Wurf-Mythos ist keine pauschale Empfehlung zur Frühkastration jeder Hündin.',
       'Bei Katzen und Hunden gelten unterschiedliche Nutzen-Risiko-Abwägungen; pauschale Frühkastration ist beim Hund keine Standardlösung.',
       'Zeitpunkt, Operationsverfahren, Narkoserisiko und Nachsorge müssen tierärztlich für das konkrete Tier festgelegt werden.',
     ],
@@ -829,15 +840,21 @@ const evidenceByPage = {
   'zucht-und-vermehrung': {
     facts: [
       'Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.',
+      'Auch ein einmaliger Wurf ist Zucht und begründet Verantwortung für das Muttertier und jedes einzelne Jungtier.',
+      'Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.',
       'Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.',
       'Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Tierheime', 'https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/'],
+      ['AVMA: Spaying and Neutering', 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering'],
+      ['International Cat Care: Why do I need to neuter my cat?', 'https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat'],
+      ['Merck Veterinary Manual: Schwergeburt bei Hund und Katze', 'https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-small-animal/dystocia-in-small-animals'],
       ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
     ],
     guardrails: [
       'Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; beide bringen jedoch zusätzliche Tiere in eine Welt, in der viele vorhandene Tiere ein Zuhause suchen.',
+      'Bei Hündinnen ist der passende Kastrationszeitpunkt eine individuelle tierärztliche Entscheidung; die Widerlegung des Wurf-Mythos ersetzt diese Abwägung nicht.',
       'Wer züchtet, übernimmt Verantwortung für Gesundheit, Unterbringung und Rücknahme jedes hervorgebrachten Tieres.',
     ],
   },

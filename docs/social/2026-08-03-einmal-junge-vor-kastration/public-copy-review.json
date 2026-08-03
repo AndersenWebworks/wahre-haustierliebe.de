@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "status": "approved",
+  "project": "wahre-haustierliebe-instagram-einmal-junge-vor-kastration",
+  "surfaceHash": "6f79e9a57812b22c9f66d7223ea15a70f516f0b69b43eef3f06c682b81747191",
+  "briefHash": "5d6c1ca765835f774569d5e92b3845cf05a9094505402830d2a9c2816e832f01",
+  "pageCount": 13,
+  "reviewedAt": "2026-08-03T14:23:42.376Z",
+  "reviewer": {
+    "source": "codex_cli",
+    "model": "default",
+    "independentContext": true,
+    "batchCount": 1
+  }
+}

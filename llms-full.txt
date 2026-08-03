@@ -332,6 +332,8 @@ Sources:
 URL: https://wahre-haustierliebe.de/kastration/index.html
 Facts:
 - Wohnungshaltung verhindert bei Katzen eine Paarung, aber weder hormonelle Zyklen noch Erkrankungen von Eierstöcken, Gebärmutter oder Gesäuge.
+- Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.
+- Trächtigkeit, Geburt und Aufzucht können unter anderem Schwergeburt, Kaiserschnitt, Gebärmutter- oder Gesäugeentzündungen, Kalziummangel und den Verlust von Jungtieren mit sich bringen.
 - Bei Katzen überwiegen für die meisten nicht zur Zucht vorgesehenen Tiere die Vorteile der Kastration; der konkrete Zeitpunkt hängt von Entwicklung und Gesundheit ab.
 - Eine frühe Kastration senkt bei weiblichen Katzen das Risiko für Mammakarzinome deutlich; etwa 80 bis 90 Prozent der Gesäugetumoren bei Katzen sind bösartig.
 - Bei Hündinnen verhindert die Kastration Pyometra, kann aber unter anderem Harninkontinenz sowie rasse- und altersabhängige Gelenk- oder Tumorrisiken begünstigen.
@@ -339,10 +341,15 @@ Facts:
 - Bei Kaninchen ist Kastration für stabile Gruppen ohne Nachwuchs und bei weiblichen Tieren wegen häufiger Gebärmuttererkrankungen relevant.
 Important boundaries:
 - Statistische Risiken aus Studien sind keine exakte Vorhersage für das einzelne Tier.
+- Die Widerlegung des Wurf-Mythos ist keine pauschale Empfehlung zur Frühkastration jeder Hündin.
 - Bei Katzen und Hunden gelten unterschiedliche Nutzen-Risiko-Abwägungen; pauschale Frühkastration ist beim Hund keine Standardlösung.
 - Zeitpunkt, Operationsverfahren, Narkoserisiko und Nachsorge müssen tierärztlich für das konkrete Tier festgelegt werden.
 Sources:
 - WSAVA: Reproduction Control Guidelines 2024: https://wsava.org/global-guidelines/reproduction-guidelines/
+- AVMA: Spaying and Neutering: https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering
+- International Cat Care: Why do I need to neuter my cat?: https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat
+- Merck Veterinary Manual: Geburt bei Hündinnen und Kätzinnen: https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs-and-cats/labor-delivery-and-postpartum-care-in-bitches-and-queens
+- Merck Veterinary Manual: Schwergeburt bei Hund und Katze: https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-small-animal/dystocia-in-small-animals
 - Hagman et al. 2014: Pyometra bei Katzen: https://pubmed.ncbi.nlm.nih.gov/24726694/
 - Overley et al. 2005: Kastration und Mammakarzinom bei Katzen: https://pubmed.ncbi.nlm.nih.gov/16095174/
 - Merck Veterinary Manual: Mammary Tumors in Cats: https://www.merckvetmanual.com/reproductive-system/mammary-tumors-in-cats/mammary-tumors-in-cats
@@ -544,13 +551,19 @@ Sources:
 URL: https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html
 Facts:
 - Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.
+- Auch ein einmaliger Wurf ist Zucht und begründet Verantwortung für das Muttertier und jedes einzelne Jungtier.
+- Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.
 - Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.
 - Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.
 Important boundaries:
 - Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; beide bringen jedoch zusätzliche Tiere in eine Welt, in der viele vorhandene Tiere ein Zuhause suchen.
+- Bei Hündinnen ist der passende Kastrationszeitpunkt eine individuelle tierärztliche Entscheidung; die Widerlegung des Wurf-Mythos ersetzt diese Abwägung nicht.
 - Wer züchtet, übernimmt Verantwortung für Gesundheit, Unterbringung und Rücknahme jedes hervorgebrachten Tieres.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
+- AVMA: Spaying and Neutering: https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering
+- International Cat Care: Why do I need to neuter my cat?: https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat
+- Merck Veterinary Manual: Schwergeburt bei Hund und Katze: https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-small-animal/dystocia-in-small-animals
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
 
 ### Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar
