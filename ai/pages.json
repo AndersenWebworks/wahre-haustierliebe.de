@@ -805,22 +805,85 @@
     {
       "id": "katzen-wohnungshaltung",
       "url": "https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html",
-      "title": "Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe)",
-      "description": "Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.",
-      "intent": "Wohnungshaltung für Katzen artgerechter gestalten.",
+      "title": "Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe)",
+      "description": "Wohnung, gesicherter Außenbereich oder unkontrollierter Freigang: Risiken, Bedürfnisse, Zahlen, Vorsorge und Entscheidungshilfe im Detail.",
+      "intent": "Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.",
       "keywords": [
-        "Katze halten",
         "Wohnungskatze",
-        "Freigang",
-        "Kastration",
-        "Katzenstress"
+        "Freigänger Katze",
+        "gesicherter Freigang",
+        "Katzenhaltung",
+        "Katzenschutzverordnung",
+        "Katzenrevier"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Unkontrollierter Freigang erweitert den Bewegungs- und Erkundungsraum, erhöht aber das Risiko für Verkehrsunfälle, Verletzungen, Infektionen, Parasiten und Verschwinden.",
+        "Reine Wohnungshaltung schützt vor vielen äußeren Gefahren, verlangt aber ein strukturiertes Revier mit Höhe, Rückzug, getrennten Ressourcen, täglichem Jagdspiel und kontrollierter Fütterung.",
+        "Gesicherte Balkone, Gehege oder Gärten können Außenreize ermöglichen, ohne die Katze unkontrolliert Straßen, fremden Grundstücken und Wildtieren auszusetzen.",
+        "Ein Mikrochip ist kein GPS-Sender. Erst die zusätzliche Registrierung mit aktuellen Kontaktdaten macht die Nummer einem Fundtier zuordenbar.",
+        "Kastration ist vor unkontrolliertem Freigang unverzichtbar; örtliche oder landesweite Katzenschutzverordnungen können sie sowie Kennzeichnung und Registrierung vorschreiben.",
+        "Eine zweite Katze ist nur dann Sozialkontakt, wenn die Tiere zueinander passen und ausreichend getrennte Ressourcen und Rückzugsmöglichkeiten haben."
+      ],
+      "citationGuardrails": [
+        "Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.",
+        "Alter, Gesundheit, Vorgeschichte, Sozialverhalten und Wohnumfeld können die passende Haltungsform verändern.",
+        "Impfung und Parasitenkontrolle werden nach individuellem Risiko tierärztlich festgelegt; die Seite ersetzt keinen Behandlungsplan.",
+        "Katzenschutzverordnungen unterscheiden sich örtlich und können sich ändern. Maßgeblich sind die aktuellen Angaben des zuständigen Ordnungs- oder Veterinäramts.",
+        "Bei Unsauberkeit, Rückzug, Aggression, Gewichtsveränderung, Schmerzen oder anderen Verhaltensänderungen ist eine tierärztliche Abklärung nötig."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutzgesetz § 2: Anforderungen an die Haltung",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 13b: Schutz freilebender Katzen",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__13b.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Katzenhaltung",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/"
+        },
+        {
+          "label": "FelineVMA: Bedürfnisse von Wohnungskatzen, Positionspapier 2025",
+          "url": "https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/"
+        },
+        {
+          "label": "Wissenschaftliche Übersicht: Risiken und Nutzen unkontrollierten Freigangs",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070728/"
+        },
+        {
+          "label": "Scientific Reports: GPS-Studie zur Raumnutzung von 92 Freigängerkatzen",
+          "url": "https://www.nature.com/articles/s41598-022-09694-9"
+        },
+        {
+          "label": "PubMed: Jagdverhalten von 5.048 Katzen in Frankreich",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38003125/"
+        },
+        {
+          "label": "Frontiers in Veterinary Science: kontrollierter Außenbereich und Katzenwohl",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7829302/"
+        },
+        {
+          "label": "ESCCAP Deutschland: Entwurmung und Kotuntersuchung bei Katzen",
+          "url": "https://www.esccap.de/parasiten/wuermer/wie-oft-katzen-entwurmen/"
+        },
+        {
+          "label": "WSAVA: Impfempfehlungen für Hunde und Katzen 2024",
+          "url": "https://wsava.org/wp-content/uploads/2024/04/WSAVA-Vaccination-guidelines-2024.pdf"
+        },
+        {
+          "label": "TASSO: Kennzeichnung und Registrierung von Wohnungskatzen",
+          "url": "https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-katze/kennzeichnung-und-registrierung-wohnungskatzen"
+        },
+        {
+          "label": "Schleswig-Holstein: landesweite Katzenschutzverordnung ab Juli 2026",
+          "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/IX/_startseite/Artikel2026/II/260625_katzenschutzVO/260625_katzenschutzvo"
+        }
+      ],
       "social": {
-        "title": "Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe)",
-        "description": "Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.",
+        "title": "Welche Haltung schützt die Katze wirklich?",
+        "description": "Verkehr, Krankheiten, Jagd, Wohnungsgestaltung und gesicherter Außenraum: die Konsequenzen jeder Haltungsform im Detail.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-wohnungshaltung.png",
         "imageAlt": "Katze sitzt auf der oberen Ebene eines Kratzbaums.",
         "imageWidth": 1200,

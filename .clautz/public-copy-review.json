@@ -2,14 +2,14 @@
   "version": 1,
   "status": "approved",
   "project": "wahre-haustierliebe",
-  "surfaceHash": "d183e0dae65c905fb9e0119786ede3becd2bb14af53d78087c8d669dff07190c",
+  "surfaceHash": "69592ee05d33672c98c7b98939809e0e1ab8d12e997d7b7caef4e75a8b8f29b6",
   "briefHash": "2dfb70d433f783c89deeb85642851b96a89d5cb6b7f43a9974ac14ddf8dac8a5",
   "pageCount": 71,
-  "reviewedAt": "2026-08-03T14:19:20.518Z",
+  "reviewedAt": "2026-08-06T11:27:36.514Z",
   "reviewer": {
     "source": "codex_cli",
     "model": "default",
     "independentContext": true,
-    "batchCount": 10
+    "batchCount": 11
   }
 }

@@ -294,7 +294,7 @@ const topicPages = [
   ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.'],
   ['hunde-entscheidung', 'hunde', 'hunde/entscheidung', 'Bevor ein Hund einzieht', 'Die wichtigsten Fragen, bevor aus dem Wunsch nach einem Hund echte Verantwortung wird.', 'Entscheidung vor der Hundeadoption oder Anschaffung prüfen.'],
   ['katzen-sozialverhalten', 'katzen', 'katzen/sozialverhalten', 'Katzen sind keine einfachen Einzelgänger', 'Warum Katzen zwar allein jagen, aber trotzdem Sozialkontakt, Struktur und ein passendes Revier brauchen.', 'Sozialverhalten von Katzen verstehen.'],
-  ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnungshaltung bei Katzen', 'Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.', 'Wohnungshaltung für Katzen artgerechter gestalten.'],
+  ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnung oder Freigang bei Katzen', 'Wohnung, gesicherter Außenbereich oder unkontrollierter Freigang: Risiken, Bedürfnisse, Zahlen, Vorsorge und Entscheidungshilfe im Detail.', 'Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.', { priority: '0.82', lastmod: '2026-08-06' }],
   ['katzen-kastration', 'katzen', 'katzen/kastration', 'Kastration bei Katzen', 'Warum Kastration bei Katzen praktischer Tierschutz ist und ungewolltes Leid verhindert.', 'Kastration bei Katzen verstehen.'],
   ['katzen-stilles-leiden', 'katzen', 'katzen/stilles-leiden', 'Stilles Leiden bei Katzen erkennen', 'Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.', 'Warnsignale bei Katzen erkennen.'],
   ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was Katzen wirklich kosten', 'Futter, Streu, Tierarzt, Rücklagen und Alltag: Katzen sind keine günstigen Nebenbei-Tiere.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.'],
@@ -369,6 +369,14 @@ const faqByPage = {
   ],
   katzen: [
     ['Warum sollte ich meine Katze kastrieren lassen?', 'Kastration schützt vor Stress, hormonbedingten Erkrankungen und unkontrollierter Vermehrung. Besonders bei Freigängern ist sie praktischer Tierschutz.'],
+  ],
+  'katzen-wohnungshaltung': [
+    ['Ist Freigang für Katzen automatisch besser als Wohnungshaltung?', 'Nein. Unkontrollierter Freigang ermöglicht Bewegung und selbstständige Erkundung, bringt aber Verkehr, Verletzungen, Infektionen, Parasiten, Verschwinden und Jagd auf Wildtiere mit sich. Eine gut gestaltete Wohnung oder ein gesicherter Außenbereich kann für viele Katzen die verantwortungsvollere Lösung sein.'],
+    ['Ist eine Wohnung automatisch sicher und tiergerecht?', 'Nein. Sie schützt vor vielen Gefahren draußen, kann aber bei fehlender Struktur, Bewegung, Rückzug und Beschäftigung zu Frust, Übergewicht, Konflikten und Stress führen. Aus Wohnraum muss ein vollständiges Katzenrevier werden.'],
+    ['Braucht jede Wohnungskatze zwingend eine zweite Katze?', 'Nein. Viele Katzen profitieren von einem passenden Sozialpartner, manche erwachsenen Tiere möchten nicht mit einer fremden Katze zusammenleben. Entscheidend sind Vorgeschichte, Sozialisation, Charakter, Platz und eine langsame Zusammenführung.'],
+    ['Reicht ein Mikrochip aus, wenn meine Katze Freigang hat?', 'Nein. Der Chip enthält nur eine Identifikationsnummer und ist kein Ortungsgerät. Die Nummer muss zusätzlich mit aktuellen Kontaktdaten in einem Haustierregister registriert sein.'],
+    ['Kann eine frühere Freigängerkatze dauerhaft in der Wohnung leben?', 'Das kann im Einzelfall gelingen, ist aber nicht automatisch zumutbar. Vorgeschichte, Verhalten, Gesundheit, Wohnraum und gesicherter Außenraum müssen vor der Vermittlung geprüft werden. Eine abrupte dauerhafte Beschränkung kann erheblichen Frust auslösen.'],
+    ['Wann sollte eine Katze keinen unkontrollierten Freigang bekommen?', 'Bei starkem Verkehr, ungeklärter Rechtslage, fehlender Kastration oder Registrierung, hohem medizinischem Risiko und wenn die Katze sich draußen nicht sicher orientieren kann. Auch empfindliche Wildtierbereiche gehören in die Abwägung.'],
   ],
   'wildkatzenbaby-gefunden': [
     ['Soll ich ein scheinbar verlassenes Wildkatzenbaby mitnehmen?', 'Nein. Abstand halten, Fundort merken, nach einigen Stunden aus der Ferne prüfen und fachkundige Stellen kontaktieren.'],
@@ -503,6 +511,37 @@ const evidenceByPage = {
     guardrails: [
       'Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.',
       'Keine Ferndiagnose bei Verhaltensänderungen.',
+    ],
+  },
+  'katzen-wohnungshaltung': {
+    facts: [
+      'Unkontrollierter Freigang erweitert den Bewegungs- und Erkundungsraum, erhöht aber das Risiko für Verkehrsunfälle, Verletzungen, Infektionen, Parasiten und Verschwinden.',
+      'Reine Wohnungshaltung schützt vor vielen äußeren Gefahren, verlangt aber ein strukturiertes Revier mit Höhe, Rückzug, getrennten Ressourcen, täglichem Jagdspiel und kontrollierter Fütterung.',
+      'Gesicherte Balkone, Gehege oder Gärten können Außenreize ermöglichen, ohne die Katze unkontrolliert Straßen, fremden Grundstücken und Wildtieren auszusetzen.',
+      'Ein Mikrochip ist kein GPS-Sender. Erst die zusätzliche Registrierung mit aktuellen Kontaktdaten macht die Nummer einem Fundtier zuordenbar.',
+      'Kastration ist vor unkontrolliertem Freigang unverzichtbar; örtliche oder landesweite Katzenschutzverordnungen können sie sowie Kennzeichnung und Registrierung vorschreiben.',
+      'Eine zweite Katze ist nur dann Sozialkontakt, wenn die Tiere zueinander passen und ausreichend getrennte Ressourcen und Rückzugsmöglichkeiten haben.',
+    ],
+    sources: [
+      ['Tierschutzgesetz § 2: Anforderungen an die Haltung', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['Tierschutzgesetz § 13b: Schutz freilebender Katzen', 'https://www.gesetze-im-internet.de/tierschg/__13b.html'],
+      ['Deutscher Tierschutzbund: Katzenhaltung', 'https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/'],
+      ['FelineVMA: Bedürfnisse von Wohnungskatzen, Positionspapier 2025', 'https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/'],
+      ['Wissenschaftliche Übersicht: Risiken und Nutzen unkontrollierten Freigangs', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7070728/'],
+      ['Scientific Reports: GPS-Studie zur Raumnutzung von 92 Freigängerkatzen', 'https://www.nature.com/articles/s41598-022-09694-9'],
+      ['PubMed: Jagdverhalten von 5.048 Katzen in Frankreich', 'https://pubmed.ncbi.nlm.nih.gov/38003125/'],
+      ['Frontiers in Veterinary Science: kontrollierter Außenbereich und Katzenwohl', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7829302/'],
+      ['ESCCAP Deutschland: Entwurmung und Kotuntersuchung bei Katzen', 'https://www.esccap.de/parasiten/wuermer/wie-oft-katzen-entwurmen/'],
+      ['WSAVA: Impfempfehlungen für Hunde und Katzen 2024', 'https://wsava.org/wp-content/uploads/2024/04/WSAVA-Vaccination-guidelines-2024.pdf'],
+      ['TASSO: Kennzeichnung und Registrierung von Wohnungskatzen', 'https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-katze/kennzeichnung-und-registrierung-wohnungskatzen'],
+      ['Schleswig-Holstein: landesweite Katzenschutzverordnung ab Juli 2026', 'https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/IX/_startseite/Artikel2026/II/260625_katzenschutzVO/260625_katzenschutzvo'],
+    ],
+    guardrails: [
+      'Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.',
+      'Alter, Gesundheit, Vorgeschichte, Sozialverhalten und Wohnumfeld können die passende Haltungsform verändern.',
+      'Impfung und Parasitenkontrolle werden nach individuellem Risiko tierärztlich festgelegt; die Seite ersetzt keinen Behandlungsplan.',
+      'Katzenschutzverordnungen unterscheiden sich örtlich und können sich ändern. Maßgeblich sind die aktuellen Angaben des zuständigen Ordnungs- oder Veterinäramts.',
+      'Bei Unsauberkeit, Rückzug, Aggression, Gewichtsveränderung, Schmerzen oder anderen Verhaltensänderungen ist eine tierärztliche Abklärung nötig.',
     ],
   },
   voegel: {
@@ -1442,6 +1481,11 @@ const socialCopyByPage = {
     title: 'Katzen halten: Wohnung, Freigang, Kastration',
     description: 'Wie Katzen artgerechter leben: Struktur, Sozialkontakt, sichere Freiräume, Kastration und leise Warnsignale.',
   },
+  'katzen-wohnungshaltung': {
+    eyebrow: 'Wohnung oder Freigang',
+    title: 'Welche Haltung schützt die Katze wirklich?',
+    description: 'Verkehr, Krankheiten, Jagd, Wohnungsgestaltung und gesicherter Außenraum: die Konsequenzen jeder Haltungsform im Detail.',
+  },
   voegel: {
     eyebrow: 'Vogelhaltung verstehen',
     title: 'Vögel brauchen Schwarm, Flugraum und Licht',
@@ -1566,6 +1610,7 @@ const keywordByPage = {
   'hund-im-buero': ['Hund im Büro', 'Bürohund', 'Kollege Hund', 'Hund am Arbeitsplatz', 'Hundehaltung'],
   'hunde-stadtfest-rummel': ['Hund Stadtfest', 'Hund Rummel', 'Hund Weihnachtsmarkt', 'Hund Veranstaltung', 'Stresszeichen Hund'],
   katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
+  'katzen-wohnungshaltung': ['Wohnungskatze', 'Freigänger Katze', 'gesicherter Freigang', 'Katzenhaltung', 'Katzenschutzverordnung', 'Katzenrevier'],
   voegel: ['Vögel halten', 'Wellensittiche', 'Schwarmhaltung', 'Freiflug', 'UV-Licht'],
   kleintiere: ['Kleintiere halten', 'Kaninchen', 'Meerschweinchen', 'Hamster', 'Ratten'],
   exoten: ['Exoten halten', 'Terrarium', 'UV-B', 'Reptilien', 'Meldepflicht'],
@@ -2133,7 +2178,10 @@ function extractTopicSection(source, page) {
   const end = nextHeading === -1 ? fallbackEnd : nextHeading;
   if (end === -1 || end <= start) throw new Error(`Could not determine topic end for ${page.id}`);
 
-  const topicHtml = parentSection.slice(start, end).trim();
+  const topicHtml = parentSection
+    .slice(start, end)
+    .trim()
+    .replace(`id="${page.sourceAnchor}"`, '');
   const parentLabel = parent.title.split(':')[0].replace(' halten', '');
   return `<section id="${page.id}" class="page">
     <div class="hero">
@@ -2146,7 +2194,7 @@ function extractTopicSection(source, page) {
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="#${parent.id}" onclick="navigateTo('${parent.id}');return false">Zurück zur Übersicht: ${escapeHtml(parentLabel)}</a></p>
-        <div id="${page.sourceAnchor}" class="topic-page-content">
+        <div class="topic-page-content">
 ${topicHtml}
         </div>
 ${buildTopicSiblingNav(page)}

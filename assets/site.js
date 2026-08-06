@@ -212,9 +212,9 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "katzen-wohnungshaltung",
-    "title": "Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe)",
-    "description": "Wohnungshaltung ist ein Kompromiss und braucht Raum, Abwechslung, Rückzug und Klettermöglichkeiten.",
-    "terms": "Wohnungshaltung für Katzen artgerechter gestalten. katzen/wohnungshaltung katzen wohnungshaltung"
+    "title": "Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe)",
+    "description": "Wohnung, gesicherter Außenbereich oder unkontrollierter Freigang: Risiken, Bedürfnisse, Zahlen, Vorsorge und Entscheidungshilfe im Detail.",
+    "terms": "Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen. katzen/wohnungshaltung katzen wohnungshaltung"
   },
   {
     "id": "katzen-kastration",

@@ -38,7 +38,7 @@
 - Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/gesundheit/index.html
 - Bevor ein Hund einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/entscheidung/index.html
 - Katzen sind keine einfachen Einzelgänger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html
-- Wohnungshaltung bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html
+- Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html
 - Kastration bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/kastration/index.html
 - Stilles Leiden bei Katzen erkennen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/stilles-leiden/index.html
 - Was Katzen wirklich kosten - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/kosten/index.html
@@ -112,7 +112,7 @@
 - https://wahre-haustierliebe.de/hunde/gesundheit/index.html - Gesundheitsrisiken bei Hunden erkennen und vorbeugen.
 - https://wahre-haustierliebe.de/hunde/entscheidung/index.html - Entscheidung vor der Hundeadoption oder Anschaffung prüfen.
 - https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html - Sozialverhalten von Katzen verstehen.
-- https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html - Wohnungshaltung für Katzen artgerechter gestalten.
+- https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html - Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.
 - https://wahre-haustierliebe.de/katzen/kastration/index.html - Kastration bei Katzen verstehen.
 - https://wahre-haustierliebe.de/katzen/stilles-leiden/index.html - Warnsignale bei Katzen erkennen.
 - https://wahre-haustierliebe.de/katzen/kosten/index.html - Katzenkosten vor der Anschaffung realistisch einschätzen.
@@ -308,6 +308,35 @@ Sources:
 - TASSO e. V.: Körpersprache beim Hund: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund
 - ASPCApro: Canine Body Language Tips: https://www.aspcapro.org/resource/canine-body-language-tips
 - VCA: Signs Your Dog is Stressed and How to Relieve It: https://vcahospitals.com/know-your-pet/signs-your-dog-is-stressed-and-how-to-relieve-it
+
+### Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html
+Facts:
+- Unkontrollierter Freigang erweitert den Bewegungs- und Erkundungsraum, erhöht aber das Risiko für Verkehrsunfälle, Verletzungen, Infektionen, Parasiten und Verschwinden.
+- Reine Wohnungshaltung schützt vor vielen äußeren Gefahren, verlangt aber ein strukturiertes Revier mit Höhe, Rückzug, getrennten Ressourcen, täglichem Jagdspiel und kontrollierter Fütterung.
+- Gesicherte Balkone, Gehege oder Gärten können Außenreize ermöglichen, ohne die Katze unkontrolliert Straßen, fremden Grundstücken und Wildtieren auszusetzen.
+- Ein Mikrochip ist kein GPS-Sender. Erst die zusätzliche Registrierung mit aktuellen Kontaktdaten macht die Nummer einem Fundtier zuordenbar.
+- Kastration ist vor unkontrolliertem Freigang unverzichtbar; örtliche oder landesweite Katzenschutzverordnungen können sie sowie Kennzeichnung und Registrierung vorschreiben.
+- Eine zweite Katze ist nur dann Sozialkontakt, wenn die Tiere zueinander passen und ausreichend getrennte Ressourcen und Rückzugsmöglichkeiten haben.
+Important boundaries:
+- Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.
+- Alter, Gesundheit, Vorgeschichte, Sozialverhalten und Wohnumfeld können die passende Haltungsform verändern.
+- Impfung und Parasitenkontrolle werden nach individuellem Risiko tierärztlich festgelegt; die Seite ersetzt keinen Behandlungsplan.
+- Katzenschutzverordnungen unterscheiden sich örtlich und können sich ändern. Maßgeblich sind die aktuellen Angaben des zuständigen Ordnungs- oder Veterinäramts.
+- Bei Unsauberkeit, Rückzug, Aggression, Gewichtsveränderung, Schmerzen oder anderen Verhaltensänderungen ist eine tierärztliche Abklärung nötig.
+Sources:
+- Tierschutzgesetz § 2: Anforderungen an die Haltung: https://www.gesetze-im-internet.de/tierschg/__2.html
+- Tierschutzgesetz § 13b: Schutz freilebender Katzen: https://www.gesetze-im-internet.de/tierschg/__13b.html
+- Deutscher Tierschutzbund: Katzenhaltung: https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/
+- FelineVMA: Bedürfnisse von Wohnungskatzen, Positionspapier 2025: https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/
+- Wissenschaftliche Übersicht: Risiken und Nutzen unkontrollierten Freigangs: https://pmc.ncbi.nlm.nih.gov/articles/PMC7070728/
+- Scientific Reports: GPS-Studie zur Raumnutzung von 92 Freigängerkatzen: https://www.nature.com/articles/s41598-022-09694-9
+- PubMed: Jagdverhalten von 5.048 Katzen in Frankreich: https://pubmed.ncbi.nlm.nih.gov/38003125/
+- Frontiers in Veterinary Science: kontrollierter Außenbereich und Katzenwohl: https://pmc.ncbi.nlm.nih.gov/articles/PMC7829302/
+- ESCCAP Deutschland: Entwurmung und Kotuntersuchung bei Katzen: https://www.esccap.de/parasiten/wuermer/wie-oft-katzen-entwurmen/
+- WSAVA: Impfempfehlungen für Hunde und Katzen 2024: https://wsava.org/wp-content/uploads/2024/04/WSAVA-Vaccination-guidelines-2024.pdf
+- TASSO: Kennzeichnung und Registrierung von Wohnungskatzen: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-katze/kennzeichnung-und-registrierung-wohnungskatzen
+- Schleswig-Holstein: landesweite Katzenschutzverordnung ab Juli 2026: https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/IX/_startseite/Artikel2026/II/260625_katzenschutzVO/260625_katzenschutzvo
 
 ### Goldhamster halten - Wa(h)re Haustier(liebe)
 URL: https://wahre-haustierliebe.de/kleintiere/hamster/index.html
