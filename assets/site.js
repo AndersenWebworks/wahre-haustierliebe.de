@@ -213,7 +213,7 @@ var staticSiteSearchIndex = [
   {
     "id": "katzen-wohnungshaltung",
     "title": "Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe)",
-    "description": "Wohnung, gesicherter Außenbereich oder unkontrollierter Freigang: Risiken, Bedürfnisse, Zahlen, Vorsorge und Entscheidungshilfe im Detail.",
+    "description": "Wohnung, gesicherter Außenbereich oder Freigang: Risiken, vollständiges Wohnungsrevier, Umstellungen, Warnzeichen und Entscheidungshilfen.",
     "terms": "Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen. katzen/wohnungshaltung katzen wohnungshaltung"
   },
   {

@@ -806,7 +806,7 @@
       "id": "katzen-wohnungshaltung",
       "url": "https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html",
       "title": "Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe)",
-      "description": "Wohnung, gesicherter Außenbereich oder unkontrollierter Freigang: Risiken, Bedürfnisse, Zahlen, Vorsorge und Entscheidungshilfe im Detail.",
+      "description": "Wohnung, gesicherter Außenbereich oder Freigang: Risiken, vollständiges Wohnungsrevier, Umstellungen, Warnzeichen und Entscheidungshilfen.",
       "intent": "Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.",
       "keywords": [
         "Wohnungskatze",
@@ -822,7 +822,10 @@
         "Gesicherte Balkone, Gehege oder Gärten können Außenreize ermöglichen, ohne die Katze unkontrolliert Straßen, fremden Grundstücken und Wildtieren auszusetzen.",
         "Ein Mikrochip ist kein GPS-Sender. Erst die zusätzliche Registrierung mit aktuellen Kontaktdaten macht die Nummer einem Fundtier zuordenbar.",
         "Kastration ist vor unkontrolliertem Freigang unverzichtbar; örtliche oder landesweite Katzenschutzverordnungen können sie sowie Kennzeichnung und Registrierung vorschreiben.",
-        "Eine zweite Katze ist nur dann Sozialkontakt, wenn die Tiere zueinander passen und ausreichend getrennte Ressourcen und Rückzugsmöglichkeiten haben."
+        "Eine zweite Katze ist nur dann Sozialkontakt, wenn die Tiere zueinander passen und ausreichend getrennte Ressourcen und Rückzugsmöglichkeiten haben.",
+        "Ein vollständiges Wohnungsrevier braucht sichere Orte, getrennte Ressourcen, Jagd- und Spielmöglichkeiten, verlässlichen freiwilligen Sozialkontakt und vertraute Gerüche.",
+        "Die Haltungsform muss laufend anhand von Fressen, Trinken, Toilettennutzung, Körperzustand, Aktivität und Sozialverhalten überprüft werden.",
+        "Umzug, Adoption, Krankheit und der Wechsel zwischen Freigang und Wohnung verändern das Revier und brauchen eine vorbereitete, schrittweise Umstellung."
       ],
       "citationGuardrails": [
         "Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.",
@@ -847,6 +850,14 @@
         {
           "label": "FelineVMA: Bedürfnisse von Wohnungskatzen, Positionspapier 2025",
           "url": "https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/"
+        },
+        {
+          "label": "AAFP und ISFM: Leitlinien zu den fünf Umweltbedürfnissen von Katzen",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/"
+        },
+        {
+          "label": "FelineVMA: Positionspapier 2024 zu Innen- und Außenhaltung",
+          "url": "https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/"
         },
         {
           "label": "Wissenschaftliche Übersicht: Risiken und Nutzen unkontrollierten Freigangs",
@@ -877,13 +888,21 @@
           "url": "https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-katze/kennzeichnung-und-registrierung-wohnungskatzen"
         },
         {
+          "label": "Cats Protection: Umzug mit Katzen",
+          "url": "https://www.cats.org.uk/help-and-advice/home-and-environment/moving-home-with-your-cat"
+        },
+        {
+          "label": "Cats Protection: Wohnungskatzen und Anforderungen an die Innenhaltung",
+          "url": "https://www.cats.org.uk/help-and-advice/home-and-environment/indoor-cats"
+        },
+        {
           "label": "Schleswig-Holstein: landesweite Katzenschutzverordnung ab Juli 2026",
           "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/IX/_startseite/Artikel2026/II/260625_katzenschutzVO/260625_katzenschutzvo"
         }
       ],
       "social": {
         "title": "Welche Haltung schützt die Katze wirklich?",
-        "description": "Verkehr, Krankheiten, Jagd, Wohnungsgestaltung und gesicherter Außenraum: die Konsequenzen jeder Haltungsform im Detail.",
+        "description": "Risiken, vollständiges Wohnungsrevier, gesicherter Außenraum, Umstellungen und Warnzeichen: die Konsequenzen jeder Haltungsform im Detail.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-wohnungshaltung.png",
         "imageAlt": "Katze sitzt auf der oberen Ebene eines Kratzbaums.",
         "imageWidth": 1200,
