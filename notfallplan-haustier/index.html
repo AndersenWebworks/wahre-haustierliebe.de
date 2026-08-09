@@ -4149,6 +4149,37 @@
       margin-right: auto;
     }
 
+    .pain-signal-table {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .pain-signal-table th, .pain-signal-table td { padding: 0.9rem 1rem; vertical-align: top; text-align: left; border-bottom: 1px solid var(--border); }
+    .pain-signal-table th { background: var(--primary); color: var(--white); font-weight: 700; }
+    .pain-signal-table tr:last-child td { border-bottom: 0; }
+    .pain-signal-table tbody tr:nth-child(even) { background: var(--bg-alt); }
+    @media (max-width: 700px) {
+      .pain-signal-table, .pain-signal-table tbody, .pain-signal-table tr, .pain-signal-table td { display: block; width: 100%; }
+      .pain-signal-table { border: 0; box-shadow: none; background: transparent; }
+      .pain-signal-table thead { display: none; }
+      .pain-signal-table tbody { display: grid; gap: 0.85rem; }
+      .pain-signal-table tr { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
+      .pain-signal-table tbody tr:nth-child(even) { background: var(--white); }
+      .pain-signal-table td { border-bottom: 1px solid var(--border); padding: 0.72rem 0.85rem; }
+      .pain-signal-table td:last-child { border-bottom: 0; }
+      .pain-signal-table td:first-child { background: var(--primary-light); color: var(--primary-dark); font-weight: 800; }
+      .pain-signal-table td::before { display: block; margin-bottom: 0.2rem; color: var(--primary); font-size: 0.76rem; font-weight: 800; }
+      .pain-signal-table td:nth-child(1)::before { content: 'Beobachtung'; }
+      .pain-signal-table td:nth-child(2)::before { content: 'Was sie bedeuten kann'; }
+      .pain-signal-table td:nth-child(3)::before { content: 'Was jetzt sinnvoll ist'; }
+    }
+
     .topic-page-content > :first-child {
       margin-top: 0;
     }

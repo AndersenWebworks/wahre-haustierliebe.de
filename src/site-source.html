@@ -4125,6 +4125,37 @@
       margin-right: auto;
     }
 
+    .pain-signal-table {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .pain-signal-table th, .pain-signal-table td { padding: 0.9rem 1rem; vertical-align: top; text-align: left; border-bottom: 1px solid var(--border); }
+    .pain-signal-table th { background: var(--primary); color: var(--white); font-weight: 700; }
+    .pain-signal-table tr:last-child td { border-bottom: 0; }
+    .pain-signal-table tbody tr:nth-child(even) { background: var(--bg-alt); }
+    @media (max-width: 700px) {
+      .pain-signal-table, .pain-signal-table tbody, .pain-signal-table tr, .pain-signal-table td { display: block; width: 100%; }
+      .pain-signal-table { border: 0; box-shadow: none; background: transparent; }
+      .pain-signal-table thead { display: none; }
+      .pain-signal-table tbody { display: grid; gap: 0.85rem; }
+      .pain-signal-table tr { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
+      .pain-signal-table tbody tr:nth-child(even) { background: var(--white); }
+      .pain-signal-table td { border-bottom: 1px solid var(--border); padding: 0.72rem 0.85rem; }
+      .pain-signal-table td:last-child { border-bottom: 0; }
+      .pain-signal-table td:first-child { background: var(--primary-light); color: var(--primary-dark); font-weight: 800; }
+      .pain-signal-table td::before { display: block; margin-bottom: 0.2rem; color: var(--primary); font-size: 0.76rem; font-weight: 800; }
+      .pain-signal-table td:nth-child(1)::before { content: 'Beobachtung'; }
+      .pain-signal-table td:nth-child(2)::before { content: 'Was sie bedeuten kann'; }
+      .pain-signal-table td:nth-child(3)::before { content: 'Was jetzt sinnvoll ist'; }
+    }
+
     .topic-page-content > :first-child {
       margin-top: 0;
     }
@@ -6400,8 +6431,28 @@
         <p>In einigen Landkreisen gilt bereits eine Kastrations- und Kennzeichnungspflicht für Freigängerkatzen. Im Landkreis Mecklenburgische Seenplatte etwa in Röbel, Malchow und Waren. Im Landkreis Ludwigslust-Parchim hat der Kreistag eine Kastrationspflicht bisher abgelehnt – zum Nachteil der Streunerkatzen vor Ort.</p>
 
         <h2 id="katzen-stilles-leiden">Stilles Leiden erkennen</h2>
-        <p>Katzen sind Beutetiere. Schwäche zu zeigen hieße in der Natur: zum Opfer zu werden. Deshalb verbergen Katzen Schmerzen und Unwohlsein, bis es nicht mehr geht. Wenn eine Katze sichtbar krank wirkt, ist sie meistens schon länger krank.</p>
-        <p>Warnsignale, die auf Stress oder Krankheit hindeuten können:</p>
+        <p>Katzen zeigen Beschwerden oft leiser als wir erwarten. Sie können Schmerzen, Angst und Unwohlsein nicht erklären. Deshalb ist nicht ein einzelnes Geräusch entscheidend, sondern eine Veränderung gegenüber ihrem gewöhnlichen Verhalten.</p>
+
+        <h3>Eine schnurrende Katze ist nicht automatisch eine zufriedene Katze</h3>
+        <p>Schnurren kann bedeuten: „Hier fühle ich mich sicher.“ Viele Katzen schnurren beim Kuscheln, Dösen oder Fressen. Es kann aber auch in Situationen auftreten, in denen eine Katze angespannt, ängstlich oder krank ist. Schnurren ist deshalb kein Gesundheitszeugnis. Es beantwortet nur eine Frage nicht: <em>Wie geht es dieser Katze insgesamt?</em></p>
+        <p>Besonders wichtig wird das, wenn das Schnurren neu, ungewöhnlich oder mit anderen Veränderungen verbunden ist. Eine Katze, die schnurrt und zugleich nicht frisst, sich versteckt, steif läuft, Berührung meidet oder anders atmet, sollte nicht mit „Sie schnurrt doch“ beruhigt werden. Das Schnurren hebt die anderen Signale nicht auf.</p>
+
+        <h3>Worauf es stattdessen ankommt</h3>
+        <p>Schau auf das Gesamtbild und vergleiche es mit dem Alltag dieser einzelnen Katze. Manche Katzen sind von Natur aus still, andere gesprächig. Entscheidend ist, was neu ist, plötzlich anders wird oder sich über Tage verstärkt.</p>
+        <table class="pain-signal-table">
+          <thead><tr><th>Beobachtung</th><th>Was sie bedeuten kann</th><th>Was jetzt sinnvoll ist</th></tr></thead>
+          <tbody>
+            <tr><td>Schnurren beim entspannten Liegen, weicher Körper, normales Fressen, Putzen und Kontaktverhalten</td><td>Das passt eher zu Wohlbefinden. Allein beweist es aber nichts.</td><td>Den normalen Alltag weiter im Blick behalten.</td></tr>
+            <tr><td>Schnurren plus Rückzug, gespannter Körper oder Berührungsabwehr</td><td>Die Katze kann sich beruhigen wollen oder Schmerzen haben. Auch Angst und Stress kommen infrage.</td><td>Keine schmerzhaft wirkende Stelle testen oder massieren. Verhalten notieren und zeitnah tierärztlich abklären lassen.</td></tr>
+            <tr><td>Weniger Springen, Treppen meiden, steifes Aufstehen oder Probleme am Katzenklo</td><td>Das kann auf Gelenk- oder Rückenschmerzen hinweisen. Gerade Arthrose wird bei Katzen leicht als „älter werden“ übersehen.</td><td>Ein kurzes Video aus dem Alltag kann der Praxis bei der Einschätzung helfen. Termin vereinbaren.</td></tr>
+            <tr><td>Plötzliche Gereiztheit, Beißen, Fauchen oder Weglaufen bei vertrauter Berührung</td><td>Eine sonst freundliche Katze kann Berührung meiden, weil sie eine schmerzhafte Bewegung oder Körperstelle erwartet.</td><td>Abstand respektieren und die Veränderung tierärztlich abklären lassen.</td></tr>
+            <tr><td>Still sitzen, gekrümmte Haltung, halb geschlossene Augen, wenig Bewegung</td><td>Das kann Erschöpfung, Angst oder Schmerz bedeuten. Aus der Ferne ist das nicht sicher zu unterscheiden.</td><td>Zusammen mit Fressen, Trinken, Atmung, Ausscheidungen und Reaktion auf Ansprache beurteilen. Bei plötzlicher oder deutlicher Veränderung noch am selben Tag anrufen.</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Warnsignale: Was die Veränderung sagen kann</h3>
+        <p>Keines dieser Zeichen nennt eine Diagnose. Es sagt aber: Hier lohnt es sich, genauer hinzusehen. Katzen zeigen Schmerz und Krankheit häufig über ihren Alltag, nicht über ein eindeutiges Jammern.</p>
+        <p>Warnsignale, die auf Stress, Schmerzen oder Krankheit hindeuten können:</p>
         <ul>
           <li>Verändertes Fressverhalten (mehr oder weniger als gewöhnlich)</li>
           <li>Unsauberkeit (außerhalb des Katzenklos urinieren)</li>
@@ -6411,7 +6462,22 @@
           <li>Gewichtsveränderungen</li>
           <li>Verstärktes Miauen oder andere Lautäußerungen</li>
         </ul>
-        <p>Im Zweifel gilt: Lieber einmal zu oft zum Tierarzt als einmal zu wenig. Auf der <a href="#notfall" onclick="navigateTo('notfall');return false">Notfall-Seite</a> findest du die wichtigsten Warnsignale und Erste-Hilfe-Maßnahmen.</p>
+        <h3>Das solltest du zusätzlich prüfen</h3>
+        <ul>
+          <li><strong>Fressen und Trinken:</strong> Frisst die Katze deutlich weniger, lässt sie Lieblingsfutter stehen oder wirkt sie beim Fressen unsicher? Bei Katzen ist Futterverweigerung nicht etwas, das man lange beobachten sollte.</li>
+          <li><strong>Katzenklo:</strong> Häufiges Aufsuchen ohne Urin, Pressen, Schmerzlaute oder Blut sind kein Erziehungsproblem. Besonders bei Katern kann ein Harnröhrenverschluss lebensbedrohlich werden.</li>
+          <li><strong>Bewegung und Körperpflege:</strong> Wenn eine Katze nicht mehr auf ihren Lieblingsplatz springt, Treppen meidet oder sich am Rücken und Hinterteil schlechter putzt, können Schmerzen eine Rolle spielen.</li>
+          <li><strong>Atmung:</strong> Hecheln, Atmen mit offenem Maul, deutliche Bauchatmung, blasse oder bläuliche Schleimhäute sind Notfallzeichen. Dann nicht abwarten, sondern sofort eine Tierarztpraxis oder Tierklinik kontaktieren.</li>
+          <li><strong>Gesicht und Haltung:</strong> Zusammengekniffene Augen, seitlich oder flach angelegte Ohren, abgesenkte Schnurrhaare, eine gekrümmte Haltung oder völlige Bewegungslosigkeit können im Zusammenhang mit anderen Veränderungen wichtig sein.</li>
+        </ul>
+
+        <h3>So hilfst du der Tierarztpraxis wirklich</h3>
+        <p>Du musst nicht selbst herausfinden, welche Krankheit dahintersteckt. Hilfreich ist eine genaue Beobachtung: Seit wann ist etwas anders? Frisst, trinkt, uriniert und kotet die Katze normal? Springt sie anders, schläft sie mehr, versteckt sie sich oder reagiert sie auf Berührung anders? Ein kurzes Video vom Laufen, Springen, Atmen oder Verhalten am Katzenklo ist oft aussagekräftiger als eine Erinnerung im Behandlungszimmer.</p>
+        <p>Gib einer Katze niemals Schmerzmittel für Menschen. Viele Wirkstoffe, die für Menschen selbstverständlich sind, können für Katzen gefährlich sein. Die passende Untersuchung und Behandlung gehört in tierärztliche Hände.</p>
+        <p>Bei Atemnot, offenem Maul beim Atmen, Krämpfen, Kollaps, Verdacht auf Vergiftung, starken Schmerzen oder erfolglosem Pressen auf dem Katzenklo zählt Zeit. Die <a href="#notfall" onclick="navigateTo('notfall');return false">Notfall-Seite</a> hilft bei der ersten Einordnung, ersetzt aber nicht den Anruf in der Praxis.</p>
+
+        <h3>Weiterlesen und Quellen</h3>
+        <p>Die Einordnung von Schmerz bei Katzen stützt sich nicht auf ein einzelnes Verhalten, sondern auf Haltung, Aktivität, Gesichtsausdruck, Fressverhalten und Reaktion auf Kontakt. Die <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10845386/" target="_blank" rel="noopener noreferrer">ISFM-Leitlinie zur Erkennung und Behandlung akuter Schmerzen bei Katzen</a> beschreibt diesen Gesamtblick. Konkrete Hinweise auf Gelenkschmerzen und schleichende Bewegungsveränderungen erläutert das <a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/your-cat-slowing-down" target="_blank" rel="noopener noreferrer">Cornell Feline Health Center</a>. Für die tierärztliche Schmerzbeurteilung ist außerdem die <a href="https://www.aaha.org/resources/2022-aaha-pain-management-guidelines-for-dogs-and-cats/acute-and-perioperative-assessment-of-pain-in-cats/" target="_blank" rel="noopener noreferrer">AAHA-Schmerzleitlinie</a> eine wichtige Grundlage.</p>
 
         <h2 id="katzen-kosten">Laufende und unerwartete Kosten</h2>
         <table class="cost-table">
@@ -6597,7 +6663,7 @@
         <p><strong>Artgenossen:</strong> Kaninchen sind Gruppentiere. Einzelhaltung verursacht Einsamkeit, Stress und Verhaltensstörungen. Mindestens zwei Tiere – idealerweise ein kastrierter Rüde und eine Häsin.</p>
         <p><strong>Ernährung:</strong> Hauptfutter ist Heu – nicht Trockenfutter aus der Zoohandlung. Dazu täglich frisches Grünfutter (Gräser, Kräuter, Gemüse). Trockenfutter-Pellets sind oft zu energiereich und verursachen Zahnprobleme.</p>
         <p><strong>Zähne:</strong> Kaninchenzähne wachsen lebenslang. Falsches Futter führt zu Zahnfehlstellungen, die extrem schmerzhaft sind und teure tierärztliche Behandlung erfordern.</p>
-        <p><strong>Kastration:</strong> Rammler sollten für eine stabile gemischtgeschlechtliche Gruppenhaltung ohne Nachwuchs kastriert werden. Bei unkastrierten Häsinnen sind Gebärmuttererkrankungen häufig, und das Risiko für Tumoren steigt besonders nach dem dritten Lebensjahr. Eine feste Prozentzahl wie „60 Prozent aller Häsinnen“ ist wissenschaftlich nicht belastbar. Nutzen und Operationsrisiko gehören frühzeitig mit einer kaninchenerfahrenen Tierarztpraxis besprochen. Mehr dazu steht auf der Seite <a href="#kastration" onclick="navigateTo('kastration');return false">Kastration</a>.</p>
+        <p><strong>Kastration:</strong> Rammler sollten für eine stabile gemischtgeschlechtliche Gruppenhaltung ohne Nachwuchs kastriert werden. Bei unkastrierten Häsinnen sind Gebärmuttererkrankungen häufig, und das Risiko für Tumoren steigt mit dem Alter. Es gibt keinen einzelnen Prozentwert, der für jede Häsin zuverlässig vorhersagt, ob sie erkrankt. Nutzen und Operationsrisiko gehören frühzeitig mit einer kaninchenerfahrenen Tierarztpraxis besprochen. Mehr dazu steht auf der Seite <a href="#kastration" onclick="navigateTo('kastration');return false">Kastration</a>.</p>
 
         <h2 id="kleintiere-meerschweinchen">Meerschweinchen</h2>
         <p>Alles, was für Kaninchen gilt, gilt in ähnlicher Form für Meerschweinchen – mit einem entscheidenden Unterschied: <strong>Kaninchen und Meerschweinchen <a href="#wissen" onclick="navigateTo('wissen');return false">gehören nicht zusammen</a>.</strong> Sie sprechen verschiedene Körpersprachen, haben unterschiedliche Sozialstrukturen, und der Kaninchentritt kann ein Meerschweinchen ernsthaft verletzen.</p>

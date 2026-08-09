@@ -4149,6 +4149,37 @@
       margin-right: auto;
     }
 
+    .pain-signal-table {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .pain-signal-table th, .pain-signal-table td { padding: 0.9rem 1rem; vertical-align: top; text-align: left; border-bottom: 1px solid var(--border); }
+    .pain-signal-table th { background: var(--primary); color: var(--white); font-weight: 700; }
+    .pain-signal-table tr:last-child td { border-bottom: 0; }
+    .pain-signal-table tbody tr:nth-child(even) { background: var(--bg-alt); }
+    @media (max-width: 700px) {
+      .pain-signal-table, .pain-signal-table tbody, .pain-signal-table tr, .pain-signal-table td { display: block; width: 100%; }
+      .pain-signal-table { border: 0; box-shadow: none; background: transparent; }
+      .pain-signal-table thead { display: none; }
+      .pain-signal-table tbody { display: grid; gap: 0.85rem; }
+      .pain-signal-table tr { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
+      .pain-signal-table tbody tr:nth-child(even) { background: var(--white); }
+      .pain-signal-table td { border-bottom: 1px solid var(--border); padding: 0.72rem 0.85rem; }
+      .pain-signal-table td:last-child { border-bottom: 0; }
+      .pain-signal-table td:first-child { background: var(--primary-light); color: var(--primary-dark); font-weight: 800; }
+      .pain-signal-table td::before { display: block; margin-bottom: 0.2rem; color: var(--primary); font-size: 0.76rem; font-weight: 800; }
+      .pain-signal-table td:nth-child(1)::before { content: 'Beobachtung'; }
+      .pain-signal-table td:nth-child(2)::before { content: 'Was sie bedeuten kann'; }
+      .pain-signal-table td:nth-child(3)::before { content: 'Was jetzt sinnvoll ist'; }
+    }
+
     .topic-page-content > :first-child {
       margin-top: 0;
     }
@@ -5666,7 +5697,7 @@
         <p><strong>Artgenossen:</strong> Kaninchen sind Gruppentiere. Einzelhaltung verursacht Einsamkeit, Stress und <span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Verhaltensstörungen</span>. Mindestens zwei Tiere – idealerweise ein kastrierter Rüde und eine Häsin.</p>
         <p><strong>Ernährung:</strong> Hauptfutter ist Heu – nicht Trockenfutter aus der Zoohandlung. Dazu täglich frisches Grünfutter (Gräser, Kräuter, Gemüse). Trockenfutter-Pellets sind oft zu energiereich und verursachen Zahnprobleme.</p>
         <p><strong>Zähne:</strong> Kaninchenzähne wachsen lebenslang. Falsches Futter führt zu <span class="glossary-term" data-glossary-key="zahnfehlstellung" data-glossary-title="Zahnfehlstellung" data-glossary-text="Fehlstellung der Zähne, die Fressen, Atmung, Pflege oder Schmerzfreiheit beeinträchtigen kann." data-glossary-href="../../glossar/index.html#zahnfehlstellung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Zahnfehlstellungen</span>, die extrem schmerzhaft sind und teure tierärztliche Behandlung erfordern.</p>
-        <p><strong>Kastration:</strong> Rammler sollten für eine stabile gemischtgeschlechtliche Gruppenhaltung ohne Nachwuchs kastriert werden. Bei unkastrierten Häsinnen sind Gebärmuttererkrankungen häufig, und das Risiko für Tumoren steigt besonders nach dem dritten Lebensjahr. Eine feste Prozentzahl wie „60 Prozent aller Häsinnen“ ist wissenschaftlich nicht belastbar. Nutzen und Operationsrisiko gehören frühzeitig mit einer kaninchenerfahrenen Tierarztpraxis besprochen. Mehr dazu steht auf der Seite <a href="../../kastration/index.html">Kastration</a>.</p>
+        <p><strong>Kastration:</strong> Rammler sollten für eine stabile gemischtgeschlechtliche Gruppenhaltung ohne Nachwuchs kastriert werden. Bei unkastrierten Häsinnen sind Gebärmuttererkrankungen häufig, und das Risiko für Tumoren steigt mit dem Alter. Es gibt keinen einzelnen Prozentwert, der für jede Häsin zuverlässig vorhersagt, ob sie erkrankt. Nutzen und Operationsrisiko gehören frühzeitig mit einer kaninchenerfahrenen Tierarztpraxis besprochen. Mehr dazu steht auf der Seite <a href="../../kastration/index.html">Kastration</a>.</p>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
