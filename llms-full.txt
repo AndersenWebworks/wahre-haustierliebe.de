@@ -79,6 +79,7 @@
 - Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
 - Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
 - Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?: https://wahre-haustierliebe.de/tiere-und-urlaub/index.html
+- Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst: https://wahre-haustierliebe.de/notfallplan-haustier/index.html
 - Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind: https://wahre-haustierliebe.de/hitzefalle-auto/index.html
 - Vegane Tierernährung bei Katzen und Hunden: Taurin und Nährstoffrisiken: https://wahre-haustierliebe.de/ernaehrung-taurin/index.html
 - Realhaltung vs. vertretbare Haltung: Was Tiere wirklich brauchen: https://wahre-haustierliebe.de/realhaltung/index.html
@@ -153,6 +154,7 @@
 - https://wahre-haustierliebe.de/wissen/index.html - Tierhaltungsmythen und Homöopathie bei Tieren prüfen
 - https://wahre-haustierliebe.de/glossar/index.html - Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen
 - https://wahre-haustierliebe.de/tiere-und-urlaub/index.html - Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen
+- https://wahre-haustierliebe.de/notfallplan-haustier/index.html - Versorgung eines Haustiers bei plötzlichem Ausfall der Halterperson vorbereiten
 - https://wahre-haustierliebe.de/hitzefalle-auto/index.html - Sommerhitze und Hund im Auto einschätzen
 - https://wahre-haustierliebe.de/ernaehrung-taurin/index.html - Tierernährung, vegane Ernährung und Taurin verstehen
 - https://wahre-haustierliebe.de/realhaltung/index.html - Realistische Haltung und Kosten vor der Anschaffung prüfen
@@ -541,6 +543,23 @@ Sources:
 - Tierschutzgesetz § 18: https://www.gesetze-im-internet.de/tierschg/__18.html
 - SWR: Tierheime voll, mehr Haustiere ausgesetzt: https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html
 - Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025: https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen
+
+### Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst
+URL: https://wahre-haustierliebe.de/notfallplan-haustier/index.html
+Facts:
+- Wer ein Tier betreut oder zu betreuen hat, muss es angemessen ernähren, pflegen, verhaltensgerecht unterbringen und über die nötigen Kenntnisse und Fähigkeiten verfügen.
+- Eine Notfallkarte kann Rettungs- oder Hilfskräfte darauf aufmerksam machen, dass zu Hause Tiere versorgt werden müssen.
+- Ein belastbarer Plan braucht erreichbare Betreuungspersonen, Zugang, schriftliche Tierdaten, Medikamente, Vorräte, Transport und einen geklärten tierärztlichen Ablauf.
+- Kennzeichnung und Registrierung helfen, Halter und Tier wieder zusammenzuführen, falls sie in einer Notlage getrennt werden.
+Important boundaries:
+- Medikamente nur nach der aktuellen tierärztlichen Anweisung geben; Dosierung oder Anwendung nicht eigenmächtig ändern.
+- Eine private Checkliste ersetzt keine rechtliche Beratung und keine vorherige Abstimmung mit Tierarztpraxis, Betreuungsperson oder Tierpension.
+- Bei einem medizinischen Tiernotfall gelten die Hinweise der Tierarztpraxis oder des tierärztlichen Notdienstes.
+Sources:
+- Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
+- VIER PFOTEN: Haustiere in Katastrophen- und Notfällen schützen: https://www.vier-pfoten.de/unseregeschichten/presse/mai-2026/so-schuetzen-sie-ihr-haustier-in-katastrophen-und-notfaellen
+- FINDEFIX: Haustier registrieren: https://www.findefix.com/haustier-online-registrieren/
+- VIER PFOTEN: Hilfe bei Krankheit, Verletzung oder Krankenhausaufenthalt: https://www.vier-pfoten.de/unseregeschichten/ratgeber-haustiere/setzen-sie-ihr-haustier-nicht-aus
 
 ### Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind
 URL: https://wahre-haustierliebe.de/hitzefalle-auto/index.html

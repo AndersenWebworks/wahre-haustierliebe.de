@@ -211,6 +211,15 @@ const pages = [
     priority: '0.8',
   },
   {
+    id: 'notfallplan-haustier',
+    slug: 'notfallplan-haustier',
+    title: 'Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst',
+    description: 'Haustier-Notfallplan für Krankheit, Unfall oder Krankenhaus: Betreuung, Schlüssel, Futter, Medikamente, Tierarzt, Vollmacht, Kosten und Unterlagen vorbereiten.',
+    intent: 'Versorgung eines Haustiers bei plötzlichem Ausfall der Halterperson vorbereiten',
+    priority: '0.85',
+    lastmod: '2026-08-09',
+  },
+  {
     id: 'hitzefalle-auto',
     slug: 'hitzefalle-auto',
     title: 'Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind',
@@ -417,6 +426,12 @@ const faqByPage = {
     ['Sollte mein Tier mit in den Urlaub?', 'Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.'],
     ['Wie früh sollte ich Betreuung organisieren?', 'So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche.'],
     ['Darf man ein Tier aussetzen, wenn man keine Betreuung findet?', 'Nein. Ein Haustier auszusetzen oder zurückzulassen, um sich der Verantwortung zu entziehen, ist nach dem Tierschutzgesetz verboten.'],
+  ],
+  'notfallplan-haustier': [
+    ['Was gehört in einen Notfallplan fürs Haustier?', 'Mindestens zwei erreichbare Betreuungspersonen, Zugang zur Wohnung, Tier- und Gesundheitsdaten, Futter- und Medikamentenplan, Tierarztkontakte, Transportmöglichkeit, eine Kostenregelung und ein Plan für mehrere Tage.'],
+    ['Reicht es, einer vertrauten Person einen Schlüssel zu geben?', 'Nein. Die Person muss wissen, dass sie zuständig ist, das Tier und seine Bedürfnisse kennen, erreichbar sein und im Ernstfall auf eine aktuelle schriftliche Anleitung zugreifen können.'],
+    ['Wie erfahren Helfer, dass zu Hause ein Tier wartet?', 'Eine Notfallkarte im Portemonnaie kann auf Tiere in der Wohnung und erreichbare Kontaktpersonen hinweisen. Wer seine Tierhaltung an der Haustür kenntlich machen möchte, kann zusätzlich einen Notfallaufkleber nutzen.'],
+    ['Darf die Betreuungsperson mit meinem Tier zum Tierarzt?', 'Kläre mit der Tierarztpraxis vorab, welche Angaben oder schriftlichen Erklärungen sie im Notfall benötigt. Halte fest, wen die Betreuung kontaktieren soll, welche Kosten sie veranlassen darf und wie bezahlt wird.'],
   ],
 };
 
@@ -840,6 +855,25 @@ const evidenceByPage = {
       'Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.',
     ],
   },
+  'notfallplan-haustier': {
+    facts: [
+      'Wer ein Tier betreut oder zu betreuen hat, muss es angemessen ernähren, pflegen, verhaltensgerecht unterbringen und über die nötigen Kenntnisse und Fähigkeiten verfügen.',
+      'Eine Notfallkarte kann Rettungs- oder Hilfskräfte darauf aufmerksam machen, dass zu Hause Tiere versorgt werden müssen.',
+      'Ein belastbarer Plan braucht erreichbare Betreuungspersonen, Zugang, schriftliche Tierdaten, Medikamente, Vorräte, Transport und einen geklärten tierärztlichen Ablauf.',
+      'Kennzeichnung und Registrierung helfen, Halter und Tier wieder zusammenzuführen, falls sie in einer Notlage getrennt werden.',
+    ],
+    sources: [
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['VIER PFOTEN: Haustiere in Katastrophen- und Notfällen schützen', 'https://www.vier-pfoten.de/unseregeschichten/presse/mai-2026/so-schuetzen-sie-ihr-haustier-in-katastrophen-und-notfaellen'],
+      ['FINDEFIX: Haustier registrieren', 'https://www.findefix.com/haustier-online-registrieren/'],
+      ['VIER PFOTEN: Hilfe bei Krankheit, Verletzung oder Krankenhausaufenthalt', 'https://www.vier-pfoten.de/unseregeschichten/ratgeber-haustiere/setzen-sie-ihr-haustier-nicht-aus'],
+    ],
+    guardrails: [
+      'Medikamente nur nach der aktuellen tierärztlichen Anweisung geben; Dosierung oder Anwendung nicht eigenmächtig ändern.',
+      'Eine private Checkliste ersetzt keine rechtliche Beratung und keine vorherige Abstimmung mit Tierarztpraxis, Betreuungsperson oder Tierpension.',
+      'Bei einem medizinischen Tiernotfall gelten die Hinweise der Tierarztpraxis oder des tierärztlichen Notdienstes.',
+    ],
+  },
   'hitzefalle-auto': {
     facts: [
       'Autos heizen sich auch bei milden Außentemperaturen schnell gefährlich auf.',
@@ -1139,6 +1173,13 @@ const firstContentImageByPage = {
     height: 1638,
     type: 'image/jpeg',
     alt: 'Katze schaut aus einer weichen Transportbox.',
+  },
+  'notfallplan-haustier': {
+    src: 'assets/images/cat-carrier-square.jpg',
+    width: 1400,
+    height: 1394,
+    type: 'image/jpeg',
+    alt: 'Katze sitzt in einer Transporttasche, die für einen Notfall bereitsteht.',
   },
   'hitzefalle-auto': {
     src: 'assets/images/vet-office-with-dog.jpg',
@@ -1567,6 +1608,11 @@ const socialCopyByPage = {
     title: 'Erst das Tier einplanen',
     description: 'Mitnehmen, Betreuung oder Tierpension: wie Urlaub für Haustiere nicht zur Stress- oder Aussetzungsfalle wird.',
   },
+  'notfallplan-haustier': {
+    eyebrow: 'Vorsorge für den Ernstfall',
+    title: 'Wenn du plötzlich ausfällst',
+    description: 'Betreuung, Zugang, Medikamente, Tierarzt und Kosten so vorbereiten, dass dein Tier nicht auf Zufall angewiesen ist.',
+  },
   'hitzefalle-auto': {
     eyebrow: 'Hund im Auto',
     title: 'Zehn Minuten können lebensgefährlich sein',
@@ -1637,6 +1683,7 @@ const keywordByPage = {
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
   glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
   'tiere-und-urlaub': ['Haustiere Urlaub', 'Tierbetreuung', 'Tierpension', 'Urlaub mit Hund', 'Tiere aussetzen'],
+  'notfallplan-haustier': ['Notfallplan Haustier', 'Haustier Betreuung Krankheit', 'Haustier Krankenhaus', 'Notfallkarte Tierhalter', 'Tierbetreuung Vollmacht'],
   'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],
   'ernaehrung-taurin': ['Tierernährung', 'Taurin', 'Katzenfutter', 'Hundefutter', 'vegane Tierernährung'],
   realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
@@ -3244,7 +3291,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
+  const important = ['hunde', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfallplan-haustier', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',

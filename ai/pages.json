@@ -2285,6 +2285,57 @@
       }
     },
     {
+      "id": "notfallplan-haustier",
+      "url": "https://wahre-haustierliebe.de/notfallplan-haustier/index.html",
+      "title": "Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst",
+      "description": "Haustier-Notfallplan für Krankheit, Unfall oder Krankenhaus: Betreuung, Schlüssel, Futter, Medikamente, Tierarzt, Vollmacht, Kosten und Unterlagen vorbereiten.",
+      "intent": "Versorgung eines Haustiers bei plötzlichem Ausfall der Halterperson vorbereiten",
+      "keywords": [
+        "Notfallplan Haustier",
+        "Haustier Betreuung Krankheit",
+        "Haustier Krankenhaus",
+        "Notfallkarte Tierhalter",
+        "Tierbetreuung Vollmacht"
+      ],
+      "facts": [
+        "Wer ein Tier betreut oder zu betreuen hat, muss es angemessen ernähren, pflegen, verhaltensgerecht unterbringen und über die nötigen Kenntnisse und Fähigkeiten verfügen.",
+        "Eine Notfallkarte kann Rettungs- oder Hilfskräfte darauf aufmerksam machen, dass zu Hause Tiere versorgt werden müssen.",
+        "Ein belastbarer Plan braucht erreichbare Betreuungspersonen, Zugang, schriftliche Tierdaten, Medikamente, Vorräte, Transport und einen geklärten tierärztlichen Ablauf.",
+        "Kennzeichnung und Registrierung helfen, Halter und Tier wieder zusammenzuführen, falls sie in einer Notlage getrennt werden."
+      ],
+      "citationGuardrails": [
+        "Medikamente nur nach der aktuellen tierärztlichen Anweisung geben; Dosierung oder Anwendung nicht eigenmächtig ändern.",
+        "Eine private Checkliste ersetzt keine rechtliche Beratung und keine vorherige Abstimmung mit Tierarztpraxis, Betreuungsperson oder Tierpension.",
+        "Bei einem medizinischen Tiernotfall gelten die Hinweise der Tierarztpraxis oder des tierärztlichen Notdienstes."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "VIER PFOTEN: Haustiere in Katastrophen- und Notfällen schützen",
+          "url": "https://www.vier-pfoten.de/unseregeschichten/presse/mai-2026/so-schuetzen-sie-ihr-haustier-in-katastrophen-und-notfaellen"
+        },
+        {
+          "label": "FINDEFIX: Haustier registrieren",
+          "url": "https://www.findefix.com/haustier-online-registrieren/"
+        },
+        {
+          "label": "VIER PFOTEN: Hilfe bei Krankheit, Verletzung oder Krankenhausaufenthalt",
+          "url": "https://www.vier-pfoten.de/unseregeschichten/ratgeber-haustiere/setzen-sie-ihr-haustier-nicht-aus"
+        }
+      ],
+      "social": {
+        "title": "Wenn du plötzlich ausfällst - Wa(h)re Haustier(liebe)",
+        "description": "Betreuung, Zugang, Medikamente, Tierarzt und Kosten so vorbereiten, dass dein Tier nicht auf Zufall angewiesen ist.",
+        "image": "https://wahre-haustierliebe.de/assets/social/notfallplan-haustier.png",
+        "imageAlt": "Katze sitzt in einer Transporttasche, die für einen Notfall bereitsteht.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "hitzefalle-auto",
       "url": "https://wahre-haustierliebe.de/hitzefalle-auto/index.html",
       "title": "Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind",
