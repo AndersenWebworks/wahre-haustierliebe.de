@@ -5205,10 +5205,16 @@
       }
 
       .cost-table td {
-        display: grid;
-        grid-template-columns: minmax(0, 5.8rem) minmax(0, 1fr);
-        gap: 0.55rem;
-        padding: 0.36rem 0;
+        /* Stack each label above its content. A grid would split inline text
+           and links into separate anonymous grid items and make them overlap. */
+        display: block;
+        padding: 0.5rem 0;
+        overflow-wrap: anywhere;
+      }
+
+      .cost-table td::before {
+        display: block;
+        margin-bottom: 0.25rem;
       }
 
       .cost-table td:first-child {
