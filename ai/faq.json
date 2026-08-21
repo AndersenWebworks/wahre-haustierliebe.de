@@ -173,17 +173,27 @@
     },
     {
       "question": "Ab wann darf ein Welpe von seiner Mutter getrennt werden?",
-      "answer": "Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung kommt nur infrage, wenn sie nach tierärztlichem Urteil zum Schutz vor Schmerzen, Leiden oder Schäden erforderlich ist. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.",
+      "answer": "Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst nach Vollendung der achten Lebenswoche vom Muttertier getrennt werden. Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt. Die gesetzliche Untergrenze ist kein Zielalter; bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man länger.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
       "question": "Ab wann darf ein Kätzchen ausziehen?",
-      "answer": "Für Katzen gibt es in Deutschland kein gesetzliches Mindestabgabealter. Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern. Die EU-Tollwutregel ab zwölf Wochen betrifft Impfung und Transport, nicht automatisch das Abgabealter.",
+      "answer": "Für Katzen gibt es in Deutschland kein allgemeines gesetzliches Mindestabgabealter. Zehn Wochen sind nur die untere fachliche Empfehlung; zwölf Wochen bei Mutter und Geschwistern sind der vernünftige Zielpunkt für gut sozialisierte Kitten. Bei schüchternen, kranken oder schlecht sozialisierten Tieren kann eine spätere Abgabe richtig sein. Die EU-Tollwutregel betrifft Impfung und Transport, nicht automatisch das Abgabealter.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
       "question": "Was gilt bei Meerschweinchen und Kaninchen?",
-      "answer": "Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein, Zwergkaninchen mindestens neun Wochen. Beide Arten brauchen Artgenossen. Bei Meerschweinchen ist außerdem eine frühe, sichere Geschlechtsbestimmung wichtig, weil Weibchen ab etwa drei Wochen und Männchen oft ab vier bis acht Wochen geschlechtsreif werden.",
+      "answer": "Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein, Zwergkaninchen mindestens neun Wochen. Beide Arten brauchen passende Artgenossen; ein Meerschweinchen ersetzt kein Kaninchen und umgekehrt. Bei Meerschweinchen ist eine sichere Geschlechtsbestimmung wichtig, weil Weibchen ab etwa drei Wochen und Männchen oft ab vier bis acht Wochen geschlechtsreif werden.",
+      "source": "https://wahre-haustierliebe.de/adoption/index.html"
+    },
+    {
+      "question": "Was gilt bei Frettchen?",
+      "answer": "Für Frettchen ist in den geprüften deutschen Quellen keine allgemeine gesetzliche Abgabewoche genannt. Fachinformationen nennen eine Säugezeit von etwa sechs bis acht Wochen. Wirklich verantwortbar ist die Abgabe erst, wenn die Tiere sicher selbstständig fressen, gesund und gut sozialisiert sind und in eine passende Paar- oder Gruppenhaltung ziehen.",
+      "source": "https://wahre-haustierliebe.de/adoption/index.html"
+    },
+    {
+      "question": "Was gilt bei Ziervögeln?",
+      "answer": "Für Ziervögel gibt es keine einheitliche Abgabewoche für alle Arten. Ein Jungvogel sollte vollständig selbstständig fressen, sicher fliegen und orientieren können, gesund sein und mit passenden Artgenossen vermittelt werden. Bei Wellensittichen betont der Deutsche Tierschutzbund die soziale Haltung; eine pauschale Zahl wäre für alle Vogelarten unseriös.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
