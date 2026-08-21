@@ -72,7 +72,7 @@
 - Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/pferde/entscheidung/index.html
 - Kastration bei Haustieren: Tierschutz, Kosten und Mythen: https://wahre-haustierliebe.de/kastration/index.html
 - Qualzucht und Rassekrankheiten erkennen: https://wahre-haustierliebe.de/qualzucht/index.html
-- Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind: https://wahre-haustierliebe.de/adoption/index.html
+- Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung: https://wahre-haustierliebe.de/adoption/index.html
 - Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
 - Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
 - Tierärztlichen Notdienst finden: Bundesländer-Übersicht: https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html
@@ -147,7 +147,7 @@
 - https://wahre-haustierliebe.de/pferde/entscheidung/index.html - Entscheidung vor dem eigenen Pferd prüfen.
 - https://wahre-haustierliebe.de/kastration/index.html - Kastration bei Haustieren verstehen und entscheiden
 - https://wahre-haustierliebe.de/qualzucht/index.html - Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden
-- https://wahre-haustierliebe.de/adoption/index.html - Tier aus dem Tierheim adoptieren statt kaufen
+- https://wahre-haustierliebe.de/adoption/index.html - Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen
 - https://wahre-haustierliebe.de/selbsttest/index.html - Selbsttest vor Haustieranschaffung
 - https://wahre-haustierliebe.de/notfall/index.html - Tiermedizinische Warnsignale und Notfallentscheidung
 - https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html - Tierärztlichen Notdienst nach Bundesland finden
@@ -420,20 +420,36 @@ Sources:
 - UC Davis Veterinary Genetics Laboratory: https://vgl.ucdavis.edu/dna-tests/cat
 - LSU Deafness in Dogs & Cats: https://www.lsu.edu/vetmed/deafness/index.php
 
-### Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind
+### Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung
 URL: https://wahre-haustierliebe.de/adoption/index.html
 Facts:
 - Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.
 - Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.
 - Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.
 - Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.
+- Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.
+- Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.
+- Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.
+- Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.
 Important boundaries:
 - Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
 - Seriöse Adoption braucht Zeit und ehrliche Beratung.
+- Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.
+- Für Katzen, Frettchen und Vögel dürfen Gesundheits-, Transport- und Haltungsregeln nicht als einheitliches Abgabealter ausgegeben werden.
+- Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
 - Streunerhilfe Plau e. V.: https://streunerhilfe-plau.de
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
+- Tierschutz-Hundeverordnung § 2 Abs. 4: https://www.gesetze-im-internet.de/tierschhuv/__2.html
+- Deutscher Tierschutzbund: Katzenhaltung: https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/
+- Deutscher Tierschutzbund: Illegaler Welpenhandel: https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/
+- Deutscher Tierschutzbund: Haltung von Zwergkaninchen: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Bestellliste/Kleintiere_und_Voegel/Allgemein/Broschuere_Die_Haltung_von_Zwergkaninchen.pdf
+- Deutscher Tierschutzbund: Haltung von Meerschweinchen: https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/
+- Bundestierärztekammer: Heimtierhandel 2024: https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2025/artikel/DTBl_08-2025_Heimtierhandel.pdf
+- Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen: https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en
+- TVT: Merkblätter für Heimtiere: https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/
+- Deutscher Tierschutzbund: Wellensittiche: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/
 
 ### Haustier-Selbsttest: Bin ich bereit für ein Tier?
 URL: https://wahre-haustierliebe.de/selbsttest/index.html

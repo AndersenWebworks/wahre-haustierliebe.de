@@ -417,9 +417,9 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "adoption",
-    "title": "Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind",
-    "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, Vorbereitung auf Tierheimfragen und unseriöse Quellen.",
-    "terms": "Tier aus dem Tierheim adoptieren statt kaufen adoption adoption"
+    "title": "Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung",
+    "description": "Adoption aus dem Tierschutz statt Kauf: Abgabealter für Welpen, Kitten und Kleintiere, Folgen zu früher Trennung, Schutzgebühr und seriöse Vermittlung.",
+    "terms": "Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen adoption adoption"
   },
   {
     "id": "selbsttest",

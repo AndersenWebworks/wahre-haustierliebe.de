@@ -1889,9 +1889,9 @@
     {
       "id": "adoption",
       "url": "https://wahre-haustierliebe.de/adoption/index.html",
-      "title": "Adoption statt Kauf: Warum Tierheimtiere die bessere Wahl sind",
-      "description": "Adoption aus dem Tierschutz statt Kauf: Tierheimtiere, Schutzgebühr, Vermittlung, Vorbereitung auf Tierheimfragen und unseriöse Quellen.",
-      "intent": "Tier aus dem Tierheim adoptieren statt kaufen",
+      "title": "Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung",
+      "description": "Adoption aus dem Tierschutz statt Kauf: Abgabealter für Welpen, Kitten und Kleintiere, Folgen zu früher Trennung, Schutzgebühr und seriöse Vermittlung.",
+      "intent": "Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen",
       "keywords": [
         "Adoption",
         "Tierheim",
@@ -1903,11 +1903,18 @@
         "Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.",
         "Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.",
         "Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.",
-        "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung."
+        "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.",
+        "Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.",
+        "Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.",
+        "Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.",
+        "Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu."
       ],
       "citationGuardrails": [
         "Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.",
-        "Seriöse Adoption braucht Zeit und ehrliche Beratung."
+        "Seriöse Adoption braucht Zeit und ehrliche Beratung.",
+        "Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.",
+        "Für Katzen, Frettchen und Vögel dürfen Gesundheits-, Transport- und Haltungsregeln nicht als einheitliches Abgabealter ausgegeben werden.",
+        "Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung."
       ],
       "sources": [
         {
@@ -1921,6 +1928,42 @@
         {
           "label": "Tierschutzgesetz § 2",
           "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Tierschutz-Hundeverordnung § 2 Abs. 4",
+          "url": "https://www.gesetze-im-internet.de/tierschhuv/__2.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Katzenhaltung",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Illegaler Welpenhandel",
+          "url": "https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Haltung von Zwergkaninchen",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Bestellliste/Kleintiere_und_Voegel/Allgemein/Broschuere_Die_Haltung_von_Zwergkaninchen.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Haltung von Meerschweinchen",
+          "url": "https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/"
+        },
+        {
+          "label": "Bundestierärztekammer: Heimtierhandel 2024",
+          "url": "https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2025/artikel/DTBl_08-2025_Heimtierhandel.pdf"
+        },
+        {
+          "label": "Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen",
+          "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en"
+        },
+        {
+          "label": "TVT: Merkblätter für Heimtiere",
+          "url": "https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Wellensittiche",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/"
         }
       ],
       "social": {
