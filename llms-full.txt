@@ -430,6 +430,9 @@ Facts:
 - Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.
 - Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.
 - Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.
+- Hamster sind frühestens mit vier Wochen selbstständig; Ratten ziehen nicht vor sechs Wochen und nie allein ein.
+- Bei Degus und Chinchillas ist das Ende der Säugezeit nur die biologische Untergrenze; sichere Futteraufnahme, Gewicht, Gesundheit und Sozialgruppe entscheiden mit.
+- Für Frettchen, die meisten Vögel, Fohlen, Reptilien, Schildkröten und Fische wäre eine pauschale Abgabewoche fachlich falsch; die Entwicklung muss artspezifisch beurteilt werden.
 - Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.
 Important boundaries:
 - Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
@@ -450,6 +453,9 @@ Sources:
 - Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen: https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en
 - TVT: Merkblätter für Heimtiere: https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/
 - Deutscher Tierschutzbund: Wellensittiche: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/
+- Thieme Tiermedizin: Ratten und Mäuse: https://tiermedizin.thieme.de/aktuelles/vet-news/detail/ratten-und-maeuse-unterstuetzung-in-allen-lebensphasen-2039
+- Thieme Tiermedizin: Degu: https://tiermedizin.thieme.de/downloads/heimtier-infos/heimtier-infos-degu
+- Thieme Tiermedizin: Chinchilla: https://tiermedizin.thieme.de/fileadmin/tiermedizin/04_Downloads/02_Patientenb%C3%B6gen/Chinchilla.pdf
 
 ### Haustier-Selbsttest: Bin ich bereit für ein Tier?
 URL: https://wahre-haustierliebe.de/selbsttest/index.html
