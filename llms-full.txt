@@ -37,6 +37,7 @@
 - Hofhaltung und Zwinger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/index.html
 - Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/gesundheit/index.html
 - Bevor ein Hund einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/entscheidung/index.html
+- Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/abgabealter/index.html
 - Katzen sind keine einfachen Einzelgänger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html
 - Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html
 - Kastration bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/kastration/index.html
@@ -112,6 +113,7 @@
 - https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/index.html - Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.
 - https://wahre-haustierliebe.de/hunde/gesundheit/index.html - Gesundheitsrisiken bei Hunden erkennen und vorbeugen.
 - https://wahre-haustierliebe.de/hunde/entscheidung/index.html - Entscheidung vor der Hundeadoption oder Anschaffung prüfen.
+- https://wahre-haustierliebe.de/hunde/abgabealter/index.html - Abgabealter von Welpen in Deutschland realistisch prüfen.
 - https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html - Sozialverhalten von Katzen verstehen.
 - https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html - Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.
 - https://wahre-haustierliebe.de/katzen/kastration/index.html - Kastration bei Katzen verstehen.
@@ -217,6 +219,26 @@ Sources:
 - DGUV top eins: Hund am Arbeitsplatz: https://topeins.dguv.de/recht/hunde-am-arbeitsplatz/
 - Bayerisches LGL: Hundeboxen und Tierschutz: https://www.lgl.bayern.de/tiergesundheit/tierschutz/jb22_tierschutzwidriges_zubehoer.htm
 - TASSO e. V.: Körpersprache beim Hund: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund
+
+### Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen
+URL: https://wahre-haustierliebe.de/hunde/abgabealter/index.html
+Facts:
+- Nach § 2 Abs. 4 der Tierschutz-Hundeverordnung darf ein Welpe erst nach Vollendung der achten Lebenswoche vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.
+- Der Deutsche Tierschutzbund empfiehlt für Hunde neun bis elf Wochen bei Mutter und Geschwistern als guten Aufnahmezeitpunkt.
+- In dieser Phase lernen Welpen Beißhemmung, Körpersprache, Frustrationstoleranz und Rückzug - Fähigkeiten, die ihnen kein Mensch beibringen kann.
+- Illegaler Welpenhandel zeigt sich an zu jungen Tieren, fehlenden Papieren, Parkplatzübergaben, fehlender Mutterhündin, deutlich zu niedrigen Preisen und aggressivem Zeitdruck.
+- Eine Adoption aus dem Tierschutz ist eine seriöse Alternative zum Welpenkauf; dort spielt das Abgabealter keine Rolle mehr, weil die kritische Phase bereits im Tierheim verbracht wurde.
+Important boundaries:
+- Die achte Woche ist die gesetzliche Untergrenze, nicht das Zielalter. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man länger.
+- Die Empfehlung von neun bis elf Wochen ist ein tierärztlicher und tierschutzfachlicher Korridor, kein starres Datum; Rasse, Größe und Wurfverlauf verschieben ihn.
+- Eine medizinisch nötige frühere Trennung gehört in die Tierarztpraxis und nicht auf den Parkplatz.
+- Verdachtsfälle von illegalem Welpenhandel gehören zum Veterinäramt oder zur Polizei; die eigene Rückführung zur Mutter ist meistens nicht der richtige Weg.
+Sources:
+- Tierschutz-Hundeverordnung § 2 Abs. 4: https://www.gesetze-im-internet.de/tierschhuv/__2.html
+- Deutscher Tierschutzbund: Anschaffung und Vermittlung beim Hund: https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/anschaffung-und-vermittlung/
+- Deutscher Tierschutzbund: Illegaler Welpenhandel: https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/
+- Tierärztliche Vereinigung für Tierschutz: Merkblätter für Heimtiere: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/
+- Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
 ### Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale
 URL: https://wahre-haustierliebe.de/katzen/index.html

@@ -25,6 +25,7 @@ const pages = [
   { id: 'hunde-hofhaltung-und-zwinger', file: 'hunde/hofhaltung-und-zwinger/index.html', canonical: `${baseUrl}/hunde/hofhaltung-und-zwinger/index.html` },
   { id: 'hunde-gesundheit', file: 'hunde/gesundheit/index.html', canonical: `${baseUrl}/hunde/gesundheit/index.html` },
   { id: 'hunde-entscheidung', file: 'hunde/entscheidung/index.html', canonical: `${baseUrl}/hunde/entscheidung/index.html` },
+  { id: 'hunde-abgabealter', file: 'hunde/abgabealter/index.html', canonical: `${baseUrl}/hunde/abgabealter/index.html` },
   { id: 'katzen', file: 'katzen/index.html', canonical: `${baseUrl}/katzen/index.html` },
   { id: 'katzen-sozialverhalten', file: 'katzen/sozialverhalten/index.html', canonical: `${baseUrl}/katzen/sozialverhalten/index.html` },
   { id: 'katzen-wohnungshaltung', file: 'katzen/wohnungshaltung/index.html', canonical: `${baseUrl}/katzen/wohnungshaltung/index.html` },
