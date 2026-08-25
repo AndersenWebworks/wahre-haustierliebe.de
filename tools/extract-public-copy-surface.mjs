@@ -52,7 +52,9 @@ try {
   for (const entry of pageIndex.pages) {
     const route = new URL(entry.url).pathname;
     const segments = route.split('/').filter(Boolean);
-    const localPath = path.join(projectRoot, ...segments);
+    const localPath = route === '/'
+      ? path.join(projectRoot, 'index.html')
+      : path.join(projectRoot, ...segments);
     const page = await context.newPage();
     await page.goto(pathToFileURL(localPath).href, { waitUntil: 'domcontentloaded' });
 

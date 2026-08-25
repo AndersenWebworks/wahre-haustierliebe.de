@@ -5301,3 +5301,5 @@
 .static-site a.btn { text-decoration: none; }
 .static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
 @media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
+
+.static-site main :where(p, li, blockquote, dd, dt, figcaption) a:not(.btn) { text-decoration-line: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }

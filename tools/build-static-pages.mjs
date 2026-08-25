@@ -2936,7 +2936,7 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
   body = addImageAttributes(body);
   body = body.replace(new RegExp(`<section id="${page.id}" class="page(?: active)?">`), `<section id="${page.id}" class="page active">`);
 
-  return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${body}\n  <script src="${prefix}assets/site.js" defer></script>\n</body>\n</html>\n`;
+  return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${ensureInertHiddenRegions(body)}\n  <script src="${prefix}assets/site.js" defer></script>\n</body>\n</html>\n`;
 }
 
 function normalizePublicCopy(html) {
@@ -3087,8 +3087,8 @@ async function prerenderSectionPages() {
       document.getElementById('glossary-term-popover')?.remove();
       return `<!DOCTYPE html>\n${document.documentElement.outerHTML}\n`;
     });
-    await fs.writeFile(pageFile, stripTrailingWhitespace(restoreAsyncCssLinks(addImageAttributes(transformLinks(html, pageConfig)))), 'utf8');
     await context.close();
+    await writeFileEnsured(pageFile, ensureInertHiddenRegions(restoreAsyncCssLinks(addImageAttributes(transformLinks(html, pageConfig)))));
   }
 
   await browser.close();
@@ -3096,11 +3096,27 @@ async function prerenderSectionPages() {
 
 async function writeFileEnsured(filePath, content) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
-  await fs.writeFile(filePath, stripTrailingWhitespace(content), 'utf8');
+  const normalized = stripTrailingWhitespace(content);
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    try {
+      await fs.writeFile(filePath, normalized, 'utf8');
+      return;
+    } catch (error) {
+      if (!['EBUSY', 'EPERM', 'UNKNOWN'].includes(error?.code) || attempt === 4) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 100 * (attempt + 1)));
+    }
+  }
 }
 
 function stripTrailingWhitespace(content) {
   return content.replace(/[ \t]+$/gm, '');
+}
+
+function ensureInertHiddenRegions(html) {
+  return html.replace(/<(aside|div)(\s[^>]*\bid="(?:site-search|mobile-nav)"[^>]*\baria-hidden="true"[^>]*)>/gi, (match, tag, attrs) => {
+    if (/\binert(?:\s*=|\s|$)/i.test(attrs)) return match;
+    return `<${tag}${attrs} inert>`;
+  });
 }
 
 async function loadChromium() {
@@ -3260,12 +3276,16 @@ async function generateSocialImages() {
   for (const page of pages) {
     const source = sourceSocialImage(page);
     const social = socialImage(page);
-    if (generated.has(social.src)) continue;
+    const outputFile = path.join(projectRoot, social.src);
+    if (generated.has(social.src) || (fsSync.existsSync(outputFile) && fsSync.statSync(outputFile).size > 0)) {
+      generated.add(social.src);
+      continue;
+    }
     const usesLogo = source.src === defaultSocialImage.src;
     await screenshotHtml(
       browser,
       socialImageHtml(source, assetUrls, usesLogo ? 'logo' : 'photo'),
-      path.join(projectRoot, social.src),
+      outputFile,
       { width: socialCardWidth, height: socialCardHeight },
     );
     generated.add(social.src);
@@ -3398,27 +3418,26 @@ function buildLlmsShort() {
     '',
     '> Private, werbefreie Aufklärungsseite über verantwortungsvolle Haustierhaltung in Deutschland.',
     '',
-    '## Wichtig',
-    '',
-    '- Kein Ersatz für tierärztliche Beratung.',
-    '- Schwerpunkt: Wissen vor Anschaffung, bessere Haltung, Kastration, Qualzucht vermeiden, Adoption und Notfallwarnzeichen.',
+    'Kein Ersatz für tierärztliche Beratung. Schwerpunkt sind Wissen vor Anschaffung, bessere Haltung, Kastration, Qualzucht vermeiden, Adoption und Notfallwarnzeichen.',
     '',
     '## Zentrale URLs',
     '',
-    `- Start: ${baseUrl}/`,
+    `- [Startseite](${baseUrl}/): Einstieg in die verantwortungsvolle Haustierhaltung.`,
     ...important.map((id) => {
       const page = pageById.get(id);
-      return `- ${page.title}: ${canonicalUrl(page)}`;
+      return `- [${page.title}](${canonicalUrl(page)})`;
     }),
     '',
     '## Für Such- und KI-Systeme',
     '',
-    '- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und ein 1200x630-Social-Bild.',
-    '- Startseite und Fallback-Preview nutzen das offizielle Logo, Unterseiten ihr erstes echtes Inhaltsbild.',
-    '- Fachseiten enthalten sichtbare Quellen-/Prüfstand-Blöcke und maschinenlesbare Page-Facts.',
-    '- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json, /ai/faq.json und /ai/glossary.json.',
+    `- [Maschinenlesbare Site-Daten](${baseUrl}/ai/site.json): Grunddaten, Themen und Endpunkte.`,
+    `- [Maschinenlesbare Seiten-Daten](${baseUrl}/ai/pages.json): Seiten, Fakten, Quellen und Guardrails.`,
+    `- [Maschinenlesbare FAQ-Daten](${baseUrl}/ai/faq.json): Fragen, Antworten und Quellseiten.`,
+    `- [Maschinenlesbares Glossar](${baseUrl}/ai/glossary.json): Fachbegriffe und Definitionen.`,
     '',
-    'Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt',
+    '## Optional',
+    '',
+    `- [Vollständige maschinenlesbare Liste](${baseUrl}/llms-full.txt)`,
     '',
   ];
   return `${lines.join('\n')}\n`;
@@ -3546,9 +3565,10 @@ async function main() {
   const commonAfterSections = source.slice(footerMarker, scriptMarker).trimEnd();
   const script = rewriteScript(rawScript);
   const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }\n@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }\n`;
-  staticCssForInline = staticCss;
+  const staticCssFinal = `${staticCss}\n.static-site main :where(p, li, blockquote, dd, dt, figcaption) a:not(.btn) { text-decoration-line: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }\n`;
+  staticCssForInline = staticCssFinal;
 
-  await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCss);
+  await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCssFinal);
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
   await generateBrandIcons();
   await generateSocialImages();

@@ -2,35 +2,34 @@
 
 > Private, werbefreie Aufklärungsseite über verantwortungsvolle Haustierhaltung in Deutschland.
 
-## Wichtig
-
-- Kein Ersatz für tierärztliche Beratung.
-- Schwerpunkt: Wissen vor Anschaffung, bessere Haltung, Kastration, Qualzucht vermeiden, Adoption und Notfallwarnzeichen.
+Kein Ersatz für tierärztliche Beratung. Schwerpunkt sind Wissen vor Anschaffung, bessere Haltung, Kastration, Qualzucht vermeiden, Adoption und Notfallwarnzeichen.
 
 ## Zentrale URLs
 
-- Start: https://wahre-haustierliebe.de/
-- Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
-- Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/abgabealter/index.html
-- Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: https://wahre-haustierliebe.de/katzen/index.html
-- Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln: https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html
-- Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?: https://wahre-haustierliebe.de/tiere-und-urlaub/index.html
-- Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst: https://wahre-haustierliebe.de/notfallplan-haustier/index.html
-- Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst: https://wahre-haustierliebe.de/notfall/index.html
-- Tierärztlichen Notdienst finden: Bundesländer-Übersicht: https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html
-- Kastration bei Haustieren: Tierschutz, Kosten und Mythen: https://wahre-haustierliebe.de/kastration/index.html
-- Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung: https://wahre-haustierliebe.de/adoption/index.html
-- Laufende Petitionen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/petitionen/index.html
-- Haustier-Selbsttest: Bin ich bereit für ein Tier?: https://wahre-haustierliebe.de/selbsttest/index.html
-- Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?: https://wahre-haustierliebe.de/wissen/index.html
-- Glossar für Tierhaltung und Tierschutz: https://wahre-haustierliebe.de/glossar/index.html
+- [Startseite](https://wahre-haustierliebe.de/): Einstieg in die verantwortungsvolle Haustierhaltung.
+- [Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen](https://wahre-haustierliebe.de/hunde/index.html)
+- [Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)](https://wahre-haustierliebe.de/hunde/abgabealter/index.html)
+- [Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale](https://wahre-haustierliebe.de/katzen/index.html)
+- [Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln](https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html)
+- [Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?](https://wahre-haustierliebe.de/tiere-und-urlaub/index.html)
+- [Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst](https://wahre-haustierliebe.de/notfallplan-haustier/index.html)
+- [Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst](https://wahre-haustierliebe.de/notfall/index.html)
+- [Tierärztlichen Notdienst finden: Bundesländer-Übersicht](https://wahre-haustierliebe.de/notfall/tierarzt-notdienst/index.html)
+- [Kastration bei Haustieren: Tierschutz, Kosten und Mythen](https://wahre-haustierliebe.de/kastration/index.html)
+- [Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung](https://wahre-haustierliebe.de/adoption/index.html)
+- [Laufende Petitionen - Wa(h)re Haustier(liebe)](https://wahre-haustierliebe.de/petitionen/index.html)
+- [Haustier-Selbsttest: Bin ich bereit für ein Tier?](https://wahre-haustierliebe.de/selbsttest/index.html)
+- [Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?](https://wahre-haustierliebe.de/wissen/index.html)
+- [Glossar für Tierhaltung und Tierschutz](https://wahre-haustierliebe.de/glossar/index.html)
 
 ## Für Such- und KI-Systeme
 
-- Jede öffentliche Seite hat Canonical, strukturierte Daten, OG/X-Preview und ein 1200x630-Social-Bild.
-- Startseite und Fallback-Preview nutzen das offizielle Logo, Unterseiten ihr erstes echtes Inhaltsbild.
-- Fachseiten enthalten sichtbare Quellen-/Prüfstand-Blöcke und maschinenlesbare Page-Facts.
-- Vollständige maschinenlesbare Daten: /ai/site.json, /ai/pages.json, /ai/faq.json und /ai/glossary.json.
+- [Maschinenlesbare Site-Daten](https://wahre-haustierliebe.de/ai/site.json): Grunddaten, Themen und Endpunkte.
+- [Maschinenlesbare Seiten-Daten](https://wahre-haustierliebe.de/ai/pages.json): Seiten, Fakten, Quellen und Guardrails.
+- [Maschinenlesbare FAQ-Daten](https://wahre-haustierliebe.de/ai/faq.json): Fragen, Antworten und Quellseiten.
+- [Maschinenlesbares Glossar](https://wahre-haustierliebe.de/ai/glossary.json): Fachbegriffe und Definitionen.
 
-Vollständige Liste: https://wahre-haustierliebe.de/llms-full.txt
+## Optional
+
+- [Vollständige maschinenlesbare Liste](https://wahre-haustierliebe.de/llms-full.txt)
 

@@ -1463,6 +1463,7 @@ function normalizeAssetUrls(root) {
     function buildArticleToc(page) {
       if (!page || page.id === 'startseite') return;
       var existing = page.querySelector('.article-toc');
+      if (existing && existing.querySelectorAll('.article-toc-list a[href^="#"]').length >= 4) return;
       if (existing) existing.remove();
       var headings = Array.from(page.querySelectorAll(':scope > .section h2')).filter(function(heading) {
         return heading.textContent.trim().length > 0;
@@ -1856,7 +1857,7 @@ function normalizeAssetUrls(root) {
           '        <label for="feedback-source">Quelle optional</label>',
           '        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">',
           '      </div>',
-          '      <div class="sr-only" aria-hidden="true">',
+          '      <div class="sr-only" aria-hidden="true" inert>',
           '        <label for="feedback-website">Website</label>',
           '        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">',
           '      </div>',
@@ -2443,7 +2444,11 @@ function normalizeAssetUrls(root) {
       initBrowseNavigation();
       initSiteSearch();
       var mobileNav = document.getElementById('mobile-nav');
-      if (mobileNav) mobileNav.setAttribute('aria-hidden', mobileNav.classList.contains('open') ? 'false' : 'true');
+      if (mobileNav) {
+        var mobileNavOpen = mobileNav.classList.contains('open');
+        mobileNav.setAttribute('aria-hidden', mobileNavOpen ? 'false' : 'true');
+        mobileNav.toggleAttribute('inert', !mobileNavOpen);
+      }
       var hamburger = document.querySelector('.hamburger');
       if (hamburger) hamburger.setAttribute('aria-expanded', mobileNav && mobileNav.classList.contains('open') ? 'true' : 'false');
       var main = document.getElementById('main-content');
@@ -2629,6 +2634,7 @@ function normalizeAssetUrls(root) {
       var open = !panel.classList.contains('open');
       panel.classList.toggle('open', open);
       panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+      panel.toggleAttribute('inert', !open);
       if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
       if (open) {
         closeDropdowns();
@@ -2642,6 +2648,7 @@ function normalizeAssetUrls(root) {
       if (!panel) return;
       panel.classList.remove('open');
       panel.setAttribute('aria-hidden', 'true');
+      panel.setAttribute('inert', '');
       if (button) button.setAttribute('aria-expanded', 'false');
     }
 
@@ -2653,6 +2660,7 @@ function normalizeAssetUrls(root) {
       var open = !nav.classList.contains('open');
       nav.classList.toggle('open', open);
       nav.setAttribute('aria-hidden', open ? 'false' : 'true');
+      nav.toggleAttribute('inert', !open);
       if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
       if (open) {
         openMobileNavPanel('root');
@@ -2667,6 +2675,7 @@ function normalizeAssetUrls(root) {
       var wasOpen = nav.classList.contains('open');
       nav.classList.remove('open');
       nav.setAttribute('aria-hidden', 'true');
+      nav.setAttribute('inert', '');
       if (button) {
         button.setAttribute('aria-expanded', 'false');
         if (wasOpen) button.focus();

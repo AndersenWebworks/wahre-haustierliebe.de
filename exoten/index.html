@@ -5340,6 +5340,8 @@
 .static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
 @media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
+.static-site main :where(p, li, blockquote, dd, dt, figcaption) a:not(.btn) { text-decoration-line: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }
+
   </style>
   <script type="application/ld+json">
 {
@@ -5618,7 +5620,7 @@
     </div>
   </header>
 
-  <aside class="site-search" id="site-search" aria-label="Seitensuche" aria-hidden="true">
+  <aside class="site-search" id="site-search" aria-label="Seitensuche" aria-hidden="true" inert="">
     <div class="site-search-form">
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
@@ -5627,7 +5629,7 @@
   </aside>
 
   <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert="">
     <div class="mobile-nav-view is-active" data-mobile-nav-view="root">
       <div class="mobile-nav-search">
         <label class="sr-only" for="mobile-site-search-input">Suche</label>
@@ -5915,4 +5917,4 @@
   <script src="../assets/site.js" defer=""></script>
 
 
-<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Nenne, was an dieser Stelle falsch, unklar oder unvollständig ist. Danach öffnet sich in deinem E-Mail-Programm ein vorbereiteter Entwurf.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Beschreibe die mögliche Korrektur oder Ergänzung."></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>
+<div id="feedback-modal" class="feedback-modal" hidden=""><div class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title" aria-describedby="feedback-intro">  <div class="feedback-dialog-head">    <div>      <h2 id="feedback-title">Hinweis geben</h2>      <p id="feedback-intro">Nenne, was an dieser Stelle falsch, unklar oder unvollständig ist. Danach öffnet sich in deinem E-Mail-Programm ein vorbereiteter Entwurf.</p>    </div>    <button type="button" class="feedback-close" data-feedback-close="" aria-label="Hinweisformular schließen">×</button>  </div>  <div class="feedback-dialog-body">    <div class="feedback-context" data-feedback-context=""></div>    <div class="feedback-quote" data-feedback-quote-wrap="" hidden=""><strong>Ausgewählte Textstelle</strong><blockquote data-feedback-quote=""></blockquote></div>    <form data-feedback-form="" novalidate="">      <div class="feedback-field">        <label for="feedback-message">Dein Hinweis</label>        <textarea id="feedback-message" name="message" required="" placeholder="Beschreibe die mögliche Korrektur oder Ergänzung."></textarea>      </div>      <div class="feedback-field">        <label for="feedback-source">Quelle optional</label>        <input id="feedback-source" name="source" type="url" inputmode="url" placeholder="https://...">      </div>      <div class="sr-only" aria-hidden="true" inert="">        <label for="feedback-website">Website</label>        <input id="feedback-website" name="website" tabindex="-1" autocomplete="off">      </div>      <div class="feedback-actions">        <button type="submit" class="btn btn-primary" data-feedback-submit="">Mail-Entwurf öffnen</button>        <button type="button" class="btn btn-outline" data-feedback-close="">Abbrechen</button>      </div>      <p class="feedback-status" data-feedback-status="" aria-live="polite"></p>    </form>  </div></div></div><button type="button" id="selection-feedback-button" class="selection-feedback-button"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis zur Auswahl</span></button></body></html>
