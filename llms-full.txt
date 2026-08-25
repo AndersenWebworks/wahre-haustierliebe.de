@@ -20,6 +20,7 @@
 - Datenschutzerklärung: https://wahre-haustierliebe.de/datenschutz/index.html
 - Kontakt - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kontakt/index.html
 - Mitmachen! - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/mitmachen/index.html
+- Laufende Petitionen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/petitionen/index.html
 - Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?: https://wahre-haustierliebe.de/mensch/index.html
 - Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
 - Hund im Büro: Wann ein Bürohund wirklich passt: https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html
@@ -96,6 +97,7 @@
 - https://wahre-haustierliebe.de/datenschutz/index.html - Datenschutzinformationen nach DSGVO für die Website
 - https://wahre-haustierliebe.de/kontakt/index.html - Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe
 - https://wahre-haustierliebe.de/mitmachen/index.html - Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen
+- https://wahre-haustierliebe.de/petitionen/index.html - Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben
 - https://wahre-haustierliebe.de/mensch/index.html - Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen
 - https://wahre-haustierliebe.de/hunde/index.html - Hund anschaffen oder Hundehaltung verbessern
 - https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html - Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen
@@ -166,6 +168,18 @@
 - https://wahre-haustierliebe.de/noch-nicht-bereit/index.html - Verantwortlich warten statt vorschnell ein Tier anschaffen
 
 ## Page Facts and Boundaries
+
+### Laufende Petitionen - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/petitionen/index.html
+Facts:
+- Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.
+- VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.
+- Wa(h)re Haustier(liebe) führt die Petition nicht selbst, sondern verweist zur Petitionsseite der initiierenden Organisation.
+Important boundaries:
+- Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.
+- Vor der Unterschrift gelten die Hinweise und Datenschutzbestimmungen der verlinkten Petitionsseite.
+Sources:
+- VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!: https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media
 
 ### Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?
 URL: https://wahre-haustierliebe.de/mensch/index.html

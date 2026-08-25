@@ -18,6 +18,7 @@ Die Seite ist seit dem 27.05.2026 keine Hash-SPA mehr. Aus einer gepflegten HTML
 - `kastration/index.html`
 - `qualzucht/index.html`
 - `adoption/index.html`
+- `petitionen/index.html`
 - `selbsttest/index.html`
 - `notfall/index.html`
 - `notfall/tierarzt-notdienst/index.html`

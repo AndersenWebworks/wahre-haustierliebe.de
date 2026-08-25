@@ -126,6 +126,43 @@
       }
     },
     {
+      "id": "petitionen",
+      "url": "https://wahre-haustierliebe.de/petitionen/index.html",
+      "title": "Laufende Petitionen - Wa(h)re Haustier(liebe)",
+      "description": "Laufende Petitionen zum Schutz von Tieren: Anliegen, Initiator und Adressat auf einen Blick sowie der direkte Link zur Unterschrift.",
+      "intent": "Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben",
+      "keywords": [
+        "Tierschutz Petition",
+        "Welpenhandel",
+        "Social Media Tierhandel",
+        "VIER PFOTEN",
+        "Meta"
+      ],
+      "facts": [
+        "Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.",
+        "VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.",
+        "Wa(h)re Haustier(liebe) führt die Petition nicht selbst, sondern verweist zur Petitionsseite der initiierenden Organisation."
+      ],
+      "citationGuardrails": [
+        "Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.",
+        "Vor der Unterschrift gelten die Hinweise und Datenschutzbestimmungen der verlinkten Petitionsseite."
+      ],
+      "sources": [
+        {
+          "label": "VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!",
+          "url": "https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media"
+        }
+      ],
+      "social": {
+        "title": "Laufende Petitionen - Wa(h)re Haustier(liebe)",
+        "description": "Konkrete Tierschutzanliegen, ihre Initiatoren und der direkte Weg zur Unterschrift.",
+        "image": "https://wahre-haustierliebe.de/assets/social/petitionen.png",
+        "imageAlt": "Hund im Tierheim als Bild für Tiere, die unter verantwortungsloser Vermittlung leiden.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "mensch",
       "url": "https://wahre-haustierliebe.de/mensch/index.html",
       "title": "Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?",

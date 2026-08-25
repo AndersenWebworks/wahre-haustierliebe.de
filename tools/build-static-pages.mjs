@@ -72,6 +72,15 @@ const pages = [
     priority: '0.55',
   },
   {
+    id: 'petitionen',
+    slug: 'petitionen',
+    title: 'Laufende Petitionen - Wa(h)re Haustier(liebe)',
+    description: 'Laufende Petitionen zum Schutz von Tieren: Anliegen, Initiator und Adressat auf einen Blick sowie der direkte Link zur Unterschrift.',
+    intent: 'Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben',
+    priority: '0.65',
+    lastmod: '2026-08-25',
+  },
+  {
     id: 'mensch',
     slug: 'mensch',
     title: 'Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?',
@@ -754,6 +763,20 @@ const evidenceByPage = {
       'Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung.',
     ],
   },
+  petitionen: {
+    facts: [
+      'Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.',
+      'VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.',
+      'Wa(h)re Haustier(liebe) führt die Petition nicht selbst, sondern verweist zur Petitionsseite der initiierenden Organisation.',
+    ],
+    sources: [
+      ['VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!', 'https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media'],
+    ],
+    guardrails: [
+      'Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.',
+      'Vor der Unterschrift gelten die Hinweise und Datenschutzbestimmungen der verlinkten Petitionsseite.',
+    ],
+  },
   selbsttest: {
     facts: [
       'Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.',
@@ -1172,6 +1195,13 @@ const firstContentImageByPage = {
     height: 1372,
     type: 'image/jpeg',
     alt: 'Menschen halten bei einer Tierschutzaktion Informationsschilder.',
+  },
+  petitionen: {
+    src: 'assets/images/tierheim-hund.jpg',
+    width: 960,
+    height: 1280,
+    type: 'image/jpeg',
+    alt: 'Hund im Tierheim als Bild für Tiere, die unter verantwortungsloser Vermittlung leiden.',
   },
   wissen: {
     src: 'assets/images/goldfish-aquarium.jpg',
@@ -1673,6 +1703,11 @@ const socialCopyByPage = {
     title: 'Mitmachen!',
     description: 'Korrekturen, Quellen und Hinweise helfen, Wa(h)re Haustier(liebe) fachlich sauber und lebendig zu halten.',
   },
+  petitionen: {
+    eyebrow: 'Hinschauen und handeln',
+    title: 'Laufende Petitionen',
+    description: 'Konkrete Tierschutzanliegen, ihre Initiatoren und der direkte Weg zur Unterschrift.',
+  },
   'budgie-brain': {
     eyebrow: 'Interaktive Vogelhaltung',
     title: 'Budgie Brain',
@@ -1700,6 +1735,7 @@ const keywordByPage = {
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
   kontakt: ['Kontakt', 'Haltungsfragen', 'Haustierberatung', 'Tierschutz', 'Privates Projekt'],
   mitmachen: ['Mitmachen', 'Korrekturhinweis', 'Quellenhinweis', 'Tierschutz-Wiki', 'redaktionelle Prüfung'],
+  petitionen: ['Tierschutz Petition', 'Welpenhandel', 'Social Media Tierhandel', 'VIER PFOTEN', 'Meta'],
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
   glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
   'tiere-und-urlaub': ['Haustiere Urlaub', 'Tierbetreuung', 'Tierpension', 'Urlaub mit Hund', 'Tiere aussetzen'],

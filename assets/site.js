@@ -4,6 +4,7 @@ var staticPageRoutes = {
   "datenschutz": "/datenschutz/index.html",
   "kontakt": "/kontakt/index.html",
   "mitmachen": "/mitmachen/index.html",
+  "petitionen": "/petitionen/index.html",
   "mensch": "/mensch/index.html",
   "hunde": "/hunde/index.html",
   "hund-im-buero": "/hunde/hund-im-buero/index.html",
@@ -102,6 +103,12 @@ var staticSiteSearchIndex = [
     "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
     "description": "Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.",
     "terms": "Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen mitmachen mitmachen"
+  },
+  {
+    "id": "petitionen",
+    "title": "Laufende Petitionen - Wa(h)re Haustier(liebe)",
+    "description": "Laufende Petitionen zum Schutz von Tieren: Anliegen, Initiator und Adressat auf einen Blick sowie der direkte Link zur Unterschrift.",
+    "terms": "Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben petitionen petitionen"
   },
   {
     "id": "mensch",
@@ -537,6 +544,7 @@ function normalizeAssetUrls(root) {
       'kastration': { src: 'assets/images/feral-cat-tnr.jpg', alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration', position: 'center 44%', caption: 'Bei Katzen schützt Kastration das einzelne Tier und verhindert weiteren ungewollten Nachwuchs.', purpose: 'Kastrations-Seite: Prävention und Streunerkatzenkontext zeigen', shareReason: 'Das Bild verbindet die Gesundheitsentscheidung mit dem Streunerkatzenschutz.' },
       'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%', caption: 'Süß darf kein Leidensmerkmal sein.', purpose: 'Qualzucht-Seite: problematische Zuchtmerkmale sachlich zeigen', shareReason: 'Das Bild soll Unbehagen erklären, ohne Clickbait zu werden.' },
       'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund blickt aus seinem Zwinger im Tierheim', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
+      'petitionen': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als Bild für Tiere, die unter verantwortungsloser Vermittlung leiden', position: 'center 42%', caption: 'Online-Angebote brauchen Regeln, die Tiere wirksam schützen.', purpose: 'Petitions-Seite: das betroffene Tier vor Plattform und Forderung sichtbar machen', shareReason: 'Das Bild soll aus Information eine konkrete Unterstützung machen.' },
       'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen liegen auf den Ebenen eines Kratzbaums', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
       'notfall': { src: 'assets/images/vet-office-with-dog.jpg', alt: 'Hund sitzt ruhig neben einem Behandlungstisch in einer Tierarztpraxis', position: 'center 50%', caption: 'Im Zweifel ruhig bleiben, anrufen, hinfahren.', purpose: 'Notfall-Seite: ruhige Handlungsfähigkeit statt Panik zeigen', shareReason: 'Das Bild soll Hemmung senken, früh tierärztliche Hilfe zu holen.' },
       'wissen': { src: 'assets/images/goldfish-aquarium.jpg', alt: 'Mehrere Goldfische schwimmen in einem bepflanzten Aquarium', position: 'center 48%', caption: 'Mythen klingen harmlos, bis Tiere darunter leiden müssen.', purpose: 'Wissen-Seite: Irrtümer als konkrete Haltungsfolgen zeigen', shareReason: 'Das Bild soll einen bekannten Mythos sofort teilbar machen.' },
@@ -1371,6 +1379,7 @@ function normalizeAssetUrls(root) {
       'glossar': 'glossar/',
       'kontakt': 'kontakt/',
       'mitmachen': 'mitmachen/',
+      'petitionen': 'petitionen/',
       'noch-nicht-bereit': 'noch-nicht-bereit/',
       'datenschutz': 'datenschutz/',
       'impressum': 'impressum/',
