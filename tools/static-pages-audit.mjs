@@ -8,11 +8,12 @@ const projectRoot = path.resolve(__dirname, '..');
 const baseUrl = 'https://wahre-haustierliebe.de';
 
 const pages = [
-  { id: 'startseite', file: 'index.html', canonical: `${baseUrl}/index.html` },
+  { id: 'startseite', file: 'index.html', canonical: `${baseUrl}/` },
   { id: 'impressum', file: 'impressum/index.html', canonical: `${baseUrl}/impressum/index.html` },
   { id: 'datenschutz', file: 'datenschutz/index.html', canonical: `${baseUrl}/datenschutz/index.html` },
   { id: 'kontakt', file: 'kontakt/index.html', canonical: `${baseUrl}/kontakt/index.html` },
   { id: 'mitmachen', file: 'mitmachen/index.html', canonical: `${baseUrl}/mitmachen/index.html` },
+  { id: 'petitionen', file: 'petitionen/index.html', canonical: `${baseUrl}/petitionen/index.html` },
   { id: 'mensch', file: 'mensch/index.html', canonical: `${baseUrl}/mensch/index.html` },
   { id: 'hunde', file: 'hunde/index.html', canonical: `${baseUrl}/hunde/index.html` },
   { id: 'hund-im-buero', file: 'hunde/hund-im-buero/index.html', canonical: `${baseUrl}/hunde/hund-im-buero/index.html` },
@@ -40,6 +41,10 @@ const pages = [
   { id: 'voegel-kuechenluft-und-daempfe-sind-lebensgefahr', file: 'voegel/kuechenluft-teflon/index.html', canonical: `${baseUrl}/voegel/kuechenluft-teflon/index.html` },
   { id: 'voegel-freiflug-ist-nicht-optional', file: 'voegel/freiflug/index.html', canonical: `${baseUrl}/voegel/freiflug/index.html` },
   { id: 'voegel-partnerersatz', file: 'voegel/partnerersatz/index.html', canonical: `${baseUrl}/voegel/partnerersatz/index.html` },
+  { id: 'voegel-ruhe-und-schlaf', file: 'voegel/ruhe-schlaf/index.html', canonical: `${baseUrl}/voegel/ruhe-schlaf/index.html` },
+  { id: 'voegel-ernaehrung', file: 'voegel/ernaehrung/index.html', canonical: `${baseUrl}/voegel/ernaehrung/index.html` },
+  { id: 'voegel-alltag-kosten-betreuung', file: 'voegel/alltag-kosten-betreuung/index.html', canonical: `${baseUrl}/voegel/alltag-kosten-betreuung/index.html` },
+  { id: 'voegel-zucht-und-eier', file: 'voegel/zucht-eier/index.html', canonical: `${baseUrl}/voegel/zucht-eier/index.html` },
   { id: 'voegel-krankheit-erkennen', file: 'voegel/krankheit-erkennen/index.html', canonical: `${baseUrl}/voegel/krankheit-erkennen/index.html` },
   { id: 'voegel-qualzucht', file: 'voegel/qualzucht/index.html', canonical: `${baseUrl}/voegel/qualzucht/index.html` },
   { id: 'voegel-entscheidung', file: 'voegel/entscheidung/index.html', canonical: `${baseUrl}/voegel/entscheidung/index.html` },
@@ -69,6 +74,7 @@ const pages = [
   { id: 'wissen', file: 'wissen/index.html', canonical: `${baseUrl}/wissen/index.html` },
   { id: 'glossar', file: 'glossar/index.html', canonical: `${baseUrl}/glossar/index.html` },
   { id: 'tiere-und-urlaub', file: 'tiere-und-urlaub/index.html', canonical: `${baseUrl}/tiere-und-urlaub/index.html` },
+  { id: 'notfallplan-haustier', file: 'notfallplan-haustier/index.html', canonical: `${baseUrl}/notfallplan-haustier/index.html` },
   { id: 'hitzefalle-auto', file: 'hitzefalle-auto/index.html', canonical: `${baseUrl}/hitzefalle-auto/index.html` },
   { id: 'ernaehrung-taurin', file: 'ernaehrung-taurin/index.html', canonical: `${baseUrl}/ernaehrung-taurin/index.html` },
   { id: 'realhaltung', file: 'realhaltung/index.html', canonical: `${baseUrl}/realhaltung/index.html` },

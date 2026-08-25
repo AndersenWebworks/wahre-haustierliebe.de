@@ -1,5 +1,5 @@
 var staticPageRoutes = {
-  "startseite": "/index.html",
+  "startseite": "/",
   "impressum": "/impressum/index.html",
   "datenschutz": "/datenschutz/index.html",
   "kontakt": "/kontakt/index.html",
@@ -7,6 +7,7 @@ var staticPageRoutes = {
   "petitionen": "/petitionen/index.html",
   "mensch": "/mensch/index.html",
   "hunde": "/hunde/index.html",
+  "hunde-abgabealter": "/hunde/abgabealter/index.html",
   "hund-im-buero": "/hunde/hund-im-buero/index.html",
   "katzen": "/katzen/index.html",
   "voegel": "/voegel/index.html",
@@ -121,6 +122,12 @@ var staticSiteSearchIndex = [
     "title": "Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen",
     "description": "Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.",
     "terms": "Hund anschaffen oder Hundehaltung verbessern hunde hunde"
+  },
+  {
+    "id": "hunde-abgabealter",
+    "title": "Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)",
+    "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze, Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
+    "terms": "Abgabealter von Welpen rechtlich und tierschutzfachlich prüfen hunde/abgabealter hunde abgabealter"
   },
   {
     "id": "hund-im-buero",
@@ -516,7 +523,7 @@ var staticSiteSearchIndex = [
 function staticRouteFor(page) {
   var target = staticPageRoutes[page] || '/';
   var prefix = document.body ? (document.body.dataset.routePrefix || '') : '';
-  if (target === '/') return prefix ? prefix + 'index.html' : 'index.html';
+  if (target === '/') return prefix || './';
   return prefix + target.replace(/^\//, '');
 }
 function assetUrl(src) {

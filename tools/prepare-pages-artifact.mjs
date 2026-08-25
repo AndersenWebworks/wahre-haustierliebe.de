@@ -32,24 +32,44 @@ function publicPathFromPageUrl(pageUrl) {
   }
 
   if (relativePath.endsWith('/index.html')) {
-    return relativePath.slice(0, -'/index.html'.length);
+    return relativePath;
   }
 
   if (relativePath.endsWith('/')) {
-    return relativePath.slice(0, -1);
+    return `${relativePath.slice(0, -1)}/index.html`;
   }
 
-  return relativePath;
+  return path.extname(relativePath) ? relativePath : `${relativePath}/index.html`;
 }
 
 async function getPagePublicPaths() {
-  const pagesMetadata = JSON.parse(await fs.readFile(pagesMetadataPath, 'utf8'));
-  return pagesMetadata.pages.map((page) => publicPathFromPageUrl(page.url));
+  const [pagesMetadata, sitemap] = await Promise.all([
+    fs.readFile(pagesMetadataPath, 'utf8').then((content) => JSON.parse(content)),
+    fs.readFile(path.join(projectRoot, 'sitemap.xml'), 'utf8'),
+  ]);
+  const metadataPaths = pagesMetadata.pages.map((page) => publicPathFromPageUrl(page.url));
+  const sitemapPaths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => publicPathFromPageUrl(match[1]));
+  const metadataSet = new Set(metadataPaths);
+  const sitemapSet = new Set(sitemapPaths);
+  const missingFromSitemap = metadataPaths.filter((publicPath) => !sitemapSet.has(publicPath));
+  const missingFromMetadata = sitemapPaths.filter((publicPath) => !metadataSet.has(publicPath));
+
+  if (missingFromSitemap.length || missingFromMetadata.length) {
+    throw new Error([
+      missingFromSitemap.length ? `Sitemap missing AI pages: ${missingFromSitemap.join(', ')}` : '',
+      missingFromMetadata.length ? `AI pages missing sitemap URLs: ${missingFromMetadata.join(', ')}` : '',
+    ].filter(Boolean).join(' | '));
+  }
+
+  return metadataPaths;
 }
 
 async function copyPublicPath(relativePath) {
-  const source = path.join(projectRoot, relativePath);
-  const target = path.join(artifactRoot, relativePath);
+  const source = path.resolve(projectRoot, relativePath);
+  const target = path.resolve(artifactRoot, relativePath);
+  if (!source.startsWith(`${projectRoot}${path.sep}`) || !target.startsWith(`${artifactRoot}${path.sep}`)) {
+    throw new Error(`Public path escapes project root: ${relativePath}`);
+  }
   const stat = await fs.stat(source);
 
   if (stat.isDirectory()) {
@@ -70,4 +90,8 @@ for (const publicPath of publicPaths) {
   await copyPublicPath(publicPath);
 }
 
-console.log(`Prepared GitHub Pages artifact at ${path.relative(projectRoot, artifactRoot)}`);
+for (const pagePath of await getPagePublicPaths()) {
+  await fs.access(path.join(artifactRoot, pagePath));
+}
+
+console.log(`Prepared GitHub Pages artifact at ${path.relative(projectRoot, artifactRoot)} (${publicPaths.size} public paths)`);

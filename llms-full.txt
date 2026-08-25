@@ -15,7 +15,7 @@
 
 ## Important URLs
 
-- Tierhaltung prüfen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/index.html
+- Tierhaltung prüfen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/
 - Impressum - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/impressum/index.html
 - Datenschutzerklärung: https://wahre-haustierliebe.de/datenschutz/index.html
 - Kontakt - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/kontakt/index.html
@@ -23,6 +23,7 @@
 - Laufende Petitionen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/petitionen/index.html
 - Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?: https://wahre-haustierliebe.de/mensch/index.html
 - Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: https://wahre-haustierliebe.de/hunde/index.html
+- Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/abgabealter/index.html
 - Hund im Büro: Wann ein Bürohund wirklich passt: https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html
 - Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale: https://wahre-haustierliebe.de/katzen/index.html
 - Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler: https://wahre-haustierliebe.de/voegel/index.html
@@ -38,7 +39,6 @@
 - Hofhaltung und Zwinger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/index.html
 - Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/gesundheit/index.html
 - Bevor ein Hund einzieht - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/entscheidung/index.html
-- Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/hunde/abgabealter/index.html
 - Katzen sind keine einfachen Einzelgänger - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html
 - Wohnung oder Freigang bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html
 - Kastration bei Katzen - Wa(h)re Haustier(liebe): https://wahre-haustierliebe.de/katzen/kastration/index.html
@@ -92,7 +92,7 @@
 
 ## Page Intent
 
-- https://wahre-haustierliebe.de/index.html - Startseite und Orientierung für verantwortungsvolle Haustierhaltung
+- https://wahre-haustierliebe.de/ - Startseite und Orientierung für verantwortungsvolle Haustierhaltung
 - https://wahre-haustierliebe.de/impressum/index.html - Anbieterkennzeichnung und rechtliche Kontaktangaben
 - https://wahre-haustierliebe.de/datenschutz/index.html - Datenschutzinformationen nach DSGVO für die Website
 - https://wahre-haustierliebe.de/kontakt/index.html - Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe
@@ -100,6 +100,7 @@
 - https://wahre-haustierliebe.de/petitionen/index.html - Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben
 - https://wahre-haustierliebe.de/mensch/index.html - Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen
 - https://wahre-haustierliebe.de/hunde/index.html - Hund anschaffen oder Hundehaltung verbessern
+- https://wahre-haustierliebe.de/hunde/abgabealter/index.html - Abgabealter von Welpen rechtlich und tierschutzfachlich prüfen
 - https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html - Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen
 - https://wahre-haustierliebe.de/katzen/index.html - Katze anschaffen oder Katzenhaltung artgerechter machen
 - https://wahre-haustierliebe.de/voegel/index.html - Vogelhaltung und Wellensittichhaltung prüfen
@@ -115,7 +116,6 @@
 - https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/index.html - Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.
 - https://wahre-haustierliebe.de/hunde/gesundheit/index.html - Gesundheitsrisiken bei Hunden erkennen und vorbeugen.
 - https://wahre-haustierliebe.de/hunde/entscheidung/index.html - Entscheidung vor der Hundeadoption oder Anschaffung prüfen.
-- https://wahre-haustierliebe.de/hunde/abgabealter/index.html - Abgabealter von Welpen in Deutschland realistisch prüfen.
 - https://wahre-haustierliebe.de/katzen/sozialverhalten/index.html - Sozialverhalten von Katzen verstehen.
 - https://wahre-haustierliebe.de/katzen/wohnungshaltung/index.html - Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.
 - https://wahre-haustierliebe.de/katzen/kastration/index.html - Kastration bei Katzen verstehen.
@@ -212,6 +212,25 @@ Sources:
 - Tierschutz-Hundeverordnung: https://www.gesetze-im-internet.de/tierschhuv/
 - Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
+### Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/hunde/abgabealter/index.html
+Facts:
+- Nach § 2 Abs. 4 TierSchHuV darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt.
+- Der Kontakt zu Mutter und Geschwistern gibt dem Welpen in dieser wichtigen Lernphase soziale Sicherheit und Erfahrung mit anderen Hunden.
+- Warnzeichen des illegalen Welpenhandels sind sehr junge, kranke oder verängstigte Tiere, unplausible Dokumente, kein Zugang zum Muttertier und Übergaben an öffentlichen Orten.
+- Für eine verantwortungsvolle Vermittlung sprechen eine sichtbare Mutterhündin, plausible Dokumente, ein Besuch in der Aufzuchtumgebung und nachvollziehbare Antworten ohne Zeitdruck.
+Important boundaries:
+- Neun bis elf Wochen sind der vom Deutschen Tierschutzbund genannte gute Aufnahmezeitpunkt. Gesundheit, Entwicklungsstand und bisherige Aufzucht müssen beim einzelnen Welpen trotzdem berücksichtigt werden.
+- Eine frühere Trennung kann im Einzelfall medizinisch nötig sein; die Entscheidung gehört dann in die Tierarztpraxis und nicht auf den Parkplatz.
+- Die Sozialisierungsphase endet nicht mit der Abgabe. Wer einen Hund aufnimmt, übernimmt selbst den Rest: Eingewöhnung, Beziehung, Training, Rückzug und Geduld.
+- Die Seite ersetzt keine individuelle tierärztliche oder verhaltenstherapeutische Einschätzung für den konkreten Welpen.
+Sources:
+- Tierschutz-Hundeverordnung § 2 Abs. 4: https://www.gesetze-im-internet.de/tierschhuv/__2.html
+- Deutscher Tierschutzbund: Anschaffung und Vermittlung beim Hund: https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/anschaffung-und-vermittlung/
+- Deutscher Tierschutzbund: Illegaler Welpenhandel: https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/
+- TVT: Merkblätter für Heimtiere: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/
+- Bundestierärztekammer: https://www.bundestieraerztekammer.de
+
 ### Hund im Büro: Wann ein Bürohund wirklich passt
 URL: https://wahre-haustierliebe.de/hunde/hund-im-buero/index.html
 Facts:
@@ -233,26 +252,6 @@ Sources:
 - DGUV top eins: Hund am Arbeitsplatz: https://topeins.dguv.de/recht/hunde-am-arbeitsplatz/
 - Bayerisches LGL: Hundeboxen und Tierschutz: https://www.lgl.bayern.de/tiergesundheit/tierschutz/jb22_tierschutzwidriges_zubehoer.htm
 - TASSO e. V.: Körpersprache beim Hund: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/leben-mit-hund/koerpersprache-beim-hund
-
-### Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen
-URL: https://wahre-haustierliebe.de/hunde/abgabealter/index.html
-Facts:
-- Nach § 2 Abs. 4 der Tierschutz-Hundeverordnung darf ein Welpe erst nach Vollendung der achten Lebenswoche vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.
-- Der Deutsche Tierschutzbund empfiehlt für Hunde neun bis elf Wochen bei Mutter und Geschwistern als guten Aufnahmezeitpunkt.
-- In dieser Phase lernen Welpen Beißhemmung, Körpersprache, Frustrationstoleranz und Rückzug - Fähigkeiten, die ihnen kein Mensch beibringen kann.
-- Illegaler Welpenhandel zeigt sich an zu jungen Tieren, fehlenden Papieren, Parkplatzübergaben, fehlender Mutterhündin, deutlich zu niedrigen Preisen und aggressivem Zeitdruck.
-- Eine Adoption aus dem Tierschutz ist eine seriöse Alternative zum Welpenkauf; dort spielt das Abgabealter keine Rolle mehr, weil die kritische Phase bereits im Tierheim verbracht wurde.
-Important boundaries:
-- Die achte Woche ist die gesetzliche Untergrenze, nicht das Zielalter. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man länger.
-- Die Empfehlung von neun bis elf Wochen ist ein tierärztlicher und tierschutzfachlicher Korridor, kein starres Datum; Rasse, Größe und Wurfverlauf verschieben ihn.
-- Eine medizinisch nötige frühere Trennung gehört in die Tierarztpraxis und nicht auf den Parkplatz.
-- Verdachtsfälle von illegalem Welpenhandel gehören zum Veterinäramt oder zur Polizei; die eigene Rückführung zur Mutter ist meistens nicht der richtige Weg.
-Sources:
-- Tierschutz-Hundeverordnung § 2 Abs. 4: https://www.gesetze-im-internet.de/tierschhuv/__2.html
-- Deutscher Tierschutzbund: Anschaffung und Vermittlung beim Hund: https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/anschaffung-und-vermittlung/
-- Deutscher Tierschutzbund: Illegaler Welpenhandel: https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/
-- Tierärztliche Vereinigung für Tierschutz: Merkblätter für Heimtiere: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/
-- Bundestierärztekammer: https://www.bundestieraerztekammer.de
 
 ### Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale
 URL: https://wahre-haustierliebe.de/katzen/index.html
@@ -460,15 +459,13 @@ Sources:
 URL: https://wahre-haustierliebe.de/adoption/index.html
 Facts:
 - Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.
+- Rund 350.000 Tiere werden jährlich neu in deutschen Tierheimen aufgenommen.
 - Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.
 - Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.
 - Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.
 - Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.
 - Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.
 - Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.
-- Hamster sind frühestens mit vier Wochen selbstständig; Ratten ziehen nicht vor sechs Wochen und nie allein ein.
-- Bei Degus und Chinchillas ist das Ende der Säugezeit nur die biologische Untergrenze; sichere Futteraufnahme, Gewicht, Gesundheit und Sozialgruppe entscheiden mit.
-- Für Frettchen, die meisten Vögel, Fohlen, Reptilien, Schildkröten und Fische wäre eine pauschale Abgabewoche fachlich falsch; die Entwicklung muss artspezifisch beurteilt werden.
 - Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.
 Important boundaries:
 - Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
@@ -478,6 +475,7 @@ Important boundaries:
 - Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung.
 Sources:
 - Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
+- Deutscher Tierschutzbund: Tierheime und Bundeshaushalt: https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/bundeshaushalt-droht-tierheime-im-stich-zu-lassen/
 - Streunerhilfe Plau e. V.: https://streunerhilfe-plau.de
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 - Tierschutz-Hundeverordnung § 2 Abs. 4: https://www.gesetze-im-internet.de/tierschhuv/__2.html
@@ -489,9 +487,6 @@ Sources:
 - Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen: https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en
 - TVT: Merkblätter für Heimtiere: https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/
 - Deutscher Tierschutzbund: Wellensittiche: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/
-- Thieme Tiermedizin: Ratten und Mäuse: https://tiermedizin.thieme.de/aktuelles/vet-news/detail/ratten-und-maeuse-unterstuetzung-in-allen-lebensphasen-2039
-- Thieme Tiermedizin: Degu: https://tiermedizin.thieme.de/downloads/heimtier-infos/heimtier-infos-degu
-- Thieme Tiermedizin: Chinchilla: https://tiermedizin.thieme.de/fileadmin/tiermedizin/04_Downloads/02_Patientenb%C3%B6gen/Chinchilla.pdf
 
 ### Haustier-Selbsttest: Bin ich bereit für ein Tier?
 URL: https://wahre-haustierliebe.de/selbsttest/index.html
@@ -755,5 +750,5 @@ Sources:
 
 ## Last Updated
 
-2026-06-15
+2026-08-25
 

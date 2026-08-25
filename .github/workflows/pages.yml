@@ -30,6 +30,13 @@ jobs:
         with:
           node-version: 22
 
+      - name: Validate generated SEO surface
+        run: |
+          node --check tools/build-static-pages.mjs
+          node --check tools/prepare-pages-artifact.mjs
+          node --check tools/static-pages-audit.mjs
+          node tools/static-pages-audit.mjs
+
       - name: Prepare public artifact
         run: node tools/prepare-pages-artifact.mjs
 

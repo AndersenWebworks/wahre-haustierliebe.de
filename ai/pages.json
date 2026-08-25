@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-06-15",
+  "lastUpdated": "2026-08-25",
   "site": "Wa(h)re Haustier(liebe)",
   "url": "https://wahre-haustierliebe.de/",
   "pages": [
     {
       "id": "startseite",
-      "url": "https://wahre-haustierliebe.de/index.html",
+      "url": "https://wahre-haustierliebe.de/",
       "title": "Tierhaltung prüfen - Wa(h)re Haustier(liebe)",
       "description": "Faktenbasierte Aufklärung über artgerechte Tierhaltung: Hunde, Katzen, Vögel, Kleintiere, Pferde, Kastration, Qualzucht, Adoption, Notfall und Selbsttest.",
       "intent": "Startseite und Orientierung für verantwortungsvolle Haustierhaltung",
@@ -252,6 +252,64 @@
         "description": "Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde.png",
         "imageAlt": "Golden Retriever springt über ein Agility-Hindernis.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "hunde-abgabealter",
+      "url": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html",
+      "title": "Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)",
+      "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze, Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
+      "intent": "Abgabealter von Welpen rechtlich und tierschutzfachlich prüfen",
+      "keywords": [
+        "Welpe Abgabealter",
+        "Welpen abgeben",
+        "Abgabe Hund",
+        "8 Wochen Welpe",
+        "TierSchHuV",
+        "illegaler Welpenhandel",
+        "Sozialisierung Hund"
+      ],
+      "facts": [
+        "Nach § 2 Abs. 4 TierSchHuV darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt.",
+        "Der Kontakt zu Mutter und Geschwistern gibt dem Welpen in dieser wichtigen Lernphase soziale Sicherheit und Erfahrung mit anderen Hunden.",
+        "Warnzeichen des illegalen Welpenhandels sind sehr junge, kranke oder verängstigte Tiere, unplausible Dokumente, kein Zugang zum Muttertier und Übergaben an öffentlichen Orten.",
+        "Für eine verantwortungsvolle Vermittlung sprechen eine sichtbare Mutterhündin, plausible Dokumente, ein Besuch in der Aufzuchtumgebung und nachvollziehbare Antworten ohne Zeitdruck."
+      ],
+      "citationGuardrails": [
+        "Neun bis elf Wochen sind der vom Deutschen Tierschutzbund genannte gute Aufnahmezeitpunkt. Gesundheit, Entwicklungsstand und bisherige Aufzucht müssen beim einzelnen Welpen trotzdem berücksichtigt werden.",
+        "Eine frühere Trennung kann im Einzelfall medizinisch nötig sein; die Entscheidung gehört dann in die Tierarztpraxis und nicht auf den Parkplatz.",
+        "Die Sozialisierungsphase endet nicht mit der Abgabe. Wer einen Hund aufnimmt, übernimmt selbst den Rest: Eingewöhnung, Beziehung, Training, Rückzug und Geduld.",
+        "Die Seite ersetzt keine individuelle tierärztliche oder verhaltenstherapeutische Einschätzung für den konkreten Welpen."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutz-Hundeverordnung § 2 Abs. 4",
+          "url": "https://www.gesetze-im-internet.de/tierschhuv/__2.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Anschaffung und Vermittlung beim Hund",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/anschaffung-und-vermittlung/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Illegaler Welpenhandel",
+          "url": "https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/"
+        },
+        {
+          "label": "TVT: Merkblätter für Heimtiere",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/"
+        },
+        {
+          "label": "Bundestierärztekammer",
+          "url": "https://www.bundestieraerztekammer.de"
+        }
+      ],
+      "social": {
+        "title": "Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)",
+        "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze, Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
+        "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -1938,6 +1996,7 @@
       ],
       "facts": [
         "Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.",
+        "Rund 350.000 Tiere werden jährlich neu in deutschen Tierheimen aufgenommen.",
         "Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.",
         "Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.",
         "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.",
@@ -1957,6 +2016,10 @@
         {
           "label": "Deutscher Tierschutzbund: Tierheime",
           "url": "https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Tierheime und Bundeshaushalt",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/bundeshaushalt-droht-tierheime-im-stich-zu-lassen/"
         },
         {
           "label": "Streunerhilfe Plau e. V.",

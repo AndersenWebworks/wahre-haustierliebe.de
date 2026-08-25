@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-24",
+  "lastUpdated": "2026-08-25",
   "entries": [
     {
       "question": "Sollte eine Hündin oder Katze vor der Kastration einmal Junge bekommen?",
@@ -173,42 +173,22 @@
     },
     {
       "question": "Ab wann darf ein Welpe von seiner Mutter getrennt werden?",
-      "answer": "Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst nach Vollendung der achten Lebenswoche vom Muttertier getrennt werden. Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt. Die gesetzliche Untergrenze ist kein Zielalter; bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man länger.",
+      "answer": "Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung kommt nur infrage, wenn sie nach tierärztlichem Urteil zum Schutz vor Schmerzen, Leiden oder Schäden erforderlich ist. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
-      "question": "Welches Abgabealter empfehlen Tierärzte und Tierschutzbund für Hunde?",
-      "answer": "Der Deutsche Tierschutzbund empfiehlt für Hunde neun bis elf Wochen bei Mutter und Geschwistern als guten Aufnahmezeitpunkt. Damit hat der Welpe Zeit, Beißhemmung, Körpersprache und Frustrationstoleranz zu lernen, und ist robust genug für den Umzug.",
-      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
-    },
-    {
-      "question": "Ist die achte Lebenswoche das Zielalter für die Abgabe?",
-      "answer": "Nein, die achte Woche ist nur die gesetzliche Untergrenze nach § 2 Abs. 4 TierSchHuV. Wer in dieser Woche abgibt, nimmt dem Welpen wichtige Lernzeit bei Mutter und Geschwistern. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.",
-      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
-    },
-    {
-      "question": "Woran erkenne ich illegalen Welpenhandel?",
-      "answer": "Warnzeichen sind Welpen sichtbar unter acht Wochen, fehlende oder gefälschte Papiere, Übergabeorte wie Parkplätze oder Raststätten, eine nicht gezeigte Mutterhündin, deutlich zu günstige Preise und aggressiver Zeitdruck auf einen schnellen Kauf. Verdachtsfälle gehören zum Veterinäramt oder zur Polizei.",
-      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
-    },
-    {
-      "question": "Darf ein Züchter Welpen vor der achten Woche abgeben?",
-      "answer": "In Deutschland nicht ohne tierärztliches Schutzurteil. Wer einen Welpen vor der achten Lebenswoche anbietet oder verkauft, verstößt gegen § 2 Abs. 4 der Tierschutz-Hundeverordnung. Das gilt auch für Importe aus dem EU-Ausland.",
-      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
-    },
-    {
-      "question": "Was tun, wenn ich bereits einen zu jungen Welpen übernommen habe?",
-      "answer": "Den Welpen am gleichen Tag tierärztlich untersuchen lassen, alle Papiere und Übergabe-Informationen sichern und den Verkauf dem Veterinäramt oder der Polizei melden, wenn der Verdacht auf illegalen Handel besteht. Nicht eigenmächtig versuchen, den Welpen zur Mutter oder in den Wurf zurückzubringen.",
-      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
-    },
-    {
       "question": "Ab wann darf ein Kätzchen ausziehen?",
-      "answer": "Für Katzen gibt es in Deutschland kein allgemeines gesetzliches Mindestabgabealter. Zehn Wochen sind nur die untere fachliche Empfehlung; zwölf Wochen bei Mutter und Geschwistern sind der vernünftige Zielpunkt für gut sozialisierte Kitten. Bei schüchternen, kranken oder schlecht sozialisierten Tieren kann eine spätere Abgabe richtig sein. Die EU-Tollwutregel betrifft Impfung und Transport, nicht automatisch das Abgabealter.",
+      "answer": "Für Katzen gibt es in Deutschland kein gesetzliches Mindestabgabealter. Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern. Die EU-Tollwutregel ab zwölf Wochen betrifft Impfung und Transport, nicht automatisch das Abgabealter.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
       "question": "Was gilt bei Meerschweinchen und Kaninchen?",
-      "answer": "Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein, Zwergkaninchen mindestens neun Wochen. Beide Arten brauchen passende Artgenossen; ein Meerschweinchen ersetzt kein Kaninchen und umgekehrt. Bei Meerschweinchen ist eine sichere Geschlechtsbestimmung wichtig, weil Weibchen ab etwa drei Wochen und Männchen oft ab vier bis acht Wochen geschlechtsreif werden.",
+      "answer": "Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein, Zwergkaninchen mindestens neun Wochen. Beide Arten brauchen Artgenossen. Bei Meerschweinchen ist außerdem eine frühe, sichere Geschlechtsbestimmung wichtig, weil Weibchen ab etwa drei Wochen und Männchen oft ab vier bis acht Wochen geschlechtsreif werden.",
+      "source": "https://wahre-haustierliebe.de/adoption/index.html"
+    },
+    {
+      "question": "Was kann ich tun, wenn ich ein Tier zu früh übernommen habe?",
+      "answer": "Lass das Tier zeitnah tierärztlich untersuchen, sichere alle Angaben zur Herkunft und kläre eine mögliche Rückkehr zu Mutter oder Geschwistern nur fachkundig. Bei Verdacht auf illegalen Handel kannst du den Verkauf dem Veterinäramt oder der Polizei melden.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
@@ -227,9 +207,29 @@
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
-      "question": "Was kann ich tun, wenn ich ein Tier zu früh übernommen habe?",
-      "answer": "Lass das Tier zeitnah tierärztlich untersuchen, sichere alle Angaben zur Herkunft und kläre eine mögliche Rückkehr zu Mutter oder Geschwistern nur fachkundig. Bei Verdacht auf illegalen Handel kannst du den Verkauf dem Veterinäramt oder der Polizei melden.",
-      "source": "https://wahre-haustierliebe.de/adoption/index.html"
+      "question": "Ab wann darf ein Welpe in Deutschland von der Mutter getrennt werden?",
+      "answer": "Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung ist nur zulässig, wenn sie nach tierärztlichem Urteil zum Schutz des Muttertieres oder des Welpen vor Schmerzen, Leiden oder Schäden erforderlich ist.",
+      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
+    },
+    {
+      "question": "Welches Abgabealter empfehlen Tierärzte und Tierschutzbund?",
+      "answer": "Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt. Dann ist der Welpe vollständig von der Mutter entwöhnt und hat den ersten Teil der wichtigen Prägephase bei Mutter und Geschwistern verbracht.",
+      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
+    },
+    {
+      "question": "Warum ist die achte Woche nicht das Zielalter?",
+      "answer": "Die achte Woche ist nur die gesetzliche Untergrenze. Wer in dieser Woche abgibt, nimmt dem Welpen wichtige Lernzeit bei Mutter und Geschwistern. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.",
+      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
+    },
+    {
+      "question": "Woran erkenne ich illegalen Welpenhandel?",
+      "answer": "Warnzeichen sind ein sehr junger, kranker oder verängstigter Welpe, eine Übergabe an einem öffentlichen Ort, fehlende oder unplausible Impf- und Herkunftsnachweise sowie kein Zugang zum Muttertier. Verdachtsfälle gehören zum Veterinäramt oder zur Polizei.",
+      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
+    },
+    {
+      "question": "Darf ein Welpe vor einem Alter von über acht Wochen von der Mutter getrennt werden?",
+      "answer": "Nein. § 2 Abs. 4 TierSchHuV erlaubt eine frühere Trennung nur, wenn sie nach tierärztlichem Urteil zum Schutz des Muttertieres oder des Welpen vor Schmerzen, Leiden oder Schäden erforderlich ist.",
+      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
     },
     {
       "question": "Hilft Homöopathie bei Tieren?",

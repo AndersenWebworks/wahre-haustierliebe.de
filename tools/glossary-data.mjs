@@ -825,7 +825,7 @@ export const glossaryAnnotationsByPage = {
   ],
   adoption: [
     { from: 'Adoption statt Kauf', to: `${mark('adoption', 'Adoption')} statt Kauf` },
-    { from: 'Tierheimtiere sind geimpft, kastriert, gechippt', to: `${mark('tierheim', 'Tierheimtiere')} sind geimpft, kastriert, gechippt` },
+    { from: 'Tierheimtiere werden je nach Tierart, Gesundheitsstatus und Aufenthaltsdauer tierärztlich versorgt', to: `${mark('tierheim', 'Tierheimtiere')} werden je nach Tierart, Gesundheitsstatus und Aufenthaltsdauer tierärztlich versorgt` },
     { from: 'Die Schutzgebühr (50–350 Euro je nach Tierart)', to: `Die ${mark('schutzgebuehr', 'Schutzgebühr')} (50–350 Euro je nach Tierart)` },
     { from: 'Tiere aus der Zoohandlung', to: `Tiere aus der ${mark('zoohandel', 'Zoohandlung')}` },
     { from: 'stammen aus Zuchtbetrieben', to: `stammen aus ${mark('vermehrer', 'Zuchtbetrieben')}` },

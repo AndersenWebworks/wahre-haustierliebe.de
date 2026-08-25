@@ -14,7 +14,8 @@ const sourcePath = path.join(projectRoot, 'src', 'site-source.html');
 const legacyIndexPath = path.join(projectRoot, 'index.html');
 const baseUrl = 'https://wahre-haustierliebe.de';
 const siteName = 'Wa(h)re Haustier(liebe)';
-const lastmod = '2026-06-15';
+// Keep generated discovery metadata current while allowing reproducible releases in CI.
+const lastmod = process.env.SEO_LASTMOD || '2026-08-25';
 const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Wa(h)re Haustier(liebe)">
   <path fill="#b91f2f" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Z"/>
   <path fill="#8f1524" d="M16 29 13.6 27C6.8 21.4 3 17.5 3 11.1 3 6.5 6.4 3.4 10.4 3.4c2.5 0 4.7 1.3 5.6 3.4.9-2.1 3.1-3.4 5.6-3.4 4 0 7.4 3.1 7.4 7.7 0 6.4-3.8 10.3-10.6 15.9L16 29Zm0-3.1.8-.7c6.1-5 9.5-8.3 9.5-13.9 0-3-2.1-5.1-4.9-5.1-2.3 0-4 1.4-4.8 4.1h-1.2c-.8-2.7-2.5-4.1-4.8-4.1-2.8 0-4.9 2.1-4.9 5.1 0 5.6 3.4 8.9 9.5 13.9l.8.7Z" opacity=".65"/>
@@ -95,6 +96,16 @@ const pages = [
     description: 'Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.',
     intent: 'Hund anschaffen oder Hundehaltung verbessern',
     priority: '0.9',
+  },
+  {
+    id: 'hunde-abgabealter',
+    slug: 'hunde/abgabealter',
+    title: 'Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)',
+    description: 'Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze, Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.',
+    intent: 'Abgabealter von Welpen rechtlich und tierschutzfachlich prüfen',
+    priority: '0.9',
+    lastmod: '2026-08-24',
+    standaloneSource: 'docs/hunde-abgabealter-page-draft.html',
   },
   {
     id: 'hund-im-buero',
@@ -428,6 +439,16 @@ const faqByPage = {
     ['Ab wann darf ein Kätzchen ausziehen?', 'Für Katzen gibt es in Deutschland kein gesetzliches Mindestabgabealter. Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern. Die EU-Tollwutregel ab zwölf Wochen betrifft Impfung und Transport, nicht automatisch das Abgabealter.'],
     ['Was gilt bei Meerschweinchen und Kaninchen?', 'Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein, Zwergkaninchen mindestens neun Wochen. Beide Arten brauchen Artgenossen. Bei Meerschweinchen ist außerdem eine frühe, sichere Geschlechtsbestimmung wichtig, weil Weibchen ab etwa drei Wochen und Männchen oft ab vier bis acht Wochen geschlechtsreif werden.'],
     ['Was kann ich tun, wenn ich ein Tier zu früh übernommen habe?', 'Lass das Tier zeitnah tierärztlich untersuchen, sichere alle Angaben zur Herkunft und kläre eine mögliche Rückkehr zu Mutter oder Geschwistern nur fachkundig. Bei Verdacht auf illegalen Handel kannst du den Verkauf dem Veterinäramt oder der Polizei melden.'],
+    ['Was gilt bei Hamstern, Ratten, Degus und Chinchillas?', 'Hamster sind frühestens mit vier Wochen selbstständig. Ratten sollten mindestens sechs Wochen bei Mutter und Gruppe bleiben und immer mindestens zu zweit vermittelt werden. Bei Degus und Chinchillas ist das Ende der Säugezeit nur die Untergrenze: Entscheidend sind sichere Futteraufnahme, Gewicht, Gesundheit und eine passende soziale Gruppe.'],
+    ['Was gilt bei Frettchen?', 'Für Frettchen ist in den geprüften deutschen Quellen keine allgemeine gesetzliche Abgabewoche genannt. Fachinformationen nennen eine Säugezeit von etwa sechs bis acht Wochen. Wirklich verantwortbar ist die Abgabe erst, wenn die Tiere sicher selbstständig fressen, gesund und gut sozialisiert sind und in eine passende Paar- oder Gruppenhaltung ziehen.'],
+    ['Was gilt bei Ziervögeln?', 'Für Ziervögel gibt es keine einheitliche Abgabewoche für alle Arten. Ein Jungvogel sollte vollständig selbstständig fressen, sicher fliegen und orientieren können, gesund sein und mit passenden Artgenossen vermittelt werden. Bei Wellensittichen betont der Deutsche Tierschutzbund die soziale Haltung; eine pauschale Zahl wäre für alle Vogelarten unseriös.'],
+  ],
+  'hunde-abgabealter': [
+    ['Ab wann darf ein Welpe in Deutschland von der Mutter getrennt werden?', 'Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung ist nur zulässig, wenn sie nach tierärztlichem Urteil zum Schutz des Muttertieres oder des Welpen vor Schmerzen, Leiden oder Schäden erforderlich ist.'],
+    ['Welches Abgabealter empfehlen Tierärzte und Tierschutzbund?', 'Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt. Dann ist der Welpe vollständig von der Mutter entwöhnt und hat den ersten Teil der wichtigen Prägephase bei Mutter und Geschwistern verbracht.'],
+    ['Warum ist die achte Woche nicht das Zielalter?', 'Die achte Woche ist nur die gesetzliche Untergrenze. Wer in dieser Woche abgibt, nimmt dem Welpen wichtige Lernzeit bei Mutter und Geschwistern. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.'],
+    ['Woran erkenne ich illegalen Welpenhandel?', 'Warnzeichen sind ein sehr junger, kranker oder verängstigter Welpe, eine Übergabe an einem öffentlichen Ort, fehlende oder unplausible Impf- und Herkunftsnachweise sowie kein Zugang zum Muttertier. Verdachtsfälle gehören zum Veterinäramt oder zur Polizei.'],
+    ['Darf ein Welpe vor einem Alter von über acht Wochen von der Mutter getrennt werden?', 'Nein. § 2 Abs. 4 TierSchHuV erlaubt eine frühere Trennung nur, wenn sie nach tierärztlichem Urteil zum Schutz des Muttertieres oder des Welpen vor Schmerzen, Leiden oder Schäden erforderlich ist.'],
   ],
   wissen: [
     ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es in der Tiermedizin keinen belastbaren, anerkannten Wirksamkeitsnachweis. Das größte Risiko ist verlorene Zeit: Schmerzen, Infektionen, Atemnot, Harnprobleme oder andere Warnzeichen gehören tierärztlich abgeklärt.'],
@@ -733,6 +754,7 @@ const evidenceByPage = {
   adoption: {
     facts: [
       'Adoption hilft einem bereits existierenden Tier und erzeugt keinen zusätzlichen Nachschub.',
+      'Rund 350.000 Tiere werden jährlich neu in deutschen Tierheimen aufgenommen.',
       'Seriöse Vermittlung prüft Wohnsituation, Erfahrung und Passung, statt nur zu verkaufen.',
       'Eine gute Vorbereitung auf Tierheimfragen hilft, ehrlich über Alltag, Betreuung, Kosten und Grenzen zu sprechen.',
       'Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.',
@@ -743,6 +765,7 @@ const evidenceByPage = {
     ],
     sources: [
       ['Deutscher Tierschutzbund: Tierheime', 'https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/'],
+      ['Deutscher Tierschutzbund: Tierheime und Bundeshaushalt', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/bundeshaushalt-droht-tierheime-im-stich-zu-lassen/'],
       ['Streunerhilfe Plau e. V.', 'https://streunerhilfe-plau.de'],
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
       ['Tierschutz-Hundeverordnung § 2 Abs. 4', 'https://www.gesetze-im-internet.de/tierschhuv/__2.html'],
@@ -761,6 +784,27 @@ const evidenceByPage = {
       'Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.',
       'Für Katzen, Frettchen und Vögel dürfen Gesundheits-, Transport- und Haltungsregeln nicht als einheitliches Abgabealter ausgegeben werden.',
       'Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung.',
+    ],
+  },
+  'hunde-abgabealter': {
+    facts: [
+      'Nach § 2 Abs. 4 TierSchHuV darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt.',
+      'Der Kontakt zu Mutter und Geschwistern gibt dem Welpen in dieser wichtigen Lernphase soziale Sicherheit und Erfahrung mit anderen Hunden.',
+      'Warnzeichen des illegalen Welpenhandels sind sehr junge, kranke oder verängstigte Tiere, unplausible Dokumente, kein Zugang zum Muttertier und Übergaben an öffentlichen Orten.',
+      'Für eine verantwortungsvolle Vermittlung sprechen eine sichtbare Mutterhündin, plausible Dokumente, ein Besuch in der Aufzuchtumgebung und nachvollziehbare Antworten ohne Zeitdruck.',
+    ],
+    sources: [
+      ['Tierschutz-Hundeverordnung § 2 Abs. 4', 'https://www.gesetze-im-internet.de/tierschhuv/__2.html'],
+      ['Deutscher Tierschutzbund: Anschaffung und Vermittlung beim Hund', 'https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/anschaffung-und-vermittlung/'],
+      ['Deutscher Tierschutzbund: Illegaler Welpenhandel', 'https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/'],
+      ['TVT: Merkblätter für Heimtiere', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/'],
+      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+    ],
+    guardrails: [
+      'Neun bis elf Wochen sind der vom Deutschen Tierschutzbund genannte gute Aufnahmezeitpunkt. Gesundheit, Entwicklungsstand und bisherige Aufzucht müssen beim einzelnen Welpen trotzdem berücksichtigt werden.',
+      'Eine frühere Trennung kann im Einzelfall medizinisch nötig sein; die Entscheidung gehört dann in die Tierarztpraxis und nicht auf den Parkplatz.',
+      'Die Sozialisierungsphase endet nicht mit der Abgabe. Wer einen Hund aufnimmt, übernimmt selbst den Rest: Eingewöhnung, Beziehung, Training, Rückzug und Geduld.',
+      'Die Seite ersetzt keine individuelle tierärztliche oder verhaltenstherapeutische Einschätzung für den konkreten Welpen.',
     ],
   },
   petitionen: {
@@ -1719,6 +1763,7 @@ const keywordByPage = {
   startseite: ['Haustierhaltung', 'Tierwohl', 'Tierschutz', 'Adoption', 'Qualzucht', 'Tiernotfall'],
   mensch: ['Haustier anschaffen', 'Haustierkauf', 'Verantwortung', 'Kosten', 'Alltag'],
   hunde: ['Hund halten', 'Hund anschaffen', 'Hundekosten', 'Alleinbleiben', 'Erziehung', 'Zwingerhaltung'],
+  'hunde-abgabealter': ['Welpe Abgabealter', 'Welpen abgeben', 'Abgabe Hund', '8 Wochen Welpe', 'TierSchHuV', 'illegaler Welpenhandel', 'Sozialisierung Hund'],
   'hund-im-buero': ['Hund im Büro', 'Bürohund', 'Kollege Hund', 'Hund am Arbeitsplatz', 'Hundehaltung'],
   'hunde-stadtfest-rummel': ['Hund Stadtfest', 'Hund Rummel', 'Hund Weihnachtsmarkt', 'Hund Veranstaltung', 'Stresszeichen Hund'],
   katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
@@ -1751,11 +1796,11 @@ const keywordByPage = {
 };
 
 function pagePath(page) {
-  return page.slug ? `/${page.slug}/index.html` : '/index.html';
+  return page.slug ? `/${page.slug}/index.html` : '/';
 }
 
 function canonicalUrl(page) {
-  return `${baseUrl}${pagePath(page)}`;
+  return page.slug ? `${baseUrl}${pagePath(page)}` : `${baseUrl}/`;
 }
 
 function pageLastmod(page) {
@@ -1957,7 +2002,7 @@ function hrefFor(targetId, currentPage) {
   const target = pageById.get(targetId);
   if (!target || target.onHold) return '#';
   const prefix = prefixForSlug(currentPage.slug);
-  if (!target.slug) return `${prefix}index.html`;
+  if (!target.slug) return prefix || './';
   return `${prefix}${target.slug}/index.html`;
 }
 
@@ -2395,7 +2440,7 @@ function prefixAssets(html, prefix) {
 function rewriteScript(script) {
   let next = script;
   const routeMap = {
-    ...Object.fromEntries(publicPages.map((page) => [page.id, pagePath(page)])),
+    ...Object.fromEntries(publicPages.map((page) => [page.id, page.slug ? pagePath(page) : '/'])),
   };
 
   next = `var staticPageRoutes = ${JSON.stringify(routeMap, null, 2)};\n` +
@@ -2408,7 +2453,7 @@ function rewriteScript(script) {
     `function staticRouteFor(page) {\n` +
     `  var target = staticPageRoutes[page] || '/';\n` +
     `  var prefix = document.body ? (document.body.dataset.routePrefix || '') : '';\n` +
-    `  if (target === '/') return prefix ? prefix + 'index.html' : 'index.html';\n` +
+    `  if (target === '/') return prefix || './';\n` +
     `  return prefix + target.replace(/^\\//, '');\n` +
     `}\n` +
     `function assetUrl(src) {\n` +
@@ -3347,7 +3392,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfallplan-haustier', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'selbsttest', 'wissen', 'glossar'];
+  const important = ['hunde', 'hunde-abgabealter', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfallplan-haustier', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'petitionen', 'selbsttest', 'wissen', 'glossar'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',
@@ -3519,6 +3564,11 @@ async function main() {
       const section = buildAnimalHubSection(source, page);
       const html = buildHtmlPage({ page, header, section, commonAfterSections });
       await writeFileEnsured(outputPathFor(page), html);
+      continue;
+    }
+    if (page.standaloneSource) {
+      const standaloneSource = await fs.readFile(path.join(projectRoot, page.standaloneSource), 'utf8');
+      await writeFileEnsured(outputPathFor(page), standaloneSource);
       continue;
     }
     if (page.staticOnly) {
