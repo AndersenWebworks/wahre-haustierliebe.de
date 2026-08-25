@@ -207,7 +207,7 @@
       font-weight: 800;
     }
     .nav-meta-link {
-      color: var(--text-light);
+      color: var(--text-muted);
       font-size: 0.85rem;
     }
     .dropdown { position: relative; }
@@ -603,9 +603,9 @@
     .compare-card.good { border-left: 4px solid var(--primary); }
     .compare-card.good strong { color: var(--primary-dark); }
     .compare-card.risk { border-left: 4px solid var(--accent); }
-    .compare-card.risk strong { color: #B8862D; }
+    .compare-card.risk strong { color: #7A4D00; }
     .compare-card.bad { border-left: 4px solid var(--secondary); }
-    .compare-card.bad strong { color: var(--secondary); }
+    .compare-card.bad strong { color: #9C3F2F; }
 
     /* ========== SCROLL-TOP & FOCUS ========== */
     .scroll-top {
@@ -662,6 +662,13 @@
 .static-site a.card-link { color: var(--primary); }
 .static-site a.btn { text-decoration: none; }
 .static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }
+.static-site main :where(p, li, blockquote, dd, dt, figcaption) a:not(.btn, .card-link, .door-card, .entry-card, .animal-card) { text-decoration-line: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }
+.static-site .nav-meta-link { color: var(--text-muted); }
+.static-site .warning-box h3 { color: #9C3F2F; }
+.static-site .compare-card.risk strong { color: #7A4D00; }
+.static-site .compare-card.bad strong { color: #9C3F2F; }
+.static-site .support-section h2 { color: #7A4D00 !important; }
+.static-site .share-btn { color: var(--text) !important; border-color: var(--border) !important; }
 @media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }
 
 /* No-hero layout: hero copy spans the full width on this page */
@@ -836,7 +843,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="../../index.html" aria-label="Wa(h)re Haustier(liebe) Startseite">
-        <img class="site-logo-image" src="../../assets/images/optimized/wahre-haustierliebe-mark.png" alt="" aria-hidden="true" width="64" height="59" decoding="async">
+        <img class="site-logo-image" src="../../assets/images/optimized/wahre-haustierliebe-mark.png" srcset="../../assets/images/optimized/wahre-haustierliebe-mark.png 64w, ../../assets/images/wahre-haustierliebe-mark.png 208w" sizes="64px" alt="" aria-hidden="true" width="64" height="59" decoding="async">
         <span class="site-logo-text"><span class="brand-dark">Wa</span><span class="brand-red">(h)</span><span class="brand-dark">re Haustier</span><span class="brand-red">(liebe)</span></span>
       </a>
       <nav aria-label="Hauptnavigation">
@@ -960,7 +967,7 @@
     </div>
   </header>
 
-  <aside class="site-search" id="site-search" aria-label="Seitensuche" aria-hidden="true" inert>
+  <aside class="site-search" id="site-search" aria-label="Seitensuche" aria-hidden="true" inert="">
     <div class="site-search-form">
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
@@ -1096,16 +1103,16 @@
             <h2 id="leitgedanke-hund-abgabealter">Welpe / Jungtier – ein Kind, das schon allein fressen kann, aber die Familie noch braucht</h2>
             <p>Ein Welpe, der mit etwa vier Wochen beginnt, selbst aus dem Napf zu fressen, kann noch längst nicht ohne seine Mutter und seine Geschwister. Wer einen jungen Hund in seine Familie holt, holt sich ein Jungtier ins Haus, das in den kommenden Wochen noch sehr viel lernt: Beißhemmung, Körpersprache, Frustrationstoleranz, Rückzug und erste Bindung. Diese Lernzeit gelingt bei Mutter und Geschwistern am wirksamsten.</p>
             <p>Deshalb trennen wir beim Abgabealter drei Ebenen sauber voneinander:</p>
-            <div class="compare-mini" role="list">
-              <article class="compare-card risk" role="listitem">
+            <div class="compare-mini">
+              <article class="compare-card risk">
                 <strong>Rechtliche Untergrenze</strong>
                 <span>Die Tierschutz-Hundeverordnung setzt eine harte Grenze. Welpen unter acht Wochen dürfen in der Regel gar nicht abgegeben werden – eine frühere Trennung braucht ein tierärztliches Schutzurteil.</span>
               </article>
-              <article class="compare-card bad" role="listitem">
+              <article class="compare-card bad">
                 <strong>Ethische Untergrenze</strong>
                 <span>Die achte Woche ist nur der frühestmögliche Zeitpunkt. Wer in dieser Woche abgibt, nimmt dem Welpen entscheidende Lernzeit bei Mutter und Geschwistern.</span>
               </article>
-              <article class="compare-card good" role="listitem">
+              <article class="compare-card good">
                 <strong>Verantwortungsvolles Idealalter</strong>
                 <span>Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt. Entscheidend bleiben Entwicklung, Gesundheit, Mutter- und Geschwisterkontakt sowie eine passende neue Umgebung.</span>
               </article>
@@ -1317,7 +1324,7 @@
   </main>
 
 <!-- ===== FOOTER ===== -->
-  <section class="section" style="background: var(--accent-light); padding: 3rem 0;">
+  <section class="section support-section" style="background: var(--accent-light); padding: 3rem 0;">
     <div class="container text-center">
       <h2 style="color: #B8862D;">Diese Seite unterstützen</h2>
       <p style="max-width: 700px; margin: 0 auto 1rem;">Wa(h)re Haustier(liebe) ist ein privates Projekt – werbefrei, unabhängig und ehrenamtlich. Die laufenden Kosten für Hosting, Domain und Recherche tragen wir selbst. Wenn dir diese Seite geholfen hat, freuen wir uns über Unterstützung – für uns oder direkt für den Tierschutz:</p>
