@@ -1,0 +1,87 @@
+diff --git a/wiki/28-rig-system-proof.md b/wiki/28-rig-system-proof.md
+--- a/wiki/28-rig-system-proof.md
++++ b/wiki/28-rig-system-proof.md
+@@ -3,4 +3,4 @@
+ ## Status
+ 
+-**Implemented as an isolated proof on 2026-08-27.** The existing locomotion and
+-`ivo-rig` routes remain unchanged.
++**Technical hierarchy implemented; visual review rejected it on 2026-08-27.**
++The existing locomotion and `ivo-rig` routes remain unchanged.
+@@ -8,10 +8,10 @@
+ ## What the proof shows
+ 
+-The proof uses Phaser containers as a hierarchy for a pivot-authored quadruped
+-family kit. Body parts keep authored local pivots and parent relationships, so
+-the assembled creature can be framed as one coherent actor rather than a set of
+-independently centred images.
++The proof only shows that Phaser containers can hold a hierarchy for one
++pivot-authored quadruped kit. It does not turn the source drawings into a
++coherent animated body: the visible result still behaves like independently
++centred raster cutouts.
+ 
+ Pose clips are declarative and family-local. The proof includes idle, looping
+ walk, sniff, and sit-stand clips. The framing correction keeps the complete
+ body visible in the proof viewport, including the feet, head and tail area.
+@@ -19,11 +20,23 @@ Pose clips are declarative and family-local. The proof includes idle, looping
+ ## Working boundary
+ 
+ This is a focused rig and pose proof for one quadruped family kit. It does not
+ claim arbitrary part interchangeability, fish, bird, flock or swarm support, or
+-final cartoon-quality acceptance. Those questions remain separate future gates.
++final cartoon-quality acceptance. Those questions remain separate future reviews.
+ 
+ The proof is intentionally isolated: older locomotion routes and the existing
+ `ivo-rig` path are not refactored or replaced by this experiment.
+ 
++## Owner review
++
++The result is rejected as an animation solution. The source images were not
++drawn for a cutout rig: their canvas offsets and static pivots do not establish
++visible joints, a shared foot line or changing contact points. The pose clips
++then tween each part independently, so body weight, joint continuity and
++grounding drift even though the hierarchy itself is technically valid.
++
++Phaser `Container` supplies transforms and draw order, not mesh deformation,
++inverse kinematics, contact constraints or an animation-authoring workflow.
++More hand-entered transform tables would therefore repeat the failed approach
++at larger scale.
+ 
+ ## Implementation shape
+@@ -36,8 +48,9 @@ Pose clips are declarative and family-local. The proof includes idle, looping
+ - The actor framing is derived from the assembled body bounds, with a visible
+   safety margin around the complete creature.
+ 
+ ## Decision
+ 
+-Keep this rig proof as a bounded option for quadruped variants. Do not promote
+-it to a universal animation system or a final art-direction decision until a
+-separate review establishes the missing family and quality evidence.
++Retain this page as a failed diagnostic, not as the Ivo animation pipeline.
++The next proof must use rig-ready source art and a real authoring/runtime
++pipeline rather than more hand-entered Phaser transforms. This page does not
++choose Godot, DragonBones or another runtime yet.
+diff --git a/wiki/09-decision-log.md b/wiki/09-decision-log.md
+--- a/wiki/09-decision-log.md
++++ b/wiki/09-decision-log.md
+@@ -1,3 +1,20 @@
+ # Decision Log
+ 
++## 2026-08-27 - Container Rig Proof Rejected As Animation Solution
++
++**Status:** visual owner rejection; technical hierarchy retained only as a
++diagnostic.
++
++The isolated rig proof shows Phaser parent-child containers, but it does not
++solve the visible animation problem. The raster pieces were not authored for a
++cutout rig, their static pivots describe source canvases rather than visible
++joints or foot contacts, and per-part tweens let weight and grounding drift.
++The result is therefore a moved-apart sprite assembly, not a convincing
++cartoon performance.
++
++The next animation proof must start with rig-ready artwork and a real
++authoring/runtime pipeline. More numeric transforms inside Phaser would only
++repeat the rejected approach at larger scale. Godot, DragonBones and a
++whole-body frame pipeline remain candidates; no renderer is selected here.
++
+ ## 2026-08-27 - Isolated Rig Proof Uses A Quadruped Family Kit
