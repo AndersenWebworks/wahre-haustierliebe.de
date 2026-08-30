@@ -135,7 +135,7 @@
 - https://wahre-haustierliebe.de/voegel/krankheit-erkennen/index.html - Krankheitszeichen bei Vögeln ernst nehmen.
 - https://wahre-haustierliebe.de/voegel/qualzucht/index.html - Qualzucht bei Heimvögeln erkennen.
 - https://wahre-haustierliebe.de/voegel/entscheidung/index.html - Entscheidung vor der Vogelhaltung prüfen.
-- https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html - Kaninchenhaltung verantwortungsvoll planen.
+- https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html - Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.
 - https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html - Meerschweinchenhaltung verantwortungsvoll planen.
 - https://wahre-haustierliebe.de/kleintiere/hamster/index.html - Goldhamsterhaltung vor der Anschaffung realistisch prüfen.
 - https://wahre-haustierliebe.de/kleintiere/ratten/index.html - Rattenhaltung verantwortungsvoll planen.
@@ -174,12 +174,15 @@ URL: https://wahre-haustierliebe.de/petitionen/index.html
 Facts:
 - Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.
 - VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.
-- Wa(h)re Haustier(liebe) führt die Petition nicht selbst, sondern verweist zur Petitionsseite der initiierenden Organisation.
+- Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.
+- PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.
+- Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.
 Important boundaries:
 - Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.
 - Vor der Unterschrift gelten die Hinweise und Datenschutzbestimmungen der verlinkten Petitionsseite.
 Sources:
 - VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!: https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media
+- PETA Deutschland: Tierverkauf für den Zoohandel stoppen: https://www.peta.de/aktiv/massenzucht-zoohandel-petition/
 
 ### Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?
 URL: https://wahre-haustierliebe.de/mensch/index.html
@@ -382,6 +385,22 @@ Sources:
 - Cats Protection: Wohnungskatzen und Anforderungen an die Innenhaltung: https://www.cats.org.uk/help-and-advice/home-and-environment/indoor-cats
 - Schleswig-Holstein: landesweite Katzenschutzverordnung ab Juli 2026: https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/IX/_startseite/Artikel2026/II/260625_katzenschutzVO/260625_katzenschutzvo
 
+### Kaninchen halten - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html
+Facts:
+- Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.
+- Der Deutsche Tierschutzbund empfiehlt beim Einzug in ein neues Zuhause ein Mindestalter von zehn Wochen.
+- Moppel-Hoppel Tiere in Not vermittelt Jungtierpaare ab der zwölften Woche und zeigt damit eine strengere Vermittlungspraxis.
+- Kaninchen brauchen passende Artgenossen; ein Mensch oder ein Meerschweinchen ersetzt keinen Kaninchenpartner.
+Important boundaries:
+- Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe.
+- Zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine zusätzliche gesetzliche Grenze.
+- Gesundheit, Impfschutz, Geschlechtsbestimmung, Artgenossen und die neue Haltung müssen vor dem Umzug geklärt sein.
+Sources:
+- Tierschutz-Nutztierhaltungsverordnung § 37: https://www.gesetze-im-internet.de/tierschnutztv/__37.html
+- Deutscher Tierschutzbund: Zwergkaninchen: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/
+- Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen: https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm
+
 ### Goldhamster halten - Wa(h)re Haustier(liebe)
 URL: https://wahre-haustierliebe.de/kleintiere/hamster/index.html
 Facts:
@@ -465,7 +484,7 @@ Facts:
 - Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.
 - Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.
 - Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.
-- Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.
+- Junge Meerschweinchen sollten mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Deutsche Tierschutzbund beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine strengere Vermittlungsorientierung.
 - Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.
 Important boundaries:
 - Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
@@ -481,7 +500,9 @@ Sources:
 - Tierschutz-Hundeverordnung § 2 Abs. 4: https://www.gesetze-im-internet.de/tierschhuv/__2.html
 - Deutscher Tierschutzbund: Katzenhaltung: https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/
 - Deutscher Tierschutzbund: Illegaler Welpenhandel: https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/
-- Deutscher Tierschutzbund: Haltung von Zwergkaninchen: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Bestellliste/Kleintiere_und_Voegel/Allgemein/Broschuere_Die_Haltung_von_Zwergkaninchen.pdf
+- Tierschutz-Nutztierhaltungsverordnung § 37: https://www.gesetze-im-internet.de/tierschnutztv/__37.html
+- Deutscher Tierschutzbund: Zwergkaninchen: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/
+- Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen: https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm
 - Deutscher Tierschutzbund: Haltung von Meerschweinchen: https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/
 - Bundestierärztekammer: Heimtierhandel 2024: https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2025/artikel/DTBl_08-2025_Heimtierhandel.pdf
 - Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen: https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en

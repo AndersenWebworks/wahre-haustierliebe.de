@@ -336,8 +336,8 @@ var staticSiteSearchIndex = [
   {
     "id": "kleintiere-kaninchen",
     "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
-    "description": "Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.",
-    "terms": "Kaninchenhaltung verantwortungsvoll planen. kleintiere/kaninchen kleintiere kaninchen"
+    "description": "Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.",
+    "terms": "Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen. kleintiere/kaninchen kleintiere kaninchen"
   },
   {
     "id": "kleintiere-meerschweinchen",

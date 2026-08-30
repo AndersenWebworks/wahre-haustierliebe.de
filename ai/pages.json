@@ -135,13 +135,19 @@
         "Tierschutz Petition",
         "Welpenhandel",
         "Social Media Tierhandel",
+        "Tierverkauf",
+        "Zoohandel",
+        "Kleintiere",
         "VIER PFOTEN",
+        "PETA",
         "Meta"
       ],
       "facts": [
         "Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.",
         "VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.",
-        "Wa(h)re Haustier(liebe) führt die Petition nicht selbst, sondern verweist zur Petitionsseite der initiierenden Organisation."
+        "Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.",
+        "PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.",
+        "Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen."
       ],
       "citationGuardrails": [
         "Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.",
@@ -151,6 +157,10 @@
         {
           "label": "VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!",
           "url": "https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media"
+        },
+        {
+          "label": "PETA Deutschland: Tierverkauf für den Zoohandel stoppen",
+          "url": "https://www.peta.de/aktiv/massenzucht-zoohandel-petition/"
         }
       ],
       "social": {
@@ -1433,8 +1443,8 @@
       "id": "kleintiere-kaninchen",
       "url": "https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html",
       "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.",
-      "intent": "Kaninchenhaltung verantwortungsvoll planen.",
+      "description": "Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.",
+      "intent": "Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.",
       "keywords": [
         "Kleintiere halten",
         "Kaninchen",
@@ -1442,12 +1452,34 @@
         "Hamster",
         "Ratten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.",
+        "Der Deutsche Tierschutzbund empfiehlt beim Einzug in ein neues Zuhause ein Mindestalter von zehn Wochen.",
+        "Moppel-Hoppel Tiere in Not vermittelt Jungtierpaare ab der zwölften Woche und zeigt damit eine strengere Vermittlungspraxis.",
+        "Kaninchen brauchen passende Artgenossen; ein Mensch oder ein Meerschweinchen ersetzt keinen Kaninchenpartner."
+      ],
+      "citationGuardrails": [
+        "Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe.",
+        "Zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine zusätzliche gesetzliche Grenze.",
+        "Gesundheit, Impfschutz, Geschlechtsbestimmung, Artgenossen und die neue Haltung müssen vor dem Umzug geklärt sein."
+      ],
+      "sources": [
+        {
+          "label": "Tierschutz-Nutztierhaltungsverordnung § 37",
+          "url": "https://www.gesetze-im-internet.de/tierschnutztv/__37.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Zwergkaninchen",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/"
+        },
+        {
+          "label": "Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen",
+          "url": "https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm"
+        }
+      ],
       "social": {
         "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.",
+        "description": "Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-kaninchen.png",
         "imageAlt": "Kaninchen sitzt in einem begrünten Außengehege.",
         "imageWidth": 1200,
@@ -2002,7 +2034,7 @@
         "Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.",
         "Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.",
         "Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.",
-        "Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.",
+        "Junge Meerschweinchen sollten mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Deutsche Tierschutzbund beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine strengere Vermittlungsorientierung.",
         "Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu."
       ],
       "citationGuardrails": [
@@ -2042,8 +2074,16 @@
           "url": "https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/"
         },
         {
-          "label": "Deutscher Tierschutzbund: Haltung von Zwergkaninchen",
-          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Bestellliste/Kleintiere_und_Voegel/Allgemein/Broschuere_Die_Haltung_von_Zwergkaninchen.pdf"
+          "label": "Tierschutz-Nutztierhaltungsverordnung § 37",
+          "url": "https://www.gesetze-im-internet.de/tierschnutztv/__37.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Zwergkaninchen",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/"
+        },
+        {
+          "label": "Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen",
+          "url": "https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm"
         },
         {
           "label": "Deutscher Tierschutzbund: Haltung von Meerschweinchen",

@@ -79,7 +79,7 @@ const pages = [
     description: 'Laufende Petitionen zum Schutz von Tieren: Anliegen, Initiator und Adressat auf einen Blick sowie der direkte Link zur Unterschrift.',
     intent: 'Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben',
     priority: '0.65',
-    lastmod: '2026-08-25',
+    lastmod: '2026-08-30',
   },
   {
     id: 'mensch',
@@ -178,7 +178,7 @@ const pages = [
     description: 'Adoption aus dem Tierschutz statt Kauf: Abgabealter für Welpen, Kitten und Kleintiere, Folgen zu früher Trennung, Schutzgebühr und seriöse Vermittlung.',
     intent: 'Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen',
     priority: '0.9',
-    lastmod: '2026-08-21',
+    lastmod: '2026-08-30',
   },
   {
     id: 'selbsttest',
@@ -341,7 +341,7 @@ const topicPages = [
   ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.'],
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
-  ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung verantwortungsvoll planen.'],
+  ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.', { lastmod: '2026-08-30' }],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen halten', 'Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.', 'Meerschweinchenhaltung verantwortungsvoll planen.'],
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
@@ -426,6 +426,10 @@ const faqByPage = {
   kleintiere: [
     ['Wie viel Platz braucht ein Kaninchen?', 'Mindestens 2-3 Quadratmeter pro Kaninchen als dauerhaft zugängliche Grundfläche plus täglichen Auslauf. Handelsübliche Käfige sind fast immer zu klein.'],
   ],
+  'kleintiere-kaninchen': [
+    ['Ab wann sollte ein junges Kaninchen ausziehen?', 'Der Deutsche Tierschutzbund empfiehlt beim Einzug mindestens zehn Wochen. Zwölf Wochen sind die vorsichtigere Orientierung, wie die Vermittlungspraxis einer spezialisierten Tierhilfe zeigt. Kaninchen ziehen niemals allein, sondern mit einem passenden Artgenossen ein.'],
+    ['Bedeuten 28 Tage, dass ein Kaninchen abgegeben werden darf?', 'Nein. Die Regel von über 28 Tagen in § 37 Tierschutz-Nutztierhaltungsverordnung betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen. Sie ist keine Empfehlung für den Umzug eines Heimtierkaninchens.'],
+  ],
   'kleintiere-hamster': [
     ['Kann ich zwei Goldhamster zusammen halten?', 'Nein. Goldhamster sind strikte Einzelgänger. Ein zweites Tier bedeutet keinen Sozialkontakt, sondern kann Revierstress, Kämpfe und schwere Verletzungen auslösen.'],
     ['Wie groß muss ein Goldhamstergehege sein?', 'Der Deutsche Tierschutzbund empfiehlt mindestens einen Quadratmeter Grundfläche, mindestens 70 Zentimeter Höhe und mindestens 30 Zentimeter grabfähige Einstreu. Mehr Fläche und eine gute Struktur bleiben sinnvoll.'],
@@ -437,7 +441,7 @@ const faqByPage = {
     ['Warum stellen Tierheime so viele Fragen?', 'Seriöse Tierheime prüfen Alltag, Wohnsituation, Erfahrung und Absicherung, damit ein Tier nicht wieder in ein unpassendes Zuhause vermittelt wird. Die Fragen sollen das Tier schützen, nicht Bewerber bloßstellen.'],
     ['Ab wann darf ein Welpe von seiner Mutter getrennt werden?', 'Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung kommt nur infrage, wenn sie nach tierärztlichem Urteil zum Schutz vor Schmerzen, Leiden oder Schäden erforderlich ist. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.'],
     ['Ab wann darf ein Kätzchen ausziehen?', 'Für Katzen gibt es in Deutschland kein gesetzliches Mindestabgabealter. Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern. Die EU-Tollwutregel ab zwölf Wochen betrifft Impfung und Transport, nicht automatisch das Abgabealter.'],
-    ['Was gilt bei Meerschweinchen und Kaninchen?', 'Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein, Zwergkaninchen mindestens neun Wochen. Beide Arten brauchen Artgenossen. Bei Meerschweinchen ist außerdem eine frühe, sichere Geschlechtsbestimmung wichtig, weil Weibchen ab etwa drei Wochen und Männchen oft ab vier bis acht Wochen geschlechtsreif werden.'],
+    ['Was gilt bei Meerschweinchen und Kaninchen?', 'Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Verband beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine vorsichtigere Vermittlungsorientierung. Die 28-Tage-Regel betrifft nur das Absetzen in Zuchtkaninchenbeständen. Beide Arten brauchen Artgenossen.'],
     ['Was kann ich tun, wenn ich ein Tier zu früh übernommen habe?', 'Lass das Tier zeitnah tierärztlich untersuchen, sichere alle Angaben zur Herkunft und kläre eine mögliche Rückkehr zu Mutter oder Geschwistern nur fachkundig. Bei Verdacht auf illegalen Handel kannst du den Verkauf dem Veterinäramt oder der Polizei melden.'],
     ['Was gilt bei Hamstern, Ratten, Degus und Chinchillas?', 'Hamster sind frühestens mit vier Wochen selbstständig. Ratten sollten mindestens sechs Wochen bei Mutter und Gruppe bleiben und immer mindestens zu zweit vermittelt werden. Bei Degus und Chinchillas ist das Ende der Säugezeit nur die Untergrenze: Entscheidend sind sichere Futteraufnahme, Gewicht, Gesundheit und eine passende soziale Gruppe.'],
     ['Was gilt bei Frettchen?', 'Für Frettchen ist in den geprüften deutschen Quellen keine allgemeine gesetzliche Abgabewoche genannt. Fachinformationen nennen eine Säugezeit von etwa sechs bis acht Wochen. Wirklich verantwortbar ist die Abgabe erst, wenn die Tiere sicher selbstständig fressen, gesund und gut sozialisiert sind und in eine passende Paar- oder Gruppenhaltung ziehen.'],
@@ -640,6 +644,24 @@ const evidenceByPage = {
       'Artgenossen heißt gleiche Art, nicht Kaninchen plus Meerschweinchen.',
     ],
   },
+  'kleintiere-kaninchen': {
+    facts: [
+      'Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.',
+      'Der Deutsche Tierschutzbund empfiehlt beim Einzug in ein neues Zuhause ein Mindestalter von zehn Wochen.',
+      'Moppel-Hoppel Tiere in Not vermittelt Jungtierpaare ab der zwölften Woche und zeigt damit eine strengere Vermittlungspraxis.',
+      'Kaninchen brauchen passende Artgenossen; ein Mensch oder ein Meerschweinchen ersetzt keinen Kaninchenpartner.',
+    ],
+    sources: [
+      ['Tierschutz-Nutztierhaltungsverordnung § 37', 'https://www.gesetze-im-internet.de/tierschnutztv/__37.html'],
+      ['Deutscher Tierschutzbund: Zwergkaninchen', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/'],
+      ['Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen', 'https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm'],
+    ],
+    guardrails: [
+      'Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe.',
+      'Zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine zusätzliche gesetzliche Grenze.',
+      'Gesundheit, Impfschutz, Geschlechtsbestimmung, Artgenossen und die neue Haltung müssen vor dem Umzug geklärt sein.',
+    ],
+  },
   'kleintiere-hamster': {
     facts: [
       'Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.',
@@ -760,7 +782,7 @@ const evidenceByPage = {
       'Schutzgebühr ist kein Kaufpreis, sondern deckt einen Teil der Versorgung.',
       'Welpen dürfen nach der Tierschutz-Hundeverordnung grundsätzlich erst nach über acht Wochen vom Muttertier getrennt werden; eine frühere Trennung braucht ein tierärztliches Schutzurteil.',
       'Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern.',
-      'Junge Meerschweinchen sollten mindestens acht Wochen, Zwergkaninchen mindestens neun Wochen alt sein, bevor sie in ein neues Zuhause ziehen.',
+      'Junge Meerschweinchen sollten mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Deutsche Tierschutzbund beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine strengere Vermittlungsorientierung.',
       'Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.',
     ],
     sources: [
@@ -771,7 +793,9 @@ const evidenceByPage = {
       ['Tierschutz-Hundeverordnung § 2 Abs. 4', 'https://www.gesetze-im-internet.de/tierschhuv/__2.html'],
       ['Deutscher Tierschutzbund: Katzenhaltung', 'https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/'],
       ['Deutscher Tierschutzbund: Illegaler Welpenhandel', 'https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/'],
-      ['Deutscher Tierschutzbund: Haltung von Zwergkaninchen', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Bestellliste/Kleintiere_und_Voegel/Allgemein/Broschuere_Die_Haltung_von_Zwergkaninchen.pdf'],
+      ['Tierschutz-Nutztierhaltungsverordnung § 37', 'https://www.gesetze-im-internet.de/tierschnutztv/__37.html'],
+      ['Deutscher Tierschutzbund: Zwergkaninchen', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/'],
+      ['Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen', 'https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm'],
       ['Deutscher Tierschutzbund: Haltung von Meerschweinchen', 'https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/'],
       ['Bundestierärztekammer: Heimtierhandel 2024', 'https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2025/artikel/DTBl_08-2025_Heimtierhandel.pdf'],
       ['Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen', 'https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en'],
@@ -811,10 +835,13 @@ const evidenceByPage = {
     facts: [
       'Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.',
       'VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.',
-      'Wa(h)re Haustier(liebe) führt die Petition nicht selbst, sondern verweist zur Petitionsseite der initiierenden Organisation.',
+      'Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.',
+      'PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.',
+      'Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.',
     ],
     sources: [
       ['VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!', 'https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media'],
+      ['PETA Deutschland: Tierverkauf für den Zoohandel stoppen', 'https://www.peta.de/aktiv/massenzucht-zoohandel-petition/'],
     ],
     guardrails: [
       'Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.',
@@ -1780,7 +1807,7 @@ const keywordByPage = {
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
   kontakt: ['Kontakt', 'Haltungsfragen', 'Haustierberatung', 'Tierschutz', 'Privates Projekt'],
   mitmachen: ['Mitmachen', 'Korrekturhinweis', 'Quellenhinweis', 'Tierschutz-Wiki', 'redaktionelle Prüfung'],
-  petitionen: ['Tierschutz Petition', 'Welpenhandel', 'Social Media Tierhandel', 'VIER PFOTEN', 'Meta'],
+  petitionen: ['Tierschutz Petition', 'Welpenhandel', 'Social Media Tierhandel', 'Tierverkauf', 'Zoohandel', 'Kleintiere', 'VIER PFOTEN', 'PETA', 'Meta'],
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
   glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
   'tiere-und-urlaub': ['Haustiere Urlaub', 'Tierbetreuung', 'Tierpension', 'Urlaub mit Hund', 'Tiere aussetzen'],
