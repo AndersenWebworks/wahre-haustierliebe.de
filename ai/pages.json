@@ -133,6 +133,7 @@
       "intent": "Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben",
       "keywords": [
         "Tierschutz Petition",
+        "Pferdekutschen Mallorca",
         "Welpenhandel",
         "Social Media Tierhandel",
         "Tierverkauf",
@@ -143,6 +144,8 @@
         "Meta"
       ],
       "facts": [
+        "Die Petition von PETA Deutschland fordert ein Verbot von Pferdekutschen auf Mallorca und richtet sich an Jaime Martínez Llabrés, Mateu Puigròs und den Stadtrat von Palma.",
+        "PETA beschreibt Hitze, Asphalt, Verkehr und das Ziehen schwerer Kutschen als Belastungen für die eingesetzten Pferde.",
         "Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.",
         "VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.",
         "Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.",
@@ -154,6 +157,10 @@
         "Vor der Unterschrift gelten die Hinweise und Datenschutzbestimmungen der verlinkten Petitionsseite."
       ],
       "sources": [
+        {
+          "label": "PETA Deutschland: Pferdekutschen auf Mallorca verbieten",
+          "url": "https://www.peta.de/aktiv/pferdekutschen-mallorca-petition/"
+        },
         {
           "label": "VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!",
           "url": "https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media"

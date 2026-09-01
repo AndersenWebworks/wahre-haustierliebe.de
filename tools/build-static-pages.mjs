@@ -79,7 +79,7 @@ const pages = [
     description: 'Laufende Petitionen zum Schutz von Tieren: Anliegen, Initiator und Adressat auf einen Blick sowie der direkte Link zur Unterschrift.',
     intent: 'Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben',
     priority: '0.65',
-    lastmod: '2026-08-30',
+    lastmod: '2026-09-01',
   },
   {
     id: 'mensch',
@@ -833,6 +833,8 @@ const evidenceByPage = {
   },
   petitionen: {
     facts: [
+      'Die Petition von PETA Deutschland fordert ein Verbot von Pferdekutschen auf Mallorca und richtet sich an Jaime Martínez Llabrés, Mateu Puigròs und den Stadtrat von Palma.',
+      'PETA beschreibt Hitze, Asphalt, Verkehr und das Ziehen schwerer Kutschen als Belastungen für die eingesetzten Pferde.',
       'Die Petition von VIER PFOTEN fordert Meta auf, Schlupflöcher zu schließen, durch die unregulierte Händler Hunde auf Facebook und Instagram anbieten und verkaufen können.',
       'VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.',
       'Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.',
@@ -840,6 +842,7 @@ const evidenceByPage = {
       'Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.',
     ],
     sources: [
+      ['PETA Deutschland: Pferdekutschen auf Mallorca verbieten', 'https://www.peta.de/aktiv/pferdekutschen-mallorca-petition/'],
       ['VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!', 'https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media'],
       ['PETA Deutschland: Tierverkauf für den Zoohandel stoppen', 'https://www.peta.de/aktiv/massenzucht-zoohandel-petition/'],
     ],
@@ -1807,7 +1810,7 @@ const keywordByPage = {
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
   kontakt: ['Kontakt', 'Haltungsfragen', 'Haustierberatung', 'Tierschutz', 'Privates Projekt'],
   mitmachen: ['Mitmachen', 'Korrekturhinweis', 'Quellenhinweis', 'Tierschutz-Wiki', 'redaktionelle Prüfung'],
-  petitionen: ['Tierschutz Petition', 'Welpenhandel', 'Social Media Tierhandel', 'Tierverkauf', 'Zoohandel', 'Kleintiere', 'VIER PFOTEN', 'PETA', 'Meta'],
+  petitionen: ['Tierschutz Petition', 'Pferdekutschen Mallorca', 'Welpenhandel', 'Social Media Tierhandel', 'Tierverkauf', 'Zoohandel', 'Kleintiere', 'VIER PFOTEN', 'PETA', 'Meta'],
   wissen: ['Tiermythen', 'Homöopathie bei Tieren', 'Globuli', 'Tierschutzwissen'],
   glossar: ['Glossar', 'Tierschutzwissen', 'Tiermedizin Begriffe', 'Tierhaltung Begriffe'],
   'tiere-und-urlaub': ['Haustiere Urlaub', 'Tierbetreuung', 'Tierpension', 'Urlaub mit Hund', 'Tiere aussetzen'],
