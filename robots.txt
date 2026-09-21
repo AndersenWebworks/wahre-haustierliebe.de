@@ -1,25 +1,33 @@
 User-agent: *
 Allow: /
+Disallow: /pwa/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /pwa/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /pwa/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /pwa/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /pwa/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /pwa/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /pwa/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /pwa/
 
 Sitemap: https://wahre-haustierliebe.de/sitemap.xml

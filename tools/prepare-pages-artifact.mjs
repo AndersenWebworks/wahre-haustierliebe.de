@@ -13,6 +13,7 @@ const fixedPublicPaths = [
   'assets',
   'llms-full.txt',
   'llms.txt',
+  'pwa',
   'robots.txt',
   'site.webmanifest',
   'sitemap.xml',
