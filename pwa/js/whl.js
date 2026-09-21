@@ -1,17 +1,18 @@
 // whl.js – gemeinsame Helfer für die WHL-PWA
-// Daten, Storage, Service-Worker, Sortierung.
+// Daten, Storage, Service-Worker, Modi-Verwaltung.
 
 const STORAGE_KEYS = {
-  HIGHSCORE: "whl_quiz_highscore_v1",
+  HIGHSCORE: "whl_quiz_highscore_v2",
   SEEN: "whl_quiz_seen_v1",
   FAV: "whl_quiz_fav_v1",
-  SESSION: "whl_quiz_session_v1",
+  SESSION: "whl_quiz_session_v2",
   VERSION: "whl_quiz_version_seen",
   INSTALL_HINT: "whl_quiz_install_hinted"
 };
 
 export const QUIZ_SIZE = 15;
 export const TIME_PER_QUESTION = 30; // sanfter Hinweis, kein Druck
+export const DEFAULT_MODE = "klassisch";
 
 let _dataPromise = null;
 
@@ -21,19 +22,22 @@ export async function loadQuestions() {
     _dataPromise = Promise.resolve({
       version: mod.version,
       categories: mod.categories,
+      modes: mod.modes,
       questions: mod.questions
     });
   }
   return _dataPromise;
 }
 
-export function pickQuestions(data, categoryKey) {
+export function pickQuestions(data, modeKey, categoryKey) {
   const all = data.questions || [];
-  if (!categoryKey || categoryKey === "all") {
-    return shuffle(all).slice(0, QUIZ_SIZE);
-  }
-  const filtered = all.filter(q => q.category === categoryKey);
-  return shuffle(filtered).slice(0, Math.min(QUIZ_SIZE, filtered.length));
+  const mode = (!modeKey || modeKey === "all") ? null : modeKey;
+  const cat = (!categoryKey || categoryKey === "all") ? null : categoryKey;
+  const byMode = mode ? all.filter(q => q.mode === mode) : all;
+  const byCat = cat ? byMode.filter(q => q.category === cat) : byMode;
+  const pool = byCat.length > 0 ? byCat : byMode;
+  const size = Math.min(QUIZ_SIZE, pool.length || all.length);
+  return shuffle(pool.length ? pool : all).slice(0, size);
 }
 
 export function shuffle(arr) {
@@ -64,26 +68,31 @@ export function clearSession() {
   try { sessionStorage.removeItem(STORAGE_KEYS.SESSION); } catch (e) { /* ignoriert */ }
 }
 
-export function getHighscore(categoryKey) {
+export function getHighscore(modeKey, categoryKey) {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
     if (!raw) return 0;
     const data = JSON.parse(raw);
-    if (!categoryKey || categoryKey === "all") return data.all || 0;
-    return data[categoryKey] || 0;
+    const m = (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
+    const mData = data[m] || {};
+    const c = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
+    return mData[c] || 0;
   } catch (e) {
     return 0;
   }
 }
 
-export function setHighscore(categoryKey, score) {
+export function setHighscore(modeKey, categoryKey, score) {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
     const data = raw ? JSON.parse(raw) : {};
-    const key = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
-    const prev = data[key] || 0;
+    const m = (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
+    const c = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
+    if (!data[m]) data[m] = {};
+    const mData = data[m];
+    const prev = mData[c] || 0;
     if (score > prev) {
-      data[key] = score;
+      mData[c] = score;
       localStorage.setItem(STORAGE_KEYS.HIGHSCORE, JSON.stringify(data));
       return true;
     }
@@ -110,14 +119,17 @@ function guessFav(seen) {
   return Object.keys(counts).slice(-3).join(",");
 }
 
-export function getLastSummary() {
+export function getLastSummary(modeKey, categoryKey) {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
     if (!raw) return null;
     const data = JSON.parse(raw);
-    return data;
+    const m = (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
+    const mData = data[m] || {};
+    const c = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
+    return mData[c] || 0;
   } catch (e) {
-    return null;
+    return 0;
   }
 }
 

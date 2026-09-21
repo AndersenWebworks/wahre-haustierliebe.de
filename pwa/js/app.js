@@ -6,21 +6,53 @@ import {
   pickQuestions,
   saveSession,
   getLastSummary,
-  getHighscore
+  getHighscore,
+  DEFAULT_MODE
 } from "./whl.js";
 
+const modeGrid = document.getElementById("mode-grid");
 const grid = document.getElementById("category-grid");
 const startBtn = document.getElementById("start-btn");
-const modeAllBtn = document.getElementById("mode-all");
 const scoreSummary = document.getElementById("score-summary");
 
+let selectedMode = DEFAULT_MODE;
 let selectedCategory = "all";
 let data = null;
 
+function renderModes() {
+  modeGrid.innerHTML = "";
+  const modes = data.modes || {};
+  for (const [key, info] of Object.entries(modes)) {
+    modeGrid.appendChild(makeModeBtn({ key, label: info.label, blurb: info.blurb }));
+  }
+}
+
+function makeModeBtn({ key, label, blurb }) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "mode-card";
+  btn.dataset.mode = key;
+  btn.setAttribute("role", "radio");
+  btn.setAttribute("aria-checked", String(key === selectedMode));
+  btn.innerHTML = `
+    <span class="mode-card-label">${escapeHtml(label)}</span>
+    <span class="mode-card-blurb">${escapeHtml(blurb || "")}</span>
+  `;
+  btn.addEventListener("click", () => selectMode(key));
+  return btn;
+}
+
+function selectMode(key) {
+  selectedMode = key;
+  for (const btn of modeGrid.querySelectorAll(".mode-card")) {
+    btn.setAttribute("aria-checked", String(btn.dataset.mode === key));
+  }
+  renderScoreSummary();
+}
+
 function renderCategories() {
   grid.innerHTML = "";
-  const allBtn = makeCategoryBtn({ key: "all", label: "Alle Themen", blurb: "Bunt gemischt" });
-  grid.appendChild(allBtn);
+  grid.appendChild(makeCategoryBtn({ key: "all", label: "Alle Themen", blurb: "Bunt gemischt" }));
   const cats = data.categories || {};
   for (const [key, info] of Object.entries(cats)) {
     grid.appendChild(makeCategoryBtn({ key, label: info.label, blurb: info.blurb }));
@@ -34,7 +66,6 @@ function makeCategoryBtn({ key, label, blurb }) {
   btn.dataset.category = key;
   btn.setAttribute("role", "radio");
   btn.setAttribute("aria-checked", String(key === selectedCategory));
-  if (key === selectedCategory) btn.setAttribute("aria-checked", "true");
   btn.innerHTML = `
     <span class="category-btn-label">${escapeHtml(label)}</span>
     <span class="category-btn-blurb">${escapeHtml(blurb || "")}</span>
@@ -48,34 +79,40 @@ function selectCategory(key) {
   for (const btn of grid.querySelectorAll(".category-btn")) {
     btn.setAttribute("aria-checked", String(btn.dataset.category === key));
   }
-  modeAllBtn.setAttribute("aria-pressed", String(key === "all"));
   renderScoreSummary();
 }
 
 function renderScoreSummary() {
-  const data = getLastSummary();
-  if (!data) {
-    scoreSummary.textContent = "Noch keine Runde gespielt.";
+  const score = getHighscore(selectedMode, selectedCategory);
+  const total = (data && data.questions) ? countQuestionsFor(data, selectedMode, selectedCategory) : 15;
+  const modeLabel = (data.modes && data.modes[selectedMode] && data.modes[selectedMode].label) || "Klassisch";
+  const catLabel = selectedCategory === "all"
+    ? "alle Themen"
+    : ((data.categories && data.categories[selectedCategory] && data.categories[selectedCategory].label) || "Thema");
+  if (!score) {
+    scoreSummary.textContent = `Noch keine Runde im Modus ${modeLabel} (${catLabel}) gespielt.`;
     return;
   }
-  const key = selectedCategory === "all" ? "all" : selectedCategory;
-  const hs = data[key] || 0;
-  if (selectedCategory === "all") {
-    scoreSummary.textContent = `Dein Highscore (alle Themen): ${hs} von 15.`;
-  } else {
-    const label = (data && data.categories && data.categories[selectedCategory] && data.categories[selectedCategory].label) || "Thema";
-    scoreSummary.textContent = `Dein Highscore im Thema ${label}: ${hs} von 15.`;
-  }
+  scoreSummary.textContent = `Highscore ${modeLabel} · ${catLabel}: ${score} von ${total}.`;
+}
+
+function countQuestionsFor(data, modeKey, categoryKey) {
+  const all = data.questions || [];
+  let pool = all;
+  if (modeKey && modeKey !== "all") pool = pool.filter(q => q.mode === modeKey);
+  if (categoryKey && categoryKey !== "all") pool = pool.filter(q => q.category === categoryKey);
+  return pool.length;
 }
 
 function startQuiz() {
   if (!data) return;
-  const picks = pickQuestions(data, selectedCategory);
+  const picks = pickQuestions(data, selectedMode, selectedCategory);
   if (picks.length === 0) {
-    scoreSummary.textContent = "Für dieses Thema sind noch keine Fragen hinterlegt.";
+    scoreSummary.textContent = "Für diese Kombination sind noch keine Fragen hinterlegt.";
     return;
   }
   const session = {
+    mode: selectedMode,
     category: selectedCategory,
     startedAt: Date.now(),
     questions: picks.map(q => ({ id: q.id, text: q.text })),
@@ -105,6 +142,7 @@ async function init() {
   try {
     data = await loadQuestions();
     checkQuestionUpdate(data);
+    renderModes();
     renderCategories();
     renderScoreSummary();
   } catch (e) {

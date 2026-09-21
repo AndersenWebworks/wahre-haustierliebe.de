@@ -25,7 +25,15 @@
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">Kleines Tierschutz-Quiz</p>
       <h1 id="hero-title">Wie gut kennst du dein Haustier?</h1>
-      <p class="lede">Fünfzehn Fragen rund um Hunde, Katzen, Kleintiere und Vögel. Nimm dir ruhig Zeit. Am Ende jeder Antwort wartet der passende Wiki-Artikel auf dich.</p>
+      <p class="lede">Drei Spielweisen mit eigenen Fragen. Wähle zuerst den Modus, dann das Thema. Am Ende jeder Antwort wartet der passende Wiki-Artikel auf dich.</p>
+    </section>
+
+    <section class="card" aria-labelledby="mode-title">
+      <h2 id="mode-title">Wähle deinen Modus</h2>
+      <p class="muted">Jeder Modus bringt einen eigenen Fragenpool und einen eigenen Highscore.</p>
+      <div class="mode-grid" id="mode-grid" role="radiogroup" aria-labelledby="mode-title">
+        <!-- Modi werden per JS geladen -->
+      </div>
     </section>
 
     <section class="card" aria-labelledby="cat-title">
@@ -33,10 +41,6 @@
       <p class="muted">Du kannst das Quiz auf eine Tiergruppe eingrenzen oder alle Themen mischen.</p>
       <div class="category-grid" id="category-grid" role="radiogroup" aria-labelledby="cat-title">
         <!-- Kategorien werden per JS geladen -->
-      </div>
-      <div class="mode-row">
-        <button type="button" class="ghost-btn" id="mode-all" aria-pressed="true">Alle Themen mischen</button>
-        <span class="muted small">Fünfzehn Fragen, leichte Stufe, ohne Zeitdruck.</span>
       </div>
       <button type="button" class="primary-btn" id="start-btn">Quiz starten</button>
     </section>

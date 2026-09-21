@@ -1,14 +1,13 @@
-// quiz.js – Session-Screen der WHL-PWA
+// quiz.js - Session-Screen der WHL-PWA
 import {
   loadQuestions,
   loadSession,
   saveSession,
-  clearSession,
   setHighscore,
   markSeen,
   buildWikiUrl,
-  QUIZ_SIZE,
-  TIME_PER_QUESTION
+  TIME_PER_QUESTION,
+  DEFAULT_MODE
 } from "./whl.js";
 
 const els = {
@@ -16,21 +15,26 @@ const els = {
   progressText: document.getElementById("progress-text"),
   timerFill: document.getElementById("timer-fill"),
   timerText: document.getElementById("timer-text"),
+  modeLabel: document.getElementById("quiz-mode-label"),
+  kicker: document.getElementById("question-kicker"),
   category: document.getElementById("question-category"),
   text: document.getElementById("question-text"),
   options: document.getElementById("options"),
-  explanation: document.getElementById("explanation")
+  explanation: document.getElementById("explanation"),
+  score: document.getElementById("score-live"),
+  streak: document.getElementById("streak-live")
 };
 
 let state = null;
+let data = null;
 let currentQuestion = null;
+let currentOptions = [];
 let currentIndex = 0;
 let timerHandle = null;
 let timeLeft = TIME_PER_QUESTION;
 let isAnswered = false;
 let streak = 0;
 let bestStreak = 0;
-let data = null;
 
 const RING_CIRCUM = 2 * Math.PI * 10;
 
@@ -41,30 +45,31 @@ async function init() {
     return;
   }
   data = await loadQuestions();
-  state.questions = state.questions.map(s => {
-    const full = data.questions.find(q => q.id === s.id);
-    return full ? full : s;
-  });
-  if (!data) {
-    location.href = "index.html";
-    return;
-  }
+  state.questions = state.questions.map(stub => data.questions.find(question => question.id === stub.id) || stub);
+  if (!state.mode) state.mode = DEFAULT_MODE;
+  paintModeBadge();
   showQuestion(0);
   document.addEventListener("keydown", handleKey);
 }
 
-function handleKey(ev) {
+function paintModeBadge() {
+  if (!els.modeLabel) return;
+  const info = data.modes && data.modes[state.mode];
+  els.modeLabel.textContent = info ? info.label : "Klassisch";
+  els.modeLabel.dataset.mode = state.mode;
+}
+
+function handleKey(event) {
   if (isAnswered) {
-    if (ev.key === "Enter" || ev.key === " ") {
-      ev.preventDefault();
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
       nextQuestion();
     }
     return;
   }
-  const num = parseInt(ev.key, 10);
-  if (!isNaN(num) && num >= 1 && num <= 4) {
-    const btns = els.options.querySelectorAll(".option-btn");
-    if (btns[num - 1]) btns[num - 1].click();
+  const number = Number.parseInt(event.key, 10);
+  if (number >= 1 && number <= 4) {
+    els.options.querySelectorAll(".option-btn")[number - 1]?.click();
   }
 }
 
@@ -75,50 +80,53 @@ function showQuestion(index) {
   }
   currentIndex = index;
   currentQuestion = state.questions[index];
+  currentOptions = shuffleOptions(currentQuestion.options, currentQuestion.correctIndex);
   isAnswered = false;
   timeLeft = TIME_PER_QUESTION;
 
   const meta = data.categories[currentQuestion.category] || { label: currentQuestion.category };
-  els.category.textContent = meta.label || currentQuestion.category;
-
+  els.category.textContent = meta.label;
   els.text.textContent = currentQuestion.text;
   els.options.innerHTML = "";
   els.explanation.hidden = true;
   els.explanation.className = "explanation";
   els.explanation.innerHTML = "";
 
-  currentQuestion.options.forEach((opt, i) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "option-btn";
-    btn.setAttribute("role", "option");
-    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + i)}</span><span>${escapeHtml(opt)}</span>`;
-    btn.addEventListener("click", () => onSelect(i));
-    els.options.appendChild(btn);
+  const kicker = (data.modes && data.modes[state.mode] && data.modes[state.mode].kicker) || "Welche Antwort trägt wirklich?";
+  if (els.kicker) els.kicker.textContent = kicker;
+
+  currentOptions.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "option-btn";
+    button.setAttribute("role", "option");
+    button.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + index)}</span><span>${escapeHtml(option.text)}</span>`;
+    button.addEventListener("click", () => onSelect(index));
+    els.options.appendChild(button);
   });
 
-  updateProgress();
+  updateStatus();
   startTimer();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function updateProgress() {
+function updateStatus() {
   const total = state.questions.length;
-  const done = currentIndex;
-  const pct = (done / total) * 100;
-  els.progressFill.style.width = pct + "%";
-  els.progressText.textContent = `Frage ${done + 1} von ${total}`;
+  const pct = (currentIndex / total) * 100;
+  els.progressFill.style.width = `${pct}%`;
+  els.progressText.textContent = `Frage ${currentIndex + 1} von ${total}`;
+  els.score.textContent = String(state.score || 0);
+  els.streak.textContent = String(streak);
 }
 
 function startTimer() {
-  if (timerHandle) clearInterval(timerHandle);
-  timeLeft = TIME_PER_QUESTION;
+  clearInterval(timerHandle);
   paintTimer();
   timerHandle = setInterval(() => {
     timeLeft -= 1;
     if (timeLeft <= 0) {
       clearInterval(timerHandle);
-      onTimeout();
+      onSelect(-1, { timeout: true });
       return;
     }
     paintTimer();
@@ -134,90 +142,80 @@ function paintTimer() {
   else if (timeLeft <= 12) els.timerFill.classList.add("soft");
 }
 
-function onTimeout() {
-  if (isAnswered) return;
-  onSelect(-1, { timeout: true });
-}
-
-function onSelect(index, opts = {}) {
+function onSelect(index, options = {}) {
   if (isAnswered) return;
   isAnswered = true;
-  if (timerHandle) clearInterval(timerHandle);
+  clearInterval(timerHandle);
 
-  const correctIndex = currentQuestion.correctIndex;
-  const isCorrect = !opts.timeout && index === correctIndex;
-
-  const btns = els.options.querySelectorAll(".option-btn");
-  btns.forEach((btn, i) => {
-    btn.disabled = true;
-    if (i === correctIndex) btn.classList.add("correct");
-    if (i === index && !isCorrect) btn.classList.add("wrong");
+  const correctIndex = currentOptions.findIndex(option => option.correct);
+  const isCorrect = !options.timeout && currentOptions[index]?.correct === true;
+  els.options.querySelectorAll(".option-btn").forEach((button, optionIndex) => {
+    button.disabled = true;
+    if (optionIndex === correctIndex) button.classList.add("correct");
+    if (optionIndex === index && !isCorrect) button.classList.add("wrong");
   });
 
   if (isCorrect) {
     streak += 1;
-    if (streak > bestStreak) bestStreak = streak;
+    bestStreak = Math.max(bestStreak, streak);
     state.score += 1;
   } else {
     streak = 0;
   }
-  state.answers.push({
-    id: currentQuestion.id,
-    correct: isCorrect,
-    timeout: !!opts.timeout
-  });
+  state.answers.push({ id: currentQuestion.id, correct: isCorrect, timeout: Boolean(options.timeout) });
   saveSession(state);
-
-  showExplanation(isCorrect);
+  updateStatus();
+  showExplanation(isCorrect, options.timeout);
 }
 
-function showExplanation(isCorrect) {
-  const exp = currentQuestion.explanation || "Mehr dazu im verlinkten Wiki-Artikel.";
+function showExplanation(isCorrect, timedOut) {
+  const intro = isCorrect ? "Treffer." : timedOut ? "Die Zeit ist um." : "Die stärkere Antwort ist markiert.";
+  const streakNote = streak >= 3 ? `<div class="streak" aria-live="polite">${streak} Treffer in Folge</div>` : "";
   els.explanation.innerHTML = `
-    <p><strong>${isCorrect ? "Stimmt." : "Nicht ganz."}</strong> ${escapeHtml(exp)}</p>
+    <p><strong>${intro}</strong> ${escapeHtml(currentQuestion.explanation || "Mehr dazu im verlinkten Wiki-Artikel.")}</p>
     <div class="explanation-actions">
-      <a class="primary-btn" style="width:auto;" href="${escapeHtml(buildWikiUrl(currentQuestion.wikiPath))}" target="_blank" rel="noopener">Wiki-Artikel öffnen</a>
-      <button type="button" class="ghost-btn" id="next-btn">Nächste Frage</button>
+      <a class="primary-btn" style="width:auto;" href="${escapeHtml(buildWikiUrl(currentQuestion.wikiPath))}" target="_blank" rel="noopener">Hintergrund lesen</a>
+      <button type="button" class="ghost-btn" id="next-btn">${currentIndex + 1 === state.questions.length ? "Ergebnis ansehen" : "Nächste Frage"}</button>
     </div>
-    ${streak >= 3 ? `<div class="streak" aria-live="polite">${streak} richtige Antworten in Folge</div>` : ""}
+    ${streakNote}
   `;
-  els.explanation.classList.remove("correct", "wrong");
   els.explanation.classList.add(isCorrect ? "correct" : "wrong");
   els.explanation.hidden = false;
-  const nextBtn = document.getElementById("next-btn");
-  if (nextBtn) nextBtn.addEventListener("click", nextQuestion);
+  document.getElementById("next-btn").addEventListener("click", nextQuestion);
 }
 
 function nextQuestion() {
-  if (currentIndex + 1 >= state.questions.length) {
-    finishQuiz();
-  } else {
-    showQuestion(currentIndex + 1);
-  }
+  if (currentIndex + 1 >= state.questions.length) finishQuiz();
+  else showQuestion(currentIndex + 1);
 }
 
 function finishQuiz() {
-  if (timerHandle) clearInterval(timerHandle);
-  const total = state.questions.length;
+  clearInterval(timerHandle);
   const score = state.score || 0;
-  const newRecord = setHighscore(state.category, score);
-  markSeen(state.questions.map(q => q.id));
   state.finishedAt = Date.now();
-  state.score = score;
-  state.total = total;
+  state.total = state.questions.length;
   state.bestStreak = bestStreak;
-  state.newRecord = newRecord;
+  state.newRecord = setHighscore(state.mode, state.category, score);
+  markSeen(state.questions.map(question => question.id));
   saveSession(state);
   location.href = "ergebnis.html";
 }
 
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, c => ({
+function shuffleOptions(options, correctIndex) {
+  const result = options.map((text, index) => ({ text, correct: index === correctIndex }));
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"
-  }[c]));
+  }[character]));
 }
 
 window.addEventListener("online", () => document.body.classList.remove("is-offline"));
 window.addEventListener("offline", () => document.body.classList.add("is-offline"));
-
 init();

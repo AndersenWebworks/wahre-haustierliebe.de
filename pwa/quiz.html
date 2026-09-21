@@ -34,10 +34,15 @@
         </svg>
       </div>
     </div>
+    <div class="quiz-status" aria-live="polite">
+      <p class="quiz-mode" id="quiz-mode-label">Klassisch</p>
+      <p class="quiz-score">Treffer <strong id="score-live">0</strong> <span aria-hidden="true">·</span> Serie <strong id="streak-live">0</strong></p>
+    </div>
     <p class="progress-label" id="progress-text">Frage 1 von 15</p>
 
     <section class="question-card" id="question-card" aria-live="polite">
       <span class="question-category" id="question-category"></span>
+      <p class="question-kicker" id="question-kicker">Welche Antwort trägt wirklich?</p>
       <h1 class="question-text" id="question-text"></h1>
       <div class="options" id="options" role="listbox" aria-label="Antwortmöglichkeiten"></div>
       <div class="explanation" id="explanation" hidden></div>

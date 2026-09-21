@@ -5,7 +5,8 @@ import {
   clearSession,
   getHighscore,
   buildWikiUrl,
-  formatNumber
+  formatNumber,
+  DEFAULT_MODE
 } from "./whl.js";
 
 const els = {
@@ -14,6 +15,7 @@ const els = {
   percent: document.getElementById("score-percent"),
   highscoreLine: document.getElementById("highscore-line"),
   message: document.getElementById("result-message"),
+  modeLabel: document.getElementById("result-mode"),
   wikiList: document.getElementById("wiki-list"),
   againBtn: document.getElementById("again-btn"),
   shareBtn: document.getElementById("share-btn"),
@@ -30,6 +32,7 @@ async function init() {
     location.href = "index.html";
     return;
   }
+  if (!state.mode) state.mode = DEFAULT_MODE;
   data = await loadQuestions();
   paint();
 }
@@ -42,10 +45,17 @@ function paint() {
   els.total.textContent = formatNumber(total);
   els.percent.textContent = pct + "% richtig";
 
-  const prev = getHighscore(state.category);
+  const modeInfo = data.modes && data.modes[state.mode];
+  const modeLabel = modeInfo ? modeInfo.label : "Klassisch";
+  if (els.modeLabel) {
+    els.modeLabel.textContent = `Modus · ${modeLabel}`;
+    els.modeLabel.dataset.mode = state.mode;
+  }
+
+  const prev = getHighscore(state.mode, state.category);
   const highscoreLine = state.newRecord
-    ? `Neuer Highscore in dieser Kategorie: ${score} von ${total}. Vorheriger Stand: ${prev}.`
-    : `Dein Highscore in dieser Kategorie bleibt ${prev} von ${total}.`;
+    ? `Neuer Highscore (${modeLabel}): ${score} von ${total}. Vorheriger Stand: ${prev}.`
+    : `Dein Highscore (${modeLabel}) bleibt ${prev} von ${total}.`;
   els.highscoreLine.textContent = highscoreLine;
 
   els.message.textContent = pickMessage(score, total);
@@ -90,10 +100,12 @@ function buildShareText() {
   const total = state.questions.length || 15;
   const score = state.score || 0;
   const pct = Math.round((score / total) * 100);
+  const modeInfo = data.modes && data.modes[state.mode];
+  const modeLabel = modeInfo ? modeInfo.label : "Klassisch";
   const cats = data.categories || {};
   const catLabel = cats[state.category]?.label || "Tierschutz";
   return [
-    `WHL Quiz – ${catLabel}`,
+    `WHL Quiz – ${modeLabel} · ${catLabel}`,
     `Mein Stand: ${score} von ${total} (${pct} % richtig)`,
     "Spiel mit auf https://wahre-haustierliebe.de/pwa/",
     "Mehr Wissen auf https://wahre-haustierliebe.de/"
