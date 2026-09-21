@@ -10,8 +10,8 @@ const STORAGE_KEYS = {
   INSTALL_HINT: "whl_quiz_install_hinted"
 };
 
-const QUIZ_SIZE = 15;
-const TIME_PER_QUESTION = 30; // sanfter Hinweis, kein Druck
+export const QUIZ_SIZE = 15;
+export const TIME_PER_QUESTION = 30; // sanfter Hinweis, kein Druck
 
 let _dataPromise = null;
 
