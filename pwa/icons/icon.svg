@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WHL Quiz">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDF5E8"/>
+      <stop offset="100%" stop-color="#EDF6F4"/>
+    </linearGradient>
+    <linearGradient id="paw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A7B6F"/>
+      <stop offset="100%" stop-color="#1F5F56"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#bg)"/>
+  <g transform="translate(176 132)">
+    <ellipse cx="80" cy="148" rx="74" ry="60" fill="url(#paw)"/>
+    <circle cx="14" cy="92" r="32" fill="url(#paw)"/>
+    <circle cx="58" cy="40" r="36" fill="url(#paw)"/>
+    <circle cx="106" cy="40" r="36" fill="url(#paw)"/>
+    <circle cx="148" cy="92" r="32" fill="url(#paw)"/>
+  </g>
+  <g transform="translate(80 380)" fill="#C2553A">
+    <rect x="0" y="0" width="352" height="14" rx="7"/>
+    <rect x="80" y="42" width="192" height="10" rx="5" fill="#E8A73D"/>
+  </g>
+</svg>

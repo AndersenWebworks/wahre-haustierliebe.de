@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ergebnis – Wa(h)re Haustier(liebe)</title>
+  <meta name="description" content="Dein Ergebnis aus dem Wa(h)re Haustier(liebe)-Quiz.">
+  <meta name="theme-color" content="#2A7B6F">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://wahre-haustierliebe.de/pwa/ergebnis.html">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="stylesheet" href="css/whl-pwa.css">
+</head>
+<body class="screen-result">
+  <header class="app-header" role="banner">
+    <a class="brand" href="index.html" aria-label="Zurück zum Start">
+      <span class="brand-mark" aria-hidden="true">WHL</span>
+      <span class="brand-text">Ergebnis</span>
+    </a>
+    <a href="index.html" class="header-tag">Beenden</a>
+  </header>
+
+  <main class="container">
+    <section class="result-card" aria-labelledby="result-title">
+      <p class="eyebrow">Deine Runde</p>
+      <h1 id="result-title">Geschafft.</h1>
+      <div class="score-circle" id="score-circle">
+        <span>
+          <span id="score-value">0</span>/<span id="score-total">15</span>
+          <small id="score-percent">0%</small>
+        </span>
+      </div>
+      <p class="result-highscore" id="highscore-line"></p>
+      <p class="result-message" id="result-message"></p>
+
+      <div class="actions-row">
+        <button type="button" class="primary-btn" id="again-btn">Noch eine Runde</button>
+        <button type="button" class="ghost-btn" id="share-btn">Ergebnis teilen</button>
+      </div>
+
+      <div class="share-card" id="share-card" hidden></div>
+    </section>
+
+    <section class="card" aria-labelledby="wiki-title">
+      <h2 id="wiki-title">Lies weiter auf wahre-haustierliebe.de</h2>
+      <p class="muted">Direkt zu den Wiki-Artikeln, die zu deinen heutigen Fragen gehören.</p>
+      <ul class="wiki-list" id="wiki-list"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <p>
+      Mehr Wissen auf
+      <a href="https://wahre-haustierliebe.de/" rel="noopener">wahre-haustierliebe.de</a>.
+    </p>
+  </footer>
+
+  <div class="snackbar" id="snackbar" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/share.js"></script>
+</body>
+</html>

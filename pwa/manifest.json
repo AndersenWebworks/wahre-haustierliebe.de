@@ -1,0 +1,28 @@
+{
+  "name": "WHL Quiz – Wa(h)re Haustier(liebe)",
+  "short_name": "WHL Quiz",
+  "description": "Spielerisches Quiz zu artgerechter Tierhaltung – 15 Fragen rund um Hunde, Katzen, Kleintiere und Vögel. Mit Brücke zur Wiki-Seite wahre-haustierliebe.de.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8F6F2",
+  "theme_color": "#2A7B6F",
+  "lang": "de",
+  "dir": "ltr",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "_deprecated": "Diese Datei wurde durch pwa/data/questions.js (ESM) ersetzt. Statische JSON-Auslieferung scheitert in einigen Sandbox-Umgebungen am MIME-Type, ESM-Import funktioniert überall. Pflege läuft ausschließlich über pwa/data/questions.js.",
+  " version_legacy": "2026-09-21.1"
+}

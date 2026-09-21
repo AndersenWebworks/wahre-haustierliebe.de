@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Quiz läuft – Wa(h)re Haustier(liebe)</title>
+  <meta name="description" content="Quiz-Frage aus dem Wa(h)re Haustier(liebe)-Tierschutz-Wiki.">
+  <meta name="theme-color" content="#2A7B6F">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://wahre-haustierliebe.de/pwa/quiz.html">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="stylesheet" href="css/whl-pwa.css">
+</head>
+<body class="screen-quiz">
+  <div class="offline-banner" role="status">Du bist offline. Du kannst weiterspielen, neue Inhalte werden später geladen.</div>
+
+  <header class="app-header" role="banner">
+    <a class="brand" href="index.html" aria-label="Zurück zum Start">
+      <span class="brand-mark" aria-hidden="true">WHL</span>
+      <span class="brand-text">Quiz</span>
+    </a>
+    <a href="index.html" class="header-tag" aria-label="Quiz abbrechen">Abbrechen</a>
+  </header>
+
+  <main class="container">
+    <div class="quiz-progress" aria-hidden="true">
+      <div class="progress-bar"><div class="progress-bar-fill" id="progress-fill"></div></div>
+      <div class="timer-ring" aria-label="Verbleibende Zeit">
+        <svg viewBox="0 0 56 24" width="56" height="56">
+          <circle class="timer-ring-track" cx="14" cy="12" r="10" fill="none" stroke-width="3"></circle>
+          <circle class="timer-ring-fill" id="timer-fill" cx="14" cy="12" r="10" fill="none" stroke-width="3" stroke-dasharray="62.83" stroke-dashoffset="0"></circle>
+          <text id="timer-text" x="14" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#2D2926">30</text>
+        </svg>
+      </div>
+    </div>
+    <p class="progress-label" id="progress-text">Frage 1 von 15</p>
+
+    <section class="question-card" id="question-card" aria-live="polite">
+      <span class="question-category" id="question-category"></span>
+      <h1 class="question-text" id="question-text"></h1>
+      <div class="options" id="options" role="listbox" aria-label="Antwortmöglichkeiten"></div>
+      <div class="explanation" id="explanation" hidden></div>
+    </section>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <p>Quelle und weiterführende Informationen findest du nach jeder Antwort direkt verlinkt.</p>
+  </footer>
+
+  <div class="snackbar" id="snackbar" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/quiz.js"></script>
+</body>
+</html>
