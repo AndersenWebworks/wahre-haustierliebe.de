@@ -32,8 +32,8 @@
           <small id="score-percent">0%</small>
         </span>
       </div>
-      <p class="result-highscore" id="highscore-line"></p>
       <p class="result-message" id="result-message"></p>
+      <p class="result-highscore" id="highscore-line"></p>
 
       <div class="actions-row">
         <button type="button" class="primary-btn" id="again-btn">Noch eine Runde</button>
@@ -43,7 +43,13 @@
       <div class="share-card" id="share-card" hidden></div>
     </section>
 
-    <section class="card" aria-labelledby="wiki-title">
+    <section class="card soft category-badges-card" id="category-badges-card" aria-labelledby="badges-title" hidden>
+      <h2 id="badges-title">In dieser Runde dabei</h2>
+      <p class="muted">Die Themen, zu denen du heute Fragen gespielt hast.</p>
+      <ul class="category-badges" id="category-badges"></ul>
+    </section>
+
+    <section class="card" id="wiki-section" aria-labelledby="wiki-title">
       <h2 id="wiki-title">Lies weiter auf wahre-haustierliebe.de</h2>
       <p class="muted">Direkt zu den Wiki-Artikeln, die zu deinen heutigen Fragen gehören.</p>
       <ul class="wiki-list" id="wiki-list"></ul>

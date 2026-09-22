@@ -30,6 +30,12 @@
   --font-heading: Georgia, "Times New Roman", serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --max-width: 720px;
+
+  /* Modus-Akzente werden per JS auf document.documentElement gesetzt
+     (whl.js: applyModeAccent / modeAkzent). Fallback = Klassisch (primary). */
+  --mode-accent: var(--primary);
+  --mode-accent-light: var(--primary-light);
+  --mode-tap-glow: rgba(42,123,111,0.32);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -230,6 +236,15 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   color: var(--text-muted);
   line-height: 1.4;
 }
+.mode-card[data-mode="mythen"] { border-left: 4px solid #3C6B95; }
+.mode-card[data-mode="fall"]   { border-left: 4px solid #D97A3B; }
+.mode-card[data-mode="mythen"] .mode-card-label { color: #2F577A; }
+.mode-card[data-mode="fall"]   .mode-card-label { color: #B45B20; }
+.mode-card[aria-checked="true"][data-mode="mythen"] { background: #E8EFF7; border-color: #3C6B95; }
+.mode-card[aria-checked="true"][data-mode="fall"]   { background: #FCEFE6; border-color: #D97A3B; }
+.mode-card[aria-checked="true"][data-mode="mythen"]::after { background: #3C6B95; }
+.mode-card[aria-checked="true"][data-mode="fall"]::after   { background: #D97A3B; }
+
 .quiz-mode {
   margin: 0;
   font-size: 0.78rem;
@@ -238,8 +253,8 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   font-weight: 700;
   color: var(--secondary);
 }
-.quiz-mode[data-mode="mythen"] { color: var(--secondary); }
-.quiz-mode[data-mode="fall"] { color: var(--accent); }
+.quiz-mode[data-mode="mythen"] { color: #3C6B95; }
+.quiz-mode[data-mode="fall"] { color: #D97A3B; }
 .result-mode {
   margin: 0 0 0.8rem;
   font-size: 0.85rem;
@@ -248,8 +263,8 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   font-weight: 700;
   color: var(--secondary);
 }
-.result-mode[data-mode="mythen"] { color: var(--secondary); }
-.result-mode[data-mode="fall"] { color: var(--accent); }
+.result-mode[data-mode="mythen"] { color: #3C6B95; }
+.result-mode[data-mode="fall"] { color: #D97A3B; }
 
 .mode-row {
   display: flex;
@@ -271,7 +286,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   border: 2px solid transparent;
 }
 .primary-btn {
-  background: var(--primary);
+  background: var(--mode-accent);
   color: var(--white);
   display: inline-flex;
   align-items: center;
@@ -291,9 +306,9 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   color: var(--text);
 }
 .ghost-btn[aria-pressed="true"] {
-  background: var(--primary-light);
-  border-color: var(--primary);
-  color: var(--primary-dark);
+  background: var(--mode-accent-light);
+  border-color: var(--mode-accent);
+  color: var(--mode-accent);
 }
 
 /* ========= QUIZ ========= */
@@ -314,7 +329,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .progress-bar-fill {
   height: 100%;
   width: 0%;
-  background: var(--primary);
+  background: var(--mode-accent);
   transition: width 0.3s ease;
 }
 .quiz-status {
@@ -341,11 +356,63 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .timer-ring svg { transform: rotate(-90deg); }
 .timer-ring-track { stroke: var(--bg-alt); }
 .timer-ring-fill {
-  stroke: var(--primary);
+  stroke: var(--mode-accent);
   transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
 }
 .timer-ring-fill.soft { stroke: var(--accent); }
 .timer-ring-fill.late { stroke: var(--secondary); }
+
+/* Fragen-Meta-Zeile (Tier-Sticker + Difficulty) */
+.quiz-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin: 0.6rem 0 1rem;
+}
+.progress-sticker {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.45rem;
+  vertical-align: -4px;
+}
+.progress-sticker img {
+  width: 22px;
+  height: 22px;
+  color: var(--mode-accent);
+}
+.difficulty-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.difficulty-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  transition: background 200ms ease, border-color 200ms ease;
+}
+.difficulty-dot[data-active="on"] {
+  background: var(--mode-accent);
+  border-color: var(--mode-accent);
+}
+
+/* Fall-Szene Sticker über der Frage */
+.fall-scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 0 0 0.6rem;
+  padding: 0.6rem 0.6rem 0;
+}
+.fall-scene img {
+  width: 52px;
+  height: 52px;
+  color: var(--mode-accent);
+}
 
 .question-card {
   background: var(--white);
@@ -380,6 +447,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   gap: 0.7rem;
 }
 .option-btn {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 0.7rem;
@@ -390,12 +458,12 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   border-radius: var(--radius);
   background: var(--white);
   cursor: pointer;
-  transition: var(--transition);
+  transition: border-color var(--transition), background-color var(--transition);
   color: var(--text);
 }
 .option-btn:hover:not(:disabled) {
-  border-color: var(--primary);
-  background: var(--primary-light);
+  border-color: var(--mode-accent);
+  background: var(--mode-accent-light);
 }
 .option-btn:disabled { cursor: default; }
 .option-letter {
@@ -411,11 +479,11 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   font-size: 0.9rem;
 }
 .option-btn.correct {
-  border-color: var(--primary);
-  background: var(--primary-light);
+  border-color: var(--mode-accent);
+  background: var(--mode-accent-light);
 }
 .option-btn.correct .option-letter {
-  background: var(--primary);
+  background: var(--mode-accent);
   color: var(--white);
 }
 .option-btn.wrong {
@@ -427,14 +495,93 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   color: var(--white);
 }
 
+/* Tap-Moment: Shake bei falscher Antwort */
+@keyframes whl-shake {
+  0%, 100% { transform: translateX(0); }
+  18% { transform: translateX(-9px); }
+  36% { transform: translateX(9px); }
+  54% { transform: translateX(-6px); }
+  72% { transform: translateX(6px); }
+  90% { transform: translateX(-3px); }
+}
+.option-btn.is-shaking {
+  animation: whl-shake 360ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+/* Tap-Moment: warmer Glow um die richtige Antwort */
+@keyframes whl-glow {
+  0%   { box-shadow: 0 0 0 0 var(--mode-tap-glow); }
+  60%  { box-shadow: 0 0 0 12px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.option-btn.is-glowing {
+  animation: whl-glow 1100ms ease-out;
+}
+
+/* Tap-Moment: kleines Piktogramm über der Antwort */
+.option-tap-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translate(20px, -50%) scale(0.4);
+  opacity: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 240ms ease, transform 360ms cubic-bezier(0.2, 0.7, 0.4, 1.2);
+  color: var(--white);
+}
+.option-tap-icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.option-tap-icon.is-positive {
+  background: var(--mode-accent);
+}
+.option-tap-icon.is-negative {
+  background: var(--secondary);
+}
+.option-tap-icon[data-visible="true"] {
+  opacity: 1;
+  transform: translate(0, -50%) scale(1);
+}
+
+/* Mythen-Modus: zwei große Buttons */
+.options[data-interaktion="jaNein"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+.option-btn--ja-nein {
+  min-height: 88px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  align-items: center;
+}
+.option-btn--ja-nein .option-letter {
+  background: var(--mode-accent-light);
+  color: var(--mode-accent);
+}
+.option-btn--ja-nein .option-text {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+@media (max-width: 480px) {
+  .options[data-interaktion="jaNein"] { grid-template-columns: 1fr; }
+}
+
 .explanation {
   margin-top: 1.2rem;
   padding: 1rem 1.1rem;
   border-radius: var(--radius);
   background: var(--bg-alt);
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--mode-accent);
 }
-.explanation.correct { border-left-color: var(--primary); background: var(--primary-light); }
+.explanation.correct { border-left-color: var(--mode-accent); background: var(--mode-accent-light); }
 .explanation.wrong { border-left-color: var(--secondary); background: var(--secondary-light); }
 .explanation p { margin: 0 0 0.6rem; }
 .explanation-actions {
@@ -472,12 +619,12 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   height: 140px;
   margin: 0 auto 1rem;
   border-radius: 50%;
-  background: var(--primary-light);
+  background: var(--mode-accent-light);
   display: grid;
   place-items: center;
   font-family: var(--font-heading);
   font-size: 2.2rem;
-  color: var(--primary-dark);
+  color: var(--mode-accent);
 }
 .score-circle small {
   display: block;
@@ -492,9 +639,17 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   color: var(--text-muted);
 }
 .result-message {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  color: var(--text);
+  line-height: 1.35;
 }
+.result-message[data-stage="hoch"]   { color: var(--primary-dark); }
+.result-message[data-stage="mittel"] { color: var(--text); }
+.result-message[data-stage="niedrig"]{ color: var(--text-muted); }
+body[data-mode="mythen"] .result-message[data-stage="hoch"] { color: #2F577A; }
+body[data-mode="fall"]   .result-message[data-stage="hoch"] { color: #B45B20; }
 
 .actions-row {
   display: flex;
@@ -516,6 +671,35 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   white-space: pre-line;
 }
 
+/* Sammlung freigeschalteter Tierarten */
+.category-badges {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--mode-accent-light);
+  padding: 0.35rem 0.85rem 0.35rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--mode-accent);
+}
+.category-badge img {
+  width: 26px;
+  height: 26px;
+  color: var(--mode-accent);
+}
+body[data-mode="klassisch"] .category-badge { background: var(--primary-light); color: var(--primary-dark); }
+body[data-mode="klassisch"] .category-badge img { color: var(--primary); }
+
+/* Wiki-Liste */
 .wiki-list {
   list-style: none;
   padding: 0;
@@ -524,7 +708,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   gap: 0.5rem;
 }
 .wiki-list li {
-  background: var(--primary-light);
+  background: var(--mode-accent-light);
   border-radius: var(--radius);
   padding: 0.7rem 0.9rem;
 }
@@ -538,6 +722,19 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.2rem;
+}
+body[data-mode="klassisch"] .wiki-list li { background: var(--primary-light); }
+
+/* Bester Run auf der Startseite */
+.best-run {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+.best-run[data-empty="true"] {
+  color: var(--text-muted);
+  font-weight: 400;
 }
 
 /* ========= FOOTER ========= */
@@ -600,11 +797,19 @@ body.is-offline .offline-banner { display: block; }
   .brand-text { display: none; }
   .question-text { font-size: 1.15rem; }
   .timer-ring { width: 48px; height: 48px; }
+  .options[data-interaktion="jaNein"] { grid-template-columns: 1fr; }
+  .option-btn--ja-nein { min-height: 72px; }
+  .option-btn--ja-nein .option-text { font-size: 1.05rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition: none !important;
     animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
+  .option-btn.is-shaking,
+  .option-btn.is-glowing { animation: none !important; }
+  .option-tap-icon { transition: none !important; opacity: 1 !important; transform: translate(0, -50%) scale(1) !important; }
 }

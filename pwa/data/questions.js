@@ -1,9 +1,9 @@
 // data/questions.js - kanonische Fragenquelle der WHL-PWA
-// Drei Modi: klassisch, mythen, fall
-// Bestehende 15 Wiki-Fragen bleiben als klassisch; Mythen-Check und
-// Fall-Entscheidung kommen mit eigenem Fragenpool dazu.
+// Drei Modi: klassisch, mythen, fall. Jede Frage trägt optional
+// `interaktion` (vierKarten | jaNein) und `sticker` (Fall-Sticker).
+// Bei interaktion "jaNein" wird `correctJaNein` statt correctIndex ausgewertet.
 
-export const version = "2026-09-22.2";
+export const version = "2026-09-23.1";
 
 export const categories = {
   hunde: { label: "Hunde", blurb: "Alltag, Bindung und Bewegung" },
@@ -41,6 +41,7 @@ export const questions = [
   {
     id: "hunde-allein-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "hunde",
     difficulty: "leicht",
     text: "Drei Bürotage pro Woche dauern jeweils acht Stunden. Welche Lösung ist für einen erwachsenen Hund wirklich tragfähig?",
@@ -58,6 +59,7 @@ export const questions = [
   {
     id: "hunde-garten-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "hunde",
     difficulty: "leicht",
     text: "Ein Hund hat einen großen, sicheren Garten. Was fehlt ihm trotzdem als fester Teil seines Alltags?",
@@ -75,6 +77,7 @@ export const questions = [
   {
     id: "hunde-zwinger-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "hunde",
     difficulty: "leicht",
     text: "Ein Hofhund hat Futter, täglichen Auslauf und einen großen Zwinger. Warum kann die Haltung dennoch scheitern?",
@@ -92,6 +95,7 @@ export const questions = [
   {
     id: "hunde-sozial-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "hunde",
     difficulty: "leicht",
     text: "Welcher Alltag gibt einem Hund am ehesten Sicherheit, ohne ihn zu langweilen?",
@@ -109,6 +113,7 @@ export const questions = [
   {
     id: "katzen-wohnung-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "katzen",
     difficulty: "leicht",
     text: "Eine Katze lebt nur in der Wohnung. Welche Veränderung verbessert ihr Revier am deutlichsten?",
@@ -126,6 +131,7 @@ export const questions = [
   {
     id: "katzen-kastration-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "katzen",
     difficulty: "leicht",
     text: "Eine unkastrierte Katze streift regelmäßig draußen herum. Welches Problem verhindert Kastration am direktesten?",
@@ -143,6 +149,7 @@ export const questions = [
   {
     id: "katzen-sozial-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "katzen",
     difficulty: "leicht",
     text: "Zwei Wohnungskatzen geraten plötzlich häufiger aneinander. Welche Anpassung kann Revierdruck sinnvoll senken?",
@@ -160,6 +167,7 @@ export const questions = [
   {
     id: "katzen-wildkatze-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "katzen",
     difficulty: "leicht",
     text: "Du findest ein Jungtier allein im hohen Gras. Es wirkt ruhig und unverletzt. Was ist der beste erste Schritt?",
@@ -177,6 +185,7 @@ export const questions = [
   {
     id: "kleintiere-hamster-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "kleintiere",
     difficulty: "leicht",
     text: "Ein Goldhamster hat ein großes Laufrad, aber nur einen üblichen Zoohandelskäfig. Was fehlt am deutlichsten?",
@@ -194,6 +203,7 @@ export const questions = [
   {
     id: "kleintiere-hamster-002",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "kleintiere",
     difficulty: "leicht",
     text: "Zwei Goldhamster wirken im Zoogeschäft friedlich. Warum ist das kein guter Grund, sie dauerhaft zusammen zu halten?",
@@ -211,6 +221,7 @@ export const questions = [
   {
     id: "kleintiere-meeri-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "kleintiere",
     difficulty: "leicht",
     text: "Ein einzelnes Meerschweinchen bekommt viel Aufmerksamkeit von seinem Menschen. Was fehlt ihm trotzdem?",
@@ -228,6 +239,7 @@ export const questions = [
   {
     id: "kleintiere-kind-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "kleintiere",
     difficulty: "leicht",
     text: "Ein sechsjähriges Kind wünscht sich ein Tier zum Spielen am Nachmittag. Warum ist ein Goldhamster dafür meist keine gute Wahl?",
@@ -245,6 +257,7 @@ export const questions = [
   {
     id: "voegel-kueche-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "voegel",
     difficulty: "leicht",
     text: "Ein Vogelkäfig steht im offenen Wohnbereich neben der Küche. Welche unsichtbare Gefahr wird leicht unterschätzt?",
@@ -262,6 +275,7 @@ export const questions = [
   {
     id: "voegel-schwarm-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "voegel",
     difficulty: "leicht",
     text: "Ein Wellensittich spricht viel mit seinem Menschen und wirkt anhänglich. Reicht das als Ersatz für einen zweiten Vogel?",
@@ -279,6 +293,7 @@ export const questions = [
   {
     id: "voegel-uv-001",
     mode: "klassisch",
+    interaktion: "vierKarten",
     category: "voegel",
     difficulty: "leicht",
     text: "Warum ist ein heller Platz hinter einer Fensterscheibe für Vögel kein vollständiger Ersatz für geeignetes UV-Licht?",
@@ -294,10 +309,12 @@ export const questions = [
     sourceRef: "https://wahre-haustierliebe.de/voegel/uv-licht/"
   },
 
-  // ============ MYTHEN-CHECK (6 Fragen) ============
+  // ============ MYTHEN-CHECK (9 Fragen: 6 bestehend + 3 neue) ============
   {
     id: "mythen-katzen-milch-001",
     mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
     category: "katzen",
     difficulty: "leicht",
     text: "Stimmt das? „Eine Schale Milch ist für jede Katze ein passendes Leckerli.\"",
@@ -315,6 +332,8 @@ export const questions = [
   {
     id: "mythen-hunde-farben-001",
     mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
     category: "hunde",
     difficulty: "leicht",
     text: "Stimmt das? „Hunde sehen ihre Umwelt nur in Schwarz-Weiß.\"",
@@ -332,6 +351,8 @@ export const questions = [
   {
     id: "mythen-wellensittich-einzeln-001",
     mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
     category: "voegel",
     difficulty: "leicht",
     text: "Stimmt das? „Ein Wellensittich allein mit viel Zuwendung ist ein glücklicher Anfängervogel.\"",
@@ -349,6 +370,8 @@ export const questions = [
   {
     id: "mythen-hamster-partner-001",
     mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
     category: "kleintiere",
     difficulty: "leicht",
     text: "Stimmt das? „Goldhamster fühlen sich mit einem Artgenossen wohler und sind dann aktiver.\"",
@@ -366,6 +389,8 @@ export const questions = [
   {
     id: "mythen-hund-wedelt-001",
     mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
     category: "hunde",
     difficulty: "leicht",
     text: "Stimmt das? „Wenn ein Hund mit dem Schwanz wedelt, signalisiert er immer Freundlichkeit.\"",
@@ -383,6 +408,8 @@ export const questions = [
   {
     id: "mythen-reptil-uv-001",
     mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
     category: "kleintiere",
     difficulty: "leicht",
     text: "Stimmt das? „Reptilien kommen in der Wohnung mit Wärmelampe und Tageslicht gut zurecht.\"",
@@ -397,11 +424,70 @@ export const questions = [
     wikiPath: "/kleintiere/reptilien-uv-licht/",
     sourceRef: "https://www.tieraerzteverband.de/"
   },
+  {
+    id: "mythen-welli-sprache-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "voegel",
+    difficulty: "leicht",
+    text: "Stimmt das? „Wellensittiche können eine kleine Auswahl an Wörtern und Pfeiftönen erlernen und bei ihren Menschen einsetzen.\"",
+    options: [
+      "Stimmt. Vor allem junge Hähne lernen oft mehrere Wörter und Melodien.",
+      "Stimmt nicht. Wellensittiche sind reine Schwarmvögel ohne Stimmkontrolle.",
+      "Stimmt, aber nur mit Video-Training.",
+      "Stimmt, aber nur einzeln gehalten."
+    ],
+    correctIndex: 0,
+    explanation: "Wellensittiche sind ausgesprochen sprachbegabt. Gerade Hähne imitieren Wörter, Pfeiftöne und kurze Melodien mit erstaunlicher Treue.",
+    wikiPath: "/voegel/wellensittich-sprache/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/sprache-wellensittich/"
+  },
+  {
+    id: "mythen-meeri-heu-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "kleintiere",
+    difficulty: "leicht",
+    text: "Stimmt das? „Frisches Heu ist für Meerschweinchen das Hauptfutter und sollte immer erreichbar sein.\"",
+    options: [
+      "Stimmt. Heu deckt den Bedarf an Rohfaser und ist als Dauerangebot unverzichtbar.",
+      "Stimmt nicht. Heu ist nur ein Zusatz, Gemüse reicht völlig.",
+      "Stimmt, aber nur im Winter.",
+      "Stimmt, solange es aus dem Zoogeschäft kommt."
+    ],
+    correctIndex: 0,
+    explanation: "Heu ist für Meerschweinchen das eigentliche Grundnahrungsmittel. Es hält den Verdauungstrakt in Bewegung und sorgt für passenden Zahnabrieb.",
+    wikiPath: "/kleintiere/meerschweinchen-ernaehrung/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/"
+  },
+  {
+    id: "mythen-hund-garten-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "hunde",
+    difficulty: "leicht",
+    text: "Stimmt das? „Ein eingezäunter Garten gleicht den täglichen Spaziergang vollständig aus.\"",
+    options: [
+      "Stimmt. Der Garten reicht völlig, wenn er groß genug ist.",
+      "Stimmt nicht. Spaziergänge bringen neue Gerüche, Begegnungen und Bewegung, die ein Garten allein nicht bieten kann.",
+      "Stimmt, solange der Hund stubenrein ist.",
+      "Stimmt, solange kein Schnee liegt."
+    ],
+    correctIndex: 1,
+    explanation: "Der Garten ist ein schöner Rückzugsort, aber kein Ersatz für gemeinsame Spaziergänge. Gerüche, Begegnungen und Wege außerhalb des eigenen Grundstücks bleiben wichtig.",
+    wikiPath: "/hunde/garten-auslauf/",
+    sourceRef: "https://wahre-haustierliebe.de/hunde/garten-auslauf/"
+  },
 
   // ============ FALL-ENTSCHEIDUNG (6 Fragen) ============
   {
     id: "fall-fundtier-garten-001",
     mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["katze"],
     category: "katzen",
     difficulty: "leicht",
     text: "Im Garten sitzt ein Jungtier, das scheinbar hilflos wirkt. Die Mutter ist nirgends zu sehen. Was tust du zuerst?",
@@ -419,6 +505,8 @@ export const questions = [
   {
     id: "fall-hund-knurrt-besuch-001",
     mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["hund", "halsband"],
     category: "hunde",
     difficulty: "leicht",
     text: "Dein Hund knurrt Besucher an der Haustür an und du hast Gäste eingeladen. Was tust du jetzt?",
@@ -436,6 +524,8 @@ export const questions = [
   {
     id: "fall-kind-kaninchen-001",
     mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["meeri", "fenster"],
     category: "kleintiere",
     difficulty: "leicht",
     text: "Ein siebenjähriges Kind wünscht sich sehnlich ein Kaninchen zum Kuscheln und Spielen. Was tust du als Elternteil?",
@@ -453,6 +543,8 @@ export const questions = [
   {
     id: "fall-katze-ungesund-001",
     mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["katze", "fenster"],
     category: "katzen",
     difficulty: "leicht",
     text: "Deine Wohnungskatze pinkelt seit wenigen Tagen wiederholt neben das Katzenklo. Was tust du?",
@@ -470,6 +562,8 @@ export const questions = [
   {
     id: "fall-hund-urlaub-001",
     mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["hund", "halsband"],
     category: "hunde",
     difficulty: "leicht",
     text: "Der Sommerurlaub steht vor der Tür. Eine passende Hundebetreuung im Haushalt wäre ideal, ist aber ausgebucht. Was tust du?",
@@ -487,6 +581,8 @@ export const questions = [
   {
     id: "fall-spontankauf-zoo-001",
     mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["meeri", "napf"],
     category: "kleintiere",
     difficulty: "leicht",
     text: "Im Zoofachgeschäft sitzen auffallend süße Jungtiere, das Preis Schild ist günstig und du überlegst spontan zuzuschlagen. Was tust du?",

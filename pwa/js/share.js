@@ -1,4 +1,6 @@
 // share.js – Ergebnis-Screen der WHL-PWA
+// Persönliche Texte pro Modus/Stufe, Sammlung freigeschalteter Tierarten.
+
 import {
   loadQuestions,
   loadSession,
@@ -6,8 +8,11 @@ import {
   getHighscore,
   buildWikiUrl,
   formatNumber,
-  DEFAULT_MODE
+  DEFAULT_MODE,
+  loadResultateTexte
 } from "./whl.js";
+import { baueResultatText } from "../data/resultateTexte.js";
+import { badgeSticker } from "./sticker.js";
 
 const els = {
   score: document.getElementById("score-value"),
@@ -17,6 +22,8 @@ const els = {
   message: document.getElementById("result-message"),
   modeLabel: document.getElementById("result-mode"),
   wikiList: document.getElementById("wiki-list"),
+  wikiSection: document.getElementById("wiki-section"),
+  categoryBadges: document.getElementById("category-badges"),
   againBtn: document.getElementById("again-btn"),
   shareBtn: document.getElementById("share-btn"),
   shareCard: document.getElementById("share-card"),
@@ -34,6 +41,7 @@ async function init() {
   }
   if (!state.mode) state.mode = DEFAULT_MODE;
   data = await loadQuestions();
+  await loadResultateTexte();
   paint();
 }
 
@@ -58,8 +66,12 @@ function paint() {
     : `Dein Highscore (${modeLabel}) bleibt ${prev} von ${total}.`;
   els.highscoreLine.textContent = highscoreLine;
 
-  els.message.textContent = pickMessage(score, total);
+  const satz = baueResultatText(state.mode, score, total);
+  els.message.textContent = satz.satz;
+  els.message.dataset.stage = satz.stufe;
+  document.body.dataset.mode = state.mode;
 
+  renderCategoryBadges();
   renderWikiList();
 
   els.againBtn.addEventListener("click", () => {
@@ -69,14 +81,43 @@ function paint() {
   els.shareBtn.addEventListener("click", onShareClick);
 }
 
+function renderCategoryBadges() {
+  if (!els.categoryBadges) return;
+  const cats = data.categories || {};
+  const seen = new Set();
+  state.questions.forEach(qStub => {
+    const q = data.questions.find(qq => qq.id === qStub.id);
+    if (!q) return;
+    seen.add(q.category);
+  });
+  els.categoryBadges.innerHTML = "";
+  if (seen.size === 0) {
+    els.categoryBadges.hidden = true;
+    return;
+  }
+  els.categoryBadges.hidden = false;
+  for (const categoryKey of seen) {
+    const meta = cats[categoryKey] || { label: categoryKey };
+    const li = document.createElement("li");
+    li.className = "category-badge";
+    li.innerHTML = `
+      <img src="${escapeHtml(badgeSticker(categoryKey))}" alt="" width="32" height="32">
+      <span>${escapeHtml(meta.label || categoryKey)}</span>
+    `;
+    els.categoryBadges.appendChild(li);
+  }
+}
+
 function renderWikiList() {
   const cats = data.categories || {};
   const seen = new Set();
   els.wikiList.innerHTML = "";
+  let any = false;
   state.questions.forEach(qStub => {
     const q = data.questions.find(qq => qq.id === qStub.id);
     if (!q || seen.has(q.id)) return;
     seen.add(q.id);
+    any = true;
     const meta = cats[q.category] || { label: q.category };
     const url = buildWikiUrl(q.wikiPath);
     const li = document.createElement("li");
@@ -86,14 +127,9 @@ function renderWikiList() {
     `;
     els.wikiList.appendChild(li);
   });
-}
-
-function pickMessage(score, total) {
-  const pct = score / total;
-  if (pct >= 0.9) return "Wirklich stark. Du kennst die Bedürfnisse der Tiere.";
-  if (pct >= 0.7) return "Sehr ordentlich. Ein paar Lücken, aber das Wiki hilft.";
-  if (pct >= 0.5) return "Ein guter Anfang. Die Artikel zu deinen Fragen lohnen sich.";
-  return "Lies die Artikel in Ruhe – danach läuft es Runde für Runde besser.";
+  if (els.wikiSection) {
+    els.wikiSection.hidden = !any;
+  }
 }
 
 function buildShareText() {

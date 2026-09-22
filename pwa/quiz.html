@@ -38,9 +38,22 @@
       <p class="quiz-mode" id="quiz-mode-label">Klassisch</p>
       <p class="quiz-score">Treffer <strong id="score-live">0</strong> <span aria-hidden="true">·</span> Serie <strong id="streak-live">0</strong></p>
     </div>
-    <p class="progress-label" id="progress-text">Frage 1 von 15</p>
+    <div class="quiz-progress-meta">
+      <p class="progress-label" id="progress-text">
+        <span class="progress-sticker" id="progress-sticker" aria-hidden="true">
+          <img id="progress-sticker-img" src="sticker/pfote.svg" alt="" width="22" height="22">
+        </span>
+        <span id="progress-text-text">Frage 1 von 15</span>
+      </p>
+      <div class="difficulty-indicator" id="difficulty-indicator" aria-hidden="true">
+        <span class="difficulty-dot"></span>
+        <span class="difficulty-dot"></span>
+        <span class="difficulty-dot"></span>
+      </div>
+    </div>
 
     <section class="question-card" id="question-card" aria-live="polite">
+      <div class="fall-scene" id="fall-scene" aria-hidden="true"></div>
       <span class="question-category" id="question-category"></span>
       <p class="question-kicker" id="question-kicker">Welche Antwort trägt wirklich?</p>
       <h1 class="question-text" id="question-text"></h1>

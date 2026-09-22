@@ -7,6 +7,7 @@ import {
   saveSession,
   getLastSummary,
   getHighscore,
+  getBestRun,
   DEFAULT_MODE
 } from "./whl.js";
 
@@ -14,6 +15,7 @@ const modeGrid = document.getElementById("mode-grid");
 const grid = document.getElementById("category-grid");
 const startBtn = document.getElementById("start-btn");
 const scoreSummary = document.getElementById("score-summary");
+const bestRunLine = document.getElementById("best-run-line");
 
 let selectedMode = DEFAULT_MODE;
 let selectedCategory = "all";
@@ -91,9 +93,36 @@ function renderScoreSummary() {
     : ((data.categories && data.categories[selectedCategory] && data.categories[selectedCategory].label) || "Thema");
   if (!score) {
     scoreSummary.textContent = `Noch keine Runde im Modus ${modeLabel} (${catLabel}) gespielt.`;
+  } else {
+    scoreSummary.textContent = `Highscore ${modeLabel} · ${catLabel}: ${score} von ${total}.`;
+  }
+  renderBestRun();
+}
+
+function renderBestRun() {
+  if (!bestRunLine || !data) return;
+  const best = getBestRun(data.modes || {});
+  if (!best) {
+    bestRunLine.textContent = "Dein bester Run beginnt hier.";
+    bestRunLine.dataset.empty = "true";
     return;
   }
-  scoreSummary.textContent = `Highscore ${modeLabel} · ${catLabel}: ${score} von ${total}.`;
+  const sameMode = best.mode === selectedMode;
+  const totalGuess = guessBestTotal(best);
+  bestRunLine.textContent = sameMode
+    ? `Dein bester Run: ${best.score} von ${totalGuess} (${best.modeLabel}).`
+    : `Dein bester Run: ${best.score} von ${totalGuess} (${best.modeLabel}).`;
+  bestRunLine.dataset.empty = "false";
+}
+
+function guessBestTotal(best) {
+  if (!data || !data.questions) return 15;
+  const modePool = data.questions.filter(q => q.mode === best.mode);
+  if (best.category && best.category !== "all") {
+    const inCat = modePool.filter(q => q.category === best.category);
+    if (inCat.length) return inCat.length;
+  }
+  return modePool.length || 15;
 }
 
 function countQuestionsFor(data, modeKey, categoryKey) {

@@ -29,6 +29,11 @@ export async function loadQuestions() {
   return _dataPromise;
 }
 
+export async function loadResultateTexte() {
+  const mod = await import("../data/resultateTexte.js");
+  return mod;
+}
+
 export function pickQuestions(data, modeKey, categoryKey) {
   const all = data.questions || [];
   const mode = (!modeKey || modeKey === "all") ? null : modeKey;
@@ -102,6 +107,42 @@ export function setHighscore(modeKey, categoryKey, score) {
   }
 }
 
+// Liefert den persönlichen Highscore pro (Modus, Kategorie). Wird für die
+// Start-Seite gebraucht, die ihre Highscore-Zeile pro Auswahl zeigt.
+export function getModeHighscores(modeKey) {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
+    if (!raw) return {};
+    const data = JSON.parse(raw);
+    return data[modeKey] || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+// Liefert den persönlichen "besten Run" der gesamten Historie.
+// Einbezogen werden alle Modi und alle Kategorien, das höchste Score-Verhältnis gewinnt.
+export function getBestRun(modes) {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
+    if (!raw) return null;
+    const data = raw ? JSON.parse(raw) : {};
+    let best = null;
+    for (const [modeKey, cats] of Object.entries(data || {})) {
+      const modeLabel = (modes && modes[modeKey] && modes[modeKey].label) || modeKey;
+      for (const [categoryKey, score] of Object.entries(cats || {})) {
+        if (typeof score !== "number" || score <= 0) continue;
+        if (!best || score > best.score) {
+          best = { score, total: 0, mode: modeKey, modeLabel, category: categoryKey };
+        }
+      }
+    }
+    return best;
+  } catch (e) {
+    return null;
+  }
+}
+
 export function markSeen(questionIds) {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.SEEN);
@@ -161,4 +202,42 @@ export function buildWikiUrl(path) {
   if (/^https?:/i.test(path)) return path;
   const clean = path.startsWith("/") ? path : "/" + path;
   return "https://wahre-haustierliebe.de" + clean;
+}
+
+// Schwierigkeitsbogen im Quiz-Header:
+// 1.–3. Frage = leicht, 4.–6. = mittel, ab 7. = knifflig.
+export function schwierigkeitFuer(index, total) {
+  const pos = index + 1;
+  if (pos <= 3) return "leicht";
+  if (pos <= 6) return "mittel";
+  return "knifflig";
+}
+
+export function difficultyDots(level) {
+  if (level === "leicht") return 1;
+  if (level === "mittel") return 2;
+  return 3;
+}
+
+// Mode-Akzente für die unterschiedliche Anmutung der drei Modi.
+export const MODE_AKZENTE = {
+  klassisch: {
+    accent: "#2A7B6F",
+    accentLight: "#EDF6F4",
+    tapGlow: "rgba(42,123,111,0.32)"
+  },
+  mythen: {
+    accent: "#3C6B95",
+    accentLight: "#E8EFF7",
+    tapGlow: "rgba(60,107,149,0.32)"
+  },
+  fall: {
+    accent: "#D97A3B",
+    accentLight: "#FCEFE6",
+    tapGlow: "rgba(217,122,59,0.32)"
+  }
+};
+
+export function modeAkzent(modeKey) {
+  return MODE_AKZENTE[modeKey] || MODE_AKZENTE.klassisch;
 }

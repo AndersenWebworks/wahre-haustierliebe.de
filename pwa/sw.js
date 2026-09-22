@@ -1,7 +1,9 @@
 // sw.js – WHL-PWA Service Worker
 // Strategien: App-Shell cache-first; Fragen-JSON stale-while-revalidate.
+// v2: Game-Design-Pass – neue Sticker, Sticker-Helfer, Textmodul,
+//     mode-Akzente und CSS-Animations ergänzt.
 
-const CACHE_VERSION = "whl-pwa-v1";
+const CACHE_VERSION = "whl-pwa-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -13,9 +15,26 @@ const APP_SHELL = [
   "./js/app.js",
   "./js/quiz.js",
   "./js/share.js",
+  "./js/sticker.js",
   "./data/questions.js",
+  "./data/resultateTexte.js",
   "./icons/icon.svg",
-  "./icons/icon-maskable.svg"
+  "./icons/icon-maskable.svg",
+  "./sticker/pfote.svg",
+  "./sticker/blatt.svg",
+  "./sticker/sonne.svg",
+  "./sticker/piepmatz.svg",
+  "./sticker/kralle.svg",
+  "./sticker/feder.svg",
+  "./sticker/flosse.svg",
+  "./sticker/hund.svg",
+  "./sticker/katze.svg",
+  "./sticker/welli.svg",
+  "./sticker/meeri.svg",
+  "./sticker/halsband.svg",
+  "./sticker/fenster.svg",
+  "./sticker/kaefig.svg",
+  "./sticker/napf.svg"
 ];
 
 self.addEventListener("install", event => {
@@ -41,7 +60,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
 
   // Fragen-Daten: stale-while-revalidate
-  if (url.pathname.endsWith("/data/questions.js")) {
+  if (url.pathname.endsWith("/data/questions.js") || url.pathname.endsWith("/data/resultateTexte.js")) {
     event.respondWith(staleWhileRevalidate(req));
     return;
   }
