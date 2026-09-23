@@ -35,6 +35,7 @@ const pages = [
   { id: 'katzen-kosten', file: 'katzen/kosten/index.html', canonical: `${baseUrl}/katzen/kosten/index.html` },
   { id: 'katzen-streunerkatzen', file: 'katzen/streunerkatzen/index.html', canonical: `${baseUrl}/katzen/streunerkatzen/index.html` },
   { id: 'katzen-entscheidung', file: 'katzen/entscheidung/index.html', canonical: `${baseUrl}/katzen/entscheidung/index.html` },
+  { id: 'katzen-kaetzchen-tierarzt', file: 'katzen/kaetzchen-tierarzt/index.html', canonical: `${baseUrl}/katzen/kaetzchen-tierarzt/index.html` },
   { id: 'voegel', file: 'voegel/index.html', canonical: `${baseUrl}/voegel/index.html` },
   { id: 'voegel-schwarmhaltung', file: 'voegel/schwarmhaltung/index.html', canonical: `${baseUrl}/voegel/schwarmhaltung/index.html` },
   { id: 'voegel-uv-licht', file: 'voegel/uv-licht/index.html', canonical: `${baseUrl}/voegel/uv-licht/index.html` },

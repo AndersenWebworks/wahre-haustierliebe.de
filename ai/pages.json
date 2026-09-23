@@ -1147,6 +1147,31 @@
       }
     },
     {
+      "id": "katzen-kaetzchen-tierarzt",
+      "url": "https://wahre-haustierliebe.de/katzen/kaetzchen-tierarzt/index.html",
+      "title": "Tierarzt im ersten Jahr beim Kätzchen - Wa(h)re Haustier(liebe)",
+      "description": "Welche Impfungen wann, Entwurmung im Kitten-Alter, Kastrations-Zeitpunkt, Mikrochip und Notfall-Symptome: die konkrete Zeitachse für das erste Katzenjahr.",
+      "intent": "Tierarzt-Termine und Kosten im ersten Katzenjahr planen.",
+      "keywords": [
+        "Kätzchen Tierarzt",
+        "Kitten Impfungen",
+        "Katze entwurmen",
+        "Kastration Kätzin",
+        "Mikrochip Katze"
+      ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
+      "social": {
+        "title": "Tierarzt im ersten Jahr beim Kätzchen - Wa(h)re Haustier(liebe)",
+        "description": "Welche Impfungen wann, Entwurmung im Kitten-Alter, Kastrations-Zeitpunkt, Mikrochip und Notfall-Symptome: die konkrete Zeitachse für das erste Katzenjahr.",
+        "image": "https://wahre-haustierliebe.de/assets/social/katzen-tierarzt.png",
+        "imageAlt": "Zeitachse mit Impfungen, Entwurmung und Kastration für ein Kätzchen im ersten Lebensjahr.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "voegel-schwarmhaltung",
       "url": "https://wahre-haustierliebe.de/voegel/schwarmhaltung/index.html",
       "title": "Schwarmhaltung bei Vögeln - Wa(h)re Haustier(liebe)",
