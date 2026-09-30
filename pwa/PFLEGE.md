@@ -31,7 +31,6 @@ pwa/
 │   ├── kralle.svg  feder.svg  flosse.svg
 │   └── hund.svg  katze.svg  welli.svg  meeri.svg
 │       halsband.svg  fenster.svg  kaefig.svg  napf.svg
-│       pferd.svg  hufeisen.svg  echse.svg  herz.svg
 └── PFLEGE.md           Diese Datei
 ```
 
@@ -70,7 +69,7 @@ Optionale Felder pro Frage:
 
 | Feld | Modi | Bedeutung |
 | --- | --- | --- |
-| `interaktion` | alle | `"vierKarten"` (Default) oder `"jaNein"` — wechselt das Antwortlayout |
+| `interaktion` | alle | `"vierKarten"` (Default) oder `"jaNein"`: wechselt das Antwortlayout |
 | `correctJaNein` | `mythen` | `true` = „Stimmt“, `false` = „Stimmt nicht“. Pflicht bei `interaktion: "jaNein"`; `options` und `correctIndex` entfallen dann |
 | `sticker` | `fall` | Array von Sticker-Namen aus `pwa/sticker/` ohne `.svg`, 1–2 Stück; Fallback pro Kategorie wenn leer |
 
@@ -208,14 +207,14 @@ Neue Texte sind warm, kurz und ohne Belehrung. Beispiel: „Stimmt." statt „Ko
 3. Auf dem Handy die Seite aufrufen, „Zum Startbildschirm hinzufügen" antippen.
 4. Flugmodus aktivieren, prüfen, ob die App weiterläuft.
 5. Wiki-Link in einer Antwort antippen, prüfen, ob die echte Wiki-Seite öffnet.
-6. Highscore nach Reload prüfen — sowohl pro Modus als auch nach Kategorie.
+6. Highscore nach Reload prüfen: sowohl pro Modus als auch nach Kategorie.
 7. Im Betriebssystem „Bewegung reduzieren" aktivieren, prüfen, ob Tap-Moment ohne Animation, aber mit sichtbarem Piktogramm erscheint.
 
 ## Bekannte Grenzen
 
 - PWA-Icons liegen als SVG vor. Manche Apple-Versionen verlangen PNG. Falls apple-touch-icon als PNG gebraucht wird, einmal als 180 × 180 px aus `icons/icon.svg` rendern und als `icons/apple-touch-icon.png` ablegen, dann in den HTML-Head-Dateien wieder einbinden.
 - Der Fragenkatalog hat 280 Fragen in drei Modi (122 Klassisch, 115 Mythen-Check, 43 Fall-Entscheidung) aus rund 70 Wiki-Seiten. Pferde und Exoten haben noch wenige Fall-Fragen. Eine Lektoratsliste aller Fragen liegt in `docs/quiz-lektorat.md` und wird bei größeren Änderungen neu erzeugt.
-- Push-Benachrichtigungen sind bewusst nicht im MVP — die PWA läuft statisch ohne Server.
+- Push-Benachrichtigungen sind bewusst nicht im MVP: die PWA läuft statisch ohne Server.
 - Die PWA ist als Beta markiert: sie steht unter `robots.txt` mit `Disallow: /pwa/` und ist weder in `sitemap.xml` noch in `ai/pages.json` eingetragen. Sie taucht deshalb auch nicht in `llms.txt` oder `llms-full.txt` auf.
 
 ## Quellenpflicht

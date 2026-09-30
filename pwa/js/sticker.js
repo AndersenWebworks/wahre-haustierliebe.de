@@ -7,8 +7,8 @@ const CATEGORY_HEADER = {
   kleintiere: "pfote",
   voegel: "feder",
   exoten: "flosse",
-  pferde: "hufeisen",
-  tierschutz: "herz"
+  pferde: "blatt",
+  tierschutz: "pfote"
 };
 
 const CATEGORY_TAP = {
@@ -18,7 +18,7 @@ const CATEGORY_TAP = {
   voegel: "piepmatz",
   exoten: "blatt",
   pferde: "blatt",
-  tierschutz: "herz"
+  tierschutz: "pfote"
 };
 
 const CATEGORY_BADGE = {
@@ -26,9 +26,9 @@ const CATEGORY_BADGE = {
   katzen: "katze",
   kleintiere: "meeri",
   voegel: "welli",
-  exoten: "echse",
-  pferde: "pferd",
-  tierschutz: "herz"
+  exoten: "flosse",
+  pferde: "blatt",
+  tierschutz: "pfote"
 };
 
 export function headerSticker(category) {
@@ -54,9 +54,9 @@ const FALL_FALLBACK = {
   katzen: ["katze", "fenster"],
   kleintiere: ["meeri", "napf"],
   voegel: ["welli", "kaefig"],
-  exoten: ["echse", "sonne"],
-  pferde: ["pferd", "hufeisen"],
-  tierschutz: ["herz", "pfote"]
+  exoten: ["flosse", "sonne"],
+  pferde: ["blatt", "sonne"],
+  tierschutz: ["pfote", "napf"]
 };
 
 export function fallStickerListe(question) {
