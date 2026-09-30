@@ -1,6 +1,6 @@
 # Quiz-Lektorat
 
-Stand: Fragenkatalog 2026-09-30.3, 280 Fragen.
+Stand: Fragenkatalog 2026-09-30.4, 280 Fragen.
 
 Alle Fragen der Quiz-App unter wahre-haustierliebe.de/pwa/, sortiert nach Thema und Spielweise. Die richtige Antwort ist **fett** markiert. Beim Mythen-Check steht dahinter, ob die Aussage stimmt.
 

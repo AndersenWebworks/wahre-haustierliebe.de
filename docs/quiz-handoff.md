@@ -22,7 +22,8 @@ Repo: `C:/Andersen/Webworks/GitHub/Webworks/wahre-haustierliebe.de`, Branch `mai
 - `pwa/js/share.js` – Ergebnisseite, Artikelliste (falsch Beantwortetes zuerst), „Noch eine Runde“.
 - `pwa/js/sticker.js`, `pwa/sticker/` – Sticker. Neue Themen nutzen vorhandene Sticker (Flosse, Blatt, Pfote).
 - `pwa/sw.js` – Service Worker, network-first mit Offline-Cache (`whl-pwa-v5`). `CACHE_VERSION` nur erhöhen, wenn sich `APP_SHELL` ändert.
-- `docs/quiz-lektorat.md` – Lektoratsliste aller Fragen für Annemarie (nicht öffentlich ausgeliefert).
+- `docs/quiz-lektorat.md` – Lektoratsliste aller Fragen für Annemarie (nicht öffentlich ausgeliefert), neu erzeugen mit `node tools/quiz/lektorat.mjs`.
+- `tools/quiz/` – Werkzeuge und Briefings für neue Fragen, siehe `tools/quiz/README.md`.
 - Website-Quelle: `src/site-source.html`, Generator `tools/build-static-pages.mjs`, Pages-Artefakt `tools/prepare-pages-artifact.mjs`. Build und Audits laut `README.md`.
 
 ## Was in der Session vom 30.09. passiert ist
@@ -38,7 +39,7 @@ Repo: `C:/Andersen/Webworks/GitHub/Webworks/wahre-haustierliebe.de`, Branch `mai
 
 - **Qualitätsregeln für Fragen** (auch in `PFLEGE.md`): jede Aussage muss auf der verlinkten Seite stehen; richtige Antwort nicht an Länge oder Ton erkennbar; Falschantworten sind plausible Irrtümer, nie teilweise richtig; Mythen etwa halb „Stimmt“, halb „Stimmt nicht“; kein „laut Seite“, „die Tabelle nennt“ o. Ä. im Quiztext; Duden, „…“, Halbgeviertstrich bei Zahlspannen, kein Geviertstrich.
 - **Häufigster Fehler beim Fragenschreiben:** ein Distraktor, den die Quellseite eigentlich empfiehlt. Deshalb jede Frage gegen die Seite prüfen lassen.
-- **Werkzeuge aus der Session** lagen im temporären Scratchpad und sind nicht dauerhaft gesichert: Validierungs- und Merge-Skript (prüft Pfade, Felder, Dubletten, Redaktionssprache, Längen-Hinweis, schreibt den Katalog sortiert neu) sowie die Briefings für Fragenpakete, Prüfläufe und Nachbesserung. Bei Bedarf neu anlegen, am besten dauerhaft unter `tools/` im Repo.
+- **Werkzeuge:** liegen in `tools/quiz/` (Prüf- und Merge-Skript, Bestands- und Lektoratsliste, Seiten-Extraktor, Patch-Helfer, Sol-Aufruf) mit Ablauf in `tools/quiz/README.md`. Die Briefings für Fragenpakete, Prüfläufe und Nachbesserung sind `SPEC.md`, `REVIEW.md` und `CLEANUP.md` dort.
 - **Sol 6.1 per `codex exec`:** immer mit `< /dev/null` starten, sonst hängt der Lauf auf „Reading additional input from stdin“. Die Websocket-Meldung „426 Upgrade Required“ am Start ist harmlos. Kontingent laut Eriks Stand bis einschließlich 03.10.2026.
 - **Build:** Seiten nicht direkt in den generierten HTML-Dateien ändern, sondern in `src/site-source.html` bzw. im Generator, sonst driften Quelle und veröffentlichter Stand wieder auseinander. Vor jedem Commit nach einem Build den Diff prüfen, besonders `robots.txt` (PWA-Sperre) und `sitemap.xml`.
 - **Selbst gezeichnete Icons:** Erik fand sie schlecht; keine neuen Sticker zeichnen, vorhandene nutzen oder ganz weglassen.

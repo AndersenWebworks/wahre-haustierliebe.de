@@ -217,6 +217,10 @@ Neue Texte sind warm, kurz und ohne Belehrung. Beispiel: „Stimmt." statt „Ko
 - Push-Benachrichtigungen sind bewusst nicht im MVP: die PWA läuft statisch ohne Server.
 - Die PWA ist als Beta markiert: sie steht unter `robots.txt` mit `Disallow: /pwa/` und ist weder in `sitemap.xml` noch in `ai/pages.json` eingetragen. Sie taucht deshalb auch nicht in `llms.txt` oder `llms-full.txt` auf.
 
+## Werkzeuge
+
+Neue Fragen schreiben, prüfen und einführen: siehe `tools/quiz/README.md`. Vor jedem Commit am Katalog muss `node tools/quiz/merge.mjs` „Probleme 0“ melden.
+
 ## Quellenpflicht
 
 Jede Frage hat einen `wikiPath` auf eine bestehende Seite und einen `sourceRef` auf dieselbe Seite. Die Aussage in Antwort und Erklärung muss dort stehen. Wird eine Wiki-Seite umbenannt oder entfernt, müssen die Fragen dazu mitgepflegt werden. Keine Frage ohne Wiki-Anker.
