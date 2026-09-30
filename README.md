@@ -70,6 +70,14 @@ Er erzeugt oder aktualisiert:
 - `ai/faq.json`
 - `assets/icons/*.png`
 
+Generierte Seiten werden nicht direkt bearbeitet. Jede inhaltliche Änderung gehört in `src/site-source.html` oder in die Daten von `tools/build-static-pages.mjs`, sonst baut der nächste Build sie zurück. Dafür gibt es:
+
+- `data-topic-continue` an einer `<h2>`: Die Überschrift beendet den Themenabschnitt nicht. So können Themenseiten mehrere H2-Abschnitte haben und Übersichtsseiten eigene H2-Blöcke vor den Themenkarten.
+- `pagePresentation`: eigener Seitentitel, Hero, Social-Texte und JSON-LD für eine Seite, deren Karte und `/ai`-Eintrag anders heißen.
+- `extraTopicLinks`: zusätzliche Karten auf Übersichtsseiten und Querverweise in der Themennavigation.
+- `handwrittenPages`: handgepflegte Seiten wie `katzen/kaetzchen-tierarzt/`, die in Sitemap, `llms*` und `/ai` stehen, deren HTML und Social-Bild der Build aber nicht anfasst.
+- `robotsDisallow`: Pfade, die nicht gecrawlt werden sollen (derzeit `/pwa/`).
+
 Der Build rendert die Seiten zusätzlich mit Playwright vor. Dadurch stehen Hero, Kicker, Verdichtungsmodule, Tabellenlabels und andere JS-verstärkte Bereiche direkt im HTML und sind nicht nur nach clientseitiger Hydration sichtbar. Social-Preview-Bilder kommen aus den echten Website-Bildern: Startseite und Fallbacks nutzen das offizielle Logo, Unterseiten ihr erstes Inhaltsbild.
 
 ## GitHub Pages

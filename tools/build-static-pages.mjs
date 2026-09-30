@@ -5,6 +5,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { glossaryAnnotationsByPage, glossaryTerms } from './glossary-data.mjs';
+import { playwrightModuleUrl } from './playwright-module.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -371,6 +372,28 @@ const topicPages = [
 const firstKnowledgeIndex = pages.findIndex((page) => page.id === 'kastration');
 pages.splice(firstKnowledgeIndex, 0, ...topicPages);
 
+// Handgepflegte Seiten: Sie stehen in Sitemap, llms und /ai, der Build überschreibt ihr HTML aber nicht.
+const handwrittenPages = [
+  {
+    id: 'katzen-kaetzchen-tierarzt',
+    slug: 'katzen/kaetzchen-tierarzt',
+    title: 'Tierarzt im ersten Jahr beim Kätzchen - Wa(h)re Haustier(liebe)',
+    description: 'Welche Impfungen wann, Entwurmung im Kitten-Alter, Kastrations-Zeitpunkt, Mikrochip und Notfall-Symptome: die konkrete Zeitachse für das erste Katzenjahr.',
+    intent: 'Tierarzt-Termine und Kosten im ersten Katzenjahr planen.',
+    priority: '0.72',
+    lastmod: '2026-09-22',
+    standalone: 'handwritten',
+    insertAfter: 'katzen-entscheidung',
+    socialImage: {
+      src: 'assets/social/katzen-tierarzt.png',
+      alt: 'Zeitachse mit Impfungen, Entwurmung und Kastration für ein Kätzchen im ersten Lebensjahr.',
+    },
+  },
+];
+for (const page of handwrittenPages) {
+  pages.splice(pages.findIndex((entry) => entry.id === page.insertAfter) + 1, 0, page);
+}
+
 const pageById = new Map(pages.map((page) => [page.id, page]));
 const publicPages = pages.filter((page) => !page.onHold);
 const sectionPages = publicPages.filter((page) => !page.standalone && !page.staticOnly);
@@ -422,6 +445,9 @@ const faqByPage = {
     ['Ersetzt eine UV-Lampe Sonnenlicht?', 'Nein. Eine geeignete, flackerfreie Vogellampe kann bei Innenhaltung fehlende Lichtanteile ergänzen. Sie ersetzt weder ungefiltertes Sonnenlicht noch wechselnde Tageslichtreize, Flugraum und frische Luft.'],
     ['Was ist verantwortungsvoll, wenn die Vögel schon da sind?', 'Nicht wegsehen und nicht vorschnell weitergeben. Artgenossen, Flugraum, geeignetes Licht, sichere Luft, passendes Futter, Nachtruhe, vogelkundige tierärztliche Versorgung und verlässliche Betreuung müssen Schritt für Schritt gesichert werden.'],
     ['Sollte man Wellensittiche züchten?', 'Nein. Nachwuchs schafft zusätzliche Tiere, obwohl bereits viele Wellensittiche ein Zuhause suchen. Eiablage und Aufzucht können außerdem die Henne und die Jungtiere gefährden und verlangen spezialisiertes Wissen.'],
+    ['Ist eine Abgabe unter zwölf Wochen illegal?', 'Eine feste gesetzliche Wellensittich-Woche gibt es in Deutschland nicht. Trotzdem ist eine frühe Trennung nicht automatisch verantwortbar. Entscheidend sind Entwicklung, Gesundheit, Sozialverhalten und die passende Haltung. Unser ethischer Maßstab für eine geplante Abgabe liegt bei zwölf Wochen, bei fehlender Reife später.'],
+    ['Was bedeutet „futterfest“?', 'Futterfest bedeutet, dass der Jungvogel selbstständig frisst und trinkt. Das allein sagt noch nicht, ob er körperlich stabil, sicher flugfähig, sozial gefestigt und bereit für den Umzug ist.'],
+    ['Was mache ich mit einem bereits zu früh übernommenen Vogel?', 'Lass ihn vogelkundig untersuchen, sichere die Ernährung und plane eine ruhige Vergesellschaftung mit passenden Artgenossen. Gib Alter, Herkunft und bekannte Probleme offen weiter. Hilfe für ein bereits getrenntes Tier ist richtig; frühe Trennung wird dadurch nicht richtig.'],
   ],
   kleintiere: [
     ['Wie viel Platz braucht ein Kaninchen?', 'Mindestens 2-3 Quadratmeter pro Kaninchen als dauerhaft zugängliche Grundfläche plus täglichen Auslauf. Handelsübliche Käfige sind fast immer zu klein.'],
@@ -614,6 +640,7 @@ const evidenceByPage = {
       'Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.',
       'Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.',
       'Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.',
+      'Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.',
       'Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.',
     ],
     sources: [
@@ -621,6 +648,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen', 'https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf'],
       ['Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58'],
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['Tierschutzgesetz § 11c', 'https://www.gesetze-im-internet.de/tierschg/__11c.html'],
     ],
     guardrails: [
       'Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform.',
@@ -839,12 +867,14 @@ const evidenceByPage = {
       'VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.',
       'Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.',
       'PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.',
+      'Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf eBay Kleinanzeigen auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.',
       'Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.',
     ],
     sources: [
       ['PETA Deutschland: Pferdekutschen auf Mallorca verbieten', 'https://www.peta.de/aktiv/pferdekutschen-mallorca-petition/'],
       ['VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!', 'https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media'],
       ['PETA Deutschland: Tierverkauf für den Zoohandel stoppen', 'https://www.peta.de/aktiv/massenzucht-zoohandel-petition/'],
+      ['Change.org: Tiervermittlung auch für Kleinsäuger auf eBay Kleinanzeigen einschränken!', 'https://www.change.org/p/tiervermittlung-auch-f%C3%BCr-kleins%C3%A4uger-auf-ebay-kleinanzeigen-einschr%C3%A4nken'],
     ],
     guardrails: [
       'Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.',
@@ -1789,6 +1819,61 @@ const socialCopyByPage = {
   },
 };
 
+// Seitenkopf, Hero und JSON-LD einzelner Seiten, wenn die veröffentlichte Seite bewusst anders
+// betitelt ist als ihre Karte, Sitemap-Zeile und ihr /ai-Eintrag. Nicht gesetzte Felder folgen der Seitendefinition.
+const pagePresentation = {
+  'katzen-entscheidung': {
+    pageKey: 'katzen-kaetzchen-aufnehmen',
+    headingId: 'kaetzchen-aufnehmen',
+    head: {
+      title: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)',
+      description: 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.',
+      keywords: ['Kätzchen aufnehmen', 'Kitten', 'Abgabealter Katze', 'Erstausstattung Katze', 'Inserate-Fallen', 'Geschwisterkitten', 'Eingewöhnung Katze'],
+    },
+    social: {
+      title: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)',
+      description: 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung und Eingewöhnung.',
+      alt: 'Zwei Katzen sitzen am Fenster als Bild für die Verantwortung vor dem Einzug.',
+    },
+    jsonLd: {
+      name: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)',
+      headline: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst',
+      description: 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.',
+      dateModified: '2026-09-22',
+      keywords: ['Kätzchen aufnehmen', 'Kitten', 'Abgabealter Katze', 'Erstausstattung Katze', 'Inserate-Fallen', 'Geschwisterkitten', 'Eingewöhnung Katze'],
+      about: ['Kätzchen aufnehmen', 'Abgabealter Katze', 'Erstausstattung Katze', 'Eingewöhnung Katze', 'Inserate-Fallen Katze'],
+      readActionFragment: 'kaetzchen-aufnehmen',
+      breadcrumbName: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst',
+    },
+    hero: {
+      title: 'Kätzchen aufnehmen',
+      text: 'Was du vor dem Einzug wissen musst: Abgabealter, Inserate-Fallen, Geschwister, Erstausstattung, Eingewöhnung und ehrliche Kosten – damit der Start kein Spontankauf wird.',
+      imagePurpose: 'Kätzchen aufnehmen: Headerbild, das Sozialkontakt und Verantwortung vor dem Einzug sichtbar macht.',
+      shareReason: 'Das Bild erinnert daran, dass hinter jedem Kätzchen ein Lebewesen mit Bedürfnissen steht – nicht nur Niedlichkeit.',
+    },
+  },
+  'kleintiere-meerschweinchen': {
+    head: {
+      title: 'Meerschweinchen abgeben: Mindestalter und richtige Haltung | Wa(h)re Haustier(liebe)',
+      description: 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.',
+      keywords: ['Meerschweinchen halten', 'Meerschweinchen abgeben', 'Abgabealter', 'Mindestabgabealter', 'Frühkastration', 'Gruppenhaltung', 'Kleintiere'],
+      updatedTime: '2026-09-08',
+    },
+    social: {
+      title: 'Meerschweinchen abgeben: Mindestalter und richtige Haltung | Wa(h)re Haustier(liebe)',
+      description: 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.',
+    },
+    hero: {
+      title: 'Meerschweinchen abgeben und halten',
+      text: 'Gesetzliche Grenze, verantwortbares Abgabealter, soziale Entwicklung und alles, was vor einer Übernahme geklärt sein muss.',
+    },
+  },
+};
+
+function presentationFor(page) {
+  return pagePresentation[page.id] || {};
+}
+
 const keywordByPage = {
   startseite: ['Haustierhaltung', 'Tierwohl', 'Tierschutz', 'Adoption', 'Qualzucht', 'Tiernotfall'],
   mensch: ['Haustier anschaffen', 'Haustierkauf', 'Verantwortung', 'Kosten', 'Alltag'],
@@ -1820,6 +1905,7 @@ const keywordByPage = {
   realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
   'zucht-und-vermehrung': ['Zucht', 'Vermehrung', 'Züchter', 'Tierheim', 'Adoption'],
   wildtierhaltung: ['Wildtierhaltung', 'Exoten', 'Gefahrtier', 'Wildschutz', 'Deutschland'],
+  'katzen-kaetzchen-tierarzt': ['Kätzchen Tierarzt', 'Kitten Impfungen', 'Katze entwurmen', 'Kastration Kätzin', 'Mikrochip Katze'],
   'wildkatzenbaby-gefunden': ['Wildkatzenbaby gefunden', 'Wildkätzchen', 'Wildkatze oder Hauskatze', 'Wildkatzenjunge', 'Wildtierfund'],
   'noch-nicht-bereit': ['noch nicht bereit', 'Tierschutz unterstützen', 'Haustier warten'],
   'budgie-brain': ['Budgie Brain', 'Wellensittich Simulation', 'Schwarm', 'Freiflug', 'Stress'],
@@ -1870,6 +1956,15 @@ function sourceSocialImage(page) {
 }
 
 function socialImage(page) {
+  if (page.socialImage) {
+    return {
+      ...page.socialImage,
+      sourceSrc: page.socialImage.src,
+      width: socialCardWidth,
+      height: socialCardHeight,
+      type: 'image/png',
+    };
+  }
   const source = sourceSocialImage(page);
   const usesDefault = source.src === defaultSocialImage.src;
   return {
@@ -2302,15 +2397,48 @@ function topicChildrenFor(pageId) {
   return topicPages.filter((topic) => topic.sourcePage === pageId);
 }
 
+// Zusätzliche Karten und Querverweise, die nicht aus der Themenliste entstehen.
+// target verweist auf eine Seite, href auf einen Anker innerhalb der Übersichtsseite.
+const extraTopicLinks = {
+  katzen: [
+    {
+      after: 'katzen-kosten',
+      target: 'katzen-kaetzchen-tierarzt',
+      title: 'Tierarzt im ersten Jahr',
+      text: 'Impfungen, Entwurmung, Kastration und Notfall-Symptome: die konkrete Zeitachse fürs erste Katzenjahr.',
+      siblingNavOn: ['katzen-entscheidung'],
+    },
+  ],
+  voegel: [
+    {
+      after: 'voegel-entscheidung',
+      href: '#voegel-abgabealter',
+      title: 'Abgabealter bei Wellensittichen',
+      text: 'Warum „futterfest“ nicht automatisch abgabebereit heißt und weshalb zwölf Wochen unser ethischer Mindestmaßstab sind.',
+    },
+  ],
+};
+
+function withExtraLinks(entries, parentId, render, filter = () => true) {
+  const extras = (extraTopicLinks[parentId] || []).filter(filter);
+  return entries.flatMap((entry) => [
+    render(entry, false),
+    ...extras.filter((extra) => extra.after === entry.id).map((extra) => render(extra, true)),
+  ]);
+}
+
 function buildTopicSiblingNav(page) {
   const parent = pageById.get(page.sourcePage);
   const siblings = topicChildrenFor(page.sourcePage).filter((topic) => topic.id !== page.id);
   if (!parent || !siblings.length) return '';
-  const siblingLinks = siblings.map((topic) => `
-          <a class="topic-context-link" href="#${topic.id}" onclick="navigateTo('${topic.id}');return false">
-            <strong>${escapeHtml(topic.title.replace(` - ${siteName}`, ''))}</strong>
-            <span>${escapeHtml(topic.description)}</span>
-          </a>`).join('');
+  const siblingLinks = withExtraLinks(siblings, page.sourcePage, (topic, extra) => {
+    const targetId = extra ? topic.target : topic.id;
+    return `
+          <a class="topic-context-link" href="#${targetId}" onclick="navigateTo('${targetId}');return false">
+            <strong>${escapeHtml(extra ? topic.title : topic.title.replace(` - ${siteName}`, ''))}</strong>
+            <span>${escapeHtml(extra ? topic.text : topic.description)}</span>
+          </a>`;
+  }, (extra) => extra.target && extra.siblingNavOn?.includes(page.id)).join('');
   return `
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
           <div class="topic-context-head">
@@ -2325,20 +2453,26 @@ ${siblingLinks}
 
 function buildAnimalHubSection(source, page) {
   const children = topicChildrenFor(page.id);
-  const cards = children.map((child) => `
+  const cards = withExtraLinks(children, page.id, (child, extra) => {
+    const link = extra && child.href
+      ? `<a class="card-link" href="${child.href}">Thema öffnen</a>`
+      : `<span class="card-link" onclick="navigateTo('${extra ? child.target : child.id}')">Thema öffnen</span>`;
+    return `
           <article class="card">
             <div class="card-body">
-              <h3>${escapeHtml(child.title.replace(` - ${siteName}`, ''))}</h3>
-              <p>${escapeHtml(child.description)}</p>
-              <span class="card-link" onclick="navigateTo('${child.id}')">Thema öffnen</span>
+              <h3>${escapeHtml(extra ? child.title : child.title.replace(` - ${siteName}`, ''))}</h3>
+              <p>${escapeHtml(extra ? child.text : child.description)}</p>
+              ${link}
             </div>
-          </article>`).join('');
+          </article>`;
+  }).join('');
 
   const sourceSection = extractSection(source, page.id);
-  const firstTopicHeading = sourceSection.indexOf('<h2');
+  // Überschriften mit data-topic-continue gehören noch zum Einleitungsteil der Übersicht.
+  const firstTopicHeading = sourceSection.search(/<h2(?![^>]*\bdata-topic-continue\b)/);
   if (firstTopicHeading === -1) throw new Error(`Animal hub has no first topic heading: ${page.id}`);
 
-  const opening = sourceSection.slice(0, firstTopicHeading).trimEnd();
+  const opening = sourceSection.slice(0, firstTopicHeading).trimEnd().replace(/\s+data-topic-continue\b/g, '');
   return `${opening}
         <div class="info-box">
           <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
@@ -2355,6 +2489,7 @@ ${cards}
 function extractTopicSection(source, page) {
   const parent = pageById.get(page.sourcePage);
   if (!parent) throw new Error(`Missing topic parent for ${page.id}: ${page.sourcePage}`);
+  const presentation = presentationFor(page);
 
   const parentSection = extractSection(source, page.sourcePage);
   const headingPattern = new RegExp(`<h2([^>]*)id="${page.sourceAnchor}"([^>]*)>[\\s\\S]*?<\\/h2>`);
@@ -2362,7 +2497,11 @@ function extractTopicSection(source, page) {
   if (!heading) throw new Error(`Missing topic anchor for ${page.id}: ${page.sourceAnchor}`);
 
   const start = heading.index;
-  const nextHeading = parentSection.indexOf('<h2', start + heading[0].length);
+  // Zwischenüberschriften mit data-topic-continue gehören noch zum selben Thema.
+  const nextHeadingPattern = /<h2(?![^>]*\bdata-topic-continue\b)/g;
+  nextHeadingPattern.lastIndex = start + heading[0].length;
+  const nextHeadingMatch = nextHeadingPattern.exec(parentSection);
+  const nextHeading = nextHeadingMatch ? nextHeadingMatch.index : -1;
   const fallbackEnd = parentSection.lastIndexOf('</div>\n    </div>\n  </section>');
   const end = nextHeading === -1 ? fallbackEnd : nextHeading;
   if (end === -1 || end <= start) throw new Error(`Could not determine topic end for ${page.id}`);
@@ -2370,13 +2509,14 @@ function extractTopicSection(source, page) {
   const topicHtml = parentSection
     .slice(start, end)
     .trim()
-    .replace(`id="${page.sourceAnchor}"`, '');
+    .replace(`id="${page.sourceAnchor}"`, presentation.headingId ? `id="${presentation.headingId}"` : '')
+    .replace(/\s+data-topic-continue\b/g, '');
   const parentLabel = parent.title.split(':')[0].replace(' halten', '');
   return `<section id="${page.id}" class="page">
     <div class="hero">
       <div class="container">
-        <h1>${escapeHtml(page.title.replace(` - ${siteName}`, ''))}</h1>
-        <p>${escapeHtml(page.description)}</p>
+        <h1>${escapeHtml(presentation.hero?.title || page.title.replace(` - ${siteName}`, ''))}</h1>
+        <p>${escapeHtml(presentation.hero?.text || page.description)}</p>
       </div>
     </div>
 
@@ -2590,9 +2730,12 @@ function rewriteScript(script) {
 
 function buildJsonLd(page) {
   const canonical = canonicalUrl(page);
-  const copy = socialCopy(page);
+  const presentation = presentationFor(page);
+  const ld = presentation.jsonLd || {};
+  const copy = { ...socialCopy(page), ...presentation.social };
   const social = socialImage(page);
   const modified = pageLastmod(page);
+  const keywords = ld.keywords || pageKeywords(page);
   const image = {
     '@type': 'ImageObject',
     url: socialImageUrl(page),
@@ -2616,7 +2759,7 @@ function buildJsonLd(page) {
     breadcrumb.itemListElement.push({
       '@type': 'ListItem',
       position: 2,
-      name: page.title.split(':')[0],
+      name: ld.breadcrumbName || page.title.split(':')[0],
       item: canonical,
     });
   }
@@ -2624,25 +2767,25 @@ function buildJsonLd(page) {
   const webPage = {
     '@context': 'https://schema.org',
     '@type': page.type === 'WebSite' ? 'WebSite' : 'WebPage',
-    name: page.title,
-    headline: page.title,
-    description: page.description,
+    name: ld.name || page.title,
+    headline: ld.headline || page.title,
+    description: ld.description || page.description,
     url: canonical,
     image,
     thumbnailUrl: socialImageUrl(page),
     primaryImageOfPage: image,
     inLanguage: 'de-DE',
-    dateModified: modified,
+    dateModified: ld.dateModified || modified,
     isAccessibleForFree: true,
-    keywords: pageKeywords(page).join(', '),
-    about: pageKeywords(page).map((name) => ({ '@type': 'Thing', name })),
+    keywords: keywords.join(', '),
+    about: (ld.about || keywords).map((name) => ({ '@type': 'Thing', name })),
     audience: {
       '@type': 'Audience',
       audienceType: 'Haustierhalter, Tierinteressierte und Tierschutzinteressierte in Deutschland',
     },
     potentialAction: {
       '@type': 'ReadAction',
-      target: canonical,
+      target: ld.readActionFragment ? `${canonical}#${ld.readActionFragment}` : canonical,
     },
     isPartOf: {
       '@type': 'WebSite',
@@ -2817,11 +2960,13 @@ function restoreAsyncCssLinks(html) {
 
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
-  const copy = socialCopy(page);
+  const presentation = presentationFor(page);
+  const head = presentation.head || {};
+  const copy = { ...socialCopy(page), ...presentation.social };
   const social = socialImage(page);
   const image = socialImageUrl(page);
-  const keywords = pageKeywords(page).join(', ');
-  const modified = pageLastmod(page);
+  const keywords = (head.keywords || pageKeywords(page)).join(', ');
+  const modified = head.updatedTime || pageLastmod(page);
   const schema = buildJsonLd(page)
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
@@ -2831,8 +2976,8 @@ function buildHead(page, prefix) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(page.title)}</title>
-  <meta name="description" content="${escapeAttr(page.description)}">
+  <title>${escapeHtml(head.title || page.title)}</title>
+  <meta name="description" content="${escapeAttr(head.description || page.description)}">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="${siteName}">
   <meta name="theme-color" content="#f7efe3">
@@ -2938,8 +3083,9 @@ function injectArticleHeroMedia(body, page) {
 
   const copy = match[2].trim();
   const position = articleHeroPositionByImage[image.src] || 'center 45%';
-  const purpose = `${page.title.replace(` - ${siteName}`, '')}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
-  const shareReason = `Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.`;
+  const heroPresentation = presentationFor(page).hero || {};
+  const purpose = heroPresentation.imagePurpose || `${page.title.replace(` - ${siteName}`, '')}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
+  const shareReason = heroPresentation.shareReason || `Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.`;
   const media = `
         <figure class="article-hero-media image-context-card" style="--image-position:${escapeAttr(position)};" data-image-purpose="${escapeAttr(purpose)}" data-share-reason="${escapeAttr(shareReason)}">
           <img src="${image.src}" alt="${escapeAttr(image.alt)}" loading="eager">
@@ -2966,7 +3112,8 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
   body = addImageAttributes(body);
   body = body.replace(new RegExp(`<section id="${page.id}" class="page(?: active)?">`), `<section id="${page.id}" class="page active">`);
 
-  return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}" data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${ensureInertHiddenRegions(body)}\n  <script src="${prefix}assets/site.js" defer></script>\n</body>\n</html>\n`;
+  const pageKey = presentationFor(page).pageKey;
+  return `${buildHead(page, prefix)}\n<body class="static-site" data-static-site="true" data-page-id="${page.id}"${pageKey ? ` data-page-key="${pageKey}"` : ''} data-route-prefix="${routePrefix}" data-asset-prefix="${prefix}">\n  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>\n${ensureInertHiddenRegions(body)}\n  <script src="${prefix}assets/site.js" defer></script>\n</body>\n</html>\n`;
 }
 
 function normalizePublicCopy(html) {
@@ -3150,8 +3297,7 @@ function ensureInertHiddenRegions(html) {
 }
 
 async function loadChromium() {
-  const playwrightModule = pathToFileURL(path.resolve(projectRoot, '..', 'ClautzGPT', 'node_modules', 'playwright', 'index.js')).href;
-  const playwright = await import(playwrightModule);
+  const playwright = await import(playwrightModuleUrl(projectRoot));
   const { chromium } = playwright.default ?? playwright;
   return chromium;
 }
@@ -3304,6 +3450,8 @@ async function generateSocialImages() {
   const generated = new Set();
 
   for (const page of pages) {
+    // Handgepflegte Seiten bringen ihr Social-Bild selbst mit.
+    if (page.standalone === 'handwritten') continue;
     const source = sourceSocialImage(page);
     const social = socialImage(page);
     const outputFile = path.join(projectRoot, social.src);
@@ -3339,8 +3487,17 @@ function buildSitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
+// Die Quiz-PWA unter /pwa/ ist Beta und soll nicht gecrawlt werden (siehe pwa/PFLEGE.md).
+const robotsUserAgents = ['*', 'OAI-SearchBot', 'ChatGPT-User', 'GPTBot', 'PerplexityBot', 'ClaudeBot', 'Claude-SearchBot', 'Googlebot'];
+const robotsDisallow = ['/pwa/'];
+
 function buildRobots() {
-  return `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
+  const groups = robotsUserAgents.map((agent) => [
+    `User-agent: ${agent}`,
+    'Allow: /',
+    ...robotsDisallow.map((entry) => `Disallow: ${entry}`),
+  ].join('\n'));
+  return `${groups.join('\n\n')}\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
 }
 
 function buildManifest() {
@@ -3436,7 +3593,6 @@ function buildLlmsFull() {
     '## Last Updated',
     '',
     lastmod,
-    '',
   ];
   return `${lines.join('\n')}\n`;
 }
@@ -3604,6 +3760,7 @@ async function main() {
   await generateSocialImages();
 
   for (const page of pages) {
+    if (page.standalone === 'handwritten') continue;
     if (page.topicPage) {
       const section = extractTopicSection(source, page);
       const html = buildHtmlPage({ page, header, section, commonAfterSections });

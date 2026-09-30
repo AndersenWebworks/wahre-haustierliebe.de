@@ -1,11 +1,12 @@
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import fs from 'node:fs/promises';
+import { playwrightModuleUrl } from './playwright-module.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
-const playwrightModule = pathToFileURL(path.resolve(projectRoot, '..', 'ClautzGPT', 'node_modules', 'playwright', 'index.js')).href;
+const playwrightModule = playwrightModuleUrl(projectRoot);
 const playwright = await import(playwrightModule);
 const { chromium } = playwright.default ?? playwright;
 

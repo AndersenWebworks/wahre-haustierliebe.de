@@ -180,6 +180,7 @@ Facts:
 - VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.
 - Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.
 - PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.
+- Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf eBay Kleinanzeigen auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.
 - Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.
 Important boundaries:
 - Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.
@@ -188,6 +189,7 @@ Sources:
 - PETA Deutschland: Pferdekutschen auf Mallorca verbieten: https://www.peta.de/aktiv/pferdekutschen-mallorca-petition/
 - VIER PFOTEN: Kein unregulierter Welpenhandel auf Social Media!: https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media
 - PETA Deutschland: Tierverkauf für den Zoohandel stoppen: https://www.peta.de/aktiv/massenzucht-zoohandel-petition/
+- Change.org: Tiervermittlung auch für Kleinsäuger auf eBay Kleinanzeigen einschränken!: https://www.change.org/p/tiervermittlung-auch-f%C3%BCr-kleins%C3%A4uger-auf-ebay-kleinanzeigen-einschr%C3%A4nken
 
 ### Vor dem Haustierkauf: Passt ein Tier wirklich in dein Leben?
 URL: https://wahre-haustierliebe.de/mensch/index.html
@@ -282,6 +284,7 @@ Facts:
 - Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.
 - Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.
 - Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.
+- Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.
 - Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.
 Important boundaries:
 - Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform.
@@ -293,6 +296,7 @@ Sources:
 - Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen: https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf
 - Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
+- Tierschutzgesetz § 11c: https://www.gesetze-im-internet.de/tierschg/__11c.html
 
 ### Kleintiere halten: Kaninchen, Meerschweinchen, Hamster und Ratten
 URL: https://wahre-haustierliebe.de/kleintiere/index.html

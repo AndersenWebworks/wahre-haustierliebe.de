@@ -150,6 +150,7 @@
         "VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.",
         "Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.",
         "PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.",
+        "Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf eBay Kleinanzeigen auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.",
         "Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen."
       ],
       "citationGuardrails": [
@@ -168,6 +169,10 @@
         {
           "label": "PETA Deutschland: Tierverkauf für den Zoohandel stoppen",
           "url": "https://www.peta.de/aktiv/massenzucht-zoohandel-petition/"
+        },
+        {
+          "label": "Change.org: Tiervermittlung auch für Kleinsäuger auf eBay Kleinanzeigen einschränken!",
+          "url": "https://www.change.org/p/tiervermittlung-auch-f%C3%BCr-kleins%C3%A4uger-auf-ebay-kleinanzeigen-einschr%C3%A4nken"
         }
       ],
       "social": {
@@ -459,6 +464,7 @@
         "Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.",
         "Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.",
         "Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.",
+        "Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.",
         "Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung."
       ],
       "citationGuardrails": [
@@ -483,6 +489,10 @@
         {
           "label": "Tierschutzgesetz § 2",
           "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 11c",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11c.html"
         }
       ],
       "social": {

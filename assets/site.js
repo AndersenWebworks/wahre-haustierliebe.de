@@ -30,6 +30,7 @@ var staticPageRoutes = {
   "katzen-kosten": "/katzen/kosten/index.html",
   "katzen-streunerkatzen": "/katzen/streunerkatzen/index.html",
   "katzen-entscheidung": "/katzen/entscheidung/index.html",
+  "katzen-kaetzchen-tierarzt": "/katzen/kaetzchen-tierarzt/index.html",
   "voegel-schwarmhaltung": "/voegel/schwarmhaltung/index.html",
   "voegel-uv-licht": "/voegel/uv-licht/index.html",
   "voegel-kuechenluft-und-daempfe-sind-lebensgefahr": "/voegel/kuechenluft-teflon/index.html",
@@ -260,6 +261,12 @@ var staticSiteSearchIndex = [
     "title": "Bevor eine Katze einzieht - Wa(h)re Haustier(liebe)",
     "description": "Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.",
     "terms": "Entscheidung vor der Katzenadoption oder Anschaffung prüfen. katzen/entscheidung katzen entscheidung"
+  },
+  {
+    "id": "katzen-kaetzchen-tierarzt",
+    "title": "Tierarzt im ersten Jahr beim Kätzchen - Wa(h)re Haustier(liebe)",
+    "description": "Welche Impfungen wann, Entwurmung im Kitten-Alter, Kastrations-Zeitpunkt, Mikrochip und Notfall-Symptome: die konkrete Zeitachse für das erste Katzenjahr.",
+    "terms": "Tierarzt-Termine und Kosten im ersten Katzenjahr planen. katzen/kaetzchen-tierarzt katzen kaetzchen tierarzt"
   },
   {
     "id": "voegel-schwarmhaltung",
