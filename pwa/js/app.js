@@ -11,6 +11,7 @@ import {
   getBestRun,
   DEFAULT_MODE
 } from "./whl.js";
+import { renderDaily } from "./daily.js";
 
 const modeGrid = document.getElementById("mode-grid");
 const grid = document.getElementById("category-grid");
@@ -80,7 +81,7 @@ function makeCategoryBtn({ key, label, blurb }) {
   btn.disabled = count === 0;
   const countText = count === 0
     ? "In diesem Modus noch keine Fragen"
-    : `${size} ${size === 1 ? "Frage" : "Fragen"} pro Runde`;
+    : `${count} ${count === 1 ? "Frage" : "Fragen"}${count > size ? `, je Runde ${size}` : ""}`;
   btn.innerHTML = `
     <span class="category-btn-label">${escapeHtml(label)}</span>
     <span class="category-btn-blurb">${escapeHtml(blurb || "")}</span>
@@ -178,6 +179,7 @@ async function init() {
     renderModes();
     renderCategories();
     renderScoreSummary();
+    try { renderDaily(document.getElementById("daily-card"), data); } catch (e) { /* Startseite bleibt nutzbar */ }
     if (checkQuestionUpdate(data)) {
       showSnackbar("Neue Fragen sind da. Viel Spaß beim Spielen!");
     }

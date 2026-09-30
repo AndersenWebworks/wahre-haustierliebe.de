@@ -18,6 +18,7 @@ pwa/
 │   ├── app.js          Start-Screen, Modus- und Kategorie-Auswahl, bester Run
 │   ├── quiz.js         Session, Timer, Tap-Moment, Fall-Szene, Schwierigkeit
 │   ├── share.js        Ergebnis, persönliche Texte, Tier-Badges, Artikelliste, neue Runde
+│   ├── daily.js        Frage des Tages auf der Startseite
 │   └── sticker.js      Sticker-Auswahl pro Kategorie und Modus
 ├── data/
 │   ├── questions.js    Fragenkatalog als ESM-Modul (Single Source of Truth)
@@ -30,6 +31,7 @@ pwa/
 │   ├── kralle.svg  feder.svg  flosse.svg
 │   └── hund.svg  katze.svg  welli.svg  meeri.svg
 │       halsband.svg  fenster.svg  kaefig.svg  napf.svg
+│       pferd.svg  hufeisen.svg  echse.svg  herz.svg
 └── PFLEGE.md           Diese Datei
 ```
 
@@ -55,7 +57,7 @@ Bearbeite `data/questions.js`. Jede Frage ist ein Objekt im `questions`-Export. 
 | --- | --- |
 | `id` | Eindeutige ID, Schema `<kategorie>-<thema>-<zahl>` |
 | `mode` | Schlüssel aus dem `modes`-Export: `klassisch`, `mythen` oder `fall` |
-| `category` | Schlüssel aus dem `categories`-Export: `hunde`, `katzen`, `kleintiere`, `voegel` |
+| `category` | Schlüssel aus dem `categories`-Export: `hunde`, `katzen`, `kleintiere`, `voegel`, `exoten`, `pferde`, `tierschutz` (tierartübergreifend: Adoption, Qualzucht, Zucht, Notfall, Urlaub) |
 | `difficulty` | `leicht`, `mittel` oder `knifflig`. Bestimmt die Reihenfolge in der Runde und die Punkte im Quiz-Header |
 | `text` | Die Frage, kurz, konkret, ohne Belehr-Ton |
 | `options` | Genau vier Antworten, alle plausibel und etwa gleich lang (nur `vierKarten`) |
@@ -135,6 +137,18 @@ Damit eine Frage eine Herausforderung bleibt, darf die richtige Antwort nicht an
 
 Wenn neue Sticker oder Dateien hinzukommen, müssen sie unter `pwa/` abgelegt und in `pwa/sw.js` (`APP_SHELL`) eingetragen werden, damit der Service Worker sie offline vorhält. Nur dann wird auch `CACHE_VERSION` erhöht.
 
+## Runden und Wiederholung
+
+- Eine Runde hat höchstens 10 Fragen (`QUIZ_SIZE` in `js/whl.js`).
+- Die App merkt sich gespielte Fragen im Gerät und zieht zuerst Fragen, die noch nicht dran waren. Erst wenn ein Pool durch ist, kommen bekannte Fragen wieder.
+
+## Frage des Tages
+
+- Die Startseite zeigt jeden Tag eine Frage aus dem gesamten Katalog, für alle Menschen am selben Tag dieselbe. Ausgewählt wird sie über das Datum, ohne Server.
+- Sie wird direkt auf der Startseite beantwortet, mit Erklärung und Wiki-Link. Wer sie beantwortet hat, sieht bis Mitternacht das Ergebnis.
+- „X Tage in Folge dabei“ zählt Tage, an denen jemand mitgespielt hat, egal ob richtig oder falsch. Verpasst man einen Tag, beginnt die Serie neu.
+- Kommen neue Fragen dazu, kann sich die Frage des laufenden Tages ändern. Das ist gewollt einfach gehalten.
+
 ## Tap-Moment (Game-Design-Hebel)
 
 Der Tipper auf eine Antwort ist der lebendigste Moment der App. Visuelle Reaktion, kein Sound:
@@ -200,7 +214,7 @@ Neue Texte sind warm, kurz und ohne Belehrung. Beispiel: „Stimmt." statt „Ko
 ## Bekannte Grenzen
 
 - PWA-Icons liegen als SVG vor. Manche Apple-Versionen verlangen PNG. Falls apple-touch-icon als PNG gebraucht wird, einmal als 180 × 180 px aus `icons/icon.svg` rendern und als `icons/apple-touch-icon.png` ablegen, dann in den HTML-Head-Dateien wieder einbinden.
-- Der Fragenkatalog hat 43 Fragen in drei Modi (20 Klassisch, 14 Mythen-Check, 9 Fall-Entscheidung). Eine Runde hat höchstens 15 Fragen; bei kleinen Pools sieht man deshalb jede Runde dieselben Fragen in anderer Reihenfolge. Mehr Fragen sind der größte Hebel für Wiederspielwert.
+- Der Fragenkatalog hat 280 Fragen in drei Modi (122 Klassisch, 115 Mythen-Check, 43 Fall-Entscheidung) aus rund 70 Wiki-Seiten. Pferde und Exoten haben noch wenige Fall-Fragen. Eine Lektoratsliste aller Fragen liegt in `docs/quiz-lektorat.md` und wird bei größeren Änderungen neu erzeugt.
 - Push-Benachrichtigungen sind bewusst nicht im MVP — die PWA läuft statisch ohne Server.
 - Die PWA ist als Beta markiert: sie steht unter `robots.txt` mit `Disallow: /pwa/` und ist weder in `sitemap.xml` noch in `ai/pages.json` eingetragen. Sie taucht deshalb auch nicht in `llms.txt` oder `llms-full.txt` auf.
 

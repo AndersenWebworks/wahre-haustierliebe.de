@@ -836,3 +836,45 @@ body.is-offline .offline-banner { display: block; }
   color: var(--secondary);
 }
 .wiki-list .answer-state.is-correct { color: var(--primary-dark); }
+
+/* ========= Frage des Tages ========= */
+.daily-card {
+  border-top: 4px solid var(--mode-accent);
+}
+.daily-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.daily-head h2 { margin: 0; }
+.daily-streak {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--mode-accent);
+}
+.daily-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.6rem 0 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mode-accent);
+}
+.daily-meta img { color: var(--mode-accent); }
+.daily-text {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin: 0 0 0.9rem;
+}
+.daily-next {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

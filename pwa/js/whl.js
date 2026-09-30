@@ -5,10 +5,12 @@ const STORAGE_KEYS = {
   HIGHSCORE: "whl_quiz_highscore_v2",
   SEEN: "whl_quiz_seen_v1",
   SESSION: "whl_quiz_session_v2",
-  VERSION: "whl_quiz_version_seen"
+  VERSION: "whl_quiz_version_seen",
+  DAILY: "whl_quiz_daily_v1"
 };
 
-export const QUIZ_SIZE = 15;
+export const QUIZ_SIZE = 10;
+const SEEN_LIMIT = 400;
 export const TIME_PER_QUESTION = 30; // sanfter Hinweis, kein Druck
 export const DEFAULT_MODE = "klassisch";
 
@@ -40,11 +42,15 @@ export function poolFor(data, modeKey, categoryKey) {
   return all.filter(q => (!mode || q.mode === mode) && (!cat || q.category === cat));
 }
 
-// Wählt die Runde zufällig aus dem Pool und ordnet sie dann von leicht nach
-// knifflig. So entsteht der Spannungsbogen aus der echten Schwierigkeit.
+// Wählt die Runde zufällig aus dem Pool, noch nicht gesehene Fragen zuerst,
+// und ordnet sie dann von leicht nach knifflig. So entsteht der Spannungsbogen
+// aus der echten Schwierigkeit, und Wiederholungen kommen erst später.
 export function pickQuestions(data, modeKey, categoryKey) {
   const pool = poolFor(data, modeKey, categoryKey);
-  const picks = shuffle(pool).slice(0, Math.min(QUIZ_SIZE, pool.length));
+  const seen = new Set(getSeen());
+  const fresh = shuffle(pool.filter(q => !seen.has(q.id)));
+  const known = shuffle(pool.filter(q => seen.has(q.id)));
+  const picks = fresh.concat(known).slice(0, Math.min(QUIZ_SIZE, pool.length));
   return picks
     .map((q, i) => ({ q, i }))
     .sort((a, b) => difficultyRank(a.q.difficulty) - difficultyRank(b.q.difficulty) || a.i - b.i)
@@ -147,13 +153,82 @@ export function getBestRun(data) {
   return best;
 }
 
-export function markSeen(questionIds) {
+function getSeen() {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.SEEN);
     const arr = raw ? JSON.parse(raw) : [];
-    const merged = Array.from(new Set([...arr, ...questionIds])).slice(-30);
+    return Array.isArray(arr) ? arr : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+// Merkt sich gespielte Fragen. Ist ein Pool komplett gesehen, beginnt er von
+// vorn, weil pickQuestions dann nur noch bekannte Fragen findet.
+export function markSeen(questionIds) {
+  try {
+    const ids = new Set(questionIds);
+    const merged = getSeen().filter(id => !ids.has(id)).concat(questionIds).slice(-SEEN_LIMIT);
     localStorage.setItem(STORAGE_KEYS.SEEN, JSON.stringify(merged));
   } catch (e) { /* ignoriert */ }
+}
+
+// ---------- Frage des Tages ----------
+
+export function todayKey(date = new Date()) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function hashString(text) {
+  let h = 2166136261;
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+// Für alle Menschen am selben Tag dieselbe Frage, ohne Server.
+export function dailyQuestion(data, key = todayKey()) {
+  const all = ((data && data.questions) || []).slice().sort((a, b) => a.id.localeCompare(b.id));
+  if (!all.length) return null;
+  return all[hashString("whl-" + key) % all.length];
+}
+
+export function getDaily() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.DAILY);
+    return raw ? (JSON.parse(raw) || {}) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function dayBefore(key) {
+  const [y, m, d] = key.split("-").map(Number);
+  return todayKey(new Date(y, m - 1, d - 1));
+}
+
+// Speichert die Antwort von heute. Die Serie zählt Tage in Folge, an denen
+// jemand mitgespielt hat, egal ob richtig oder falsch.
+export function saveDaily(key, questionId, correct) {
+  const prev = getDaily();
+  if (prev.date === key) return prev;
+  const streak = prev.date === dayBefore(key) ? (prev.streak || 0) + 1 : 1;
+  const next = {
+    date: key,
+    id: questionId,
+    correct: Boolean(correct),
+    streak,
+    best: Math.max(prev.best || 0, streak),
+    total: (prev.total || 0) + 1,
+    right: (prev.right || 0) + (correct ? 1 : 0)
+  };
+  try { localStorage.setItem(STORAGE_KEYS.DAILY, JSON.stringify(next)); } catch (e) { /* ignoriert */ }
+  return next;
 }
 
 export function registerServiceWorker() {
