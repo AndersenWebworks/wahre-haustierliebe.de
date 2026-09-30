@@ -5,6 +5,8 @@ import {
   loadQuestions,
   loadSession,
   clearSession,
+  saveSession,
+  pickQuestions,
   getHighscore,
   buildWikiUrl,
   formatNumber,
@@ -24,6 +26,7 @@ const els = {
   wikiList: document.getElementById("wiki-list"),
   wikiSection: document.getElementById("wiki-section"),
   categoryBadges: document.getElementById("category-badges"),
+  categoryBadgesCard: document.getElementById("category-badges-card"),
   againBtn: document.getElementById("again-btn"),
   shareBtn: document.getElementById("share-btn"),
   shareCard: document.getElementById("share-card"),
@@ -60,10 +63,16 @@ function paint() {
     els.modeLabel.dataset.mode = state.mode;
   }
 
-  const prev = getHighscore(state.mode, state.category);
-  const highscoreLine = state.newRecord
-    ? `Neuer Highscore (${modeLabel}): ${score} von ${total}. Vorheriger Stand: ${prev}.`
-    : `Dein Highscore (${modeLabel}) bleibt ${prev} von ${total}.`;
+  const prev = typeof state.prevHighscore === "number" ? state.prevHighscore : getHighscore(state.mode, state.category);
+  const best = Math.min(getHighscore(state.mode, state.category), total);
+  let highscoreLine;
+  if (state.newRecord) {
+    highscoreLine = prev > 0
+      ? `Neuer Highscore (${modeLabel}): ${score} von ${total}. Vorher waren es ${Math.min(prev, total)}.`
+      : `Dein erster Highscore (${modeLabel}): ${score} von ${total}.`;
+  } else {
+    highscoreLine = `Dein Highscore (${modeLabel}) bleibt ${best} von ${total}.`;
+  }
   els.highscoreLine.textContent = highscoreLine;
 
   const satz = baueResultatText(state.mode, score, total);
@@ -74,10 +83,7 @@ function paint() {
   renderCategoryBadges();
   renderWikiList();
 
-  els.againBtn.addEventListener("click", () => {
-    clearSession();
-    location.href = "index.html";
-  });
+  els.againBtn.addEventListener("click", playAgain);
   els.shareBtn.addEventListener("click", onShareClick);
 }
 
@@ -91,11 +97,8 @@ function renderCategoryBadges() {
     seen.add(q.category);
   });
   els.categoryBadges.innerHTML = "";
-  if (seen.size === 0) {
-    els.categoryBadges.hidden = true;
-    return;
-  }
-  els.categoryBadges.hidden = false;
+  if (els.categoryBadgesCard) els.categoryBadgesCard.hidden = seen.size === 0;
+  if (seen.size === 0) return;
   for (const categoryKey of seen) {
     const meta = cats[categoryKey] || { label: categoryKey };
     const li = document.createElement("li");
@@ -108,28 +111,52 @@ function renderCategoryBadges() {
   }
 }
 
+// Artikel zu den Fragen der Runde. Was falsch lief, steht oben, weil sich
+// dort das Weiterlesen am meisten lohnt. Mehrere Fragen zu einem Artikel
+// ergeben nur einen Eintrag.
 function renderWikiList() {
   const cats = data.categories || {};
-  const seen = new Set();
-  els.wikiList.innerHTML = "";
-  let any = false;
+  const answers = new Map((state.answers || []).map(a => [a.id, a.correct]));
+  const byPath = new Map();
   state.questions.forEach(qStub => {
     const q = data.questions.find(qq => qq.id === qStub.id);
-    if (!q || seen.has(q.id)) return;
-    seen.add(q.id);
-    any = true;
+    if (!q) return;
+    const key = q.wikiPath || q.id;
+    const entry = byPath.get(key) || { q, wrong: false };
+    if (answers.get(q.id) !== true) entry.wrong = true;
+    byPath.set(key, entry);
+  });
+  const entries = [...byPath.values()].sort((a, b) => Number(b.wrong) - Number(a.wrong));
+  els.wikiList.innerHTML = "";
+  for (const { q, wrong } of entries) {
     const meta = cats[q.category] || { label: q.category };
-    const url = buildWikiUrl(q.wikiPath);
     const li = document.createElement("li");
     li.innerHTML = `
-      <span class="topic">${escapeHtml(meta.label || q.category)}</span>
-      <a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(q.text)}</a>
+      <span class="topic">${escapeHtml(meta.label || q.category)}<span class="answer-state${wrong ? "" : " is-correct"}">${wrong ? "Nachlesen lohnt sich" : "Gewusst"}</span></span>
+      <a href="${escapeHtml(buildWikiUrl(q.wikiPath))}" target="_blank" rel="noopener">${escapeHtml(q.text)}</a>
     `;
     els.wikiList.appendChild(li);
-  });
-  if (els.wikiSection) {
-    els.wikiSection.hidden = !any;
   }
+  if (els.wikiSection) els.wikiSection.hidden = entries.length === 0;
+}
+
+// Neue Runde mit demselben Modus und Thema, ohne Umweg über den Start.
+function playAgain() {
+  const picks = pickQuestions(data, state.mode, state.category);
+  clearSession();
+  if (picks.length === 0) {
+    location.href = "index.html";
+    return;
+  }
+  saveSession({
+    mode: state.mode,
+    category: state.category,
+    startedAt: Date.now(),
+    questions: picks.map(q => ({ id: q.id, text: q.text })),
+    answers: [],
+    score: 0
+  });
+  location.href = "quiz.html";
 }
 
 function buildShareText() {

@@ -2,8 +2,9 @@
 // Drei Modi: klassisch, mythen, fall. Jede Frage trägt optional
 // `interaktion` (vierKarten | jaNein) und `sticker` (Fall-Sticker).
 // Bei interaktion "jaNein" wird `correctJaNein` statt correctIndex ausgewertet.
+// Jede Frage braucht einen `wikiPath`, der auf eine bestehende Seite zeigt.
 
-export const version = "2026-09-23.1";
+export const version = "2026-09-30.1";
 
 export const categories = {
   hunde: { label: "Hunde", blurb: "Alltag, Bindung und Bewegung" },
@@ -36,8 +37,10 @@ export const modes = {
   }
 };
 
+export const difficulties = ["leicht", "mittel", "knifflig"];
+
 export const questions = [
-  // ============ KLASSISCH (15 Fragen) ============
+  // ============ KLASSISCH ============
   {
     id: "hunde-allein-001",
     mode: "klassisch",
@@ -46,13 +49,13 @@ export const questions = [
     difficulty: "leicht",
     text: "Drei Bürotage pro Woche dauern jeweils acht Stunden. Welche Lösung ist für einen erwachsenen Hund wirklich tragfähig?",
     options: [
-      "Eine verlässliche Betreuung oder Zwischenrunde unterbricht den Tag, damit er nicht regelmäßig lange allein bleibt",
-      "Eine lange Morgenrunde gleicht einen ganzen Arbeitstag allein vollständig aus",
-      "Im Garten zählt die Zeit nicht als Alleinsein",
-      "Nach ein paar Wochen gewöhnt sich jeder Hund an acht Stunden"
+      "Eine verlässliche Betreuung oder Zwischenrunde, die den Tag unterbricht",
+      "Eine besonders lange Morgenrunde, die ihn für den restlichen Tag müde macht",
+      "Ein gesicherter Garten, in dem er sich tagsüber frei bewegen kann",
+      "Eine Eingewöhnung in kleinen Schritten, bis acht Stunden klappen"
     ],
     correctIndex: 0,
-    explanation: "Hunde sind soziale Lebewesen. Für die meisten erwachsenen Hunde sind etwa vier Stunden allein bereits die obere Grenze. Ein normaler Arbeitstag braucht deshalb eine passende Betreuungslösung.",
+    explanation: "Hunde sind soziale Lebewesen. Für die meisten erwachsenen Hunde sind etwa vier Stunden allein bereits die obere Grenze. Ein normaler Arbeitstag braucht deshalb eine Betreuungslösung.",
     wikiPath: "/hunde/allein-zu-hause/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/allein-zu-hause/"
   },
@@ -64,10 +67,10 @@ export const questions = [
     difficulty: "leicht",
     text: "Ein Hund hat einen großen, sicheren Garten. Was fehlt ihm trotzdem als fester Teil seines Alltags?",
     options: [
-      "Vor allem ein höherer Zaun",
-      "Abwechslung draußen, gemeinsame Zeit und die Möglichkeit, Umwelt und Gerüche wahrzunehmen",
-      "Nichts, denn Fläche ersetzt Spaziergänge",
-      "Ein zweiter Futternapf im Garten"
+      "Ein höherer Zaun, damit er sich auf dem Grundstück sicherer fühlt",
+      "Gemeinsame Wege draußen mit neuen Gerüchen und Begegnungen",
+      "Ein zweiter Liegeplatz im Garten, damit er draußen ruhen kann",
+      "Mehr Spielzeug im Garten, damit er sich allein beschäftigt"
     ],
     correctIndex: 1,
     explanation: "Ein Garten kann ein schöner Rückzugsort sein. Er ersetzt aber weder gemeinsame Bewegung noch neue Eindrücke, Gerüche und Begegnungen außerhalb des eigenen Grundstücks.",
@@ -79,16 +82,16 @@ export const questions = [
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "hunde",
-    difficulty: "leicht",
+    difficulty: "mittel",
     text: "Ein Hofhund hat Futter, täglichen Auslauf und einen großen Zwinger. Warum kann die Haltung dennoch scheitern?",
     options: [
-      "Weil Hunde nur in Wohnungen leben dürfen",
-      "Weil ein Hund grundsätzlich keinen Auslauf braucht",
-      "Weil Größe und Versorgung die dauerhafte soziale Isolation von seiner Familie nicht ersetzen",
-      "Weil ein Zwinger nie für kurze Ruhephasen genutzt werden darf"
+      "Weil ein Zwinger im Winter grundsätzlich zu kalt und zugig für jeden Hund ist",
+      "Weil täglicher Auslauf für einen Hofhund meist zu viel Bewegung ist",
+      "Weil Platz und Versorgung die Trennung von seiner Familie nicht ausgleichen",
+      "Weil Hunde auf Höfen fast immer zu wenig Beschäftigung haben"
     ],
     correctIndex: 2,
-    explanation: "Hunde leben in sozialen Beziehungen. Versorgung ist wichtig, aber sie ersetzt weder Zugehörigkeit noch regelmäßigen Kontakt zur Bezugsperson.",
+    explanation: "Hunde leben in sozialen Beziehungen. Versorgung ist wichtig, aber sie ersetzt weder Zugehörigkeit noch regelmäßigen Kontakt zu ihren Menschen.",
     wikiPath: "/hunde/hofhaltung-und-zwinger/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/"
   },
@@ -97,18 +100,36 @@ export const questions = [
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "hunde",
-    difficulty: "leicht",
+    difficulty: "mittel",
     text: "Welcher Alltag gibt einem Hund am ehesten Sicherheit, ohne ihn zu langweilen?",
     options: [
-      "Verlässliche Rituale mit gemeinsamer Zeit, ergänzt durch passende Bewegung, neue Gerüche und Ruhe",
-      "Jeden Tag exakt dieselbe Runde ohne Ansprache",
-      "Möglichst viele wechselnde Menschen und Orte ohne feste Abläufe",
-      "Futter zur gleichen Uhrzeit, alles andere ist nebensächlich"
+      "Jeden Tag exakt dieselbe Runde zur selben Uhrzeit, ohne Ausnahmen",
+      "Möglichst viel Abwechslung mit neuen Orten und Menschen an jedem Tag",
+      "Verlässliche Rituale, ergänzt durch neue Gerüche, Bewegung und Ruhe",
+      "Feste Fütterungszeiten, dazu freie Zeit, die er sich selbst einteilt"
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     explanation: "Hunde profitieren von Verlässlichkeit, aber auch von sinnvoller Abwechslung. Bindung, Ruhe, Bewegung und neue Eindrücke gehören zusammen.",
     wikiPath: "/hunde/soziale-beduerfnisse/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/soziale-beduerfnisse/"
+  },
+  {
+    id: "hunde-gesundheit-001",
+    mode: "klassisch",
+    interaktion: "vierKarten",
+    category: "hunde",
+    difficulty: "knifflig",
+    text: "Welches Gesundheitsproblem ist bei Hunden in Deutschland am häufigsten?",
+    options: [
+      "Allergien und Hautprobleme",
+      "Übergewicht",
+      "Hüft- und Ellbogendysplasie",
+      "Ohrenentzündungen"
+    ],
+    correctIndex: 1,
+    explanation: "Etwa 40 Prozent der Hunde in Deutschland sind übergewichtig. Die Ursache ist fast immer menschengemacht: zu viel Futter, zu viele Leckerlis, zu wenig Bewegung.",
+    wikiPath: "/hunde/gesundheit/",
+    sourceRef: "https://wahre-haustierliebe.de/hunde/gesundheit/"
   },
   {
     id: "katzen-wohnung-001",
@@ -118,10 +139,10 @@ export const questions = [
     difficulty: "leicht",
     text: "Eine Katze lebt nur in der Wohnung. Welche Veränderung verbessert ihr Revier am deutlichsten?",
     options: [
-      "Ein größerer Futternapf",
-      "Dauerhaft laufendes Fernsehen als Gesellschaft",
-      "Mehr vertikale Wege, Rückzugsorte, Kratzmöglichkeiten und abwechslungsreiche Beschäftigung",
-      "Das Katzenklo direkt neben dem Futterplatz"
+      "Ein Fensterplatz mit Blick nach draußen als tägliche Unterhaltung",
+      "Ein zweiter Futterplatz, damit sie mehr Auswahl im Revier hat",
+      "Mehr Höhe, Rückzugsorte, Kratzmöglichkeiten und Beschäftigung",
+      "Ein großes Katzenbett an ihrem liebsten Platz im Wohnzimmer"
     ],
     correctIndex: 2,
     explanation: "Wohnungskatzen können gut leben, wenn die Wohnung wirklich ihr Revier wird: mit Höhe, Rückzug, Kratzmöglichkeiten und Beschäftigung.",
@@ -136,13 +157,13 @@ export const questions = [
     difficulty: "leicht",
     text: "Eine unkastrierte Katze streift regelmäßig draußen herum. Welches Problem verhindert Kastration am direktesten?",
     options: [
-      "Dass sie nie wieder ihr Revier verlässt",
-      "Unkontrollierten Nachwuchs und damit weiteren Druck auf Katzenpopulationen",
-      "Dass sie keine tierärztliche Versorgung mehr braucht",
-      "Dass sie automatisch zur Wohnungskatze wird"
+      "Dass sie sich draußen verläuft und nicht mehr zurückfindet",
+      "Ungewollten Nachwuchs, der die Zahl der Streunerkatzen erhöht",
+      "Dass sie sich bei Revierkämpfen mit Nachbarkatzen verletzt",
+      "Dass sie Vögel und Mäuse im Garten jagt"
     ],
     correctIndex: 1,
-    explanation: "Kastration verhindert unkontrollierte Vermehrung und ist ein zentraler Beitrag gegen weiteres Katzenleid durch ungewollten Nachwuchs.",
+    explanation: "In Deutschland leben rund zwei Millionen Streunerkatzen, die meisten stammen von unkastrierten Freigängern ab. Kastration ist der wirksamste Schutz vor weiterem Katzenleid.",
     wikiPath: "/katzen/kastration/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/kastration/"
   },
@@ -151,13 +172,13 @@ export const questions = [
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "katzen",
-    difficulty: "leicht",
+    difficulty: "mittel",
     text: "Zwei Wohnungskatzen geraten plötzlich häufiger aneinander. Welche Anpassung kann Revierdruck sinnvoll senken?",
     options: [
-      "Mehr getrennte Ruhe-, Kratz-, Futter- und Höhenplätze, damit Ausweichen möglich wird",
-      "Ein gemeinsamer Lieblingsplatz, damit sie sich aneinander gewöhnen",
-      "Das Katzenklo entfernen, damit mehr Platz entsteht",
-      "Die Katzen tagsüber grundsätzlich getrennt einsperren"
+      "Getrennte Ruhe-, Kratz-, Futter- und Höhenplätze, damit Ausweichen möglich wird",
+      "Ein gemeinsamer großer Kuschelplatz, damit sie sich wieder aneinander gewöhnen",
+      "Mehr gemeinsames Spiel mit beiden gleichzeitig, damit sie Energie abbauen",
+      "Eine dritte Katze, die als ruhiger Puffer zwischen den beiden vermittelt"
     ],
     correctIndex: 0,
     explanation: "Katzen brauchen Möglichkeiten, einander auszuweichen. Mehrere getrennte Ressourcen und Rückzugsorte reduzieren Konflikte oft deutlich.",
@@ -169,31 +190,49 @@ export const questions = [
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "katzen",
-    difficulty: "leicht",
-    text: "Du findest ein Jungtier allein im hohen Gras. Es wirkt ruhig und unverletzt. Was ist der beste erste Schritt?",
+    difficulty: "mittel",
+    text: "Beim Waldspaziergang findest du ein getigertes Kätzchen allein im Gras. Es wirkt ruhig und unverletzt. Was ist der beste erste Schritt?",
     options: [
-      "Sofort mitnehmen, damit es nicht friert",
-      "Aus Abstand beobachten, nicht berühren und bei Zweifel Wildtierhilfe oder Fachleute kontaktieren",
-      "Mit Kuhmilch füttern und dann abwarten",
-      "Für ein Foto hochheben und danach zurücksetzen"
+      "Es warm einpacken und ins nächste Tierheim bringen",
+      "Leise Abstand nehmen und später aus der Ferne nachsehen",
+      "Ihm etwas lauwarme Milch anbieten und dann abwarten",
+      "Es an einen geschützteren Ort in der Nähe setzen"
     ],
     correctIndex: 1,
-    explanation: "Jungtiere sind häufig nicht verlassen, auch wenn die Mutter gerade nicht sichtbar ist. Beobachten statt vorschnell eingreifen schützt sie oft am besten.",
+    explanation: "Es kann eine junge Europäische Wildkatze sein. Allein gefunden heißt nicht verlassen: Die Mutter ist oft nur auf Nahrungssuche. Bei akuter Gefahr rufst du eine zuständige Stelle an.",
     wikiPath: "/katzen/wildkatzenbaby-gefunden/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/"
+  },
+  {
+    id: "katzen-schnurren-001",
+    mode: "klassisch",
+    interaktion: "vierKarten",
+    category: "katzen",
+    difficulty: "knifflig",
+    text: "Eine Katze schnurrt, frisst aber seit gestern kaum und versteckt sich. Wie ordnest du das Schnurren ein?",
+    options: [
+      "Als Zeichen, dass sie sich trotz allem wohlfühlt",
+      "Als Laut, der die anderen Warnzeichen nicht aufhebt",
+      "Als Hinweis, dass sie nur etwas Ruhe braucht",
+      "Als Bitte um Streicheleinheiten und Nähe"
+    ],
+    correctIndex: 1,
+    explanation: "Schnurren ist kein Gesundheitszeugnis. Katzen schnurren auch, wenn sie angespannt, ängstlich oder krank sind. Rückzug und Appetitlosigkeit gehören tierärztlich abgeklärt.",
+    wikiPath: "/katzen/stilles-leiden/",
+    sourceRef: "https://wahre-haustierliebe.de/katzen/stilles-leiden/"
   },
   {
     id: "kleintiere-hamster-001",
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "kleintiere",
-    difficulty: "leicht",
+    difficulty: "mittel",
     text: "Ein Goldhamster hat ein großes Laufrad, aber nur einen üblichen Zoohandelskäfig. Was fehlt am deutlichsten?",
     options: [
-      "Ein zweites Laufrad",
-      "Ein Artgenosse als Beschäftigung",
-      "Zusammenhängende Grundfläche von mindestens einem Quadratmeter mit tiefer Einstreu und Struktur",
-      "Ein heller Standort direkt am Fenster"
+      "Ein zweites Laufrad in anderer Größe für Abwechslung",
+      "Täglicher Auslauf in einer Kugel durch die Wohnung",
+      "Viel zusammenhängende Grundfläche mit tiefer Einstreu",
+      "Mehr Klettermöglichkeiten auf mehreren Etagen"
     ],
     correctIndex: 2,
     explanation: "Goldhamster brauchen Platz zum Graben, Laufen und Rückzug. Ein Laufrad ersetzt keine ausreichend große, strukturierte Grundfläche.",
@@ -208,10 +247,10 @@ export const questions = [
     difficulty: "leicht",
     text: "Zwei Goldhamster wirken im Zoogeschäft friedlich. Warum ist das kein guter Grund, sie dauerhaft zusammen zu halten?",
     options: [
-      "Weil sie in einem großen Gehege einander nicht wiedererkennen",
-      "Weil Goldhamster territoriale Einzelgänger sind und Konflikte oft erst später eskalieren",
-      "Weil Goldhamster nur mit Kaninchen zusammenleben dürfen",
-      "Weil sie nachts grundsätzlich schlafen"
+      "Weil sie im Geschäft nur wegen der fremden, lauten Umgebung ruhig sind",
+      "Weil sie Einzelgänger sind und Revierkämpfe oft erst später beginnen",
+      "Weil zwei Hamster im Gehege doppelt so viel Futter brauchen",
+      "Weil Geschwister sich später meistens nicht mehr erkennen"
     ],
     correctIndex: 1,
     explanation: "Goldhamster sind Einzelgänger. Selbst wenn sie zunächst ruhig wirken, können Revierkonflikte später gefährlich werden.",
@@ -226,13 +265,13 @@ export const questions = [
     difficulty: "leicht",
     text: "Ein einzelnes Meerschweinchen bekommt viel Aufmerksamkeit von seinem Menschen. Was fehlt ihm trotzdem?",
     options: [
-      "Ein größerer Futternapf",
-      "Der tägliche Kontakt zu passenden Artgenossen mit eigener Kommunikation und Nähe",
-      "Ein Spiegel als Ersatz für ein anderes Meerschweinchen",
-      "Vor allem ein leiser Fernseher"
+      "Ein größerer Auslauf, in dem es sich allein beschäftigen kann",
+      "Artgenossen, mit denen es in seiner eigenen Sprache kommuniziert",
+      "Ein Kuscheltier im Gehege, an das es sich nachts anlehnen kann",
+      "Mehr Abwechslung im Futter mit wechselnden Kräutern"
     ],
     correctIndex: 1,
-    explanation: "Meerschweinchen sind soziale Gruppentiere. Menschen können Zuwendung geben, aber keinen Artgenossen ersetzen.",
+    explanation: "Meerschweinchen sind soziale Gruppentiere. Ein Mensch kann Futter geben, Schutz bieten und Vertrauen aufbauen. Er kann kein Meerschweinchen sein.",
     wikiPath: "/kleintiere/meerschweinchen/",
     sourceRef: "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/"
   },
@@ -244,10 +283,10 @@ export const questions = [
     difficulty: "leicht",
     text: "Ein sechsjähriges Kind wünscht sich ein Tier zum Spielen am Nachmittag. Warum ist ein Goldhamster dafür meist keine gute Wahl?",
     options: [
-      "Er braucht zu viel Wasser",
-      "Er ist tagsüber oft in seiner Ruhephase und kann durch Wecken und Anfassen stark gestresst werden",
-      "Er darf nie beobachtet werden",
-      "Er ist nur im Sommer aktiv"
+      "Weil er für Kinderhände zu schnell und zu schwer zu fangen ist",
+      "Weil er tagsüber schläft und Wecken und Anfassen ihn stressen",
+      "Weil er nur mit viel Training zutraulich wird",
+      "Weil er sehr leicht Erkältungen von Menschen bekommt"
     ],
     correctIndex: 1,
     explanation: "Goldhamster sind nachtaktiv und brauchen tagsüber Ruhe. Sie sind keine Spielgefährten für Kinderhände.",
@@ -255,20 +294,56 @@ export const questions = [
     sourceRef: "https://wahre-haustierliebe.de/kleintiere/hamster/"
   },
   {
+    id: "kleintiere-kaninchen-001",
+    mode: "klassisch",
+    interaktion: "vierKarten",
+    category: "kleintiere",
+    difficulty: "knifflig",
+    text: "Wie viel dauerhaft zugängliche Fläche empfiehlt die Tierärztliche Vereinigung für Tierschutz mindestens pro Kaninchen?",
+    options: [
+      "Einen halben Quadratmeter",
+      "Einen Quadratmeter",
+      "Zwei bis drei Quadratmeter",
+      "Sechs Quadratmeter"
+    ],
+    correctIndex: 2,
+    explanation: "Die TVT empfiehlt mindestens 2–3 m² pro Kaninchen als Grundfläche, die immer zugänglich ist, nicht nur als Auslauf. Handelsübliche Käfige haben oft nur 0,5–1 m².",
+    wikiPath: "/kleintiere/kaninchen/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/kaninchen/"
+  },
+  {
+    id: "kleintiere-ratten-001",
+    mode: "klassisch",
+    interaktion: "vierKarten",
+    category: "kleintiere",
+    difficulty: "knifflig",
+    text: "Wie alt werden Farbratten in der Regel?",
+    options: [
+      "Ein bis zwei Jahre",
+      "Zwei bis drei Jahre",
+      "Vier bis sechs Jahre",
+      "Acht bis zehn Jahre"
+    ],
+    correctIndex: 1,
+    explanation: "Ratten werden meist nur zwei bis drei Jahre alt. Man baut in kurzer Zeit eine starke Bindung auf und verliert das Tier früh. Tumore sind bei Ratten sehr verbreitet.",
+    wikiPath: "/kleintiere/ratten/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/ratten/"
+  },
+  {
     id: "voegel-kueche-001",
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "voegel",
-    difficulty: "leicht",
+    difficulty: "mittel",
     text: "Ein Vogelkäfig steht im offenen Wohnbereich neben der Küche. Welche unsichtbare Gefahr wird leicht unterschätzt?",
     options: [
-      "Das Geräusch der Spülmaschine",
-      "Dämpfe von antihaftbeschichtetem Kochgeschirr, Rauch und starke Kochdünste können lebensgefährlich sein",
-      "Dass Vögel den Geruch von Brot nicht mögen",
-      "Dass die Küche immer zu hell ist"
+      "Die Wärme vom Herd, die den Käfig zu stark aufheizt",
+      "Dämpfe von antihaftbeschichtetem Kochgeschirr",
+      "Der Geruch von Gewürzen, der die Atemwege reizt",
+      "Das Klappern von Geschirr, das die Vögel erschreckt"
     ],
     correctIndex: 1,
-    explanation: "Vögel reagieren sehr empfindlich auf belastete Luft. Dämpfe von antihaftbeschichtetem Kochgeschirr können für sie tödlich sein.",
+    explanation: "Vögel reagieren sehr empfindlich auf belastete Luft. Dämpfe von überhitztem, antihaftbeschichtetem Kochgeschirr können für sie tödlich sein.",
     wikiPath: "/voegel/kuechenluft-teflon/",
     sourceRef: "https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/"
   },
@@ -280,13 +355,13 @@ export const questions = [
     difficulty: "leicht",
     text: "Ein Wellensittich spricht viel mit seinem Menschen und wirkt anhänglich. Reicht das als Ersatz für einen zweiten Vogel?",
     options: [
-      "Ja, wenn täglich mehrere Stunden gesprochen wird",
-      "Nein, menschliche Zuwendung ersetzt keinen Artgenossen und keine Schwarmkommunikation",
-      "Ja, wenn ein Spiegel im Käfig hängt",
-      "Nur dann nicht, wenn der Vogel fliegen darf"
+      "Ja, wenn täglich mehrere Stunden mit ihm gesprochen wird",
+      "Nein, ein Mensch ersetzt keinen Artgenossen im Schwarm",
+      "Ja, wenn er genug Spielzeug und Abwechslung hat",
+      "Nein, aber ein Spiegel im Käfig gleicht das gut aus"
     ],
     correctIndex: 1,
-    explanation: "Wellensittiche sind Schwarmtiere. Ein Mensch kann Nähe geben, aber keinen passenden Artgenossen ersetzen.",
+    explanation: "Wellensittiche sind Schwarmtiere. Ein Mensch kann Nähe geben, aber keinen passenden Artgenossen ersetzen. Auch ein Spiegel ist keine Gesellschaft.",
     wikiPath: "/voegel/schwarmhaltung/",
     sourceRef: "https://wahre-haustierliebe.de/voegel/schwarmhaltung/"
   },
@@ -295,77 +370,122 @@ export const questions = [
     mode: "klassisch",
     interaktion: "vierKarten",
     category: "voegel",
-    difficulty: "leicht",
+    difficulty: "knifflig",
     text: "Warum ist ein heller Platz hinter einer Fensterscheibe für Vögel kein vollständiger Ersatz für geeignetes UV-Licht?",
     options: [
-      "Weil Glas für Vögel grundsätzlich unsichtbar ist",
-      "Weil Fensterscheiben einen großen Teil des UV-Anteils filtern, den Vögel für Wahrnehmung und Vitamin-D-Stoffwechsel nutzen",
-      "Weil Tageslicht nur im Winter zu schwach ist",
-      "Weil Vögel ausschließlich künstliches Licht brauchen"
+      "Weil Vögel direktes Sonnenlicht hinter Glas nicht vertragen",
+      "Weil Glas einen großen Teil des UV-Anteils herausfiltert",
+      "Weil das Licht am Fenster zu stark schwankt",
+      "Weil Fensterplätze im Winter zu kalt werden"
     ],
     correctIndex: 1,
-    explanation: "Fensterglas lässt Licht herein, filtert aber einen großen Teil des UV-Anteils. Vögel nehmen ihre Umwelt anders wahr als wir und brauchen passende Bedingungen.",
+    explanation: "Fensterglas lässt Licht herein, filtert aber einen großen Teil des UV-Anteils. Vögel nutzen UV-Licht für ihre Wahrnehmung und den Vitamin-D-Stoffwechsel.",
     wikiPath: "/voegel/uv-licht/",
     sourceRef: "https://wahre-haustierliebe.de/voegel/uv-licht/"
   },
-
-  // ============ MYTHEN-CHECK (9 Fragen: 6 bestehend + 3 neue) ============
   {
-    id: "mythen-katzen-milch-001",
+    id: "voegel-krankheit-001",
+    mode: "klassisch",
+    interaktion: "vierKarten",
+    category: "voegel",
+    difficulty: "knifflig",
+    text: "Womit fällt eine Krankheit bei Wellensittichen oft am frühesten auf, bevor man von außen etwas sieht?",
+    options: [
+      "Mit einer regelmäßigen Kontrolle auf einer grammgenauen Waage",
+      "Mit einem genauen Blick auf die Farbe des Gefieders jeden Morgen",
+      "Mit dem Zählen der Pfiffe über den Tag",
+      "Mit der Beobachtung, wie oft er zum Spiegel fliegt"
+    ],
+    correctIndex: 0,
+    explanation: "Vögel verbergen Krankheit als Beutetiere lange. Ein regelmäßiges Gewicht auf einer grammgenauen Waage zeigt Veränderungen oft, bevor sie von außen auffallen.",
+    wikiPath: "/voegel/krankheit-erkennen/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/krankheit-erkennen/"
+  },
+
+  // ============ MYTHEN-CHECK ============
+  {
+    id: "mythen-katzen-einzelgaenger-001",
     mode: "mythen",
     interaktion: "jaNein",
     correctJaNein: false,
     category: "katzen",
     difficulty: "leicht",
-    text: "Stimmt das? „Eine Schale Milch ist für jede Katze ein passendes Leckerli.\"",
-    options: [
-      "Stimmt. Milch gehört seit jeher zur Katze dazu.",
-      "Stimmt nicht. Die meisten erwachsenen Katzen vertragen Milchzucker nicht und reagieren mit Verdauungsproblemen.",
-      "Stimmt, aber nur wenn es laktosefreie Spezialmilch ist.",
-      "Stimmt, solange die Milch Zimmertemperatur hat."
-    ],
-    correctIndex: 1,
-    explanation: "Erwachsene Katzen verlieren meist das Enzym Laktase. Frisches Wasser ist das passende Getränk. Wer Leckerli will, findet katzenfreundliche Alternativen.",
-    wikiPath: "/katzen/ernaehrung-milch/",
-    sourceRef: "https://www.tieraerzteverband.de/"
+    text: "„Katzen sind Einzelgänger und leben am liebsten allein.“",
+    explanation: "Katzen jagen allein, leben aber nicht automatisch allein. Viele Katzen, besonders in reiner Wohnungshaltung, brauchen einen passenden Artgenossen.",
+    wikiPath: "/katzen/sozialverhalten/",
+    sourceRef: "https://wahre-haustierliebe.de/katzen/sozialverhalten/"
   },
   {
-    id: "mythen-hunde-farben-001",
+    id: "mythen-katzen-schnurren-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
+    category: "katzen",
+    difficulty: "mittel",
+    text: "„Eine Katze, die schnurrt, ist zufrieden und gesund.“",
+    explanation: "Schnurren ist ein Laut, kein Gesundheitszeugnis. Katzen schnurren auch, wenn sie angespannt, ängstlich oder krank sind. Es zählt das Gesamtbild.",
+    wikiPath: "/katzen/stilles-leiden/",
+    sourceRef: "https://wahre-haustierliebe.de/katzen/stilles-leiden/"
+  },
+  {
+    id: "mythen-katzen-kastration-wohnung-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "katzen",
+    difficulty: "knifflig",
+    text: "„Auch eine Katze, die nie nach draußen geht, profitiert von der Kastration.“",
+    explanation: "Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumoren bestehen.",
+    wikiPath: "/katzen/kastration/",
+    sourceRef: "https://wahre-haustierliebe.de/katzen/kastration/"
+  },
+  {
+    id: "mythen-hund-garten-001",
     mode: "mythen",
     interaktion: "jaNein",
     correctJaNein: false,
     category: "hunde",
     difficulty: "leicht",
-    text: "Stimmt das? „Hunde sehen ihre Umwelt nur in Schwarz-Weiß.\"",
-    options: [
-      "Stimmt. Hundeaugen haben keine Farbrezeptoren.",
-      "Stimmt nicht. Hunde sehen Farben, aber im blau-gelb-Bereich weniger differenziert als Menschen.",
-      "Stimmt, aber nur nachts.",
-      "Stimmt, solange die Hunderasse klein ist."
-    ],
-    correctIndex: 1,
-    explanation: "Hunde haben zwei funktionierende Zapfentypen für blau-gelbe Bereiche. Rot und Grün unterscheiden sie schlechter, komplett farblos sehen sie aber nicht.",
-    wikiPath: "/hunde/sinneswahrnehmung/",
-    sourceRef: "https://www.tieraerzteverband.de/"
+    text: "„Ein eingezäunter Garten ersetzt den täglichen Spaziergang vollständig.“",
+    explanation: "Der Garten ist ein schöner Rückzugsort, aber kein Ersatz für gemeinsame Spaziergänge. Gerüche, Begegnungen und Wege außerhalb des Grundstücks bleiben wichtig.",
+    wikiPath: "/hunde/garten-auslauf/",
+    sourceRef: "https://wahre-haustierliebe.de/hunde/garten-auslauf/"
   },
   {
-    id: "mythen-wellensittich-einzeln-001",
+    id: "mythen-hund-auto-001",
     mode: "mythen",
     interaktion: "jaNein",
     correctJaNein: false,
-    category: "voegel",
+    category: "hunde",
     difficulty: "leicht",
-    text: "Stimmt das? „Ein Wellensittich allein mit viel Zuwendung ist ein glücklicher Anfängervogel.\"",
-    options: [
-      "Stimmt. Mit täglichem Freiflug und Ansprache ist er versorgt.",
-      "Stimmt nicht. Wellensittiche sind Schwarmvögel; ein Einzeltier leidet auch bei liebevoller Pflege dauerhaft.",
-      "Stimmt, solange er sprechen kann.",
-      "Stimmt, solange ein Spiegel im Käfig hängt."
-    ],
-    correctIndex: 1,
-    explanation: "Ein Spiegel ist kein Artgenosse. Wellensittiche brauchen mindestens einen passenden Partner, um arteigenes Verhalten zeigen zu können.",
-    wikiPath: "/voegel/schwarmhaltung/",
-    sourceRef: "https://wahre-haustierliebe.de/voegel/schwarmhaltung/"
+    text: "„Bei 22 Grad kann der Hund zehn Minuten im Auto warten, wenn das Fenster einen Spalt offen ist.“",
+    explanation: "Ein parkendes Auto heizt sich auch bei moderaten Temperaturen schnell auf. Schatten, Fensterspalt oder „nur kurz“ sind kein verlässlicher Schutz.",
+    wikiPath: "/hitzefalle-auto/",
+    sourceRef: "https://wahre-haustierliebe.de/hitzefalle-auto/"
+  },
+  {
+    id: "mythen-hund-kastration-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
+    category: "hunde",
+    difficulty: "knifflig",
+    text: "„Kastration ist beim Hund genauso Routine wie bei der Katze.“",
+    explanation: "Beim Hund ist Kastration eine Einzelfallentscheidung. Möglicher Nutzen und Risiken wie Harninkontinenz oder Gelenkprobleme werden tierärztlich abgewogen.",
+    wikiPath: "/hunde/kastration/",
+    sourceRef: "https://wahre-haustierliebe.de/hunde/kastration/"
+  },
+  {
+    id: "mythen-hund-uebergewicht-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "hunde",
+    difficulty: "mittel",
+    text: "„Rund vier von zehn Hunden in Deutschland sind übergewichtig.“",
+    explanation: "Etwa 40 Prozent der Hunde sind zu schwer. Übergewicht belastet Gelenke, Herz und Stoffwechsel und verkürzt die Lebenserwartung messbar.",
+    wikiPath: "/hunde/gesundheit/",
+    sourceRef: "https://wahre-haustierliebe.de/hunde/gesundheit/"
   },
   {
     id: "mythen-hamster-partner-001",
@@ -374,190 +494,179 @@ export const questions = [
     correctJaNein: false,
     category: "kleintiere",
     difficulty: "leicht",
-    text: "Stimmt das? „Goldhamster fühlen sich mit einem Artgenossen wohler und sind dann aktiver.\"",
-    options: [
-      "Stimmt. Hamster sind sehr gesellig.",
-      "Stimmt nicht. Goldhamster sind territoriale Einzelgänger und können sich gegenseitig schwer verletzen.",
-      "Stimmt, aber nur bei jungen Tieren.",
-      "Stimmt, solange das Gehege groß genug ist."
-    ],
-    correctIndex: 1,
-    explanation: "Auch ein zweites Hamsterleben nebeneinander ist Stress. Die Verletzungsgefahr steigt mit zunehmendem Alter deutlich an.",
+    text: "„Goldhamster fühlen sich mit einem Artgenossen wohler und sind dann aktiver.“",
+    explanation: "Goldhamster sind territoriale Einzelgänger. Zu zweit bedeutet für sie Dauerstress, und die Gefahr schwerer Verletzungen steigt mit dem Alter.",
     wikiPath: "/kleintiere/hamster/",
     sourceRef: "https://wahre-haustierliebe.de/kleintiere/hamster/"
   },
   {
-    id: "mythen-hund-wedelt-001",
-    mode: "mythen",
-    interaktion: "jaNein",
-    correctJaNein: false,
-    category: "hunde",
-    difficulty: "leicht",
-    text: "Stimmt das? „Wenn ein Hund mit dem Schwanz wedelt, signalisiert er immer Freundlichkeit.\"",
-    options: [
-      "Stimmt. Wedeln heißt: alles gut.",
-      "Stimmt nicht. Wedeln zeigt Erregung – die kann freudig, aber auch unsicher, gestresst oder drohend sein.",
-      "Stimmt, aber nur bei großen Hunden.",
-      "Stimmt, solange die Rute hoch getragen wird."
-    ],
-    correctIndex: 1,
-    explanation: "Erregung heißt nicht automatisch Freude. Körperhaltung, Rutenhöhe, Muskelspannung und Gesichtsausdruck gehören zur ganzen Lesart dazu.",
-    wikiPath: "/hunde/koerpersprache/",
-    sourceRef: "https://www.tieraerzteverband.de/"
-  },
-  {
-    id: "mythen-reptil-uv-001",
+    id: "mythen-ratten-geruch-001",
     mode: "mythen",
     interaktion: "jaNein",
     correctJaNein: false,
     category: "kleintiere",
-    difficulty: "leicht",
-    text: "Stimmt das? „Reptilien kommen in der Wohnung mit Wärmelampe und Tageslicht gut zurecht.\"",
-    options: [
-      "Stimmt. Wärme reicht für die meisten Arten.",
-      "Stimmt nicht. Viele Reptilien brauchen UV-B-Licht für den Vitamin-D-Stoffwechsel; Fensterglas filtert diesen Anteil heraus.",
-      "Stimmt, solange es eine Heizmatte gibt.",
-      "Stimmt, wenn das Terrarium nah am Fenster steht."
-    ],
-    correctIndex: 1,
-    explanation: "Fenster lassen sichtbares Licht, aber kaum UV-B durch. Für viele Reptilien ist eine artgerechte UV-B-Quelle entscheidend.",
-    wikiPath: "/kleintiere/reptilien-uv-licht/",
-    sourceRef: "https://www.tieraerzteverband.de/"
+    difficulty: "mittel",
+    text: "„Ratten riechen von Natur aus streng, das lässt sich kaum vermeiden.“",
+    explanation: "Ratten sind reinlich, legen feste Toilettenecken an und putzen sich ausgiebig. Der typische Geruch entsteht durch zu kleine Käfige und seltene Reinigung.",
+    wikiPath: "/kleintiere/ratten/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/ratten/"
   },
   {
-    id: "mythen-welli-sprache-001",
+    id: "mythen-kaninchen-heu-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "kleintiere",
+    difficulty: "leicht",
+    text: "„Heu ist für Kaninchen das Hauptfutter, nicht das Trockenfutter aus der Zoohandlung.“",
+    explanation: "Heu ist die Grundlage, dazu kommt täglich frisches Grünfutter. Trockenfutter-Pellets sind oft zu energiereich und fördern Zahnprobleme.",
+    wikiPath: "/kleintiere/kaninchen/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/kaninchen/"
+  },
+  {
+    id: "mythen-chinchilla-hitze-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: true,
+    category: "kleintiere",
+    difficulty: "knifflig",
+    text: "„Für Chinchillas können schon Temperaturen über 25 Grad lebensgefährlich werden.“",
+    explanation: "Chinchillas sind extrem hitzeempfindlich. Sie brauchen kühle Räume, Staubbäder statt Wasser und können 15–20 Jahre alt werden.",
+    wikiPath: "/kleintiere/degus-chinchillas/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/"
+  },
+  {
+    id: "mythen-wellensittich-einzeln-001",
+    mode: "mythen",
+    interaktion: "jaNein",
+    correctJaNein: false,
+    category: "voegel",
+    difficulty: "leicht",
+    text: "„Ein einzelner Wellensittich mit viel Zuwendung ist ein glücklicher Anfängervogel.“",
+    explanation: "Wellensittiche sind Schwarmvögel. Ein Einzeltier leidet auch bei liebevoller Pflege. Sie brauchen mindestens einen passenden Partner.",
+    wikiPath: "/voegel/schwarmhaltung/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/schwarmhaltung/"
+  },
+  {
+    id: "mythen-voegel-kaefig-001",
     mode: "mythen",
     interaktion: "jaNein",
     correctJaNein: true,
     category: "voegel",
-    difficulty: "leicht",
-    text: "Stimmt das? „Wellensittiche können eine kleine Auswahl an Wörtern und Pfeiftönen erlernen und bei ihren Menschen einsetzen.\"",
-    options: [
-      "Stimmt. Vor allem junge Hähne lernen oft mehrere Wörter und Melodien.",
-      "Stimmt nicht. Wellensittiche sind reine Schwarmvögel ohne Stimmkontrolle.",
-      "Stimmt, aber nur mit Video-Training.",
-      "Stimmt, aber nur einzeln gehalten."
-    ],
-    correctIndex: 0,
-    explanation: "Wellensittiche sind ausgesprochen sprachbegabt. Gerade Hähne imitieren Wörter, Pfeiftöne und kurze Melodien mit erstaunlicher Treue.",
-    wikiPath: "/voegel/wellensittich-sprache/",
-    sourceRef: "https://wahre-haustierliebe.de/voegel/sprache-wellensittich/"
+    difficulty: "mittel",
+    text: "„Ein schmaler, hoher Käfig nützt Wellensittichen wenig, weil sie waagerecht fliegen.“",
+    explanation: "Wellensittiche fliegen horizontal. Entscheidend sind Länge und freie Flugbahnen, dazu täglicher Freiflug.",
+    wikiPath: "/voegel/freiflug/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/freiflug/"
   },
   {
-    id: "mythen-meeri-heu-001",
+    id: "mythen-voegel-stutzen-001",
     mode: "mythen",
     interaktion: "jaNein",
-    correctJaNein: true,
-    category: "kleintiere",
-    difficulty: "leicht",
-    text: "Stimmt das? „Frisches Heu ist für Meerschweinchen das Hauptfutter und sollte immer erreichbar sein.\"",
-    options: [
-      "Stimmt. Heu deckt den Bedarf an Rohfaser und ist als Dauerangebot unverzichtbar.",
-      "Stimmt nicht. Heu ist nur ein Zusatz, Gemüse reicht völlig.",
-      "Stimmt, aber nur im Winter.",
-      "Stimmt, solange es aus dem Zoogeschäft kommt."
-    ],
-    correctIndex: 0,
-    explanation: "Heu ist für Meerschweinchen das eigentliche Grundnahrungsmittel. Es hält den Verdauungstrakt in Bewegung und sorgt für passenden Zahnabrieb.",
-    wikiPath: "/kleintiere/meerschweinchen-ernaehrung/",
-    sourceRef: "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/"
-  },
-  {
-    id: "mythen-hund-garten-001",
-    mode: "mythen",
-    interaktion: "jaNein",
-    correctJaNein: true,
-    category: "hunde",
-    difficulty: "leicht",
-    text: "Stimmt das? „Ein eingezäunter Garten gleicht den täglichen Spaziergang vollständig aus.\"",
-    options: [
-      "Stimmt. Der Garten reicht völlig, wenn er groß genug ist.",
-      "Stimmt nicht. Spaziergänge bringen neue Gerüche, Begegnungen und Bewegung, die ein Garten allein nicht bieten kann.",
-      "Stimmt, solange der Hund stubenrein ist.",
-      "Stimmt, solange kein Schnee liegt."
-    ],
-    correctIndex: 1,
-    explanation: "Der Garten ist ein schöner Rückzugsort, aber kein Ersatz für gemeinsame Spaziergänge. Gerüche, Begegnungen und Wege außerhalb des eigenen Grundstücks bleiben wichtig.",
-    wikiPath: "/hunde/garten-auslauf/",
-    sourceRef: "https://wahre-haustierliebe.de/hunde/garten-auslauf/"
+    correctJaNein: false,
+    category: "voegel",
+    difficulty: "knifflig",
+    text: "„Gestutzte Flugfedern machen die Wohnung für einen Vogel sicherer.“",
+    explanation: "Stutzen nimmt dem Vogel seine wichtigste Bewegungsmöglichkeit, erschwert Flucht und Landung und kann Stürze begünstigen. Der Raum muss zum Vogel passen, nicht umgekehrt.",
+    wikiPath: "/voegel/freiflug/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/freiflug/"
   },
 
-  // ============ FALL-ENTSCHEIDUNG (6 Fragen) ============
+  // ============ FALL-ENTSCHEIDUNG ============
   {
     id: "fall-fundtier-garten-001",
     mode: "fall",
     interaktion: "vierKarten",
     sticker: ["katze"],
     category: "katzen",
-    difficulty: "leicht",
-    text: "Im Garten sitzt ein Jungtier, das scheinbar hilflos wirkt. Die Mutter ist nirgends zu sehen. Was tust du zuerst?",
+    difficulty: "knifflig",
+    text: "Am Waldrand sitzt ein getigertes Kätzchen, das hilflos wirkt. Die Mutter ist nirgends zu sehen. Was tust du zuerst?",
     options: [
-      "Schnell ins Haus holen und mit Kuhmilch versorgen.",
-      "Aus Abstand beobachten, das Muttertier suchen und nur bei klarer Notlage eine Wildtierhilfe kontaktieren.",
-      "Ein Handtuch darüberlegen und warten, bis die Mutter zurückkommt.",
-      "Den Tierarzt des Vertrauens anrufen und das Tier dorthin bringen."
+      "Es vorsichtig mitnehmen und in der nächsten Tierarztpraxis abgeben",
+      "Leise zurückgehen und nach einigen Stunden aus der Ferne nachsehen",
+      "In der Nähe warten, bis die Mutter zurückkommt",
+      "Es in die Sonne setzen, damit es nicht auskühlt"
     ],
     correctIndex: 1,
-    explanation: "Mütter verstecken sich oft in der Nähe. Voreiliges Eingreifen kann die Rückkehr verhindern. Bei Unsicherheit eine regionale Wildtierhilfe anrufen.",
+    explanation: "Es kann eine junge Wildkatze sein. Wer in der Nähe wartet, hält die Mutter womöglich fern. Nur bei akuter Gefahr, etwa Verletzung oder Straße, sofort eine zuständige Stelle anrufen.",
     wikiPath: "/katzen/wildkatzenbaby-gefunden/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/"
   },
   {
-    id: "fall-hund-knurrt-besuch-001",
+    id: "fall-hund-stadtfest-001",
     mode: "fall",
     interaktion: "vierKarten",
     sticker: ["hund", "halsband"],
     category: "hunde",
     difficulty: "leicht",
-    text: "Dein Hund knurrt Besucher an der Haustür an und du hast Gäste eingeladen. Was tust du jetzt?",
+    text: "Am Wochenende ist Stadtfest mit Musik und Gedränge. Dein Hund läuft sonst gut an der Leine mit. Was tust du?",
     options: [
-      "Den Hund sofort anschreien, damit er gehorcht.",
-      "Hund räumlich trennen, mit Decke oder Box, Gäste begrüßen und das Verhalten später mit einer Fachperson einordnen.",
-      "Hund an der Leine festhalten und Gäste hereinlassen.",
-      "Gäste wieder ausladen, weil das Training heute nicht passt."
+      "Ihn mitnehmen, weil er ja brav mitläuft und dabei sein soll",
+      "Ihn zu Hause lassen, wo er in Ruhe schlafen kann",
+      "Ihn mitnehmen und ihm unterwegs viele Leckerlis geben",
+      "Ihn mitnehmen und nur bei lauten Bühnen kurz auf den Arm nehmen"
     ],
     correctIndex: 1,
-    explanation: "Knurren ist eine klare Mitteilung. Sie ernst nehmen, Situation managen und mit einer Hundeschule oder Verhaltensberatung an der Ursache arbeiten.",
-    wikiPath: "/hunde/aggression-besuch/",
-    sourceRef: "https://wahre-haustierliebe.de/hunde/"
+    explanation: "Brav mitlaufen heißt nicht entspannt sein. Lärm, Enge und fremde Hände sind für viele Hunde purer Stress. Die freundlichste Entscheidung ist oft: Der Hund bleibt zu Hause.",
+    wikiPath: "/hunde/stadtfest-rummel/",
+    sourceRef: "https://wahre-haustierliebe.de/hunde/stadtfest-rummel/"
+  },
+  {
+    id: "fall-hund-auto-001",
+    mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["hund", "sonne"],
+    category: "hunde",
+    difficulty: "mittel",
+    text: "Auf dem Supermarktparkplatz hechelt ein Hund stark in einem geschlossenen Auto in der Sonne. Was tust du?",
+    options: [
+      "Einen Zettel mit deiner Nummer an die Scheibe hängen und weitergehen",
+      "Halterin oder Halter suchen lassen und Polizei oder Feuerwehr rufen",
+      "Abwarten, ob in den nächsten zehn Minuten jemand zurückkommt",
+      "Wasser über das Autodach gießen, damit es abkühlt"
+    ],
+    correctIndex: 1,
+    explanation: "Bei Hitzestress zählt Handeln, nicht Abwarten. Halterin oder Halter ausrufen lassen, Polizei oder Feuerwehr rufen und die Situation mit Fotos festhalten.",
+    wikiPath: "/hitzefalle-auto/",
+    sourceRef: "https://wahre-haustierliebe.de/hitzefalle-auto/"
   },
   {
     id: "fall-kind-kaninchen-001",
     mode: "fall",
     interaktion: "vierKarten",
-    sticker: ["meeri", "fenster"],
+    sticker: ["napf", "fenster"],
     category: "kleintiere",
     difficulty: "leicht",
-    text: "Ein siebenjähriges Kind wünscht sich sehnlich ein Kaninchen zum Kuscheln und Spielen. Was tust du als Elternteil?",
+    text: "Ein siebenjähriges Kind wünscht sich sehnlich ein Kaninchen zum Kuscheln. Was tust du als Elternteil?",
     options: [
-      "Ein Kaninchen aus dem Zoogeschäft kaufen und zu Weihnachten überraschen.",
-      "Erst gemeinsam die Bedürfnisse eines Kaninchens durchgehen, Zeit und Platz prüfen und gegebenenfalls mit einer Patenschaft im Tierheim starten.",
-      "Zwei Kaninchen holen, damit sie sich gegenseitig haben.",
-      "Ein Zwergkaninchen holen, weil das angeblich pflegeleichter ist."
+      "Ein Kaninchen kaufen und es zu Weihnachten als Überraschung schenken",
+      "Erst klären, ob Platz, Zeit und ein zweites Tier über Jahre drin sind",
+      "Ein einzelnes Kaninchen holen, das sich ganz auf das Kind einstellt",
+      "Ein Zwergkaninchen holen, weil es klein und pflegeleicht ist"
     ],
     correctIndex: 1,
-    explanation: "Kaninchen sind keine Kuscheltiere. Sie brauchen Platz, Rückzug, einen Partner und tägliche Versorgung über viele Jahre. Ein Tierheim-Pate-Tag klärt die Erwartungen.",
-    wikiPath: "/kleintiere/kaninchen-fuer-kinder/",
-    sourceRef: "https://wahre-haustierliebe.de/kleintiere/"
+    explanation: "Kaninchen sind Fluchttiere, keine Kuscheltiere. Sie brauchen viel Platz, mindestens einen Artgenossen und tägliche Versorgung über viele Jahre. Die Verantwortung liegt bei den Erwachsenen.",
+    wikiPath: "/kleintiere/kaninchen/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/kaninchen/"
   },
   {
-    id: "fall-katze-ungesund-001",
+    id: "fall-katze-unsauber-001",
     mode: "fall",
     interaktion: "vierKarten",
     sticker: ["katze", "fenster"],
     category: "katzen",
-    difficulty: "leicht",
-    text: "Deine Wohnungskatze pinkelt seit wenigen Tagen wiederholt neben das Katzenklo. Was tust du?",
+    difficulty: "mittel",
+    text: "Deine Wohnungskatze pinkelt seit ein paar Tagen immer wieder neben das Katzenklo. Was tust du?",
     options: [
-      "Die Katze für die Unsauberkeit maßregeln, damit sie es wieder richtig macht.",
-      "Tierärztliche Abklärung organisieren und parallel die Toiletten-Situation prüfen – Anzahl, Standort, Sauberkeit, Stressoren.",
-      "Das Katzenklo einfach öfter putzen und abwarten.",
-      "Einen Duftstein in die Ecke stellen, damit die Katze nicht mehr hinläuft."
+      "Sie konsequent ins Klo setzen, sobald sie daneben geht",
+      "Tierärztlich abklären lassen und die Toilettensituation prüfen",
+      "Ein anderes Streu ausprobieren und ein paar Wochen in Ruhe abwarten",
+      "Die Stelle mit einem Duftspray unattraktiv machen"
     ],
     correctIndex: 1,
-    explanation: "Unsauberkeit ist fast immer ein Signal – gesundheitlich, sozial oder durch Revierstress. Tierärztliche Abklärung steht am Anfang, saubere Ressourcen ergänzen das Bild.",
-    wikiPath: "/katzen/ungesund-verhalten/",
-    sourceRef: "https://wahre-haustierliebe.de/katzen/"
+    explanation: "Unsauberkeit ist selten Protest. Häufig stecken Stress, Schmerzen oder Harnwegserkrankungen dahinter. Lieber einmal zu viel zum Tierarzt.",
+    wikiPath: "/katzen/stilles-leiden/",
+    sourceRef: "https://wahre-haustierliebe.de/katzen/stilles-leiden/"
   },
   {
     id: "fall-hund-urlaub-001",
@@ -565,18 +674,18 @@ export const questions = [
     interaktion: "vierKarten",
     sticker: ["hund", "halsband"],
     category: "hunde",
-    difficulty: "leicht",
-    text: "Der Sommerurlaub steht vor der Tür. Eine passende Hundebetreuung im Haushalt wäre ideal, ist aber ausgebucht. Was tust du?",
+    difficulty: "knifflig",
+    text: "Der Urlaub ist gebucht, dein Hund ist alt und kurzatmig. Die vertraute Nachbarin hätte Zeit. Was tust du?",
     options: [
-      "Den Hund spontan mit ins Auto nehmen und die Tageinfach am Strand verbringen.",
-      "Frühzeitig eine seriöse Pension mit Vor- und Nachbesuch organisieren, oder den Hund zuhause von vertrauten Personen versorgen lassen.",
-      "Den Hund allein in der Wohnung mit Futtervorrat für eine Woche lassen.",
-      "Den Hund im Garten anbinden und regelmäßig füttern."
+      "Ihn mitnehmen, weil er dich im Urlaub sonst zu sehr vermisst",
+      "Ihn bei der Nachbarin lassen, nach einem Probetag vorab",
+      "Kurzfristig die günstigste freie Tierpension buchen",
+      "Ihn mitnehmen und die Fahrt in einem Stück durchziehen"
     ],
     correctIndex: 1,
-    explanation: "Hunde brauchen auch im Urlaub verlässliche Bezugspersonen, gewohnte Rhythmen und keine langen Alleinzeiten. Vorausplanen ist alles.",
-    wikiPath: "/hunde/urlaub/",
-    sourceRef: "https://wahre-haustierliebe.de/hunde/"
+    explanation: "Die Frage ist nicht, ob du dein Tier irgendwie mitnehmen kannst, sondern welche Lösung es am wenigsten belastet. Betreuung durch vertraute Menschen vorher proben.",
+    wikiPath: "/tiere-und-urlaub/",
+    sourceRef: "https://wahre-haustierliebe.de/tiere-und-urlaub/"
   },
   {
     id: "fall-spontankauf-zoo-001",
@@ -585,16 +694,54 @@ export const questions = [
     sticker: ["meeri", "napf"],
     category: "kleintiere",
     difficulty: "leicht",
-    text: "Im Zoofachgeschäft sitzen auffallend süße Jungtiere, das Preis Schild ist günstig und du überlegst spontan zuzuschlagen. Was tust du?",
+    text: "Im Zoofachgeschäft sitzen süße junge Meerschweinchen, das Preisschild ist günstig. Du überlegst spontan zuzugreifen. Was tust du?",
     options: [
-      "Zugreifen, solange die Tiere da sind.",
-      "Nicht zuschlagen und erst zu Hause in Ruhe prüfen, ob die Haltung dauerhaft tragfähig ist.",
-      "Die Jungtiere als Überraschung für die Kinder mitnehmen.",
-      "Drei Tiere mitnehmen, damit sie sich nicht allein fühlen."
+      "Zwei mitnehmen, damit keines allein bleibt, und das Gehege nachkaufen",
+      "Erst zu Hause prüfen, ob Platz, Zeit und Kosten dauerhaft passen",
+      "Eines mitnehmen und später bei Bedarf ein zweites dazuholen",
+      "Nach dem jüngsten Tier fragen, damit es sich besser eingewöhnt"
     ],
     correctIndex: 1,
-    explanation: "Spontankäufe sind die häufigste Quelle für späteres Tierleid. Eine bewusste Entscheidung nach Kosten, Zeit, Platz und Lebensdauer verhindert viel Schaden.",
-    wikiPath: "/kleintiere/spontankauf/",
-    sourceRef: "https://wahre-haustierliebe.de/kleintiere/"
+    explanation: "Spontankäufe sind eine häufige Quelle für spätere Abgaben. Wer Platz, Zeit, Kosten und Gruppenhaltung vorher klärt, entscheidet für das Tier und nicht für den Moment.",
+    wikiPath: "/kleintiere/meerschweinchen/",
+    sourceRef: "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/"
+  },
+  {
+    id: "fall-voegel-pfanne-001",
+    mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["welli", "kaefig"],
+    category: "voegel",
+    difficulty: "mittel",
+    text: "Eine beschichtete Pfanne ist auf dem Herd überhitzt, es qualmt. Deine Wellensittiche sitzen im Nebenraum. Was tust du?",
+    options: [
+      "Die Vögel sofort in einen gut belüfteten Raum bringen und lüften",
+      "Die Tür zum Nebenraum schließen und abwarten, bis es aufhört",
+      "Ein Tuch über den Käfig legen, damit sie nichts einatmen",
+      "Nur die Küche kurz lüften, der Nebenraum ist weit genug weg"
+    ],
+    correctIndex: 0,
+    explanation: "Stark erhitzte Beschichtungen können Dämpfe freisetzen, die Vögel in Minuten töten. Atemnot oder deutliche Schwäche danach sind ein Notfall für eine vogelkundige Praxis.",
+    wikiPath: "/voegel/kuechenluft-teflon/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/"
+  },
+  {
+    id: "fall-voegel-krank-001",
+    mode: "fall",
+    interaktion: "vierKarten",
+    sticker: ["welli", "napf"],
+    category: "voegel",
+    difficulty: "knifflig",
+    text: "Dein Wellensittich sitzt tagsüber aufgeplustert, frisst weniger und wippt beim Atmen mit dem Schwanz. Was tust du?",
+    options: [
+      "Ihm zwei Tage Ruhe gönnen und das Futter aufwerten",
+      "Zeitnah eine vogelkundige Tierarztpraxis aufsuchen",
+      "Den Käfig wärmer stellen und die Nacht abwarten",
+      "Ihm Vitamintropfen ins Trinkwasser geben"
+    ],
+    correctIndex: 1,
+    explanation: "Vögel zeigen Krankheit als Beutetiere oft erst spät. Aufplustern außerhalb der Ruhe, weniger Fressen und Schwanzwippen beim Atmen müssen schnell abgeklärt werden.",
+    wikiPath: "/voegel/krankheit-erkennen/",
+    sourceRef: "https://wahre-haustierliebe.de/voegel/krankheit-erkennen/"
   }
 ];

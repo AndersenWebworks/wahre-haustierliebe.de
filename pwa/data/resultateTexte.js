@@ -1,6 +1,6 @@
 // data/resultateTexte.js – persönliche Ergebnis-Texte pro Modus und Score-Stufe
-// Drei Bänder: niedrig (0-40 %), mittel (41-75 %), hoch (76-100 %).
-// Keine Standardliste, jeder Text eine kleine echte Aussage.
+// Drei Bänder: niedrig (0–40 %), mittel (41–75 %), hoch (76–100 %).
+// Die Artikelliste steht auf der Ergebnisseite unter dem Ergebnis.
 
 export const STAGE_LABELS = {
   niedrig: "niedrig",
@@ -11,53 +11,53 @@ export const STAGE_LABELS = {
 const TEXTE = {
   klassisch: {
     hoch: [
-      "Sehr warm. Du hast ein echtes Gespür für das, was Tiere wirklich brauchen.",
-      "Stark. Das Wissen sitzt – und du weißt es auch zu formulieren.",
-      "Beeindruckend. Du kennst dich aus und spürst die Verantwortung dahinter."
+      "Stark. Du weißt, was Tiere im Alltag wirklich brauchen.",
+      "Das sitzt. Selbst die kniffligen Fragen haben dich nicht aufgehalten.",
+      "Beeindruckend. Da steckt echtes Wissen dahinter, kein Glück."
     ],
     mittel: [
-      "Eine runde Sache. Was du noch nicht wusstest, findest du oben in den Wiki-Links.",
-      "Gut gemacht. Eine oder zwei Lücken – das Wiki füllt sie dir in zwei Minuten.",
-      "Solide Basis. Die Artikel zu deinen Fragen lohnen sich heute besonders."
+      "Eine runde Sache. Was noch gefehlt hat, findest du unten in den Artikeln.",
+      "Gut gemacht. Ein, zwei Lücken, und die Artikel unten schließen sie schnell.",
+      "Solide Basis. Mit den Artikeln unten wird daraus nächstes Mal mehr."
     ],
     niedrig: [
-      "Ein warmer Anfang. Schau dir die Artikel zu deinen Fragen direkt oben in Ruhe an.",
-      "Gut gestartet. Die Auflösungen liegen oben – danach läuft es Runde für Runde besser.",
-      "Erste Schritte sind gemacht. Die Wiki-Links oben machen aus jeder Antwort eine kleine Lektion."
+      "Ein Anfang. Unten stehen die Artikel zu genau den Fragen, die gehakt haben.",
+      "Das waren harte Brocken. Die Artikel unten erklären, was dahintersteckt.",
+      "Jede Runde bringt etwas. Unten findest du den Hintergrund zu jeder Frage."
     ]
   },
   mythen: {
     hoch: [
-      "Du hast die meisten Mythen souverän entlarvt. Weiter so.",
-      "Stark aufgelöst. Wissen und Glauben trennst du sauber.",
-      "Mythen-Fallen geöffnet – du liest genau hin."
+      "Kaum ein Mythos kommt an dir vorbei.",
+      "Stark. Du trennst Wissen und Hörensagen sauber.",
+      "Du liest genau hin und fällst auf keine bequeme Ausrede herein."
     ],
     mittel: [
-      "Du sortierst Wissen und Glauben schon gut. Ein paar Mythen sind zäh – oben liegt die Auflösung.",
-      "Halber Durchblick, halbe Routine. Die Artikel oben helfen dir beim Rest.",
-      "Die meisten Mythen hast du erkannt. Die letzten findest du oben in der Liste."
+      "Die meisten Mythen hast du durchschaut. Die zähen erklären die Artikel unten.",
+      "Guter Riecher. Ein paar Irrtümer sind hartnäckig, unten steht, warum.",
+      "Ordentlich sortiert. Für den Rest lohnt sich ein Blick in die Artikel unten."
     ],
     niedrig: [
-      "Viele Mythen halten sich hartnäckig. Direkt oben liegen die Fakten dazu.",
-      "Mythen sind zäh, aber du hast dich getraut. Die Auflösung findest du oben.",
-      "Erste Annahme, dann Fakten. Oben liegen die Wiki-Links, die sie bestätigen."
+      "Diese Mythen sind zäh, sie halten sich seit Jahren. Unten stehen die Fakten.",
+      "Viele Irrtümer klingen einfach plausibel. Die Artikel unten räumen damit auf.",
+      "Mythen haben es in sich. Unten liest du nach, was wirklich stimmt."
     ]
   },
   fall: {
     hoch: [
-      "Du entscheidest im Alltag sicher – genau das zählt im echten Leben.",
-      "Stark. Deine Instinkte treffen, und du gibst dem Tier den Vorzug.",
-      "So muss Hand-in-Hand-Wissen aussehen. Das sitzt."
+      "Du entscheidest sicher, und zwar im Sinne des Tieres.",
+      "Stark. Im Ernstfall weißt du, was zu tun ist.",
+      "Klarer Kopf, gutes Gespür. Genau das zählt im echten Leben."
     ],
     mittel: [
-      "Du liegst meist richtig. Die Feinheiten zu deinen Fällen findest du oben.",
-      "Guter Kompass. Die Artikel oben helfen dir beim letzten Schliff.",
-      "Du hast das Tier im Blick. Eine kleine Anpassung, dann läuft es rund."
+      "Meist richtig entschieden. Die Feinheiten stehen in den Artikeln unten.",
+      "Guter Kompass. Die Artikel unten helfen bei den kniffligen Fällen.",
+      "Du hast das Tier im Blick. Unten steht, worauf es im Detail ankommt."
     ],
     niedrig: [
-      "Jeder Fall ist anders. Schau dir die Begründungen oben in Ruhe an – sie machen dich sicherer.",
-      "Der Anfang ist gemacht. Direkt oben liegen die Wege, die du heute schon geklärt hast.",
-      "Nicht jeder Griff sitzt auf Anhieb. Die Auflösungen oben zeigen dir, worauf es ankommt."
+      "Echte Fälle sind selten eindeutig. Die Artikel unten machen dich sicherer.",
+      "Hier lag die gut gemeinte Lösung oft daneben. Unten steht, warum.",
+      "Nicht jeder Griff sitzt sofort. Unten findest du, worauf es ankommt."
     ]
   }
 };
@@ -65,8 +65,8 @@ const TEXTE = {
 // Einheit, die im persönlichen Ergebnis-Satz vor dem Score steht.
 const MODE_EINHEIT = {
   klassisch: "richtig",
-  mythen: "Mythen geknackt",
-  fall: "Fälle richtig entschieden"
+  mythen: "richtig eingeordnet",
+  fall: "Fällen gut entschieden"
 };
 
 function stageOf(score, total) {
@@ -76,31 +76,19 @@ function stageOf(score, total) {
   return "niedrig";
 }
 
-function pickFromList(list, score, total) {
-  // Leichte, deterministische Variation: Score + Index mischen, ohne Math.random.
-  const seed = (score * 7 + total + 3) % list.length;
-  return list[seed];
+function pickFromList(list) {
+  return list[Math.floor(Math.random() * list.length)];
 }
 
 export function baueResultatText(modeKey, score, total) {
   const mode = TEXTE[modeKey] || TEXTE.klassisch;
   const stufe = stageOf(score, total);
-  const bandTexte = mode[stufe];
-  const warm = pickFromList(bandTexte, score, total);
+  const warm = pickFromList(mode[stufe]);
   const einheit = MODE_EINHEIT[modeKey] || MODE_EINHEIT.klassisch;
   return {
     stufe,
     label: STAGE_LABELS[stufe],
     warm,
-    satz: `${score} von ${total} ${einheit} – ${warm}`
+    satz: `${score} von ${total} ${einheit}. ${warm}`
   };
-}
-
-export function besteRunSatz(highscore, bestModeLabel) {
-  if (!highscore || highscore.score <= 0) {
-    return "Noch keine Runde gespielt – direkt loslegen.";
-  }
-  const { score, total, modeLabel } = highscore;
-  const label = bestModeLabel || modeLabel || "Quiz";
-  return `Dein bester Run: ${score} von ${total} (${label}).`;
 }

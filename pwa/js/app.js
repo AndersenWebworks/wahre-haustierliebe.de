@@ -4,8 +4,9 @@ import {
   registerServiceWorker,
   checkQuestionUpdate,
   pickQuestions,
+  poolFor,
+  roundSize,
   saveSession,
-  getLastSummary,
   getHighscore,
   getBestRun,
   DEFAULT_MODE
@@ -16,6 +17,7 @@ const grid = document.getElementById("category-grid");
 const startBtn = document.getElementById("start-btn");
 const scoreSummary = document.getElementById("score-summary");
 const bestRunLine = document.getElementById("best-run-line");
+const snackbar = document.getElementById("snackbar");
 
 let selectedMode = DEFAULT_MODE;
 let selectedCategory = "all";
@@ -49,6 +51,11 @@ function selectMode(key) {
   for (const btn of modeGrid.querySelectorAll(".mode-card")) {
     btn.setAttribute("aria-checked", String(btn.dataset.mode === key));
   }
+  // Ein Thema ohne Fragen in diesem Modus fällt auf "Alle Themen" zurück.
+  if (selectedCategory !== "all" && poolFor(data, selectedMode, selectedCategory).length === 0) {
+    selectedCategory = "all";
+  }
+  renderCategories();
   renderScoreSummary();
 }
 
@@ -62,15 +69,22 @@ function renderCategories() {
 }
 
 function makeCategoryBtn({ key, label, blurb }) {
+  const count = poolFor(data, selectedMode, key).length;
+  const size = Math.min(count, roundSize(data, selectedMode, key));
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "category-btn";
   btn.dataset.category = key;
   btn.setAttribute("role", "radio");
   btn.setAttribute("aria-checked", String(key === selectedCategory));
+  btn.disabled = count === 0;
+  const countText = count === 0
+    ? "In diesem Modus noch keine Fragen"
+    : `${size} ${size === 1 ? "Frage" : "Fragen"} pro Runde`;
   btn.innerHTML = `
     <span class="category-btn-label">${escapeHtml(label)}</span>
     <span class="category-btn-blurb">${escapeHtml(blurb || "")}</span>
+    <span class="category-btn-count">${escapeHtml(countText)}</span>
   `;
   btn.addEventListener("click", () => selectCategory(key));
   return btn;
@@ -84,53 +98,37 @@ function selectCategory(key) {
   renderScoreSummary();
 }
 
+function labelFor(modeKey, categoryKey) {
+  const modeLabel = (data.modes && data.modes[modeKey] && data.modes[modeKey].label) || "Klassisch";
+  const catLabel = (!categoryKey || categoryKey === "all")
+    ? "alle Themen"
+    : ((data.categories && data.categories[categoryKey] && data.categories[categoryKey].label) || "Thema");
+  return { modeLabel, catLabel };
+}
+
 function renderScoreSummary() {
   const score = getHighscore(selectedMode, selectedCategory);
-  const total = (data && data.questions) ? countQuestionsFor(data, selectedMode, selectedCategory) : 15;
-  const modeLabel = (data.modes && data.modes[selectedMode] && data.modes[selectedMode].label) || "Klassisch";
-  const catLabel = selectedCategory === "all"
-    ? "alle Themen"
-    : ((data.categories && data.categories[selectedCategory] && data.categories[selectedCategory].label) || "Thema");
+  const total = roundSize(data, selectedMode, selectedCategory);
+  const { modeLabel, catLabel } = labelFor(selectedMode, selectedCategory);
   if (!score) {
     scoreSummary.textContent = `Noch keine Runde im Modus ${modeLabel} (${catLabel}) gespielt.`;
   } else {
-    scoreSummary.textContent = `Highscore ${modeLabel} · ${catLabel}: ${score} von ${total}.`;
+    scoreSummary.textContent = `Highscore ${modeLabel} · ${catLabel}: ${Math.min(score, total)} von ${total}.`;
   }
   renderBestRun();
 }
 
 function renderBestRun() {
   if (!bestRunLine || !data) return;
-  const best = getBestRun(data.modes || {});
+  const best = getBestRun(data);
   if (!best) {
     bestRunLine.textContent = "Dein bester Run beginnt hier.";
     bestRunLine.dataset.empty = "true";
     return;
   }
-  const sameMode = best.mode === selectedMode;
-  const totalGuess = guessBestTotal(best);
-  bestRunLine.textContent = sameMode
-    ? `Dein bester Run: ${best.score} von ${totalGuess} (${best.modeLabel}).`
-    : `Dein bester Run: ${best.score} von ${totalGuess} (${best.modeLabel}).`;
+  const { catLabel } = labelFor(best.mode, best.category);
+  bestRunLine.textContent = `Dein bester Run: ${best.score} von ${best.total} (${best.modeLabel} · ${catLabel}).`;
   bestRunLine.dataset.empty = "false";
-}
-
-function guessBestTotal(best) {
-  if (!data || !data.questions) return 15;
-  const modePool = data.questions.filter(q => q.mode === best.mode);
-  if (best.category && best.category !== "all") {
-    const inCat = modePool.filter(q => q.category === best.category);
-    if (inCat.length) return inCat.length;
-  }
-  return modePool.length || 15;
-}
-
-function countQuestionsFor(data, modeKey, categoryKey) {
-  const all = data.questions || [];
-  let pool = all;
-  if (modeKey && modeKey !== "all") pool = pool.filter(q => q.mode === modeKey);
-  if (categoryKey && categoryKey !== "all") pool = pool.filter(q => q.category === categoryKey);
-  return pool.length;
 }
 
 function startQuiz() {
@@ -152,6 +150,13 @@ function startQuiz() {
   location.href = "quiz.html";
 }
 
+function showSnackbar(msg) {
+  if (!snackbar) return;
+  snackbar.textContent = msg;
+  snackbar.classList.add("is-visible");
+  setTimeout(() => snackbar.classList.remove("is-visible"), 4000);
+}
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"
@@ -170,10 +175,12 @@ async function init() {
   attachOffline();
   try {
     data = await loadQuestions();
-    checkQuestionUpdate(data);
     renderModes();
     renderCategories();
     renderScoreSummary();
+    if (checkQuestionUpdate(data)) {
+      showSnackbar("Neue Fragen sind da. Viel Spaß beim Spielen!");
+    }
   } catch (e) {
     scoreSummary.textContent = "Fragenkatalog konnte nicht geladen werden. Versuche es später erneut.";
     startBtn.disabled = true;

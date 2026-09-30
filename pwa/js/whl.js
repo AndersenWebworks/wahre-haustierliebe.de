@@ -4,10 +4,8 @@
 const STORAGE_KEYS = {
   HIGHSCORE: "whl_quiz_highscore_v2",
   SEEN: "whl_quiz_seen_v1",
-  FAV: "whl_quiz_fav_v1",
   SESSION: "whl_quiz_session_v2",
-  VERSION: "whl_quiz_version_seen",
-  INSTALL_HINT: "whl_quiz_install_hinted"
+  VERSION: "whl_quiz_version_seen"
 };
 
 export const QUIZ_SIZE = 15;
@@ -34,15 +32,27 @@ export async function loadResultateTexte() {
   return mod;
 }
 
-export function pickQuestions(data, modeKey, categoryKey) {
-  const all = data.questions || [];
+// Alle Fragen zu Modus und Kategorie. "all" oder leer heißt: nicht filtern.
+export function poolFor(data, modeKey, categoryKey) {
+  const all = (data && data.questions) || [];
   const mode = (!modeKey || modeKey === "all") ? null : modeKey;
   const cat = (!categoryKey || categoryKey === "all") ? null : categoryKey;
-  const byMode = mode ? all.filter(q => q.mode === mode) : all;
-  const byCat = cat ? byMode.filter(q => q.category === cat) : byMode;
-  const pool = byCat.length > 0 ? byCat : byMode;
-  const size = Math.min(QUIZ_SIZE, pool.length || all.length);
-  return shuffle(pool.length ? pool : all).slice(0, size);
+  return all.filter(q => (!mode || q.mode === mode) && (!cat || q.category === cat));
+}
+
+// Wählt die Runde zufällig aus dem Pool und ordnet sie dann von leicht nach
+// knifflig. So entsteht der Spannungsbogen aus der echten Schwierigkeit.
+export function pickQuestions(data, modeKey, categoryKey) {
+  const pool = poolFor(data, modeKey, categoryKey);
+  const picks = shuffle(pool).slice(0, Math.min(QUIZ_SIZE, pool.length));
+  return picks
+    .map((q, i) => ({ q, i }))
+    .sort((a, b) => difficultyRank(a.q.difficulty) - difficultyRank(b.q.difficulty) || a.i - b.i)
+    .map(entry => entry.q);
+}
+
+export function roundSize(data, modeKey, categoryKey) {
+  return Math.min(QUIZ_SIZE, poolFor(data, modeKey, categoryKey).length);
 }
 
 export function shuffle(arr) {
@@ -73,31 +83,38 @@ export function clearSession() {
   try { sessionStorage.removeItem(STORAGE_KEYS.SESSION); } catch (e) { /* ignoriert */ }
 }
 
-export function getHighscore(modeKey, categoryKey) {
+function readHighscores() {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
-    if (!raw) return 0;
-    const data = JSON.parse(raw);
-    const m = (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
-    const mData = data[m] || {};
-    const c = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
-    return mData[c] || 0;
+    return raw ? (JSON.parse(raw) || {}) : {};
   } catch (e) {
-    return 0;
+    return {};
   }
+}
+
+function modeKeyOf(modeKey) {
+  return (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
+}
+
+function categoryKeyOf(categoryKey) {
+  return (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
+}
+
+export function getHighscore(modeKey, categoryKey) {
+  const data = readHighscores();
+  const mData = data[modeKeyOf(modeKey)] || {};
+  return mData[categoryKeyOf(categoryKey)] || 0;
 }
 
 export function setHighscore(modeKey, categoryKey, score) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
-    const data = raw ? JSON.parse(raw) : {};
-    const m = (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
-    const c = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
+    const data = readHighscores();
+    const m = modeKeyOf(modeKey);
+    const c = categoryKeyOf(categoryKey);
     if (!data[m]) data[m] = {};
-    const mData = data[m];
-    const prev = mData[c] || 0;
+    const prev = data[m][c] || 0;
     if (score > prev) {
-      mData[c] = score;
+      data[m][c] = score;
       localStorage.setItem(STORAGE_KEYS.HIGHSCORE, JSON.stringify(data));
       return true;
     }
@@ -107,40 +124,27 @@ export function setHighscore(modeKey, categoryKey, score) {
   }
 }
 
-// Liefert den persönlichen Highscore pro (Modus, Kategorie). Wird für die
-// Start-Seite gebraucht, die ihre Highscore-Zeile pro Auswahl zeigt.
-export function getModeHighscores(modeKey) {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
-    if (!raw) return {};
-    const data = JSON.parse(raw);
-    return data[modeKey] || {};
-  } catch (e) {
-    return {};
-  }
-}
-
 // Liefert den persönlichen "besten Run" der gesamten Historie.
-// Einbezogen werden alle Modi und alle Kategorien, das höchste Score-Verhältnis gewinnt.
-export function getBestRun(modes) {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
-    if (!raw) return null;
-    const data = raw ? JSON.parse(raw) : {};
-    let best = null;
-    for (const [modeKey, cats] of Object.entries(data || {})) {
-      const modeLabel = (modes && modes[modeKey] && modes[modeKey].label) || modeKey;
-      for (const [categoryKey, score] of Object.entries(cats || {})) {
-        if (typeof score !== "number" || score <= 0) continue;
-        if (!best || score > best.score) {
-          best = { score, total: 0, mode: modeKey, modeLabel, category: categoryKey };
-        }
+// Einbezogen werden alle Modi und alle Kategorien; der höchste Anteil richtiger
+// Antworten gewinnt, bei Gleichstand die größere Runde.
+export function getBestRun(data) {
+  const stored = readHighscores();
+  const modes = (data && data.modes) || {};
+  let best = null;
+  for (const [modeKey, cats] of Object.entries(stored)) {
+    const modeLabel = (modes[modeKey] && modes[modeKey].label) || modeKey;
+    for (const [categoryKey, score] of Object.entries(cats || {})) {
+      if (typeof score !== "number" || score <= 0) continue;
+      const total = roundSize(data, modeKey, categoryKey);
+      if (!total) continue;
+      const shown = Math.min(score, total);
+      const ratio = shown / total;
+      if (!best || ratio > best.ratio || (ratio === best.ratio && total > best.total)) {
+        best = { score: shown, total, ratio, mode: modeKey, modeLabel, category: categoryKey };
       }
     }
-    return best;
-  } catch (e) {
-    return null;
   }
+  return best;
 }
 
 export function markSeen(questionIds) {
@@ -149,39 +153,18 @@ export function markSeen(questionIds) {
     const arr = raw ? JSON.parse(raw) : [];
     const merged = Array.from(new Set([...arr, ...questionIds])).slice(-30);
     localStorage.setItem(STORAGE_KEYS.SEEN, JSON.stringify(merged));
-    localStorage.setItem(STORAGE_KEYS.FAV, guessFav(merged));
   } catch (e) { /* ignoriert */ }
-}
-
-function guessFav(seen) {
-  const counts = {};
-  const recent = seen.slice(-15);
-  for (const id of recent) counts[id] = (counts[id] || 0) + 1;
-  return Object.keys(counts).slice(-3).join(",");
-}
-
-export function getLastSummary(modeKey, categoryKey) {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.HIGHSCORE);
-    if (!raw) return null;
-    const data = JSON.parse(raw);
-    const m = (!modeKey || modeKey === "all") ? DEFAULT_MODE : modeKey;
-    const mData = data[m] || {};
-    const c = (!categoryKey || categoryKey === "all") ? "all" : categoryKey;
-    return mData[c] || 0;
-  } catch (e) {
-    return 0;
-  }
 }
 
 export function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol === "file:") return;
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js").catch(() => { /* still ok */ });
-  });
+  const register = () => navigator.serviceWorker.register("sw.js").catch(() => { /* still ok */ });
+  if (document.readyState === "complete") register();
+  else window.addEventListener("load", register);
 }
 
+// true, wenn seit dem letzten Besuch eine neue Fragenversion angekommen ist.
 export function checkQuestionUpdate(data) {
   try {
     const seen = localStorage.getItem(STORAGE_KEYS.VERSION);
@@ -204,20 +187,22 @@ export function buildWikiUrl(path) {
   return "https://wahre-haustierliebe.de" + clean;
 }
 
-// Schwierigkeitsbogen im Quiz-Header:
-// 1.–3. Frage = leicht, 4.–6. = mittel, ab 7. = knifflig.
-export function schwierigkeitFuer(index, total) {
-  const pos = index + 1;
-  if (pos <= 3) return "leicht";
-  if (pos <= 6) return "mittel";
-  return "knifflig";
+// Schwierigkeit einer Frage: leicht, mittel oder knifflig.
+export function difficultyRank(level) {
+  if (level === "knifflig") return 2;
+  if (level === "mittel") return 1;
+  return 0;
 }
 
 export function difficultyDots(level) {
-  if (level === "leicht") return 1;
-  if (level === "mittel") return 2;
-  return 3;
+  return difficultyRank(level) + 1;
 }
+
+export const DIFFICULTY_LABELS = {
+  leicht: "leicht",
+  mittel: "mittel",
+  knifflig: "knifflig"
+};
 
 // Mode-Akzente für die unterschiedliche Anmutung der drei Modi.
 export const MODE_AKZENTE = {

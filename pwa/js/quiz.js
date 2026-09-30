@@ -5,13 +5,14 @@ import {
   loadQuestions,
   loadSession,
   saveSession,
+  getHighscore,
   setHighscore,
   markSeen,
   buildWikiUrl,
   TIME_PER_QUESTION,
   DEFAULT_MODE,
-  schwierigkeitFuer,
   difficultyDots,
+  DIFFICULTY_LABELS,
   modeAkzent
 } from "./whl.js";
 import {
@@ -73,10 +74,12 @@ async function init() {
   data = await loadQuestions();
   state.questions = state.questions.map(stub => data.questions.find(question => question.id === stub.id) || stub);
   if (!state.mode) state.mode = DEFAULT_MODE;
+  if (!Array.isArray(state.answers)) state.answers = [];
   applyModeAccent(state.mode);
   paintModeBadge();
   showQuestion(0);
   document.addEventListener("keydown", handleKey);
+  document.addEventListener("visibilitychange", handleVisibility);
 }
 
 function applyModeAccent(modeKey) {
@@ -96,6 +99,8 @@ function paintModeBadge() {
 
 function handleKey(event) {
   if (isAnswered) {
+    // Enter auf dem Wiki-Link soll den Link öffnen, nicht weiterblättern.
+    if (event.target && event.target.closest && event.target.closest("a, button")) return;
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       nextQuestion();
@@ -104,11 +109,17 @@ function handleKey(event) {
   }
   // Klassisch/Fall: Zifferntasten 1–4. Mythen: 1=Stimmt, 2=Stimmt nicht.
   const number = Number.parseInt(event.key, 10);
-  const isJaNein = aktuelleInteraktion() === "jaNein";
-  const max = isJaNein ? 2 : 4;
+  const max = aktuelleInteraktion() === "jaNein" ? 2 : 4;
   if (number >= 1 && number <= max) {
     els.options.querySelectorAll(".option-btn")[number - 1]?.click();
   }
+}
+
+// Der Timer ist ein sanfter Hinweis. Wer die App verlässt, verliert keine Zeit.
+function handleVisibility() {
+  if (isAnswered || !currentQuestion) return;
+  if (document.hidden) clearInterval(timerHandle);
+  else startTimer(false);
 }
 
 function aktuelleInteraktion() {
@@ -131,24 +142,23 @@ function showQuestion(index) {
   paintQuestion();
   paintOptions();
   updateStatus();
-  startTimer();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  startTimer(true);
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
 }
 
 function paintHeader() {
-  // Tier-Sticker und Difficulty-Indikator.
   if (els.progressStickerImg) {
     els.progressStickerImg.src = headerSticker(currentQuestion.category);
     els.progressStickerImg.alt = "";
   }
   if (els.difficultyIndicator) {
-    const level = schwierigkeitFuer(currentIndex, state.questions.length);
+    const level = currentQuestion.difficulty || "leicht";
     const filled = difficultyDots(level);
-    const dots = els.difficultyIndicator.querySelectorAll(".difficulty-dot");
-    dots.forEach((dot, dotIndex) => {
+    els.difficultyIndicator.querySelectorAll(".difficulty-dot").forEach((dot, dotIndex) => {
       dot.dataset.active = dotIndex < filled ? "on" : "off";
     });
     els.difficultyIndicator.dataset.level = level;
+    els.difficultyIndicator.title = `Schwierigkeit: ${DIFFICULTY_LABELS[level] || level}`;
   }
 }
 
@@ -160,19 +170,15 @@ function paintQuestion() {
   els.explanation.className = "explanation";
   els.explanation.innerHTML = "";
 
-  // Kicker pro Modus.
   const kicker = (data.modes && data.modes[state.mode] && data.modes[state.mode].kicker) || "Welche Antwort trägt wirklich?";
   if (els.kicker) els.kicker.textContent = kicker;
 
-  // Fall-Sticker-Szene: 1–2 SVGs über der Frage.
+  // Fall-Sticker-Szene: 1–2 SVGs über der Frage, rein dekorativ.
   if (els.fallScene) {
     if (state.mode === "fall") {
-      const stickers = fallStickerListe(currentQuestion);
-      els.fallScene.innerHTML = stickers.map((name, i) => {
-        const alt = ["", ""];
-        alt[i] = `Sticker ${name}`;
-        return `<img src="${escapeHtml(stickerUrl(name))}" alt="${escapeHtml(alt[i] || "")}" width="40" height="40">`;
-      }).join("");
+      els.fallScene.innerHTML = fallStickerListe(currentQuestion)
+        .map(name => `<img src="${escapeHtml(stickerUrl(name))}" alt="" width="40" height="40">`)
+        .join("");
       els.fallScene.hidden = false;
     } else {
       els.fallScene.innerHTML = "";
@@ -187,30 +193,23 @@ function paintOptions() {
   els.options.innerHTML = "";
 
   if (interaktion === "jaNein") {
+    currentOptions = JA_NEIN_BUTTONS.map(item => ({
+      text: item.text,
+      correct: item.value === (currentQuestion.correctJaNein === true)
+    }));
     els.options.setAttribute("aria-label", "Stimmt das? Wähle Stimmt oder Stimmt nicht.");
-    JA_NEIN_BUTTONS.forEach((item, idx) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "option-btn option-btn--ja-nein";
-      button.setAttribute("role", "option");
-      button.dataset.jaNeinValue = String(item.value);
-      button.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + idx)}</span><span class="option-text">${escapeHtml(item.text)}</span>`;
-      button.addEventListener("click", () => onJaNeinSelect(item.value));
-      els.options.appendChild(button);
-    });
-    return;
+  } else {
+    currentOptions = shuffleOptions(currentQuestion.options || [], currentQuestion.correctIndex);
+    els.options.setAttribute("aria-label", "Antwortmöglichkeiten");
   }
 
-  // vierKarten
-  currentOptions = shuffleOptions(currentQuestion.options, currentQuestion.correctIndex);
-  els.options.setAttribute("aria-label", "Antwortmöglichkeiten");
   currentOptions.forEach((option, index) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "option-btn";
+    button.className = interaktion === "jaNein" ? "option-btn option-btn--ja-nein" : "option-btn";
     button.setAttribute("role", "option");
     button.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + index)}</span><span class="option-text">${escapeHtml(option.text)}</span>`;
-    button.addEventListener("click", () => onSelect(index));
+    button.addEventListener("click", () => answer(index));
     els.options.appendChild(button);
   });
 }
@@ -224,14 +223,17 @@ function updateStatus() {
   els.streak.textContent = String(streak);
 }
 
-function startTimer() {
+function startTimer(reset) {
   clearInterval(timerHandle);
+  if (reset) timeLeft = TIME_PER_QUESTION;
   paintTimer();
   timerHandle = setInterval(() => {
     timeLeft -= 1;
     if (timeLeft <= 0) {
       clearInterval(timerHandle);
-      onTimeout();
+      timeLeft = 0;
+      paintTimer();
+      answer(-1, { timeout: true });
       return;
     }
     paintTimer();
@@ -247,113 +249,67 @@ function paintTimer() {
   else if (timeLeft <= 12) els.timerFill.classList.add("soft");
 }
 
-function onTimeout() {
-  if (isAnswered) return;
-  if (aktuelleInteraktion() === "jaNein") {
-    onJaNeinSelect(null, { timeout: true });
-  } else {
-    onSelect(-1, { timeout: true });
-  }
-}
-
-function onSelect(index, options = {}) {
+// Gemeinsame Auswertung für vier Karten und Stimmt / Stimmt nicht.
+function answer(index, options = {}) {
   if (isAnswered) return;
   isAnswered = true;
   clearInterval(timerHandle);
 
+  const timedOut = Boolean(options.timeout);
   const correctIndex = currentOptions.findIndex(option => option.correct);
-  const isCorrect = !options.timeout && currentOptions[index]?.correct === true;
+  const isCorrect = !timedOut && currentOptions[index]?.correct === true;
   const buttons = els.options.querySelectorAll(".option-btn");
+
   buttons.forEach((button, buttonIndex) => {
     button.disabled = true;
     if (buttonIndex === correctIndex) button.classList.add("correct");
     if (buttonIndex === index && !isCorrect) button.classList.add("wrong");
   });
 
-  // Tap-Moment: Shake bei falsch, Glow bei richtig, dann bei falsch die richtige nachzeichnen.
-  if (!options.timeout && index >= 0) {
-    triggerTapShake(buttons[index]);
-  }
-  triggerTapGlow(buttons[correctIndex]);
-  if (!isCorrect && !options.timeout) {
-    const assetUrl = tapSticker(currentQuestion.category);
-    showTapIcon(buttons[index], `sticker/${assetUrl.split("/").pop()}`, false);
-    if (prefersReducedMotion) return;
-    setTimeout(() => {
-      const correctBtn = buttons[correctIndex];
-      if (!correctBtn) return;
-      showTapIcon(correctBtn, assetUrl, true);
-    }, 380);
-  } else if (isCorrect) {
-    showTapIcon(buttons[index], tapSticker(currentQuestion.category), true);
-  }
+  playTapMoment(buttons, index, correctIndex, isCorrect, timedOut);
 
   if (isCorrect) {
     streak += 1;
     bestStreak = Math.max(bestStreak, streak);
-    state.score += 1;
+    state.score = (state.score || 0) + 1;
   } else {
     streak = 0;
   }
-  state.answers.push({ id: currentQuestion.id, correct: isCorrect, timeout: Boolean(options.timeout), mode: state.mode });
+  state.answers.push({ id: currentQuestion.id, correct: isCorrect, timeout: timedOut, mode: state.mode });
   saveSession(state);
   updateStatus();
-  showExplanation(isCorrect, options.timeout);
+  showExplanation(isCorrect, timedOut);
 }
 
-function onJaNeinSelect(value, options = {}) {
-  if (isAnswered) return;
-  isAnswered = true;
-  clearInterval(timerHandle);
+// Tap-Moment: Glow bei richtig, Shake bei falsch, danach leuchtet die richtige
+// Antwort nach. Bei reduzierter Bewegung bleiben nur Farben und Piktogramme.
+function playTapMoment(buttons, index, correctIndex, isCorrect, timedOut) {
+  const sticker = tapSticker(currentQuestion.category);
+  const chosen = buttons[index];
+  const correctBtn = buttons[correctIndex];
 
-  const correct = currentQuestion.correctJaNein === true;
-  const isCorrect = !options.timeout && value === correct;
-  const buttons = els.options.querySelectorAll(".option-btn");
-  // Buttons sind Stimmt (idx 0), Stimmt nicht (idx 1)
-  const correctIndex = correct ? 0 : 1;
-  const selectedIndex = value === true ? 0 : (value === false ? 1 : -1);
-
-  buttons.forEach((button, buttonIndex) => {
-    button.disabled = true;
-    if (buttonIndex === correctIndex) button.classList.add("correct");
-    if (buttonIndex === selectedIndex && !isCorrect) button.classList.add("wrong");
-  });
-
-  if (!options.timeout && selectedIndex >= 0) {
-    triggerTapShake(buttons[selectedIndex]);
-  }
-  triggerTapGlow(buttons[correctIndex]);
-  if (!isCorrect && !options.timeout) {
-    const assetUrl = tapSticker(currentQuestion.category);
-    showTapIcon(buttons[selectedIndex], assetUrl, false);
-    if (!prefersReducedMotion) {
-      setTimeout(() => {
-        const correctBtn = buttons[correctIndex];
-        if (correctBtn) showTapIcon(correctBtn, assetUrl, true);
-      }, 380);
-    }
-  } else if (isCorrect) {
-    showTapIcon(buttons[selectedIndex], tapSticker(currentQuestion.category), true);
-  }
-
+  triggerTapGlow(correctBtn);
   if (isCorrect) {
-    streak += 1;
-    bestStreak = Math.max(bestStreak, streak);
-    state.score += 1;
-  } else {
-    streak = 0;
+    showTapIcon(chosen, sticker, true);
+    return;
   }
-  state.answers.push({ id: currentQuestion.id, correct: isCorrect, timeout: Boolean(options.timeout), mode: state.mode });
-  saveSession(state);
-  updateStatus();
-  showExplanation(isCorrect, options.timeout);
+  if (timedOut) {
+    showTapIcon(correctBtn, sticker, true);
+    return;
+  }
+  triggerTapShake(chosen);
+  showTapIcon(chosen, sticker, false);
+  if (prefersReducedMotion) {
+    showTapIcon(correctBtn, sticker, true);
+  } else {
+    setTimeout(() => showTapIcon(correctBtn, sticker, true), 380);
+  }
 }
 
 function triggerTapShake(button) {
   if (!button || prefersReducedMotion) return;
   button.classList.remove("is-shaking");
-  // reflow, damit die Animation neu startet
-  void button.offsetWidth;
+  void button.offsetWidth; // Reflow, damit die Animation neu startet
   button.classList.add("is-shaking");
   setTimeout(() => button.classList.remove("is-shaking"), 360);
 }
@@ -374,7 +330,6 @@ function showTapIcon(button, assetUrl, positive) {
   icon.innerHTML = `<img src="${escapeHtml(assetUrl)}" alt="">`;
   button.appendChild(icon);
   if (prefersReducedMotion) return;
-  // Reflow + kurze Einblendung
   void icon.offsetWidth;
   icon.dataset.visible = "true";
   setTimeout(() => {
@@ -383,20 +338,32 @@ function showTapIcon(button, assetUrl, positive) {
   }, 850);
 }
 
+function introFor(isCorrect, timedOut) {
+  if (timedOut) return "Die Zeit ist um.";
+  if (aktuelleInteraktion() === "jaNein") {
+    if (isCorrect) return "Richtig erkannt.";
+    return currentQuestion.correctJaNein ? "Doch, das stimmt." : "Das stimmt so nicht.";
+  }
+  return isCorrect ? "Treffer." : "Die stärkere Antwort ist markiert.";
+}
+
 function showExplanation(isCorrect, timedOut) {
-  const intro = isCorrect ? "Treffer." : timedOut ? "Die Zeit ist um." : "Die stärkere Antwort ist markiert.";
-  const streakNote = streak >= 3 ? `<div class="streak" aria-live="polite">${streak} Treffer in Folge</div>` : "";
+  const intro = introFor(isCorrect, timedOut);
+  const isLast = currentIndex + 1 === state.questions.length;
+  const streakNote = streak >= 3 ? `<div class="streak">${streak} Treffer in Folge</div>` : "";
   els.explanation.innerHTML = `
     <p><strong>${intro}</strong> ${escapeHtml(currentQuestion.explanation || "Mehr dazu im verlinkten Wiki-Artikel.")}</p>
     <div class="explanation-actions">
       <a class="primary-btn" style="width:auto;" href="${escapeHtml(buildWikiUrl(currentQuestion.wikiPath))}" target="_blank" rel="noopener">Hintergrund lesen</a>
-      <button type="button" class="ghost-btn" id="next-btn">${currentIndex + 1 === state.questions.length ? "Ergebnis ansehen" : "Nächste Frage"}</button>
+      <button type="button" class="ghost-btn" id="next-btn">${isLast ? "Ergebnis ansehen" : "Nächste Frage"}</button>
     </div>
     ${streakNote}
   `;
   els.explanation.classList.add(isCorrect ? "correct" : "wrong");
   els.explanation.hidden = false;
-  document.getElementById("next-btn").addEventListener("click", nextQuestion);
+  const nextBtn = document.getElementById("next-btn");
+  nextBtn.addEventListener("click", nextQuestion);
+  nextBtn.focus({ preventScroll: true });
 }
 
 function nextQuestion() {
@@ -410,6 +377,7 @@ function finishQuiz() {
   state.finishedAt = Date.now();
   state.total = state.questions.length;
   state.bestStreak = bestStreak;
+  state.prevHighscore = getHighscore(state.mode, state.category);
   state.newRecord = setHighscore(state.mode, state.category, score);
   markSeen(state.questions.map(question => question.id));
   saveSession(state);

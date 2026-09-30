@@ -96,14 +96,14 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .brand-mark {
   display: inline-grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--primary);
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  letter-spacing: 0;
 }
 .brand-text { font-family: var(--font-heading); font-size: 1.05rem; }
 .header-tag {
@@ -349,11 +349,11 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 .quiz-score strong { color: var(--primary-dark); }
 
 .timer-ring {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
 }
-.timer-ring svg { transform: rotate(-90deg); }
+.timer-ring svg { display: block; }
 .timer-ring-track { stroke: var(--bg-alt); }
 .timer-ring-fill {
   stroke: var(--mode-accent);
@@ -408,6 +408,7 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   margin: 0 0 0.6rem;
   padding: 0.6rem 0.6rem 0;
 }
+.fall-scene[hidden] { display: none; }
 .fall-scene img {
   width: 52px;
   height: 52px;
@@ -813,3 +814,25 @@ body.is-offline .offline-banner { display: block; }
   .option-btn.is-glowing { animation: none !important; }
   .option-tap-icon { transition: none !important; opacity: 1 !important; transform: translate(0, -50%) scale(1) !important; }
 }
+
+/* ========= Themen-Zähler, gesperrte Themen, Ergebnis-Markierung ========= */
+.category-btn-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+.category-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.category-btn:disabled:hover { background: var(--bg-alt); }
+.category-btn:disabled .category-btn-count { color: var(--text-muted); }
+
+.wiki-list .answer-state {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+.wiki-list .answer-state.is-correct { color: var(--primary-dark); }

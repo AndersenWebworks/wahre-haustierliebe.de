@@ -10,14 +10,14 @@ pwa/
 ├── quiz.html           Session, eine Frage pro Bildschirm
 ├── ergebnis.html       Score, Highscore, Wiki-Brücke, Teilen
 ├── manifest.json        Web-App-Manifest (App-Name, Farben, Icons)
-├── sw.js               Service Worker, offline-fähig (Cache-Version whl-pwa-v2)
+├── sw.js               Service Worker, network-first mit Offline-Cache (whl-pwa-v3)
 ├── css/
 │   └── whl-pwa.css     WHL-Designtokens, Mobile-Layout, Modus-Akzente, Animationen
 ├── js/
 │   ├── whl.js          Datenladen, Storage, Helfer, Modi-Akzente
 │   ├── app.js          Start-Screen, Modus- und Kategorie-Auswahl, bester Run
-│   ├── quiz.js         Session, Timer, Tap-Moment, Fall-Szene, Difficulty
-│   ├── share.js        Ergebnis, persönliche Texte pro Modus, Tier-Badges
+│   ├── quiz.js         Session, Timer, Tap-Moment, Fall-Szene, Schwierigkeit
+│   ├── share.js        Ergebnis, persönliche Texte, Tier-Badges, Artikelliste, neue Runde
 │   └── sticker.js      Sticker-Auswahl pro Kategorie und Modus
 ├── data/
 │   ├── questions.js    Fragenkatalog als ESM-Modul (Single Source of Truth)
@@ -56,20 +56,20 @@ Bearbeite `data/questions.js`. Jede Frage ist ein Objekt im `questions`-Export. 
 | `id` | Eindeutige ID, Schema `<kategorie>-<thema>-<zahl>` |
 | `mode` | Schlüssel aus dem `modes`-Export: `klassisch`, `mythen` oder `fall` |
 | `category` | Schlüssel aus dem `categories`-Export: `hunde`, `katzen`, `kleintiere`, `voegel` |
-| `difficulty` | Aktuell nur `leicht` im MVP |
+| `difficulty` | `leicht`, `mittel` oder `knifflig`. Bestimmt die Reihenfolge in der Runde und die Punkte im Quiz-Header |
 | `text` | Die Frage, kurz, konkret, ohne Belehr-Ton |
-| `options` | Genau vier Antworten, alle plausibel |
-| `correctIndex` | Index der richtigen Antwort, 0–3 (für `interaktion: "vierKarten"`) |
+| `options` | Genau vier Antworten, alle plausibel und etwa gleich lang (nur `vierKarten`) |
+| `correctIndex` | Index der richtigen Antwort, 0–3 (nur `vierKarten`) |
 | `explanation` | 1–3 Sätze, warm und ohne erhobenen Zeigefinger |
-| `wikiPath` | Wiki-Pfad relativ zur Domain, mit führendem `/` |
-| `sourceRef` | Vollständige URL auf die Wiki-Seite |
+| `wikiPath` | Wiki-Pfad relativ zur Domain, mit führendem `/`. Die Seite muss im Repo existieren |
+| `sourceRef` | Vollständige URL auf dieselbe Wiki-Seite |
 
 Optionale Felder pro Frage:
 
 | Feld | Modi | Bedeutung |
 | --- | --- | --- |
 | `interaktion` | alle | `"vierKarten"` (Default) oder `"jaNein"` — wechselt das Antwortlayout |
-| `correctJaNein` | `mythen` | `true` = „Stimmt“, `false` = „Stimmt nicht“ — Pflicht bei `interaktion: "jaNein"` |
+| `correctJaNein` | `mythen` | `true` = „Stimmt“, `false` = „Stimmt nicht“. Pflicht bei `interaktion: "jaNein"`; `options` und `correctIndex` entfallen dann |
 | `sticker` | `fall` | Array von Sticker-Namen aus `pwa/sticker/` ohne `.svg`, 1–2 Stück; Fallback pro Kategorie wenn leer |
 
 Beispiel-Eintrag (Klassisch):
@@ -99,39 +99,41 @@ Beispiel-Eintrag (Mythen-Check, jaNein):
 
 ```js
 {
-  id: "mythen-katzen-milch-001",
+  id: "mythen-katzen-einzelgaenger-001",
   mode: "mythen",
   interaktion: "jaNein",
   correctJaNein: false,
   category: "katzen",
   difficulty: "leicht",
-  text: "Stimmt das? „Eine Schale Milch ist für jede Katze ein passendes Leckerli.\"",
-  options: [
-    "Stimmt. Milch gehört seit jeher zur Katze dazu.",
-    "Stimmt nicht. Die meisten erwachsenen Katzen vertragen Milchzucker nicht."
-  ],
-  wikiPath: "/katzen/ernaehrung-milch/"
+  text: "„Katzen sind Einzelgänger und leben am liebsten allein.“",
+  explanation: "Katzen jagen allein, leben aber nicht automatisch allein. …",
+  wikiPath: "/katzen/sozialverhalten/",
+  sourceRef: "https://wahre-haustierliebe.de/katzen/sozialverhalten/"
 }
 ```
+
+Die Frage „Stimmt das wirklich?“ steht schon als Kicker über der Aussage. Der Fragetext ist deshalb nur die Aussage in Anführungszeichen. Aussagen, die stimmen, und solche, die nicht stimmen, sollten sich ungefähr die Waage halten, sonst lernt man die Antwort statt des Wissens.
 
 Beispiel-Eintrag (Fall-Entscheidung, mit Sticker):
 
 ```js
 {
-  id: "fall-hund-knurrt-besuch-001",
+  id: "fall-hund-stadtfest-001",
   mode: "fall",
   interaktion: "vierKarten",
   sticker: ["hund", "halsband"],
   category: "hunde",
-  text: "Dein Hund knurrt Besucher an der Haustür an. Was tust du jetzt?",
+  text: "Am Wochenende ist Stadtfest mit Musik und Gedränge. Dein Hund läuft sonst gut an der Leine mit. Was tust du?",
   options: [ /* vier Antworten */ ],
   correctIndex: 1
 }
 ```
 
-Nach jeder Änderung: die `version`-Konstante oben in `data/questions.js` um YYYY-MM-DD.N hochzählen, zum Beispiel `2026-09-23.1`. Beim nächsten App-Start erscheint die Snackbar „Es gibt neue Fragen — laden?".
+Nach jeder Änderung: die `version`-Konstante oben in `data/questions.js` auf YYYY-MM-DD.N setzen, zum Beispiel `2026-09-30.1`. Beim nächsten Start zeigt die Startseite kurz „Neue Fragen sind da. Viel Spaß beim Spielen!“.
 
-Wenn neue Sticker hinzukommen, müssen sie unter `pwa/sticker/` abgelegt und in `pwa/sw.js` (`APP_SHELL`) eingetragen werden, damit der Service Worker sie offline vorhält.
+Damit eine Frage eine Herausforderung bleibt, darf die richtige Antwort nicht an der Länge oder an ihrer Ausführlichkeit erkennbar sein. Falschantworten sind plausible Irrtümer, keine offensichtlichen Unsinnsantworten.
+
+Wenn neue Sticker oder Dateien hinzukommen, müssen sie unter `pwa/` abgelegt und in `pwa/sw.js` (`APP_SHELL`) eingetragen werden, damit der Service Worker sie offline vorhält. Nur dann wird auch `CACHE_VERSION` erhöht.
 
 ## Tap-Moment (Game-Design-Hebel)
 
@@ -139,15 +141,18 @@ Der Tipper auf eine Antwort ist der lebendigste Moment der App. Visuelle Reaktio
 
 - **Richtig**: warmes Glow (mode-spezifische Akzentfarbe), kleines SVG-Piktogramm blendet kurz seitlich der Antwortkarte ein (`headerSticker`/`tapSticker`).
 - **Falsch**: kurze Shake-Animation (CSS-Keyframes `whl-shake`), kleines Piktogramm erscheint. Nach 380 ms leuchtet die richtige Antwort warm nach.
-- **`prefers-reduced-motion: reduce`**: Animationen werden deaktiviert, Piktogramme bleiben sichtbar, ohne Bewegung.
+- **`prefers-reduced-motion: reduce`**: Animationen werden deaktiviert, Piktogramme und Farben bleiben sichtbar, die Runde läuft normal weiter.
 
 ## Spannungsbogen und WHL-Wärme
 
-- Quiz-Header zeigt drei Difficulty-Dots (leicht / mittel / knifflig) je nach Frage-Position (Frage 1–3 = leicht, 4–6 = mittel, ab 7 = knifflig).
+- Jede Runde wird zufällig gezogen und dann von leicht nach knifflig sortiert. Die drei Punkte im Quiz-Header zeigen die Schwierigkeit der aktuellen Frage aus dem Feld `difficulty`.
 - Tier-Sticker neben der Fragenummer, passend zur Kategorie (`headerSticker` aus `js/sticker.js`).
-- Persönliche Ergebnis-Texte: pro Modus und Stufe (niedrig / mittel / hoch) liegt ein Pool warmer Sätze in `data/resultateTexte.js`. Generiert wird via `baueResultatText(mode, score, total)`.
+- Persönliche Ergebnis-Texte: pro Modus und Stufe (niedrig / mittel / hoch) liegt ein Pool von Sätzen in `data/resultateTexte.js`. Generiert wird via `baueResultatText(mode, score, total)`. Die Artikelliste steht auf der Ergebnisseite unter dem Ergebnis, die Texte verweisen deshalb nach „unten“.
+- Die Artikelliste zeigt zuerst die Artikel zu falsch beantworteten Fragen („Nachlesen lohnt sich“), danach die gewussten. Mehrere Fragen zu einem Artikel ergeben einen Eintrag.
+- „Noch eine Runde“ startet sofort eine neue Runde mit demselben Modus und Thema.
 - Sammlung freigeschalteter Tierarten auf der Ergebnis-Seite zeigt die in der Runde vorgekommenen Kategorien mit Sticker.
-- Startseite zeigt zusätzlich „Dein bester Run: X von Y (Modus).“ über alle Kategorien hinweg.
+- Startseite zeigt pro Thema, wie viele Fragen eine Runde im gewählten Modus hat. Themen ohne Fragen sind gesperrt.
+- „Dein bester Run“ auf der Startseite ist der beste Anteil richtiger Antworten über alle Modi und Themen.
 
 ## Farben und Tonalität
 
@@ -173,7 +178,7 @@ Neue Texte sind warm, kurz und ohne Belehrung. Beispiel: „Stimmt." statt „Ko
 
 - Drei Quiz-Modi mit eigenem Fragenpool, eigener Akzentfarbe und eigenem Highscore.
 - Kein Multiplayer, keine Lobby, keine Jagd, kein Risiko.
-- Timer-Ring ist sanft (30 Sekunden), färbt sich erst spät um; keine Eile, kein „On Fire"-Pathos.
+- Timer-Ring ist sanft (30 Sekunden), färbt sich erst spät um; keine Eile, kein „On Fire"-Pathos. Er pausiert, solange die App im Hintergrund ist.
 - Antwortpositionen werden pro Frage zufällig gemischt (nur „vierKarten“), damit das Auge nicht auswendig lernt.
 - jaNein-Modus zeigt zwei feste Buttons ohne Mischen.
 - Streak-Toast ab drei Treffern in Folge, kein Punktezähler über den Score hinaus.
@@ -195,10 +200,14 @@ Neue Texte sind warm, kurz und ohne Belehrung. Beispiel: „Stimmt." statt „Ko
 ## Bekannte Grenzen
 
 - PWA-Icons liegen als SVG vor. Manche Apple-Versionen verlangen PNG. Falls apple-touch-icon als PNG gebraucht wird, einmal als 180 × 180 px aus `icons/icon.svg` rendern und als `icons/apple-touch-icon.png` ablegen, dann in den HTML-Head-Dateien wieder einbinden.
-- Der Fragenkatalog hat 30 Fragen in drei Modi (15 Klassisch, 9 Mythen-Check, 6 Fall-Entscheidung). Mittel und schwer wachsen mit dem Bestand.
+- Der Fragenkatalog hat 43 Fragen in drei Modi (20 Klassisch, 14 Mythen-Check, 9 Fall-Entscheidung). Eine Runde hat höchstens 15 Fragen; bei kleinen Pools sieht man deshalb jede Runde dieselben Fragen in anderer Reihenfolge. Mehr Fragen sind der größte Hebel für Wiederspielwert.
 - Push-Benachrichtigungen sind bewusst nicht im MVP — die PWA läuft statisch ohne Server.
 - Die PWA ist als Beta markiert: sie steht unter `robots.txt` mit `Disallow: /pwa/` und ist weder in `sitemap.xml` noch in `ai/pages.json` eingetragen. Sie taucht deshalb auch nicht in `llms.txt` oder `llms-full.txt` auf.
 
 ## Quellenpflicht
 
-Jede Frage hat einen `sourceRef`. Wird eine Frage entfernt oder geändert, müssen der Eintrag in `data/questions.js` und der verlinkte Wiki-Artikel zusammen gepflegt werden. Keine Frage ohne Wiki-Anker.
+Jede Frage hat einen `wikiPath` auf eine bestehende Seite und einen `sourceRef` auf dieselbe Seite. Die Aussage in Antwort und Erklärung muss dort stehen. Wird eine Wiki-Seite umbenannt oder entfernt, müssen die Fragen dazu mitgepflegt werden. Keine Frage ohne Wiki-Anker.
+
+## Updates und Cache
+
+Der Service Worker holt online immer zuerst den aktuellen Stand vom Server und fällt nur offline auf den Cache zurück. Nach einem Deploy sieht man die neue Fassung deshalb beim nächsten Laden, ohne Cache-Buster und ohne App-Neustart.
