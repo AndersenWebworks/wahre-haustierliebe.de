@@ -689,25 +689,25 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 
 > Beim Atmen strömt Luft durch die Stimmritze, und das Gewebe schwingt langsam und regelmäßig. Wie eine einzelne Katze das genau steuert, ist noch nicht ganz geklärt.
 
-**Was kostet eine Katze über 15 Jahre ungefähr?**  
+**Was kostet eine Katze über 16 Jahre ungefähr?**  
 `katzen-kosten-101` · knifflig · [Wiki](https://wahre-haustierliebe.de/katzen/kosten/)
 
 - 3.000–5.000 €
 - 5.000–8.000 €
-- **8.000–15.000 €**
-- 20.000–30.000 €
+- **10.000–21.500 €**
+- 30.000–40.000 €
 
-> Über 15 Jahre kommen ungefähr 8.000–15.000 € zusammen. Futter, Streu, Tierarzt und unerwartete Behandlungen summieren sich.
+> Rechnet man die Kostentabelle über 16 Jahre hoch, kommen mit Anschaffung rund 10.000–21.500 € zusammen, im Mittel etwa 15.700 €. Notfälle und unerwartete Behandlungen kommen noch hinzu.
 
-**Wie viel kostet hochwertiges Nassfutter für eine Katze im Jahr?**  
+**Wie viel kostet Futter in guter Qualität für eine Katze im Jahr?**  
 `katzen-kosten-102` · knifflig · [Wiki](https://wahre-haustierliebe.de/katzen/kosten/)
 
 - 100–250 €
 - 1.500–2.000 €
-- 250–500 €
-- **500–1.000 €**
+- 2.500–3.000 €
+- **350–700 €**
 
-> Für hochwertiges Nassfutter sind 500–1.000 € im Jahr realistisch. Streu kommt mit 100–250 € und die tierärztliche Routineversorgung mit 100–300 € jährlich hinzu.
+> Für Futter in guter Qualität sind 350–700 € im Jahr realistisch. Streu kommt mit 120–250 € und die tierärztliche Routineversorgung mit 80–200 € jährlich hinzu.
 
 **Wo leben Streunerkatzen in Deutschland typischerweise?**  
 `katzen-streuner-102` · leicht · [Wiki](https://wahre-haustierliebe.de/katzen/streunerkatzen/)

@@ -246,8 +246,8 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "katzen-kosten",
-    "title": "Was Katzen wirklich kosten - Wa(h)re Haustier(liebe)",
-    "description": "Futter, Streu, Tierarzt, Rücklagen und Alltag: Katzen sind keine günstigen Nebenbei-Tiere.",
+    "title": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
+    "description": "Einmalige Kosten, Futter, Streu, Tierarzt, Rücklagen und Alltag vor dem Einzug ehrlich rechnen.",
     "terms": "Katzenkosten vor der Anschaffung realistisch einschätzen. katzen/kosten katzen kosten"
   },
   {

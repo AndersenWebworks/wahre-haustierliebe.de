@@ -806,15 +806,15 @@ export const questions = [
     interaktion: "vierKarten",
     category: "katzen",
     difficulty: "knifflig",
-    text: "Was kostet eine Katze über 15 Jahre ungefähr?",
+    text: "Was kostet eine Katze über 16 Jahre ungefähr?",
     options: [
       "3.000–5.000 €",
       "5.000–8.000 €",
-      "8.000–15.000 €",
-      "20.000–30.000 €"
+      "10.000–21.500 €",
+      "30.000–40.000 €"
     ],
     correctIndex: 2,
-    explanation: "Über 15 Jahre kommen ungefähr 8.000–15.000 € zusammen. Futter, Streu, Tierarzt und unerwartete Behandlungen summieren sich.",
+    explanation: "Rechnet man die Kostentabelle über 16 Jahre hoch, kommen mit Anschaffung rund 10.000–21.500 € zusammen, im Mittel etwa 15.700 €. Notfälle und unerwartete Behandlungen kommen noch hinzu.",
     wikiPath: "/katzen/kosten/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/kosten/"
   },
@@ -824,15 +824,15 @@ export const questions = [
     interaktion: "vierKarten",
     category: "katzen",
     difficulty: "knifflig",
-    text: "Wie viel kostet hochwertiges Nassfutter für eine Katze im Jahr?",
+    text: "Wie viel kostet Futter in guter Qualität für eine Katze im Jahr?",
     options: [
       "100–250 €",
       "1.500–2.000 €",
-      "250–500 €",
-      "500–1.000 €"
+      "2.500–3.000 €",
+      "350–700 €"
     ],
     correctIndex: 3,
-    explanation: "Für hochwertiges Nassfutter sind 500–1.000 € im Jahr realistisch. Streu kommt mit 100–250 € und die tierärztliche Routineversorgung mit 100–300 € jährlich hinzu.",
+    explanation: "Für Futter in guter Qualität sind 350–700 € im Jahr realistisch. Streu kommt mit 120–250 € und die tierärztliche Routineversorgung mit 80–200 € jährlich hinzu.",
     wikiPath: "/katzen/kosten/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/kosten/"
   },
