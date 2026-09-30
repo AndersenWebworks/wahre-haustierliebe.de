@@ -258,9 +258,9 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "katzen-entscheidung",
-    "title": "Bevor eine Katze einzieht - Wa(h)re Haustier(liebe)",
-    "description": "Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.",
-    "terms": "Entscheidung vor der Katzenadoption oder Anschaffung prüfen. katzen/entscheidung katzen entscheidung"
+    "title": "Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)",
+    "description": "Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.",
+    "terms": "Vor der Aufnahme eines Kätzchens Abgabealter, Herkunft, Geschwister, Ausstattung, Eingewöhnung und Kosten prüfen. katzen/entscheidung katzen entscheidung"
   },
   {
     "id": "katzen-kaetzchen-tierarzt",
@@ -348,9 +348,9 @@ var staticSiteSearchIndex = [
   },
   {
     "id": "kleintiere-meerschweinchen",
-    "title": "Meerschweinchen halten - Wa(h)re Haustier(liebe)",
-    "description": "Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.",
-    "terms": "Meerschweinchenhaltung verantwortungsvoll planen. kleintiere/meerschweinchen kleintiere meerschweinchen"
+    "title": "Meerschweinchen abgeben: Mindestalter und richtige Haltung - Wa(h)re Haustier(liebe)",
+    "description": "Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.",
+    "terms": "Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen. kleintiere/meerschweinchen kleintiere meerschweinchen"
   },
   {
     "id": "kleintiere-hamster",

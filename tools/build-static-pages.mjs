@@ -329,7 +329,7 @@ const topicPages = [
   ['katzen-stilles-leiden', 'katzen', 'katzen/stilles-leiden', 'Stilles Leiden bei Katzen erkennen', 'Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.', 'Warnsignale bei Katzen erkennen.'],
   ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was Katzen wirklich kosten', 'Futter, Streu, Tierarzt, Rücklagen und Alltag: Katzen sind keine günstigen Nebenbei-Tiere.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.'],
   ['katzen-streunerkatzen', 'katzen', 'katzen/streunerkatzen', 'Streunerkatzen und Verantwortung', 'Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.', 'Streunerkatzen und Kastration einordnen.'],
-  ['katzen-entscheidung', 'katzen', 'katzen/entscheidung', 'Bevor eine Katze einzieht', 'Die wichtigsten Fragen zu Wohnung, Freigang, Kosten, Kastration und Verantwortung.', 'Entscheidung vor der Katzenadoption oder Anschaffung prüfen.'],
+  ['katzen-entscheidung', 'katzen', 'katzen/entscheidung', 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst', 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.', 'Vor der Aufnahme eines Kätzchens Abgabealter, Herkunft, Geschwister, Ausstattung, Eingewöhnung und Kosten prüfen.', { lastmod: '2026-09-30' }],
   ['voegel-schwarmhaltung', 'voegel', 'voegel/schwarmhaltung', 'Schwarmhaltung bei Vögeln', 'Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.', 'Schwarmhaltung bei Vögeln verstehen.'],
   ['voegel-uv-licht', 'voegel', 'voegel/uv-licht', 'UV-Licht für Vögel', 'Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.', 'UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen.'],
   ['voegel-kuechenluft-und-daempfe-sind-lebensgefahr', 'voegel', 'voegel/kuechenluft-teflon', 'Küchenluft und Teflon sind Lebensgefahr', 'Warum Dämpfe aus Pfannen, Backöfen und Küchenluft für Vögel tödlich sein können.', 'Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen.'],
@@ -343,7 +343,7 @@ const topicPages = [
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
   ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.', { lastmod: '2026-08-30' }],
-  ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen halten', 'Warum Meerschweinchen Gruppen, Platz, Verstecke und regelmäßige Zahnkontrolle brauchen.', 'Meerschweinchenhaltung verantwortungsvoll planen.'],
+  ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen abgeben: Mindestalter und richtige Haltung', 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.', 'Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.', { lastmod: '2026-09-30' }],
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
   ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.'],
@@ -386,7 +386,7 @@ const handwrittenPages = [
     insertAfter: 'katzen-entscheidung',
     socialImage: {
       src: 'assets/social/katzen-tierarzt.png',
-      alt: 'Zeitachse mit Impfungen, Entwurmung und Kastration für ein Kätzchen im ersten Lebensjahr.',
+      alt: 'Offizielles Logo von Wa(h)re Haustier(liebe).',
     },
   },
 ];
@@ -409,7 +409,7 @@ const faqByPage = {
   ],
   hunde: [
     ['Wie lange darf ein Hund allein zu Hause bleiben?', 'Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.'],
-    ['Was kostet ein Hund im Monat?', 'Für einen mittelgroßen Hund sind laufend etwa 100-200 Euro pro Monat realistisch. Über zwölf Jahre kommen mit Anschaffung rund 15.000–30.000 Euro zusammen, Notfälle nicht eingerechnet.'],
+    ['Was kostet ein Hund im Monat?', 'Für einen mittelgroßen Hund sind laufend etwa 100–240 Euro pro Monat realistisch. Über zwölf Jahre kommen mit Anschaffung rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet.'],
   ],
   'hund-im-buero': [
     ['Ist ein Hund im Büro automatisch besser als Alleinbleiben?', 'Nein. Ein Büro kann eine gute Lösung sein, wenn der Hund dort wirklich zur Ruhe kommt, betreut wird und einen geschützten Platz hat. Ist er dauerhaft gestresst, ist eine andere Betreuung fairer.'],
@@ -1819,31 +1819,16 @@ const socialCopyByPage = {
   },
 };
 
-// Seitenkopf, Hero und JSON-LD einzelner Seiten, wenn die veröffentlichte Seite bewusst anders
-// betitelt ist als ihre Karte, Sitemap-Zeile und ihr /ai-Eintrag. Nicht gesetzte Felder folgen der Seitendefinition.
+// Hero und Social-Texte einzelner Seiten, wenn sie kürzer oder anders formuliert sein sollen als der Seitentitel.
+// Titel und Beschreibung stehen immer nur in der Seitendefinition, damit Seitenkopf, Karten, Themennavigation,
+// Sitemap, llms und /ai denselben Titel tragen.
 const pagePresentation = {
   'katzen-entscheidung': {
     pageKey: 'katzen-kaetzchen-aufnehmen',
     headingId: 'kaetzchen-aufnehmen',
-    head: {
-      title: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)',
-      description: 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.',
-      keywords: ['Kätzchen aufnehmen', 'Kitten', 'Abgabealter Katze', 'Erstausstattung Katze', 'Inserate-Fallen', 'Geschwisterkitten', 'Eingewöhnung Katze'],
-    },
     social: {
-      title: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)',
       description: 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung und Eingewöhnung.',
       alt: 'Zwei Katzen sitzen am Fenster als Bild für die Verantwortung vor dem Einzug.',
-    },
-    jsonLd: {
-      name: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)',
-      headline: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst',
-      description: 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.',
-      dateModified: '2026-09-22',
-      keywords: ['Kätzchen aufnehmen', 'Kitten', 'Abgabealter Katze', 'Erstausstattung Katze', 'Inserate-Fallen', 'Geschwisterkitten', 'Eingewöhnung Katze'],
-      about: ['Kätzchen aufnehmen', 'Abgabealter Katze', 'Erstausstattung Katze', 'Eingewöhnung Katze', 'Inserate-Fallen Katze'],
-      readActionFragment: 'kaetzchen-aufnehmen',
-      breadcrumbName: 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst',
     },
     hero: {
       title: 'Kätzchen aufnehmen',
@@ -1853,16 +1838,6 @@ const pagePresentation = {
     },
   },
   'kleintiere-meerschweinchen': {
-    head: {
-      title: 'Meerschweinchen abgeben: Mindestalter und richtige Haltung | Wa(h)re Haustier(liebe)',
-      description: 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.',
-      keywords: ['Meerschweinchen halten', 'Meerschweinchen abgeben', 'Abgabealter', 'Mindestabgabealter', 'Frühkastration', 'Gruppenhaltung', 'Kleintiere'],
-      updatedTime: '2026-09-08',
-    },
-    social: {
-      title: 'Meerschweinchen abgeben: Mindestalter und richtige Haltung | Wa(h)re Haustier(liebe)',
-      description: 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.',
-    },
     hero: {
       title: 'Meerschweinchen abgeben und halten',
       text: 'Gesetzliche Grenze, verantwortbares Abgabealter, soziale Entwicklung und alles, was vor einer Übernahme geklärt sein muss.',
@@ -1882,8 +1857,10 @@ const keywordByPage = {
   'hund-im-buero': ['Hund im Büro', 'Bürohund', 'Kollege Hund', 'Hund am Arbeitsplatz', 'Hundehaltung'],
   'hunde-stadtfest-rummel': ['Hund Stadtfest', 'Hund Rummel', 'Hund Weihnachtsmarkt', 'Hund Veranstaltung', 'Stresszeichen Hund'],
   katzen: ['Katze halten', 'Wohnungskatze', 'Freigang', 'Kastration', 'Katzenstress'],
+  'katzen-entscheidung': ['Kätzchen aufnehmen', 'Kitten', 'Abgabealter Katze', 'Erstausstattung Katze', 'Inserate-Fallen', 'Geschwisterkitten', 'Eingewöhnung Katze'],
   'katzen-wohnungshaltung': ['Wohnungskatze', 'Freigänger Katze', 'gesicherter Freigang', 'Katzenhaltung', 'Katzenschutzverordnung', 'Katzenrevier'],
   voegel: ['Vögel halten', 'Wellensittiche', 'Schwarmhaltung', 'Freiflug', 'UV-Licht'],
+  'kleintiere-meerschweinchen': ['Meerschweinchen halten', 'Meerschweinchen abgeben', 'Abgabealter', 'Mindestabgabealter', 'Frühkastration', 'Gruppenhaltung', 'Kleintiere'],
   kleintiere: ['Kleintiere halten', 'Kaninchen', 'Meerschweinchen', 'Hamster', 'Ratten'],
   exoten: ['Exoten halten', 'Terrarium', 'UV-B', 'Reptilien', 'Meldepflicht'],
   pferde: ['Pferde halten', 'Herde', 'Stallform', 'Hufschmied', 'Pferdekosten'],
@@ -2730,12 +2707,10 @@ function rewriteScript(script) {
 
 function buildJsonLd(page) {
   const canonical = canonicalUrl(page);
-  const presentation = presentationFor(page);
-  const ld = presentation.jsonLd || {};
-  const copy = { ...socialCopy(page), ...presentation.social };
+  const copy = { ...socialCopy(page), ...presentationFor(page).social };
   const social = socialImage(page);
   const modified = pageLastmod(page);
-  const keywords = ld.keywords || pageKeywords(page);
+  const keywords = pageKeywords(page);
   const image = {
     '@type': 'ImageObject',
     url: socialImageUrl(page),
@@ -2759,7 +2734,7 @@ function buildJsonLd(page) {
     breadcrumb.itemListElement.push({
       '@type': 'ListItem',
       position: 2,
-      name: ld.breadcrumbName || page.title.split(':')[0],
+      name: page.title.split(':')[0],
       item: canonical,
     });
   }
@@ -2767,25 +2742,25 @@ function buildJsonLd(page) {
   const webPage = {
     '@context': 'https://schema.org',
     '@type': page.type === 'WebSite' ? 'WebSite' : 'WebPage',
-    name: ld.name || page.title,
-    headline: ld.headline || page.title,
-    description: ld.description || page.description,
+    name: page.title,
+    headline: page.title,
+    description: page.description,
     url: canonical,
     image,
     thumbnailUrl: socialImageUrl(page),
     primaryImageOfPage: image,
     inLanguage: 'de-DE',
-    dateModified: ld.dateModified || modified,
+    dateModified: modified,
     isAccessibleForFree: true,
     keywords: keywords.join(', '),
-    about: (ld.about || keywords).map((name) => ({ '@type': 'Thing', name })),
+    about: keywords.map((name) => ({ '@type': 'Thing', name })),
     audience: {
       '@type': 'Audience',
       audienceType: 'Haustierhalter, Tierinteressierte und Tierschutzinteressierte in Deutschland',
     },
     potentialAction: {
       '@type': 'ReadAction',
-      target: ld.readActionFragment ? `${canonical}#${ld.readActionFragment}` : canonical,
+      target: canonical,
     },
     isPartOf: {
       '@type': 'WebSite',
@@ -2960,13 +2935,11 @@ function restoreAsyncCssLinks(html) {
 
 function buildHead(page, prefix) {
   const canonical = canonicalUrl(page);
-  const presentation = presentationFor(page);
-  const head = presentation.head || {};
-  const copy = { ...socialCopy(page), ...presentation.social };
+  const copy = { ...socialCopy(page), ...presentationFor(page).social };
   const social = socialImage(page);
   const image = socialImageUrl(page);
-  const keywords = (head.keywords || pageKeywords(page)).join(', ');
-  const modified = head.updatedTime || pageLastmod(page);
+  const keywords = pageKeywords(page).join(', ');
+  const modified = pageLastmod(page);
   const schema = buildJsonLd(page)
     .map((entry) => `<script type="application/ld+json">\n${JSON.stringify(entry, null, 2)}\n  </script>`)
     .join('\n  ');
@@ -2976,8 +2949,8 @@ function buildHead(page, prefix) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(head.title || page.title)}</title>
-  <meta name="description" content="${escapeAttr(head.description || page.description)}">
+  <title>${escapeHtml(page.title)}</title>
+  <meta name="description" content="${escapeAttr(page.description)}">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="${siteName}">
   <meta name="theme-color" content="#f7efe3">
@@ -3084,7 +3057,7 @@ function injectArticleHeroMedia(body, page) {
   const copy = match[2].trim();
   const position = articleHeroPositionByImage[image.src] || 'center 45%';
   const heroPresentation = presentationFor(page).hero || {};
-  const purpose = heroPresentation.imagePurpose || `${page.title.replace(` - ${siteName}`, '')}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
+  const purpose = heroPresentation.imagePurpose || `${heroPresentation.title || page.title.replace(` - ${siteName}`, '')}: Headerbild zur sichtbaren Einordnung des Seitenthemas.`;
   const shareReason = heroPresentation.shareReason || `Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.`;
   const media = `
         <figure class="article-hero-media image-context-card" style="--image-position:${escapeAttr(position)};" data-image-purpose="${escapeAttr(purpose)}" data-share-reason="${escapeAttr(shareReason)}">
@@ -3450,8 +3423,6 @@ async function generateSocialImages() {
   const generated = new Set();
 
   for (const page of pages) {
-    // Handgepflegte Seiten bringen ihr Social-Bild selbst mit.
-    if (page.standalone === 'handwritten') continue;
     const source = sourceSocialImage(page);
     const social = socialImage(page);
     const outputFile = path.join(projectRoot, social.src);

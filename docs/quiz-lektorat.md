@@ -274,21 +274,21 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 `hunde-uebersicht-101` · mittel · [Wiki](https://wahre-haustierliebe.de/hunde/)
 
 - 5.000–10.000 €
-- **15.000–30.000 €**
-- 35.000–45.000 €
-- 50.000–60.000 €
+- **14.000–37.000 €**
+- 45.000–55.000 €
+- 60.000–70.000 €
 
-> Bei etwa 100–200 Euro laufenden Kosten im Monat kommen mit Anschaffung über zwölf Jahre rund 15.000–30.000 Euro zusammen. Notfälle und chronische Krankheiten kommen noch hinzu.
+> Rechnet man die Kostentabelle mit etwa 100–240 Euro im Monat und der Anschaffung über zwölf Jahre hoch, kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle und chronische Krankheiten kommen noch hinzu.
 
 **Wie viel kosten die laufenden Ausgaben für einen mittelgroßen Hund pro Monat etwa?**  
 `hunde-uebersicht-102` · leicht · [Wiki](https://wahre-haustierliebe.de/hunde/)
 
-- **100–200 Euro**
+- **100–240 Euro**
 - 20–50 Euro
 - 300–400 Euro
 - 500–600 Euro
 
-> Für einen mittelgroßen Hund fallen laufend etwa 100–200 Euro im Monat an.
+> Für einen mittelgroßen Hund fallen laufend etwa 100–240 Euro im Monat an, wenn eine Krankenversicherung dazugehört.
 
 **Warum können Möpse und Französische Bulldoggen durch ihre Kopfform Atem- und Hitzeprobleme haben?**  
 `hunde-qualzucht-101` · mittel · [Wiki](https://wahre-haustierliebe.de/qualzucht/)

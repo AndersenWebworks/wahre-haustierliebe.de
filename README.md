@@ -73,7 +73,8 @@ Er erzeugt oder aktualisiert:
 Generierte Seiten werden nicht direkt bearbeitet. Jede inhaltliche Änderung gehört in `src/site-source.html` oder in die Daten von `tools/build-static-pages.mjs`, sonst baut der nächste Build sie zurück. Dafür gibt es:
 
 - `data-topic-continue` an einer `<h2>`: Die Überschrift beendet den Themenabschnitt nicht. So können Themenseiten mehrere H2-Abschnitte haben und Übersichtsseiten eigene H2-Blöcke vor den Themenkarten.
-- `pagePresentation`: eigener Seitentitel, Hero, Social-Texte und JSON-LD für eine Seite, deren Karte und `/ai`-Eintrag anders heißen.
+- Titel und Beschreibung einer Seite stehen nur in ihrer Seitendefinition im Generator. Bekommt ein Thema einen neuen Titel, ändert man ihn dort; Seitenkopf, Übersichtskarten, Themennavigation, Sitemap, `llms*`, `/ai` und Suchindex übernehmen ihn automatisch.
+- `pagePresentation`: kürzere H1, eigener Hero-Text und Social-Texte für eine Seite. Einen abweichenden Seitentitel gibt es dort bewusst nicht.
 - `extraTopicLinks`: zusätzliche Karten auf Übersichtsseiten und Querverweise in der Themennavigation.
 - `handwrittenPages`: handgepflegte Seiten wie `katzen/kaetzchen-tierarzt/`, die in Sitemap, `llms*` und `/ai` stehen, deren HTML und Social-Bild der Build aber nicht anfasst.
 - `robotsDisallow`: Pfade, die nicht gecrawlt werden sollen (derzeit `/pwa/`).

@@ -4,7 +4,7 @@
 // Bei interaktion "jaNein" wird `correctJaNein` statt correctIndex ausgewertet.
 // Jede Frage braucht einen `wikiPath`, der auf eine bestehende Seite zeigt.
 
-export const version = "2026-09-30.3";
+export const version = "2026-09-30.4";
 
 export const categories = {
   hunde: { label: "Hunde", blurb: "Alltag, Bindung und Bewegung" },
@@ -521,12 +521,12 @@ export const questions = [
     text: "Mit welcher Kostenspanne solltest du über zwölf Jahre Hundeleben rechnen, Notfälle nicht eingerechnet?",
     options: [
       "5.000–10.000 €",
-      "15.000–30.000 €",
-      "35.000–45.000 €",
-      "50.000–60.000 €"
+      "14.000–37.000 €",
+      "45.000–55.000 €",
+      "60.000–70.000 €"
     ],
     correctIndex: 1,
-    explanation: "Bei etwa 100–200 Euro laufenden Kosten im Monat kommen mit Anschaffung über zwölf Jahre rund 15.000–30.000 Euro zusammen. Notfälle und chronische Krankheiten kommen noch hinzu.",
+    explanation: "Rechnet man die Kostentabelle mit etwa 100–240 Euro im Monat und der Anschaffung über zwölf Jahre hoch, kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle und chronische Krankheiten kommen noch hinzu.",
     wikiPath: "/hunde/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/"
   },
@@ -538,13 +538,13 @@ export const questions = [
     difficulty: "leicht",
     text: "Wie viel kosten die laufenden Ausgaben für einen mittelgroßen Hund pro Monat etwa?",
     options: [
-      "100–200 Euro",
+      "100–240 Euro",
       "20–50 Euro",
       "300–400 Euro",
       "500–600 Euro"
     ],
     correctIndex: 0,
-    explanation: "Für einen mittelgroßen Hund fallen laufend etwa 100–200 Euro im Monat an.",
+    explanation: "Für einen mittelgroßen Hund fallen laufend etwa 100–240 Euro im Monat an, wenn eine Krankenversicherung dazugehört.",
     wikiPath: "/hunde/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/"
   },
