@@ -386,7 +386,7 @@ const faqByPage = {
   ],
   hunde: [
     ['Wie lange darf ein Hund allein zu Hause bleiben?', 'Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.'],
-    ['Was kostet ein Hund im Monat?', 'Für einen mittelgroßen Hund sind laufend etwa 100-200 Euro pro Monat realistisch. Über ein Hundeleben können 12.000-20.000 Euro zusammenkommen.'],
+    ['Was kostet ein Hund im Monat?', 'Für einen mittelgroßen Hund sind laufend etwa 100-200 Euro pro Monat realistisch. Über zwölf Jahre kommen mit Anschaffung rund 15.000–30.000 Euro zusammen, Notfälle nicht eingerechnet.'],
   ],
   'hund-im-buero': [
     ['Ist ein Hund im Büro automatisch besser als Alleinbleiben?', 'Nein. Ein Büro kann eine gute Lösung sein, wenn der Hund dort wirklich zur Ruhe kommt, betreut wird und einen geschützten Platz hat. Ist er dauerhaft gestresst, ist eine andere Betreuung fairer.'],

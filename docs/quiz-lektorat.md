@@ -1,6 +1,6 @@
 # Quiz-Lektorat
 
-Stand: Fragenkatalog 2026-09-30.2, 280 Fragen.
+Stand: Fragenkatalog 2026-09-30.3, 280 Fragen.
 
 Alle Fragen der Quiz-App unter wahre-haustierliebe.de/pwa/, sortiert nach Thema und Spielweise. Die richtige Antwort ist **fett** markiert. Beim Mythen-Check steht dahinter, ob die Aussage stimmt.
 
@@ -270,15 +270,15 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 
 > Für Hunde, Katzen und Frettchen gilt in der Regel der EU-Heimtierausweis mit Chip und Tollwutimpfung. Je nach Land kommen Entwurmung, Leinen- oder Maulkorbpflicht dazu. Prüfe das vor der Buchung.
 
-**Mit welcher Kostenspanne solltest du über ein Hundeleben rechnen?**  
+**Mit welcher Kostenspanne solltest du über zwölf Jahre Hundeleben rechnen, Notfälle nicht eingerechnet?**  
 `hunde-uebersicht-101` · mittel · [Wiki](https://wahre-haustierliebe.de/hunde/)
 
-- 4.000–8.000 €
-- **12.000–20.000 €**
-- 25.000–30.000 €
-- 40.000–50.000 €
+- 5.000–10.000 €
+- **15.000–30.000 €**
+- 35.000–45.000 €
+- 50.000–60.000 €
 
-> Über ein Hundeleben solltest du mit 12.000–20.000 Euro rechnen, bevor chronische Krankheiten dazukommen.
+> Bei etwa 100–200 Euro laufenden Kosten im Monat kommen mit Anschaffung über zwölf Jahre rund 15.000–30.000 Euro zusammen. Notfälle und chronische Krankheiten kommen noch hinzu.
 
 **Wie viel kosten die laufenden Ausgaben für einen mittelgroßen Hund pro Monat etwa?**  
 `hunde-uebersicht-102` · leicht · [Wiki](https://wahre-haustierliebe.de/hunde/)

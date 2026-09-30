@@ -4,7 +4,7 @@
 // Bei interaktion "jaNein" wird `correctJaNein` statt correctIndex ausgewertet.
 // Jede Frage braucht einen `wikiPath`, der auf eine bestehende Seite zeigt.
 
-export const version = "2026-09-30.2";
+export const version = "2026-09-30.3";
 
 export const categories = {
   hunde: { label: "Hunde", blurb: "Alltag, Bindung und Bewegung" },
@@ -518,15 +518,15 @@ export const questions = [
     interaktion: "vierKarten",
     category: "hunde",
     difficulty: "mittel",
-    text: "Mit welcher Kostenspanne solltest du über ein Hundeleben rechnen?",
+    text: "Mit welcher Kostenspanne solltest du über zwölf Jahre Hundeleben rechnen, Notfälle nicht eingerechnet?",
     options: [
-      "4.000–8.000 €",
-      "12.000–20.000 €",
-      "25.000–30.000 €",
-      "40.000–50.000 €"
+      "5.000–10.000 €",
+      "15.000–30.000 €",
+      "35.000–45.000 €",
+      "50.000–60.000 €"
     ],
     correctIndex: 1,
-    explanation: "Über ein Hundeleben solltest du mit 12.000–20.000 Euro rechnen, bevor chronische Krankheiten dazukommen.",
+    explanation: "Bei etwa 100–200 Euro laufenden Kosten im Monat kommen mit Anschaffung über zwölf Jahre rund 15.000–30.000 Euro zusammen. Notfälle und chronische Krankheiten kommen noch hinzu.",
     wikiPath: "/hunde/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/"
   },
