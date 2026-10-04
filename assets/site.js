@@ -17,6 +17,7 @@ var staticPageRoutes = {
   "hunde-soziale-beduerfnisse": "/hunde/soziale-beduerfnisse/index.html",
   "hunde-stadtfest-rummel": "/hunde/stadtfest-rummel/index.html",
   "hunde-garten-auslauf": "/hunde/garten-auslauf/index.html",
+  "hunde-spuren-erkennen": "/hunde/spuren-erkennen/index.html",
   "hunde-allein-zu-hause": "/hunde/allein-zu-hause/index.html",
   "hunde-kosten": "/hunde/kosten/index.html",
   "hunde-kastration": "/hunde/kastration/index.html",
@@ -183,6 +184,12 @@ var staticSiteSearchIndex = [
     "title": "Garten ist kein Ersatz für Auslauf - Wa(h)re Haustier(liebe)",
     "description": "Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.",
     "terms": "Garten, Auslauf und Umweltreize für Hunde realistisch prüfen. hunde/garten-auslauf hunde garten auslauf"
+  },
+  {
+    "id": "hunde-spuren-erkennen",
+    "title": "Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund? - Wa(h)re Haustier(liebe)",
+    "description": "Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.",
+    "terms": "Spuren von Hund, Fuchs, Marderhund und Wolf auf dem Spaziergang einordnen. hunde/spuren-erkennen hunde spuren erkennen"
   },
   {
     "id": "hunde-allein-zu-hause",
@@ -1342,6 +1349,7 @@ function normalizeAssetUrls(root) {
       'hunde-soziale-beduerfnisse': 'hunde/soziale-beduerfnisse/',
       'hunde-stadtfest-rummel': 'hunde/stadtfest-rummel/',
       'hunde-garten-auslauf': 'hunde/garten-auslauf/',
+      'hunde-spuren-erkennen': 'hunde/spuren-erkennen/',
       'hunde-allein-zu-hause': 'hunde/allein-zu-hause/',
       'hunde-kosten': 'hunde/kosten/',
       'hunde-kastration': 'hunde/kastration/',

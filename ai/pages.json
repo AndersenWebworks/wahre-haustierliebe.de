@@ -744,6 +744,32 @@
       }
     },
     {
+      "id": "hunde-spuren-erkennen",
+      "url": "https://wahre-haustierliebe.de/hunde/spuren-erkennen/index.html",
+      "title": "Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund? - Wa(h)re Haustier(liebe)",
+      "description": "Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.",
+      "intent": "Spuren von Hund, Fuchs, Marderhund und Wolf auf dem Spaziergang einordnen.",
+      "keywords": [
+        "Hund halten",
+        "Hund anschaffen",
+        "Hundekosten",
+        "Alleinbleiben",
+        "Erziehung",
+        "Zwingerhaltung"
+      ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
+      "social": {
+        "title": "Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund? - Wa(h)re Haustier(liebe)",
+        "description": "Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.",
+        "image": "https://wahre-haustierliebe.de/assets/social/hunde-spuren-erkennen.png",
+        "imageAlt": "Golden Retriever springt im Freien über ein Hindernis.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "hunde-allein-zu-hause",
       "url": "https://wahre-haustierliebe.de/hunde/allein-zu-hause/index.html",
       "title": "Hund allein zu Hause - Wa(h)re Haustier(liebe)",

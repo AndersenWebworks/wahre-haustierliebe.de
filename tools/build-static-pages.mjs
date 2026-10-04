@@ -317,6 +317,7 @@ const topicPages = [
   ['hunde-soziale-beduerfnisse', 'hunde', 'hunde/soziale-beduerfnisse', 'Soziale Bedürfnisse beim Hund', 'Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.', 'Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.'],
   ['hunde-stadtfest-rummel', 'hunde', 'hunde/stadtfest-rummel', 'Hund auf Stadtfest, Rummel oder Weihnachtsmarkt', 'Warum große Veranstaltungen für Hunde oft Lärm, Enge, Stress und Fluchtgefahr bedeuten und welche Warnzeichen du ernst nehmen solltest.', 'Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen.', { priority: '0.78', lastmod: '2026-07-03' }],
   ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.'],
+  ['hunde-spuren-erkennen', 'hunde', 'hunde/spuren-erkennen', 'Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund?', 'Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.', 'Spuren von Hund, Fuchs, Marderhund und Wolf auf dem Spaziergang einordnen.'],
   ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.'],
   ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.'],
   ['hunde-kastration', 'hunde', 'hunde/kastration', 'Kastration beim Hund', 'Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.', 'Kastration beim Hund als Einzelfallentscheidung verstehen.'],
@@ -1402,6 +1403,13 @@ Object.assign(firstContentImageByPage, {
     alt: 'Hund liegt unter einem Tisch auf dem Boden.',
   },
   'hunde-garten-auslauf': {
+    src: 'assets/images/golden-retriever-agility-jump.jpg',
+    width: 2000,
+    height: 1339,
+    type: 'image/jpeg',
+    alt: 'Golden Retriever springt im Freien über ein Hindernis.',
+  },
+  'hunde-spuren-erkennen': {
     src: 'assets/images/golden-retriever-agility-jump.jpg',
     width: 2000,
     height: 1339,
