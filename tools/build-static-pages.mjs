@@ -384,6 +384,12 @@ const handwrittenPages = [
     priority: '0.72',
     lastmod: '2026-09-22',
     standalone: 'handwritten',
+    hero: {
+      title: 'Tierarzt im ersten Jahr',
+      text: 'Impfungen, Entwurmung, Kastration, Mikrochip und Notfall-Symptome: die konkrete Zeitachse, damit du beim ersten Katzenjahr nicht den Überblick verlierst.',
+    },
+    backHref: '../../katzen/entscheidung/index.html',
+    backLabel: 'Zurück zur Übersicht: Vor der Entscheidung',
     insertAfter: 'katzen-entscheidung',
     socialImage: {
       src: 'assets/social/katzen-tierarzt.png',
@@ -398,7 +404,7 @@ for (const page of handwrittenPages) {
 const pageById = new Map(pages.map((page) => [page.id, page]));
 const publicPages = pages.filter((page) => !page.onHold);
 const sectionPages = publicPages.filter((page) => !page.standalone && !page.staticOnly);
-const prerenderPages = publicPages.filter((page) => !page.standalone);
+const prerenderPages = publicPages.filter((page) => !page.standalone || page.standalone === 'handwritten');
 const pageIds = sectionPages.map((page) => page.id);
 const glossaryTermByKey = new Map(glossaryTerms.map((term) => [term.key, term]));
 let staticCssForInline = '';
@@ -3787,7 +3793,29 @@ ${designV5Js}
   await generateSocialImages();
 
   for (const page of pages) {
-    if (page.standalone === 'handwritten') continue;
+    if (page.standalone === 'handwritten') {
+      // Der Inhalt liegt in docs/<id>-content.html; Kopf, Fuß und Stil kommen wie bei allen Seiten aus dem Gesamtbau.
+      const content = await fs.readFile(path.join(projectRoot, 'docs', `${page.id}-content.html`), 'utf8');
+      const section = `<section id="${page.id}" class="page active">
+    <div class="hero">
+      <div class="container">
+        <h1>${escapeHtml(page.hero.title)}</h1>
+        <p>${escapeHtml(page.hero.text)}</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <p class="text-muted"><a href="${page.backHref}">${escapeHtml(page.backLabel)}</a></p>
+        <div class="topic-page-content">
+${content}
+        </div>
+      </div>
+    </div>
+  </section>`;
+      await writeFileEnsured(outputPathFor(page), buildHtmlPage({ page, header, section, commonAfterSections }));
+      continue;
+    }
     if (page.topicPage) {
       const section = extractTopicSection(source, page);
       const html = buildHtmlPage({ page, header, section, commonAfterSections });
@@ -3801,7 +3829,12 @@ ${designV5Js}
       continue;
     }
     if (page.standaloneSource) {
-      const standaloneSource = await fs.readFile(path.join(projectRoot, page.standaloneSource), 'utf8');
+      let standaloneSource = await fs.readFile(path.join(projectRoot, page.standaloneSource), 'utf8');
+      // Die Entwurfsdatei trägt einen alten CSS-Stand; der aktuelle Gesamtstil wird bei jedem Build eingesetzt.
+      standaloneSource = standaloneSource.replace(
+        /<style data-static-css[^>]*>[\s\S]*?<\/style>/,
+        () => buildStylesheetLinks(''),
+      );
       await writeFileEnsured(outputPathFor(page), standaloneSource);
       continue;
     }
