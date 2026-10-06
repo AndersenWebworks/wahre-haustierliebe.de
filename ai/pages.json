@@ -2493,12 +2493,15 @@
       "facts": [
         "Urlaub mit Haustier ist keine reine Komfortfrage; entscheidend sind Tierart, Charakter, Gesundheit, Reiseweg, Klima, Unterkunft und zuverlässige Betreuung.",
         "Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.",
-        "Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten."
+        "Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten.",
+        "Für Reisen mit Hunden, Katzen und Frettchen gelten Mikrochip, Heimtierausweis und eine Tollwutimpfung mit 21 Tagen Wartezeit; seit dem 22. April 2026 gelten neue EU-Regeln.",
+        "Ein geöffnetes Fenster verhindert die Überhitzung eines geparkten Autos nicht: Im ADAC-Test erreichte der Innenraum nach 30 Minuten rund 50 °C."
       ],
       "citationGuardrails": [
         "Ob ein Tier mitreisen kann, hängt von Tierart, Gesundheit, Gewöhnung, Reiseziel, Transportdauer und Unterbringung ab.",
-        "Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.",
-        "Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung."
+        "Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen. Die Angaben dieser Seite haben den Stand 6. Oktober 2026.",
+        "Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.",
+        "Für Vögel, Kleintiere und Reptilien in Pensionen liegen keine belastbaren Studien vor; die genannten Einschätzungen sind fachliche Positionen."
       ],
       "sources": [
         {
@@ -2506,20 +2509,132 @@
           "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/urlaub-mit-hund/"
         },
         {
+          "label": "Deutscher Tierschutzbund: Darauf sollten Tierhalter vor Reiseantritt achten",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/darauf-sollten-tierhalter-vor-reiseantritt-achten/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Tipps zur Beurteilung von Tierpensionen (PDF)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Tipps_zur_Beurteilung_von_Tierpensionen_Information_DTSchB.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Steckbrief Meerschweinchen (PDF)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Meerschweinchen_DTSchB.pdf"
+        },
+        {
           "label": "TASSO: Tierbetreuung im Urlaub",
           "url": "https://www.tasso.net/Service/Wissensportal/Urlaub-Reisen-mit-Tier/Urlaub-ohne-Tier"
+        },
+        {
+          "label": "TASSO: Tier gefunden",
+          "url": "https://www.tasso.net/Tierregister/Tier-gefunden"
         },
         {
           "label": "BMLEH: Tipps zur Reiseplanung mit Tieren",
           "url": "https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reiseplanung-tiere.html"
         },
         {
+          "label": "BMLEH: Reisen mit Hunden, Katzen und Frettchen",
+          "url": "https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reisen-hunde-katzen-frettchen.html"
+        },
+        {
+          "label": "BMLEH: Einreise mit Vögeln",
+          "url": "https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/einreise-voegel.html"
+        },
+        {
+          "label": "Your Europe: Reisen mit Haustieren",
+          "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_de.htm"
+        },
+        {
+          "label": "GOV.UK: Bring your pet to Great Britain",
+          "url": "https://www.gov.uk/bring-pet-to-great-britain"
+        },
+        {
+          "label": "Zoll: Regelungen für Heimtiere",
+          "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Reisen-nach-Deutschland-aus-einem-nicht-eu-Staat/Einschraenkungen/Tiere-und-Pflanzen/Schutz-Tierseuchen/Regelungen-Heimtiere/regelungen-heimtiere.html"
+        },
+        {
+          "label": "Zoll: Artenschutz",
+          "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Tiere-und-Pflanzen/Artenschutz/artenschutz_node.html"
+        },
+        {
+          "label": "ADAC: Auch mit offenem Fenster wird es gefährlich heiß",
+          "url": "https://presse.adac.de/meldungen/adac-ev/technik/auch-mit-offenem-fenster-wirds-gefaehrlich-heiss.html"
+        },
+        {
+          "label": "Bundestierärztekammer: Hitzetod im Auto",
+          "url": "https://www.bundestieraerztekammer.de/presse/2018/06/hitzetod/Index.php"
+        },
+        {
+          "label": "Bundestierärztekammer: Pressemeldung zur Urlaubszeit",
+          "url": "https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20140514162331"
+        },
+        {
+          "label": "Bundestierärztekammer: Leishmaniose beim Hund",
+          "url": "https://www.bundestieraerztekammer.de/presse/archiv/15/2017/leishmaniose-beim-hund/1296"
+        },
+        {
+          "label": "ESCCAP: Reisen mit Haustier",
+          "url": "https://www.esccap.de/reisen-mit-haustier-was-ist-wichtig/"
+        },
+        {
+          "label": "ESCCAP: Krankheiten bei Hunden aus dem Ausland",
+          "url": "https://www.esccap.de/hunde-aus-dem-ausland-und-parasiten/welche-krankheiten-koennen-hunde-aus-dem-ausland-mitbringen/"
+        },
+        {
+          "label": "ESCCAP: Dirofilariose, Prävention bei Reisen",
+          "url": "https://www.esccap.de/dirofilariose-beim-hund-sachgerechte-praevention-fuer-hunde-die-in-endemiegebiete-reisen/"
+        },
+        {
+          "label": "IATA: Live Animals, Pets",
+          "url": "https://www.iata.org/en/programs/cargo/live-animals/pets/"
+        },
+        {
+          "label": "TUI: Haustiere im Flugzeug",
+          "url": "https://www.tui.com/hilfe/flug/tiere/"
+        },
+        {
+          "label": "Condor: Conditions and regulations for pet transport",
+          "url": "https://www.condor.com/us/flight-preparation/baggage-and-animals/travelling-with-pets/conditions-and-regulations-for-transport-and-carriage.jsp"
+        },
+        {
+          "label": "Deutsche Bahn: Hund und Haustiere",
+          "url": "https://www.bahn.de/angebot/zusatzticket/hund"
+        },
+        {
+          "label": "Color Line: Mitnahme von Tieren",
+          "url": "https://www.colorline.de/service/mitnahme-von-tieren"
+        },
+        {
+          "label": "Straßenverkehrs-Ordnung § 23",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/__23.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
           "label": "Tierschutzgesetz § 3",
           "url": "https://www.gesetze-im-internet.de/tierschg/__3.html"
         },
         {
+          "label": "Tierschutzgesetz § 11",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11.html"
+        },
+        {
           "label": "Tierschutzgesetz § 18",
           "url": "https://www.gesetze-im-internet.de/tierschg/__18.html"
+        },
+        {
+          "label": "Bürgerliches Gesetzbuch § 965",
+          "url": "https://www.gesetze-im-internet.de/bgb/__965.html"
+        },
+        {
+          "label": "Kessler und Turner 1997: Katzen in Pensionen (Animal Welfare)",
+          "url": "https://www.cambridge.org/core/journals/animal-welfare/article/stress-and-adaptation-of-cats-felis-silvestris-catus-housed-singly-in-pairs-and-in-groups-in-boarding-catteries/2D392373D18F8146505DF830A908B694"
+        },
+        {
+          "label": "Rooney et al. 2007: Hunde in Zwingern (Physiology & Behavior)",
+          "url": "https://europepmc.org/article/MED/17617429"
         },
         {
           "label": "SWR: Tierheime voll, mehr Haustiere ausgesetzt",
@@ -2528,6 +2643,14 @@
         {
           "label": "Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025",
           "url": "https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen"
+        },
+        {
+          "label": "Hamburger Tierschutzverein: Viele Aussetzungen 2024",
+          "url": "https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/viele-aussetzungen-tierheim-fuellt-sich-mit-urlaubsopfern"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Trendumfrage Tierheime 2024",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/"
         }
       ],
       "social": {

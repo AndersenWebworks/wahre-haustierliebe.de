@@ -489,8 +489,16 @@ const faqByPage = {
   ],
   'tiere-und-urlaub': [
     ['Sollte mein Tier mit in den Urlaub?', 'Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.'],
-    ['Wie früh sollte ich Betreuung organisieren?', 'So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche.'],
+    ['Wie früh sollte ich Betreuung organisieren?', 'So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche. Der Deutsche Tierschutzbund rät, nach einer Pension im Idealfall mehrere Monate im Voraus zu suchen, weil gute Pensionen oft lange im Voraus ausgebucht sind.'],
     ['Darf man ein Tier aussetzen, wenn man keine Betreuung findet?', 'Nein. Ein Haustier auszusetzen oder zurückzulassen, um sich der Verantwortung zu entziehen, ist nach dem Tierschutzgesetz verboten.'],
+    ['Reicht ein Fensterspalt, wenn der Hund kurz im Auto wartet?', 'Nein. Im ADAC-Test erreichte der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C und nach 60 Minuten rund 57 °C, auch mit geöffneten Fenstern.'],
+    ['Welche Papiere braucht mein Hund für Reisen in der EU?', 'In der Regel einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Die Impfung ist frühestens mit zwölf Wochen möglich, danach gilt eine Wartezeit von 21 Tagen. Seit dem 22. April 2026 gelten neue EU-Regeln; prüfe die aktuelle Seite des Bundesministeriums für Landwirtschaft, Ernährung und Heimat.'],
+    ['Muss mein Hund vor der Einreise in manche Länder gegen Bandwurm behandelt werden?', 'Ja. Für Finnland, Irland, Malta, Norwegen und Nordirland müssen Hunde 24 bis 120 Stunden vor der Einreise gegen den Fuchsbandwurm behandelt werden. Das gilt für Hunde, nicht für Katzen. Für Großbritannien gelten eigene Regeln.'],
+    ['Darf ich meinem Tier vor dem Flug ein Beruhigungsmittel geben?', 'Der Weltluftfahrtverband IATA und die Bundestierärztekammer raten davon ab, weil die Reaktionen des Tieres nicht abzusehen sind und Kreislaufprobleme möglich sind. Gib keine Mittel auf eigene Faust und kläre jede Reisefrage mit der Tierarztpraxis.'],
+    ['Braucht eine Tierpension eine Erlaubnis?', 'In der Regel ja. Wer gewerbsmäßig Tiere hält oder ein Tierheim oder eine ähnliche Einrichtung betreibt, braucht nach § 11 Tierschutzgesetz die Erlaubnis der zuständigen Behörde. Lass dir die Erlaubnis zeigen.'],
+    ['Hilft eine Impfung gegen Leishmaniose?', 'Sie kann die Symptome mildern, verhindert die Infektion aber nicht. Wichtig bleibt der Schutz vor Sandmückenstichen. Ob eine Impfung für deinen Hund sinnvoll ist, entscheidet die Tierarztpraxis.'],
+    ['Dürfen Katzen mit der Bahn fahren?', 'Ja. Haustiere bis Katzengröße fahren bei der Deutschen Bahn kostenlos in einer geschlossenen, sicheren Transportbox, die unter den Sitz oder in die Gepäckablage passt.'],
+    ['Was tun, wenn ich ein ausgesetztes Tier finde?', 'Informiere das Ordnungsamt, nachts die Polizei. Fundtiere müssen unverzüglich der zuständigen Behörde angezeigt werden. TASSO nimmt Fundmeldungen rund um die Uhr unter +49 6190 937300 entgegen.'],
   ],
   'notfallplan-haustier': [
     ['Was gehört in einen Notfallplan fürs Haustier?', 'Mindestens zwei erreichbare Betreuungspersonen, Zugang zur Wohnung, Tier- und Gesundheitsdaten, Futter- und Medikamentenplan, Tierarztkontakte, Transportmöglichkeit, eine Kostenregelung und ein Plan für mehrere Tage.'],
@@ -987,20 +995,53 @@ const evidenceByPage = {
       'Urlaub mit Haustier ist keine reine Komfortfrage; entscheidend sind Tierart, Charakter, Gesundheit, Reiseweg, Klima, Unterkunft und zuverlässige Betreuung.',
       'Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.',
       'Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten.',
+      'Für Reisen mit Hunden, Katzen und Frettchen gelten Mikrochip, Heimtierausweis und eine Tollwutimpfung mit 21 Tagen Wartezeit; seit dem 22. April 2026 gelten neue EU-Regeln.',
+      'Ein geöffnetes Fenster verhindert die Überhitzung eines geparkten Autos nicht: Im ADAC-Test erreichte der Innenraum nach 30 Minuten rund 50 °C.',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Urlaub mit Hund', 'https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/urlaub-mit-hund/'],
+      ['Deutscher Tierschutzbund: Darauf sollten Tierhalter vor Reiseantritt achten', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/darauf-sollten-tierhalter-vor-reiseantritt-achten/'],
+      ['Deutscher Tierschutzbund: Tipps zur Beurteilung von Tierpensionen (PDF)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Tipps_zur_Beurteilung_von_Tierpensionen_Information_DTSchB.pdf'],
+      ['Deutscher Tierschutzbund: Steckbrief Meerschweinchen (PDF)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Meerschweinchen_DTSchB.pdf'],
       ['TASSO: Tierbetreuung im Urlaub', 'https://www.tasso.net/Service/Wissensportal/Urlaub-Reisen-mit-Tier/Urlaub-ohne-Tier'],
+      ['TASSO: Tier gefunden', 'https://www.tasso.net/Tierregister/Tier-gefunden'],
       ['BMLEH: Tipps zur Reiseplanung mit Tieren', 'https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reiseplanung-tiere.html'],
+      ['BMLEH: Reisen mit Hunden, Katzen und Frettchen', 'https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/reisen-hunde-katzen-frettchen.html'],
+      ['BMLEH: Einreise mit Vögeln', 'https://www.bmleh.de/DE/themen/tiere/haus-und-zootiere/einreise-voegel.html'],
+      ['Your Europe: Reisen mit Haustieren', 'https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_de.htm'],
+      ['GOV.UK: Bring your pet to Great Britain', 'https://www.gov.uk/bring-pet-to-great-britain'],
+      ['Zoll: Regelungen für Heimtiere', 'https://www.zoll.de/DE/Privatpersonen/Reisen/Reisen-nach-Deutschland-aus-einem-nicht-eu-Staat/Einschraenkungen/Tiere-und-Pflanzen/Schutz-Tierseuchen/Regelungen-Heimtiere/regelungen-heimtiere.html'],
+      ['Zoll: Artenschutz', 'https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Tiere-und-Pflanzen/Artenschutz/artenschutz_node.html'],
+      ['ADAC: Auch mit offenem Fenster wird es gefährlich heiß', 'https://presse.adac.de/meldungen/adac-ev/technik/auch-mit-offenem-fenster-wirds-gefaehrlich-heiss.html'],
+      ['Bundestierärztekammer: Hitzetod im Auto', 'https://www.bundestieraerztekammer.de/presse/2018/06/hitzetod/Index.php'],
+      ['Bundestierärztekammer: Pressemeldung zur Urlaubszeit', 'https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20140514162331'],
+      ['Bundestierärztekammer: Leishmaniose beim Hund', 'https://www.bundestieraerztekammer.de/presse/archiv/15/2017/leishmaniose-beim-hund/1296'],
+      ['ESCCAP: Reisen mit Haustier', 'https://www.esccap.de/reisen-mit-haustier-was-ist-wichtig/'],
+      ['ESCCAP: Krankheiten bei Hunden aus dem Ausland', 'https://www.esccap.de/hunde-aus-dem-ausland-und-parasiten/welche-krankheiten-koennen-hunde-aus-dem-ausland-mitbringen/'],
+      ['ESCCAP: Dirofilariose, Prävention bei Reisen', 'https://www.esccap.de/dirofilariose-beim-hund-sachgerechte-praevention-fuer-hunde-die-in-endemiegebiete-reisen/'],
+      ['IATA: Live Animals, Pets', 'https://www.iata.org/en/programs/cargo/live-animals/pets/'],
+      ['TUI: Haustiere im Flugzeug', 'https://www.tui.com/hilfe/flug/tiere/'],
+      ['Condor: Conditions and regulations for pet transport', 'https://www.condor.com/us/flight-preparation/baggage-and-animals/travelling-with-pets/conditions-and-regulations-for-transport-and-carriage.jsp'],
+      ['Deutsche Bahn: Hund und Haustiere', 'https://www.bahn.de/angebot/zusatzticket/hund'],
+      ['Color Line: Mitnahme von Tieren', 'https://www.colorline.de/service/mitnahme-von-tieren'],
+      ['Straßenverkehrs-Ordnung § 23', 'https://www.gesetze-im-internet.de/stvo_2013/__23.html'],
+      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
       ['Tierschutzgesetz § 3', 'https://www.gesetze-im-internet.de/tierschg/__3.html'],
+      ['Tierschutzgesetz § 11', 'https://www.gesetze-im-internet.de/tierschg/__11.html'],
       ['Tierschutzgesetz § 18', 'https://www.gesetze-im-internet.de/tierschg/__18.html'],
+      ['Bürgerliches Gesetzbuch § 965', 'https://www.gesetze-im-internet.de/bgb/__965.html'],
+      ['Kessler und Turner 1997: Katzen in Pensionen (Animal Welfare)', 'https://www.cambridge.org/core/journals/animal-welfare/article/stress-and-adaptation-of-cats-felis-silvestris-catus-housed-singly-in-pairs-and-in-groups-in-boarding-catteries/2D392373D18F8146505DF830A908B694'],
+      ['Rooney et al. 2007: Hunde in Zwingern (Physiology & Behavior)', 'https://europepmc.org/article/MED/17617429'],
       ['SWR: Tierheime voll, mehr Haustiere ausgesetzt', 'https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html'],
       ['Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025', 'https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen'],
+      ['Hamburger Tierschutzverein: Viele Aussetzungen 2024', 'https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/viele-aussetzungen-tierheim-fuellt-sich-mit-urlaubsopfern'],
+      ['Deutscher Tierschutzbund: Trendumfrage Tierheime 2024', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/'],
     ],
     guardrails: [
       'Ob ein Tier mitreisen kann, hängt von Tierart, Gesundheit, Gewöhnung, Reiseziel, Transportdauer und Unterbringung ab.',
-      'Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen.',
+      'Reise- und Einreisevorschriften können sich ändern; vor Auslandsreisen immer aktuelle Länderregeln prüfen. Die Angaben dieser Seite haben den Stand 6. Oktober 2026.',
       'Tiermedizinische Reisevorsorge ersetzt keine individuelle tierärztliche Beratung.',
+      'Für Vögel, Kleintiere und Reptilien in Pensionen liegen keine belastbaren Studien vor; die genannten Einschätzungen sind fachliche Positionen.',
     ],
   },
   'notfallplan-haustier': {
@@ -3730,11 +3771,18 @@ async function main() {
   const commonAfterSections = source.slice(footerMarker, scriptMarker).trimEnd();
   const script = rewriteScript(rawScript);
   const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }\n@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }\n`;
-  const staticCssFinal = `${staticCss}\n.static-site main :where(p, li, blockquote, dd, dt, figcaption) a:not(.btn) { text-decoration-line: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }\n`;
+  const designV5Css = await fs.readFile(path.join(projectRoot, 'src', 'design-v5.css'), 'utf8');
+  const staticCssFinal = `${staticCss}\n.static-site main :where(p, li, blockquote, dd, dt, figcaption) a:not(.btn) { text-decoration-line: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }\n
+
+${designV5Css}
+`;
   staticCssForInline = staticCssFinal;
 
   await writeFileEnsured(path.join(projectRoot, 'assets', 'site.css'), staticCssFinal);
-  await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), script);
+  const designV5Js = await fs.readFile(path.join(projectRoot, 'src', 'design-v5.js'), 'utf8');
+  await writeFileEnsured(path.join(projectRoot, 'assets', 'site.js'), `${script}
+${designV5Js}
+`);
   await generateBrandIcons();
   await generateSocialImages();
 

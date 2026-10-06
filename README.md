@@ -36,6 +36,15 @@ Derzeit pausiert: `budgie-brain/index.html` bleibt als `noindex`-Hinweisseite er
 
 Neu in Planung: `docs/tier-tamagotchi-konzept.md` hält das spätere Tier-Tamagotchi als Arbeitsunterprojekt von `wahrehaustierliebe.de` fest. Es ist noch nicht live, nicht deploybereit und ersetzt das pausierte Budgie-Brain nicht, sondern dokumentiert die neue Cutout-/Educational-Game-Richtung.
 
+## Gestaltung
+
+Das Erscheinungsbild (Papierfarbe, Serifenschrift, Linien statt Pastellkästen, Inhaltsverzeichnis in der Randspalte) steht in `src/design-v5.css` und `src/design-v5.js`. Der Generator hängt beide Dateien an `assets/site.css` und `assets/site.js` an. Die Schicht liegt hinter den älteren Designschichten aus `src/site-source.html` und überschreibt sie. Neue Bausteine für Lexikon-Seiten:
+
+- `.mythos`: Irrtum, „Warum viele das glauben“, „Was stimmt“ und Belege
+- `.tierweiche`: Tierartwahl mit Tabs, ohne JavaScript als Liste lesbar
+- `.urlaubsplan[data-plan]`: abhakbare Checkliste, Stand nur im Browser (localStorage)
+- `.zeitleiste`, `.faktenzeile`, `.lex-table`, `.randnotiz`, `.abschlussfrage`
+
 ## Quellen
 
 - `src/site-source.html`: gepflegte Hauptquelle der Haustierliebe-Seite.

@@ -283,12 +283,52 @@
     },
     {
       "question": "Wie früh sollte ich Betreuung organisieren?",
-      "answer": "So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche.",
+      "answer": "So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche. Der Deutsche Tierschutzbund rät, nach einer Pension im Idealfall mehrere Monate im Voraus zu suchen, weil gute Pensionen oft lange im Voraus ausgebucht sind.",
       "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
     },
     {
       "question": "Darf man ein Tier aussetzen, wenn man keine Betreuung findet?",
       "answer": "Nein. Ein Haustier auszusetzen oder zurückzulassen, um sich der Verantwortung zu entziehen, ist nach dem Tierschutzgesetz verboten.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Reicht ein Fensterspalt, wenn der Hund kurz im Auto wartet?",
+      "answer": "Nein. Im ADAC-Test erreichte der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C und nach 60 Minuten rund 57 °C, auch mit geöffneten Fenstern.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Welche Papiere braucht mein Hund für Reisen in der EU?",
+      "answer": "In der Regel einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Die Impfung ist frühestens mit zwölf Wochen möglich, danach gilt eine Wartezeit von 21 Tagen. Seit dem 22. April 2026 gelten neue EU-Regeln; prüfe die aktuelle Seite des Bundesministeriums für Landwirtschaft, Ernährung und Heimat.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Muss mein Hund vor der Einreise in manche Länder gegen Bandwurm behandelt werden?",
+      "answer": "Ja. Für Finnland, Irland, Malta, Norwegen und Nordirland müssen Hunde 24 bis 120 Stunden vor der Einreise gegen den Fuchsbandwurm behandelt werden. Das gilt für Hunde, nicht für Katzen. Für Großbritannien gelten eigene Regeln.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Darf ich meinem Tier vor dem Flug ein Beruhigungsmittel geben?",
+      "answer": "Der Weltluftfahrtverband IATA und die Bundestierärztekammer raten davon ab, weil die Reaktionen des Tieres nicht abzusehen sind und Kreislaufprobleme möglich sind. Gib keine Mittel auf eigene Faust und kläre jede Reisefrage mit der Tierarztpraxis.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Braucht eine Tierpension eine Erlaubnis?",
+      "answer": "In der Regel ja. Wer gewerbsmäßig Tiere hält oder ein Tierheim oder eine ähnliche Einrichtung betreibt, braucht nach § 11 Tierschutzgesetz die Erlaubnis der zuständigen Behörde. Lass dir die Erlaubnis zeigen.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Hilft eine Impfung gegen Leishmaniose?",
+      "answer": "Sie kann die Symptome mildern, verhindert die Infektion aber nicht. Wichtig bleibt der Schutz vor Sandmückenstichen. Ob eine Impfung für deinen Hund sinnvoll ist, entscheidet die Tierarztpraxis.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Dürfen Katzen mit der Bahn fahren?",
+      "answer": "Ja. Haustiere bis Katzengröße fahren bei der Deutschen Bahn kostenlos in einer geschlossenen, sicheren Transportbox, die unter den Sitz oder in die Gepäckablage passt.",
+      "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
+    },
+    {
+      "question": "Was tun, wenn ich ein ausgesetztes Tier finde?",
+      "answer": "Informiere das Ordnungsamt, nachts die Polizei. Fundtiere müssen unverzüglich der zuständigen Behörde angezeigt werden. TASSO nimmt Fundmeldungen rund um die Uhr unter +49 6190 937300 entgegen.",
       "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
     },
     {
