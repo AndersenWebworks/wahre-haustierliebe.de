@@ -964,7 +964,7 @@ function normalizeAssetUrls(root) {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm metric-grid" data-enhancement="kastration-kompakt">
             <div class="metric-card"><strong>5,7 %</strong><span>Sterblichkeit unter den Katzen mit Pyometra in einer großen schwedischen Studie.</span></div>
-            <div class="metric-card"><strong>80–90 %</strong><span>der Gesäugetumoren bei Katzen sind bösartig.</span></div>
+            <div class="metric-card"><strong>80–90 %</strong><span>der Gesäugetumore bei Katzen sind bösartig.</span></div>
             <div class="metric-card"><strong>Einzelfall</strong><span>Beim Hund bestimmen Anlass, Rasse, Geschlecht, Alter und Größe die Abwägung.</span></div>
           </div>`
         }

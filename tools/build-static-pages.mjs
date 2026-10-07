@@ -764,7 +764,7 @@ const evidenceByPage = {
       'Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.',
       'Trächtigkeit, Geburt und Aufzucht können unter anderem Schwergeburt, Kaiserschnitt, Gebärmutter- oder Gesäugeentzündungen, Kalziummangel und den Verlust von Jungtieren mit sich bringen.',
       'Bei Katzen überwiegen für die meisten nicht zur Zucht vorgesehenen Tiere die Vorteile der Kastration; der konkrete Zeitpunkt hängt von Entwicklung und Gesundheit ab.',
-      'Eine frühe Kastration senkt bei weiblichen Katzen das Risiko für Mammakarzinome deutlich; etwa 80 bis 90 Prozent der Gesäugetumoren bei Katzen sind bösartig.',
+      'Eine frühe Kastration senkt bei weiblichen Katzen das Risiko für Mammakarzinome deutlich; etwa 80 bis 90 Prozent der Gesäugetumore bei Katzen sind bösartig.',
       'Bei Hündinnen verhindert die Kastration Pyometra, kann aber unter anderem Harninkontinenz sowie rasse- und altersabhängige Gelenk- oder Tumorrisiken begünstigen.',
       'Beim Hund ist Kastration eine Einzelfallentscheidung und kein Ersatz für Training, Verhaltensdiagnostik oder Haltungsarbeit.',
       'Bei Kaninchen ist Kastration für stabile Gruppen ohne Nachwuchs und bei weiblichen Tieren wegen häufiger Gebärmuttererkrankungen relevant.',
@@ -1770,7 +1770,7 @@ const socialCopyByPage = {
   kastration: {
     eyebrow: 'Gesundheit und Fortpflanzung',
     title: 'Kastration bei Katze, Hund und Kaninchen',
-    description: 'Gesundheitsnutzen, Risiken, Zeitpunkt, Wohnungskatzen, Pyometra, Gesäugetumoren und Unterschiede zwischen den Tierarten.',
+    description: 'Gesundheitsnutzen, Risiken, Zeitpunkt, Wohnungskatzen, Pyometra, Gesäugetumore und Unterschiede zwischen den Tierarten.',
   },
   qualzucht: {
     eyebrow: 'Zuchtmerkmale kritisch sehen',

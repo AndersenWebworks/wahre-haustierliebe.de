@@ -311,7 +311,7 @@ export const glossaryTerms = [
     key: 'mammatumor',
     title: 'Mammatumor',
     summary: 'Tumor der Milchleiste. Bei Katzen und Hündinnen kann Kastration das Risiko je nach Zeitpunkt senken.',
-    description: 'Tumor der Milchleiste. Bei Katzen und Hündinnen können Mammatumoren gut- oder bösartig sein; Kastration kann das Risiko je nach Tierart und Zeitpunkt deutlich beeinflussen.',
+    description: 'Tumor der Milchleiste. Bei Katzen und Hündinnen können Mammatumore gut- oder bösartig sein; Kastration kann das Risiko je nach Tierart und Zeitpunkt deutlich beeinflussen.',
   },
   {
     key: 'kolik',

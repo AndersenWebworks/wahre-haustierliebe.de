@@ -382,7 +382,7 @@ export const questions = [
       "Gelenkleiden bei großen Hunderassen"
     ],
     correctIndex: 2,
-    explanation: "Bei Hündinnen verhindert die Kastration die Pyometra und senkt bei früher Durchführung das Risiko für Mammatumoren. Dem stehen unter anderem mögliche Harninkontinenz sowie Gelenk- und Tumorrisiken gegenüber.",
+    explanation: "Bei Hündinnen verhindert die Kastration die Pyometra und senkt bei früher Durchführung das Risiko für Mammatumore. Dem stehen unter anderem mögliche Harninkontinenz sowie Gelenk- und Tumorrisiken gegenüber.",
     wikiPath: "/hunde/kastration/",
     sourceRef: "https://wahre-haustierliebe.de/hunde/kastration/"
   },
@@ -1009,7 +1009,7 @@ export const questions = [
       "Die Sterblichkeit unter den erkrankten Katzen der Studie",
       "Der Anteil aller unkastrierten Katzen, die erkranken",
       "Der Anteil aller Katzen, die eine Kastration nicht überleben",
-      "Der Anteil der Katzen, die zusätzlich Gesäugetumoren bekommen"
+      "Der Anteil der Katzen, die zusätzlich Gesäugetumore bekommen"
     ],
     correctIndex: 0,
     explanation: "Das ist die Sterblichkeit unter den erkrankten Tieren und nicht der Anteil aller unkastrierten Katzen. Die Gebärmuttervereiterung bleibt ein tierärztlicher Notfall.",
@@ -2550,7 +2550,7 @@ export const questions = [
     category: "katzen",
     difficulty: "knifflig",
     text: "„Auch eine Katze, die nie nach draußen geht, profitiert von der Kastration.“",
-    explanation: "Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumoren bestehen.",
+    explanation: "Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumore bestehen.",
     wikiPath: "/katzen/kastration/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/kastration/"
   },

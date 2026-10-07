@@ -198,7 +198,7 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 - **Gebärmuttervereiterung (Pyometra)**
 - Gelenkleiden bei großen Hunderassen
 
-> Bei Hündinnen verhindert die Kastration die Pyometra und senkt bei früher Durchführung das Risiko für Mammatumoren. Dem stehen unter anderem mögliche Harninkontinenz sowie Gelenk- und Tumorrisiken gegenüber.
+> Bei Hündinnen verhindert die Kastration die Pyometra und senkt bei früher Durchführung das Risiko für Mammatumore. Dem stehen unter anderem mögliche Harninkontinenz sowie Gelenk- und Tumorrisiken gegenüber.
 
 **Wovon hängt die vorgeschriebene Zwingergröße ab?**  
 `hunde-zwinger-101` · knifflig · [Wiki](https://wahre-haustierliebe.de/hunde/hofhaltung-und-zwinger/)
@@ -805,7 +805,7 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 - **Die Sterblichkeit unter den erkrankten Katzen der Studie**
 - Der Anteil aller unkastrierten Katzen, die erkranken
 - Der Anteil aller Katzen, die eine Kastration nicht überleben
-- Der Anteil der Katzen, die zusätzlich Gesäugetumoren bekommen
+- Der Anteil der Katzen, die zusätzlich Gesäugetumore bekommen
 
 > Das ist die Sterblichkeit unter den erkrankten Tieren und nicht der Anteil aller unkastrierten Katzen. Die Gebärmuttervereiterung bleibt ein tierärztlicher Notfall.
 
@@ -850,7 +850,7 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 
 - **Stimmt**
 
-> Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumoren bestehen.
+> Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumore bestehen.
 
 **„Bei Katzen ist eine Verhaltensänderung oft das einzige Warnsignal für Schmerz.“**  
 `mythen-katzen-warnsignal-101` · leicht · [Wiki](https://wahre-haustierliebe.de/katzen/)
