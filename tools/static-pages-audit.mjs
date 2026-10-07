@@ -52,6 +52,7 @@ const pages = [
   { id: 'voegel-entscheidung', file: 'voegel/entscheidung/index.html', canonical: `${baseUrl}/voegel/entscheidung/index.html` },
   { id: 'kleintiere', file: 'kleintiere/index.html', canonical: `${baseUrl}/kleintiere/index.html` },
   { id: 'kleintiere-kaninchen', file: 'kleintiere/kaninchen/index.html', canonical: `${baseUrl}/kleintiere/kaninchen/index.html` },
+  { id: 'kleintiere-kaninchen-kosten', file: 'kleintiere/kaninchen-kosten/index.html', canonical: `${baseUrl}/kleintiere/kaninchen-kosten/index.html` },
   { id: 'kleintiere-meerschweinchen', file: 'kleintiere/meerschweinchen/index.html', canonical: `${baseUrl}/kleintiere/meerschweinchen/index.html` },
   { id: 'kleintiere-hamster', file: 'kleintiere/hamster/index.html', canonical: `${baseUrl}/kleintiere/hamster/index.html` },
   { id: 'kleintiere-ratten', file: 'kleintiere/ratten/index.html', canonical: `${baseUrl}/kleintiere/ratten/index.html` },

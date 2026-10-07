@@ -1557,6 +1557,31 @@
       }
     },
     {
+      "id": "kleintiere-kaninchen-kosten",
+      "url": "https://wahre-haustierliebe.de/kleintiere/kaninchen-kosten/index.html",
+      "title": "Was zwei Kaninchen wirklich kosten - Wa(h)re Haustier(liebe)",
+      "description": "Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.",
+      "intent": "Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.",
+      "keywords": [
+        "Kleintiere halten",
+        "Kaninchen",
+        "Meerschweinchen",
+        "Hamster",
+        "Ratten"
+      ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
+      "social": {
+        "title": "Was zwei Kaninchen wirklich kosten - Wa(h)re Haustier(liebe)",
+        "description": "Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.",
+        "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-kaninchen-kosten.png",
+        "imageAlt": "Kaninchen liegt in einem Gehege zwischen grünen Pflanzen.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "kleintiere-meerschweinchen",
       "url": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html",
       "title": "Meerschweinchen abgeben: Mindestalter und richtige Haltung - Wa(h)re Haustier(liebe)",

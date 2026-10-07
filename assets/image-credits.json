@@ -493,5 +493,20 @@
     ],
     "alt": "Wa(h)re Haustier(liebe) Bildmarke ohne Schriftzug",
     "modifications": "Cropped local brand asset for compact header usage."
+  },
+  {
+    "id": "rabbit-costs-agouti",
+    "localPath": "assets/images/rabbit-costs-agouti.jpg",
+    "fileTitle": "Agouti domestic rabbit.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agouti_domestic_rabbit.jpg",
+    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Agouti_domestic_rabbit.jpg",
+    "author": "Eulersidentity",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "usedFor": [
+      "article-hero-kleintiere-kaninchen-kosten"
+    ],
+    "alt": "Kaninchen liegt in einem Gehege zwischen grünen Pflanzen.",
+    "modifications": "Local resized copy from Wikimedia."
   }
 ]

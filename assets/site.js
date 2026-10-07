@@ -45,6 +45,7 @@ var staticPageRoutes = {
   "voegel-qualzucht": "/voegel/qualzucht/index.html",
   "voegel-entscheidung": "/voegel/entscheidung/index.html",
   "kleintiere-kaninchen": "/kleintiere/kaninchen/index.html",
+  "kleintiere-kaninchen-kosten": "/kleintiere/kaninchen-kosten/index.html",
   "kleintiere-meerschweinchen": "/kleintiere/meerschweinchen/index.html",
   "kleintiere-hamster": "/kleintiere/hamster/index.html",
   "kleintiere-ratten": "/kleintiere/ratten/index.html",
@@ -352,6 +353,12 @@ var staticSiteSearchIndex = [
     "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
     "description": "Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.",
     "terms": "Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen. kleintiere/kaninchen kleintiere kaninchen"
+  },
+  {
+    "id": "kleintiere-kaninchen-kosten",
+    "title": "Was zwei Kaninchen wirklich kosten - Wa(h)re Haustier(liebe)",
+    "description": "Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.",
+    "terms": "Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen. kleintiere/kaninchen-kosten kleintiere kaninchen kosten"
   },
   {
     "id": "kleintiere-meerschweinchen",
@@ -1377,6 +1384,7 @@ function normalizeAssetUrls(root) {
       'voegel-entscheidung': 'voegel/entscheidung/',
       'kleintiere': 'kleintiere/',
       'kleintiere-kaninchen': 'kleintiere/kaninchen/',
+      'kleintiere-kaninchen-kosten': 'kleintiere/kaninchen-kosten/',
       'kleintiere-meerschweinchen': 'kleintiere/meerschweinchen/',
       'kleintiere-hamster': 'kleintiere/hamster/',
       'kleintiere-ratten': 'kleintiere/ratten/',

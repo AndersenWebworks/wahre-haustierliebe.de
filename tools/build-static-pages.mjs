@@ -344,6 +344,7 @@ const topicPages = [
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
   ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.', { lastmod: '2026-08-30' }],
+  ['kleintiere-kaninchen-kosten', 'kleintiere', 'kleintiere/kaninchen-kosten', 'Was zwei Kaninchen wirklich kosten', 'Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.', 'Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-07' }],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen abgeben: Mindestalter und richtige Haltung', 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.', 'Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.', { lastmod: '2026-09-30' }],
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
@@ -1616,6 +1617,13 @@ Object.assign(firstContentImageByPage, {
     height: 1280,
     type: 'image/jpeg',
     alt: 'Kaninchen sitzt in einem begrünten Außengehege.',
+  },
+  'kleintiere-kaninchen-kosten': {
+    src: 'assets/images/rabbit-costs-agouti.jpg',
+    width: 1200,
+    height: 1600,
+    type: 'image/jpeg',
+    alt: 'Kaninchen liegt in einem Gehege zwischen grünen Pflanzen.',
   },
   'kleintiere-meerschweinchen': {
     src: 'assets/images/kleintiere-zwei-meerschweinchen.jpg',
