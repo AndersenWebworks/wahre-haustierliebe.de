@@ -1317,3 +1317,42 @@ body.static-site .site-footer .glossary-term { color: #f6f0e3 !important; border
 body.static-site .emergency-card .btn .glossary-term { color: inherit !important; border-bottom-color: currentColor; }
 body.static-site .insight-body .nr { font-size: 0.85rem; letter-spacing: 0.08em; color: var(--ink-2); }
 body.static-site .quote-band p { margin-top: 1rem; }
+
+/* ---------- Schrift auf Fotos: immer lesbar ---------- */
+/* Bildunterschriften im Artikel stehen unter dem Foto, nie darauf. */
+body.static-site .article-hero-media .context-caption,
+body.static-site .article-hero-media figcaption {
+  position: static;
+  display: block;
+  background: transparent;
+  color: var(--ink-2, var(--ink));
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.45;
+  padding: 0.6rem 0 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+/* Wo die Beschriftung auf dem Foto liegt (Karten, Startseite), bekommt sie einen festen dunklen Grund. */
+body.static-site .hero-lead-image .context-caption,
+body.static-site .entry-card .context-caption,
+body.static-site .share-focus-media .context-caption,
+body.static-site .animal-card .animal-card-caption {
+  background: rgba(26, 22, 18, 0.9);
+  color: #fffaf0 !important;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 0.5rem 0.65rem;
+  border-radius: 2px;
+  text-shadow: none;
+}
+body.static-site .article-hero-media {
+  overflow: visible;
+  aspect-ratio: auto;
+  height: auto;
+  min-height: 0;
+}
+body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
