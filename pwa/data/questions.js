@@ -2550,7 +2550,7 @@ export const questions = [
     category: "katzen",
     difficulty: "knifflig",
     text: "„Auch eine Katze, die nie nach draußen geht, profitiert von der Kastration.“",
-    explanation: "Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumore bestehen.",
+    explanation: "Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumoren bestehen.",
     wikiPath: "/katzen/kastration/",
     sourceRef: "https://wahre-haustierliebe.de/katzen/kastration/"
   },

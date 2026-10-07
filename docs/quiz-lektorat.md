@@ -850,7 +850,7 @@ Korrekturen bitte direkt hier eintragen oder die ID der Frage nennen (zum Beispi
 
 - **Stimmt**
 
-> Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumore bestehen.
+> Auch ohne Freigang bleiben Eierstöcke und Gebärmutter hormonell aktiv. Damit bleiben etwa das Risiko einer Gebärmuttervereiterung und von Gesäugetumoren bestehen.
 
 **„Bei Katzen ist eine Verhaltensänderung oft das einzige Warnsignal für Schmerz.“**  
 `mythen-katzen-warnsignal-101` · leicht · [Wiki](https://wahre-haustierliebe.de/katzen/)
