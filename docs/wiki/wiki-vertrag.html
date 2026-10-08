@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wiki-Vertrag - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a class="active" href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Wiki-Vertrag</h1>
+        <p class="status">Gültig seit 9. Oktober 2026</p>
+
+        <p>Das Wiki ist das Gedächtnis des Projekts „Wa(h)re Haustier(liebe)“. Was einmal herausgefunden oder entschieden wurde, steht hier, damit es beim nächsten Mal nachgeschlagen statt neu erarbeitet wird. Diese Seite regelt, wie das funktioniert.</p>
+
+        <h2 id="nachschlagen">Erster Nachschlageort</h2>
+        <p>Jede Arbeit am Projekt beginnt mit der passenden Wiki-Seite. Erst wenn das Wiki keine sichere Antwort gibt oder ein Stand vor einer Aktion bestätigt werden muss, wird im Code, auf Live oder in den Projektunterlagen genauer geprüft. Das Wiki ersetzt keine frische Prüfung vor schreibenden oder zeitkritischen Aktionen.</p>
+
+        <h2 id="pflege">Pflegepflicht</h2>
+        <ul class="rule-list">
+          <li>Nach jeder wesentlichen Änderung an Inhalt, Verhalten, Umgebung oder Arbeitsweise wird die passende Seite im selben Arbeitsgang aktualisiert und im <a href="aenderungsverlauf.html">Änderungsverlauf</a> eingetragen. Wiki-Änderung und fachliche Änderung gehen in denselben Commit.</li>
+          <li>Überholte Aussagen werden sichtbar ersetzt, nicht kommentarlos gelöscht. Ist ein ganzer Abschnitt historisch, steht ein Hinweis davor.</li>
+          <li>Neue Seiten werden in die Navigation aller Seiten und auf der Startseite verlinkt. Vorlage: <code>_vorlage.html</code>.</li>
+          <li>Bleibt das Wiki bei einer wesentlichen Änderung unverändert, nennt der Änderungsverlauf den Grund.</li>
+        </ul>
+
+        <h2 id="verhaeltnis">Verhältnis zu anderen Quellen</h2>
+        <table>
+          <thead><tr><th>Quelle</th><th>Rolle</th></tr></thead>
+          <tbody>
+            <tr><td><code>docs/wiki/</code></td><td>Dauerhaftes Projektwissen: was das Projekt ist, wie es funktioniert, warum es so entschieden wurde.</td></tr>
+            <tr><td><a href="../../README.md"><code>README.md</code></a></td><td>Projektbeschreibung und aktueller Stand.</td></tr>
+            <tr><td><a href="../../docs/"><code>docs/</code></a></td><td>Weitere Arbeitsdokumente: Quiz, Themenbacklog, Tier-Tamagotchi-Konzept, Social-Media-Beiträge.</td></tr>
+            <tr><td>ClautzGPT-Systemwiki</td><td>Beschreibt künftig nur Clautz selbst. Projektwissen steht hier im Projekt.</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="belege">Belegstandard</h2>
+        <p>Jede Seite trägt eine Statuszeile mit Datum. Faktenaussagen nennen darunter die Quelle (Datei, Entscheidung, Nachweis). Vermutungen werden nicht als Tatsache geschrieben. Seiten, die aus dem ClautzGPT-Wiki übernommen wurden, behalten ihr ursprüngliches Stand-Datum und tragen zusätzlich das Übernahmedatum.</p>
+
+        <h2 id="grenzen">Inhaltliche Grenzen</h2>
+        <p>Nicht ins Wiki gehören:</p>
+        <ul>
+          <li>Zugangsdaten, Passwörter, API-Schlüssel, Benutzernamen für Server und Dienste. Das Wiki nennt höchstens, in welcher ignorierten Datei sie liegen.</li>
+          <li>Kundendaten und personenbezogene Rohdaten, Exporte und Logs.</li>
+          <li>Preise, Vertragsinhalte und Verhandlungsstand zwischen Andersen Webworks und Kunden. Das bleibt im privaten Kundenkontext.</li>
+        </ul>
+
+        <h2 id="stil">Schreibstil</h2>
+        <p>Jede Seite beginnt mit einer kurzen Einordnung in Alltagssprache, danach wird es technisch. Klares Deutsch mit Umlauten, ohne Füllsätze. Technische Namen stehen unverändert in <code>code</code>. Daten werden absolut angegeben.</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UX-Flow: Redaktionelle Hinweise - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a class="active" href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1 id="wahre-haustierliebe-ux-flow-redaktionelle-hinweise">Wa(h)re Haustierliebe - UX-Flow: Redaktionelle Hinweise</h1>
+        <p class="status">Stand 2026-06-06; übernommen aus dem ClautzGPT-Wiki am 9. Oktober 2026</p>
+
+<p>Stand: 2026-06-06<br />
+Status: UX-Konzept, noch nicht implementiert<br />
+Projektbezug: wahrehaustierliebe.de<br />
+Grundlage: <code>docs/wahre-haustierliebe-annotation-konzept.md</code><br />
+Interaktive Demo: <code>public/wahre-haustierliebe-annotation-demo.html</code></p>
+<h2 id="kurzfassung">Kurzfassung</h2>
+<p>Der UX-Flow soll Besucher nicht in eine Kommentarspalte ziehen, sondern ihnen eine einfache redaktionelle Handlung anbieten:</p>
+<blockquote>
+<p>Ich sehe eine unklare, falsche oder ergänzungswürdige Stelle und kann genau dazu einen Hinweis an die Redaktion schicken.</p>
+</blockquote>
+<p>Die Oberfläche muss dabei drei Dinge sofort klären:</p>
+<ul>
+<li>Der Hinweis geht privat an Erik und Annemarie.</li>
+<li>Nichts wird automatisch veröffentlicht.</li>
+<li>E-Mail ist freiwillig, aber nur mit E-Mail kann später geantwortet werden.</li>
+</ul>
+<h2 id="dummy-demo">Dummy-Demo</h2>
+<p>Die isolierte Testseite <code>public/wahre-haustierliebe-annotation-demo.html</code> bildet den geplanten Ablauf ohne Live-Wirkung nach. Sie versendet nichts, schreibt keine Datenbank und ändert keine reale Wa(h)re-Haustierliebe-Seite.</p>
+<p>Die Demo zeigt:</p>
+<ul>
+<li>Hinweis-Einstieg über Abschnitts-Icon</li>
+<li>Hinweis-Einstieg über markierte Textstelle</li>
+<li>gemeinsames Formular mit Pflicht-Hinweis, optionaler Quelle und optionaler E-Mail</li>
+<li>technische Übergabe mit URL, Seitentitel, Abschnitts-ID und markiertem Text</li>
+<li>stille Bot-Schutz-Simulation über Honeypot, Mindestzeit und Rate-Limit</li>
+<li>lokale Mailvorschau für Redaktion und Nutzerbestätigung</li>
+<li>simulierte Folgeentscheidung: übernommen, teilweise übernommen oder nicht übernommen</li>
+</ul>
+<h2 id="ux-prinzipien">UX-Prinzipien</h2>
+<h3 id="einladung-statt-fehlerformular">Einladung statt Fehlerformular</h3>
+<p>Die Sprache ist positiv und fachlich:</p>
+<ul>
+<li>gut: <code>Hinweis geben</code></li>
+<li>gut: <code>Korrektur oder Ergänzung senden</code></li>
+<li>gut: <code>Textstelle verbessern helfen</code></li>
+<li>vermeiden: <code>Fehler melden</code></li>
+<li>vermeiden: <code>Beschwerde einreichen</code></li>
+<li>vermeiden: <code>Kommentar schreiben</code></li>
+</ul>
+<p>Der Flow soll wirken wie eine Einladung zur Qualitätsverbesserung, nicht wie ein Ticketsystem.</p>
+<h3 id="ruhig-im-artikel-bleiben">Ruhig im Artikel bleiben</h3>
+<p>Der Lesefluss bleibt wichtiger als die Funktion. Die Hinweisfunktion ist sichtbar, aber nicht laut.</p>
+<ul>
+<li>keine permanente Kommentarspalte</li>
+<li>keine Social-Avatare</li>
+<li>keine Zähler wie <code>12 Hinweise</code></li>
+<li>keine öffentliche Debatte</li>
+<li>keine Gamification</li>
+</ul>
+<h3 id="mobile-nicht-von-textmarkierung-abhangig-machen">Mobile nicht von Textmarkierung abhängig machen</h3>
+<p>Textmarkierung ist auf Desktop brauchbar, auf Mobile aber oft hakelig. Deshalb braucht der MVP zwei gleichwertige Einstiege:</p>
+<ul>
+<li>Text markieren und Button nutzen</li>
+<li>Abschnitts-Icon direkt am Absatz, Glossarbegriff oder Infokasten nutzen</li>
+</ul>
+<p>So bleibt der Flow auch auf Smartphone und Tablet verständlich.</p>
+<h2 id="einstiegspunkte">Einstiegspunkte</h2>
+<h3 id="einstieg-1-mitwirkungs-hinweis-im-wissensbereich">Einstieg 1: Mitwirkungs-Hinweis im Wissensbereich</h3>
+<p>Position: oberhalb des ersten Wissensartikels oder am Anfang einer Artikelkategorie.</p>
+<p>Textvorschlag:</p>
+<pre><code class="language-text">Du findest eine Erklärung unklar, kennst eine bessere Quelle oder siehst einen Fehler? Markiere eine Textstelle oder nutze das Hinweis-Symbol am Abschnitt. Wir prüfen jede Rückmeldung redaktionell.
+</code></pre>
+<p>Dieser Hinweis erklärt das System einmal. Er soll nicht wie ein Cookie-Banner wirken und nicht wiederholt auf jeder Scrolltiefe auftauchen.</p>
+<h3 id="einstieg-2-abschnitts-icon">Einstieg 2: Abschnitts-Icon</h3>
+<p>Kommentierbare Abschnitte bekommen ein dezentes Icon mit Tooltip oder zugänglichem Label:</p>
+<pre><code class="language-text">Hinweis zu diesem Abschnitt geben
+</code></pre>
+<p>Empfohlene Platzierung:</p>
+<ul>
+<li>rechts neben Zwischenüberschriften</li>
+<li>am oberen Rand von Faktenboxen</li>
+<li>bei Glossarbegriffen neben der Erklärung</li>
+<li>nicht an jedem einzelnen Satz</li>
+</ul>
+<p>Das Icon ist auf Desktop dezent, aber per Tastatur fokussierbar. Auf Mobile darf es dauerhaft sichtbar sein, weil Hover dort nicht existiert.</p>
+<h3 id="einstieg-3-textauswahl">Einstieg 3: Textauswahl</h3>
+<p>Wenn ein Besucher eine Textstelle markiert, erscheint ein kleiner Button in der Nähe der Auswahl:</p>
+<pre><code class="language-text">Hinweis geben
+</code></pre>
+<p>Der Button übernimmt den markierten Text in das Formular. Wenn die Auswahl zu lang ist, wird sie gekürzt angezeigt, aber vollständig technisch übergeben, sofern die spätere Implementierung das erlaubt.</p>
+<h2 id="hauptflow-textstelle-markieren">Hauptflow: Textstelle markieren</h2>
+<h3 id="1-lesen">1. Lesen</h3>
+<p>Der Besucher liest einen Artikel, Glossarbegriff oder Infokasten.</p>
+<p>Sichtbares Signal:</p>
+<ul>
+<li>dezentes Abschnitts-Icon</li>
+<li>einmaliger Mitwirkungs-Hinweis</li>
+<li>keine störende Overlay-Einführung</li>
+</ul>
+<h3 id="2-markieren">2. Markieren</h3>
+<p>Der Besucher markiert eine Textstelle.</p>
+<p>Systemreaktion:</p>
+<ul>
+<li>kleiner schwebender Button erscheint</li>
+<li>Buttontext: <code>Hinweis geben</code></li>
+<li>keine Formularfelder sofort aufklappen</li>
+<li>Button verschwindet, wenn Auswahl aufgehoben wird</li>
+</ul>
+<h3 id="3-formular-offnen">3. Formular öffnen</h3>
+<p>Nach Klick auf <code>Hinweis geben</code> öffnet sich ein ruhiges Formular.</p>
+<p>Empfehlung für MVP:</p>
+<ul>
+<li>Desktop: kleines Modal oder Popover mit klarer Breite</li>
+<li>Mobile: Bottom Sheet oder vollbreites Modal</li>
+<li>keine Inline-Aufklappung mitten im Text, weil das Artikel-Layout sonst springt</li>
+</ul>
+<p>Kopfbereich:</p>
+<pre><code class="language-text">Hinweis zu dieser Textstelle
+</code></pre>
+<p>Darunter wird die markierte Stelle als kurzer Auszug angezeigt:</p>
+<pre><code class="language-text">&quot;[markierte Textstelle]&quot;
+</code></pre>
+<p>Wenn kein Text markiert wurde, steht dort:</p>
+<pre><code class="language-text">Abschnitt: [Überschrift oder Glossarbegriff]
+</code></pre>
+<h3 id="4-hinweis-schreiben">4. Hinweis schreiben</h3>
+<p>Pflichtfeld:</p>
+<pre><code class="language-text">Was sollen wir prüfen?
+</code></pre>
+<p>Platzhalter:</p>
+<pre><code class="language-text">Schreib kurz, was unklar ist, was ergänzt werden sollte oder welche Quelle du anders einordnest.
+</code></pre>
+<p>Optionales Feld:</p>
+<pre><code class="language-text">Quelle oder Link
+</code></pre>
+<p>Platzhalter:</p>
+<pre><code class="language-text">Falls du eine Quelle hast, kannst du sie hier einfügen.
+</code></pre>
+<p>Optionales E-Mail-Feld:</p>
+<pre><code class="language-text">E-Mail für Rückmeldung
+</code></pre>
+<p>Hilfetext direkt darunter:</p>
+<pre><code class="language-text">Freiwillig. Ohne E-Mail können wir deinen Hinweis prüfen, dir aber nicht direkt antworten.
+</code></pre>
+<h3 id="5-absenden">5. Absenden</h3>
+<p>Button:</p>
+<pre><code class="language-text">Hinweis senden
+</code></pre>
+<p>Direkt vor dem Button steht klein:</p>
+<pre><code class="language-text">Dein Hinweis wird nicht automatisch veröffentlicht.
+</code></pre>
+<p>Beim Absenden:</p>
+<ul>
+<li>Button deaktivieren</li>
+<li>Ladezustand anzeigen</li>
+<li>kein zweites Absenden zulassen</li>
+</ul>
+<h3 id="6-erfolgsmeldung">6. Erfolgsmeldung</h3>
+<p>Mit E-Mail-Adresse:</p>
+<pre><code class="language-text">Danke, dein Hinweis ist angekommen.
+
+Wir prüfen ihn redaktionell und melden uns bei dir, sobald wir entschieden haben, ob und wie wir ihn übernehmen.
+</code></pre>
+<p>Ohne E-Mail-Adresse:</p>
+<pre><code class="language-text">Danke, dein Hinweis ist angekommen.
+
+Wir prüfen ihn redaktionell. Da du keine E-Mail-Adresse angegeben hast, können wir dir später nicht direkt antworten.
+</code></pre>
+<p>Button danach:</p>
+<pre><code class="language-text">Zurück zum Artikel
+</code></pre>
+<h2 id="alternativflow-abschnitts-icon">Alternativflow: Abschnitts-Icon</h2>
+<p>Dieser Flow ist für Mobile und für Besucher wichtig, die nichts markieren wollen.</p>
+<h3 id="1-icon-nutzen">1. Icon nutzen</h3>
+<p>Der Besucher klickt oder tippt auf das Hinweis-Icon am Abschnitt.</p>
+<p>Formular-Kopf:</p>
+<pre><code class="language-text">Hinweis zu diesem Abschnitt
+</code></pre>
+<p>Kontextanzeige:</p>
+<pre><code class="language-text">Abschnitt: [Überschrift]
+</code></pre>
+<h3 id="2-hinweis-schreiben">2. Hinweis schreiben</h3>
+<p>Das Formular ist identisch zum Markierungsflow, nur ohne konkretes Zitat.</p>
+<p>Pflichtfeld:</p>
+<pre><code class="language-text">Was sollen wir prüfen?
+</code></pre>
+<p>Hilfetext:</p>
+<pre><code class="language-text">Wenn du dich auf eine bestimmte Stelle beziehst, kannst du sie in deinem Hinweis kurz nennen.
+</code></pre>
+<h3 id="3-absenden-und-erfolg">3. Absenden und Erfolg</h3>
+<p>Gleicher Ablauf wie beim Textmarkierungsflow.</p>
+<h2 id="alternativflow-glossarbegriff">Alternativflow: Glossarbegriff</h2>
+<p>Glossarbegriffe brauchen eine etwas andere Rahmung, weil Nutzer hier oft Definitionen, Quellen oder Begriffsschärfen korrigieren.</p>
+<p>Formular-Kopf:</p>
+<pre><code class="language-text">Hinweis zum Glossarbegriff
+</code></pre>
+<p>Kontextanzeige:</p>
+<pre><code class="language-text">Begriff: [Glossarbegriff]
+</code></pre>
+<p>Platzhalter im Hinweisfeld:</p>
+<pre><code class="language-text">Was ist an der Erklärung unklar, unvollständig oder fachlich anders einzuordnen?
+</code></pre>
+<p>Der Rest bleibt identisch.</p>
+<h2 id="fehler-und-grenzfalle">Fehler- und Grenzfälle</h2>
+<h3 id="pflichtfeld-leer">Pflichtfeld leer</h3>
+<p>Meldung:</p>
+<pre><code class="language-text">Bitte schreib kurz dazu, was wir prüfen sollen.
+</code></pre>
+<h3 id="e-mail-ungultig">E-Mail ungültig</h3>
+<p>Meldung:</p>
+<pre><code class="language-text">Die E-Mail-Adresse sieht nicht vollständig aus. Du kannst sie korrigieren oder das Feld leer lassen.
+</code></pre>
+<p>Wichtig: Eine fehlerhafte E-Mail darf nicht den anonymen Hinweis blockieren, wenn der Nutzer das Feld löscht.</p>
+<h3 id="zu-schnell-abgesendet">Zu schnell abgesendet</h3>
+<p>Diese Meldung darf nicht technisch oder vorwurfsvoll klingen.</p>
+<pre><code class="language-text">Das Formular wurde sehr schnell abgeschickt. Bitte prüf deinen Hinweis kurz und sende ihn dann erneut.
+</code></pre>
+<h3 id="rate-limit">Rate-Limit</h3>
+<pre><code class="language-text">Es wurden gerade viele Hinweise in kurzer Zeit gesendet. Bitte versuch es später noch einmal.
+</code></pre>
+<h3 id="versandfehler">Versandfehler</h3>
+<pre><code class="language-text">Der Hinweis konnte gerade nicht gesendet werden. Bitte versuch es später noch einmal.
+</code></pre>
+<p>Optionaler Fallback für später:</p>
+<pre><code class="language-text">Alternativ kannst du uns den Hinweis per E-Mail schicken.
+</code></pre>
+<p>Der Fallback braucht erst dann eine konkrete Adresse, wenn die Projektadresse entschieden ist.</p>
+<h2 id="formularstruktur">Formularstruktur</h2>
+<p>Empfohlene Reihenfolge:</p>
+<ol>
+<li>Kontext der Textstelle oder des Abschnitts</li>
+<li>Hinweistext</li>
+<li>Quelle oder Link</li>
+<li>E-Mail für Rückmeldung</li>
+<li>Klarstellung zur Nicht-Veröffentlichung</li>
+<li>Absenden</li>
+</ol>
+<p>Nicht empfohlen:</p>
+<ul>
+<li>zuerst Kontaktdaten abfragen</li>
+<li>Kategorieauswahl erzwingen</li>
+<li>Captcha prominent zeigen</li>
+<li>mehrere Pflichtfelder</li>
+<li>langer Datenschutztext im Formular selbst</li>
+</ul>
+<p>Der Datenschutztext kann kurz im Formular stehen und auf die Datenschutzhinweise verweisen. Für den MVP reicht im Flow:</p>
+<pre><code class="language-text">Wenn du eine E-Mail-Adresse angibst, nutzen wir sie nur für die Rückmeldung zu diesem Hinweis.
+</code></pre>
+<h2 id="redaktionelle-folgekommunikation">Redaktionelle Folgekommunikation</h2>
+<p>Die Website-UX endet nach der Erfolgsmeldung. Wenn eine E-Mail-Adresse angegeben wurde, beginnt danach der Mail-Flow.</p>
+<h3 id="eingangsbestatigung">Eingangsbestätigung</h3>
+<p>Automatisch, nur bei freiwilliger E-Mail-Adresse:</p>
+<pre><code class="language-text">Danke für deine Rückmeldung.
+
+Wir haben deinen Hinweis zur Textstelle &quot;[Auszug]&quot; erhalten. Wir prüfen ihn redaktionell und fachlich. Dein Hinweis wird nicht automatisch veröffentlicht.
+</code></pre>
+<h3 id="ubernommen">Übernommen</h3>
+<pre><code class="language-text">Wir haben deinen Hinweis geprüft und den Abschnitt entsprechend angepasst. Danke, das hat die Seite besser gemacht.
+</code></pre>
+<h3 id="teilweise-ubernommen">Teilweise übernommen</h3>
+<pre><code class="language-text">Wir haben einen Teil deines Hinweises übernommen. Einen anderen Teil übernehmen wir aktuell nicht, weil unsere Prüfung hier zu einer anderen Einordnung kommt.
+</code></pre>
+<h3 id="nicht-ubernommen">Nicht übernommen</h3>
+<pre><code class="language-text">Wir haben deinen Hinweis geprüft, übernehmen ihn aktuell aber nicht.
+
+Grund: [kurze Begründung]
+</code></pre>
+<h2 id="zuganglichkeit">Zugänglichkeit</h2>
+<p>Der Flow darf nicht nur über Maus und Textauswahl funktionieren.</p>
+<p>Mindestanforderungen für die UX-Planung:</p>
+<ul>
+<li>Abschnitts-Icon ist per Tastatur erreichbar.</li>
+<li>Icon hat ein sprechendes Label, nicht nur ein Symbol.</li>
+<li>Formular kann mit Tastatur bedient und geschlossen werden.</li>
+<li>Fokus springt beim Öffnen in das Formular und nach dem Schließen sinnvoll zurück.</li>
+<li>Fehlertexte stehen direkt am betroffenen Feld.</li>
+<li>Erfolgsmeldung ist auch ohne visuelle Veränderung verständlich.</li>
+<li>Auf Mobile bleibt der Absenden-Button sichtbar erreichbar, ohne Text zu überdecken.</li>
+</ul>
+<h2 id="mvp-entscheidungen">MVP-Entscheidungen</h2>
+<p>Für die erste Umsetzung ist dieser Schnitt am saubersten:</p>
+<ul>
+<li>Mitwirkungs-Hinweis oben im Wissensbereich</li>
+<li>Abschnitts-Icon an ausgewählten, stabil identifizierten Bereichen</li>
+<li>Textauswahl-Button als Zusatzkomfort auf Desktop</li>
+<li>ein gemeinsames Formular für alle Einstiege</li>
+<li>Desktop als Modal oder Popover</li>
+<li>Mobile als Bottom Sheet oder vollbreites Modal</li>
+<li>E-Mail optional</li>
+<li>anonyme Hinweise erlaubt</li>
+<li>keine öffentliche Kommentaransicht</li>
+<li>keine Datenbank im MVP</li>
+<li>Bot-Schutz unsichtbar im Hintergrund</li>
+</ul>
+<h2 id="offene-ux-entscheidungen">Offene UX-Entscheidungen</h2>
+<ul>
+<li>Soll das Abschnitts-Icon auf Desktop dauerhaft sichtbar sein oder erst bei Hover/Fokus?</li>
+<li>Soll die Textauswahl-Funktion in der ersten Version sofort mitkommen oder erst nach dem Abschnitts-Icon?</li>
+<li>Wie prominent soll der Mitwirkungs-Hinweis auf Artikelseiten sein?</li>
+<li>Welche konkrete Redaktionsadresse bekommt die Formularmail?</li>
+<li>Soll nach übernommenen Hinweisen öffentlich ein kurzer Änderungsvermerk am Artikel erscheinen?</li>
+</ul>
+<h2 id="empfohlener-erster-umsetzungsschnitt">Empfohlener erster Umsetzungsschnitt</h2>
+<p>Der erste echte Umsetzungsschnitt sollte nicht mit Textmarkierung starten, sondern mit dem robusteren Abschnitts-Flow:</p>
+<ol>
+<li>Kommentierbare Abschnitte bekommen stabile IDs.</li>
+<li>Ausgewählte Abschnitte bekommen ein Hinweis-Icon.</li>
+<li>Das Icon öffnet das gemeinsame Formular.</li>
+<li>Das Formular sendet URL, Abschnitt, Hinweis, optionale Quelle und optionale E-Mail.</li>
+<li>Danach wird der Textmarkierungs-Button als Komfortfunktion ergänzt.</li>
+</ol>
+<p>Grund: Abschnitts-Feedback funktioniert auf Desktop und Mobile gleich, ist technisch stabiler und erklärt das System zuverlässig. Textmarkierung ist stark, aber als erster Einstieg anfälliger.</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

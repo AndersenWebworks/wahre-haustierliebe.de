@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Konzept: Redaktionelles Mitwirkungs-System - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a class="active" href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1 id="wahre-haustierliebe-konzept-redaktionelles-mitwirkungs-system">Wa(h)re Haustierliebe - Konzept: Redaktionelles Mitwirkungs-System</h1>
+        <p class="status">Stand 2026-06-06; übernommen aus dem ClautzGPT-Wiki am 9. Oktober 2026</p>
+
+<p>Stand: 2026-06-06<br />
+Status: Konzept, noch nicht implementiert<br />
+Projektbezug: wahrehaustierliebe.de<br />
+Weiterführend: <code>docs/wahre-haustierliebe-annotation-ux-flow.md</code><br />
+Interaktive Demo: <code>public/wahre-haustierliebe-annotation-demo.html</code></p>
+<h2 id="kurzfassung">Kurzfassung</h2>
+<p>Wa(h)re Haustierliebe soll keine normale Kommentarfunktion bekommen, sondern ein redaktionelles Mitwirkungs-System.</p>
+<p>Besucher können Textstellen, Glossarbegriffe oder Faktenboxen markieren und dazu Hinweise, Ergänzungen oder Korrekturen senden. Die Rückmeldung wird nicht öffentlich veröffentlicht. Erik und Annemarie prüfen den Hinweis fachlich und redaktionell und entscheiden, ob der Inhalt übernommen, teilweise übernommen oder nicht übernommen wird.</p>
+<p>Das System ist bewusst als Vertrauensangebot gedacht:</p>
+<blockquote>
+<p>Diese Wissensseite behauptet nicht, unfehlbar zu sein. Sie lädt fachliche Kritik ein, prüft sie ernsthaft und macht die Seite dadurch besser.</p>
+</blockquote>
+<h2 id="zielbild">Zielbild</h2>
+<p>Die Seite soll als lernende Wissensseite wirken. Besucher sollen verstehen:</p>
+<ul>
+<li>Inhalte sind redaktionell betreut, aber nicht abgeschlossen.</li>
+<li>Fachliche Hinweise, bessere Quellen, Korrekturen und Ergänzungen sind ausdrücklich willkommen.</li>
+<li>Nichts wird ungeprüft veröffentlicht.</li>
+<li>Erik und Annemarie behalten die redaktionelle Verantwortung.</li>
+<li>Wer freiwillig eine E-Mail-Adresse angibt, bekommt Rückmeldung zur Entscheidung.</li>
+<li>Wer anonym bleiben möchte, kann trotzdem mitwirken.</li>
+</ul>
+<p>Der Kern ist nicht Debatte, Reichweite oder Community-Show, sondern fachliche Verbesserung.</p>
+<h2 id="grundsatz">Grundsatz</h2>
+<p>Das System ist kein öffentlicher Kommentarbereich und kein Forum.</p>
+<p>Auf der Seite entsteht keine sichtbare Diskussion unter Artikeln. Rückmeldungen gehen privat an die Redaktion. Erst nach Prüfung kann ein Inhalt angepasst werden. Optional kann später öffentlich sichtbar werden, dass ein Abschnitt nach Leserhinweis aktualisiert wurde.</p>
+<p>Beispiel für eine spätere öffentliche Notiz:</p>
+<blockquote>
+<p>Dieser Abschnitt wurde nach einem Leserhinweis redaktionell geprüft und ergänzt.</p>
+</blockquote>
+<p>Für das MVP ist diese öffentliche Notiz noch nicht nötig.</p>
+<h2 id="mvp">MVP</h2>
+<p>Die erste Version soll ohne Backend auskommen. E-Mail reicht als Ablage und Arbeitskanal.</p>
+<h3 id="nutzerablauf">Nutzerablauf</h3>
+<ol>
+<li>Besucher liest einen Wissensartikel, Glossarbegriff oder Infokasten.</li>
+<li>Besucher markiert eine Textstelle oder klickt auf ein kleines Hinweis-Icon am Abschnitt.</li>
+<li>Ein kleines Formular öffnet sich direkt an der Stelle oder als ruhiges Modal.</li>
+<li>Das Formular enthält automatisch URL, Seitentitel, Abschnitt und markierten Text.</li>
+<li>Besucher schreibt den Hinweis.</li>
+<li>E-Mail-Adresse ist optional.</li>
+<li>Absenden ist anonym möglich.</li>
+<li>Die Redaktion erhält eine strukturierte E-Mail.</li>
+<li>Bei freiwilliger E-Mail-Adresse erhält der Besucher eine automatische Eingangsbestätigung.</li>
+<li>Weitere Rückmeldung läuft manuell per E-Mail.</li>
+</ol>
+<h3 id="formularfelder">Formularfelder</h3>
+<p>Pflicht:</p>
+<ul>
+<li>Hinweistext</li>
+</ul>
+<p>Automatisch befüllt:</p>
+<ul>
+<li>Seiten-URL</li>
+<li>Seitentitel</li>
+<li>Abschnitts-ID</li>
+<li>Überschrift oder Glossarbegriff</li>
+<li>markierter Text</li>
+<li>Zeitpunkt des Eingangs</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li>E-Mail-Adresse für Rückmeldung</li>
+<li>Quelle oder Link</li>
+<li>Art des Hinweises, falls später sinnvoll</li>
+</ul>
+<p>Die erste Version braucht keine komplizierte Kategorisierung. Ein freies Textfeld ist wichtiger als perfekte Struktur.</p>
+<h3 id="anonyme-nutzung">Anonyme Nutzung</h3>
+<p>Anonyme Nutzung muss möglich bleiben.</p>
+<p>Wenn keine E-Mail-Adresse angegeben wird, bekommt der Nutzer nur eine Danke-Meldung auf der Seite. Das muss klar formuliert sein:</p>
+<blockquote>
+<p>Danke, dein Hinweis ist angekommen. Wenn du keine E-Mail-Adresse angegeben hast, können wir dir später keine Rückmeldung schicken.</p>
+</blockquote>
+<p>Wenn eine E-Mail-Adresse angegeben wird, darf sie nur für die Rückmeldung zu diesem Hinweis genutzt werden.</p>
+<h2 id="nutzerfuhrung">Nutzerführung</h2>
+<p>Das System muss ohne lange Anleitung verstanden werden.</p>
+<h3 id="hinweis-im-wissensbereich">Hinweis im Wissensbereich</h3>
+<p>Vorschlag:</p>
+<blockquote>
+<p>Du findest eine Erklärung unklar, kennst eine bessere Quelle oder siehst einen Fehler? Markiere eine Textstelle und schick uns deinen Hinweis. Wir prüfen jede Rückmeldung redaktionell.</p>
+</blockquote>
+<h3 id="mikrotext-am-abschnitt">Mikrotext am Abschnitt</h3>
+<p>Mögliche Button- oder Tooltip-Texte:</p>
+<ul>
+<li>Hinweis geben</li>
+<li>Textstelle kommentieren</li>
+<li>Korrektur oder Ergänzung senden</li>
+</ul>
+<p>"Fehler melden" ist zu eng und klingt technischer. Besser ist eine Einladung zur Verbesserung.</p>
+<h3 id="erstbesucher-hinweis">Erstbesucher-Hinweis</h3>
+<p>Ein kleines, nicht störendes Hinweisfeld reicht:</p>
+<blockquote>
+<p>Diese Wissensseite darf mitlernen. Du kannst Textstellen markieren und uns Hinweise schicken.</p>
+</blockquote>
+<p>Kein großes Tutorial. Die Interaktion soll sich selbst erklären.</p>
+<h2 id="redaktioneller-workflow">Redaktioneller Workflow</h2>
+<p>Für den Anfang reicht E-Mail als Workflow.</p>
+<h3 id="statusmodell">Statusmodell</h3>
+<ul>
+<li>Eingegangen</li>
+<li>Wird geprüft</li>
+<li>Übernommen</li>
+<li>Teilweise übernommen</li>
+<li>Nicht übernommen</li>
+<li>Abgeschlossen</li>
+</ul>
+<p>Diese Status müssen im MVP noch nicht technisch gespeichert werden. Sie dienen als redaktionelle Arbeitslogik und spätere Backend-Vorbereitung.</p>
+<h3 id="entscheidungstypen">Entscheidungstypen</h3>
+<p>Übernommen:</p>
+<blockquote>
+<p>Wir haben deinen Hinweis geprüft und den Abschnitt entsprechend angepasst. Danke, das hat die Seite besser gemacht.</p>
+</blockquote>
+<p>Teilweise übernommen:</p>
+<blockquote>
+<p>Wir haben einen Teil deines Hinweises übernommen. Einen anderen Teil haben wir nicht übernommen, weil unsere Prüfung hier zu einer anderen Einordnung kommt.</p>
+</blockquote>
+<p>Nicht übernommen:</p>
+<blockquote>
+<p>Wir haben deinen Hinweis geprüft, übernehmen ihn aktuell aber nicht. Grund: ...</p>
+</blockquote>
+<p>Wichtig ist die Haltung: nachvollziehbar, nicht defensiv, aber auch nicht diskussionspflichtig ohne Ende.</p>
+<h2 id="e-mail-system">E-Mail-System</h2>
+<h3 id="mail-an-redaktion">Mail an Redaktion</h3>
+<p>Betreff:</p>
+<pre><code class="language-text">Wa(h)re Haustierliebe: Hinweis zu &quot;[Seitentitel]&quot;
+</code></pre>
+<p>Inhalt:</p>
+<pre><code class="language-text">Seite:
+https://wahrehaustierliebe.de/...
+
+Abschnitt:
+[Abschnitts-ID / Überschrift]
+
+Markierter Text:
+&quot;...&quot;
+
+Hinweis:
+&quot;...&quot;
+
+Quelle:
+[optional]
+
+Kontakt:
+[optional oder anonym]
+
+Eingang:
+[Zeitpunkt]
+</code></pre>
+<h3 id="eingangsbestatigung-an-nutzer">Eingangsbestätigung an Nutzer</h3>
+<p>Nur senden, wenn freiwillig eine E-Mail-Adresse angegeben wurde.</p>
+<p>Vorschlag:</p>
+<pre><code class="language-text">Danke für deine Rückmeldung.
+
+Wir haben deinen Hinweis zur Textstelle &quot;...&quot; erhalten. Wir prüfen ihn redaktionell und fachlich. Wenn wir entschieden haben, ob und wie wir deinen Hinweis übernehmen, melden wir uns bei dir.
+
+Dein Hinweis wird nicht automatisch veröffentlicht.
+</code></pre>
+<h2 id="bot-schutz">Bot-Schutz</h2>
+<p>Das System soll reibungsarm bleiben. Keine Accountpflicht, kein Login, kein schweres Captcha.</p>
+<p>Für das MVP reichen stille Schutzmechanismen:</p>
+<ul>
+<li>Honeypot-Feld, das echte Nutzer nicht sehen</li>
+<li>Mindestzeit zwischen Formularöffnung und Absenden</li>
+<li>Rate-Limit pro IP oder Session</li>
+<li>serverseitige Validierung</li>
+<li>maximale Textlänge</li>
+</ul>
+<p>Inhaltliche Filter sind am Anfang nicht nötig. Unsinn, Beleidigungen und unbrauchbare Hinweise dürfen ankommen. Verhindert werden muss vor allem automatisierte Mailflut.</p>
+<h2 id="technische-mvp-architektur">Technische MVP-Architektur</h2>
+<h3 id="frontend">Frontend</h3>
+<ul>
+<li>Textauswahl erkennen</li>
+<li>kleines Hinweis-Icon nach Auswahl anzeigen</li>
+<li>Formular oder Modal öffnen</li>
+<li>URL, Titel, Abschnitts-ID und markierten Text übernehmen</li>
+<li>Pflichtfeld für Hinweistext</li>
+<li>optionale E-Mail-Adresse</li>
+<li>klare Erfolgsmeldung nach Absenden</li>
+</ul>
+<h3 id="html-struktur">HTML-Struktur</h3>
+<p>Kommentierbare Inhalte brauchen stabile IDs.</p>
+<p>Beispiele:</p>
+<pre><code class="language-html">&lt;section id=&quot;hund-auto-hitze-risiko&quot; data-feedback-section=&quot;Hund im Auto: Risiko&quot;&gt;
+  ...
+&lt;/section&gt;
+</code></pre>
+<p>Oder für Glossar:</p>
+<pre><code class="language-html">&lt;article id=&quot;glossar-taurin&quot; data-feedback-section=&quot;Glossar: Taurin&quot;&gt;
+  ...
+&lt;/article&gt;
+</code></pre>
+<p>Wichtig ist Stabilität. Wenn Texte später geändert werden, muss ein alter Hinweis trotzdem noch sinnvoll zugeordnet werden können.</p>
+<h3 id="server">Server</h3>
+<ul>
+<li>POST-Endpunkt für Hinweise</li>
+<li>Bot-Schutz prüfen</li>
+<li>Mail an Redaktion senden</li>
+<li>bei freiwilliger E-Mail automatische Eingangsbestätigung senden</li>
+<li>keine öffentliche Speicherung</li>
+<li>keine Datenbank im MVP</li>
+</ul>
+<h3 id="speicherung">Speicherung</h3>
+<p>Die E-Mail ist im MVP die Ablage.</p>
+<p>Optional kann später zusätzlich eine einfache lokale JSON- oder SQLite-Ablage entstehen. Das ist aber erst sinnvoll, wenn tatsächlich genug Hinweise kommen oder die manuelle E-Mail-Ablage unübersichtlich wird.</p>
+<h2 id="spatere-ausbaustufe">Spätere Ausbaustufe</h2>
+<p>Wenn Rückmeldungen zunehmen, wird ein kleines Review-Backend sinnvoll.</p>
+<p>Funktionen:</p>
+<ul>
+<li>Liste aller Hinweise</li>
+<li>Filter nach Status</li>
+<li>Originalstelle, URL, Abschnitt, Kommentar, Quelle, Kontakt</li>
+<li>interne Notizen</li>
+<li>Entscheidung: übernehmen, teilweise übernehmen, ablehnen</li>
+<li>Mailvorlagen</li>
+<li>Änderungsverlauf</li>
+<li>Link zum betroffenen Artikel</li>
+<li>optional öffentliche Aktualisierungsnotiz</li>
+</ul>
+<p>Das Backend wäre kein Community-System, sondern ein redaktionelles Arbeitsinstrument.</p>
+<h2 id="risiken">Risiken</h2>
+<h3 id="erwartungsmanagement">Erwartungsmanagement</h3>
+<p>Wenn eine Rückmeldung versprochen wird, muss sie auch kommen. Daher gilt:</p>
+<ul>
+<li>Rückmeldung nur versprechen, wenn eine E-Mail-Adresse angegeben wurde.</li>
+<li>Bearbeitungszeit nicht zu konkret versprechen.</li>
+<li>Nicht suggerieren, dass jeder Hinweis übernommen wird.</li>
+</ul>
+<h3 id="datenschutz">Datenschutz</h3>
+<p>Anonymität und freiwillige E-Mail müssen sauber getrennt sein.</p>
+<ul>
+<li>E-Mail-Adresse nicht zur Pflicht machen.</li>
+<li>E-Mail-Adresse nur für diesen Hinweis verwenden.</li>
+<li>Keine öffentliche Anzeige von Nutzerhinweisen.</li>
+<li>Keine versteckte Newsletter- oder Kontaktlisten-Logik.</li>
+</ul>
+<h3 id="redaktionelle-last">Redaktionelle Last</h3>
+<p>Auch wenige Hinweise können fachlich aufwendig sein. Deshalb braucht es einfache Antwortkategorien und die klare Möglichkeit, Hinweise begründet nicht zu übernehmen.</p>
+<h3 id="missverstandnis-als-kommentarbereich">Missverständnis als Kommentarbereich</h3>
+<p>Die Oberfläche muss klar machen:</p>
+<blockquote>
+<p>Dein Hinweis geht an die Redaktion und wird geprüft. Er erscheint nicht automatisch auf der Seite.</p>
+</blockquote>
+<h2 id="offene-entscheidungen">Offene Entscheidungen</h2>
+<ul>
+<li>Soll das Hinweis-Icon nur nach Textmarkierung erscheinen oder zusätzlich dauerhaft an bestimmten Abschnitten?</li>
+<li>Soll das Formular inline erscheinen oder als Modal?</li>
+<li>Welche E-Mail-Adresse ist der Empfänger für Redaktionshinweise?</li>
+<li>Soll es eine separate Absenderadresse für automatische Bestätigungen geben?</li>
+<li>Sollen Hinweise später zusätzlich lokal gespeichert werden?</li>
+<li>Soll eine öffentliche "nach Hinweis aktualisiert"-Notiz von Anfang an vorbereitet, aber deaktiviert bleiben?</li>
+</ul>
+<h2 id="erste-technische-prioritat">Erste technische Priorität</h2>
+<p>Die wichtigste Architekturentscheidung ist die frühe Vergabe stabiler Abschnitts-IDs.</p>
+<p>Ohne stabile IDs wird das spätere Zuordnen von Rückmeldungen schmutzig, sobald Artikel umgeschrieben, gekürzt oder erweitert werden. Deshalb sollten alle künftigen Wissensartikel, Glossarbegriffe und Faktenboxen von Anfang an mit kommentierbaren, stabilen IDs geplant werden.</p>
+<h2 id="tragender-satz">Tragender Satz</h2>
+<blockquote>
+<p>Wa(h)re Haustierliebe ist eine redaktionell betreute Wissensseite, die fachliche Hinweise ausdrücklich einlädt. Besucher können Textstellen markieren und anonym oder mit freiwilliger E-Mail-Adresse Rückmeldungen senden. Hinweise werden nicht automatisch veröffentlicht, sondern von Erik und Annemarie geprüft, eingeordnet und gegebenenfalls eingearbeitet.</p>
+</blockquote>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
