@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stolperfallen - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a class="active" href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Stolperfallen</h1>
+        <p class="status">Stand 9. Oktober 2026, am Code und an der Live-Seite geprüft</p>
+
+        <p>Hier steht, was bei Wa(h)re Haustier(liebe) schon Zeit gekostet hat oder leicht schiefgeht. Vor jedem Build, jedem Commit mit generierten Dateien und jedem Push einmal durchlesen. Jeder Eintrag sagt, was passiert, wie es richtig geht und wo es belegt ist.</p>
+
+        <h2 id="veroeffentlichung">Veröffentlichung</h2>
+        <ul class="rule-list">
+          <li><strong>Push heißt live.</strong> Jeder Push auf <code>main</code> startet den Pages-Workflow. Es gibt keine Testumgebung dazwischen. Auch reine <code>docs/</code>-Commits lösen einen Deploy aus, ändern die Website aber nicht.<br><span class="source">Quelle: <code>.github/workflows/pages.yml</code> (<code>on: push: branches: main</code>)</span></li>
+          <li><strong>Alles in <code>pwa/</code> und <code>assets/</code> ist öffentlich.</strong> Das Artefakt-Skript kopiert beide Ordner vollständig. Deshalb sind <code>pwa/PFLEGE.md</code>, <code>assets/IMAGE-LICENSES.md</code>, <code>assets/images/optimized/README.md</code> und <code>pwa/data/questions.json</code> live abrufbar (HTTP 200 am 9. Oktober 2026). Interne Notizen gehören nach <code>docs/</code>.<br><span class="source">Quelle: <code>tools/prepare-pages-artifact.mjs</code> (<code>fixedPublicPaths</code>); HTTP-Abrufe am 9. Oktober 2026</span></li>
+          <li><strong>Im Workflow wird nicht gebaut.</strong> GitHub prüft und veröffentlicht nur, was committet ist. Wer die Quelle ändert und den Build vergisst, veröffentlicht den alten Stand; wer generierte Dateien ändert und die Quelle nicht, verliert die Änderung beim nächsten Build. Am 30. September 2026 musste deshalb die Quelle auf den veröffentlichten Stand nachgezogen werden.<br><span class="source">Quelle: <code>.github/workflows/pages.yml</code>; Commit <code>81492f4</code></span></li>
+          <li><strong>Seite fehlt in einer der beiden Listen.</strong> Steht eine Seite in <code>ai/pages.json</code>, aber nicht in <code>sitemap.xml</code> oder umgekehrt, bricht das Artefakt-Skript ab und nichts wird veröffentlicht. Beide Dateien kommen aus dem Build; nicht von Hand ergänzen.<br><span class="source">Quelle: <code>tools/prepare-pages-artifact.mjs</code> (<code>getPagePublicPaths()</code>)</span></li>
+          <li><strong>Nach jedem Build den Diff prüfen</strong>, besonders <code>robots.txt</code> (PWA-Sperre) und <code>sitemap.xml</code>.<br><span class="source">Quelle: <code>docs/quiz-handoff.md</code> (Abschnitt „Erkenntnisse für die Weiterarbeit“)</span></li>
+        </ul>
+
+        <h2 id="build">Build</h2>
+        <ul class="rule-list">
+          <li><strong>Build braucht ClautzGPT daneben.</strong> Playwright wird aus <code>../ClautzGPT/node_modules/playwright</code> geladen. Fehlt es, bricht der Build beim Vorrendern ab. Im Repo gibt es keine <code>package.json</code>.<br><span class="source">Quelle: <code>tools/playwright-module.mjs</code></span></li>
+          <li><strong><code>lastmod</code> ändert sich nicht von selbst.</strong> Jede Seite braucht ein eigenes <code>lastmod</code> in ihrer Definition, sonst steht <code>2026-08-25</code> in der Sitemap (64 von 77 Einträgen am 9. Oktober 2026). Nach inhaltlichen Änderungen das Datum in <code>tools/build-static-pages.mjs</code> mitziehen.<br><span class="source">Quelle: <code>tools/build-static-pages.mjs</code> (<code>const lastmod = process.env.SEO_LASTMOD || '2026-08-25'</code>); Auszählung von <code>sitemap.xml</code></span></li>
+          <li><strong>Handgepflegte Seiten werden nicht gebaut.</strong> <code>katzen/kaetzchen-tierarzt/</code> steht in <code>handwrittenPages</code>: Sitemap, <code>llms*</code> und <code>/ai</code> nimmt der Build mit, HTML und Social-Bild nicht. Änderungen am Design kommen dort nicht automatisch an.<br><span class="source">Quelle: <code>tools/build-static-pages.mjs</code> (<code>handwrittenPages</code>), <code>README.md</code></span></li>
+          <li><strong><code>slug/index.html</code> nicht „aufräumen“.</strong> Die Schreibweise mit <code>index.html</code> ist Absicht und überall einheitlich.<br><span class="source">Quelle: <code>README.md</code> (Aktueller Stand)</span></li>
+        </ul>
+
+        <h2 id="bilder">Bilder</h2>
+        <ul class="rule-list">
+          <li><strong>Bild schon vergeben?</strong> Vor jedem neuen Bild in <code>assets/image-credits.json</code> und in <code>docs/social/</code> nachsehen. Auf der Website sind 23 Bilder mehrfach eingesetzt; das ist Altbestand, kein Vorbild.<br><span class="source">Quelle: <a href="bilder-und-nachweise.html#mehrfach">Bilder und Bildnachweise</a></span></li>
+          <li><strong><code>usedFor</code> stimmt nicht vollständig.</strong> Die Tabelle nennt nicht alle Seiten, auf denen ein Bild steht. Für die Frage „wo wird dieses Bild verwendet?“ die erzeugten Seiten durchsuchen.<br><span class="source">Quelle: Abgleich am 9. Oktober 2026, etwa <code>dog-resting-under-table</code> auf <code>hunde/stadtfest-rummel/</code></span></li>
+          <li><strong><code>IMAGE-LICENSES.md</code> ist veraltet.</strong> Stand 3. Juni 2026; maßgeblich ist <code>image-credits.json</code>.<br><span class="source">Quelle: <code>assets/IMAGE-LICENSES.md</code></span></li>
+        </ul>
+
+        <h2 id="quiz">Quiz</h2>
+        <ul class="rule-list">
+          <li><strong>Falschantwort, die eigentlich richtig ist.</strong> Der häufigste Fehler beim Fragenschreiben ist ein Distraktor, den die Quellseite empfiehlt. Jede Frage gegen ihre Seite prüfen lassen.<br><span class="source">Quelle: <code>docs/quiz-handoff.md</code>, <code>tools/quiz/README.md</code></span></li>
+          <li><strong>Sol-Läufe per <code>codex exec</code> mit leerem stdin starten</strong> (<code>&lt; /dev/null</code>, so in <code>tools/quiz/sol.sh</code>), sonst hängt der Lauf. Die Meldung „426 Upgrade Required“ am Anfang ist harmlos.<br><span class="source">Quelle: <code>docs/quiz-handoff.md</code></span></li>
+          <li><strong><code>questions.json</code> ist tot.</strong> Die App lädt nur <code>questions.js</code>. Die JSON-Datei liegt trotzdem öffentlich.<br><span class="source">Quelle: <code>pwa/PFLEGE.md</code></span></li>
+          <li><strong>Seite umbenannt, Fragen vergessen.</strong> Jede Frage hängt an einem <code>wikiPath</code>. <code>node tools/quiz/merge.mjs</code> meldet Pfade, die es nicht mehr gibt.<br><span class="source">Quelle: <code>pwa/PFLEGE.md</code> (Quellenpflicht), <code>tools/quiz/README.md</code></span></li>
+        </ul>
+
+        <h2 id="repo">Repo-Inhalt</h2>
+        <ul class="rule-list">
+          <li><strong>Fremdes Material im Repo.</strong> <code>tools/</code> enthält HTML-Seiten einer Tierkommunikations-Website von Annemarie (<code>index.html</code>, <code>tierkommunikation.html</code>, <code>agb.html</code>, <code>preise.html</code> und weitere), dazu liegen <code>Ivo/</code>, <code>.tmp-ivo-rejection.patch</code>, <code>tmp-*.html</code>, <code>tmp-test-file.txt</code> und <code>test-large-content.txt</code> im Repo. Sie kamen mit dem Sammel-Commit <code>566b6e0</code> vom 28. August 2026 (Tierkommunikation, <code>Ivo/</code>, Patch) und mit dem Commit <code>a6fcef6</code> vom 8. September 2026 (<code>tmp-*</code>- und Testdateien). Nichts davon wird veröffentlicht. Nicht als Teil der Website behandeln und nicht ungefragt löschen.<br><span class="source">Quelle: <code>git ls-files</code>, <code>git log</code> am 9. Oktober 2026</span></li>
+          <li><strong>Themenbacklog nicht im Repo.</strong> <code>docs/wahre-haustierliebe-themenbacklog.md</code> ist ignoriert und existiert nur lokal. Ein Klon des Repos hat ihn nicht.<br><span class="source">Quelle: <code>.gitignore</code></span></li>
+          <li><strong>Alte Kopien in <code>.claude/worktrees/</code>.</strong> Dort liegen ignorierte Arbeitskopien früherer Sitzungen mit eigenen <code>index.html</code>. Bei Suchen über das Repo kommen sie mit; Treffer dort zählen nicht.<br><span class="source">Quelle: Suche am 9. Oktober 2026; <code>.gitignore</code> (<code>.claude/</code>)</span></li>
+          <li><strong>Fremde offene Dateien beim Commit.</strong> Neben eigener Arbeit liegen oft ungetrackte Dateien aus Annemaries Arbeit, etwa in <code>docs/social/</code>. Nur die eigenen Dateien gezielt stagen.<br><span class="source">Quelle: <code>git status</code> am 9. Oktober 2026</span></li>
+        </ul>
+
+        <h2 id="pruefen">Prüfen</h2>
+        <ul class="rule-list">
+          <li><strong>PETA-Seiten lassen sich nicht automatisch lesen.</strong> Abruf und Webchat-Browser bekommen HTTP 403. Petitionsstände von PETA im eigenen Browser prüfen.<br><span class="source">Quelle: Abrufversuche am 9. Oktober 2026</span></li>
+          <li><strong>Instagram-Hilfeseiten sind nicht maschinell lesbar.</strong> Der Abruf liefert nur „Help Center“. Für Plattformregeln Fachpresse mit Datum heranziehen und das kennzeichnen.<br><span class="source">Quelle: Abruf <code>https://help.instagram.com/351460621611097</code> am 9. Oktober 2026</span></li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

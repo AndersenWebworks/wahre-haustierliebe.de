@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilder und Bildnachweise - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a class="active" href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Bildablauf und Bildnachweise</h1>
+        <p class="status">Stand 9. Oktober 2026, an <code>assets/</code> und den Seiten geprüft</p>
+
+        <p>Alle Tierfotos auf der Website und auf Instagram sind echte, frei lizenzierte Fotos, meist von Wikimedia Commons, mit sauberem Nachweis. KI-Bilder werden nicht verwendet, wenn ein echtes freies Foto zu haben ist. Diese Seite beschreibt, wie ein Bild auf die Seite kommt, wo der Nachweis steht und wo der heutige Bestand von den Regeln abweicht.</p>
+
+        <h2 id="regeln">Regeln</h2>
+        <ul class="rule-list">
+          <li><strong>Echte freie Fotos.</strong> Bevorzugt Wikimedia Commons, gemeinfrei oder CC, jeweils mit Prüfung der konkreten Dateiseite. Ohne belegbare Quelle und passende Lizenz kommt kein Bild auf die Seite.</li>
+          <li><strong>Jedes Commons-Bild nur einmal.</strong> Ein Bildmotiv wird nur an einer Stelle eingesetzt. Für Instagram wird das eingehalten; auf der Website nicht, siehe <a href="#mehrfach">Mehrfachverwendung</a>.</li>
+          <li><strong>Keine erkennbaren Menschen.</strong> Seit 3. Juni 2026 keine bewusst eingesetzten Bilder mit Gesichtern, Körpern oder Händen. Neue Personenmotive brauchen eine eigene Prüfung der Persönlichkeitsrechte und eine Freigabe.</li>
+          <li><strong>Lokal und klein.</strong> Bilder liegen lokal im Repo, nicht per Hotlink. Seiten zeigen verkleinerte Fassungen (lange Kante etwa 960 px) aus <code>assets/images/optimized/</code>; die Originalkopien bleiben für Social-Karten und Herkunftsnachweis.</li>
+          <li><strong>Header-Bilder auf Unterseiten</strong> sollen möglichst je Seite verschieden sein und für PageSpeed passend groß.</li>
+        </ul>
+        <p class="source">Quelle: <code>README.md</code> (Abschnitt „Bilder und Credits“), <code>assets/IMAGE-LICENSES.md</code>, <code>assets/images/optimized/README.md</code>; Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitt „Instagram-Bildstandard“, Lernnotizen zu Commons-Bildern und Header-Bildern)</p>
+
+        <h2 id="website">Ablauf für ein neues Website-Bild</h2>
+        <ol>
+          <li>Passende Datei auf Commons finden und die Dateiseite prüfen: Urheber, Lizenz, Motiv. Alt-Text oder Dateiname allein belegen weder Motiv noch Rechte.</li>
+          <li>Prüfen, ob die Datei schon irgendwo verwendet wird (<code>assets/image-credits.json</code> und die Instagram-Ordner in <code>docs/social/</code>).</li>
+          <li>Lokale Kopie in <code>assets/images/</code> ablegen.</li>
+          <li>Eintrag in <code>assets/image-credits.json</code> mit <code>id</code>, <code>localPath</code>, <code>fileTitle</code>, <code>sourceUrl</code>, <code>originalUrl</code>, <code>author</code>, <code>license</code>, <code>licenseUrl</code> (außer bei Public Domain und Markenassets), <code>usedFor</code>, <code>alt</code>, <code>modifications</code>.</li>
+          <li>Build ausführen: Er erzeugt die verkleinerte Fassung und die Social-Karte. <code>tools/image-layout-audit.mjs</code> und <code>tools/static-pages-audit.mjs</code> prüfen fehlende Assets und Bildnachweise.</li>
+        </ol>
+        <p>Auf jeder Inhaltsseite steht im Footer der einklappbare Block „Bildnachweise anzeigen“. Er darf kürzer sein als <code>image-credits.json</code>, aber keine sichtbar verwendete Bildquelle verschweigen.</p>
+        <p class="source">Quelle: <code>assets/IMAGE-LICENSES.md</code> (Abschnitte „Pflegevertrag“, „Sichtbare Nachweise“), <code>README.md</code> (Abschnitt „Audits“)</p>
+
+        <h2 id="bestand">Bestand</h2>
+        <table>
+          <thead><tr><th>Was</th><th>Stand 9. Oktober 2026</th></tr></thead>
+          <tbody>
+            <tr><td>Einträge in <code>assets/image-credits.json</code></td><td>30, davon 2 Markenassets (<code>wahre-haustierliebe-logo</code>, <code>wahre-haustierliebe-mark</code>)</td></tr>
+            <tr><td>Bilddateien in <code>assets/images/</code></td><td>30, jede mit Eintrag, jeder Eintrag mit Datei</td></tr>
+            <tr><td>Verkleinerte Fassungen in <code>assets/images/optimized/</code></td><td>33 Dateien einschließlich README</td></tr>
+            <tr><td>Social-Karten in <code>assets/social/</code></td><td>74</td></tr>
+            <tr><td>Lizenzen</td><td>CC BY 2.0 (3), CC BY 3.0 (1), CC BY 4.0 (3), CC BY-SA 2.0 (3), CC BY-SA 2.5 (1), CC BY-SA 3.0 (5), CC BY-SA 4.0 (5), CC0 (4, dazu 1 als „CC0 1.0“ geschrieben), FAL (1), Public domain (1), Markenasset (2)</td></tr>
+          </tbody>
+        </table>
+        <p><code>assets/IMAGE-LICENSES.md</code> nennt noch den Stand vom 3. Juni 2026 (27 Bilder, ohne CC BY 3.0) und eine längst archivierte Vorschauadresse. Maßgeblich ist <code>image-credits.json</code>.</p>
+        <p class="source">Quelle: Auszählung von <code>assets/image-credits.json</code> und <code>assets/images/</code> am 9. Oktober 2026</p>
+
+        <h2 id="mehrfach">Mehrfachverwendung auf der Website</h2>
+        <p>Laut <code>usedFor</code> laufen 23 Inhaltsbilder an mehreren Stellen, oft als Titelbild mehrerer Unterseiten. Beispiele:</p>
+        <table>
+          <thead><tr><th>Bild</th><th>Einsatzorte laut <code>usedFor</code>, ergänzt um Funde im HTML</th></tr></thead>
+          <tbody>
+            <tr><td><code>vet-office-with-dog</code> (CC0)</td><td>Startseite (Notfall-Karte), <code>notfall/</code>, <code>wissen/</code>, <code>hunde/kastration/</code>, <code>hunde/gesundheit/</code>, <code>voegel/krankheit-erkennen/</code>, laut HTML zusätzlich <code>hitzefalle-auto/</code> und <code>notfall/tierarzt-notdienst/</code></td></tr>
+            <tr><td><code>dog-resting-under-table</code> (CC BY 2.0)</td><td>Startseite, <code>hunde/hund-im-buero/</code>, <code>hunde/soziale-beduerfnisse/</code>, <code>hunde/allein-zu-hause/</code>, <code>hunde/hofhaltung-und-zwinger/</code>, laut HTML zusätzlich <code>hunde/stadtfest-rummel/</code></td></tr>
+            <tr><td><code>tierheim-hund</code> (CC BY 4.0)</td><td>Startseiten-Hero, <code>adoption/</code>, <code>petitionen/</code>, <code>hunde/entscheidung/</code>, Unterstützungskarte</td></tr>
+            <tr><td><code>horse-herd-pasture</code> (CC0)</td><td>Startseite, <code>pferde/</code>, <code>pferde/herde/</code>, <code>pferde/kosten/</code>, <code>pferde/entscheidung/</code></td></tr>
+            <tr><td><code>vogel-wellensittich</code> (CC BY-SA 4.0)</td><td><code>wissen/</code>, <code>voegel/uv-licht/</code>, <code>voegel/partnerersatz/</code>, <code>voegel/qualzucht/</code></td></tr>
+          </tbody>
+        </table>
+        <p>Die vollständige Liste ergibt sich aus <code>usedFor</code>. Dabei ist <code>usedFor</code> selbst unvollständig: Bei mindestens zwei Bildern zeigen die erzeugten Seiten mehr Einsatzorte als die Tabelle.</p>
+        <p class="source">Quelle: Auswertung von <code>assets/image-credits.json</code> (<code>usedFor</code>) und Suche nach den Dateinamen in den erzeugten <code>*/index.html</code> am 9. Oktober 2026</p>
+
+        <h2 id="instagram">Bilder für Instagram</h2>
+        <ul class="rule-list">
+          <li>Gleiche Herkunftsregeln wie für die Website, und jedes Motiv nur einmal: Die Bilder des Kaninchen-Preis-Decoders sind ausdrücklich keine Website-Bilder.</li>
+          <li>Der Nachweis gehört in die Caption oder als ersten Kommentar, in Kurzform „Bilder: Urheber/Lizenz; Urheber/Lizenz; …“. Im Beitragsordner steht zusätzlich je Folie Titel, Urheber, Lizenz und Commons-Link.</li>
+          <li>Ablage je Beitrag unter <code>docs/social/JJJJ-MM-TT-thema/</code>: <code>post.md</code> mit Folien, Caption, Alt-Text, Nachweisen und Zahlenbelegen, Bilder unter <code>bilder/</code>.</li>
+          <li>Format: Früher galt 1080 × 1080 px PNG als Standard (Textgrafik oder dezenter Text über Foto). Der Kaninchen-Preis-Decoder nutzt dagegen JPG-Fotos, lokal auf höchstens 1920 px Breite verkleinert. Welcher Standard künftig gilt, ist offen.</li>
+        </ul>
+        <p class="source">Quelle: <code>docs/social/2026-10-14-kaninchen-preis-decoder/post.md</code> (Abschnitt „Bildnachweis“); Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitt „Instagram-Bildstandard“, Lernnotiz zur Nachweis-Kurzform)</p>
+
+        <h2 id="offen">Offene Punkte</h2>
+        <ul>
+          <li>Gilt die Regel „jedes Commons-Bild nur einmal“ auch rückwirkend für die Website? Dann bräuchten rund 23 Bilder Ersatz oder neue Titelbilder.</li>
+          <li><code>usedFor</code> in <code>image-credits.json</code> an die erzeugten Seiten angleichen.</li>
+          <li><code>assets/IMAGE-LICENSES.md</code> ist veraltet und zudem öffentlich abrufbar.</li>
+          <li>Bildformat für Instagram festlegen.</li>
+          <li>Im Ordner des Kaninchen-Preis-Decoders liegen seit dem 7. Oktober 2026 ungetrackte Ersatzbilder (<code>folie-3-neu.jpg</code>, <code>folie-4-neu.jpg</code>, <code>folie-6-neu.jpg</code>) und ein ZIP aus Annemaries Arbeit. <code>folie-6-neu.jpg</code> ist byte-gleich mit dem bisherigen <code>folie-4.jpg</code> („Bunny is closed up“, Lottie, CC0). Werden die neuen Folien eingesetzt, muss der Bildnachweis in <code>post.md</code> für Folie 3, 4 und 6 nachgezogen werden. Die Dateien gehören zu Annemaries laufender Arbeit und wurden nicht angefasst.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

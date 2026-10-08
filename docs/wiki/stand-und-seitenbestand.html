@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stand und Seitenbestand - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a class="active" href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Stand und Seitenbestand</h1>
+        <p class="status">Stand 9. Oktober 2026, am Repo und an der Live-Seite geprüft</p>
+
+        <p>Wa(h)re Haustier(liebe) ist eine private, werbefreie Aufklärungsseite über Haustierhaltung. Sie ist als wachsendes Lexikon gebaut: wenige Übersichtsseiten (Hubs) für Tierarten und Grundsatzthemen, darunter echte Unterseiten zu einzelnen Fragen. Diese Seite hält fest, welche Seiten es gibt, welche Sonderbausteine wo stecken und was bewusst nicht öffentlich auffindbar ist.</p>
+
+        <h2 id="zahlen">Zahlen auf einen Blick</h2>
+        <table>
+          <thead><tr><th>Was</th><th>Stand 9. Oktober 2026</th></tr></thead>
+          <tbody>
+            <tr><td>Öffentliche Seiten in <code>ai/pages.json</code> und <code>sitemap.xml</code></td><td>77, beide Listen deckungsgleich</td></tr>
+            <tr><td>Live-Sitemap gegen lokale Sitemap</td><td>byte-gleich (Abruf 9. Oktober 2026)</td></tr>
+            <tr><td>Letzte Auslieferung laut GitHub Pages</td><td><code>Last-Modified: Wed, 07 Oct 2026 15:20:09 GMT</code></td></tr>
+            <tr><td>Lokaler Stand gegen GitHub</td><td><code>main</code> ist 2 Commits voraus (Instagram-Entwurf Kaninchen-Preis-Decoder, Wiki-Grundstock); beide betreffen nur <code>docs/</code></td></tr>
+            <tr><td>Glossarbegriffe</td><td>118 (<code>tools/glossary-data.mjs</code>, <code>glossar/index.html</code>)</td></tr>
+            <tr><td>Rassekrankheiten-Lexikon</td><td>20 Einträge, 44 Quellenlinks</td></tr>
+            <tr><td>Laufende Petitionen auf der Seite</td><td>4</td></tr>
+            <tr><td>Quizfragen in der PWA</td><td>280, siehe <a href="pwa-und-quiz.html">PWA und Quiz</a></td></tr>
+          </tbody>
+        </table>
+        <p class="source">Quelle: <code>ai/pages.json</code>, <code>sitemap.xml</code>, <code>git status -sb</code>; Abruf <code>https://wahre-haustierliebe.de/sitemap.xml</code> und Kopfzeilen der Startseite am 9. Oktober 2026</p>
+
+        <h2 id="hubs">Hubs und Grundsatzseiten</h2>
+        <p>Die Hauptnavigation führt zu Übersichtsseiten. Tierarten-Hubs sind kürzer geworden und verweisen auf Unterseiten; die ausgelagerten Unterseiten sollen die früheren Texte vollständig enthalten (siehe <a href="entscheidungen.html#struktur">Entscheidungen</a>).</p>
+        <table>
+          <thead><tr><th>Bereich</th><th>Seiten</th></tr></thead>
+          <tbody>
+            <tr><td>Einstieg</td><td><code>/</code>, <code>mensch/</code> (Passt ein Tier in dein Leben?), <code>selbsttest/</code>, <code>noch-nicht-bereit/</code></td></tr>
+            <tr><td>Tierarten-Hubs</td><td><code>hunde/</code>, <code>katzen/</code>, <code>voegel/</code>, <code>kleintiere/</code>, <code>exoten/</code>, <code>pferde/</code></td></tr>
+            <tr><td>Grundsatzthemen</td><td><code>kastration/</code>, <code>qualzucht/</code>, <code>adoption/</code>, <code>zucht-und-vermehrung/</code>, <code>realhaltung/</code>, <code>wildtierhaltung/</code>, <code>ernaehrung-taurin/</code></td></tr>
+            <tr><td>Notfall und Alltag</td><td><code>notfall/</code> mit <code>notfall/tierarzt-notdienst/</code>, <code>notfallplan-haustier/</code>, <code>hitzefalle-auto/</code>, <code>tiere-und-urlaub/</code></td></tr>
+            <tr><td>Wissen</td><td><code>wissen/</code> (Tiermythen und Homöopathie), <code>glossar/</code></td></tr>
+            <tr><td>Mitwirkung</td><td><code>mitmachen/</code>, <code>petitionen/</code>, <code>kontakt/</code></td></tr>
+            <tr><td>Pflichtseiten</td><td><code>impressum/</code>, <code>datenschutz/</code></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="tierbereiche">Tierbereiche und Unterseiten</h2>
+        <table>
+          <thead><tr><th>Hub</th><th>Unterseiten</th></tr></thead>
+          <tbody>
+            <tr><td><code>hunde/</code><br>12 Seiten</td><td><code>abgabealter</code>, <code>hund-im-buero</code>, <code>soziale-beduerfnisse</code>, <code>stadtfest-rummel</code>, <code>garten-auslauf</code>, <code>spuren-erkennen</code>, <code>allein-zu-hause</code>, <code>kosten</code> (Preis-Decoder), <code>kastration</code>, <code>hofhaltung-und-zwinger</code>, <code>gesundheit</code>, <code>entscheidung</code></td></tr>
+            <tr><td><code>katzen/</code><br>9 Seiten</td><td><code>sozialverhalten</code>, <code>wohnungshaltung</code>, <code>kastration</code>, <code>stilles-leiden</code>, <code>kosten</code> (Preis-Decoder), <code>streunerkatzen</code>, <code>entscheidung</code> (Kätzchen-Lexikon), <code>kaetzchen-tierarzt</code> (handgepflegt), <code>wildkatzenbaby-gefunden</code></td></tr>
+            <tr><td><code>voegel/</code><br>12 Seiten</td><td><code>schwarmhaltung</code>, <code>uv-licht</code>, <code>kuechenluft-teflon</code>, <code>freiflug</code>, <code>partnerersatz</code>, <code>ruhe-schlaf</code>, <code>ernaehrung</code>, <code>alltag-kosten-betreuung</code>, <code>zucht-eier</code>, <code>krankheit-erkennen</code>, <code>qualzucht</code>, <code>entscheidung</code></td></tr>
+            <tr><td><code>kleintiere/</code><br>6 Seiten</td><td><code>kaninchen</code>, <code>kaninchen-kosten</code> (Preis-Decoder, seit 7. Oktober 2026), <code>meerschweinchen</code>, <code>hamster</code>, <code>ratten</code>, <code>degus-chinchillas</code></td></tr>
+            <tr><td><code>exoten/</code><br>3 Seiten</td><td><code>reptilien</code>, <code>schildkroeten</code>, <code>fische</code></td></tr>
+            <tr><td><code>pferde/</code><br>6 Seiten</td><td><code>herde</code>, <code>platzbedarf</code>, <code>haltungsformen</code>, <code>kosten</code>, <code>reitbeteiligung</code>, <code>entscheidung</code></td></tr>
+          </tbody>
+        </table>
+        <p>Diese 48 Unterseiten ergeben mit den 28 Seiten auf oberster Ebene (Startseite und Pflichtseiten eingeschlossen) und <code>notfall/tierarzt-notdienst/</code> die 77 Seiten aus <code>ai/pages.json</code>.</p>
+        <p class="source">Quelle: <code>ai/pages.json</code> (Feld <code>pages</code>), Seitendefinitionen in <code>tools/build-static-pages.mjs</code> (<code>pages</code>, <code>handwrittenPages</code>)</p>
+
+        <h2 id="preis-decoder">Preis-Decoder</h2>
+        <p>Die Kostenseiten heißen intern Preis-Decoder. Sie rechnen ehrlich vor, was ein Tier über sein Leben kostet, und sind die Website-Seite zu den gleichnamigen Instagram-Beiträgen.</p>
+        <ul>
+          <li><code>hunde/kosten/</code>: als ausführlicher Preis-Decoder seit 14. September 2026, am 30. September 2026 von Erik aus der Kostentabelle nachgeschärft. Gültig: etwa 100–240 € im Monat mit Krankenversicherung, über zwölf Jahre mit Anschaffung rund 14.000–37.000 €, Notfälle nicht eingerechnet.</li>
+          <li><code>katzen/kosten/</code>: seit 30. September 2026, nach dem Muster der Hundeseite.</li>
+          <li><code>kleintiere/kaninchen-kosten/</code>: seit 7. Oktober 2026, für zwei Kaninchen, mit Stand-Datum und Hinweis auf Notfallkosten.</li>
+          <li><code>pferde/kosten/</code>: Pferde-Checkliste nennt 340–920 € im Monat (angeglichen am 30. September 2026).</li>
+        </ul>
+        <p class="source">Quelle: Commits <code>49a9cd8</code> (14.09.), <code>c85aa05</code>, <code>84ebe23</code>, <code>d1b4e3c</code> (30.09.), <code>e4d104e</code>, <code>2cf0bfd</code> (07.10.); <code>docs/quiz-handoff.md</code> (Abschnitt „Was in der Session vom 30.09. passiert ist“)</p>
+
+        <h2 id="rassekrankheiten">Rassekrankheiten-Lexikon</h2>
+        <p>Auf <code>qualzucht/</code> steht ein such- und filterbares Lexikon zu Zucht- und Erbkrankheiten bei Hunden und Katzen. Jeder Eintrag ist eine Karte mit Auftreten, Schwere, Häufigkeit und eigener Quellenliste. Es gibt Filter nach Tierart und Körperbereich und eine Freitextsuche; die Statuszeile zeigt „20 von 20 Einträgen sichtbar“.</p>
+        <p>Einträge am 9. Oktober 2026: Brachyzephales Atemwegssyndrom, Augenprobleme durch flache Gesichter, Bandscheibenerkrankungen und Lähmungen, Chiari-like Malformation und Syringomyelie, Mitralklappenerkrankung, Hüftdysplasie, Ellbogendysplasie, Patellaluxation, Dilatative Kardiomyopathie, Degenerative Myelopathie, Faltenhaut und eingerollte Lider, Angeborene Taubheit, Scottish-Fold-Osteochondrodysplasie, Brachyzephalie bei Katzen, Polyzystische Nierenerkrankung, Hypertrophe Kardiomyopathie, Haarlosigkeit und fehlende Tasthaare, Manx-Syndrom, Progressive Retinaatrophie, Kongenitales Myasthenie-Syndrom.</p>
+        <p>Das Lexikon ist ausdrücklich als wachsend und quellenpflichtig formuliert, nicht als vollständig. Seit der Einführung am 18. Juni 2026 ist kein Eintrag dazugekommen.</p>
+        <p class="source">Quelle: <code>qualzucht/index.html</code> (Klassen <code>breed-lexicon</code>, <code>breed-disease-card</code>, <code>breed-source-list</code>), ausgezählt am 9. Oktober 2026; erster Commit mit <code>breed-lexicon</code>: <code>9fc0ca9</code> vom 18.06.2026</p>
+
+        <h2 id="petitionen">Laufende Petitionen</h2>
+        <p><code>petitionen/</code> sammelt Tierschutzpetitionen mit erkennbarem Initiator, Forderung und Adressat. Jede Karte trägt einen eigenen Prüfstand.</p>
+        <table>
+          <thead><tr><th>Petition</th><th>Prüfstand auf der Seite</th><th>Nachprüfung 9. Oktober 2026</th></tr></thead>
+          <tbody>
+            <tr><td>Pferdekutschen auf Mallorca verbieten (PETA)</td><td>1. September 2026</td><td><span class="badge badge-gated">nicht feststellbar</span> Die PETA-Seite antwortet automatisierten Abrufen mit HTTP 403.</td></tr>
+            <tr><td>Kein unregulierter Welpenhandel auf Social Media (VIER PFOTEN)</td><td>30. August 2026</td><td><span class="badge badge-load">aktiv</span> nimmt Unterschriften an, rund 128.000 Unterschriften, jüngste vom 8. Oktober 2026</td></tr>
+            <tr><td>Tierverkauf in Zoohandlungen, Gartencentern und Baumärkten stoppen (PETA)</td><td>30. August 2026</td><td><span class="badge badge-gated">nicht feststellbar</span> HTTP 403 wie oben</td></tr>
+            <tr><td>Tiervermittlung auch für Kleinsäuger auf eBay Kleinanzeigen einschränken (change.org)</td><td>9. September 2026</td><td><span class="badge badge-load">aktiv</span> rund 4.400 verifizierte Unterschriften, kein Enddatum, kein Erfolg gemeldet</td></tr>
+          </tbody>
+        </table>
+        <p class="source">Quelle: <code>petitionen/index.html</code>; Abruf <code>https://help.four-paws.org/de-DE/kein-unregulierter-welpenhandel-auf-social-media</code> und <code>https://www.change.org/p/tiervermittlung-auch-f%C3%BCr-kleins%C3%A4uger-auf-ebay-kleinanzeigen-einschr%C3%A4nken</code> am 9. Oktober 2026; die beiden PETA-Seiten lieferten per Abruf und im Webchat-Browser HTTP 403</p>
+
+        <h2 id="hinweisfunktion">Hinweisfunktion und Mitmachen</h2>
+        <p>Die auf <a href="annotation-konzept.html">Annotation: Konzept</a> und <a href="annotation-ux-flow.html">Annotation: UX-Flow</a> beschriebene Mitwirkung ist inzwischen live, in einer mailbasierten Form: Unter Abschnitten steht „? Hinweis geben“, dazu kann man eine Textstelle markieren. Beides öffnet ein Formular mit dem Abschnitt beziehungsweise der Stelle als Bezug; abgeschickt wird ein vorbereiteter <code>mailto:</code>-Entwurf an <code>mail@andersen-webworks.de</code>, den man selbst absendet. Es gibt kein eigenes E-Mail-Feld, keine Datenbank und keine öffentliche Kommentarspalte. <code>mitmachen/</code> erklärt das Verfahren.</p>
+        <p class="source">Quelle: <code>assets/site.js</code> (Feedback-Dialog, <code>selection-feedback-button</code>, Zieladresse), <code>mitmachen/index.html</code>; eingeführt mit Commit <code>1b3130a</code> (10.06.2026, Mitmachen) und <code>c0fbc3b</code> (23.06.2026, Abschnitts-Hinweise)</p>
+
+        <h2 id="nicht-oeffentlich">Bewusst nicht öffentlich auffindbar</h2>
+        <table>
+          <thead><tr><th>Was</th><th>Zustand</th></tr></thead>
+          <tbody>
+            <tr><td><code>pwa/</code> (Quiz)</td><td>Live erreichbar (HTTP 200), aber per <code>robots.txt</code> gesperrt und nicht in Sitemap, <code>ai/pages.json</code> oder <code>llms*</code>. Siehe <a href="pwa-und-quiz.html">PWA und Quiz</a>.</td></tr>
+            <tr><td><code>budgie-brain/</code></td><td>Pausiert. Liegt im Repo, kommt aber nicht ins Pages-Artefakt; live HTTP 404.</td></tr>
+            <tr><td><code>experiments/annotation-flow-demo.html</code></td><td>Nur im Repo, live HTTP 404.</td></tr>
+            <tr><td><code>docs/</code> samt diesem Wiki</td><td>Nicht im Artefakt, live HTTP 404. Siehe <a href="technik-und-veroeffentlichung.html#artefakt">Technik und Veröffentlichung</a>.</td></tr>
+            <tr><td>Tier-Tamagotchi</td><td>Konzept in <code>docs/tier-tamagotchi-konzept.md</code>, nicht live, nicht deploybereit.</td></tr>
+          </tbody>
+        </table>
+        <p class="source">Quelle: HTTP-Abrufe am 9. Oktober 2026; <code>README.md</code>; <code>tools/prepare-pages-artifact.mjs</code></p>
+
+        <h2 id="gestaltung">Gestaltung</h2>
+        <p>Seit 6. Oktober 2026 gilt für die ganze Seite Design v5 im Lexikon-Stil: Papierfarbe, Serifenschrift, Linien statt Pastellkästen, Inhaltsverzeichnis in der Randspalte. Es liegt in <code>src/design-v5.css</code> und <code>src/design-v5.js</code> und wird vom Generator an <code>assets/site.css</code> und <code>assets/site.js</code> angehängt. Lexikon-Bausteine: <code>.mythos</code>, <code>.tierweiche</code>, <code>.urlaubsplan[data-plan]</code>, <code>.zeitleiste</code>, <code>.faktenzeile</code>, <code>.lex-table</code>, <code>.randnotiz</code>, <code>.abschlussfrage</code>. Am 7. Oktober 2026 kamen Bildunterschriften unter Fotos und Kartenbeschriftungen auf festem dunklem Grund dazu.</p>
+        <p class="source">Quelle: <code>README.md</code> (Abschnitt „Gestaltung“), Commits <code>0345214</code>, <code>a654616</code>, <code>34b41c0</code></p>
+
+        <h2 id="offen">Offene Punkte</h2>
+        <ul>
+          <li>Status der beiden PETA-Petitionen ist nicht maschinell prüfbar; jemand muss sie im eigenen Browser ansehen.</li>
+          <li>Das Rassekrankheiten-Lexikon ist seit Juni nicht gewachsen; ob und wann es erweitert wird, ist nicht entschieden.</li>
+          <li>Ob die beiden lokalen Commits gepusht werden, entscheidet ein eigener Auftrag. Ein Push löst den Pages-Deploy aus, ändert die Website aber nicht, weil nur <code>docs/</code> betroffen ist.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

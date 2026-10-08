@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redaktionslinie und Quellen - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a class="active" href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Redaktionslinie und Quellenpflicht</h1>
+        <p class="status">Stand 9. Oktober 2026; aus Projektkontext, README und den Seiten zusammengeführt</p>
+
+        <p>Diese Seite beschreibt, wie Texte auf Wa(h)re Haustier(liebe) gemeint sind: aus welcher Haltung sie schreiben, woran sie sich messen und welche Quellen sie brauchen. Sie gilt für die Website, die Quiz-PWA und Instagram gleichermaßen. Wer etwas Neues schreibt, prüft es gegen diese Seite.</p>
+        <p>Was Erik und Annemarie dazu gesagt und vereinbart haben, steht im Gedächtnis und in der Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> im Core. Diese Seite fasst die daraus folgende Arbeitslinie zusammen und zitiert die Gespräche nicht.</p>
+
+        <h2 id="haltung">Grundhaltung</h2>
+        <ul class="rule-list">
+          <li><strong>„Wenn man es wirklich richtig machen will.“</strong> Texte beschreiben, was ein Tier braucht, wenn man es ernsthaft gut machen will, nicht das gesetzliche oder übliche Minimum. Die Denkfigur dahinter: Du möchtest ein Tier, also gehe ich davon aus, dass du es richtig machen willst, und das bedeutet streng genommen … Beim Abgabealter heißt das zum Beispiel, drei Ebenen getrennt zu nennen: rechtliches Mindestalter, tierwohlgerechtes Mindestalter, verantwortungsvoll empfohlenes Alter.</li>
+          <li><strong>Tierwohl ist der Maßstab.</strong> Gemessen wird am Wohl des einzelnen Tieres, nie an Bequemlichkeit, Preis oder Gewohnheit der Halter.</li>
+          <li><strong>Adoptieren statt kaufen.</strong> Das Projekt lehnt Kauf und Verkauf von Tieren sowie Zucht und Vermehrung ab, ausdrücklich auch „gute“ Zucht. Unterstützt wird, bereits geborenen Tieren ein passendes Zuhause zu geben und vorhandene Tiere gut zu versorgen. Bei Vögeln gilt zusätzlich: keine Haltung außer bei Notfällen oder bereits abhängigen Tieren.</li>
+          <li><strong>Aufklärung für Menschen, die es gut meinen.</strong> Zielgruppe sind Menschen, die Tiere lieben, aber manches nicht besser wissen. Texte beschämen bestehende Halter nicht, machen aber die Folgen so deutlich, dass sich Interessierte im Zweifel gegen ein Tier entscheiden können.</li>
+          <li><strong>Lexikon statt Ratgeberhäppchen.</strong> Die Seite wächst zu einem detaillierten Wissenslexikon: Zusammenhänge, konkrete Zahlen, Anleitungen und Zeitpläne, wo sie helfen, auch unbequeme Wahrheiten.</li>
+          <li><strong>Keine persönlichen Tiergeschichten auf der Website.</strong> Die Website klärt auf. Eigene Geschichten gehören, wenn überhaupt, auf Instagram.</li>
+        </ul>
+        <p class="source">Quelle: Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitte „Website-Linie“ und Lernnotizen zu Prämissen, Haltung, Zielgruppe und Lexikon); Leitsatz sichtbar umgesetzt etwa in <code>src/site-source.html</code> („Wenn du es wirklich richtig machen willst …“)</p>
+
+        <h2 id="quellen">Quellenpflicht</h2>
+        <ul class="rule-list">
+          <li>Jede fachliche Behauptung muss stimmen und eine seriöse, funktionierende Quelle haben. Mythen werden nicht wiederholt, sondern aufgelöst.</li>
+          <li>Medizinische, ernährungsbezogene, rechtliche und temperaturbezogene Aussagen werden vor Veröffentlichung aktuell recherchiert. Bei Recht Bundesrecht und Landesrecht trennen.</li>
+          <li>Bevorzugte Quellentypen: tierärztliche Fachquellen und Kliniken, Fachverbände und Leitlinien, Behörden und Gesetzestexte (TierSchG, TierSchHuV, BNatSchG, Landesrecht), Studien bei strittigen Aussagen, aktuelle GOT für Tierarztkosten. Tierschutzorganisationen nur mit Gegencheck bei Fachquellen.</li>
+          <li>Zahlen tragen ihr Stand-Datum, etwa „Deutscher Tierschutzbund, Stand Oktober 2026“. Eigene Umrechnungen sind als solche gekennzeichnet.</li>
+          <li>Hubs und Grundsatzseiten enden mit einem Block „Fachquellen und wichtige Grenzen“ (am 9. Oktober 2026 auf 31 von 77 Seiten). Die meisten Unterseiten haben keinen eigenen Block, siehe <a href="offene-fragen.html">Offene Fragen</a>. Unsicherheit wird benannt, nicht versteckt.</li>
+          <li>Quizfragen dürfen nur enthalten, was auf der verlinkten Seite steht (siehe <a href="pwa-und-quiz.html#regeln">PWA und Quiz</a>).</li>
+        </ul>
+        <p class="source">Quelle: Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Lernnotiz zur fachlichen Richtigkeit); <code>docs/wahre-haustierliebe-themenbacklog.md</code> (Abschnitte „Arbeitsregeln für spätere Umsetzung“, „Recherche- und Quellenplan“); <code>docs/social/2026-10-14-kaninchen-preis-decoder/post.md</code> (Abschnitt „Belege der Zahlen“); Abschnitt „Fachquellen und wichtige Grenzen“ auf den Seiten, zum Beispiel <code>wissen/index.html</code></p>
+
+        <h2 id="homoeopathie">Homöopathie und Naturheilkunde</h2>
+        <ul class="rule-list">
+          <li>Homöopathie ist kein Sammelbegriff für pflanzliche, ernährungsbezogene, physikalische oder sonstige naturheilkundliche Maßnahmen. Beides wird strikt getrennt benannt.</li>
+          <li>Homöopathie wird nicht verspottet, sondern beim Wort genommen: Wären Globuli wirksame Arzneien, müsste man sie streng und vorsichtig behandeln. Belegt wird mit Hahnemanns eigener Logik aus dem Organon und mit konkreten Ausgangsstoffen, die für bestimmte Tiere riskant sind.</li>
+          <li>Naturheilkundliche Mittel werden nur genannt, wenn Sicherheit und Nutzen für eine bestimmte Tierart und Beschwerde belastbar belegt sind, eng abgegrenzt und nie als Ersatz für Diagnose, Dosierung oder tierärztliche Behandlung.</li>
+        </ul>
+        <p>Umgesetzt auf <code>wissen/</code> im Abschnitt „Homöopathie bei Tieren: beliebt, aber nicht harmlos“, der ausdrücklich sagt, dass Homöopathie kein anderes Wort für Naturheilkunde ist.</p>
+        <p class="source">Quelle: Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitt „Website-Linie“ und Lernnotizen zu Homöopathie); <code>wissen/index.html</code></p>
+
+        <h2 id="schreibweise">Schreibweise und Ton</h2>
+        <ul class="rule-list">
+          <li><strong>Der Name lautet <code>Wa(h)re Haustier(liebe)</code>.</strong> Varianten wie „Wa(h)re Haustierliebe“, „Wahre Haustierliebe“ oder „wahre Haustierliebe.de“ sind Such- und Altvarianten und stehen nicht in Texten, Metadaten, Alt-Texten, Share-Texten oder <code>llms*</code>. Domain und Instagram-Name bleiben technisch <code>wahre-haustierliebe.de</code> und <code>@wahrehaustierliebe</code>.</li>
+          <li>Warm und nahbar, aber klar gegen Qualzucht, Spontankäufe, Online-Welpenhandel und schlechte Haltung. Keine Schockbehauptungen ohne Beleg.</li>
+          <li>Du-Form, Deutsch nach Duden, echte Umlaute, „…“ als Anführungszeichen, Halbgeviertstrich bei Zahlspannen (2–3), kein Geviertstrich.</li>
+          <li>Sichtbare Texte sprechen mit Tierhalterinnen und Tierhaltern. Interne Redaktionsnotizen wie „Nicht als pauschale Rasseberatung verwenden“ sind ein Prompt-Leak und gehören nicht auf die Seite.</li>
+          <li>Literarische Bezugspunkte für den Ton, punktuell: Wilhelm Busch und Janosch.</li>
+        </ul>
+        <p class="source">Quelle: Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitt „Projekt-SSOT“, Lernnotizen zu Prompt-Leak und Ton); <code>tools/quiz/SPEC.md</code> (Abschnitt „Qualität“)</p>
+
+        <h2 id="struktur">Struktur von Seiten</h2>
+        <ul class="rule-list">
+          <li>Inhalte stehen semantisch unter der richtigen Tierart und Überschrift. Spezialthemen gehören in den passenden Tierart-Hub, nicht ins Hauptmenü.</li>
+          <li>Eine Infobox gehört zur Überschrift direkt darüber. Eröffnet sie ein anderes Thema, ist das ein Strukturfehler und braucht einen eigenen Abschnitt.</li>
+          <li>Lange Tierseiten werden in echte Unterseiten mit lokaler Navigation zerlegt, nicht in Ankerlinks. Pferde und Exoten sind getrennte Bereiche.</li>
+          <li>Glossar-Markierungen dürfen den Satzfluss nicht stören.</li>
+          <li>Neue Elemente fügen sich ruhig ins Layout ein.</li>
+        </ul>
+        <p class="source">Quelle: Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Lernnotizen zur Strukturregel und zur Informationsarchitektur)</p>
+
+        <h2 id="freigabe">Freigabe</h2>
+        <p>Veröffentlichungen geben Erik oder Annemarie frei; Annemaries ausdrückliche Freigabe reicht. Instagram-Entwürfe tragen den Vermerk „Erst nach Freigabe durch Annemarie veröffentlichen“.</p>
+        <p class="source">Quelle: Gedächtnis und Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Lernnotiz zur Freigabe); <code>docs/social/2026-10-14-kaninchen-preis-decoder/post.md</code></p>
+
+        <h2 id="offen">Offene Punkte</h2>
+        <ul>
+          <li>Ob die Linie, kranke, behinderte oder oft übersehene Tiere behutsam zu erwähnen, schon auf der Website umgesetzt ist, ist nicht geprüft.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

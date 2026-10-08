@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technik und Veröffentlichung - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a class="active" href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Technik und Veröffentlichung</h1>
+        <p class="status">Stand 9. Oktober 2026, am Code geprüft</p>
+
+        <p>Die Website ist eine statische Seite ohne Server und ohne Datenbank. Ein Node-Skript baut aus einer großen HTML-Quelle alle Einzelseiten, und GitHub Pages liefert sie unter <code>wahre-haustierliebe.de</code> aus. Veröffentlicht wird durch einen Push auf <code>main</code>. Dabei gelangt nur ein ausgewählter Teil des Repos ins Netz: Quellen, Werkzeuge und <code>docs/</code> mit diesem Wiki bleiben privat.</p>
+
+        <div class="callout"><p><strong>Ein Push auf <code>main</code> ist eine Veröffentlichung.</strong> Der Workflow startet bei jedem Push automatisch. Es gibt keine Vorschau-Umgebung dazwischen.</p></div>
+
+        <h2 id="quellen">Quellen und generierte Dateien</h2>
+        <table>
+          <thead><tr><th>Datei</th><th>Rolle</th></tr></thead>
+          <tbody>
+            <tr><td><code>src/site-source.html</code></td><td>Gepflegte Hauptquelle aller Inhalte (rund 12.400 Zeilen)</td></tr>
+            <tr><td><code>tools/build-static-pages.mjs</code></td><td>Generator und Seitendefinitionen: Titel, Beschreibung, Intent, Priorität, <code>lastmod</code> je Seite (rund 3.900 Zeilen)</td></tr>
+            <tr><td><code>src/design-v5.css</code>, <code>src/design-v5.js</code></td><td>Designschicht v5, wird an <code>assets/site.css</code> und <code>assets/site.js</code> angehängt</td></tr>
+            <tr><td><code>tools/glossary-data.mjs</code></td><td>Glossarbegriffe für <code>glossar/</code> und die Begriffsmarkierungen im Text</td></tr>
+            <tr><td><code>src/budgie-source.html</code></td><td>Quelle des pausierten Budgie-Brain</td></tr>
+            <tr><td>Generiert</td><td>alle <code>*/index.html</code>, <code>assets/site.css</code>, <code>assets/site.js</code>, <code>sitemap.xml</code>, <code>robots.txt</code>, <code>site.webmanifest</code>, <code>llms.txt</code>, <code>llms-full.txt</code>, <code>ai/site.json</code>, <code>ai/pages.json</code>, <code>ai/faq.json</code>, <code>assets/icons/*.png</code>, <code>assets/social/*.png</code></td></tr>
+          </tbody>
+        </table>
+        <p>Generierte Seiten werden nie direkt bearbeitet, sonst baut der nächste Build die Änderung zurück. Ausnahme sind handgepflegte Seiten in <code>handwrittenPages</code> (derzeit <code>katzen/kaetzchen-tierarzt/</code>): Sie stehen in Sitemap, <code>llms*</code> und <code>/ai</code>, ihr HTML fasst der Build aber nicht an.</p>
+        <p class="source">Quelle: <code>README.md</code> (Abschnitte „Quellen“, „Build“), <code>tools/build-static-pages.mjs</code> (<code>pages</code>, <code>handwrittenPages</code>, <code>robotsDisallow</code>)</p>
+
+        <h2 id="build">Build</h2>
+        <ol>
+          <li><code>node tools/build-static-pages.mjs</code> baut alle Seiten und Nebendateien.</li>
+          <li>Der Build rendert die Seiten mit Playwright vor, damit Hero, Tabellenlabels und andere per JavaScript verstärkte Bereiche schon im HTML stehen. Playwright kommt nicht aus diesem Repo: <code>tools/playwright-module.mjs</code> sucht es unter <code>../ClautzGPT/node_modules/playwright</code>. Ohne ClautzGPT daneben läuft der Build nicht.</li>
+          <li>Social-Vorschaubilder (1200 × 630) kommen aus den echten Seitenbildern; Startseite und Seiten ohne eigenes Bild nutzen das Logo.</li>
+          <li>Danach die Audits laut <code>README.md</code> (<code>static-pages-audit</code>, <code>layout-consistency-audit</code>, <code>image-layout-audit</code>, <code>article-context-audit</code>, <code>startpage-image-context-audit</code>). Screenshots landen im ignorierten <code>screenshots/</code>.</li>
+        </ol>
+        <p>Es gibt keine <code>package.json</code> im Repo. Im GitHub-Workflow wird nicht gebaut: Die generierten Dateien müssen gebaut und committet sein, bevor gepusht wird.</p>
+        <p class="source">Quelle: <code>README.md</code>, <code>tools/playwright-module.mjs</code>, <code>.github/workflows/pages.yml</code></p>
+
+        <h2 id="pages">GitHub Pages</h2>
+        <p>Workflow <code>.github/workflows/pages.yml</code> („Deploy GitHub Pages“) läuft bei jedem Push auf <code>main</code> und manuell (<code>workflow_dispatch</code>). Schritte:</p>
+        <ol>
+          <li>Node 22 einrichten.</li>
+          <li><code>node --check</code> für Generator, Artefakt-Skript und Audit, danach <code>node tools/static-pages-audit.mjs</code>. Scheitert das Audit, wird nicht veröffentlicht.</li>
+          <li><code>node tools/prepare-pages-artifact.mjs</code> stellt das öffentliche Artefakt in <code>.pages-artifact/</code> zusammen.</li>
+          <li>Upload und Deploy über <code>actions/upload-pages-artifact@v3</code> und <code>actions/deploy-pages@v4</code>.</li>
+        </ol>
+        <p>Die eigene Domain steht in <code>CNAME</code>. Live liefert <code>GitHub.com</code> als Server aus.</p>
+        <p class="source">Quelle: <code>.github/workflows/pages.yml</code>, <code>CNAME</code>; Kopfzeilen von <code>https://wahre-haustierliebe.de/</code> am 9. Oktober 2026</p>
+
+        <h2 id="artefakt">Das Artefakt-Skript veröffentlicht nur freigegebene Pfade</h2>
+        <p><code>tools/prepare-pages-artifact.mjs</code> löscht <code>.pages-artifact/</code>, legt es neu an und kopiert nur zwei Arten von Pfaden hinein:</p>
+        <ul>
+          <li>eine feste Liste: <code>ai</code>, <code>assets</code>, <code>llms-full.txt</code>, <code>llms.txt</code>, <code>pwa</code>, <code>robots.txt</code>, <code>site.webmanifest</code>, <code>sitemap.xml</code>, <code>CNAME</code>;</li>
+          <li>jede Seite aus <code>ai/pages.json</code> als <code>…/index.html</code>.</li>
+        </ul>
+        <p>Vorher vergleicht es <code>ai/pages.json</code> mit <code>sitemap.xml</code> und bricht ab, wenn eine Seite nur in einer der beiden Listen steht. Jeder Pfad wird darauf geprüft, dass er nicht aus Projekt- oder Artefaktordner herausführt. Am Ende prüft es, dass jede Seite im Artefakt existiert.</p>
+        <p>Neue Seiten kommen damit automatisch mit, sobald sie in <code>ai/pages.json</code> stehen; eine zweite Deploy-Liste gibt es nicht.</p>
+        <p class="source">Quelle: <code>tools/prepare-pages-artifact.mjs</code> (<code>fixedPublicPaths</code>, <code>getPagePublicPaths()</code>, <code>copyPublicPath()</code>)</p>
+
+        <h2 id="docs-privat">docs/ bleibt privat</h2>
+        <p><code>docs/</code> steht weder in der festen Liste noch in <code>ai/pages.json</code>. Am 9. Oktober 2026 nachgerechnet: Von den 86 Pfaden, die das Skript übernehmen würde (9 feste und 77 Seiten), beginnt keiner mit <code>docs</code> oder enthält <code>wiki</code>. Live antworten <code>/docs/</code>, <code>/docs/wiki/index.html</code>, <code>/README.md</code>, <code>/src/site-source.html</code> und <code>/tools/build-static-pages.mjs</code> mit HTTP 404.</p>
+        <div class="callout"><p><strong>Achtung:</strong> Die Ordner <code>pwa/</code> und <code>assets/</code> werden vollständig kopiert. Was dort liegt, ist öffentlich, auch Arbeitsdokumente. Live abrufbar sind deshalb <code>pwa/PFLEGE.md</code>, <code>assets/IMAGE-LICENSES.md</code>, <code>assets/images/optimized/README.md</code>, <code>assets/image-credits.json</code> und der veraltete <code>pwa/data/questions.json</code>. Interne Notizen gehören nach <code>docs/</code>. Siehe <a href="stolperfallen.html#veroeffentlichung">Stolperfallen</a>.</p></div>
+        <p class="source">Quelle: Nachrechnung der Pfadliste aus <code>ai/pages.json</code> und <code>fixedPublicPaths</code> am 9. Oktober 2026 (ohne das Skript auszuführen); HTTP-Abrufe der genannten Adressen am 9. Oktober 2026</p>
+
+        <h2 id="urls">URLs, Metadaten und Maschinenlesbarkeit</h2>
+        <ul>
+          <li>Canonicals, Sitemap und interne Links nutzen bewusst <code>slug/index.html</code> statt <code>slug/</code>, weil ein früherer Tailnet-Server Verzeichnisse nicht als Index auslieferte. GitHub Pages kann beides; die Schreibweise bleibt aber einheitlich.</li>
+          <li>Jede Seite hat eigenen Titel, Beschreibung, Canonical, <code>og:url</code>, genau ein H1 und ein <code>main</code>, JSON-LD, Open-Graph- und X-Card-Tags.</li>
+          <li>Kein pauschales <code>publisher: Organization</code> und keine FAQPage-Auszeichnung ohne sichtbaren FAQ-Block (siehe <a href="entscheidungen.html#seo">Entscheidungen</a>).</li>
+          <li><code>robots.txt</code> erlaubt allen Crawlern einschließlich KI-Suchbots die Seite und sperrt nur <code>/pwa/</code> (<code>robotsDisallow</code> im Generator).</li>
+          <li><code>lastmod</code> steht je Seite im Generator. Fehlt der Eintrag, gilt <code>process.env.SEO_LASTMOD</code> oder fest <code>2026-08-25</code>; am 9. Oktober 2026 tragen 64 von 77 Sitemap-Einträgen dieses Datum.</li>
+        </ul>
+        <p class="source">Quelle: <code>README.md</code> (Abschnitte „Aktueller Stand“, „GEO/SEO/AVO“), <code>robots.txt</code>, <code>tools/build-static-pages.mjs</code> (Zeile mit <code>const lastmod</code>), Auszählung von <code>sitemap.xml</code></p>
+
+        <h2 id="kontakt">Kontakt und Hinweise ohne Server</h2>
+        <p>Kontaktformular und Hinweisfunktion bauen per JavaScript einen <code>mailto:</code>-Entwurf an <code>mail@andersen-webworks.de</code>. Es gibt keinen Mailversand, keine SMTP-Zugangsdaten im Repo und keinen externen Formdienst, also auch keine Versandbestätigung.</p>
+        <p class="source">Quelle: <code>README.md</code> (Abschnitt „Kontaktformular“), <code>assets/site.js</code></p>
+
+        <h2 id="pruefwerkzeuge">Weitere Prüf- und Arbeitswerkzeuge</h2>
+        <ul>
+          <li><code>public-copy.config.json</code> und <code>.clautz/public-copy-review.json</code>: unabhängige Prüfung der sichtbaren Texte. Letzte Bestätigung am 9. August 2026 über 73 Seiten; seitdem sind Seiten dazugekommen und Texte geändert worden, die Bestätigung ist also veraltet. Sie blockiert weder Build noch Veröffentlichung.</li>
+          <li><code>tools/extract-public-copy-surface.mjs</code>, <code>tools/full-page-visual-audit.mjs</code>, <code>tools/navigation-ux-audit.mjs</code>: weitere Audits, nicht im Workflow.</li>
+          <li><code>tests/e2e/modular-evolution-proof.spec.ts</code>: einzelne Playwright-Spezifikation, nicht im Workflow.</li>
+          <li><code>worker-issues/</code>: 22 Arbeitsaufträge aus Mai und Juni 2026 (Bilder, Layout, URL-Architektur, Metadaten, Audits). Historisch.</li>
+          <li><code>tools/quiz/</code>: Werkzeuge für den Fragenkatalog, siehe <a href="pwa-und-quiz.html">PWA und Quiz</a>.</li>
+        </ul>
+        <p class="source">Quelle: genannte Dateien; <code>.clautz/public-copy-review.json</code> (<code>reviewedAt</code>, <code>pageCount</code>)</p>
+
+        <h2 id="offen">Offene Punkte</h2>
+        <ul>
+          <li>Ob Arbeitsdokumente aus <code>pwa/</code> und <code>assets/</code> nach <code>docs/</code> umziehen oder das Artefakt-Skript sie ausschließt, ist nicht entschieden.</li>
+          <li>Ob <code>lastmod</code> beim Design-Umbau vom 6. Oktober 2026 hätte nachgezogen werden sollen, ist nicht entschieden.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

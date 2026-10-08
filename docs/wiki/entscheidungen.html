@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entscheidungen - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a class="active" href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Entscheidungen</h1>
+        <p class="status">Stand 9. Oktober 2026; aus README, Git-Geschichte, Projektdoku und Projektkontext zusammengetragen</p>
+
+        <p>Diese Seite sammelt, was für Wa(h)re Haustier(liebe) bereits entschieden ist, damit niemand dieselbe Frage zweimal aufrollt. Wer eine Entscheidung ändern will, braucht eine neue Entscheidung von Erik oder Annemarie und trägt die alte hier als abgelöst ein. Inhaltliche Haltung steht ausführlicher auf <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>.</p>
+        <p>„Kontextakte“ meint hier die Akte <code>WAHRE_HAUSTIERLIEBE.md</code> im Clautz-Core, „Gedächtnis“ die gespeicherten Einzelfakten im Core.</p>
+
+        <h2 id="projekt">Projekt und Quelle</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Dieser Ordner ist seit 4. Juni 2026 die einzige Arbeits- und Veröffentlichungsquelle. Die alte Vorschau <code>public/wahre-haustierliebe-current/</code> in ClautzGPT ist Altmaterial.</td><td><span class="badge badge-load">verbindlich</span> 04.06.2026</td><td>Kontextakte, Abschnitt „Projekt-SSOT“</td></tr>
+            <tr><td><code>vermehrer</code> ist der alte Name und das alte Repo (frühere WordPress-Fassung). Es ist Archiv und wird nicht verändert.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code> (Abgrenzung), Kontextakte</td></tr>
+            <tr><td>Projektwissen liegt in diesem Wiki; Gesagtes und Vereinbartes im Gedächtnis. Das Wiki verweist darauf und schreibt es nicht ab.</td><td><span class="badge badge-load">verbindlich</span> 09.10.2026</td><td>Clautz-Wiki, <code>projektwikis.html</code></td></tr>
+            <tr><td>Projekt-Backlogs gehören in den Projektordner.</td><td><span class="badge badge-load">verbindlich</span></td><td>Kontextakte, Abschnitt „Projekt-SSOT“</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="technik">Technik und Veröffentlichung</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Keine Hash-SPA mehr: echte statische Einzelseiten aus <code>src/site-source.html</code>.</td><td><span class="badge badge-load">umgesetzt</span> 27.05.2026</td><td><code>README.md</code>, Commit <code>3cc5b43</code></td></tr>
+            <tr><td>Veröffentlichung über GitHub Pages aus einem Artefakt mit freigegebenen Pfaden, nicht aus dem Repo-Root. Neue Seiten kommen über <code>ai/pages.json</code> ins Artefakt, ohne zweite Liste.</td><td><span class="badge badge-load">umgesetzt</span></td><td><code>README.md</code>, <code>tools/prepare-pages-artifact.mjs</code></td></tr>
+            <tr><td>Generierte Seiten werden nie direkt bearbeitet; Änderungen in Quelle oder Generator. Titel und Beschreibung stehen nur in der Seitendefinition.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code> (Build)</td></tr>
+            <tr><td>Kontakt und Hinweise per <code>mailto:</code>-Entwurf, ohne Server, ohne SMTP, ohne externen Formdienst. Kein eigenes E-Mail-Feld, solange es nur einen Mailentwurf gibt.</td><td><span class="badge badge-load">umgesetzt</span></td><td><code>README.md</code> (Kontaktformular), Kontextakte</td></tr>
+            <tr><td>Ein Push auf <code>main</code> veröffentlicht. Für dieses Projekt ist automatisches Pushen nach geprüften Änderungen freigegeben, solange der jeweilige Auftrag nichts anderes sagt.</td><td><span class="badge badge-meta">Arbeitsregel</span> 30.09.2026</td><td>Gedächtnis (Projekt, <code>git.push_after_changes</code>); <code>docs/quiz-handoff.md</code></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="seo">SEO, GEO und Barrierefreiheit</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Keine künstliche Autorität: kein pauschales <code>publisher: Organization</code>, keine FAQPage ohne sichtbaren FAQ-Block.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code> (GEO/SEO/AVO)</td></tr>
+            <tr><td>Interne Links und Canonicals als <code>slug/index.html</code>.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code> (Aktueller Stand)</td></tr>
+            <tr><td>KI-Crawler sind erlaubt; <code>llms.txt</code>, <code>llms-full.txt</code> und <code>/ai/*.json</code> werden mitgebaut.</td><td><span class="badge badge-load">umgesetzt</span></td><td><code>robots.txt</code>, <code>README.md</code></td></tr>
+            <tr><td>Ziel: in PageSpeed und Lighthouse in allen Kategorien 100. Letzte dokumentierte Messung: Mobil Leistung 91 am 10. Juni 2026; seitdem Arbeit an CLS, Barrierefreiheit und Kontrasten (25. August und 6. Oktober 2026), aber keine neue dokumentierte Messung.</td><td><span class="badge badge-gated">Ziel</span></td><td>Kontextakte; Commits <code>4810036</code>, <code>682002c</code>, <code>a654616</code></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="struktur">Struktur und Gestaltung</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Granulare Informationsarchitektur mit echten Unterseiten statt Ankerlinks. Pferde und Exoten sind getrennte Bereiche.</td><td><span class="badge badge-load">umgesetzt</span></td><td>Kontextakte; <code>ai/pages.json</code></td></tr>
+            <tr><td>Hauptseiten dürfen zu kürzeren Hubs werden, die ausgelagerten Unterseiten enthalten die früheren Texte und Elemente vollständig.</td><td><span class="badge badge-load">verbindlich</span></td><td>Kontextakte</td></tr>
+            <tr><td>Tiergruppen in der Navigation führen beim Klick zur Übersichtsseite, nicht nur zu einer Hover-Vorschau.</td><td><span class="badge badge-load">verbindlich</span></td><td>Kontextakte</td></tr>
+            <tr><td>Design v5 im Lexikon-Stil für die ganze Seite.</td><td><span class="badge badge-load">umgesetzt</span> 06.10.2026</td><td><code>README.md</code> (Gestaltung), Commit <code>0345214</code></td></tr>
+            <tr><td>Keine Bilder mit erkennbaren Menschen ohne gesonderte Prüfung und Freigabe.</td><td><span class="badge badge-load">verbindlich</span> 03.06.2026</td><td><code>README.md</code>, <code>assets/IMAGE-LICENSES.md</code></td></tr>
+            <tr><td>Jedes Commons-Bild nur einmal. Für die Website heute nicht eingehalten, siehe <a href="bilder-und-nachweise.html#mehrfach">Bilder</a>.</td><td><span class="badge badge-gated">Regel, Bestand weicht ab</span></td><td>Kontextakte</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="mitwirkung">Mitwirkung</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Redaktionell geprüfte Hinweise statt öffentlicher Kommentarspalte. Menüpunkt „Mitmachen!“ mit Erklärseite, Hinweis-Knöpfe an Abschnitten, Textmarkierung mit Formular.</td><td><span class="badge badge-load">umgesetzt</span> 10.06. und 23.06.2026</td><td><a href="annotation-konzept.html">Annotation: Konzept</a>; Commits <code>1b3130a</code>, <code>c0fbc3b</code></td></tr>
+            <tr><td>Das Hinweissystem der Website ist ein Projektfeature und wird nicht mit dem privaten ClautzGPT-Werkzeug „Website-Notizen“ vermischt.</td><td><span class="badge badge-load">verbindlich</span></td><td>Kontextakte, Abschnitt „Redaktionelles Mitwirkungssystem“</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="pwa">PWA und Spiele</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Quiz-PWA als Beta: erreichbar, aber nicht auffindbar (robots, keine Sitemap, kein <code>pages.json</code>, keine Navigation).</td><td><span class="badge badge-load">umgesetzt</span> 21.09.2026</td><td>Commit <code>397712a</code>; <code>pwa/PFLEGE.md</code></td></tr>
+            <tr><td>Vom Quizduell nur übernehmen, was zum Ton passt: kein Speed-Bonus, kein Multiplayer, keine Risiko- oder Jagd-Mechanik, keine Casino-Toasts.</td><td><span class="badge badge-load">verbindlich</span> 21.09.2026</td><td><code>docs/quiz-handoff.md</code>; Kontextakte</td></tr>
+            <tr><td>Service Worker network-first, damit nach einem Deploy keine alte Fassung hängen bleibt.</td><td><span class="badge badge-load">umgesetzt</span> 30.09.2026</td><td><code>docs/quiz-handoff.md</code></td></tr>
+            <tr><td>Keine selbst gezeichneten neuen Sticker.</td><td><span class="badge badge-load">verbindlich</span> 30.09.2026</td><td>Commit <code>1d59f51</code>; <code>docs/quiz-handoff.md</code></td></tr>
+            <tr><td>Budgie-Brain ist pausiert und keine Vorlage für das Tier-Tamagotchi.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code>, <code>docs/tier-tamagotchi-konzept.md</code></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="social">Social Media</h2>
+        <table>
+          <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
+          <tbody>
+            <tr><td>Instagram ist Hauptkanal; weitere Plattformen erst später.</td><td><span class="badge badge-load">verbindlich</span> 07.06.2026</td><td><a href="social-media-strategie.html">Social-Media-Strategie</a></td></tr>
+            <tr><td>Höchstens fünf Hashtags pro Beitrag.</td><td><span class="badge badge-load">verbindlich</span> 18.06.2026</td><td><a href="instagram.html#hashtags">Instagram</a></td></tr>
+            <tr><td>Echte freie Fotos statt KI-Bilder.</td><td><span class="badge badge-load">verbindlich</span> 07.06.2026</td><td>Kontextakte, Abschnitt „Instagram-Bildstandard“</td></tr>
+            <tr><td>Redaktionsreihe in dieser Reihenfolge: Abgabealter, Preis-Decoder, Zoohandlung, Züchter; jeweils mit Website-Vertiefung.</td><td><span class="badge badge-meta">Planung</span></td><td>Kontextakte</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="verworfen">Verworfen</h2>
+        <ul>
+          <li>Hash-SPA als Seitenstruktur (bis 27. Mai 2026).</li>
+          <li>Selbst gezeichnete Quiz-Sticker (30. September 2026 entfernt).</li>
+          <li>Ein düsterer, faktischer Simulationsstil für das Tier-Tamagotchi; die Richtung ist heller und spielerischer.</li>
+        </ul>
+        <p class="source">Quelle: genannte Commits; <code>docs/tier-tamagotchi-konzept.md</code>; Kontextakte, Abschnitt „Tier-Tamagotchi-Unterprojekt“</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

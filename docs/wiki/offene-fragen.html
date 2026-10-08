@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offene Fragen - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a class="active" href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Offene Fragen</h1>
+        <p class="status">Stand 9. Oktober 2026</p>
+
+        <p>Hier stehen Fragen, die eine Entscheidung von Erik oder Annemarie brauchen oder die sich mit den vorhandenen Quellen nicht klären ließen. Jede Frage verweist auf die Seite mit den Einzelheiten. Ist eine Frage beantwortet, wandert die Antwort auf die Fachseite und nach <a href="entscheidungen.html">Entscheidungen</a>; hier wird sie gestrichen und im <a href="aenderungsverlauf.html">Änderungsverlauf</a> vermerkt.</p>
+
+        <h2 id="entscheidungen">Brauchen eine Entscheidung</h2>
+        <table>
+          <thead><tr><th>Frage</th><th>Warum offen</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Gilt „jedes Commons-Bild nur einmal“ rückwirkend für die Website?</td><td>23 Bilder sind mehrfach eingesetzt, viele als Titelbild mehrerer Unterseiten. Ersatz wäre ein größerer Bildumbau.</td><td><a href="bilder-und-nachweise.html#mehrfach">Bilder</a></td></tr>
+            <tr><td>Welcher Instagram-Rhythmus gilt?</td><td>Projektkontext (Juni: Mo, Mi, Fr) und Kalendervorschlag (29. September: zwei Posts, eine Story, Status „Vorschlag“) widersprechen sich.</td><td><a href="instagram.html#rhythmus">Instagram</a></td></tr>
+            <tr><td>Welches Bildformat gilt für Instagram?</td><td>Früher 1080 × 1080 PNG, zuletzt JPG-Fotos bis 1920 px.</td><td><a href="bilder-und-nachweise.html#instagram">Bilder</a></td></tr>
+            <tr><td>Sollen Arbeitsdokumente aus <code>pwa/</code> und <code>assets/</code> aus der öffentlichen Auslieferung?</td><td><code>pwa/PFLEGE.md</code>, <code>assets/IMAGE-LICENSES.md</code> und weitere sind live abrufbar. Inhaltlich unkritisch, aber nicht für Besucher gedacht.</td><td><a href="technik-und-veroeffentlichung.html#docs-privat">Technik</a></td></tr>
+            <tr><td>Soll der Themenbacklog ins Repo?</td><td>Er ist per <code>.gitignore</code> ausgeschlossen, der Grund ist nicht dokumentiert.</td><td><a href="backlog.html">Backlog</a></td></tr>
+            <tr><td>Was passiert mit dem fremden Material im Repo?</td><td>Tierkommunikations-Seiten in <code>tools/</code>, <code>Ivo/</code>, <code>tmp-*</code>-Dateien. Nicht veröffentlicht, aber verwirrend.</td><td><a href="stolperfallen.html#repo">Stolperfallen</a></td></tr>
+            <tr><td>Wann endet die Beta der Quiz-PWA, und kommt das Quiz dann in die Navigation?</td><td>Nicht entschieden.</td><td><a href="pwa-und-quiz.html#offen">PWA und Quiz</a></td></tr>
+            <tr><td>Sollen Unterseiten einen eigenen Block „Fachquellen und wichtige Grenzen“ bekommen?</td><td>Nur 31 von 77 Seiten haben ihn, fast nur Hubs und Grundsatzseiten.</td><td><a href="redaktionslinie.html#quellen">Redaktionslinie</a></td></tr>
+            <tr><td>Wie geht es mit den offenen Backlog-Themen weiter?</td><td>Listenhunde und Maulkorb, Psychologie der Ausreden, übersehene Tiere, Tierernährung je Art, Zoohandlung und Züchter; die Reihenfolge ist seit Mai nicht neu festgelegt.</td><td><a href="backlog.html">Backlog</a></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="nicht-feststellbar">Mit den vorhandenen Quellen nicht feststellbar</h2>
+        <table>
+          <thead><tr><th>Frage</th><th>Was versucht wurde</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Sind die beiden PETA-Petitionen (Pferdekutschen Mallorca, Tierverkauf in Zoohandlungen) noch offen?</td><td>Abruf und Webchat-Browser am 9. Oktober 2026: HTTP 403. Im eigenen Browser prüfen.</td><td><a href="stand-und-seitenbestand.html#petitionen">Stand</a></td></tr>
+            <tr><td>Welche Instagram-Beiträge sind zwischen Mitte August und Anfang Oktober 2026 erschienen?</td><td>Im Repo liegen nur Entwürfe; Kontext und Gedächtnis haben keine vollständige Liste.</td><td><a href="instagram.html#themen">Instagram</a></td></tr>
+            <tr><td>Wie steht die Seite heute in PageSpeed und Lighthouse?</td><td>Letzte dokumentierte Messung vom 10. Juni 2026 (Mobil Leistung 91). Eine neue Messung wurde für dieses Wiki nicht gemacht.</td><td><a href="entscheidungen.html#seo">Entscheidungen</a></td></tr>
+            <tr><td>Stimmen die Bildnachweise des Kaninchen-Preis-Decoders nach dem Folientausch?</td><td><code>folie-6-neu.jpg</code> ist byte-gleich mit dem bisherigen <code>folie-4.jpg</code>; die Ersatzbilder sind Annemaries laufende Arbeit und wurden nicht angefasst.</td><td><a href="bilder-und-nachweise.html#offen">Bilder</a></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="pflege">Kleine Pflegepunkte</h2>
+        <p>Diese Punkte brauchen keine Grundsatzentscheidung, nur einen Auftrag:</p>
+        <ul>
+          <li><code>usedFor</code> in <code>assets/image-credits.json</code> an die erzeugten Seiten angleichen.</li>
+          <li><code>assets/IMAGE-LICENSES.md</code> auf den Stand von <code>image-credits.json</code> bringen.</li>
+          <li><code>pwa/PFLEGE.md</code>: Cache-Version in der Dateiübersicht (<code>v3</code> statt <code>v5</code>).</li>
+          <li><code>README.md</code>: Budgie-Brain „bleibt als noindex-Hinweisseite erhalten“, wird aber nicht ausgeliefert (live 404).</li>
+          <li><code>lastmod</code> der Seiten nachziehen, die seit dem 25. August 2026 inhaltlich geändert wurden.</li>
+          <li>Quizfragen zu <code>hunde/spuren-erkennen/</code> und <code>kleintiere/kaninchen-kosten/</code>.</li>
+          <li>Unabhängige Textprüfung (<code>.clautz/public-copy-review.json</code>) ist vom 9. August 2026 und deckt 73 Seiten ab.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
