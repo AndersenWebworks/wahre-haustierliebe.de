@@ -215,7 +215,7 @@ Neue Texte sind warm, kurz und ohne Belehrung. Beispiel: „Stimmt." statt „Ko
 - PWA-Icons liegen als SVG vor. Manche Apple-Versionen verlangen PNG. Falls apple-touch-icon als PNG gebraucht wird, einmal als 180 × 180 px aus `icons/icon.svg` rendern und als `icons/apple-touch-icon.png` ablegen, dann in den HTML-Head-Dateien wieder einbinden.
 - Der Fragenkatalog hat 280 Fragen in drei Modi (122 Klassisch, 115 Mythen-Check, 43 Fall-Entscheidung) aus rund 70 Wiki-Seiten. Pferde und Exoten haben noch wenige Fall-Fragen. Eine Lektoratsliste aller Fragen liegt in `docs/quiz-lektorat.md` und wird bei größeren Änderungen neu erzeugt.
 - Push-Benachrichtigungen sind bewusst nicht im MVP: die PWA läuft statisch ohne Server.
-- Die Beta ist seit dem 11. Oktober 2026 beendet. Auffindbar ist die PWA trotzdem noch nicht: Sie steht unter `robots.txt` mit `Disallow: /pwa/` und ist weder in `sitemap.xml` noch in `ai/pages.json` eingetragen. Sie taucht deshalb auch nicht in `llms.txt` oder `llms-full.txt` auf.
+- Die Beta ist seit dem 11. Oktober 2026 beendet. Seitdem verlinkt der Footer jeder Website-Seite das Quiz als „Lern-Quiz“ (Quelle: `src/site-source.html`, für die Abgabealter-Seite `docs/hunde-abgabealter-page-draft.html`). Für Suchmaschinen bleibt es gesperrt: `robots.txt` mit `Disallow: /pwa/`, kein Eintrag in `sitemap.xml` oder `ai/pages.json` und damit auch nicht in `llms.txt` oder `llms-full.txt`.
 
 ## Werkzeuge
 

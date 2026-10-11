@@ -37,9 +37,9 @@
     <main class="content">
       <article class="page">
         <h1>PWA und Quiz</h1>
-        <p class="status">Stand 11. Oktober 2026, am Code geprüft; Beta beendet, noch nicht auffindbar</p>
+        <p class="status">Stand 11. Oktober 2026, am Code geprüft; Beta beendet, im Footer verlinkt, für Suchmaschinen gesperrt</p>
 
-        <p>Unter <code>/pwa/</code> liegt ein kostenloses Lern-Quiz, das sich wie eine App auf dem Handy installieren lässt. Es soll neugierig auf die Website machen: Nach jeder Antwort führt ein Link in den passenden Artikel. Der Ton ist verspielter als auf der Website, aber genauso warm, und die Fragen sollen echte Herausforderungen sein. Die Beta ist seit dem 11. Oktober 2026 beendet. Erreichbar ist das Quiz, auffindbar ist es noch nicht.</p>
+        <p>Unter <code>/pwa/</code> liegt ein kostenloses Lern-Quiz, das sich wie eine App auf dem Handy installieren lässt. Es soll neugierig auf die Website machen: Nach jeder Antwort führt ein Link in den passenden Artikel. Der Ton ist verspielter als auf der Website, aber genauso warm, und die Fragen sollen echte Herausforderungen sein. Die Beta ist seit dem 11. Oktober 2026 beendet. Besucher finden das Quiz über einen Link im Footer, Suchmaschinen nicht.</p>
 
         <div class="callout"><p><strong>Ausführliche Pflegeanleitung:</strong> <code>pwa/PFLEGE.md</code> (Fragenschema, Modi, Farben, Mechanik, Test vor dem Deploy). Werkzeuge für neue Fragen: <code>tools/quiz/README.md</code>. Diese Seite fasst zusammen und verweist; sie ersetzt beides nicht.</p></div>
 
@@ -47,12 +47,13 @@
         <ul class="rule-list">
           <li>Live erreichbar unter <code>https://wahre-haustierliebe.de/pwa/</code> (HTTP 200 am 9. Oktober 2026).</li>
           <li><code>robots.txt</code> sperrt <code>/pwa/</code> für alle Crawler; die Sperre kommt aus <code>robotsDisallow</code> im Generator.</li>
-          <li>Nicht in <code>sitemap.xml</code>, <code>ai/pages.json</code>, <code>llms.txt</code> oder <code>llms-full.txt</code> und nicht in der Website-Navigation.</li>
+          <li>Seit dem 11. Oktober 2026 im Footer jeder Seite verlinkt: Spalte „Wissen“, Eintrag „Lern-Quiz“ nach „Selbsttest“, absolute Adresse <code>https://wahre-haustierliebe.de/pwa/</code>. Gepflegt in <code>src/site-source.html</code>; die Abgabealter-Seite für Hunde bringt ihren Footer aus <code>docs/hunde-abgabealter-page-draft.html</code> mit und muss dort mitgepflegt werden. Live erst nach dem nächsten Push.</li>
+          <li>Nicht in <code>sitemap.xml</code>, <code>ai/pages.json</code>, <code>llms.txt</code> oder <code>llms-full.txt</code> und nicht in der Hauptnavigation. So hat Erik es entschieden: verlinken, aber nicht für Suchmaschinen freigeben.</li>
           <li>Kein Tracking, keine Werbung, keine Cookies, kein Server. Gespeichert wird nur im Gerät (<code>localStorage</code>): Highscores je Modus und Kategorie, gesehene Fragen, Lieblingskategorie, Tagesserie.</li>
           <li>Teilen über die Web Share API, sonst Zwischenablage.</li>
           <li>Einen sichtbaren Beta-Hinweis gab es in der App nie. „Beta“ stand nur in <code>pwa/PFLEGE.md</code> und in einem Kommentar über <code>robotsDisallow</code> im Generator; beides ist seit dem 11. Oktober 2026 angepasst. Die Sperren selbst sind unverändert.</li>
         </ul>
-        <p class="source">Quelle: <code>robots.txt</code>, <code>pwa/PFLEGE.md</code> (Abschnitte „Mechanik-Regeln“, „Bekannte Grenzen“), <code>docs/quiz-handoff.md</code>; Commit <code>397712a</code> (21.09.2026, „WHL PWA Beta Sichtbarkeit“); Suche nach „Beta“ in <code>pwa/</code> und <code>tools/</code> am 11. Oktober 2026; Entscheidung von Erik am 11. Oktober 2026</p>
+        <p class="source">Quelle: <code>robots.txt</code>, <code>pwa/PFLEGE.md</code> (Abschnitte „Mechanik-Regeln“, „Bekannte Grenzen“), <code>docs/quiz-handoff.md</code>; Commit <code>397712a</code> (21.09.2026, „WHL PWA Beta Sichtbarkeit“); Suche nach „Beta“ in <code>pwa/</code> und <code>tools/</code> am 11. Oktober 2026; Entscheidungen von Erik am 11. Oktober 2026; Build vom 11. Oktober 2026 (Link in allen 78 erzeugten Seiten, <code>robots.txt</code>, Sitemap und <code>ai/</code> unverändert)</p>
 
         <h2 id="aufbau">Aufbau</h2>
         <p>Statische Web-App ohne Build und ohne Framework. Drei Seiten: <code>index.html</code> (Start mit Modus, Thema, Frage des Tages), <code>quiz.html</code>, <code>ergebnis.html</code>. Logik in <code>pwa/js/</code> (<code>whl.js</code>, <code>app.js</code>, <code>quiz.js</code>, <code>daily.js</code>, <code>share.js</code>, <code>sticker.js</code>), Gestaltung in <code>pwa/css/whl-pwa.css</code>, Manifest <code>pwa/manifest.json</code>, Icons als SVG.</p>
@@ -99,7 +100,6 @@
           <li>Lektorat durch Annemarie anhand <code>docs/quiz-lektorat.md</code>; Korrekturen danach in <code>questions.js</code> übernehmen und die Liste neu erzeugen.</li>
           <li>Pferde und Exoten haben wenige Fall-Fragen (1 und 2).</li>
           <li>Fragen zu Seiten nach dem 30. September 2026 fehlen, etwa <code>hunde/spuren-erkennen/</code> (4. Oktober) und <code>kleintiere/kaninchen-kosten/</code> (7. Oktober).</li>
-          <li>Ob das Quiz nach dem Ende der Beta in Navigation, Sitemap und Suchmaschinen kommt, ist nicht entschieden. Bis dahin bleibt es so verborgen wie bisher.</li>
           <li>PWA-Icons nur als SVG; manche Apple-Versionen brauchen ein PNG.</li>
           <li><code>pwa/PFLEGE.md</code> nennt in der Dateiübersicht noch <code>whl-pwa-v3</code>; im Code steht <code>v5</code>.</li>
           <li>Diese Punkte werden nicht ungefragt begonnen.</li>
