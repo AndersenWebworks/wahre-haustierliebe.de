@@ -20,6 +20,17 @@ const fixedPublicPaths = [
   'CNAME',
 ];
 
+// Arbeitsdateien in den öffentlichen Ordnern bleiben im Repo, gehen aber nicht live.
+const privateFilesInPublicPaths = new Set([
+  'assets/image-credits.json',
+  'pwa/data/questions.json',
+]);
+
+function isPublishable(relativePath) {
+  const normalized = relativePath.split(path.sep).join('/');
+  return !normalized.toLowerCase().endsWith('.md') && !privateFilesInPublicPaths.has(normalized);
+}
+
 function publicPathFromPageUrl(pageUrl) {
   const url = new URL(pageUrl);
   let relativePath = decodeURIComponent(url.pathname);
@@ -74,7 +85,10 @@ async function copyPublicPath(relativePath) {
   const stat = await fs.stat(source);
 
   if (stat.isDirectory()) {
-    await fs.cp(source, target, { recursive: true });
+    await fs.cp(source, target, {
+      recursive: true,
+      filter: (entry) => isPublishable(path.relative(projectRoot, entry)),
+    });
     return;
   }
 

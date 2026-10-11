@@ -3521,7 +3521,7 @@ function buildSitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
-// Die Quiz-PWA unter /pwa/ ist Beta und soll nicht gecrawlt werden (siehe pwa/PFLEGE.md).
+// Die Quiz-PWA unter /pwa/ soll vorerst nicht gecrawlt werden (siehe pwa/PFLEGE.md).
 const robotsUserAgents = ['*', 'OAI-SearchBot', 'ChatGPT-User', 'GPTBot', 'PerplexityBot', 'ClaudeBot', 'Claude-SearchBot', 'Googlebot'];
 const robotsDisallow = ['/pwa/'];
 

@@ -37,7 +37,7 @@
     <main class="content">
       <article class="page">
         <h1>Entscheidungen</h1>
-        <p class="status">Stand 9. Oktober 2026; aus README, Git-Geschichte, Projektdoku und Projektkontext zusammengetragen</p>
+        <p class="status">Stand 11. Oktober 2026; aus README, Git-Geschichte, Projektdoku, Projektkontext und Eriks Antworten in der Fragenkarte zusammengetragen</p>
 
         <p>Diese Seite sammelt, was für Wa(h)re Haustier(liebe) bereits entschieden ist, damit niemand dieselbe Frage zweimal aufrollt. Wer eine Entscheidung ändern will, braucht eine neue Entscheidung von Erik oder Annemarie und trägt die alte hier als abgelöst ein. Inhaltliche Haltung steht ausführlicher auf <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>.</p>
         <p>„Kontextakte“ meint hier die Akte <code>WAHRE_HAUSTIERLIEBE.md</code> im Clautz-Core, „Gedächtnis“ die gespeicherten Einzelfakten im Core.</p>
@@ -50,6 +50,7 @@
             <tr><td><code>vermehrer</code> ist der alte Name und das alte Repo (frühere WordPress-Fassung). Es ist Archiv und wird nicht verändert.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code> (Abgrenzung), Kontextakte</td></tr>
             <tr><td>Projektwissen liegt in diesem Wiki; Gesagtes und Vereinbartes im Gedächtnis. Das Wiki verweist darauf und schreibt es nicht ab.</td><td><span class="badge badge-load">verbindlich</span> 09.10.2026</td><td>Clautz-Wiki, <code>projektwikis.html</code></td></tr>
             <tr><td>Projekt-Backlogs gehören in den Projektordner.</td><td><span class="badge badge-load">verbindlich</span></td><td>Kontextakte, Abschnitt „Projekt-SSOT“</td></tr>
+            <tr><td>Der Themenbacklog <code>docs/wahre-haustierliebe-themenbacklog.md</code> wird im Repo versioniert; der Ausschluss in <code>.gitignore</code> ist aufgehoben.</td><td><span class="badge badge-load">umgesetzt</span> 11.10.2026</td><td>Erik (Fragenkarte, 11.10.2026); <code>.gitignore</code></td></tr>
           </tbody>
         </table>
 
@@ -59,6 +60,7 @@
           <tbody>
             <tr><td>Keine Hash-SPA mehr: echte statische Einzelseiten aus <code>src/site-source.html</code>.</td><td><span class="badge badge-load">umgesetzt</span> 27.05.2026</td><td><code>README.md</code>, Commit <code>3cc5b43</code></td></tr>
             <tr><td>Veröffentlichung über GitHub Pages aus einem Artefakt mit freigegebenen Pfaden, nicht aus dem Repo-Root. Neue Seiten kommen über <code>ai/pages.json</code> ins Artefakt, ohne zweite Liste.</td><td><span class="badge badge-load">umgesetzt</span></td><td><code>README.md</code>, <code>tools/prepare-pages-artifact.mjs</code></td></tr>
+            <tr><td>Arbeitsdateien in <code>pwa/</code> und <code>assets/</code> werden nicht veröffentlicht: alle <code>.md</code>-Dateien sowie <code>assets/image-credits.json</code> und <code>pwa/data/questions.json</code>.</td><td><span class="badge badge-load">umgesetzt</span> 11.10.2026</td><td>Erik (Fragenkarte, 11.10.2026); <code>tools/prepare-pages-artifact.mjs</code></td></tr>
             <tr><td>Generierte Seiten werden nie direkt bearbeitet; Änderungen in Quelle oder Generator. Titel und Beschreibung stehen nur in der Seitendefinition.</td><td><span class="badge badge-load">verbindlich</span></td><td><code>README.md</code> (Build)</td></tr>
             <tr><td>Kontakt und Hinweise per <code>mailto:</code>-Entwurf, ohne Server, ohne SMTP, ohne externen Formdienst. Kein eigenes E-Mail-Feld, solange es nur einen Mailentwurf gibt.</td><td><span class="badge badge-load">umgesetzt</span></td><td><code>README.md</code> (Kontaktformular), Kontextakte</td></tr>
             <tr><td>Ein Push auf <code>main</code> veröffentlicht. Für dieses Projekt ist automatisches Pushen nach geprüften Änderungen freigegeben, solange der jeweilige Auftrag nichts anderes sagt.</td><td><span class="badge badge-meta">Arbeitsregel</span> 30.09.2026</td><td>Gedächtnis (Projekt, <code>git.push_after_changes</code>); <code>docs/quiz-handoff.md</code></td></tr>
@@ -102,7 +104,8 @@
         <table>
           <thead><tr><th>Entscheidung</th><th>Status</th><th>Quelle</th></tr></thead>
           <tbody>
-            <tr><td>Quiz-PWA als Beta: erreichbar, aber nicht auffindbar (robots, keine Sitemap, kein <code>pages.json</code>, keine Navigation).</td><td><span class="badge badge-load">umgesetzt</span> 21.09.2026</td><td>Commit <code>397712a</code>; <code>pwa/PFLEGE.md</code></td></tr>
+            <tr><td>Quiz-PWA als Beta: erreichbar, aber nicht auffindbar (robots, keine Sitemap, kein <code>pages.json</code>, keine Navigation).</td><td><span class="badge badge-old">abgelöst</span> 11.10.2026, umgesetzt 21.09.2026</td><td>Commit <code>397712a</code>; <code>pwa/PFLEGE.md</code></td></tr>
+            <tr><td>Die Beta des Quiz ist beendet, die Beta-Markierung entfernt. Sperre für Suchmaschinen und fehlende Verlinkung bleiben, bis über die Auffindbarkeit entschieden ist.</td><td><span class="badge badge-load">umgesetzt</span> 11.10.2026</td><td>Erik (Fragenkarte, 11.10.2026); <code>pwa/PFLEGE.md</code></td></tr>
             <tr><td>Vom Quizduell nur übernehmen, was zum Ton passt: kein Speed-Bonus, kein Multiplayer, keine Risiko- oder Jagd-Mechanik, keine Casino-Toasts.</td><td><span class="badge badge-load">verbindlich</span> 21.09.2026</td><td><code>docs/quiz-handoff.md</code>; Kontextakte</td></tr>
             <tr><td>Service Worker network-first, damit nach einem Deploy keine alte Fassung hängen bleibt.</td><td><span class="badge badge-load">umgesetzt</span> 30.09.2026</td><td><code>docs/quiz-handoff.md</code></td></tr>
             <tr><td>Keine selbst gezeichneten neuen Sticker.</td><td><span class="badge badge-load">verbindlich</span> 30.09.2026</td><td>Commit <code>1d59f51</code>; <code>docs/quiz-handoff.md</code></td></tr>

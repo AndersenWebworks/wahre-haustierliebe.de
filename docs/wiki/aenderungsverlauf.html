@@ -37,9 +37,19 @@
     <main class="content">
       <article class="page">
         <h1>Änderungsverlauf</h1>
-        <p class="status">Zuletzt ergänzt am 9. Oktober 2026, neueste Einträge oben</p>
+        <p class="status">Zuletzt ergänzt am 11. Oktober 2026, neueste Einträge oben</p>
 
         <p>Hier steht, was sich am Projekt und am Wiki geändert hat, mit Datum und betroffener Seite. Ein Eintrag pro Arbeitsgang reicht: was, warum, wo nachlesen.</p>
+
+        <h2 id="2026-10-11-entscheidungen">11. Oktober 2026: Erste offene Fragen entschieden und umgesetzt</h2>
+        <ul>
+          <li>Arbeitsdateien werden nicht mehr veröffentlicht: <code>tools/prepare-pages-artifact.mjs</code> lässt alle <code>.md</code>-Dateien sowie <code>assets/image-credits.json</code> und <code>pwa/data/questions.json</code> weg. Live wirkt das erst mit der nächsten Veröffentlichung. Siehe <a href="technik-und-veroeffentlichung.html#docs-privat">Technik und Veröffentlichung</a>.</li>
+          <li>Der Themenbacklog liegt im Repo; die Zeile in <code>.gitignore</code> ist entfernt. Siehe <a href="backlog.html">Backlog-Themen</a>.</li>
+          <li>Die Beta des Quiz ist beendet. Ein sichtbarer Beta-Hinweis existierte nicht; angepasst sind <code>pwa/PFLEGE.md</code> und der Kommentar über <code>robotsDisallow</code> im Generator. Ob das Quiz auffindbar wird, ist offen. Siehe <a href="pwa-und-quiz.html#beta">PWA und Quiz</a>.</li>
+          <li>Das fremde Material im Repo wurde Erik vorgelegt; die Entscheidung steht aus. Siehe <a href="stolperfallen.html#repo">Stolperfallen</a>.</li>
+          <li>Neu festgestellt: Das GitHub-Repo ist öffentlich, <code>docs/</code> wird mit jedem Push dort lesbar. Als Stolperfalle und offene Frage eingetragen.</li>
+          <li>Grundlage: Eriks Antworten in der Fragenkarte vom 11. Oktober 2026. Neu offene Punkte stehen auf <a href="offene-fragen.html">Offene Fragen</a> und in <a href="entscheidungen.html">Entscheidungen</a>.</li>
+        </ul>
 
         <h2 id="2026-10-09-wiki-ausgebaut">9. Oktober 2026: Wiki zum vollständigen Projektwiki ausgebaut</h2>
         <ul>
