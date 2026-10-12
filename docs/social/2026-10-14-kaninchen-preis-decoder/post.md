@@ -2,7 +2,7 @@
 
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 14.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
-Status: Veröffentlicht, laut Annemarie schon vor dem 14.10.2026 (Antwort vom 13.10.2026). Genaues Datum und ob die Folien 3, 4 und 6 durch die Dateien `bilder/folie-*-neu.jpg` ersetzt wurden, sind nicht dokumentiert.
+Status: Veröffentlicht mit den acht Folien und dem Bildnachweis unten, laut Annemarie schon vor dem 14.10.2026 (Antworten vom 13.10.2026). Das genaue Datum ist nicht dokumentiert.
 Website-Seite: https://wahre-haustierliebe.de/kleintiere/kaninchen-kosten/index.html
 
 ## Folien
