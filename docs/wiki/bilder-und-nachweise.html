@@ -37,14 +37,14 @@
     <main class="content">
       <article class="page">
         <h1>Bildablauf und Bildnachweise</h1>
-        <p class="status">Stand 9. Oktober 2026, an <code>assets/</code> und den Seiten geprüft</p>
+        <p class="status">Stand 9. Oktober 2026, an <code>assets/</code> und den Seiten geprüft; Bildregel und Instagram-Format am 12. Oktober 2026 entschieden</p>
 
         <p>Alle Tierfotos auf der Website und auf Instagram sind echte, frei lizenzierte Fotos, meist von Wikimedia Commons, mit sauberem Nachweis. KI-Bilder werden nicht verwendet, wenn ein echtes freies Foto zu haben ist. Diese Seite beschreibt, wie ein Bild auf die Seite kommt, wo der Nachweis steht und wo der heutige Bestand von den Regeln abweicht.</p>
 
         <h2 id="regeln">Regeln</h2>
         <ul class="rule-list">
           <li><strong>Echte freie Fotos.</strong> Bevorzugt Wikimedia Commons, gemeinfrei oder CC, jeweils mit Prüfung der konkreten Dateiseite. Ohne belegbare Quelle und passende Lizenz kommt kein Bild auf die Seite.</li>
-          <li><strong>Jedes Commons-Bild nur einmal.</strong> Ein Bildmotiv wird nur an einer Stelle eingesetzt. Für Instagram wird das eingehalten; auf der Website nicht, siehe <a href="#mehrfach">Mehrfachverwendung</a>.</li>
+          <li><strong>Kein Bild doppelt im selben Instagram-Beitrag.</strong> Jede Folie bekommt ein eigenes Bild. Auf der Website darf ein Bild dagegen an mehreren Stellen stehen, siehe <a href="#mehrfach">Mehrfachverwendung</a>. Die frühere Lesart „jedes Commons-Bild im ganzen Projekt nur einmal“ war falsch; so hat Annemarie die Regel am 12. Oktober 2026 klargestellt.</li>
           <li><strong>Keine erkennbaren Menschen.</strong> Seit 3. Juni 2026 keine bewusst eingesetzten Bilder mit Gesichtern, Körpern oder Händen. Neue Personenmotive brauchen eine eigene Prüfung der Persönlichkeitsrechte und eine Freigabe.</li>
           <li><strong>Lokal und klein.</strong> Bilder liegen lokal im Repo, nicht per Hotlink. Seiten zeigen verkleinerte Fassungen (lange Kante etwa 960 px) aus <code>assets/images/optimized/</code>; die Originalkopien bleiben für Social-Karten und Herkunftsnachweis.</li>
           <li><strong>Header-Bilder auf Unterseiten</strong> sollen möglichst je Seite verschieden sein und für PageSpeed passend groß.</li>
@@ -54,7 +54,7 @@
         <h2 id="website">Ablauf für ein neues Website-Bild</h2>
         <ol>
           <li>Passende Datei auf Commons finden und die Dateiseite prüfen: Urheber, Lizenz, Motiv. Alt-Text oder Dateiname allein belegen weder Motiv noch Rechte.</li>
-          <li>Prüfen, ob die Datei schon irgendwo verwendet wird (<code>assets/image-credits.json</code> und die Instagram-Ordner in <code>docs/social/</code>).</li>
+          <li>In <code>assets/image-credits.json</code> nachsehen, ob die Datei schon einen Eintrag hat. Dann wird der vorhandene Eintrag um den neuen Einsatzort in <code>usedFor</code> ergänzt, statt die Datei ein zweites Mal abzulegen.</li>
           <li>Lokale Kopie in <code>assets/images/</code> ablegen.</li>
           <li>Eintrag in <code>assets/image-credits.json</code> mit <code>id</code>, <code>localPath</code>, <code>fileTitle</code>, <code>sourceUrl</code>, <code>originalUrl</code>, <code>author</code>, <code>license</code>, <code>licenseUrl</code> (außer bei Public Domain und Markenassets), <code>usedFor</code>, <code>alt</code>, <code>modifications</code>.</li>
           <li>Build ausführen: Er erzeugt die verkleinerte Fassung und die Social-Karte. <code>tools/image-layout-audit.mjs</code> und <code>tools/static-pages-audit.mjs</code> prüfen fehlende Assets und Bildnachweise.</li>
@@ -77,7 +77,7 @@
         <p class="source">Quelle: Auszählung von <code>assets/image-credits.json</code> und <code>assets/images/</code> am 9. Oktober 2026</p>
 
         <h2 id="mehrfach">Mehrfachverwendung auf der Website</h2>
-        <p>Laut <code>usedFor</code> laufen 23 Inhaltsbilder an mehreren Stellen, oft als Titelbild mehrerer Unterseiten. Beispiele:</p>
+        <p>Laut <code>usedFor</code> laufen 23 Inhaltsbilder an mehreren Stellen, oft als Titelbild mehrerer Unterseiten. Das ist erlaubt (Annemarie, 12. Oktober 2026) und muss nicht zurückgebaut werden. Für Header-Bilder auf Unterseiten gilt weiter der Wunsch, möglichst je Seite ein anderes zu nehmen; das betrifft neue Seiten und ist kein Umbauauftrag. Beispiele:</p>
         <table>
           <thead><tr><th>Bild</th><th>Einsatzorte laut <code>usedFor</code>, ergänzt um Funde im HTML</th></tr></thead>
           <tbody>
@@ -93,19 +93,17 @@
 
         <h2 id="instagram">Bilder für Instagram</h2>
         <ul class="rule-list">
-          <li>Gleiche Herkunftsregeln wie für die Website, und jedes Motiv nur einmal: Die Bilder des Kaninchen-Preis-Decoders sind ausdrücklich keine Website-Bilder.</li>
+          <li>Gleiche Herkunftsregeln wie für die Website. Jede Folie hat ein Bild, und innerhalb eines Beitrags kommt kein Bild doppelt vor.</li>
           <li>Der Nachweis gehört in die Caption oder als ersten Kommentar, in Kurzform „Bilder: Urheber/Lizenz; Urheber/Lizenz; …“. Im Beitragsordner steht zusätzlich je Folie Titel, Urheber, Lizenz und Commons-Link.</li>
           <li>Ablage je Beitrag unter <code>docs/social/JJJJ-MM-TT-thema/</code>: <code>post.md</code> mit Folien, Caption, Alt-Text, Nachweisen und Zahlenbelegen, Bilder unter <code>bilder/</code>.</li>
-          <li>Format: Früher galt 1080 × 1080 px PNG als Standard (Textgrafik oder dezenter Text über Foto). Der Kaninchen-Preis-Decoder nutzt dagegen JPG-Fotos, lokal auf höchstens 1920 px Breite verkleinert. Welcher Standard künftig gilt, ist offen.</li>
+          <li><strong>Format: hochkant 4:5</strong>, bei 1080 px Breite also 1080 × 1350 px (Annemarie, 12. Oktober 2026). Das frühere quadratische 1080 × 1080 px PNG aus der <a href="social-media-strategie.html">Social-Media-Strategie</a> vom Juni gilt nicht mehr. Die Fotos im Ordner des Kaninchen-Preis-Decoders sind noch Querformate zwischen etwa 4:3 und 3:2 (geprüft am 12. Oktober 2026); für 4:5 muss jedes Motiv beschnitten werden.</li>
         </ul>
-        <p class="source">Quelle: <code>docs/social/2026-10-14-kaninchen-preis-decoder/post.md</code> (Abschnitt „Bildnachweis“); Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitt „Instagram-Bildstandard“, Lernnotiz zur Nachweis-Kurzform)</p>
+        <p class="source">Quelle: <code>docs/social/2026-10-14-kaninchen-preis-decoder/post.md</code> (Abschnitt „Bildnachweis“) und Bildmaße der Dateien in <code>bilder/</code>; Kontextakte <code>WAHRE_HAUSTIERLIEBE.md</code> (Abschnitt „Instagram-Bildstandard“, Lernnotiz zur Nachweis-Kurzform); Annemaries Antworten in der Fragenkarte vom 12. Oktober 2026</p>
 
         <h2 id="offen">Offene Punkte</h2>
         <ul>
-          <li>Gilt die Regel „jedes Commons-Bild nur einmal“ auch rückwirkend für die Website? Dann bräuchten rund 23 Bilder Ersatz oder neue Titelbilder.</li>
           <li><code>usedFor</code> in <code>image-credits.json</code> an die erzeugten Seiten angleichen.</li>
           <li><code>assets/IMAGE-LICENSES.md</code> ist veraltet. Öffentlich abrufbar ist die Datei nur noch bis zur nächsten Veröffentlichung.</li>
-          <li>Bildformat für Instagram festlegen.</li>
           <li>Im Ordner des Kaninchen-Preis-Decoders liegen seit dem 7. Oktober 2026 ungetrackte Ersatzbilder (<code>folie-3-neu.jpg</code>, <code>folie-4-neu.jpg</code>, <code>folie-6-neu.jpg</code>) und ein ZIP aus Annemaries Arbeit. <code>folie-6-neu.jpg</code> ist byte-gleich mit dem bisherigen <code>folie-4.jpg</code> („Bunny is closed up“, Lottie, CC0). Werden die neuen Folien eingesetzt, muss der Bildnachweis in <code>post.md</code> für Folie 3, 4 und 6 nachgezogen werden. Die Dateien gehören zu Annemaries laufender Arbeit und wurden nicht angefasst.</li>
         </ul>
       </article>
