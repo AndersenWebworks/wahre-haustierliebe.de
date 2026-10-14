@@ -1,0 +1,92 @@
+# Instagram-Karussell: Meerschweinchen-Preis-Decoder
+
+Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 21.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
+
+Status: Entwurf, Texte noch nicht von Annemarie freigegeben. Bilder ausgewählt und gesichtet (Stand 14.10.2026).
+Website-Seite: noch nicht vorhanden. Das Gegenstück zu https://wahre-haustierliebe.de/kleintiere/kaninchen-kosten/index.html müsste neu angelegt werden (vorgeschlagen: /kleintiere/meerschweinchen-kosten/index.html).
+
+## Folien
+
+**Folie 1** (Bild: folie-1.jpg)
+Zwei Meerschweinchen für 60 Euro?
+Das ist der kleinste Teil der Rechnung.
+
+**Folie 2** (Bild: folie-2.jpg)
+Zwei sind schon zu wenig.
+Der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren. Die Zahlen in diesem Beitrag gelten für zwei. Mit jedem weiteren Tier wird die Rechnung höher.
+Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
+
+**Folie 3** (Bild: folie-3.jpg)
+Bevor sie einziehen: 390 bis 840 Euro.
+Gehege mit mindestens 2 Quadratmetern für bis zu vier Tiere, dazu Verstecke, Tunnel, Heuraufe und Näpfe.
+Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
+
+**Folie 4** (Bild: folie-4.jpg)
+Jedes Jahr: 830 bis 1.520 Euro.
+Das sind etwa 70 bis 125 Euro im Monat für Heu, Frischfutter, Einstreu und den Gesundheitscheck.
+Quelle: Deutscher Tierschutzbund, Stand Oktober 2026. Monatswert: eigene Umrechnung.
+
+**Folie 5** (Bild: folie-5.jpg)
+Was wehtun kann:
+Kastration: 70 bis 140 Euro (Bock), 250 bis 450 Euro (Weibchen)
+Zähne in Sedierung: 150 bis 300 Euro pro Eingriff
+Magen-Darm-Stase, stationär: 300 bis 600 Euro
+Quelle: go4vet, Artikel vom 13. März 2026
+
+**Folie 6** (Bild: folie-6.jpg)
+Acht Jahre, zwei Meerschweinchen: mindestens 7.000 Euro.
+Tierarztkosten sind darin nicht eingerechnet, weil sie sich nicht pauschal beziffern lassen. Das ist die Rechnung für das, was Meerschweinchen wirklich brauchen.
+Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
+
+**Folie 7** (Bild: folie-7.jpg)
+Und Geld ist nur die halbe Frage.
+Meerschweinchen werden sechs bis acht Jahre alt. Es sind Fluchttiere, die nicht gern hochgehoben werden. Wer versorgt sie jeden Tag, wenn der Reiz des Neuen verflogen ist?
+
+**Folie 8** (Bild: folie-8.jpg)
+Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja.
+Schau zuerst im Tierschutz. Auch dort warten Meerschweinchen, und auch dort gilt: nie allein.
+Unsicher? Frag im Tierheim nach, bevor du dich entscheidest.
+Speichern. Schicken an jemanden, der gerade Meerschweinchen googelt.
+Alle Zahlen und Quellen: Link im Profil.
+
+## Caption
+
+Zwei Meerschweinchen für 60 Euro? Die Zahl ist der kleinste Teil der Rechnung.
+
+Acht Jahre mit zwei Tieren kosten mindestens 7.000 Euro (Deutscher Tierschutzbund, Stand Oktober 2026). Der Tierarzt ist darin noch nicht enthalten: Kastration, Zähne und ein Magen-Darm-Notfall können jeweils drei- bis vierstellig werden. Und zwei Tiere sind nach Einschätzung des Tierschutzbundes schon zu wenig, er rät bei einer Adoption zu mindestens drei.
+
+Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja. Schau zuerst im Tierschutz.
+
+Kennst du jemanden, der gerade über Meerschweinchen nachdenkt? Schick ihm diesen Beitrag mit dem Satz: „Schau dir vorher diese Rechnung an.“
+
+Alle Zahlen und Quellen findest du über den Link im Profil. Folge Wa(h)re Haustier(liebe) für Aufklärung, bevor aus einem Wunsch eine folgenschwere Entscheidung wird.
+
+#wahrehaustierliebe #meerschweinchen #meerschweinchenhaltung #tierschutz #adoptierenstattkaufen
+
+## Bildnachweis
+
+Bilder: Rex tremendae majestatis/CC BY-SA 4.0; Asamoto/CC BY 4.0; Christina Telep/CC BY 3.0; Tim Strater/CC BY-SA 2.0; Michael James/CC BY 2.0; ilovebutter/CC BY 2.0
+
+Je Folie:
+- Folie 1: "Guinea pigs eating grass", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_eating_grass.jpg
+- Folie 2: "Guinea pigs 9", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_9.jpg
+- Folie 3: "Guinea pigs at Pata Zoo in 2023", Asamoto, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_at_Pata_Zoo_in_2023.jpg
+- Folie 4: "Rusty The Smiling Guinea Pig (235589647)", Christina Telep, CC BY 3.0, https://commons.wikimedia.org/wiki/File:Rusty_The_Smiling_Guinea_Pig_(235589647).jpeg
+- Folie 5: "Cute colourful guinea pig domesticated", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Cute_colourful_guinea_pig_domesticated.jpg
+- Folie 6: "Cavia (7407641460) (2)", Tim Strater, CC BY-SA 2.0, https://commons.wikimedia.org/wiki/File:Cavia_(7407641460)_(2).jpg
+- Folie 7: "Guinea Pigs 2", Michael James, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Guinea_Pigs_2.jpg
+- Folie 8: "Brothers - Flickr - ilovebutter", ilovebutter, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Brothers_-_Flickr_-_ilovebutter.jpg
+
+Die Bilder sind lokal auf höchstens 1920 Pixel Breite verkleinert, sonst unverändert. Alle Lizenzen verlangen Namensnennung, CC BY-SA 4.0 und 2.0 zusätzlich Weitergabe unter gleichen Bedingungen. Wird ein Bild zugeschnitten, steht in der Caption "Zuschnitt und Text: Wa(h)re Haustier(liebe)" dazu.
+
+## Belege der Zahlen
+
+- Deutscher Tierschutzbund, Meerschweinchen (Angaben für zwei Tiere, Seite ohne Datumsangabe, abgerufen im Oktober 2026): Anschaffung 60 Euro, Basisausstattung 390–840 Euro, jährlich 830–1.520 Euro, „Zwei 8-jährige Meerschweinchen kosten mindestens 7.000 €“, Tierarztkosten „können nicht pauschal eingerechnet werden“. Lebenserwartung sechs bis acht Jahre, Innengehege mindestens 2 Quadratmeter für bis zu vier Tiere. Bei einer Adoption „mindestens drei der kleinen Tiere“, Böcke in jedem Fall kastrieren. https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/
+- go4vet (Artikel vom 13. März 2026): Kastration Bock 70–140 Euro, Weibchen 250–450 Euro, Zahnkorrektur in Sedierung 150–300 Euro (bei chronischen Problemen 600–1.000 Euro im Jahr), Magen-Darm-Stase stationär 300–600 Euro. https://www.go4vet.com/kleintiere/tierarztkosten-meerschweinchen-was-solltest-du-einplanen/
+- Eigene Umrechnung: 70–125 Euro im Monat aus 830–1.520 Euro im Jahr.
+
+## Website-Einschätzung
+
+- Instagram-Thema: Preis-Decoder Meerschweinchen
+- Website-Potenzial: neu anlegen (Kostenseite wie bei den Kaninchen; die bestehende Meerschweinchen-Seite behandelt nur das Abgabealter)
+- Website-Zug: neue Seite /kleintiere/meerschweinchen-kosten/ mit Anschaffung, Ausstattung, Jahreskosten, Tierarzt, Rücklage und Gruppengröße; Verlinkung aus der Meerschweinchen-Seite und aus dem Kleintiere-Hub
