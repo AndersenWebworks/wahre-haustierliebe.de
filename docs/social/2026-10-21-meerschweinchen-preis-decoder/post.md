@@ -67,14 +67,14 @@ Alle Zahlen und Quellen findest du über den Link im Profil. Als Nächstes in de
 
 ## Bildnachweis
 
-Bilder: Rex tremendae majestatis/CC BY-SA 4.0; Asamoto/CC BY 4.0; Christina Telep/CC BY 3.0; Tim Strater/CC BY-SA 2.0; Michael James/CC BY 2.0; ilovebutter/CC BY 2.0
+Bilder: Rex tremendae majestatis/CC BY-SA 4.0; Morbakka/CC BY-SA 4.0; Christina Telep/CC BY 3.0; Tim Strater/CC BY-SA 2.0; Michael James/CC BY 2.0; ilovebutter/CC BY 2.0
 
 Je Folie:
 - Folie 1: "Guinea pigs eating grass", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_eating_grass.jpg
 - Folie 2: "Guinea pigs 9", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_9.jpg
-- Folie 3: "Guinea pigs at Pata Zoo in 2023", Asamoto, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_at_Pata_Zoo_in_2023.jpg
+- Folie 3: "Guinea pig in hutch", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pig_in_hutch.jpg
 - Folie 4: "Rusty The Smiling Guinea Pig (235589647)", Christina Telep, CC BY 3.0, https://commons.wikimedia.org/wiki/File:Rusty_The_Smiling_Guinea_Pig_(235589647).jpeg
-- Folie 5: "Cute colourful guinea pig domesticated", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Cute_colourful_guinea_pig_domesticated.jpg
+- Folie 5: "Nagezähne eines Hausmeerschweinchens", Morbakka, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Nagezähne_eines_Hausmeerschweinchens.jpg
 - Folie 6: "Cavia (7407641460) (2)", Tim Strater, CC BY-SA 2.0, https://commons.wikimedia.org/wiki/File:Cavia_(7407641460)_(2).jpg
 - Folie 7: "Guinea Pigs 2", Michael James, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Guinea_Pigs_2.jpg
 - Folie 8: "Brothers - Flickr - ilovebutter", ilovebutter, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Brothers_-_Flickr_-_ilovebutter.jpg
