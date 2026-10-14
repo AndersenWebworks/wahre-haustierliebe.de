@@ -47,6 +47,7 @@ var staticPageRoutes = {
   "kleintiere-kaninchen": "/kleintiere/kaninchen/index.html",
   "kleintiere-kaninchen-kosten": "/kleintiere/kaninchen-kosten/index.html",
   "kleintiere-meerschweinchen": "/kleintiere/meerschweinchen/index.html",
+  "kleintiere-meerschweinchen-kosten": "/kleintiere/meerschweinchen-kosten/index.html",
   "kleintiere-hamster": "/kleintiere/hamster/index.html",
   "kleintiere-ratten": "/kleintiere/ratten/index.html",
   "kleintiere-degus-und-chinchillas": "/kleintiere/degus-chinchillas/index.html",
@@ -365,6 +366,12 @@ var staticSiteSearchIndex = [
     "title": "Meerschweinchen abgeben: Mindestalter und richtige Haltung - Wa(h)re Haustier(liebe)",
     "description": "Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.",
     "terms": "Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen. kleintiere/meerschweinchen kleintiere meerschweinchen"
+  },
+  {
+    "id": "kleintiere-meerschweinchen-kosten",
+    "title": "Was Meerschweinchen wirklich kosten - Wa(h)re Haustier(liebe)",
+    "description": "Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.",
+    "terms": "Kosten für Meerschweinchen vor der Anschaffung realistisch einschätzen. kleintiere/meerschweinchen-kosten kleintiere meerschweinchen kosten"
   },
   {
     "id": "kleintiere-hamster",
@@ -1386,6 +1393,7 @@ function normalizeAssetUrls(root) {
       'kleintiere-kaninchen': 'kleintiere/kaninchen/',
       'kleintiere-kaninchen-kosten': 'kleintiere/kaninchen-kosten/',
       'kleintiere-meerschweinchen': 'kleintiere/meerschweinchen/',
+      'kleintiere-meerschweinchen-kosten': 'kleintiere/meerschweinchen-kosten/',
       'kleintiere-hamster': 'kleintiere/hamster/',
       'kleintiere-ratten': 'kleintiere/ratten/',
       'kleintiere-degus-und-chinchillas': 'kleintiere/degus-chinchillas/',

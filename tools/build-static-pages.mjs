@@ -346,6 +346,7 @@ const topicPages = [
   ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.', { lastmod: '2026-08-30' }],
   ['kleintiere-kaninchen-kosten', 'kleintiere', 'kleintiere/kaninchen-kosten', 'Was zwei Kaninchen wirklich kosten', 'Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.', 'Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-07' }],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen abgeben: Mindestalter und richtige Haltung', 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.', 'Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.', { lastmod: '2026-09-30' }],
+  ['kleintiere-meerschweinchen-kosten', 'kleintiere', 'kleintiere/meerschweinchen-kosten', 'Was Meerschweinchen wirklich kosten', 'Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.', 'Kosten für Meerschweinchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-14' }],
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
   ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.'],
@@ -1624,6 +1625,13 @@ Object.assign(firstContentImageByPage, {
     height: 1600,
     type: 'image/jpeg',
     alt: 'Kaninchen liegt in einem Gehege zwischen grünen Pflanzen.',
+  },
+  'kleintiere-meerschweinchen-kosten': {
+    src: 'assets/images/guinea-pig-costs-pair.jpg',
+    width: 1600,
+    height: 1195,
+    type: 'image/jpeg',
+    alt: 'Zwei braun-weiße Meerschweinchen sitzen dicht nebeneinander und schauen in die Kamera.',
   },
   'kleintiere-meerschweinchen': {
     src: 'assets/images/kleintiere-zwei-meerschweinchen.jpg',

@@ -1609,6 +1609,31 @@
       }
     },
     {
+      "id": "kleintiere-meerschweinchen-kosten",
+      "url": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen-kosten/index.html",
+      "title": "Was Meerschweinchen wirklich kosten - Wa(h)re Haustier(liebe)",
+      "description": "Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.",
+      "intent": "Kosten für Meerschweinchen vor der Anschaffung realistisch einschätzen.",
+      "keywords": [
+        "Kleintiere halten",
+        "Kaninchen",
+        "Meerschweinchen",
+        "Hamster",
+        "Ratten"
+      ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
+      "social": {
+        "title": "Was Meerschweinchen wirklich kosten - Wa(h)re Haustier(liebe)",
+        "description": "Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.",
+        "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-meerschweinchen-kosten.png",
+        "imageAlt": "Zwei braun-weiße Meerschweinchen sitzen dicht nebeneinander und schauen in die Kamera.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "kleintiere-hamster",
       "url": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html",
       "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",

@@ -79,12 +79,12 @@
             <tr><td><code>hunde/</code><br>12 Seiten</td><td><code>abgabealter</code>, <code>hund-im-buero</code>, <code>soziale-beduerfnisse</code>, <code>stadtfest-rummel</code>, <code>garten-auslauf</code>, <code>spuren-erkennen</code>, <code>allein-zu-hause</code>, <code>kosten</code> (Preis-Decoder), <code>kastration</code>, <code>hofhaltung-und-zwinger</code>, <code>gesundheit</code>, <code>entscheidung</code></td></tr>
             <tr><td><code>katzen/</code><br>9 Seiten</td><td><code>sozialverhalten</code>, <code>wohnungshaltung</code>, <code>kastration</code>, <code>stilles-leiden</code>, <code>kosten</code> (Preis-Decoder), <code>streunerkatzen</code>, <code>entscheidung</code> (Kätzchen-Lexikon), <code>kaetzchen-tierarzt</code> (handgepflegt), <code>wildkatzenbaby-gefunden</code></td></tr>
             <tr><td><code>voegel/</code><br>12 Seiten</td><td><code>schwarmhaltung</code>, <code>uv-licht</code>, <code>kuechenluft-teflon</code>, <code>freiflug</code>, <code>partnerersatz</code>, <code>ruhe-schlaf</code>, <code>ernaehrung</code>, <code>alltag-kosten-betreuung</code>, <code>zucht-eier</code>, <code>krankheit-erkennen</code>, <code>qualzucht</code>, <code>entscheidung</code></td></tr>
-            <tr><td><code>kleintiere/</code><br>6 Seiten</td><td><code>kaninchen</code>, <code>kaninchen-kosten</code> (Preis-Decoder, seit 7. Oktober 2026), <code>meerschweinchen</code>, <code>hamster</code>, <code>ratten</code>, <code>degus-chinchillas</code></td></tr>
+            <tr><td><code>kleintiere/</code><br>7 Seiten</td><td><code>kaninchen</code>, <code>kaninchen-kosten</code> (Preis-Decoder, seit 7. Oktober 2026), <code>meerschweinchen</code>, <code>meerschweinchen-kosten</code> (Preis-Decoder, seit 14. Oktober 2026), <code>hamster</code>, <code>ratten</code>, <code>degus-chinchillas</code></td></tr>
             <tr><td><code>exoten/</code><br>3 Seiten</td><td><code>reptilien</code>, <code>schildkroeten</code>, <code>fische</code></td></tr>
             <tr><td><code>pferde/</code><br>6 Seiten</td><td><code>herde</code>, <code>platzbedarf</code>, <code>haltungsformen</code>, <code>kosten</code>, <code>reitbeteiligung</code>, <code>entscheidung</code></td></tr>
           </tbody>
         </table>
-        <p>Diese 48 Unterseiten ergeben mit den 28 Seiten auf oberster Ebene (Startseite und Pflichtseiten eingeschlossen) und <code>notfall/tierarzt-notdienst/</code> die 77 Seiten aus <code>ai/pages.json</code>.</p>
+        <p>Diese 49 Unterseiten ergeben mit den 28 Seiten auf oberster Ebene (Startseite und Pflichtseiten eingeschlossen) und <code>notfall/tierarzt-notdienst/</code> die 78 Seiten aus <code>ai/pages.json</code>.</p>
         <p class="source">Quelle: <code>ai/pages.json</code> (Feld <code>pages</code>), Seitendefinitionen in <code>tools/build-static-pages.mjs</code> (<code>pages</code>, <code>handwrittenPages</code>)</p>
 
         <h2 id="preis-decoder">Preis-Decoder</h2>
@@ -93,6 +93,7 @@
           <li><code>hunde/kosten/</code>: als ausführlicher Preis-Decoder seit 14. September 2026, am 30. September 2026 von Erik aus der Kostentabelle nachgeschärft. Gültig: etwa 100–240 € im Monat mit Krankenversicherung, über zwölf Jahre mit Anschaffung rund 14.000–37.000 €, Notfälle nicht eingerechnet.</li>
           <li><code>katzen/kosten/</code>: seit 30. September 2026, nach dem Muster der Hundeseite.</li>
           <li><code>kleintiere/kaninchen-kosten/</code>: seit 7. Oktober 2026, für zwei Kaninchen, mit Stand-Datum und Hinweis auf Notfallkosten.</li>
+          <li><code>kleintiere/meerschweinchen-kosten/</code>: seit 14. Oktober 2026, für zwei Meerschweinchen nach Tierschutzbund und go4vet, mit dem Hinweis, dass der Tierschutzbund bei einer Adoption mindestens drei Tiere empfiehlt. Headerbild "Guinea pigs 9" (CC BY-SA 4.0).</li>
           <li><code>pferde/kosten/</code>: Pferde-Checkliste nennt 340–920 € im Monat (angeglichen am 30. September 2026).</li>
         </ul>
         <p class="source">Quelle: Commits <code>49a9cd8</code> (14.09.), <code>c85aa05</code>, <code>84ebe23</code>, <code>d1b4e3c</code> (30.09.), <code>e4d104e</code>, <code>2cf0bfd</code> (07.10.); <code>docs/quiz-handoff.md</code> (Abschnitt „Was in der Session vom 30.09. passiert ist“)</p>

@@ -508,5 +508,20 @@
     ],
     "alt": "Kaninchen liegt in einem Gehege zwischen grünen Pflanzen.",
     "modifications": "Local resized copy from Wikimedia."
+  },
+  {
+    "id": "guinea-pig-costs-pair",
+    "localPath": "assets/images/guinea-pig-costs-pair.jpg",
+    "fileTitle": "Guinea pigs 9.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guinea_pigs_9.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Guinea_pigs_9.jpg",
+    "author": "Rex tremendae majestatis",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "usedFor": [
+      "article-hero-kleintiere-meerschweinchen-kosten"
+    ],
+    "alt": "Zwei braun-weiße Meerschweinchen sitzen dicht nebeneinander und schauen in die Kamera.",
+    "modifications": "Local resized copy from Wikimedia."
   }
 ]

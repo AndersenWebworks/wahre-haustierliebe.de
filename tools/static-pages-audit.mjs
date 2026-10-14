@@ -54,6 +54,7 @@ const pages = [
   { id: 'kleintiere-kaninchen', file: 'kleintiere/kaninchen/index.html', canonical: `${baseUrl}/kleintiere/kaninchen/index.html` },
   { id: 'kleintiere-kaninchen-kosten', file: 'kleintiere/kaninchen-kosten/index.html', canonical: `${baseUrl}/kleintiere/kaninchen-kosten/index.html` },
   { id: 'kleintiere-meerschweinchen', file: 'kleintiere/meerschweinchen/index.html', canonical: `${baseUrl}/kleintiere/meerschweinchen/index.html` },
+  { id: 'kleintiere-meerschweinchen-kosten', file: 'kleintiere/meerschweinchen-kosten/index.html', canonical: `${baseUrl}/kleintiere/meerschweinchen-kosten/index.html` },
   { id: 'kleintiere-hamster', file: 'kleintiere/hamster/index.html', canonical: `${baseUrl}/kleintiere/hamster/index.html` },
   { id: 'kleintiere-ratten', file: 'kleintiere/ratten/index.html', canonical: `${baseUrl}/kleintiere/ratten/index.html` },
   { id: 'kleintiere-degus-und-chinchillas', file: 'kleintiere/degus-chinchillas/index.html', canonical: `${baseUrl}/kleintiere/degus-chinchillas/index.html` },

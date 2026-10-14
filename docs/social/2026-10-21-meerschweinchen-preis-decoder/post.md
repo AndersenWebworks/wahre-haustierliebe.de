@@ -3,7 +3,7 @@
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 21.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
 Status: Entwurf, Texte noch nicht von Annemarie freigegeben. Bilder ausgewählt und gesichtet (Stand 14.10.2026).
-Website-Seite: noch nicht vorhanden. Das Gegenstück zu https://wahre-haustierliebe.de/kleintiere/kaninchen-kosten/index.html müsste neu angelegt werden (vorgeschlagen: /kleintiere/meerschweinchen-kosten/index.html).
+Website-Seite: https://wahre-haustierliebe.de/kleintiere/meerschweinchen-kosten/index.html (lokal gebaut und geprüft, noch nicht veröffentlicht; der Link im Profil funktioniert erst nach dem Push)
 
 ## Folien
 
@@ -23,7 +23,7 @@ Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
 
 **Folie 4** (Bild: folie-4.jpg)
 Jedes Jahr: 830 bis 1.520 Euro.
-Das sind etwa 70 bis 125 Euro im Monat für Heu, Frischfutter, Einstreu und den Gesundheitscheck.
+Das sind etwa 70 bis 127 Euro im Monat für Heu, Frischfutter, Einstreu und den Gesundheitscheck.
 Quelle: Deutscher Tierschutzbund, Stand Oktober 2026. Monatswert: eigene Umrechnung.
 
 **Folie 5** (Bild: folie-5.jpg)
@@ -83,10 +83,10 @@ Die Bilder sind lokal auf höchstens 1920 Pixel Breite verkleinert, sonst unver�
 
 - Deutscher Tierschutzbund, Meerschweinchen (Angaben für zwei Tiere, Seite ohne Datumsangabe, abgerufen im Oktober 2026): Anschaffung 60 Euro, Basisausstattung 390–840 Euro, jährlich 830–1.520 Euro, „Zwei 8-jährige Meerschweinchen kosten mindestens 7.000 €“, Tierarztkosten „können nicht pauschal eingerechnet werden“. Lebenserwartung sechs bis acht Jahre, Innengehege mindestens 2 Quadratmeter für bis zu vier Tiere. Bei einer Adoption „mindestens drei der kleinen Tiere“, Böcke in jedem Fall kastrieren. https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/
 - go4vet (Artikel vom 13. März 2026): Kastration Bock 70–140 Euro, Weibchen 250–450 Euro, Zahnkorrektur in Sedierung 150–300 Euro (bei chronischen Problemen 600–1.000 Euro im Jahr), Magen-Darm-Stase stationär 300–600 Euro. https://www.go4vet.com/kleintiere/tierarztkosten-meerschweinchen-was-solltest-du-einplanen/
-- Eigene Umrechnung: 70–125 Euro im Monat aus 830–1.520 Euro im Jahr.
+- Eigene Umrechnung: 70–127 Euro im Monat aus 830–1.520 Euro im Jahr.
 
 ## Website-Einschätzung
 
 - Instagram-Thema: Preis-Decoder Meerschweinchen
-- Website-Potenzial: neu anlegen (Kostenseite wie bei den Kaninchen; die bestehende Meerschweinchen-Seite behandelt nur das Abgabealter)
-- Website-Zug: neue Seite /kleintiere/meerschweinchen-kosten/ mit Anschaffung, Ausstattung, Jahreskosten, Tierarzt, Rücklage und Gruppengröße; Verlinkung aus der Meerschweinchen-Seite und aus dem Kleintiere-Hub
+- Website-Potenzial: neu angelegt (Kostenseite wie bei den Kaninchen; die bestehende Meerschweinchen-Seite behandelt das Abgabealter)
+- Website-Zug: Seite /kleintiere/meerschweinchen-kosten/ mit Anschaffung, Ausstattung, Jahreskosten, Tierarzt, Rücklage und Gruppengröße; verlinkt aus der Meerschweinchen-Seite, der Navigation und der Kleintiere-Übersicht
