@@ -23,8 +23,8 @@ Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
 
 **Folie 4** (Bild: folie-4.jpg)
 Jedes Jahr: 830 bis 1.520 Euro.
-Das sind etwa 70 bis 127 Euro im Monat für Heu, Frischfutter, Einstreu und den Gesundheitscheck.
-Quelle: Deutscher Tierschutzbund, Stand Oktober 2026. Monatswert: eigene Umrechnung.
+Das sind etwa 70 bis 127 Euro im Monat, rund 2 bis 4 Euro am Tag. Jeden Tag, acht Jahre lang, für Heu, Frischfutter, Einstreu und den Gesundheitscheck.
+Quelle: Deutscher Tierschutzbund, Stand Oktober 2026. Monats- und Tageswert: eigene Umrechnung.
 
 **Folie 5** (Bild: folie-5.jpg)
 Was wehtun kann:
@@ -44,23 +44,23 @@ Meerschweinchen werden sechs bis acht Jahre alt. Es sind Fluchttiere, die nicht 
 
 **Folie 8** (Bild: folie-8.jpg)
 Hast du Platz, Zeit und Geld für zwei Leben, nicht nur für eines, das niedlich aussieht?
-Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja. Schau zuerst im Tierschutz. Auch dort warten Meerschweinchen, und auch dort gilt: nie allein.
-Speichern. Schicken an jemanden, der gerade Meerschweinchen googelt.
-Alle Zahlen und Quellen: Link im Profil.
+Der Test vor dem Einzug: Leg drei Monate lang jeden Monat 100 Euro beiseite und miss die Fläche aus. Fällt dir beides leicht, ist es ein gutes Ja. Fällt es schwer, ist Warten die freundlichste Entscheidung für die Tiere.
+Wenn Ja: Schau zuerst im Tierschutz. Dort warten auch Meerschweinchen, und auch dort gilt: nie allein.
+Schick das an jemanden, der gerade Meerschweinchen googelt. Alle Zahlen und Quellen: Link im Profil.
 
 ## Caption
 
 Zwei Meerschweinchen für 60 Euro? Die Zahl ist der kleinste Teil der Rechnung.
 
-Acht Jahre mit zwei Tieren kosten mindestens 7.000 Euro (Deutscher Tierschutzbund, Stand Oktober 2026). Der Tierarzt ist darin noch nicht enthalten: Kastration, Zähne und ein Magen-Darm-Notfall können jeweils drei- bis vierstellig werden. Und zwei Tiere sind nach Einschätzung des Tierschutzbundes schon zu wenig, er rät bei einer Adoption zu mindestens drei.
+Acht Jahre mit zwei Tieren kosten mindestens 7.000 Euro (Deutscher Tierschutzbund, Stand Oktober 2026), das sind etwa 2 bis 4 Euro am Tag. Der Tierarzt ist darin noch nicht enthalten: Die Kastration eines Weibchens, eine Zahnbehandlung oder ein Magen-Darm-Notfall kosten jeweils einige hundert Euro. Und zwei Tiere sind nach Einschätzung des Tierschutzbundes schon zu wenig, er rät bei einer Adoption zu mindestens drei.
 
-Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja. Schau zuerst im Tierschutz.
+Ein Test, bevor Tiere einziehen: Leg drei Monate lang jeden Monat 100 Euro beiseite und miss die Fläche für das Gehege aus. Fällt dir beides leicht, ist es ein gutes Ja. Fällt es schwer, ist Warten die freundlichste Entscheidung für die Tiere. Wenn Ja: Schau zuerst im Tierschutz.
 
 Hältst du schon Meerschweinchen und merkst jetzt, dass es für sie enger ist, als es sein sollte? Dann bist du hier richtig. Mehr Platz und Gesellschaft lassen sich nachholen.
 
 Kennst du jemanden, der gerade über Meerschweinchen nachdenkt? Schick ihm diesen Beitrag mit dem Satz: „Schau dir vorher diese Rechnung an.“
 
-Alle Zahlen und Quellen findest du über den Link im Profil. Folge Wa(h)re Haustier(liebe) für Aufklärung, bevor aus einem Wunsch eine folgenschwere Entscheidung wird.
+Alle Zahlen und Quellen findest du über den Link im Profil. Als Nächstes in der Reihe: der Wellensittich. Folge Wa(h)re Haustier(liebe), damit du ihn nicht verpasst.
 
 #wahrehaustierliebe #meerschweinchen #meerschweinchenhaltung #tierschutz #adoptierenstattkaufen
 
