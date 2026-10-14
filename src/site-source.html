@@ -2744,6 +2744,10 @@
     .cost-table tr:nth-child(even) { background: var(--bg); }
     .cost-table .total { background: var(--primary-light); color: var(--primary); }
 
+    @media (min-width: 641px) {
+      .cost-table .total td[colspan] { text-align: center; }
+    }
+
     @media (max-width: 640px) {
       .cost-table {
         display: block;

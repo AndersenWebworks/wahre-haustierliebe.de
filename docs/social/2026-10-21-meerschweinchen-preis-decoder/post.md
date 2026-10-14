@@ -43,9 +43,8 @@ Und Geld ist nur die halbe Frage.
 Meerschweinchen werden sechs bis acht Jahre alt. Es sind Fluchttiere, die nicht gern hochgehoben werden. Wer versorgt sie jeden Tag, wenn der Reiz des Neuen verflogen ist?
 
 **Folie 8** (Bild: folie-8.jpg)
-Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja.
-Schau zuerst im Tierschutz. Auch dort warten Meerschweinchen, und auch dort gilt: nie allein.
-Unsicher? Frag im Tierheim nach, bevor du dich entscheidest.
+Hast du Platz, Zeit und Geld für zwei Leben, nicht nur für eines, das niedlich aussieht?
+Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja. Schau zuerst im Tierschutz. Auch dort warten Meerschweinchen, und auch dort gilt: nie allein.
 Speichern. Schicken an jemanden, der gerade Meerschweinchen googelt.
 Alle Zahlen und Quellen: Link im Profil.
 
@@ -56,6 +55,8 @@ Zwei Meerschweinchen für 60 Euro? Die Zahl ist der kleinste Teil der Rechnung.
 Acht Jahre mit zwei Tieren kosten mindestens 7.000 Euro (Deutscher Tierschutzbund, Stand Oktober 2026). Der Tierarzt ist darin noch nicht enthalten: Kastration, Zähne und ein Magen-Darm-Notfall können jeweils drei- bis vierstellig werden. Und zwei Tiere sind nach Einschätzung des Tierschutzbundes schon zu wenig, er rät bei einer Adoption zu mindestens drei.
 
 Wenn du nach dieser Rechnung noch Ja sagst, ist es ein gutes Ja. Schau zuerst im Tierschutz.
+
+Hältst du schon Meerschweinchen und merkst jetzt, dass es für sie enger ist, als es sein sollte? Dann bist du hier richtig. Mehr Platz und Gesellschaft lassen sich nachholen.
 
 Kennst du jemanden, der gerade über Meerschweinchen nachdenkt? Schick ihm diesen Beitrag mit dem Satz: „Schau dir vorher diese Rechnung an.“
 
