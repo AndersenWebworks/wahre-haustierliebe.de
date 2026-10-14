@@ -9,7 +9,8 @@ Website-Seite: https://wahre-haustierliebe.de/kleintiere/meerschweinchen-kosten/
 
 **Folie 1** (Bild: folie-1.jpg)
 Zwei Meerschweinchen für 60 Euro?
-Das ist der kleinste Teil der Rechnung.
+Das ist weniger als 1 Prozent der Rechnung.
+Eigene Rechnung: 60 Euro von mindestens 7.000 Euro in acht Jahren.
 
 **Folie 2** (Bild: folie-2.jpg)
 Zwei sind schon zu wenig.
@@ -23,7 +24,7 @@ Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
 
 **Folie 4** (Bild: folie-4.jpg)
 Jedes Jahr: 830 bis 1.520 Euro.
-Das sind etwa 70 bis 127 Euro im Monat, rund 2 bis 4 Euro am Tag. Jeden Tag, acht Jahre lang, für Heu, Frischfutter, Einstreu und den Gesundheitscheck.
+Das sind etwa 70 bis 127 Euro im Monat, rund 2 bis 4 Euro am Tag, für Heu, Frischfutter, Einstreu und den Gesundheitscheck. Das klingt nach wenig. Nach acht Jahren sind es mehrere tausend Euro.
 Quelle: Deutscher Tierschutzbund, Stand Oktober 2026. Monats- und Tageswert: eigene Umrechnung.
 
 **Folie 5** (Bild: folie-5.jpg)
@@ -50,7 +51,7 @@ Schick das an jemanden, der gerade Meerschweinchen googelt. Alle Zahlen und Quel
 
 ## Caption
 
-Zwei Meerschweinchen für 60 Euro? Die Zahl ist der kleinste Teil der Rechnung.
+Zwei Meerschweinchen für 60 Euro? Das ist weniger als 1 Prozent der Rechnung.
 
 Acht Jahre mit zwei Tieren kosten mindestens 7.000 Euro (Deutscher Tierschutzbund, Stand Oktober 2026), das sind etwa 2 bis 4 Euro am Tag. Der Tierarzt ist darin noch nicht enthalten: Die Kastration eines Weibchens, eine Zahnbehandlung oder ein Magen-Darm-Notfall kosten jeweils einige hundert Euro. Und zwei Tiere sind nach Einschätzung des Tierschutzbundes schon zu wenig, er rät bei einer Adoption zu mindestens drei.
 
