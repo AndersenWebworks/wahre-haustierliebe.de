@@ -8,7 +8,7 @@ Website-Seite: https://wahre-haustierliebe.de/kleintiere/meerschweinchen-kosten/
 ## Folien
 
 **Folie 1** (Bild: folie-1.jpg)
-Zwei Meerschweinchen für 60 Euro?
+Zwei Meerschweinchen gibt es für 60 Euro, manchmal sogar geschenkt.
 Das ist weniger als 1 Prozent der Rechnung.
 Eigene Rechnung: 60 Euro von mindestens 7.000 Euro in acht Jahren.
 
@@ -51,7 +51,7 @@ Schick das an jemanden, der gerade Meerschweinchen googelt. Alle Zahlen und Quel
 
 ## Caption
 
-Zwei Meerschweinchen für 60 Euro? Das ist weniger als 1 Prozent der Rechnung.
+Zwei Meerschweinchen gibt es für 60 Euro, manchmal sogar geschenkt. Das ist weniger als 1 Prozent der Rechnung.
 
 Acht Jahre mit zwei Tieren kosten mindestens 7.000 Euro (Deutscher Tierschutzbund, Stand Oktober 2026), das sind etwa 2 bis 4 Euro am Tag. Der Tierarzt ist darin noch nicht enthalten: Die Kastration eines Weibchens, eine Zahnbehandlung oder ein Magen-Darm-Notfall kosten jeweils einige hundert Euro. Und zwei Tiere sind nach Einschätzung des Tierschutzbundes schon zu wenig, er rät bei einer Adoption zu mindestens drei.
 
