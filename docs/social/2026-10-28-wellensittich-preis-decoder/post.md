@@ -28,7 +28,7 @@ Quelle: go4vet, Artikel vom 18. Juli 2026; Deutscher Tierschutzbund
 
 **Folie 4** (Bild: folie-4.jpg)
 Danach jeden Monat: 25 bis 50 Euro.
-Für Futter, Frischfutter, Einstreu, Ersatzspielzeug und die Tierarztrücklage. Jahr um Jahr, wie ein Dauerauftrag, zehn bis fünfzehn Jahre lang.
+Für Futter, Frischfutter, Vogelsand, Ersatzspielzeug und die Tierarztrücklage. Jahr um Jahr, wie ein Dauerauftrag, zehn bis fünfzehn Jahre lang.
 Quelle: go4vet, Artikel vom 18. Juli 2026. Monatswert: eigene Umrechnung (300 bis 600 Euro im Jahr).
 
 **Folie 5** (Bild: folie-5.jpg)
