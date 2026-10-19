@@ -3,7 +3,7 @@
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 28.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
 Status: Finale Fassung (19.10.2026), Freigabe durch Annemarie steht aus. Bilder ausgewählt und gesichtet (Stand 19.10.2026).
-Website-Seite: https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html (lokal gebaut und geprüft, noch nicht veröffentlicht; der Link im Profil funktioniert erst nach dem Push)
+Website-Seite: https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html (veröffentlicht, Stand 20.10.2026)
 
 ## Folien
 
@@ -23,8 +23,8 @@ Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
 
 **Folie 3** (Bild: folie-3.jpg)
 Bevor sie einziehen: 150 bis 450 Euro.
-Für Käfig, Ausstattung und das erste Futter. Der Tierschutzbund verlangt für Freiflug mindestens 2 mal 1 mal 2 Meter Voliere. Der Käfig in dieser Rechnung ist kleiner, die echte Zahl liegt höher.
-Quelle: go4vet, Artikel vom 18. Juli 2026; Deutscher Tierschutzbund
+Für Käfig, Ausstattung und das erste Futter. Das ist der Posten, den die meisten bei der Anschaffung im Blick haben.
+Quelle: go4vet, Artikel vom 18. Juli 2026
 
 **Folie 4** (Bild: folie-4.jpg)
 Danach jeden Monat: 25 bis 50 Euro.
@@ -40,8 +40,8 @@ Quelle: go4vet, Artikel vom 13. März 2026
 
 **Folie 6** (Bild: folie-6.jpg)
 Die 3.200 Euro sind die Untergrenze.
-Nicht eingerechnet: Notfälle, Urlaubsbetreuung, Strom für die Beleuchtung und die größere Voliere. Wellensittiche werden bis zu 15 Jahre alt.
-Quelle: go4vet. Gesamtsumme: eigene Hochrechnung.
+Nicht eingerechnet: Notfälle, Urlaubsbetreuung und Strom für die Beleuchtung. Auch die Voliere fehlt: Der Tierschutzbund verlangt für Freiflug mindestens 2 mal 1 mal 2 Meter, der Käfig in dieser Rechnung ist kleiner. Wellensittiche werden bis zu 15 Jahre alt.
+Quelle: go4vet; Deutscher Tierschutzbund. Gesamtsumme: eigene Hochrechnung.
 
 **Folie 7** (Bild: folie-7.jpg)
 Geld ist nur die halbe Frage.
@@ -66,7 +66,7 @@ Denkst du noch über Wellensittiche nach? Dann mach den Test aus der letzten Fol
 
 Kennst du jemanden, der gerade Wellensittiche googelt? Schick ihm diesen Beitrag mit dem Satz: „Schau dir vorher diese Rechnung an.“ Speichern kannst du ihn für später.
 
-Alle Zahlen und Quellen findest du über den Link im Profil. Kaninchen und Meerschweinchen haben wir schon durchgerechnet. Folge Wa(h)re Haustier(liebe), dann siehst du die nächste Tierart sofort.
+Alle Zahlen und Quellen findest du über den Link im Profil. Kaninchen und Meerschweinchen haben wir schon durchgerechnet, mit allen Posten und Quellen. Folge Wa(h)re Haustier(liebe), dann bekommst du die nächste Rechnung, bevor ein Tier einzieht.
 
 Bilder: Gabriel Pollard/CC BY 2.0; Jim Bendon/CC BY-SA 2.0; Bidgee/CC BY-SA 3.0; Danb104/CC BY-SA 4.0; Stefanie Leisentritt/CC BY-SA 3.0; Emraharican/CC BY-SA 3.0; BudgieGuy16/CC BY-SA 4.0; Elektrofisch/CC BY-SA 3.0. Zuschnitt und Text: Wa(h)re Haustier(liebe)
 
