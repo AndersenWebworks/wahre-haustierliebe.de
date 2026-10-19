@@ -3,7 +3,7 @@
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 28.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
 Status: Entwurf, Texte noch nicht von Annemarie freigegeben. Bilder ausgewählt und gesichtet (Stand 19.10.2026).
-Website-Seite: https://wahre-haustierliebe.de/voegel/alltag-kosten-betreuung/index.html (Abschnitt "Der Preis-Decoder: Was Wellensittiche wirklich kosten", lokal gebaut, noch nicht veröffentlicht; der Link im Profil funktioniert erst nach dem Push)
+Website-Seite: https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html (lokal gebaut und geprüft, noch nicht veröffentlicht; der Link im Profil funktioniert erst nach dem Push)
 
 ## Folien
 
@@ -92,5 +92,5 @@ Die Bilder sind lokal auf höchstens 1920 Pixel Breite verkleinert, sonst unver�
 ## Website-Einschätzung
 
 - Instagram-Thema: Preis-Decoder Wellensittich
-- Website-Potenzial: bestehenden Artikel ausbauen (Abschnitt im Artikel "Alltag, Kosten und Betreuung bei Vögeln", keine neue Seite)
-- Website-Zug: /voegel/alltag-kosten-betreuung/ mit Anschaffung, Erstausstattung, laufenden Kosten, Tierarzt, Rücklage und Gruppengröße; Verlinkung aus Profil und Beitrag
+- Website-Potenzial: neu angelegt (Kostenseite wie bei Kaninchen und Meerschweinchen; der Artikel "Alltag, Kosten und Betreuung bei Vögeln" verlinkt darauf)
+- Website-Zug: Seite /voegel/wellensittiche-kosten/ mit Anschaffung, Erstausstattung, laufenden Kosten, Tierarzt, Rücklage, Gruppengröße und Voliere; verlinkt aus dem Alltag-Artikel und der Vögel-Navigation

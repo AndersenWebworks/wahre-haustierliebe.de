@@ -338,7 +338,8 @@ const topicPages = [
   ['voegel-partnerersatz', 'voegel', 'voegel/partnerersatz', 'Spiegel und Plastikvögel ersetzen keinen Partner', 'Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.', 'Falschen Partnerersatz bei Vögeln vermeiden.'],
   ['voegel-ruhe-und-schlaf', 'voegel', 'voegel/ruhe-schlaf', 'Ruhe und Schlaf bei Vögeln', 'Warum Wellensittiche eine verlässliche Nachtruhe und einen ruhigen, dunklen Schlafbereich brauchen.', 'Ruhezeiten und Schlafbedingungen bei Heimvögeln planen.'],
   ['voegel-ernaehrung', 'voegel', 'voegel/ernaehrung', 'Ernährung von Wellensittichen', 'Warum ein ständig voller Körnernapf nicht genügt und Futtermenge, Frischfutter, Wasser und Futtersuche zusammengehören.', 'Ernährung, Wasser und Futtersuche bei Wellensittichen einordnen.'],
-  ['voegel-alltag-kosten-betreuung', 'voegel', 'voegel/alltag-kosten-betreuung', 'Alltag, Kosten und Betreuung bei Vögeln', 'Was Wellensittiche wirklich kosten, dazu Alltag, Wohnraumanpassungen, Tierarztkosten und Betreuung: ehrlich gerechnet für ein Paar.', 'Kosten, Zeit, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.', { lastmod: '2026-10-19' }],
+  ['voegel-alltag-kosten-betreuung', 'voegel', 'voegel/alltag-kosten-betreuung', 'Alltag, Kosten und Betreuung bei Vögeln', 'Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.', 'Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.'],
+  ['voegel-kosten', 'voegel', 'voegel/wellensittiche-kosten', 'Was Wellensittiche wirklich kosten', 'Voliere, Futter, Tierarzt, Rücklagen und zehn Jahre: ehrlich gerechnet für Wellensittiche.', 'Kosten für Wellensittiche vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-19' }],
   ['voegel-zucht-und-eier', 'voegel', 'voegel/zucht-eier', 'Zucht und Eiablage bei Wellensittichen', 'Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.', 'Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.'],
   ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.'],
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
@@ -1590,6 +1591,13 @@ Object.assign(firstContentImageByPage, {
     height: 401,
     type: 'image/jpeg',
     alt: 'Wellensittich sitzt auf einer hölzernen Stange.',
+  },
+  'voegel-kosten': {
+    src: 'assets/images/budgie-costs-pair.jpg',
+    width: 1600,
+    height: 1200,
+    type: 'image/jpeg',
+    alt: 'Ein grüner und ein blauweißer Wellensittich sitzen nebeneinander und schauen sich an.',
   },
   'voegel-krankheit-erkennen': {
     src: 'assets/images/vet-office-with-dog.jpg',

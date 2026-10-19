@@ -1388,8 +1388,8 @@
       "id": "voegel-alltag-kosten-betreuung",
       "url": "https://wahre-haustierliebe.de/voegel/alltag-kosten-betreuung/index.html",
       "title": "Alltag, Kosten und Betreuung bei Vögeln - Wa(h)re Haustier(liebe)",
-      "description": "Was Wellensittiche wirklich kosten, dazu Alltag, Wohnraumanpassungen, Tierarztkosten und Betreuung: ehrlich gerechnet für ein Paar.",
-      "intent": "Kosten, Zeit, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.",
+      "description": "Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.",
+      "intent": "Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.",
       "keywords": [
         "Vögel halten",
         "Wellensittiche",
@@ -1402,9 +1402,34 @@
       "sources": [],
       "social": {
         "title": "Alltag, Kosten und Betreuung bei Vögeln - Wa(h)re Haustier(liebe)",
-        "description": "Was Wellensittiche wirklich kosten, dazu Alltag, Wohnraumanpassungen, Tierarztkosten und Betreuung: ehrlich gerechnet für ein Paar.",
+        "description": "Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-alltag-kosten-betreuung.png",
         "imageAlt": "Mehrere Wellensittiche sitzen gemeinsam in einer Voliere.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "voegel-kosten",
+      "url": "https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html",
+      "title": "Was Wellensittiche wirklich kosten - Wa(h)re Haustier(liebe)",
+      "description": "Voliere, Futter, Tierarzt, Rücklagen und zehn Jahre: ehrlich gerechnet für Wellensittiche.",
+      "intent": "Kosten für Wellensittiche vor der Anschaffung realistisch einschätzen.",
+      "keywords": [
+        "Vögel halten",
+        "Wellensittiche",
+        "Schwarmhaltung",
+        "Freiflug",
+        "UV-Licht"
+      ],
+      "facts": [],
+      "citationGuardrails": [],
+      "sources": [],
+      "social": {
+        "title": "Was Wellensittiche wirklich kosten - Wa(h)re Haustier(liebe)",
+        "description": "Voliere, Futter, Tierarzt, Rücklagen und zehn Jahre: ehrlich gerechnet für Wellensittiche.",
+        "image": "https://wahre-haustierliebe.de/assets/social/voegel-kosten.png",
+        "imageAlt": "Ein grüner und ein blauweißer Wellensittich sitzen nebeneinander und schauen sich an.",
         "imageWidth": 1200,
         "imageHeight": 630
       }

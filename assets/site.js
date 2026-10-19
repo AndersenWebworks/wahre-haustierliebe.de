@@ -40,6 +40,7 @@ var staticPageRoutes = {
   "voegel-ruhe-und-schlaf": "/voegel/ruhe-schlaf/index.html",
   "voegel-ernaehrung": "/voegel/ernaehrung/index.html",
   "voegel-alltag-kosten-betreuung": "/voegel/alltag-kosten-betreuung/index.html",
+  "voegel-kosten": "/voegel/wellensittiche-kosten/index.html",
   "voegel-zucht-und-eier": "/voegel/zucht-eier/index.html",
   "voegel-krankheit-erkennen": "/voegel/krankheit-erkennen/index.html",
   "voegel-qualzucht": "/voegel/qualzucht/index.html",
@@ -322,8 +323,14 @@ var staticSiteSearchIndex = [
   {
     "id": "voegel-alltag-kosten-betreuung",
     "title": "Alltag, Kosten und Betreuung bei Vögeln - Wa(h)re Haustier(liebe)",
-    "description": "Was Wellensittiche wirklich kosten, dazu Alltag, Wohnraumanpassungen, Tierarztkosten und Betreuung: ehrlich gerechnet für ein Paar.",
-    "terms": "Kosten, Zeit, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen. voegel/alltag-kosten-betreuung voegel alltag kosten betreuung"
+    "description": "Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.",
+    "terms": "Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen. voegel/alltag-kosten-betreuung voegel alltag kosten betreuung"
+  },
+  {
+    "id": "voegel-kosten",
+    "title": "Was Wellensittiche wirklich kosten - Wa(h)re Haustier(liebe)",
+    "description": "Voliere, Futter, Tierarzt, Rücklagen und zehn Jahre: ehrlich gerechnet für Wellensittiche.",
+    "terms": "Kosten für Wellensittiche vor der Anschaffung realistisch einschätzen. voegel/wellensittiche-kosten voegel kosten"
   },
   {
     "id": "voegel-zucht-und-eier",
@@ -1387,6 +1394,7 @@ function normalizeAssetUrls(root) {
       'voegel-freiflug-ist-nicht-optional': 'voegel/freiflug/',
       'voegel-partnerersatz': 'voegel/partnerersatz/',
       'voegel-krankheit-erkennen': 'voegel/krankheit-erkennen/',
+      'voegel-kosten': 'voegel/wellensittiche-kosten/',
       'voegel-qualzucht': 'voegel/qualzucht/',
       'voegel-entscheidung': 'voegel/entscheidung/',
       'kleintiere': 'kleintiere/',

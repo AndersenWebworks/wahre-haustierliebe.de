@@ -46,6 +46,7 @@ const pages = [
   { id: 'voegel-ruhe-und-schlaf', file: 'voegel/ruhe-schlaf/index.html', canonical: `${baseUrl}/voegel/ruhe-schlaf/index.html` },
   { id: 'voegel-ernaehrung', file: 'voegel/ernaehrung/index.html', canonical: `${baseUrl}/voegel/ernaehrung/index.html` },
   { id: 'voegel-alltag-kosten-betreuung', file: 'voegel/alltag-kosten-betreuung/index.html', canonical: `${baseUrl}/voegel/alltag-kosten-betreuung/index.html` },
+  { id: 'voegel-kosten', file: 'voegel/wellensittiche-kosten/index.html', canonical: `${baseUrl}/voegel/wellensittiche-kosten/index.html` },
   { id: 'voegel-zucht-und-eier', file: 'voegel/zucht-eier/index.html', canonical: `${baseUrl}/voegel/zucht-eier/index.html` },
   { id: 'voegel-krankheit-erkennen', file: 'voegel/krankheit-erkennen/index.html', canonical: `${baseUrl}/voegel/krankheit-erkennen/index.html` },
   { id: 'voegel-qualzucht', file: 'voegel/qualzucht/index.html', canonical: `${baseUrl}/voegel/qualzucht/index.html` },

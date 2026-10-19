@@ -523,5 +523,20 @@
     ],
     "alt": "Zwei braun-weiße Meerschweinchen sitzen dicht nebeneinander und schauen in die Kamera.",
     "modifications": "Local resized copy from Wikimedia."
+  },
+  {
+    "id": "budgie-costs-pair",
+    "localPath": "assets/images/budgie-costs-pair.jpg",
+    "fileTitle": "Melopsittacus undulatus -Temuka Aviary-8a.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Melopsittacus_undulatus_-Temuka_Aviary-8a.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Melopsittacus_undulatus_-Temuka_Aviary-8a.jpg",
+    "author": "Gabriel Pollard",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "usedFor": [
+      "article-hero-voegel-kosten"
+    ],
+    "alt": "Ein grüner und ein blauweißer Wellensittich sitzen nebeneinander und schauen sich an.",
+    "modifications": "Local resized copy from Wikimedia."
   }
 ]
