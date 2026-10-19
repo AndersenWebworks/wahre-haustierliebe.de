@@ -322,8 +322,8 @@ var staticSiteSearchIndex = [
   {
     "id": "voegel-alltag-kosten-betreuung",
     "title": "Alltag, Kosten und Betreuung bei Vögeln - Wa(h)re Haustier(liebe)",
-    "description": "Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.",
-    "terms": "Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen. voegel/alltag-kosten-betreuung voegel alltag kosten betreuung"
+    "description": "Was Wellensittiche wirklich kosten, dazu Alltag, Wohnraumanpassungen, Tierarztkosten und Betreuung: ehrlich gerechnet für ein Paar.",
+    "terms": "Kosten, Zeit, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen. voegel/alltag-kosten-betreuung voegel alltag kosten betreuung"
   },
   {
     "id": "voegel-zucht-und-eier",
