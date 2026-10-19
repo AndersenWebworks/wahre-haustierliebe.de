@@ -2,7 +2,7 @@
 
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 28.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
-Status: Entwurf, Texte noch nicht von Annemarie freigegeben. Bilder ausgewählt und gesichtet (Stand 19.10.2026).
+Status: Finale Fassung (19.10.2026), Freigabe durch Annemarie steht aus. Bilder ausgewählt und gesichtet (Stand 19.10.2026).
 Website-Seite: https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html (lokal gebaut und geprüft, noch nicht veröffentlicht; der Link im Profil funktioniert erst nach dem Push)
 
 ## Folien
@@ -13,11 +13,12 @@ Aufbau nach Verhaltensökonomie (Stand 19.10.2026): Die Gesamtsumme steht als An
 Mindestens 3.200 Euro.
 So viel kosten zwei Wellensittiche in zehn Jahren.
 Die Vögel selbst machen davon weniger als 4 Prozent aus: ab 30 Euro.
+Wisch weiter: Wo bleibt der Rest?
 
 **Folie 2** (Bild: folie-2.jpg)
 Zwei sind das Minimum.
-Der Deutsche Tierschutzbund empfiehlt vier oder mehr Wellensittiche und nennt Einzelhaltung tierschutzwidrig. Die Zahlen hier gelten für zwei.
-Hast du schon welche? Das lässt sich ändern. Mehr dazu in der Caption.
+In der Natur leben Wellensittiche im Schwarm. Der Deutsche Tierschutzbund empfiehlt vier oder mehr und nennt Einzelhaltung tierschutzwidrig. Die Rechnung hier gilt für zwei.
+Hast du schon welche? Dann darfst du fragen, was ihnen fehlt. Das lässt sich ändern, mehr dazu in der Caption.
 Quelle: Deutscher Tierschutzbund, Stand Oktober 2026
 
 **Folie 3** (Bild: folie-3.jpg)
@@ -51,7 +52,7 @@ Der Test vor dem Einzug:
 Leg drei Monate lang jeden Monat 50 Euro beiseite und miss 2 mal 1 mal 2 Meter in deinem Zuhause aus.
 Fällt dir beides leicht, ist es ein gutes Ja. Fällt es schwer, ist Nein die freundlichste Entscheidung für die Tiere.
 Wenn Ja: Schau zuerst im Tierschutz. Dort warten auch Wellensittiche, immer zu zweit.
-Alle Zahlen und Quellen: wahre-haustierliebe.de, Link im Profil.
+Speichern, damit du den Test nicht vergisst. Alle Zahlen und Quellen: wahre-haustierliebe.de, Link im Profil.
 
 ## Caption
 
@@ -59,13 +60,15 @@ Mindestens 3.200 Euro kosten zwei Wellensittiche in zehn Jahren. Die Vögel selb
 
 Die Summe stammt aus den Einzelposten von go4vet (eigene Hochrechnung, Stand Oktober 2026) und ist eine Untergrenze: Notfälle, Urlaubsbetreuung, Strom für die Beleuchtung und die größere Voliere fehlen. Eine Operation bei Legenot kostet 600 bis 800 Euro. Und zwei Tiere sind nur das Minimum: Der Deutsche Tierschutzbund empfiehlt vier oder mehr Wellensittiche und eine Voliere von mindestens 2 mal 1 mal 2 Metern.
 
-Hältst du schon Wellensittiche und merkst gerade, dass ihnen etwas fehlt? Das ist kein Urteil über dich. Mehr Platz und Gesellschaft lassen sich nachholen. Schreib uns in die Kommentare, womit du anfangen möchtest.
+Hältst du schon Wellensittiche und merkst gerade, dass ihnen etwas fehlt? Das ist kein Urteil über dich. Mehr Platz und Gesellschaft lassen sich nachholen, am besten mit Rat von einer vogelkundigen Tierarztpraxis. Schreib uns in die Kommentare, womit du anfangen möchtest.
 
 Denkst du noch über Wellensittiche nach? Dann mach den Test aus der letzten Folie: drei Monate 50 Euro beiseitelegen und die Fläche ausmessen. Fällt dir beides leicht, ist es ein gutes Ja. Fällt es schwer, ist Nein die freundlichste Entscheidung für die Tiere. Wenn Ja: Schau zuerst im Tierschutz.
 
-Kennst du jemanden, der gerade Wellensittiche googelt? Schick ihm diesen Beitrag mit dem Satz: „Schau dir vorher diese Rechnung an.“
+Kennst du jemanden, der gerade Wellensittiche googelt? Schick ihm diesen Beitrag mit dem Satz: „Schau dir vorher diese Rechnung an.“ Speichern kannst du ihn für später.
 
-Alle Zahlen und Quellen findest du über den Link im Profil. Kaninchen und Meerschweinchen haben wir schon durchgerechnet. Folge Wa(h)re Haustier(liebe), wenn du die nächste Tierart nicht verpassen willst.
+Alle Zahlen und Quellen findest du über den Link im Profil. Kaninchen und Meerschweinchen haben wir schon durchgerechnet. Folge Wa(h)re Haustier(liebe), dann siehst du die nächste Tierart sofort.
+
+Bilder: Gabriel Pollard/CC BY 2.0; Jim Bendon/CC BY-SA 2.0; Bidgee/CC BY-SA 3.0; Danb104/CC BY-SA 4.0; Stefanie Leisentritt/CC BY-SA 3.0; Emraharican/CC BY-SA 3.0; BudgieGuy16/CC BY-SA 4.0; Elektrofisch/CC BY-SA 3.0. Zuschnitt und Text: Wa(h)re Haustier(liebe)
 
 #wahrehaustierliebe #wellensittich #vogelhaltung #tierschutz #adoptierenstattkaufen
 
