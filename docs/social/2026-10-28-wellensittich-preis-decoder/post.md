@@ -2,7 +2,7 @@
 
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 28.10.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
-Status: Finale Fassung (19.10.2026), Freigabe durch Annemarie steht aus. Bilder ausgewählt und gesichtet (Stand 19.10.2026).
+Status: Finale Fassung (19.10.2026). Texte durch Annemarie freigegeben am 20.10.2026 („Das passt so“). Veröffentlichung am 28.10.2026 um 09:00 Uhr. Bilder ausgewählt und gesichtet (Stand 19.10.2026).
 Website-Seite: https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html (veröffentlicht, Stand 20.10.2026)
 
 ## Folien
