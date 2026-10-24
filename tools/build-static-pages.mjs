@@ -97,6 +97,7 @@ const pages = [
     description: 'Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.',
     intent: 'Hund anschaffen oder Hundehaltung verbessern',
     priority: '0.9',
+    lastmod: '2026-10-24',
   },
   {
     id: 'hunde-abgabealter',
@@ -123,6 +124,7 @@ const pages = [
     description: 'Katzenhaltung ehrlich erklärt: Wohnungsgestaltung, Sozialkontakt, Freigang, Kastration, Tierarztkosten und leise Anzeichen für Stress oder Krankheit.',
     intent: 'Katze anschaffen oder Katzenhaltung artgerechter machen',
     priority: '0.9',
+    lastmod: '2026-10-24',
   },
   {
     id: 'voegel',
@@ -131,6 +133,7 @@ const pages = [
     description: 'Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.',
     intent: 'Vogelhaltung und Wellensittichhaltung prüfen',
     priority: '0.8',
+    lastmod: '2026-10-24',
   },
   {
     id: 'kleintiere',
@@ -139,6 +142,7 @@ const pages = [
     description: 'Kleintiere sind keine einfachen Einstiegstiere: Fläche, Gruppenhaltung, Zähne, Tierarztkosten und typische Haltungsfehler im Überblick.',
     intent: 'Kaninchen, Meerschweinchen, Hamster oder Ratten verantwortungsvoll halten',
     priority: '0.8',
+    lastmod: '2026-10-24',
   },
   {
     id: 'exoten',
@@ -147,6 +151,7 @@ const pages = [
     description: 'Exotenhaltung ehrlich erklärt: Licht, Temperatur, Feuchtigkeit, Futter, Meldepflichten, Tierarztzugang und warum Faszination nicht reicht.',
     intent: 'Exotische Haustiere und Terrarientiere prüfen',
     priority: '0.75',
+    lastmod: '2026-10-24',
   },
   {
     id: 'pferde',
@@ -179,7 +184,16 @@ const pages = [
     description: 'Adoption aus dem Tierschutz statt Kauf: Abgabealter für Welpen, Kitten und Kleintiere, Folgen zu früher Trennung, Schutzgebühr und seriöse Vermittlung.',
     intent: 'Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen',
     priority: '0.9',
-    lastmod: '2026-08-30',
+    lastmod: '2026-10-24',
+  },
+  {
+    id: 'woher-kommt-mein-tier',
+    slug: 'woher-kommt-mein-tier',
+    title: 'Woher kommt mein Tier? Zoofachhandel, Kleinanzeigen, Züchter, Tierheim',
+    description: 'Zoofachhandel, Kleinanzeigen, Züchter, Vermehrer, Tierheim und Notstation: welche Wege es gibt, was du vor dem Kauf prüfen kannst und worauf du je Tierart achten kannst.',
+    intent: 'Herkunftswege von Haustieren einordnen und vor dem Kauf oder der Übernahme prüfen',
+    priority: '0.85',
+    lastmod: '2026-10-24',
   },
   {
     id: 'selbsttest',
@@ -319,7 +333,7 @@ const topicPages = [
   ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.'],
   ['hunde-spuren-erkennen', 'hunde', 'hunde/spuren-erkennen', 'Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund?', 'Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.', 'Spuren von Hund, Fuchs, Marderhund und Wolf auf dem Spaziergang einordnen.'],
   ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.'],
-  ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.'],
+  ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
   ['hunde-kastration', 'hunde', 'hunde/kastration', 'Kastration beim Hund', 'Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.', 'Kastration beim Hund als Einzelfallentscheidung verstehen.'],
   ['hunde-hofhaltung-und-zwinger', 'hunde', 'hunde/hofhaltung-und-zwinger', 'Hofhaltung und Zwinger', 'Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.', 'Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.'],
   ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.'],
@@ -328,7 +342,7 @@ const topicPages = [
   ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnung oder Freigang bei Katzen', 'Wohnung, gesicherter Außenbereich oder Freigang: Risiken, vollständiges Wohnungsrevier, Umstellungen, Warnzeichen und Entscheidungshilfen.', 'Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.', { priority: '0.82', lastmod: '2026-08-06' }],
   ['katzen-kastration', 'katzen', 'katzen/kastration', 'Kastration bei Katzen', 'Warum Kastration bei Katzen praktischer Tierschutz ist und ungewolltes Leid verhindert.', 'Kastration bei Katzen verstehen.'],
   ['katzen-stilles-leiden', 'katzen', 'katzen/stilles-leiden', 'Stilles Leiden bei Katzen erkennen', 'Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.', 'Warnsignale bei Katzen erkennen.'],
-  ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was eine Katze wirklich kostet', 'Einmalige Kosten, Futter, Streu, Tierarzt, Rücklagen und Alltag vor dem Einzug ehrlich rechnen.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.'],
+  ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was eine Katze wirklich kostet', 'Einmalige Kosten, Futter, Streu, Tierarzt, Rücklagen und Alltag vor dem Einzug ehrlich rechnen.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
   ['katzen-streunerkatzen', 'katzen', 'katzen/streunerkatzen', 'Streunerkatzen und Verantwortung', 'Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.', 'Streunerkatzen und Kastration einordnen.'],
   ['katzen-entscheidung', 'katzen', 'katzen/entscheidung', 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst', 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.', 'Vor der Aufnahme eines Kätzchens Abgabealter, Herkunft, Geschwister, Ausstattung, Eingewöhnung und Kosten prüfen.', { lastmod: '2026-09-30' }],
   ['voegel-schwarmhaltung', 'voegel', 'voegel/schwarmhaltung', 'Schwarmhaltung bei Vögeln', 'Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.', 'Schwarmhaltung bei Vögeln verstehen.'],
@@ -339,21 +353,21 @@ const topicPages = [
   ['voegel-ruhe-und-schlaf', 'voegel', 'voegel/ruhe-schlaf', 'Ruhe und Schlaf bei Vögeln', 'Warum Wellensittiche eine verlässliche Nachtruhe und einen ruhigen, dunklen Schlafbereich brauchen.', 'Ruhezeiten und Schlafbedingungen bei Heimvögeln planen.'],
   ['voegel-ernaehrung', 'voegel', 'voegel/ernaehrung', 'Ernährung von Wellensittichen', 'Warum ein ständig voller Körnernapf nicht genügt und Futtermenge, Frischfutter, Wasser und Futtersuche zusammengehören.', 'Ernährung, Wasser und Futtersuche bei Wellensittichen einordnen.'],
   ['voegel-alltag-kosten-betreuung', 'voegel', 'voegel/alltag-kosten-betreuung', 'Alltag, Kosten und Betreuung bei Vögeln', 'Welche tägliche Arbeit, Wohnraumanpassungen, Tierarztkosten und Betreuungsfragen zur Vogelhaltung gehören.', 'Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.'],
-  ['voegel-kosten', 'voegel', 'voegel/wellensittiche-kosten', 'Was Wellensittiche wirklich kosten', 'Voliere, Futter, Tierarzt, Rücklagen und zehn Jahre: ehrlich gerechnet für Wellensittiche.', 'Kosten für Wellensittiche vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-19' }],
+  ['voegel-kosten', 'voegel', 'voegel/wellensittiche-kosten', 'Was Wellensittiche wirklich kosten', 'Voliere, Futter, Tierarzt, Rücklagen und zehn Jahre: ehrlich gerechnet für Wellensittiche.', 'Kosten für Wellensittiche vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
   ['voegel-zucht-und-eier', 'voegel', 'voegel/zucht-eier', 'Zucht und Eiablage bei Wellensittichen', 'Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.', 'Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.'],
   ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.'],
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.', 'Qualzucht bei Heimvögeln erkennen.'],
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.'],
   ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.', 'Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.', { lastmod: '2026-08-30' }],
-  ['kleintiere-kaninchen-kosten', 'kleintiere', 'kleintiere/kaninchen-kosten', 'Was zwei Kaninchen wirklich kosten', 'Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.', 'Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-07' }],
+  ['kleintiere-kaninchen-kosten', 'kleintiere', 'kleintiere/kaninchen-kosten', 'Was zwei Kaninchen wirklich kosten', 'Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.', 'Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen abgeben: Mindestalter und richtige Haltung', 'Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.', 'Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.', { lastmod: '2026-09-30' }],
-  ['kleintiere-meerschweinchen-kosten', 'kleintiere', 'kleintiere/meerschweinchen-kosten', 'Was Meerschweinchen wirklich kosten', 'Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.', 'Kosten für Meerschweinchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-14' }],
+  ['kleintiere-meerschweinchen-kosten', 'kleintiere', 'kleintiere/meerschweinchen-kosten', 'Was Meerschweinchen wirklich kosten', 'Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.', 'Kosten für Meerschweinchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
   ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.'],
-  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.', 'Reptilienhaltung realistisch prüfen.'],
+  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.', 'Reptilienhaltung realistisch prüfen.', { lastmod: '2026-10-24' }],
   ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.', 'Schildkrötenhaltung realistisch prüfen.'],
-  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.', 'Fischhaltung und Aquarium realistisch prüfen.'],
+  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.', 'Fischhaltung und Aquarium realistisch prüfen.', { lastmod: '2026-10-24' }],
   ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.'],
   ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.'],
   ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.'],
@@ -413,6 +427,14 @@ const glossaryTermByKey = new Map(glossaryTerms.map((term) => [term.key, term]))
 let staticCssForInline = '';
 
 const faqByPage = {
+  'woher-kommt-mein-tier': [
+    ['Verkauft der Zoofachhandel Hunde und Katzen?', 'Nach Angabe des Branchenverbands ZZF nicht: Dort gibt es laut ZZF keine Hunde und Katzen. Der Deutsche Tierschutzbund schreibt, der ZZF habe sich entschlossen, in angeschlossenen Zoofachgeschäften keine Hunde und Katzen anzubieten. Ob jedes Geschäft in Deutschland so verfährt, sagen die Quellen nicht. In § 11 Tierschutzgesetz steht kein solches Verbot.'],
+    ['Muss mich der Zoofachhandel beraten?', 'Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis nach § 11 Tierschutzgesetz und muss bei der erstmaligen Abgabe einer Tierart schriftliche Informationen zu den wesentlichen Bedürfnissen des Tieres mitgeben (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.'],
+    ['Warum sehen Tierschützer Kleinanzeigen und Online-Handel kritisch?', 'Der Deutsche Tierschutzbund nannte 2021 als Probleme niedrige Preise, die Spontankäufe erleichtern, fehlende Beratung und Anbieter, die oft nicht identifizierbar sind. Er fordert ein Verbot des Online-Handels mit lebenden Tieren, ausgenommen Tierheime und anerkannte Auffangstationen. Das ist der Stand dieser Quelle von 2021, nicht die aktuelle Rechtslage.'],
+    ['Woran erkenne ich einen seriösen Züchter?', 'Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt diese Seite keinen eigenen Kriterienkatalog vor; die allgemeinen Prüfpunkte gelten auch hier.'],
+    ['Was ist ein Mitleidskauf, und warum rät der Tierschutzbund davon ab?', 'Ein Mitleidskauf ist der Kauf eines Tieres, weil es einem leidtut. Der Deutsche Tierschutzbund schreibt, ein Kauf aus Mitleid helfe nicht den Tieren, sondern denen, die ein schnelles Geschäft machen wollen, und jedes freigekaufte Tier werde sofort durch ein anderes ersetzt. Er rät, zuerst im Tierheim zu schauen. Wie stark Mitleidskäufe die Nachfrage erhöhen, ist hier nicht belegt.'],
+    ['Wie finde ich ein Tierheim oder eine Notstation?', 'Der Tierheim-Finder des Deutschen Tierschutzbundes listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.'],
+  ],
   kastration: [
     ['Sollte eine Hündin oder Katze vor der Kastration einmal Junge bekommen?', 'Nein. Für einen gesundheitlichen oder seelischen Vorteil durch einen Wurf gibt es keinen tiermedizinischen Beleg. Bei Katzen sprechen die Vorteile meist für eine Kastration vor der Fortpflanzung; bei Hündinnen muss der passende Zeitpunkt individuell nach Rasse, Größe, Alter, Entwicklung und Gesundheit festgelegt werden.'],
     ['Schützt ein Wurf vor einer Gebärmuttervereiterung?', 'Nein. Eine frühere Trächtigkeit verhindert keine spätere Pyometra. Die Erkrankung hängt mit hormonellen Einflüssen auf die Gebärmutter zusammen, nicht mit angeblicher Kinderlosigkeit.'],
@@ -518,6 +540,47 @@ const faqByPage = {
 };
 
 const evidenceByPage = {
+  'woher-kommt-mein-tier': {
+    facts: [
+      'Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.',
+      'Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).',
+      'Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.',
+      'Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).',
+      'Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.',
+    ],
+    sources: [
+      ['ZZF: Ratgeber Zoofachhandel', 'https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/'],
+      ['ZZF: Erläuterungen zum § 11 Tierschutzgesetz', 'https://www.zzf.de/bildung/sachkunde/erlaeuterungen-zum-11-tierschutzgesetz'],
+      ['Tierschutzgesetz § 11', 'https://www.gesetze-im-internet.de/tierschg/__11.html'],
+      ['Tierschutzgesetz § 21', 'https://www.gesetze-im-internet.de/tierschg/__21.html'],
+      ['Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz', 'https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_09022000_32135220006.htm'],
+      ['Deutscher Tierschutzbund: Welches Tier passt zu mir?', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf'],
+      ['Deutscher Tierschutzbund: Tierschutz im Einkaufskorb', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf'],
+      ['Deutscher Tierschutzbund: Positionspapier Internethandel (Stand 01/2021)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Internethandel.pdf'],
+      ['Deutscher Tierschutzbund: Stellungnahme zur EU-Verordnung für Hunde und Katzen (2024)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Tierschutzbund_Stellungnahme_Companion_2024.pdf'],
+      ['Deutsches Tierärzteblatt 12/2023: Illegaler Heimtierhandel und deutsche Tierheime', 'https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2023/artikel/DTBl_12_2023_Heimtierhandel-2022.pdf'],
+      ['TVT: Merkblätter und Stellungnahmen', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/'],
+      ['Deutscher Tierschutzbund: Tierheim-Finder', 'https://www.tierschutzbund.de/tierheim-finder/'],
+      ['Deutscher Tierschutzbund: Umfrage zur Auslastung der Tierheime (2024)', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/'],
+      ['Heimtierstudie 2025 (Universität Göttingen)', 'https://www.zzf.de/fileadmin/ZZF/Dokumente/Heimtiermarkt/Heimtierstudie_2025_Ohr_final.pdf'],
+      ['Deutscher Tierschutzbund: Haltung von Meerschweinchen', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf'],
+      ['Deutscher Tierschutzbund: Haltung von Aquarienfischen', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Aquarienfische_Haltung.pdf'],
+      ['TASSO: Seriöse Züchter erkennen', 'https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/vor-dem-einzug-eines-tieres/serioese-zuechter-erkennen?lang=de-DE'],
+      ['Meerschweinchenwiese: Seriöse Zucht', 'https://meerschweinchenwiese.de/nachwuchs/serioese-zucht'],
+      ['BfN-Schriften 545: Nachfrage nach Reptilien, Amphibien und kleinen Säugetieren', 'https://www.bfn.de/publikationen/bfn-schriften/bfn-schriften-545-strategien-zur-reduktion-der-nachfrage-nach-als'],
+      ['EXOPET: Handelswege und Verbleib (Zwischenbericht 2017)', 'https://www.vetmed.uni-leipzig.de/fileadmin/Fakult%C3%A4t_VMF/Klinik_V%C3%B6gel_Reptilien/Exopet_21_22/Exopet_2017_Zwischenbericht_Teil_II.pdf'],
+      ['Auffangstation für Reptilien München: Jahresbericht 2019', 'https://www.reptilienauffangstation.de/Aktuelles%20und%20Wissen/Downloads%20und%20Wissen/Jahresberichte/Jahresbericht%202019.pdf'],
+      ['Bundesministerium: Überarbeitung der Haltungsgutachten für Zierfische und Reptilien', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html'],
+      ['Europäisches Parlament: Erste EU-Regeln für Hunde und Katzen', 'https://www.europarl.europa.eu/news/de/press-room/20250616IPR28963/erste-eu-regeln-fur-wohlergehen-und-ruckverfolgbarkeit-von-hunden-und-katzen'],
+    ],
+    guardrails: [
+      'Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.',
+      'Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.',
+      'Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.',
+      'Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.',
+      'Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung.',
+    ],
+  },
   mensch: {
     facts: [
       'Ein Tier zieht in einen konkreten Alltag ein: Zeit, Geld, Wohnsituation, Betreuung und Rücklagen müssen vor der Anschaffung passen.',
@@ -847,8 +910,11 @@ const evidenceByPage = {
       ['Europäische Kommission: Bewegungen von Hunden, Katzen und Frettchen', 'https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/movements-within-eu_en'],
       ['TVT: Merkblätter für Heimtiere', 'https://tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/'],
       ['Deutscher Tierschutzbund: Wellensittiche', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/'],
+      ['ZZF: Ratgeber Zoofachhandel', 'https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/'],
+      ['Deutscher Tierschutzbund: Welches Tier passt zu mir?', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf'],
     ],
     guardrails: [
+      'Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.',
       'Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.',
       'Seriöse Adoption braucht Zeit und ehrliche Beratung.',
       'Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.',
@@ -1801,6 +1867,11 @@ const socialCopyByPage = {
     title: 'Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert',
     description: 'Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.',
   },
+  'woher-kommt-mein-tier': {
+    eyebrow: 'Herkunft prüfen',
+    title: 'Woher kommt mein Tier?',
+    description: 'Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Wege im Überblick und was du vor dem Kauf prüfen kannst.',
+  },
   adoption: {
     eyebrow: 'Tierschutz statt Nachfrage',
     title: 'Adoption statt Kauf',
@@ -1946,6 +2017,7 @@ const keywordByPage = {
   kastration: ['Kastration', 'Kastrationspflicht', 'Tierschutz', 'Katzen', 'Kaninchen'],
   qualzucht: ['Qualzucht', 'Rassekrankheiten', 'Rassemerkmale', 'Atemnot', 'Gendefekte', 'Tierleid'],
   adoption: ['Adoption', 'Tierheim', 'Tierschutz', 'Schutzgebühr', 'Pflegestelle'],
+  'woher-kommt-mein-tier': ['Herkunft Haustier', 'Zoofachhandel', 'Kleinanzeigen', 'Züchter', 'Tierheim', 'Mitleidskauf'],
   selbsttest: ['Haustier Selbsttest', 'bereit für ein Tier', 'Zeit', 'Geld', 'Betreuung'],
   notfall: ['Tiernotfall', 'Vergiftung', 'Atemnot', 'Tierarzt', 'Warnsignale'],
   'tierarzt-notdienst': ['Tierarzt Notdienst', 'Notdienst Bundesland', 'Tierärztekammer', 'Notrufnummer'],
@@ -2195,7 +2267,10 @@ function buildGlossaryListHtml() {
   const items = glossaryTerms
     .slice()
     .sort((first, second) => first.title.localeCompare(second.title, 'de'))
-    .map((term) => `          <div class="glossary-item" id="${escapeAttr(term.key)}" data-glossary-key="${escapeAttr(term.key)}"><dt>${escapeHtml(term.title)}</dt><dd>${escapeHtml(term.description)}</dd></div>`)
+    .map((term) => {
+      const seeAlso = term.seeAlso ? ` <a href="${hrefFor(term.seeAlso.page, pageById.get('glossar'))}">${escapeHtml(term.seeAlso.label)}</a>` : '';
+      return `          <div class="glossary-item" id="${escapeAttr(term.key)}" data-glossary-key="${escapeAttr(term.key)}"><dt>${escapeHtml(term.title)}</dt><dd>${escapeHtml(term.description)}${seeAlso}</dd></div>`;
+    })
     .join('\n');
   return `        <dl id="glossary-list">\n${items}\n        </dl>`;
 }
@@ -2456,7 +2531,41 @@ function topicChildrenFor(pageId) {
 // Zusätzliche Karten und Querverweise, die nicht aus der Themenliste entstehen.
 // target verweist auf eine Seite, href auf einen Anker innerhalb der Übersichtsseite.
 const extraTopicLinks = {
+  hunde: [
+    {
+      after: 'hunde-kosten',
+      target: 'woher-kommt-mein-tier',
+      title: 'Woher kommt mein Tier?',
+      text: 'Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Welche Wege es gibt und was du prüfen kannst.',
+      siblingNavOn: ['hunde-entscheidung', 'hunde-allein-zu-hause'],
+    },
+  ],
+  kleintiere: [
+    {
+      after: 'kleintiere-kaninchen-kosten',
+      target: 'woher-kommt-mein-tier',
+      title: 'Woher kommt mein Tier?',
+      text: 'Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Welche Wege es gibt und was du prüfen kannst.',
+      siblingNavOn: ['kleintiere-kaninchen', 'kleintiere-meerschweinchen', 'kleintiere-meerschweinchen-kosten', 'kleintiere-hamster'],
+    },
+  ],
+  exoten: [
+    {
+      after: 'exoten-reptilien',
+      target: 'woher-kommt-mein-tier',
+      title: 'Woher kommt mein Tier?',
+      text: 'Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Welche Wege es gibt und was du prüfen kannst.',
+      siblingNavOn: ['exoten-schildkroeten', 'exoten-fische'],
+    },
+  ],
   katzen: [
+    {
+      after: 'katzen-kosten',
+      target: 'woher-kommt-mein-tier',
+      title: 'Woher kommt mein Tier?',
+      text: 'Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Welche Wege es gibt und was du prüfen kannst.',
+      siblingNavOn: ['katzen-entscheidung'],
+    },
     {
       after: 'katzen-kosten',
       target: 'katzen-kaetzchen-tierarzt',
@@ -2466,6 +2575,13 @@ const extraTopicLinks = {
     },
   ],
   voegel: [
+    {
+      after: 'voegel-kosten',
+      target: 'woher-kommt-mein-tier',
+      title: 'Woher kommt mein Tier?',
+      text: 'Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Welche Wege es gibt und was du prüfen kannst.',
+      siblingNavOn: ['voegel-entscheidung', 'voegel-schwarmhaltung', 'voegel-zucht-und-eier'],
+    },
     {
       after: 'voegel-entscheidung',
       href: '#voegel-abgabealter',
@@ -3648,7 +3764,7 @@ function buildLlmsFull() {
 }
 
 function buildLlmsShort() {
-  const important = ['hunde', 'hunde-abgabealter', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfallplan-haustier', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'petitionen', 'selbsttest', 'wissen', 'glossar'];
+  const important = ['hunde', 'hunde-abgabealter', 'katzen', 'wildkatzenbaby-gefunden', 'tiere-und-urlaub', 'notfallplan-haustier', 'notfall', 'tierarzt-notdienst', 'kastration', 'adoption', 'woher-kommt-mein-tier', 'petitionen', 'selbsttest', 'wissen', 'glossar'];
   const lines = [
     '# Wa(h)re Haustier(liebe)',
     '',
@@ -3778,6 +3894,7 @@ function buildAiGlossary() {
         summary: term.summary,
         description: term.description,
         url: `${baseUrl}/glossar/index.html#${term.key}`,
+        ...(term.seeAlso ? { relatedUrl: canonicalUrl(pageById.get(term.seeAlso.page)) } : {}),
       })),
   }, null, 2) + '\n';
 }

@@ -37,7 +37,7 @@
     <main class="content">
       <article class="page">
         <h1>Stand und Seitenbestand</h1>
-        <p class="status">Stand 9. Oktober 2026, am Repo und an der Live-Seite geprüft</p>
+        <p class="status">Stand 9. Oktober 2026, am Repo und an der Live-Seite geprüft; Seitenzahl, Glossar und Herkunftsseite am 24. Oktober 2026 lokal ergänzt</p>
 
         <p>Wa(h)re Haustier(liebe) ist eine private, werbefreie Aufklärungsseite über Haustierhaltung. Sie ist als wachsendes Lexikon gebaut: wenige Übersichtsseiten (Hubs) für Tierarten und Grundsatzthemen, darunter echte Unterseiten zu einzelnen Fragen. Diese Seite hält fest, welche Seiten es gibt, welche Sonderbausteine wo stecken und was bewusst nicht öffentlich auffindbar ist.</p>
 
@@ -45,11 +45,11 @@
         <table>
           <thead><tr><th>Was</th><th>Stand 9. Oktober 2026</th></tr></thead>
           <tbody>
-            <tr><td>Öffentliche Seiten in <code>ai/pages.json</code> und <code>sitemap.xml</code></td><td>77, beide Listen deckungsgleich</td></tr>
+            <tr><td>Öffentliche Seiten in <code>ai/pages.json</code> und <code>sitemap.xml</code></td><td>80 lokal nachgezählt am 24. Oktober 2026 (am 9. Oktober: 77), beide Listen deckungsgleich</td></tr>
             <tr><td>Live-Sitemap gegen lokale Sitemap</td><td>byte-gleich (Abruf 9. Oktober 2026)</td></tr>
             <tr><td>Letzte Auslieferung laut GitHub Pages</td><td><code>Last-Modified: Wed, 07 Oct 2026 15:20:09 GMT</code></td></tr>
             <tr><td>Lokaler Stand gegen GitHub</td><td><code>main</code> ist 2 Commits voraus (Instagram-Entwurf Kaninchen-Preis-Decoder, Wiki-Grundstock); beide betreffen nur <code>docs/</code></td></tr>
-            <tr><td>Glossarbegriffe</td><td>118 (<code>tools/glossary-data.mjs</code>, <code>glossar/index.html</code>)</td></tr>
+            <tr><td>Glossarbegriffe</td><td>119 am 24. Oktober 2026 (am 9. Oktober: 118; neu: Mitleidskauf) (<code>tools/glossary-data.mjs</code>, <code>glossar/index.html</code>)</td></tr>
             <tr><td>Rassekrankheiten-Lexikon</td><td>20 Einträge, 44 Quellenlinks</td></tr>
             <tr><td>Laufende Petitionen auf der Seite</td><td>4</td></tr>
             <tr><td>Quizfragen in der PWA</td><td>280, siehe <a href="pwa-und-quiz.html">PWA und Quiz</a></td></tr>
@@ -64,7 +64,7 @@
           <tbody>
             <tr><td>Einstieg</td><td><code>/</code>, <code>mensch/</code> (Passt ein Tier in dein Leben?), <code>selbsttest/</code>, <code>noch-nicht-bereit/</code></td></tr>
             <tr><td>Tierarten-Hubs</td><td><code>hunde/</code>, <code>katzen/</code>, <code>voegel/</code>, <code>kleintiere/</code>, <code>exoten/</code>, <code>pferde/</code></td></tr>
-            <tr><td>Grundsatzthemen</td><td><code>kastration/</code>, <code>qualzucht/</code>, <code>adoption/</code>, <code>zucht-und-vermehrung/</code>, <code>realhaltung/</code>, <code>wildtierhaltung/</code>, <code>ernaehrung-taurin/</code></td></tr>
+            <tr><td>Grundsatzthemen</td><td><code>kastration/</code>, <code>qualzucht/</code>, <code>adoption/</code>, <code>woher-kommt-mein-tier/</code> (seit 24. Oktober 2026 lokal, noch nicht veröffentlicht), <code>zucht-und-vermehrung/</code>, <code>realhaltung/</code>, <code>wildtierhaltung/</code>, <code>ernaehrung-taurin/</code></td></tr>
             <tr><td>Notfall und Alltag</td><td><code>notfall/</code> mit <code>notfall/tierarzt-notdienst/</code>, <code>notfallplan-haustier/</code>, <code>hitzefalle-auto/</code>, <code>tiere-und-urlaub/</code></td></tr>
             <tr><td>Wissen</td><td><code>wissen/</code> (Tiermythen und Homöopathie), <code>glossar/</code></td></tr>
             <tr><td>Mitwirkung</td><td><code>mitmachen/</code>, <code>petitionen/</code>, <code>kontakt/</code></td></tr>
@@ -84,7 +84,8 @@
             <tr><td><code>pferde/</code><br>6 Seiten</td><td><code>herde</code>, <code>platzbedarf</code>, <code>haltungsformen</code>, <code>kosten</code>, <code>reitbeteiligung</code>, <code>entscheidung</code></td></tr>
           </tbody>
         </table>
-        <p>Diese 50 Unterseiten ergeben mit den 28 Seiten auf oberster Ebene (Startseite und Pflichtseiten eingeschlossen) und <code>notfall/tierarzt-notdienst/</code> die 79 Seiten aus <code>ai/pages.json</code>.</p>
+        <p>Diese 50 Unterseiten ergeben mit den 29 Seiten auf oberster Ebene (Startseite und Pflichtseiten eingeschlossen) und <code>notfall/tierarzt-notdienst/</code> die 80 Seiten aus <code>ai/pages.json</code>.</p>
+        <p><code>woher-kommt-mein-tier/</code> ist die Herkunftsseite („Woher kommt mein Tier?“) und der erste Baustein des geplanten Tierwissen-Lexikons: Wege (Zoofachhandel, Kleinanzeigen und Online-Handel, Züchter und Vermehrer, Tierheim, Notstation) und je Tierart ein gleiches Raster aus übliche Wege, Gruppenhaltung, Prüfpunkte und Weiterlesen. Weitere Tierarten lassen sich im selben Raster nachziehen. Sie steht im Menü „Wissen“ und als Karte in den Tierarten-Hubs.</p>
         <p class="source">Quelle: <code>ai/pages.json</code> (Feld <code>pages</code>), Seitendefinitionen in <code>tools/build-static-pages.mjs</code> (<code>pages</code>, <code>handwrittenPages</code>)</p>
 
         <h2 id="preis-decoder">Preis-Decoder</h2>

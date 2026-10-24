@@ -37,9 +37,19 @@
     <main class="content">
       <article class="page">
         <h1>Änderungsverlauf</h1>
-        <p class="status">Zuletzt ergänzt am 19. Oktober 2026, neueste Einträge oben</p>
+        <p class="status">Zuletzt ergänzt am 24. Oktober 2026, neueste Einträge oben</p>
 
         <p>Hier steht, was sich am Projekt und am Wiki geändert hat, mit Datum und betroffener Seite. Ein Eintrag pro Arbeitsgang reicht: was, warum, wo nachlesen.</p>
+
+        <h2 id="2026-10-24-woher-kommt-mein-tier">24. Oktober 2026: Seite „Woher kommt mein Tier?“ angelegt</h2>
+        <ul>
+          <li>Neue Seite <code>woher-kommt-mein-tier/</code>: Zoofachhandel, Kleinanzeigen und Online-Handel, Züchter und Vermehrer, Tierheim sowie Notstation und Pflegestelle, dazu je Tierart (Hund, Katze, Kaninchen, Meerschweinchen, Hamster, Wellensittich und Vögel, Fische, Reptilien) mit gleichem Raster: übliche Wege, Gruppenhaltung, Prüfpunkte, Weiterlesen. Dazu Abschnitt Mitleidskauf, Checkliste, Häufige Fragen und „Fachquellen und wichtige Grenzen“. Sie ist der erste Baustein des geplanten Tierwissen-Lexikons mit einheitlicher Gliederung je Tierart und Verlinkungsziel für den späteren Instagram-Beitrag „Warum nicht aus der Zoohandlung?“. Kein eigenes Headerbild und keine neuen Skripte.</li>
+          <li>Grundlage ist ein Quellenbericht mit acht Themen und der Einstufung „belegt / teilweise / nicht belegt“. Er liegt lokal unter <code>tmp/zoohandlung-quellen/quellen.md</code>, ist git-ignoriert und nicht im Repo. Auf die Seite kamen nur belegte Aussagen; Branchen- und Verbandsaussagen (ZZF, Tierschutzbund, TVT) sind als solche gekennzeichnet, der Rechtsstand zum Online-Handel steht als Stand der Quelle von 2021.</li>
+          <li><code>adoption/</code>: Abschnitt „Warum nicht aus der Zoohandlung?“ und der Kasten „Auf einen Blick“ neu gefasst. Die Pauschalen („stammen oft aus Massenzuchten“, „Welpen und Kitten werden oft zu früh getrennt“, „Beratung häufig unqualifiziert“) sind entfernt, weil die Quellen sie nicht tragen und der Zoofachhandel nach Angabe des ZZF keine Hunde und Katzen verkauft.</li>
+          <li>Glossar: neuer Begriff „Mitleidskauf“, „Zoohandel“ neu definiert; beide verlinken auf die neue Seite. Der Generator kennt dafür das optionale Feld <code>seeAlso</code> in <code>tools/glossary-data.mjs</code>. Glossar jetzt 119 Begriffe.</li>
+          <li>Querverweise: Navigation „Wissen“ (Desktop und mobil), Karten und „Weitere Themen in diesem Bereich“ in den Hubs Hunde, Katzen, Vögel, Kleintiere und Exoten (<code>extraTopicLinks</code>), Sätze auf den Kostenseiten, bei Reptilien und Fischen sowie auf der Adoptionsseite. <code>ai/pages.json</code>, <code>sitemap.xml</code>, <code>llms.txt</code>, <code>llms-full.txt</code> und die Audit-Liste in <code>tools/static-pages-audit.mjs</code> sind nachgezogen, <code>lastmod</code> der geänderten Seiten auf 24. Oktober 2026 gesetzt. Seiten jetzt: 80.</li>
+          <li>Offen: Freigabe durch Annemarie oder Erik, Gegenlesen der Quellenaussagen, Hinweis auf zwei Stellen mit ähnlichen Pauschalen (siehe <a href="offene-fragen.html">Offene Fragen</a>). Nicht committet und nicht veröffentlicht.</li>
+        </ul>
 
         <h2 id="2026-10-19-wellensittich-decoder">19. Oktober 2026: Wellensittich-Preis-Decoder angelegt</h2>
         <ul>

@@ -670,8 +670,16 @@ export const glossaryTerms = [
   {
     key: 'zoohandel',
     title: 'Zoohandel',
-    summary: 'Kommerzieller Verkauf von Tieren und Zubehör. Problematisch, wenn Verkauf vor Tierwohl steht.',
-    description: 'Kommerzieller Verkauf von Tieren und Zubehör. Problematisch wird Zoohandel, wenn Beratung, Herkunft, Sozialisation und Langzeitverantwortung hinter dem Verkauf zurückstehen.',
+    summary: 'Geschäft, das lebende Tiere und Zubehör verkauft. Hunde und Katzen führt der Zoofachhandel nach Angabe des ZZF nicht.',
+    description: 'Geschäft, das lebende Tiere und Zubehör verkauft. Nach Angabe des Branchenverbands ZZF gibt es im Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen. Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz. Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel aus Tierschutzsicht kritisch.',
+    seeAlso: { page: 'woher-kommt-mein-tier', label: 'Mehr dazu: Woher kommt mein Tier?' },
+  },
+  {
+    key: 'mitleidskauf',
+    title: 'Mitleidskauf',
+    summary: 'Kauf eines Tieres, weil es einem leidtut. Der Deutsche Tierschutzbund rät davon ab.',
+    description: 'Kauf eines Tieres, weil es einem leidtut, und nicht aus einer überlegten Entscheidung für die Haltung. Der Deutsche Tierschutzbund rät davon ab: Ein Kauf aus Mitleid helfe nicht den Tieren, sondern denen, die ein schnelles Geschäft machen wollen, und jedes freigekaufte Tier werde sofort durch ein anderes ersetzt. Stattdessen empfiehlt er, zuerst im Tierheim zu schauen.',
+    seeAlso: { page: 'woher-kommt-mein-tier', label: 'Mehr dazu: Woher kommt mein Tier?' },
   },
   {
     key: 'zahnfehlstellung',
@@ -712,6 +720,13 @@ export const glossaryTerms = [
 ];
 
 export const glossaryAnnotationsByPage = {
+  'woher-kommt-mein-tier': [
+    { from: 'Wer trotzdem kauft, sollte nie bei Vermehrern und nie aus Mitleid kaufen.', to: `Wer trotzdem kauft, sollte nie bei ${mark('vermehrer', 'Vermehrern')} und nie aus Mitleid kaufen.` },
+    { from: 'Ein Tier kann aus dem Zoofachhandel,', to: `Ein Tier kann aus dem ${mark('zoohandel', 'Zoofachhandel')},` },
+    { from: 'darf im Verkauf nur sachkundiges Personal arbeiten', to: `darf im Verkauf nur ${mark('sachkunde', 'sachkundiges')} Personal arbeiten` },
+    { from: 'Wer ein Tierheim oder eine ähnliche Einrichtung betreibt', to: `Wer ein ${mark('tierheim', 'Tierheim')} oder eine ähnliche Einrichtung betreibt` },
+    { from: 'Ein Mitleidskauf liegt vor', to: `Ein ${mark('mitleidskauf', 'Mitleidskauf')} liegt vor` },
+  ],
   startseite: [
     {
       from: 'Goldfischglas, Einzelvogel, Katermythen, <span class="glossary-term" data-glossary-title="Globuli" data-glossary-text="Kleine Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar." data-glossary-href="glossar/index.html">Globuli</span>: Was stimmt wirklich?',
@@ -827,8 +842,8 @@ export const glossaryAnnotationsByPage = {
     { from: 'Adoption statt Kauf', to: `${mark('adoption', 'Adoption')} statt Kauf` },
     { from: 'Tierheimtiere werden je nach Tierart, Gesundheitsstatus und Aufenthaltsdauer tierärztlich versorgt', to: `${mark('tierheim', 'Tierheimtiere')} werden je nach Tierart, Gesundheitsstatus und Aufenthaltsdauer tierärztlich versorgt` },
     { from: 'Die Schutzgebühr (50–350 Euro je nach Tierart)', to: `Die ${mark('schutzgebuehr', 'Schutzgebühr')} (50–350 Euro je nach Tierart)` },
-    { from: 'Tiere aus der Zoohandlung', to: `Tiere aus der ${mark('zoohandel', 'Zoohandlung')}` },
-    { from: 'stammen aus Zuchtbetrieben', to: `stammen aus ${mark('vermehrer', 'Zuchtbetrieben')}` },
+    { from: 'Der Zoofachhandel verkauft nach Angabe des Branchenverbands ZZF keine Hunde und Katzen.', to: `Der ${mark('zoohandel', 'Zoofachhandel')} verkauft nach Angabe des Branchenverbands ZZF keine Hunde und Katzen.` },
+    { from: 'Ein Mitleidskauf beendet', to: `Ein ${mark('mitleidskauf', 'Mitleidskauf')} beendet` },
     { from: 'beim seriösen Züchter', to: `beim seriösen ${mark('zuechter', 'Züchter')}` },
     { from: 'Brachyzephale Hunde', to: `${mark('brachyzephalie', 'Brachyzephale Hunde')}` },
     { from: 'Schutzgebühr und Vertrag.', to: `${mark('schutzgebuehr', 'Schutzgebühr')} und ${mark('schutzvertrag', 'Vertrag')}.` },

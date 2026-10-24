@@ -2185,6 +2185,7 @@
         "Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu."
       ],
       "citationGuardrails": [
+        "Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.",
         "Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.",
         "Seriöse Adoption braucht Zeit und ehrliche Beratung.",
         "Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.",
@@ -2251,6 +2252,14 @@
         {
           "label": "Deutscher Tierschutzbund: Wellensittiche",
           "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/"
+        },
+        {
+          "label": "ZZF: Ratgeber Zoofachhandel",
+          "url": "https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Welches Tier passt zu mir?",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf"
         }
       ],
       "social": {
@@ -2258,6 +2267,137 @@
         "description": "Warum Tierheim, Pflegestelle, Schutzgebühr, Vorbereitung und seriöse Vermittlung oft die verantwortungsvollere Wahl sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/adoption.png",
         "imageAlt": "Hund blickt aus seinem Zwinger im Tierheim.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
+      "id": "woher-kommt-mein-tier",
+      "url": "https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html",
+      "title": "Woher kommt mein Tier? Zoofachhandel, Kleinanzeigen, Züchter, Tierheim",
+      "description": "Zoofachhandel, Kleinanzeigen, Züchter, Vermehrer, Tierheim und Notstation: welche Wege es gibt, was du vor dem Kauf prüfen kannst und worauf du je Tierart achten kannst.",
+      "intent": "Herkunftswege von Haustieren einordnen und vor dem Kauf oder der Übernahme prüfen",
+      "keywords": [
+        "Herkunft Haustier",
+        "Zoofachhandel",
+        "Kleinanzeigen",
+        "Züchter",
+        "Tierheim",
+        "Mitleidskauf"
+      ],
+      "facts": [
+        "Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.",
+        "Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).",
+        "Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.",
+        "Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).",
+        "Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte."
+      ],
+      "citationGuardrails": [
+        "Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.",
+        "Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.",
+        "Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.",
+        "Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.",
+        "Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung."
+      ],
+      "sources": [
+        {
+          "label": "ZZF: Ratgeber Zoofachhandel",
+          "url": "https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/"
+        },
+        {
+          "label": "ZZF: Erläuterungen zum § 11 Tierschutzgesetz",
+          "url": "https://www.zzf.de/bildung/sachkunde/erlaeuterungen-zum-11-tierschutzgesetz"
+        },
+        {
+          "label": "Tierschutzgesetz § 11",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 21",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__21.html"
+        },
+        {
+          "label": "Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz",
+          "url": "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_09022000_32135220006.htm"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Welches Tier passt zu mir?",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Tierschutz im Einkaufskorb",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Positionspapier Internethandel (Stand 01/2021)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Internethandel.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Stellungnahme zur EU-Verordnung für Hunde und Katzen (2024)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Tierschutzbund_Stellungnahme_Companion_2024.pdf"
+        },
+        {
+          "label": "Deutsches Tierärzteblatt 12/2023: Illegaler Heimtierhandel und deutsche Tierheime",
+          "url": "https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2023/artikel/DTBl_12_2023_Heimtierhandel-2022.pdf"
+        },
+        {
+          "label": "TVT: Merkblätter und Stellungnahmen",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Tierheim-Finder",
+          "url": "https://www.tierschutzbund.de/tierheim-finder/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Umfrage zur Auslastung der Tierheime (2024)",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/"
+        },
+        {
+          "label": "Heimtierstudie 2025 (Universität Göttingen)",
+          "url": "https://www.zzf.de/fileadmin/ZZF/Dokumente/Heimtiermarkt/Heimtierstudie_2025_Ohr_final.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Haltung von Meerschweinchen",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Haltung von Aquarienfischen",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Aquarienfische_Haltung.pdf"
+        },
+        {
+          "label": "TASSO: Seriöse Züchter erkennen",
+          "url": "https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/vor-dem-einzug-eines-tieres/serioese-zuechter-erkennen?lang=de-DE"
+        },
+        {
+          "label": "Meerschweinchenwiese: Seriöse Zucht",
+          "url": "https://meerschweinchenwiese.de/nachwuchs/serioese-zucht"
+        },
+        {
+          "label": "BfN-Schriften 545: Nachfrage nach Reptilien, Amphibien und kleinen Säugetieren",
+          "url": "https://www.bfn.de/publikationen/bfn-schriften/bfn-schriften-545-strategien-zur-reduktion-der-nachfrage-nach-als"
+        },
+        {
+          "label": "EXOPET: Handelswege und Verbleib (Zwischenbericht 2017)",
+          "url": "https://www.vetmed.uni-leipzig.de/fileadmin/Fakult%C3%A4t_VMF/Klinik_V%C3%B6gel_Reptilien/Exopet_21_22/Exopet_2017_Zwischenbericht_Teil_II.pdf"
+        },
+        {
+          "label": "Auffangstation für Reptilien München: Jahresbericht 2019",
+          "url": "https://www.reptilienauffangstation.de/Aktuelles%20und%20Wissen/Downloads%20und%20Wissen/Jahresberichte/Jahresbericht%202019.pdf"
+        },
+        {
+          "label": "Bundesministerium: Überarbeitung der Haltungsgutachten für Zierfische und Reptilien",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
+        },
+        {
+          "label": "Europäisches Parlament: Erste EU-Regeln für Hunde und Katzen",
+          "url": "https://www.europarl.europa.eu/news/de/press-room/20250616IPR28963/erste-eu-regeln-fur-wohlergehen-und-ruckverfolgbarkeit-von-hunden-und-katzen"
+        }
+      ],
+      "social": {
+        "title": "Woher kommt mein Tier? - Wa(h)re Haustier(liebe)",
+        "description": "Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Wege im Überblick und was du vor dem Kauf prüfen kannst.",
+        "image": "https://wahre-haustierliebe.de/assets/social/default.png",
+        "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
         "imageWidth": 1200,
         "imageHeight": 630
       }

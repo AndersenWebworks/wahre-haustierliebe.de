@@ -73,6 +73,7 @@ const pages = [
   { id: 'kastration', file: 'kastration/index.html', canonical: `${baseUrl}/kastration/index.html` },
   { id: 'qualzucht', file: 'qualzucht/index.html', canonical: `${baseUrl}/qualzucht/index.html` },
   { id: 'adoption', file: 'adoption/index.html', canonical: `${baseUrl}/adoption/index.html` },
+  { id: 'woher-kommt-mein-tier', file: 'woher-kommt-mein-tier/index.html', canonical: `${baseUrl}/woher-kommt-mein-tier/index.html` },
   { id: 'selbsttest', file: 'selbsttest/index.html', canonical: `${baseUrl}/selbsttest/index.html` },
   { id: 'notfall', file: 'notfall/index.html', canonical: `${baseUrl}/notfall/index.html` },
   { id: 'tierarzt-notdienst', file: 'notfall/tierarzt-notdienst/index.html', canonical: `${baseUrl}/notfall/tierarzt-notdienst/index.html` },

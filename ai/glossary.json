@@ -424,6 +424,14 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#metabolische-knochenerkrankung"
     },
     {
+      "key": "mitleidskauf",
+      "title": "Mitleidskauf",
+      "summary": "Kauf eines Tieres, weil es einem leidtut. Der Deutsche Tierschutzbund rät davon ab.",
+      "description": "Kauf eines Tieres, weil es einem leidtut, und nicht aus einer überlegten Entscheidung für die Haltung. Der Deutsche Tierschutzbund rät davon ab: Ein Kauf aus Mitleid helfe nicht den Tieren, sondern denen, die ein schnelles Geschäft machen wollen, und jedes freigekaufte Tier werde sofort durch ein anderes ersetzt. Stattdessen empfiehlt er, zuerst im Tierheim zu schauen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#mitleidskauf",
+      "relatedUrl": "https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html"
+    },
+    {
       "key": "nachtaktiv",
       "title": "Nachtaktiv",
       "summary": "Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress.",
@@ -811,9 +819,10 @@
     {
       "key": "zoohandel",
       "title": "Zoohandel",
-      "summary": "Kommerzieller Verkauf von Tieren und Zubehör. Problematisch, wenn Verkauf vor Tierwohl steht.",
-      "description": "Kommerzieller Verkauf von Tieren und Zubehör. Problematisch wird Zoohandel, wenn Beratung, Herkunft, Sozialisation und Langzeitverantwortung hinter dem Verkauf zurückstehen.",
-      "url": "https://wahre-haustierliebe.de/glossar/index.html#zoohandel"
+      "summary": "Geschäft, das lebende Tiere und Zubehör verkauft. Hunde und Katzen führt der Zoofachhandel nach Angabe des ZZF nicht.",
+      "description": "Geschäft, das lebende Tiere und Zubehör verkauft. Nach Angabe des Branchenverbands ZZF gibt es im Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen. Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz. Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel aus Tierschutzsicht kritisch.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#zoohandel",
+      "relatedUrl": "https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html"
     },
     {
       "key": "zoonose",

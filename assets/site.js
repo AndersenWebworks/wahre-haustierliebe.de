@@ -64,6 +64,7 @@ var staticPageRoutes = {
   "kastration": "/kastration/index.html",
   "qualzucht": "/qualzucht/index.html",
   "adoption": "/adoption/index.html",
+  "woher-kommt-mein-tier": "/woher-kommt-mein-tier/index.html",
   "selbsttest": "/selbsttest/index.html",
   "notfall": "/notfall/index.html",
   "tierarzt-notdienst": "/notfall/tierarzt-notdienst/index.html",
@@ -469,6 +470,12 @@ var staticSiteSearchIndex = [
     "title": "Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung",
     "description": "Adoption aus dem Tierschutz statt Kauf: Abgabealter für Welpen, Kitten und Kleintiere, Folgen zu früher Trennung, Schutzgebühr und seriöse Vermittlung.",
     "terms": "Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen adoption adoption"
+  },
+  {
+    "id": "woher-kommt-mein-tier",
+    "title": "Woher kommt mein Tier? Zoofachhandel, Kleinanzeigen, Züchter, Tierheim",
+    "description": "Zoofachhandel, Kleinanzeigen, Züchter, Vermehrer, Tierheim und Notstation: welche Wege es gibt, was du vor dem Kauf prüfen kannst und worauf du je Tierart achten kannst.",
+    "terms": "Herkunftswege von Haustieren einordnen und vor dem Kauf oder der Übernahme prüfen woher-kommt-mein-tier woher kommt mein tier"
   },
   {
     "id": "selbsttest",
@@ -1419,6 +1426,7 @@ function normalizeAssetUrls(root) {
       'kastration': 'kastration/',
       'qualzucht': 'qualzucht/',
       'adoption': 'adoption/',
+      'woher-kommt-mein-tier': 'woher-kommt-mein-tier/',
       'selbsttest': 'selbsttest/',
       'notfall': 'notfall/',
       'wissen': 'wissen/',
