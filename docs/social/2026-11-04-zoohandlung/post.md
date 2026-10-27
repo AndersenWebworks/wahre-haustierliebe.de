@@ -2,46 +2,46 @@
 
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 04.11.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
-Status: Entwurf, Texte noch nicht von Annemarie freigegeben. Bilder vorgeschlagen und gesichtet (Stand 27.10.2026), noch nicht ins Repository geladen.
+Status: Überarbeitete Fassung (27.10.2026), Texte noch nicht von Annemarie freigegeben. Bilder vorgeschlagen und gesichtet (Stand 27.10.2026), noch nicht ins Repository geladen.
 Website-Seite: https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html (im Repository vorhanden, Stand der Angaben 24.10.2026; ob online, vor Veröffentlichung prüfen)
 
 ## Folien
 
-Aufbau (Stand 27.10.2026): Der Beitrag sagt nicht „Zoohandlungen sind schlecht“, sondern zeigt, was man dort prüfen kann und was belegt ist. Aussagen von Verbänden sind als solche genannt. Gesagt wird nur, was die Seite „Woher kommt mein Tier?“ trägt.
+Aufbau (Stand 27.10.2026, überarbeitet nach Verhaltensökonomie-Pass): Einstieg bei dem, was Käufer ohnehin glauben (ein Tier, ein Preis), dann das, was nicht auf dem Preisschild steht. Kein Urteil über Zoohandlungen, keine Scham, ein einziger Handlungsimpuls (Speichern). Gesagt wird nur, was die Seite „Woher kommt mein Tier?“ trägt.
 
 **Folie 1** (Bild: folie-1.jpg)
-Der Laden hat sie da.
-Das heißt nicht, dass es gut ist.
-Im Schaufenster siehst du das Tier. Woher es kommt und wie es weitergeht, musst du erfragen.
-Wisch weiter: Was du vor dem Kauf prüfen kannst.
+Auf dem Preisschild steht ein Tier.
+Gehalten werden sollten mehrere.
+Wer das nie gehört hat, steht damit nicht allein. Wisch durch: Was du vorher wissen kannst.
 
 **Folie 2** (Bild: folie-2.jpg)
-Allein ist keine Option.
-Meerschweinchen, Kaninchen und Wellensittiche leben in Gruppen. Nach der TVT gehören alle drei mindestens zu zweit gehalten, Meerschweinchen besser in einer Gruppe.
-Der Tierschutzbund nennt für Meerschweinchen drei bis sechs Tiere und für Zwergkaninchen drei bis fünf.
+Ein Tier ist keins.
+Meerschweinchen, Kaninchen und Wellensittiche leben in Gruppen. Nach der TVT gehören alle drei mindestens zu zweit gehalten.
+Der Tierschutzbund nennt für Meerschweinchen drei bis sechs Tiere, für Zwergkaninchen drei bis fünf.
+Das bedeutet: mehr Platz, mehr Futter, mehr Tierarztbesuche, als das Preisschild vermuten lässt.
 Quelle: TVT; Deutscher Tierschutzbund, Stand Oktober 2026
 
 **Folie 3** (Bild: folie-3.jpg)
-Früh geschlechtsreif: Frag nach dem Geschlecht.
+Frag nach dem Geschlecht.
 Meerschweinchen-Weibchen sind schon ab etwa drei Wochen geschlechtsreif, Männchen mit vier bis acht Wochen. Kaninchen etwa ab dem dritten Lebensmonat, kleine Rassen mit 10 bis 12 Wochen.
 Lass das Geschlecht sicher bestimmen, bevor die Gruppe zusammenzieht. Bei Wellensittichen zeigt die Wachshaut es bei gängigen Zuchtformen: blau beim Männchen, graubraun beim Weibchen.
 Quelle: Deutscher Tierschutzbund; TVT
 
 **Folie 4** (Bild: folie-4.jpg)
-Beratung ist eine Frage, die du stellen darfst.
+Diese Fragen darfst du stellen.
+Wird nach deinem Platz und deinem Alltag gefragt? Rät der Laden auch ab? Woher stammen die Tiere?
 Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis und muss bei der ersten Abgabe einer Tierart schriftliche Informationen zu Ernährung, Pflege, Unterbringung und Bewegung mitgeben. Das ist ein Mindeststandard, kein Qualitätsurteil.
-Frag nach: Wird nach deinem Platz und deinem Alltag gefragt? Rät der Laden auch ab? Woher stammen die Tiere?
 Ein Set ersetzt das Nachmessen nicht: Für zwei Kaninchen nennt die TVT mindestens 6 Quadratmeter.
 Quelle: Tierschutzgesetz § 11 und § 21 Abs. 5; Deutscher Tierschutzbund; TVT
 
 **Folie 5** (Bild: folie-5.jpg)
 Wenn dir ein Tier leidtut.
-Das Mitgefühl ist verständlich. Der Deutsche Tierschutzbund rät trotzdem, nicht aus Mitleid zu kaufen: Das helfe nicht dem Tier, sondern denen, die ein schnelles Geschäft machen wollen, und ein freigekauftes Tier werde sofort durch ein anderes ersetzt.
+Das Mitgefühl ist richtig. Der Deutsche Tierschutzbund rät trotzdem, nicht aus Mitleid zu kaufen: Das helfe nicht dem Tier, sondern denen, die ein schnelles Geschäft machen wollen, und ein freigekauftes Tier werde sofort durch ein anderes ersetzt.
 Das ist die Einschätzung einer Tierschutzorganisation, keine Messung.
 Quelle: Deutscher Tierschutzbund, „Welches Tier passt zu mir?“ und „Tierschutz im Einkaufskorb“
 
 **Folie 6** (Bild: folie-6.jpg)
-Schau zuerst im Tierheim.
+Fang im Tierheim an.
 Dort warten auch Meerschweinchen, Kaninchen, Hamster, Ratten und Vögel. Manche Notstationen sind auf bestimmte Tiergruppen spezialisiert.
 Der Tierheim-Finder des Tierschutzbundes listet über 1.200 Einrichtungen, filtert aber nicht nach Tierart. Frag deshalb nach, ob dort deine Tierart vermittelt wird, wie die Vermittlung abläuft und was im Vertrag steht.
 Quelle: Deutscher Tierschutzbund, Tierheim-Finder (abgerufen am 24. Oktober 2026)
@@ -55,28 +55,26 @@ Tierarztpraxis: Such eine, die die Tierart kennt, bevor etwas passiert.
 Quelle: Wa(h)re Haustier(liebe), Seite „Woher kommt mein Tier?“; TVT
 
 **Folie 8** (Bild: folie-8.jpg)
-Wer ein Tier aufnehmen will, hat ein Recht auf Antworten.
+Speicher dir diese vier Fragen.
 Wer gibt das Tier ab? Wo leben die Tiere? Welche Nachweise gibt es? Wirst du nach dem Einzug weiter beraten?
-Speichern, damit du die Fragen im Laden dabeihast. Teil den Beitrag mit jemandem, der gerade nach einem Tier sucht.
-Alle Prüffragen und Quellen: wahre-haustierliebe.de, Link im Profil.
+Dann hast du sie im Laden dabei.
+Alle Wege und Quellen: wahre-haustierliebe.de, Link im Profil.
 
 ## Caption
 
-Der Laden hat sie da. Das heißt nicht, dass es gut ist.
+Auf dem Preisschild steht ein Tier. Gehalten werden sollten mehrere.
 
 Meerschweinchen, Kaninchen und Wellensittiche gibt es im Zoofachhandel, das sagt der Branchenverband ZZF. Ob ein Weg zum Tier vertretbar ist, hängt davon ab, was du über den Anbieter prüfen kannst: Siehst du die Tiere dort, wo sie leben? Bekommst du Nachweise? Bleibt der Anbieter erreichbar?
 
-Was belegt ist: Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis und muss bei der ersten Abgabe einer Tierart schriftliche Informationen zu den Bedürfnissen des Tieres mitgeben. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut dieser Vorschriften. Wie gut die Beratung ist, zeigt sich im einzelnen Laden. Unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, deshalb sagen wir dazu nichts.
-
-Alle drei Tierarten brauchen Gesellschaft. Und weil sie früh geschlechtsreif werden, gehört das sichere Bestimmen des Geschlechts zu den ersten Fragen.
+Alle drei Arten brauchen Gesellschaft, und weil sie früh geschlechtsreif werden, gehört das sichere Bestimmen des Geschlechts zu den ersten Fragen. Die Erlaubnis nach Tierschutzgesetz ist ein Mindeststandard, kein Qualitätsurteil.
 
 Wenn dir ein Tier im Laden leidtut: Der Deutsche Tierschutzbund rät, nicht aus Mitleid zu kaufen und zuerst im Tierheim zu schauen. Das ist seine Einschätzung, keine Messung.
 
-Hast du schon Tiere aus dem Laden? Das ist kein Vorwurf. Gesellschaft, Geschlecht und eine passende Tierarztpraxis lassen sich nachholen. Schreib uns in die Kommentare, womit du anfangen möchtest.
+Du hast schon Tiere aus dem Laden? Das ist kein Vorwurf. Gesellschaft, Geschlecht und eine passende Tierarztpraxis lassen sich nachholen. Schreib in die Kommentare, womit du anfangen willst.
 
 Wa(h)re Haustier(liebe) lehnt Kauf und Verkauf von Tieren ab und empfiehlt, einem Tier aus dem Tierschutz den Vorzug zu geben. Wer trotzdem kauft, sollte nie bei Vermehrern und nie aus Mitleid kaufen.
 
-Alle Prüffragen, Wege je Tierart und Quellen findest du über den Link im Profil. Speichern kannst du den Beitrag für später, teilen mit jemandem, der gerade nach einem Tier sucht.
+Speicher dir den Beitrag für den nächsten Besuch im Laden. Mehr davon jeden Mittwoch. Alle Prüffragen und Quellen über den Link im Profil.
 
 Bilder: Syced/CC0; Rex tremendae majestatis/CC BY-SA 4.0; Erich Ferdinand/CC BY 2.0; ArtemisiaGentileschiFan/CC0; Benny Mazur/CC BY 2.0; Lotse/gemeinfrei; Rex tremendae majestatis/CC BY-SA 4.0; ilovebutter/CC BY 2.0. Zuschnitt und Text: Wa(h)re Haustier(liebe)
 
