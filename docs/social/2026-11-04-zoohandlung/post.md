@@ -2,7 +2,7 @@
 
 Format: Karussell, 8 Folien. Vorgesehen für Mittwoch, 04.11.2026, 09:00 Uhr. Erst nach Freigabe durch Annemarie veröffentlichen.
 
-Status: Überarbeitete Fassung (27.10.2026), Texte noch nicht von Annemarie freigegeben. Bilder vorgeschlagen und gesichtet (Stand 27.10.2026), noch nicht ins Repository geladen.
+Status: Überarbeitete Fassung (27.10.2026), Texte noch nicht von Annemarie freigegeben. Bilder gewählt, zugeschnitten und nur lokal abgelegt (Stand 27.10.2026).
 Website-Seite: https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html (im Repository vorhanden, Stand der Angaben 24.10.2026; ob online, vor Veröffentlichung prüfen)
 
 ## Folien
@@ -76,25 +76,25 @@ Wa(h)re Haustier(liebe) lehnt Kauf und Verkauf von Tieren ab und empfiehlt, eine
 
 Speicher dir den Beitrag für den nächsten Besuch im Laden. Mehr davon jeden Mittwoch. Alle Prüffragen und Quellen über den Link im Profil.
 
-Bilder: Syced/CC0; Rex tremendae majestatis/CC BY-SA 4.0; Erich Ferdinand/CC BY 2.0; ArtemisiaGentileschiFan/CC0; Benny Mazur/CC BY 2.0; Lotse/gemeinfrei; Rex tremendae majestatis/CC BY-SA 4.0; ilovebutter/CC BY 2.0. Zuschnitt und Text: Wa(h)re Haustier(liebe)
+Bilder: BrokenSphere/CC BY 3.0; Zoidy/gemeinfrei; Joanbanjo/CC BY-SA 4.0; BrokenSphere/CC BY 3.0; Ermell/CC BY-SA 4.0; User:Mattes/CC BY 2.0 DE; Jernej Furman/CC BY 2.0; Friedrich Haag/CC BY-SA 4.0. Zuschnitt und Text: Wa(h)re Haustier(liebe)
 
 #wahrehaustierliebe #zoohandlung #kleintiere #tierschutz #adoptierenstattkaufen
 
 ## Bildnachweis
 
-Bilder: Syced/CC0; Rex tremendae majestatis/CC BY-SA 4.0; Erich Ferdinand/CC BY 2.0; ArtemisiaGentileschiFan/CC0; Benny Mazur/CC BY 2.0; Lotse/gemeinfrei; Rex tremendae majestatis/CC BY-SA 4.0; ilovebutter/CC BY 2.0
+Bilder: BrokenSphere/CC BY 3.0; Zoidy/gemeinfrei; Joanbanjo/CC BY-SA 4.0; BrokenSphere/CC BY 3.0; Ermell/CC BY-SA 4.0; User:Mattes/CC BY 2.0 DE; Jernej Furman/CC BY 2.0; Friedrich Haag/CC BY-SA 4.0
 
-Vorschlagsliste, je Folie ein anderes Bild (Dateiseiten am 27.10.2026 geprüft; keine Bilder im Repository):
-- Folie 1: "Pet shop in Ebisu", Syced, CC0, https://commons.wikimedia.org/wiki/File:Pet_shop_in_Ebisu.jpg (Zoohandlung in Tokio, Querformat; zeigt Laden, Zubehörwand und Gehege mit Kakadu, Schildkröte und Kaninchen, nur als Atmosphäre des Ladens verwenden)
-- Folie 2: "Guinea pigs 9", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_9.jpg (zwei Meerschweinchen; bereits im Meerschweinchen-Post verwendet)
-- Folie 3: "Fritz & Franz (14220531911)", Erich Ferdinand, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Fritz_%26_Franz_(14220531911).jpg (zwei Kaninchen; bereits im Kaninchen-Post verwendet)
-- Folie 4: "Guinea pig with a tonsure", ArtemisiaGentileschiFan, CC0, https://commons.wikimedia.org/wiki/File:Guinea_pig_with_a_tonsure.jpg (Meerschweinchen in einer Zoohandlung, aufgenommen 21.03.2026)
-- Folie 5: "Sorry, emo bunny, I dont have food for you", Benny Mazur, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Sorry,_emo_bunny,_I_dont_have_food_for_you.jpg (Kaninchen hinter Gitter; Ort laut Dateiseite nicht angegeben, deshalb in der Folie kein Ortsbezug)
-- Folie 6: "Tierheim-Berlin-01", Lotse, gemeinfrei, https://commons.wikimedia.org/wiki/File:Tierheim-Berlin-01.jpg (Haupteingang Tierheim Berlin, 2009; nüchternes Bild, ersatzweise ein Tierbild aus einem Tierheim suchen)
-- Folie 7: "Guinea pigs eating grass", Rex tremendae majestatis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Guinea_pigs_eating_grass.jpg (bereits im Meerschweinchen-Post verwendet)
-- Folie 8: "Brothers - Flickr - ilovebutter", ilovebutter, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Brothers_-_Flickr_-_ilovebutter.jpg (bereits im Meerschweinchen-Post verwendet)
+Bilder je Folie (Originale unter bilder/, Zuschnitte 1080 x 1080 px unter bilder/final/; Dateiseiten am 27.10.2026 per API geprüft, Einzelheiten in bilder/NACHWEIS.md und bilder/ma_ersatz/NACHWEIS.md):
+- Folie 1: "Baby rabbits at Serramonte Pet Shop 1", BrokenSphere, CC BY 3.0 (Zoohandlung in Daly City, Kalifornien)
+- Folie 2: "Gruppe von Meerschweinchen", Zoidy, gemeinfrei (Zoo Braunschweig, keine Zoohandlung; Folie sagt nichts über einen Laden)
+- Folie 3: "Conills d'un comerç d'animals, Alacant", Joanbanjo, CC BY-SA 4.0 (Tierhandel in Alicante)
+- Folie 4: "Baby rabbits at Serramonte Pet Shop 2", BrokenSphere, CC BY 3.0 (gleiche Zoohandlung wie Folie 1, anderes Foto)
+- Folie 5: "Peking Rabbits Pet shop-20131231-RM-110142", Ermell, CC BY-SA 4.0 (Zoohandlung in Peking)
+- Folie 6: "München - Tierheim (40)", User:Mattes, CC BY 2.0 DE (Rosenköpfchen im Tierheim München)
+- Folie 7: "Pair of cute guinea pigs (50716032721)", Jernej Furman, CC BY 2.0
+- Folie 8: "Heimtier 001 2010 08 14", Friedrich Haag, CC BY-SA 4.0
 
-Lizenzen: CC BY und CC BY-SA verlangen Namensnennung, CC BY-SA zusätzlich Weitergabe unter gleichen Bedingungen. CC0 und gemeinfreie Bilder verlangen keine Nennung, stehen der Einheitlichkeit halber trotzdem in der Sammelform. Wird ein Bild zugeschnitten, steht in der Caption "Zuschnitt und Text: Wa(h)re Haustier(liebe)" dazu. Für 1080 x 1080 zuschneiden: Folie 1 (Querformat, Mitte), Folie 6 (weiten Himmel abschneiden).
+Hinweis: Bei CC BY-SA gilt Weitergabe unter gleichen Bedingungen für die zugeschnittenen Bearbeitungen.
 
 ## Belege der Inhalte
 
