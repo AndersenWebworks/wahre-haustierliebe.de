@@ -1244,7 +1244,7 @@ function normalizeAssetUrls(root) {
     function hydrateMythRows() {
       var mythList = document.getElementById('myth-list');
       if (!mythList || mythList.dataset.rowsHydrated === 'true') return;
-      var statuses = ['Kontext', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
+      var statuses = ['Kontext', 'Kontext', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
       mythList.querySelectorAll('.accordion-header').forEach(function(header, index) {
         var claim = header.textContent.replace(/\s+/g, ' ').trim();
         header.textContent = '';
