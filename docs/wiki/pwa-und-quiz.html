@@ -37,7 +37,7 @@
     <main class="content">
       <article class="page">
         <h1>PWA und Quiz</h1>
-        <p class="status">Stand 11. Oktober 2026, am Code geprüft; Beta beendet, im Footer verlinkt, für Suchmaschinen gesperrt</p>
+        <p class="status">Stand 11. Oktober 2026, am Code geprüft (Tamagotchi-Abschnitt ergänzt am 29. Oktober 2026, aus älterer Doku); Beta beendet, im Footer verlinkt, für Suchmaschinen gesperrt</p>
 
         <p>Unter <code>/pwa/</code> liegt ein kostenloses Lern-Quiz, das sich wie eine App auf dem Handy installieren lässt. Es soll neugierig auf die Website machen: Nach jeder Antwort führt ein Link in den passenden Artikel. Der Ton ist verspielter als auf der Website, aber genauso warm, und die Fragen sollen echte Herausforderungen sein. Die Beta ist seit dem 11. Oktober 2026 beendet. Besucher finden das Quiz über einen Link im Footer, Suchmaschinen nicht.</p>
 
@@ -94,6 +94,18 @@
           <li>Das Tier-Tamagotchi (<code>docs/tier-tamagotchi-konzept.md</code>) ist ein eigenes, nicht live gestelltes Spielkonzept mit Foto-Cutouts; das pausierte <code>budgie-brain</code> ist dafür keine Vorlage.</li>
         </ul>
         <p class="source">Quelle: Gedächtnis (Projekt Wa(h)re Haustier(liebe), Eintrag zur Abgrenzung Selbsttest und Quiz); <code>docs/tier-tamagotchi-konzept.md</code></p>
+
+        <h2 id="tamagotchi">Tier-Tamagotchi: Spielregeln (Stand Juni 2026)</h2>
+        <p>Das Tier-Tamagotchi ist ein Unterprojekt von <code>wahre-haustierliebe.de</code>, kein eigenes Projekt. Es ist nicht live-reif und wird erst nach längerer Konzept-, Asset-, UX- und Fachprüfung veröffentlicht. <span class="badge badge-old">aus älterer Doku, nicht geprüft</span></p>
+        <ul>
+          <li><strong>Ton:</strong> kinderfreundlich, humorvoll, mit Foto-Cutouts, weißem Sticker-Rand und überzeichneten Reaktionen. Der erste Entwurf war Erik zu düster und zu faktisch. Der Kern bleibt Aufklärung; die Cutout-Optik ist nur die zugängliche Schale. Harte Fakten (Einzelhaltung, Gruppentiere, Kinderverantwortung, Kosten, Tierarzt, Hund im Auto, Luft in der Wohnung bei Vögeln, Ernährung, Haltungsmythen) müssen in den Spielentscheidungen sichtbar werden.</li>
+          <li><strong>Antwortkarten:</strong> Antippen ist nur eine Vorschau. Gesichtsausdruck, Reaktionslabel, Lernhinweis, Bewertung und Zustand ändern sich sofort, übernommen wird die Entscheidung erst danach. Auf dem Handy braucht die Karte eine kleine Reaktionsbühne mit demselben Face-Rig, wenn die große Tierbühne aus dem Bild gescrollt ist.</li>
+          <li><strong>Spieltag (Produktschnitt 8. Juni 2026):</strong> zwei artspezifische Pflegehandlungen, eine schwierige Entscheidung mit sofortiger Tierreaktion, dann eine Tagesauswertung mit Pflegeverlauf, Pflegefehlern und Routine-Streak. Gute Routine und Fehler wirken zwischen den Tagen nach; gespeichert werden Warnsignale, Phasenwechsel und die Haltungs-Linie („Haltungs-Kompass“).</li>
+          <li><strong>Spielstand:</strong> langfristig persistent mit Tierart, Namen und beschleunigtem Lebenszyklus bis zum Senior. Für den lokalen Prototyp reicht <code>localStorage</code>; ob vor dem Livegang ein geräteübergreifender Speicher nötig ist, ist offen.</li>
+          <li><strong>Face-Rig und Assets:</strong> Das Face-Rig ist ein Kernmechanismus. Jedes Tierbild braucht eigene Augen- und Gesichtsanker (Seitenprofile nur ein Auge). Gibt ein Bild kein Gesicht her, wird das Asset ersetzt oder neu ausgeschnitten, nie ein Comicgesicht zufällig platziert. Der Welli ist das Referenzasset; für andere Arten gilt Livequalität erst mit final freigestellten Konturen. Der Übersichtsscreen zeigt das gewählte Tier als animierte Cutout-Preview. Aktuell nutzen alle lokalen Arten transparente Commons-Cutouts mit weißem Konturrand (der Hund ein Labradoodle-Foto).</li>
+          <li><strong>Referenzen:</strong> Das lokale ClautzGPT-Preview taugt als Produktkandidat für Mechanik und Ton, ist aber kein Live-Asset-Stand. „Budgie Brain“ darf als technische Referenz angesehen werden, ist keine Vorlage.</li>
+        </ul>
+        <p class="source">Quelle: ältere Projektakte HANDBUCH_WAHRE_HAUSTIERLIEBE.md (Abschnitt „Tier-Tamagotchi“, Archivkopie in clautz-core/knowledge/source/archive/steckbriefe-2026-10-29/); Konzept <code>docs/tier-tamagotchi-konzept.md</code>.</p>
 
         <h2 id="offen">Offene Punkte</h2>
         <ul>
