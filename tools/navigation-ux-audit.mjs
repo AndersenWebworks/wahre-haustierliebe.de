@@ -99,28 +99,41 @@ await mobilePage.waitForTimeout(150);
 const mobileRoot = await mobilePage.evaluate(() => ({
   open: document.getElementById('mobile-nav')?.classList.contains('open') || false,
   activeView: document.querySelector('.mobile-nav-view.is-active')?.dataset.mobileNavView || '',
-  branchCount: document.querySelectorAll('.mobile-nav-branch').length,
+  groups: Array.from(document.querySelectorAll('.mobile-group')).map((g) => g.dataset.mobileGroup),
+  notfallOpen: document.querySelector('.mobile-group-alarm')?.open || false,
+  notfallVisible: (() => { const el = document.querySelector('.mobile-group-alarm .mobile-nav-link'); if (!el) return false; const r = el.getBoundingClientRect(); return r.height > 0 && r.top >= 0 && r.bottom <= innerHeight; })(),
   overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
 }));
 if (!mobileRoot.open) issue('mobile-menu-not-open', mobileRoot);
 if (mobileRoot.activeView !== 'root') issue('mobile-root-not-active', mobileRoot);
-if (mobileRoot.branchCount < 7) issue('mobile-branch-count-low', mobileRoot);
+if (mobileRoot.groups.join(',') !== 'ich-will,tierarten,notfall,nachschlagen,mitmachen') issue('mobile-groups-wrong', mobileRoot);
+if (!mobileRoot.notfallOpen || !mobileRoot.notfallVisible) issue('mobile-notfall-not-visible', mobileRoot);
 if (mobileRoot.overflow > 1) issue('mobile-root-overflow', mobileRoot);
 await capture(mobilePage, 'mobile-root');
 
-await mobilePage.click('button[onclick="openMobileNavPanel(\'katzen\')"]');
+await mobilePage.click('summary:has-text("Tierarten")');
+await mobilePage.click('.mobile-subgroup-summary:has-text("Katzen")');
 await mobilePage.waitForTimeout(100);
-const mobilePanel = await mobilePage.evaluate(() => ({
-  activeView: document.querySelector('.mobile-nav-view.is-active')?.dataset.mobileNavView || '',
-  links: Array.from(document.querySelectorAll('.mobile-nav-view.is-active .mobile-nav-link')).map((item) => item.textContent.trim()),
-  overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
-}));
-if (mobilePanel.activeView !== 'katzen') issue('mobile-drilldown-failed', mobilePanel);
-if (!mobilePanel.links.includes('Wildkatzenbaby gefunden?')) issue('mobile-panel-link-missing', mobilePanel);
+const mobilePanel = await mobilePage.evaluate(() => {
+  const small = Array.from(document.querySelectorAll('#mobile-nav summary, #mobile-nav .mobile-nav-link'))
+    .filter((el) => el.offsetParent !== null)
+    .map((el) => ({ text: el.textContent.trim(), height: Math.round(el.getBoundingClientRect().height) }))
+    .filter((item) => item.height < 44);
+  return {
+    links: Array.from(document.querySelectorAll('.mobile-subgroup[data-mobile-group="katzen"] .mobile-nav-link')).map((item) => item.textContent.trim()),
+    notfallLinks: Array.from(document.querySelectorAll('.mobile-group-alarm .mobile-nav-link')).map((item) => item.textContent.trim()),
+    expanded: document.querySelector('.mobile-subgroup[data-mobile-group="katzen"]')?.open || false,
+    small,
+    overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+  };
+});
+if (!mobilePanel.expanded) issue('mobile-group-expand-failed', mobilePanel);
+if (!mobilePanel.links.includes('Kätzchen: Tierarzt im ersten Jahr')) issue('mobile-panel-link-missing', mobilePanel);
+if (!mobilePanel.notfallLinks.includes('Wildkatzenbaby gefunden?')) issue('mobile-notfall-link-missing', mobilePanel);
+if (mobilePanel.small.length) issue('mobile-target-below-44px', mobilePanel.small);
 if (mobilePanel.overflow > 1) issue('mobile-panel-overflow', mobilePanel);
 await capture(mobilePage, 'mobile-katzen-panel');
 
-await mobilePage.click('.mobile-nav-view.is-active .mobile-nav-back');
 await mobilePage.fill('#mobile-site-search-input', 'Hamster');
 await mobilePage.waitForTimeout(100);
 const mobileSearch = await mobilePage.evaluate(() => ({
@@ -134,10 +147,39 @@ if (mobileSearch.overflow > 1) issue('mobile-search-overflow', mobileSearch);
 await capture(mobilePage, 'mobile-search');
 await mobile.close();
 
+// Tastaturbedienung der Desktop-Menüs: Pfeil nach unten öffnet, Escape schließt, aria-expanded folgt.
+const kbContext = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+const kbPage = await kbContext.newPage();
+await kbPage.goto(pathToFileURL(path.join(projectRoot, 'index.html')).href, { waitUntil: 'load' });
+for (const menuId of ['ich-will-menu', 'tierarten-menu', 'notfall-menu', 'nachschlagen-menu', 'mitmachen-menu']) {
+  const toggle = kbPage.locator(`button[aria-controls="${menuId}"]`);
+  const label = (await toggle.textContent()).trim();
+  await toggle.focus();
+  await kbPage.keyboard.press('ArrowDown');
+  await kbPage.waitForTimeout(80);
+  const opened = await kbPage.evaluate((id) => ({
+    expanded: document.querySelector(`button[aria-controls="${id}"]`).getAttribute('aria-expanded'),
+    visible: getComputedStyle(document.getElementById(id)).display !== 'none',
+    focusInside: document.getElementById(id).contains(document.activeElement),
+    haspopup: document.querySelector(`button[aria-controls="${id}"]`).getAttribute('aria-haspopup'),
+  }), menuId);
+  if (opened.expanded !== 'true' || !opened.visible || !opened.focusInside || opened.haspopup !== 'true') issue('keyboard-open-failed', { menuId, label, opened });
+  await kbPage.keyboard.press('Escape');
+  await kbPage.waitForTimeout(80);
+  const closed = await kbPage.evaluate((id) => ({
+    expanded: document.querySelector(`button[aria-controls="${id}"]`).getAttribute('aria-expanded'),
+    focusOnToggle: document.activeElement === document.querySelector(`button[aria-controls="${id}"]`),
+  }), menuId);
+  if (closed.expanded !== 'false' || !closed.focusOnToggle) issue('keyboard-escape-failed', { menuId, label, closed });
+}
+const notfallItems = await kbPage.evaluate(() => Array.from(document.querySelectorAll('#notfall-menu .dropdown-item')).map((el) => el.textContent.trim()));
+if (!notfallItems.includes('Tierärztlicher Notdienst') || !notfallItems.includes('Hund im Auto bei Hitze') || !notfallItems.includes('Wildkatzenbaby gefunden?')) issue('desktop-notfall-items-missing', notfallItems);
+await kbContext.close();
+
 await browser.close();
 
 const report = {
-  checkedStates: 6,
+  checkedStates: 7,
   failures: failures.length,
   failuresByState: failures,
   screenshots,
