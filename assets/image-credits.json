@@ -538,5 +538,20 @@
     ],
     "alt": "Ein grüner und ein blauweißer Wellensittich sitzen nebeneinander und schauen sich an.",
     "modifications": "Local resized copy from Wikimedia."
+  },
+  {
+    "id": "aussenvoliere-katharinasittiche",
+    "localPath": "assets/images/aussenvoliere-katharinasittiche.jpg",
+    "fileTitle": "Aussenvoliere.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aussenvoliere.jpg",
+    "originalUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Aussenvoliere.jpg",
+    "author": "Kathinetzwerk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "usedFor": [
+      "voegel-gute-haltung"
+    ],
+    "alt": "Außenvoliere aus Gitterdraht mit überdachtem Schutzbereich, Sandboden und Pflanzen",
+    "modifications": "Local resized copy from Wikimedia (1920 px breit)."
   }
 ]
