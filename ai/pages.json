@@ -79,7 +79,7 @@
       "id": "kontakt",
       "url": "https://wahre-haustierliebe.de/kontakt/index.html",
       "title": "Kontakt - Wa(h)re Haustier(liebe)",
-      "description": "Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktmöglichkeiten für Fragen, Anregungen oder Unterstützungsbedarf.",
+      "description": "Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.",
       "intent": "Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe",
       "keywords": [
         "Kontakt",
@@ -104,7 +104,7 @@
       "id": "mitmachen",
       "url": "https://wahre-haustierliebe.de/mitmachen/index.html",
       "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
-      "description": "Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.",
+      "description": "Du hast einen Fehler, einen veralteten Stand oder eine bessere Quelle gefunden? So meldest du uns eine Textstelle oder einen ganzen Abschnitt.",
       "intent": "Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen",
       "keywords": [
         "Mitmachen",
@@ -1370,8 +1370,8 @@
       "id": "voegel-uv-licht",
       "url": "https://wahre-haustierliebe.de/voegel/uv-licht/index.html",
       "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
-      "description": "Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
-      "intent": "UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen.",
+      "description": "Warum Fensterglas einen Teil des Sonnenlichts abhält und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
+      "intent": "Verstehen, was Vögel an UV-Licht sehen, was Fensterglas abhält und wo eine Lampe an Grenzen stößt.",
       "keywords": [
         "Vögel halten",
         "Wellensittiche",
@@ -1384,7 +1384,7 @@
       "sources": [],
       "social": {
         "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
-        "description": "Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
+        "description": "Warum Fensterglas einen Teil des Sonnenlichts abhält und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-uv-licht.png",
         "imageAlt": "Wellensittich sitzt im hellen Licht auf einer Stange.",
         "imageWidth": 1200,
@@ -1445,7 +1445,7 @@
       "id": "voegel-partnerersatz",
       "url": "https://wahre-haustierliebe.de/voegel/partnerersatz/index.html",
       "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
-      "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.",
+      "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echten Kontakt zu Artgenossen nicht möglich machen.",
       "intent": "Falschen Partnerersatz bei Vögeln vermeiden.",
       "keywords": [
         "Vögel halten",
@@ -1459,7 +1459,7 @@
       "sources": [],
       "social": {
         "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
-        "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.",
+        "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echten Kontakt zu Artgenossen nicht möglich machen.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-partnerersatz.png",
         "imageAlt": "Wellensittich sitzt auf einer hölzernen Stange.",
         "imageWidth": 1200,
@@ -1570,8 +1570,8 @@
       "id": "voegel-zucht-und-eier",
       "url": "https://wahre-haustierliebe.de/voegel/zucht-eier/index.html",
       "title": "Zucht und Eiablage bei Wellensittichen - Wa(h)re Haustier(liebe)",
-      "description": "Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.",
-      "intent": "Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.",
+      "description": "Warum Nistplätze, Eiablage und Nachwuchs Folgen für Gesundheit und Tierschutz haben und Zucht kein harmloses Hobby ist.",
+      "intent": "Zucht und Eiablage bei Wellensittichen verstehen.",
       "keywords": [
         "Vögel halten",
         "Wellensittiche",
@@ -1584,7 +1584,7 @@
       "sources": [],
       "social": {
         "title": "Zucht und Eiablage bei Wellensittichen - Wa(h)re Haustier(liebe)",
-        "description": "Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.",
+        "description": "Warum Nistplätze, Eiablage und Nachwuchs Folgen für Gesundheit und Tierschutz haben und Zucht kein harmloses Hobby ist.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-zucht-und-eier.png",
         "imageAlt": "Mehrere Wellensittiche sitzen gemeinsam in einer Voliere.",
         "imageWidth": 1200,
@@ -2039,7 +2039,7 @@
       "id": "exoten-reptilien",
       "url": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
       "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-      "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.",
+      "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und Gutachten des Bundesministeriums, dazu Lebensdauer.",
       "intent": "Reptilienhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2077,7 +2077,7 @@
       ],
       "social": {
         "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-        "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.",
+        "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und Gutachten des Bundesministeriums, dazu Lebensdauer.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png",
         "imageAlt": "Bartagame ruht auf einem Ast im beleuchteten Terrarium.",
         "imageWidth": 1200,
@@ -2137,7 +2137,7 @@
       "id": "exoten-fische",
       "url": "https://wahre-haustierliebe.de/exoten/fische/index.html",
       "title": "Fische halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
+      "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach Zierfisch-Gutachten des Bundesministeriums und Schweizer Tierschutz.",
       "intent": "Fischhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2175,7 +2175,7 @@
       ],
       "social": {
         "title": "Fische halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
+        "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach Zierfisch-Gutachten des Bundesministeriums und Schweizer Tierschutz.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-fische.png",
         "imageAlt": "Goldfische schwimmen zwischen Pflanzen in einem Aquarium.",
         "imageWidth": 1200,
@@ -3093,7 +3093,7 @@
       "id": "tiere-und-urlaub",
       "url": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html",
       "title": "Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?",
-      "description": "Urlaub mit Haustieren tierschutzgerecht planen: Mitnehmen, Betreuung, Tierpension, Reiseformalitäten, Hitze, Flugreisen und Aussetzen richtig einordnen.",
+      "description": "Urlaub mit Haustier planen: Mitnehmen, Betreuung oder Tierpension, Reiseregeln, Hitze, Flugreisen und die Frage, was Aussetzen bedeutet.",
       "intent": "Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen",
       "keywords": [
         "Haustiere Urlaub",
