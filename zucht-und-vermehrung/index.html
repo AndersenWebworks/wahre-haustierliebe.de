@@ -5227,6 +5227,21 @@
         display: none;
       }
 
+      /* Zellinhalt als Fließtext halten: Im Raster würden Glossarbegriffe und Links zu eigenen Spalten. */
+      .cost-table td:not(:first-child):not([colspan]) {
+        display: block;
+        position: relative;
+        padding-left: 6.35rem;
+        overflow-wrap: break-word;
+      }
+
+      .cost-table td:not(:first-child):not([colspan])::before {
+        position: absolute;
+        left: 0;
+        top: 0.36rem;
+        width: 5.8rem;
+      }
+
       .care-guide-table {
         border: 0;
         box-shadow: none;
@@ -7116,7 +7131,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Was ist der Unterschied zwischen Züchter und Vermehrer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nach den Kriterien von TASSO und VIER PFOTEN zeigt ein seriöser Züchter Elterntiere und Zuchtstätte, lässt Besuche zu, züchtet in der Regel nur eine Rasse, lässt die Elterntiere auf rassebedingte Erbkrankheiten untersuchen und berät auch nach dem Einzug. Vermehrer richten sich auf schnellen Absatz aus. Ein niedriger Preis ist kein verlässliches Erkennungszeichen mehr, weil auch illegale Händler hohe Preise verlangen."
+        "text": "Nach den Kriterien von TASSO und VIER PFOTEN zeigt ein seriöser Züchter Elterntiere und Zuchtstätte, lässt Besuche zu, züchtet in der Regel nur eine Rasse, lässt die Elterntiere auf rassebedingte Erbkrankheiten untersuchen und berät auch nach dem Einzug. Vermehrer richten sich auf schnellen Absatz aus. Am Preis erkennst du Vermehrer nicht: Auch illegale Händler verlangen inzwischen hohe Preise."
       }
     },
     {
@@ -7438,7 +7453,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="info-box">
           <h3>Auf einen Blick</h3>
           <ul>
-            <li><span class="glossary-term" data-glossary-key="vermehrer" data-glossary-title="Vermehrer" data-glossary-text="Person oder Betrieb, der Tiere vor allem für schnelle Abgabe und Gewinn produziert." data-glossary-href="../glossar/index.html#vermehrer" aria-describedby="glossary-term-popover" tabindex="0" role="button">Vermehrer</span> produzieren Tiere als Ware: auf Absatz ausgerichtet, oft ohne belegbare Gesundheit, Herkunft und Nachbetreuung. Ein niedriger Preis ist dabei kein verlässliches Erkennungszeichen mehr.</li>
+            <li><span class="glossary-term" data-glossary-key="vermehrer" data-glossary-title="Vermehrer" data-glossary-text="Person oder Betrieb, der Tiere vor allem für schnelle Abgabe und Gewinn produziert." data-glossary-href="../glossar/index.html#vermehrer" aria-describedby="glossary-term-popover" tabindex="0" role="button">Vermehrer</span> produzieren Tiere als Ware: auf Absatz ausgerichtet, oft ohne belegbare Gesundheit, Herkunft und Nachbetreuung. Am Preis erkennst du sie nicht: Viele verlangen heute ähnlich viel wie seriöse Züchter.</li>
             <li>Seriöse <span class="glossary-term" data-glossary-key="zuechter" data-glossary-title="Züchter" data-glossary-text="Person, die Tiere gezielt verpaart. Seriöse Zucht ist nicht dasselbe wie Vermehrung, erzeugt aber neue Tiere." data-glossary-href="../glossar/index.html#zuechter" aria-describedby="glossary-term-popover" tabindex="0" role="button">Züchter</span> arbeiten transparenter, zeigen Elterntiere und Zuchtstätte, lassen die Elterntiere untersuchen und beraten auch nach dem Einzug.</li>
             <li>Papiere belegen die Abstammung, nicht die Gesundheit. Auch ein Rassestandard kann Merkmale verlangen, die Tiere krank machen.</li>
             <li>Auch seriöse Zucht schafft aber neue Nachfrage nach neuen Tieren.</li>
@@ -7504,7 +7519,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <table class="cost-table">
           <thead><tr><th>Tierart</th><th>Untersuchung</th><th>Was sie zeigt und was nicht</th></tr></thead>
           <tbody>
-            <tr><td data-label="Tierart">Hund</td><td data-label="Untersuchung">Röntgen auf <span class="glossary-term" data-glossary-key="hueftdysplasie" data-glossary-title="Hüftdysplasie" data-glossary-text="Fehlentwicklung des Hüftgelenks, besonders bei größeren Hunderassen relevant." data-glossary-href="../glossar/index.html#hueftdysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Hüftgelenksdysplasie</span> (HD); Untersuchung auf <span class="glossary-term" data-glossary-key="ellbogendysplasie" data-glossary-title="Ellbogendysplasie" data-glossary-text="Fehlentwicklung des Ellbogengelenks, besonders bei größeren Hunden relevant und oft erblich mitbedingt." data-glossary-href="../glossar/index.html#ellbogendysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Ellbogendysplasie</span> (ED) und Gentest auf den MDR1-Defekt (beides von TASSO genannt)</td><td data-label="Was sie zeigt und was nicht">Nach den Durchführungsbestimmungen der VDH-Zuchtordnung müssen Rassezuchtvereine, in deren Bestand HD vorkommt, verbindliche Untersuchungs- und Bekämpfungsprogramme haben. Die Aufnahmen dürfen nur von zugelassenen Gutachtern ausgewertet werden; das Mindestalter für das Röntgen legt der Rassezuchtverein fest, es muss mindestens 12 Monate betragen. Die Pflicht gilt also je Rasse, nicht für jeden Hund.</td></tr>
+            <tr><td data-label="Tierart">Hund</td><td data-label="Untersuchung">Röntgen auf <span class="glossary-term" data-glossary-key="hueftdysplasie" data-glossary-title="Hüftdysplasie" data-glossary-text="Fehlentwicklung des Hüftgelenks, besonders bei größeren Hunderassen relevant." data-glossary-href="../glossar/index.html#hueftdysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Hüftgelenksdysplasie</span> (HD); Untersuchung auf <span class="glossary-term" data-glossary-key="ellbogendysplasie" data-glossary-title="Ellbogendysplasie" data-glossary-text="Fehlentwicklung des Ellbogengelenks, besonders bei größeren Hunden relevant und oft erblich mitbedingt." data-glossary-href="../glossar/index.html#ellbogendysplasie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Ellbogendysplasie</span> (ED) und Gentest auf den MDR1-Defekt (beides von TASSO genannt)</td><td data-label="Was sie zeigt und was nicht">Ob ein Hund vor der Zucht auf HD geröntgt werden muss, hängt von der Rasse ab: Im VDH müssen Vereine, in deren Rasse HD vorkommt, die Untersuchung vorschreiben. Das Röntgenbild wertet ein zugelassener Gutachter aus, frühestens wenn der Hund ein Jahr alt ist. Für Hunde anderer Rassen gibt es diese Pflicht nicht.</td></tr>
             <tr><td data-label="Tierart">Hund, kurzköpfige Rassen</td><td data-label="Untersuchung">Belastungstest auf das brachyzephale Atemwegssyndrom (BOAS)</td><td data-label="Was sie zeigt und was nicht">Die TVT nennt solche Belastungstests ausdrücklich als wiederholt nötige Untersuchung vor dem Zuchteinsatz, ebenso Herzultraschall bei Rassen mit hohem Risiko für die dilatative Kardiomyopathie.</td></tr>
             <tr><td data-label="Tierart">Katze: Maine Coon, Ragdoll</td><td data-label="Untersuchung">Herzultraschall (Echokardiografie) und Gentest auf die HCM-Varianten</td><td data-label="Was sie zeigt und was nicht">Der Konsens der amerikanischen Fachgesellschaft ACVIM nennt die Echokardiografie den Goldstandard für die Diagnose und empfiehlt den Gentest für zur Zucht vorgesehene Maine Coons und Ragdolls. Auch Tiere ohne die Mutationen können erkranken, ein negativer Gentest ersetzt den Ultraschall also nicht.</td></tr>
             <tr><td data-label="Tierart">Katze: Perser</td><td data-label="Untersuchung">Gentest auf PKD</td><td data-label="Was sie zeigt und was nicht">Laut QUEN wird PKD autosomal-dominant vererbt (PKD-1-Gen), ein Gentest ist verfügbar.</td></tr>
@@ -7529,7 +7544,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <li>ein neues Konto, unvollständiger Name, keine Adresse, Kontakt nur über Chatdienste</li>
           <li>die Behauptung „gute Zuchtlinien“ ohne Nennung des Zuchtverbands</li>
           <li>Abgabegründe wie Allergie oder Überforderung, oder die Geschichte vom „geretteten“ Welpen, der dringend ein Zuhause braucht</li>
-          <li>ein niedriger Preis ist kein verlässliches Zeichen mehr, weil Händler ihre Preise angepasst haben</li>
+          <li>ein hoher Preis, der Seriosität vortäuschen soll: Viele illegale Händler verlangen inzwischen ähnlich viel wie seriöse Züchter</li>
         </ul>
         <h3>Bei der Übergabe</h3>
         <ul class="checklist">
@@ -7655,7 +7670,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="faq-list">
             <details class="faq-item">
               <summary>Was ist der Unterschied zwischen Züchter und Vermehrer?</summary>
-              <p>Nach den Kriterien von TASSO und VIER PFOTEN zeigt ein seriöser Züchter Elterntiere und Zuchtstätte, lässt Besuche zu, züchtet in der Regel nur eine Rasse, lässt die Elterntiere auf rassebedingte Erbkrankheiten untersuchen und berät auch nach dem Einzug. Vermehrer richten sich auf schnellen Absatz aus. Ein niedriger Preis ist kein verlässliches Erkennungszeichen mehr, weil auch illegale Händler hohe Preise verlangen.</p>
+              <p>Nach den Kriterien von TASSO und VIER PFOTEN zeigt ein seriöser Züchter Elterntiere und Zuchtstätte, lässt Besuche zu, züchtet in der Regel nur eine Rasse, lässt die Elterntiere auf rassebedingte Erbkrankheiten untersuchen und berät auch nach dem Einzug. Vermehrer richten sich auf schnellen Absatz aus. Am Preis erkennst du Vermehrer nicht: Auch illegale Händler verlangen inzwischen hohe Preise.</p>
             </details>
             <details class="faq-item">
               <summary>Schützt eine Ahnentafel vor kranken Tieren?</summary>
