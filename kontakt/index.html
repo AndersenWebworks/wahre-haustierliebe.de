@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.">
+  <meta name="description" content="Ein privates Projekt: Bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier kannst du uns schreiben.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7080,7 +7104,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "WebPage",
   "name": "Kontakt - Wa(h)re Haustier(liebe)",
   "headline": "Kontakt - Wa(h)re Haustier(liebe)",
-  "description": "Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.",
+  "description": "Ein privates Projekt: Bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier kannst du uns schreiben.",
   "url": "https://wahre-haustierliebe.de/kontakt/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7419,7 +7443,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <div class="container">
         <div class="article-hero-copy">
           <h1>Über &amp; Kontakt</h1>
-          <p>Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.</p>
+          <p>Ein privates Projekt: Bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier kannst du uns schreiben.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Über &amp; Kontakt: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7455,8 +7479,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         </div>
 
         <div class="section-feedback-heading"><h2 class="text-center" id="hinweis-kontakt-1">Du brauchst Hilfe?</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-kontakt-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p class="contact-lead">Wir sind kein Tierheim, kein Amt und keine Tierarztpraxis. Du kannst uns zu Haltung, Adoption, Vorbereitung und passenden Anlaufstellen schreiben.</p>
-        <p class="contact-lead">Unsere Möglichkeiten und Kapazitäten sind begrenzt. Trotzdem kannst du dich melden, wenn du Unterstützung brauchst.</p>
+        <p class="contact-lead">Wir sind kein Tierheim, kein Amt und keine Tierarztpraxis.</p>
+        <p class="contact-lead">Unsere Kapazität ist begrenzt. Trotzdem kannst du dich melden, wenn du Unterstützung brauchst.</p>
 
         <div class="contact-card-grid">
           <article class="contact-card">

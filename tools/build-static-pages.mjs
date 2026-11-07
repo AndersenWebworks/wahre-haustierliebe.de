@@ -65,7 +65,7 @@ const pages = [
     id: 'kontakt',
     slug: 'kontakt',
     title: 'Kontakt - Wa(h)re Haustier(liebe)',
-    description: 'Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.',
+    description: 'Ein privates Projekt: Bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier kannst du uns schreiben.',
     intent: 'Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe',
     priority: '0.45',
     staticOnly: true,
@@ -130,7 +130,7 @@ const pages = [
     id: 'katzen',
     slug: 'katzen',
     title: 'Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale',
-    description: 'Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag über das ganze Leben, Hilfe zur Entscheidung.',
+    description: 'Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.',
     intent: 'Katze anschaffen oder Katzenhaltung artgerechter machen',
     priority: '0.9',
     lastmod: '2026-11-07',
@@ -166,7 +166,7 @@ const pages = [
     id: 'pferde',
     slug: 'pferde',
     title: 'Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung',
-    description: 'Was ein Pferd braucht: fünf Felder mit Maßen aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und Fragen vor der Entscheidung.',
+    description: 'Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.',
     intent: 'Pferdehaltung und Pferdekauf realistisch prüfen',
     priority: '0.75',
     lastmod: '2026-11-07',
@@ -366,7 +366,7 @@ const topicPages = [
   ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnung oder Freigang bei Katzen', 'Wohnung, gesicherter Außenbereich oder Freigang: Risiken, vollständiges Wohnungsrevier, Umstellungen, Warnzeichen und Entscheidungshilfen.', 'Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.', { priority: '0.82', lastmod: '2026-11-07' }],
   ['katzen-kastration', 'katzen', 'katzen/kastration', 'Kastration bei Katzen', 'Warum Kastration bei Katzen praktischer Tierschutz ist und ungewolltes Leid verhindert.', 'Kastration bei Katzen verstehen.', { lastmod: '2026-11-07' }],
   ['katzen-stilles-leiden', 'katzen', 'katzen/stilles-leiden', 'Stilles Leiden bei Katzen erkennen', 'Katzen zeigen Stress und Krankheit oft leise. Kleine Veränderungen im Alltag können wichtig sein.', 'Warnsignale bei Katzen erkennen.', { lastmod: '2026-11-07' }],
-  ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was eine Katze wirklich kostet', 'Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-11-07' }],
+  ['katzen-kosten', 'katzen', 'katzen/kosten', 'Was eine Katze wirklich kostet', 'Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.', 'Katzenkosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-11-07' }],
   ['katzen-streunerkatzen', 'katzen', 'katzen/streunerkatzen', 'Streunerkatzen und Verantwortung', 'Warum Kastration, Futterstellen und Zuständigkeit bei Streunerkatzen echte Tierschutzfragen sind.', 'Streunerkatzen und Kastration einordnen.', { lastmod: '2026-11-07' }],
   ['katzen-entscheidung', 'katzen', 'katzen/entscheidung', 'Kätzchen aufnehmen: Was du vor dem Einzug wissen musst', 'Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.', 'Vor der Aufnahme eines Kätzchens Abgabealter, Herkunft, Geschwister, Ausstattung, Eingewöhnung und Kosten prüfen.', { lastmod: '2026-11-07' }],
   ['voegel-schwarmhaltung', 'voegel', 'voegel/schwarmhaltung', 'Schwarmhaltung bei Vögeln', 'Warum Wellensittiche und andere Heimvögel Artgenossen brauchen und Einzelhaltung keine normale Option ist.', 'Schwarmhaltung bei Vögeln verstehen.', { lastmod: '2026-11-07' }],
@@ -392,10 +392,10 @@ const topicPages = [
   ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.', 'Reptilienhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
   ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer und eine grobe Kostenschätzung pro Tag und Monat.', 'Schildkrötenhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
   ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Gutachten und Schweizer Tierschutz, dazu Kosten pro Tag und Monat.', 'Fischhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
-  ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.', { lastmod: '2026-11-07' }],
+  ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.', { lastmod: '2026-11-07' }],
   ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.', { lastmod: '2026-11-07' }],
   ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.', { lastmod: '2026-11-07' }],
-  ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.', 'Pferdekosten realistisch einschätzen.', { lastmod: '2026-11-07' }],
+  ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.', 'Pferdekosten realistisch einschätzen.', { lastmod: '2026-11-07' }],
   ['pferde-reitbeteiligung', 'pferde', 'pferde/reitbeteiligung', 'Reitbeteiligung als ehrlicher Einstieg', 'Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.', 'Reitbeteiligung als Alternative zum eigenen Pferd prüfen.', { lastmod: '2026-11-07' }],
   ['pferde-entscheidung', 'pferde', 'pferde/entscheidung', 'Bevor ein Pferd einzieht', 'Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.', 'Entscheidung vor dem eigenen Pferd prüfen.', { lastmod: '2026-11-07' }],
 ].map(([id, sourcePage, slug, title, description, intent, meta = {}]) => ({
@@ -473,7 +473,7 @@ const faqByPage = {
   ],
   hunde: [
     ['Wie lange darf ein Hund allein zu Hause bleiben?', 'Als Orientierung gelten 4 bis 5 Stunden am Stück. Eine gesetzliche Zahl gibt es nicht; die Tierschutz-Hundeverordnung verlangt mehrmals täglich Umgang mit der Betreuungsperson. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.'],
-    ['Was kostet ein Hund pro Tag und im ganzen Leben?', 'Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.'],
+    ['Was kostet ein Hund pro Tag und im ganzen Leben?', 'Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, das sind etwa 97 bis 257 Euro im Monat; ohne die einmaligen Posten laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.'],
   ],
   'hund-im-buero': [
     ['Ist ein Hund im Büro automatisch besser als Alleinbleiben?', 'Nein. Ein Büro kann eine gute Lösung sein, wenn der Hund dort wirklich zur Ruhe kommt, betreut wird und einen geschützten Platz hat. Ist er dauerhaft gestresst, ist eine andere Betreuung fairer.'],
@@ -562,7 +562,6 @@ const faqByPage = {
     ['Welches Abgabealter empfehlen wir, und gibt es eine amtliche Empfehlung?', 'Wir empfehlen als Richtwert neun bis elf Wochen. Eine amtliche Empfehlung für genau diesen Zeitraum gibt es nicht; gesetzlich gilt „über acht Wochen“ (§ 2 Abs. 4 TierSchHuV). Die Spanne leiten wir aus der Sozialisierungsphase ab, die der Leitfaden der EU-Plattform für Tierschutz mit der dritten bis zwölften Lebenswoche angibt, und aus Studien zur frühen Trennung vom Wurf. Die Studienlage nach der achten Woche ist nicht eindeutig; entscheidend bleibt, wie der Welpe bis dahin aufgewachsen ist.'],
     ['Warum ist die achte Woche nicht das Zielalter?', 'Die achte Woche ist nur die gesetzliche Untergrenze. Wer in dieser Woche abgibt, verkürzt die Zeit bei Mutter und Geschwistern, in der Welpen besonders viel lernen. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.'],
     ['Woran erkenne ich illegalen Welpenhandel?', 'Warnzeichen sind ein sehr junger, kranker oder verängstigter Welpe, eine Übergabe an einem öffentlichen Ort, fehlende oder unplausible Impf- und Herkunftsnachweise sowie kein Zugang zum Muttertier. Verdachtsfälle gehören zum Veterinäramt oder zur Polizei.'],
-    ['Darf ein Welpe vor einem Alter von über acht Wochen von der Mutter getrennt werden?', 'Nein. Nach § 2 Abs. 4 TierSchHuV ist das nur erlaubt, wenn eine Tierärztin oder ein Tierarzt es für nötig hält, um Mutter oder Welpen vor Schmerzen, Leiden oder Schäden zu schützen.'],
   ],
   wissen: [
     ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es in der Tiermedizin keinen belastbaren, anerkannten Wirksamkeitsnachweis. Das größte Risiko ist verlorene Zeit: Schmerzen, Infektionen, Atemnot, Harnprobleme oder andere Warnzeichen gehören tierärztlich abgeklärt.'],
@@ -574,9 +573,9 @@ const faqByPage = {
     ['Sollte mein Tier mit in den Urlaub?', 'Nur, wenn Reiseweg, Klima, Unterkunft, Gesundheitszustand und Charakter wirklich zum Tier passen. Für Katzen, Vögel und viele Kleintiere ist Betreuung im vertrauten Zuhause oft besser.'],
     ['Wie früh sollte ich Betreuung organisieren?', 'So früh wie möglich. Betreuungsperson, Tierpension, Tierarztcheck, Impfstatus, Medikamente und Notfallkontakte gehören nicht in die letzte Urlaubswoche. Der Deutsche Tierschutzbund rät, nach einer Pension im Idealfall mehrere Monate im Voraus zu suchen, weil gute Pensionen oft lange im Voraus ausgebucht sind.'],
     ['Darf man ein Tier aussetzen, wenn man keine Betreuung findet?', 'Nein. Ein Haustier auszusetzen oder zurückzulassen, um sich der Verantwortung zu entziehen, ist nach dem Tierschutzgesetz verboten.'],
-    ['Reicht ein Fensterspalt, wenn der Hund kurz im Auto wartet?', 'Nein. Im ADAC-Test erreichte der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C und nach 60 Minuten rund 57 °C, auch mit geöffneten Fenstern.'],
-    ['Welche Papiere braucht mein Hund für Reisen in der EU?', 'In der Regel einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Die Impfung ist frühestens mit zwölf Wochen möglich, danach gilt eine Wartezeit von 21 Tagen. Seit dem 22. April 2026 gelten neue EU-Regeln; prüfe die aktuelle Seite des Bundesministeriums für Landwirtschaft, Ernährung und Heimat.'],
-    ['Muss mein Hund vor der Einreise in manche Länder gegen Bandwurm behandelt werden?', 'Ja. Für Finnland, Irland, Malta, Norwegen und Nordirland müssen Hunde 24 bis 120 Stunden vor der Einreise gegen den Fuchsbandwurm behandelt werden. Das gilt für Hunde, nicht für Katzen. Für Großbritannien gelten eigene Regeln.'],
+    ['Reicht ein Fensterspalt, wenn der Hund kurz im Auto wartet?', 'Nein. Im ADAC-Test erreichte der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C und nach 60 Minuten rund 57 °C, auch mit geöffneten Fenstern.'],
+    ['Welche Papiere braucht mein Hund für Reisen in der EU?', 'In der Regel einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Die Impfung ist frühestens mit zwölf Wochen möglich, danach gilt eine Wartezeit von 21 Tagen. Seit dem 22. April 2026 gelten neue EU-Regeln; prüfe die aktuelle Seite des Bundesministeriums für Landwirtschaft, Ernährung und Heimat.'],
+    ['Muss mein Hund vor der Einreise in manche Länder gegen Bandwurm behandelt werden?', 'Ja. Für Finnland, Irland, Malta, Norwegen und Nordirland müssen Hunde 24 bis 120 Stunden vor der Einreise gegen den Fuchsbandwurm behandelt werden. Das gilt für Hunde, nicht für Katzen. Für Großbritannien gelten eigene Regeln.'],
     ['Darf ich meinem Tier vor dem Flug ein Beruhigungsmittel geben?', 'Der Weltluftfahrtverband IATA und die Bundestierärztekammer raten davon ab, weil die Reaktionen des Tieres nicht abzusehen sind und Kreislaufprobleme möglich sind. Gib keine Mittel auf eigene Faust und kläre jede Reisefrage mit der Tierarztpraxis.'],
     ['Braucht eine Tierpension eine Erlaubnis?', 'In der Regel ja. Wer gewerbsmäßig Tiere hält oder ein Tierheim oder eine ähnliche Einrichtung betreibt, braucht nach § 11 Tierschutzgesetz die Erlaubnis der zuständigen Behörde. Lass dir die Erlaubnis zeigen.'],
     ['Hilft eine Impfung gegen Leishmaniose?', 'Sie kann die Symptome mildern, verhindert die Infektion aber nicht. Wichtig bleibt der Schutz vor Sandmückenstichen. Ob eine Impfung für deinen Hund sinnvoll ist, entscheidet die Tierarztpraxis.'],
@@ -645,7 +644,6 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Die Seite ersetzt keinen psychologischen Eignungstest.',
       'Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.',
     ],
   },
@@ -654,7 +652,7 @@ const evidenceByPage = {
       'Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.',
       'Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.',
       'Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.',
-      'Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag.',
+      'Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, etwa 97 bis 257 Euro im Monat.',
     ],
     sources: [
       ['TVT: Merkblatt Nr. 197 Aufnahme eines Hundes', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&did=421'],
@@ -721,7 +719,7 @@ const evidenceByPage = {
       'Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen, und zu einer Toilette mehr, als Katzen im Haus leben.',
       'AAFP und ISFM nennen mindestens zwei Ruheplätze, zwei Futterstellen und zwei Toilettenorte an getrennten Stellen.',
       'Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.',
-      'Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre.',
+      'Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag, das sind rund 53 bis 112 Euro im Monat (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre, rund 69 Euro im Monat.',
       'Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.',
       'Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.',
     ],
@@ -744,14 +742,15 @@ const evidenceByPage = {
   },
   'katzen-kosten': {
     facts: [
-      'Über 16 Jahre kostet eine gesunde Katze nach den Einzelposten dieser Seite etwa 10.100 bis 21.600 Euro, das sind 1,70 bis 3,70 Euro am Tag.',
-      'Der Deutsche Tierschutzbund nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze und rund 800 Euro im Jahr.',
+      'Über 16 Jahre kostet eine gesunde Katze nach den Einzelposten dieser Seite etwa 10.100 bis 21.600 Euro, das sind 1,70 bis 3,70 Euro am Tag und rund 53 bis 112 Euro im Monat.',
+      'Der Deutsche Tierschutzbund nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze und rund 800 Euro im Jahr, das sind rund 67 Euro im Monat.',
       'Die Schutzgebühr legt jede Organisation selbst fest: ab 100 Euro nach dem Tierschutzbund, 150 bis 250 Euro nach VETO Tierschutz (Stand 2026).',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Katzenhaltung (Kosten, Lebensdauer)', 'https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/'],
       ['VETO Tierschutz: Die Schutzgebühr im Tierschutz', 'https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/'],
       ['Gebührenordnung für Tierärztinnen und Tierärzte (GOT)', 'https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html'],
+      ['QUEN-Qualzucht-Datenbank: Merkblatt Katze, Rasse Perser', 'https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/'],
     ],
     guardrails: [
       'Die Spannen der Einzelposten sind Orientierungswerte für eine gesunde Einzelkatze; die Rechnung über 16 Jahre ist eine eigene Hochrechnung.',
@@ -813,7 +812,7 @@ const evidenceByPage = {
     guardrails: [
       'Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.',
       'Alter, Gesundheit, Vorgeschichte, Sozialverhalten und Wohnumfeld können die passende Haltungsform verändern.',
-      'Impfung und Parasitenkontrolle werden nach individuellem Risiko tierärztlich festgelegt; die Seite ersetzt keinen Behandlungsplan.',
+      'Impfung und Parasitenkontrolle legt die Tierarztpraxis nach dem individuellen Risiko der Katze fest.',
       'Katzenschutzverordnungen unterscheiden sich örtlich und können sich ändern. Maßgeblich sind die aktuellen Angaben des zuständigen Ordnungs- oder Veterinäramts.',
       'Bei Unsauberkeit, Rückzug, Aggression, Gewichtsveränderung, Schmerzen oder anderen Verhaltensänderungen ist eine tierärztliche Abklärung nötig.',
     ],
@@ -1077,7 +1076,7 @@ const evidenceByPage = {
   'pferde-kosten': {
     facts: [
       '600 bis 950 Euro im Monat ergeben 7.200 bis 11.400 Euro im Jahr, 19,73 bis 31,23 Euro pro Tag und 180.000 bis 285.000 Euro in 25 Jahren.',
-      'Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr; die Zahl wird hier nach RidersDeal wiedergegeben.',
+      'Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr (rund 825 Euro im Monat); die Zahl wird hier nach RidersDeal wiedergegeben.',
       'Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).',
     ],
     sources: [
@@ -1093,7 +1092,7 @@ const evidenceByPage = {
   'pferde-entscheidung': {
     facts: [
       'Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.',
-      'Die Bedenkzeit von mindestens drei Nächten ist eine Empfehlung dieser Seite; ihre Wirkung ist für Pferde nicht untersucht.',
+      'Ob eine Bedenkzeit von mindestens drei Nächten die Haltung verbessert, ist für Pferde nicht untersucht.',
     ],
     sources: [
       ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],
@@ -1258,7 +1257,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund: Welches Tier passt zu mir?', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf'],
     ],
     guardrails: [
-      'Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.',
+      'Unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden; es liegen nur Angaben des Branchenverbands ZZF und des Deutschen Tierschutzbundes vor.',
       'Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.',
       'Seriöse Adoption braucht Zeit und ehrliche Beratung.',
       'Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.',
@@ -1315,16 +1314,16 @@ const evidenceByPage = {
   },
   selbsttest: {
     facts: [
-      'Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.',
+      'Ob ein Tier passt, entscheidet sich an Alltag, Geld, Betreuung, Wohnsituation, Motivation und einem Puffer für tierärztliche Notfälle.',
       'Ehrliche Antworten schützen das Tier vor späterer Überforderung.',
-      'Am Ende steht kein Punktestand, sondern ein konkreter nächster Schritt. „Noch nicht“ ist eine gleichwertige Entscheidung und kein Urteil.',
+      '„Noch nicht“ ist eine gleichwertige Entscheidung und kein Urteil.',
     ],
     sources: [
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
     ],
     guardrails: [
-      'Der Selbsttest ist eine Entscheidungshilfe, kein psychometrisches Gutachten.',
+      'Der Selbsttest ist eine Entscheidungshilfe.',
       'Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen.',
     ],
   },
@@ -1339,7 +1338,6 @@ const evidenceByPage = {
       ['TASSO e. V.', 'https://www.tasso.net'],
     ],
     guardrails: [
-      'Diese Seite ersetzt keine tierärztliche Diagnose.',
       'Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.',
     ],
   },
@@ -1420,8 +1418,8 @@ const evidenceByPage = {
       'Urlaub mit Haustier ist keine reine Komfortfrage; entscheidend sind Tierart, Charakter, Gesundheit, Reiseweg, Klima, Unterkunft und zuverlässige Betreuung.',
       'Katzen, Vögel und kleine Heimtiere bleiben häufig stressärmer in ihrer vertrauten Umgebung, wenn dort fachkundige tägliche Versorgung gesichert ist.',
       'Das Aussetzen oder Zurücklassen eines Haustiers, um sich der Halter- oder Betreuerpflicht zu entziehen, ist nach dem Tierschutzgesetz verboten.',
-      'Für Reisen mit Hunden, Katzen und Frettchen gelten Mikrochip, Heimtierausweis und eine Tollwutimpfung mit 21 Tagen Wartezeit; seit dem 22. April 2026 gelten neue EU-Regeln.',
-      'Ein geöffnetes Fenster verhindert die Überhitzung eines geparkten Autos nicht: Im ADAC-Test erreichte der Innenraum nach 30 Minuten rund 50 °C.',
+      'Für Reisen mit Hunden, Katzen und Frettchen gelten Mikrochip, Heimtierausweis und eine Tollwutimpfung mit 21 Tagen Wartezeit; seit dem 22. April 2026 gelten neue EU-Regeln.',
+      'Ein geöffnetes Fenster verhindert die Überhitzung eines geparkten Autos nicht: Im ADAC-Test erreichte der Innenraum nach 30 Minuten rund 50 °C.',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Urlaub mit Hund', 'https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/urlaub-mit-hund/'],
@@ -1440,6 +1438,7 @@ const evidenceByPage = {
       ['ADAC: Auch mit offenem Fenster wird es gefährlich heiß', 'https://presse.adac.de/meldungen/adac-ev/technik/auch-mit-offenem-fenster-wirds-gefaehrlich-heiss.html'],
       ['Bundestierärztekammer: Hitzetod im Auto', 'https://www.bundestieraerztekammer.de/presse/2018/06/hitzetod/Index.php'],
       ['Bundestierärztekammer: Pressemeldung zur Urlaubszeit', 'https://www.bundestieraerztekammer.de/presse/pressemeldung.php?X=20140514162331'],
+      ['Bundestierärztekammer: Gutachten zu Qualzuchten (PDF)', 'https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf'],
       ['Bundestierärztekammer: Leishmaniose beim Hund', 'https://www.bundestieraerztekammer.de/presse/archiv/15/2017/leishmaniose-beim-hund/1296'],
       ['ESCCAP: Reisen mit Haustier', 'https://www.esccap.de/reisen-mit-haustier-was-ist-wichtig/'],
       ['ESCCAP: Krankheiten bei Hunden aus dem Ausland', 'https://www.esccap.de/hunde-aus-dem-ausland-und-parasiten/welche-krankheiten-koennen-hunde-aus-dem-ausland-mitbringen/'],
