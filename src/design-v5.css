@@ -1357,7 +1357,6 @@ body.static-site .article-hero-media {
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
-<<<<<<< HEAD
 /* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
 #selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
 #selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
@@ -1403,7 +1402,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
-=======
+
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
 .kv-randnotiz { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
@@ -1449,5 +1448,4 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
->>>>>>> umbau/katzen-voegel
 }
