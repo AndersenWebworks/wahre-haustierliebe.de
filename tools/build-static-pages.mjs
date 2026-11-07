@@ -148,18 +148,19 @@ const pages = [
     id: 'exoten',
     slug: 'exoten',
     title: 'Exoten halten: Terrarium, Technik, UV-B und Verantwortung',
-    description: 'Exotenhaltung ehrlich erklärt: Licht, Temperatur, Feuchtigkeit, Futter, Meldepflichten, Tierarztzugang und warum Faszination nicht reicht.',
+    description: 'Exoten vom Tier aus gedacht: Wie lange Bartagame, Goldfisch und Landschildkröte leben, was sie brauchen und warum Faszination allein nicht reicht.',
     intent: 'Exotische Haustiere und Terrarientiere prüfen',
     priority: '0.75',
-    lastmod: '2026-10-24',
+    lastmod: '2026-11-07',
   },
   {
     id: 'pferde',
     slug: 'pferde',
     title: 'Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung',
-    description: 'Pferdehaltung realistisch prüfen: Herdenkontakt, tägliche Bewegung, Stallformen, Kosten, Tierarzt, Hufschmied und jahrzehntelange Verantwortung.',
+    description: 'Was ein Pferd braucht: fünf Felder mit Maßen aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und Fragen vor der Entscheidung.',
     intent: 'Pferdehaltung und Pferdekauf realistisch prüfen',
     priority: '0.75',
+    lastmod: '2026-11-07',
   },
   {
     id: 'kastration',
@@ -366,15 +367,15 @@ const topicPages = [
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-07-29' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.', 'Rattenhaltung verantwortungsvoll planen.'],
   ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.'],
-  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.', 'Reptilienhaltung realistisch prüfen.', { lastmod: '2026-10-24' }],
-  ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.', 'Schildkrötenhaltung realistisch prüfen.'],
-  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.', 'Fischhaltung und Aquarium realistisch prüfen.', { lastmod: '2026-10-24' }],
+  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.', 'Reptilienhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
+  ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer.', 'Schildkrötenhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
+  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.', 'Fischhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
   ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.'],
   ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.'],
   ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.'],
-  ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.', 'Pferdekosten realistisch einschätzen.'],
+  ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.', 'Pferdekosten realistisch einschätzen.', { lastmod: '2026-11-07' }],
   ['pferde-reitbeteiligung', 'pferde', 'pferde/reitbeteiligung', 'Reitbeteiligung als ehrlicher Einstieg', 'Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.', 'Reitbeteiligung als Alternative zum eigenen Pferd prüfen.'],
-  ['pferde-entscheidung', 'pferde', 'pferde/entscheidung', 'Bevor ein Pferd einzieht', 'Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.', 'Entscheidung vor dem eigenen Pferd prüfen.'],
+  ['pferde-entscheidung', 'pferde', 'pferde/entscheidung', 'Bevor ein Pferd einzieht', 'Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.', 'Entscheidung vor dem eigenen Pferd prüfen.', { lastmod: '2026-11-07' }],
 ].map(([id, sourcePage, slug, title, description, intent, meta = {}]) => ({
   id,
   sourcePage,
@@ -804,34 +805,120 @@ const evidenceByPage = {
   },
   exoten: {
     facts: [
-      'Exotenhaltung steht und fällt mit Temperatur, UV-B, Luftfeuchtigkeit, Futter und tierärztlicher Fachkunde.',
-      'Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.',
-      'Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden.',
+      'Exoten sind keine Tierart: Maße, Licht, Wärme und Futter hängen von Art und Größe ab.',
+      'Bartagame bis zu 10, manchmal über 15 Jahre; Goldfisch 20 bis 30 Jahre; Griechische Landschildkröte über 80 Jahre.',
+      'Die BMEL-Gutachten für Reptilien (1997) und Zierfische (1998) nennen Mindestanforderungen; beide werden derzeit überarbeitet.',
     ],
     sources: [
-      ['CITES Species+ Checklist', 'https://checklist.cites.org/'],
-      ['Tierärztliche Vereinigung für Tierschutz', 'https://www.tierschutz-tvt.de'],
-      ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
+      ['Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf'],
+      ['BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2'],
+      ['BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html'],
+      ['TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017)', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65'],
+      ['Schweizer Tierschutz STS: Merkblatt Goldfische (2011)', 'https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true'],
+      ['BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html'],
     ],
     guardrails: [
+      'Mindestmaße allein machen eine Haltung nicht tiergerecht; sie sind die Untergrenze.',
       'Auch eine rechtlich erlaubte Haltung kann die Bedürfnisse eines Tieres verfehlen.',
-      'Platz, Klima, Futter, Sozialkontakt und medizinische Versorgung müssen für die konkrete Art geprüft werden.',
     ],
   },
   pferde: {
     facts: [
-      'Pferde brauchen Herde, Bewegung, Raufutter, Witterungsschutz und langfristig tragbare Kosten.',
-      'Reiten ersetzt keine pferdegerechte Haltung.',
-      'Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen.',
+      'Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.',
+      'Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.',
+      'Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.',
     ],
     sources: [
-      ['FN: Tierschutz im Pferdesport', 'https://www.pferdesport-deutschland.de/ausbildung/pferdehaltung/tierschutz'],
-      ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
+      ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],
+      ['go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)', 'https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/'],
+      ['RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)', 'https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd'],
+      ['Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)', 'https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/'],
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
     guardrails: [
-      'Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.',
-      'Ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.',
+      'Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.',
+      'Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.',
+    ],
+  },
+  'pferde-kosten': {
+    facts: [
+      '600 bis 950 Euro im Monat ergeben 7.200 bis 11.400 Euro im Jahr, 19,73 bis 31,23 Euro pro Tag und 180.000 bis 285.000 Euro in 25 Jahren.',
+      'Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr; die Zahl wird hier nach RidersDeal wiedergegeben.',
+      'Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).',
+    ],
+    sources: [
+      ['RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)', 'https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd'],
+      ['Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)', 'https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/'],
+      ['go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)', 'https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/'],
+    ],
+    guardrails: [
+      'Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.',
+      'Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal.',
+    ],
+  },
+  'pferde-entscheidung': {
+    facts: [
+      'Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.',
+      'Die Bedenkzeit von mindestens drei Nächten ist eine Empfehlung dieser Seite; ihre Wirkung ist für Pferde nicht untersucht.',
+    ],
+    sources: [
+      ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],
+      ['go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)', 'https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/'],
+      ['RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)', 'https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd'],
+    ],
+    guardrails: [
+      'Eine Checkliste ersetzt keine Beratung durch eine Tierarztpraxis und keinen Stallbesuch.',
+    ],
+  },
+  'exoten-reptilien': {
+    facts: [
+      'Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.',
+      'Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.',
+      'UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.',
+    ],
+    sources: [
+      ['Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf'],
+      ['BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2'],
+      ['Tierarztpraxis Dr. Renate Lorenz: Metabolic Bone Disease bei Reptilien', 'https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/'],
+      ['BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html'],
+    ],
+    guardrails: [
+      'Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.',
+      'Stromkosten und Preise hängen von Gerät und Tarif ab; hier steht nur der Rechenweg, kein Pauschalbetrag.',
+    ],
+  },
+  'exoten-schildkroeten': {
+    facts: [
+      'Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.',
+      'Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.',
+      'Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.',
+    ],
+    sources: [
+      ['TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017)', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65'],
+      ['Bundesartenschutzverordnung § 7', 'https://www.gesetze-im-internet.de/bartschv_2005/__7.html'],
+      ['Landkreis Kronach: Merkblatt zum Artenschutz', 'https://www.landkreis-kronach.de/media/6955/merkblatt-zum-artenschutz.pdf'],
+      ['Auffangstation für Reptilien München e. V.', 'https://www.reptilienauffangstation.de'],
+    ],
+    guardrails: [
+      'Das TVT-Merkblatt beschreibt die Griechische Landschildkröte; Maurische Landschildkröten haben eigene Ansprüche.',
+      'Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest.',
+    ],
+  },
+  'exoten-fische': {
+    facts: [
+      'Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.',
+      'Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.',
+      'Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.',
+    ],
+    sources: [
+      ['BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html'],
+      ['BMEL: Artentabelle des Zierfisch-Gutachtens', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html'],
+      ['Schweizer Tierschutz STS: Merkblatt Goldfische (2011)', 'https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true'],
+      ['BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html'],
+    ],
+    guardrails: [
+      'Das Zierfisch-Gutachten von 1998 wird überarbeitet; die Maße können sich ändern.',
+      'Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler.',
     ],
   },
   kastration: {
