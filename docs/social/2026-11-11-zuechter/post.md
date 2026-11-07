@@ -64,7 +64,7 @@ Quelle: Deutscher Tierschutzbund, Umfrage unter 218 Tierheimen (Mai 2024); VIER 
 
 ## Caption
 
-„Dann eben vom Züchter. Da ist man auf der sicheren Seite.“ Ist man das? So denken viele, die keinem Vermehrer Geld geben wollen, und das ist gut gemeint. Nur schützen Papiere und Sorgfalt nicht davor, dass ein Tier unter seinem Körperbau leidet.
+„Dann eben vom Züchter. Da ist man auf der sicheren Seite.“ So denken viele, die keinem Vermehrer Geld geben wollen, und das ist gut gemeint. Aber ist man das wirklich? Papiere und Sorgfalt schützen nicht davor, dass ein Tier unter seinem Körperbau leidet.
 
 Eine Ahnentafel belegt die Abstammung, nicht die Gesundheit. Und ein Züchter kann alles richtig machen und trotzdem solche Tiere züchten, wenn das Problem im Zuchtziel liegt. Fachleute nennen das Qualzucht. Beispiele nennen Fachquellen beim Mops, bei der Perserkatze und beim Widderkaninchen.
 
