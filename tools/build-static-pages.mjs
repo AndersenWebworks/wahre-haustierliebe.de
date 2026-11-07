@@ -51,9 +51,10 @@ const pages = [
     id: 'datenschutz',
     slug: 'datenschutz',
     title: 'Datenschutzerklärung',
-    description: 'Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.',
-    intent: 'Datenschutzinformationen nach DSGVO für die Website',
+    description: 'Datenschutzerklärung für Wa(h)re Haustier(liebe): Hosting über GitHub Pages, Speicherung im Browser bei Quiz und Urlaubsplan, Kontakt, Betroffenenrechte.',
+    intent: 'Datenschutzinformationen nach DSGVO und TDDDG für die Website',
     priority: '0.35',
+    lastmod: '2026-11-07',
     staticOnly: true,
   },
   {
