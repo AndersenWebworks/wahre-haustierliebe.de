@@ -11,6 +11,14 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#adoption"
     },
     {
+      "key": "ahnentafel",
+      "title": "Ahnentafel",
+      "summary": "Auszug aus dem Zuchtbuch eines Zuchtvereins. Sie belegt die Abstammung, nicht die Gesundheit.",
+      "description": "Auszug aus dem Zuchtbuch eines Zuchtvereins. Das Zuchtbuch dokumentiert die Abstammung eines Tieres; die Ahnentafel ist ein Abstammungsnachweis und kein Gesundheitszeugnis. Bei Hunden tragen die von VDH und FCI anerkannten Ahnentafeln die Logos beider Verbände.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#ahnentafel",
+      "relatedUrl": "https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html"
+    },
+    {
       "key": "aktivstall",
       "title": "Aktivstall",
       "summary": "Pferdehaltung, die Bewegung, Fressplätze und Ruhebereiche bewusst über Laufwege organisiert.",
@@ -261,6 +269,14 @@
       "summary": "Schnelle Atmung über Maul und Zunge. Bei Hunden wichtig zur Kühlung, bei Stress oder Hitze aber ein Warnsignal.",
       "description": "Schnelle Atmung über Maul und Zunge. Hunde nutzen Hecheln zur Kühlung; starkes, hektisches oder anhaltendes Hecheln kann aber Stress, Schmerzen oder Überhitzung anzeigen.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#hecheln"
+    },
+    {
+      "key": "heimtierausweis",
+      "title": "Heimtierausweis",
+      "summary": "Ausweis für ein Tier mit Angaben zu Mikrochip und Impfungen, etwa zur Tollwutimpfung.",
+      "description": "Ausweis für ein Tier, in dem unter anderem die Nummer des Mikrochips und Impfungen wie die Tollwutimpfung eingetragen sind. Bei Welpen aus dem Ausland ist der Ausweis des Ursprungslandes nötig; TASSO weist darauf hin, dass Vermehrer Ausweisdokumente fälschen.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#heimtierausweis",
+      "relatedUrl": "https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html"
     },
     {
       "key": "herdentier",

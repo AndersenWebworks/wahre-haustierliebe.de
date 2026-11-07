@@ -285,9 +285,10 @@ const pages = [
     id: 'zucht-und-vermehrung',
     slug: 'zucht-und-vermehrung',
     title: 'Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist',
-    description: 'Unterschied zwischen Züchter und Vermehrer, warum zusätzliche Haustierproduktion problematisch bleibt und warum Adoption die konsequentere Entscheidung ist.',
-    intent: 'Zucht, Vermehrung und Adoption einordnen',
+    description: 'Züchter oder Vermehrer? Was Papiere belegen, wo auch sorgfältige Zucht Qualzucht bedeutet, woran du getarnte Vermehrer erkennst und warum Adoption konsequenter ist.',
+    intent: 'Zucht, Vermehrung und Adoption einordnen und Züchter prüfen',
     priority: '0.8',
+    lastmod: '2026-11-07',
     staticOnly: true,
   },
   {
@@ -434,6 +435,14 @@ const faqByPage = {
     ['Woran erkenne ich einen seriösen Züchter?', 'Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt diese Seite keinen eigenen Kriterienkatalog vor; die allgemeinen Prüfpunkte gelten auch hier.'],
     ['Was ist ein Mitleidskauf, und warum rät der Tierschutzbund davon ab?', 'Ein Mitleidskauf ist der Kauf eines Tieres, weil es einem leidtut. Der Deutsche Tierschutzbund schreibt, ein Kauf aus Mitleid helfe nicht den Tieren, sondern denen, die ein schnelles Geschäft machen wollen, und jedes freigekaufte Tier werde sofort durch ein anderes ersetzt. Er rät, zuerst im Tierheim zu schauen. Wie stark Mitleidskäufe die Nachfrage erhöhen, ist hier nicht belegt.'],
     ['Wie finde ich ein Tierheim oder eine Notstation?', 'Der Tierheim-Finder des Deutschen Tierschutzbundes listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.'],
+  ],
+  'zucht-und-vermehrung': [
+    ['Was ist der Unterschied zwischen Züchter und Vermehrer?', 'Nach den Kriterien von TASSO und VIER PFOTEN zeigt ein seriöser Züchter Elterntiere und Zuchtstätte, lässt Besuche zu, züchtet in der Regel nur eine Rasse, lässt die Elterntiere auf rassebedingte Erbkrankheiten untersuchen und berät auch nach dem Einzug. Vermehrer richten sich auf schnellen Absatz aus. Ein niedriger Preis ist kein verlässliches Erkennungszeichen mehr, weil auch illegale Händler hohe Preise verlangen.'],
+    ['Schützt eine Ahnentafel vor kranken Tieren?', 'Nein. Nach der Zuchtordnung des VDH dokumentiert das Zuchtbuch die Abstammung der Hunde; die Ahnentafel ist ein Auszug daraus. Sie ist ein Abstammungsnachweis, kein Gesundheitszeugnis. Welche Gesundheitsuntersuchungen verlangt werden, legen die Rassezuchtvereine fest.'],
+    ['Kann auch ein Züchter im Verein Qualzucht betreiben?', 'Das ist möglich, wenn der Rassestandard selbst Merkmale verlangt oder duldet, die Schmerzen, Leiden oder Schäden verursachen. Die Tierärztliche Vereinigung für Tierschutz schreibt: Rassestandards legalisieren keine Zucht von Tieren, die unter Schmerzen, Leiden oder Schäden leiden. Ob ein Verstoß gegen § 11b Tierschutzgesetz vorliegt, entscheidet die zuständige Behörde im Einzelfall.'],
+    ['Ab wann gilt Zucht als gewerbsmäßig?', 'Das Gesetz nennt keine Tierzahl. Die Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz (Fassung von 2000) nennt als Regelwerte unter anderem drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr bei Hunden und fünf oder mehr Katzen oder Würfe bei Katzen. Gewerbsmäßige Zucht von Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz. Wer darunter bleibt, ist nicht automatisch seriös, und die Regeln zum Qualzuchtverbot gelten für jede Zucht.'],
+    ['Woran erkenne ich getarnte Vermehrer?', 'Typische Merkmale sind eine Übergabe an Parkplätzen oder Tankstellen statt bei der Mutter, eine Mutter, die angeblich nicht verfügbar ist, ein ganzjährig geschaltetes Inserat mit „Hobbyzucht“, gleiche Anzeigen auf mehreren Plattformen, Zeitdruck und fehlende, gefälschte oder ausländische Papiere. Auch ein professioneller Auftritt beweist nichts. Bei Verdacht kannst du das Veterinäramt oder die Polizei informieren.'],
+    ['Was gehört in den Kaufvertrag und in die Unterlagen?', 'Empfohlen werden ein schriftlicher Kaufvertrag mit Personalien und Chipnummer, ein ausgefüllter Impfpass oder EU-Heimtierausweis, ein registrierter Chip, bei Verbandszucht die Ahnentafel und die Befunde der Gesundheitsuntersuchungen der Elterntiere. Eine Rücknahmepflicht enthält die VDH-Zuchtordnung nicht; ob eine Rücknahme gilt, ist daher eine Vertragsfrage.'],
   ],
   kastration: [
     ['Sollte eine Hündin oder Katze vor der Kastration einmal Junge bekommen?', 'Nein. Für einen gesundheitlichen oder seelischen Vorteil durch einen Wurf gibt es keinen tiermedizinischen Beleg. Bei Katzen sprechen die Vorteile meist für eine Kastration vor der Fortpflanzung; bei Hündinnen muss der passende Zeitpunkt individuell nach Rasse, Größe, Alter, Entwicklung und Gesundheit festgelegt werden.'],
@@ -1187,23 +1196,49 @@ const evidenceByPage = {
   },
   'zucht-und-vermehrung': {
     facts: [
-      'Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.',
-      'Auch ein einmaliger Wurf ist Zucht und begründet Verantwortung für das Muttertier und jedes einzelne Jungtier.',
+      'Seriöse Züchter zeigen nach TASSO und VIER PFOTEN Elterntiere und Zuchtstätte, lassen die Elterntiere untersuchen und beraten nach dem Kauf; illegale Händler treten professionell auf und verlangen oft ähnliche Preise.',
+      'Die Ahnentafel ist ein Auszug aus dem Zuchtbuch und belegt die Abstammung, nicht die Gesundheit; die Gesundheitsanforderungen legen die Rassezuchtvereine fest.',
+      'Die TVT hält fest: Rassestandards legalisieren keine Zucht von Tieren, die unter Schmerzen, Leiden oder Schäden leiden.',
+      'Nach der Allgemeinen Verwaltungsvorschrift zum Tierschutzgesetz gilt Zucht „in der Regel“ als gewerbsmäßig ab drei Hündinnen oder drei Würfen im Jahr bei Hunden und ab fünf Katzen oder Würfen bei Katzen.',
       'Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.',
-      'Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.',
-      'Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.',
+      'Auch seriöse Zucht erzeugt neue Tiere, während Tierheime nach Umfragen des Tierschutzbundes stark ausgelastet sind.',
     ],
     sources: [
-      ['Deutscher Tierschutzbund: Tierheime', 'https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/'],
+      ['Tierschutzgesetz § 11', 'https://www.gesetze-im-internet.de/tierschg/__11.html'],
+      ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
+      ['Allgemeine Verwaltungsvorschrift zur Durchführung des Tierschutzgesetzes', 'https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_09022000_32135220006.htm'],
+      ['Tierschutz-Hundeverordnung', 'https://www.gesetze-im-internet.de/tierschhuv/BJNR083800001.html'],
+      ['Verordnung (EU) 2026/1818 über das Wohlergehen von Hunden und Katzen', 'https://eur-lex.europa.eu/eli/reg/2026/1818/oj/deu'],
+      ['TVT: Merkblatt Nr. 141 Qualzucht und Erbkrankheiten bei Heimtieren (12/2023)', 'https://tierschutz.hessen.de/sites/tierschutz.hessen.de/files/2024-02/tvt-mb_141_qualzucht_beim_hund_dez._2023.pdf'],
+      ['Bundesministerium: Gutachten zur Auslegung von § 11b Tierschutzgesetz', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html'],
+      ['QUEN: Merkblatt Katze, Rasse Perser', 'https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/'],
+      ['QUEN: Merkblatt Katze, Rasse Scottish Fold', 'https://qualzucht-datenbank.eu/merkblatt-katze-rasse-scottish-fold/'],
+      ['Deutscher Tierschutzbund: Qualzucht', 'https://www.tierschutzbund.de/tiere-themen/haustiere/qualzucht/'],
+      ['Deutscher Tierschutzbund: Haltung von Wellensittichen', 'https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf'],
+      ['Deutscher Tierschutzbund: Zwergkaninchen', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/'],
+      ['Deutscher Tierschutzbund: Welches Tier passt zu mir?', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf'],
+      ['Deutscher Tierschutzbund: Illegaler Welpenhandel', 'https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/'],
+      ['Deutscher Tierschutzbund: Positionspapier Internethandel (Stand 01/2021)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Internethandel.pdf'],
+      ['Deutscher Tierschutzbund: Umfrage zur Auslastung der Tierheime (2024)', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/'],
+      ['TASSO: Seriöse Züchter erkennen', 'https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/vor-dem-einzug-eines-tieres/serioese-zuechter-erkennen?lang=de-DE'],
+      ['VIER PFOTEN: Checkliste für einen verantwortungsvollen Welpenkauf (2021)', 'https://www.vier-pfoten.de/unseregeschichten/ratgeber-hund/checkliste-fuer-einen-verantwortungsvollen-welpenkauf'],
+      ['VIER PFOTEN: Was man über illegale Welpenverkäufer wissen muss (2022)', 'https://www.vier-pfoten.de/unseregeschichten/ratgeber-hund/was-man-ueber-illegale-online-welpenhaendler-wissen-muss'],
+      ['VIER PFOTEN: Welpenwahnsinn auf Social Media', 'https://www.vier-pfoten.de/kampagnen-themen/themen/haustiere/hunde/illegaler-welpenhandel/welpenwahnsinn-auf-social-media'],
+      ['Tierschutzbeauftragte NRW: Faltblatt Illegaler Welpenhandel', 'https://www.mlv.nrw.de/wp-content/uploads/2023/08/Flyer-illegaler-Welpenhandel.pdf'],
+      ['VDH: Zucht-Ordnung (Stand 01.09.2024)', 'https://www.vdh.de/fileadmin/media/ueber/downloads/satzung/2025/VDH-Zucht-Ordnung__VDH-ZO__mit_allen_Durchfuehrungsbestimmungen.pdf'],
+      ['ACVIM: Leitlinien zu Kardiomyopathien bei Katzen (2020)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7255676/'],
+      ['ZDRK: Der Verband', 'https://www.zdrk.de/der-zdrk'],
       ['AVMA: Spaying and Neutering', 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering'],
       ['International Cat Care: Why do I need to neuter my cat?', 'https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat'],
       ['Merck Veterinary Manual: Schwergeburt bei Hund und Katze', 'https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-small-animal/dystocia-in-small-animals'],
-      ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
     ],
     guardrails: [
-      'Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; beide bringen jedoch zusätzliche Tiere in eine Welt, in der viele vorhandene Tiere ein Zuhause suchen.',
-      'Bei Hündinnen ist der passende Kastrationszeitpunkt eine individuelle tierärztliche Entscheidung; die Widerlegung des Wurf-Mythos ersetzt diese Abwägung nicht.',
-      'Wer züchtet, übernimmt Verantwortung für Gesundheit, Unterbringung und Rücknahme jedes hervorgebrachten Tieres.',
+      'Aussagen von TASSO, VIER PFOTEN, Tierschutzbund und TVT sind Aussagen von Vereinen und Stiftungen und als solche gekennzeichnet.',
+      'Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel gibt es keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation, auf den sich diese Seite stützt.',
+      'Die Regelwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.',
+      'Das Gutachten zu § 11b stammt von 1999 und ist nach Angabe der TVT an vielen Stellen veraltet; eine amtlich anerkannte Liste der Qualzuchtmerkmale gab es nach der TVT im Dezember 2023 nicht.',
+      'Zur Massenzucht von Kleintieren und Vögeln für den Handel liegen keine unabhängigen Zahlen vor, auf die sich diese Seite stützt.',
+      'Wer züchtet, übernimmt Verantwortung für Gesundheit und Unterbringung jedes hervorgebrachten Tieres.',
     ],
   },
   wildtierhaltung: {
@@ -2031,7 +2066,7 @@ const keywordByPage = {
   'hitzefalle-auto': ['Hund im Auto', 'Hitze', 'Hitzschlag', 'Sommer', 'Notfall'],
   'ernaehrung-taurin': ['Tierernährung', 'Taurin', 'Katzenfutter', 'Hundefutter', 'vegane Tierernährung'],
   realhaltung: ['Realhaltung', 'artgerechte Haltung', 'Haustierkosten', 'Haltungsfehler'],
-  'zucht-und-vermehrung': ['Zucht', 'Vermehrung', 'Züchter', 'Tierheim', 'Adoption'],
+  'zucht-und-vermehrung': ['Zucht', 'Vermehrung', 'Züchter', 'Vermehrer', 'Ahnentafel', 'Qualzucht', 'Gewerbsmäßige Zucht', 'Illegaler Welpenhandel', 'Tierheim', 'Adoption'],
   wildtierhaltung: ['Wildtierhaltung', 'Exoten', 'Gefahrtier', 'Wildschutz', 'Deutschland'],
   'katzen-kaetzchen-tierarzt': ['Kätzchen Tierarzt', 'Kitten Impfungen', 'Katze entwurmen', 'Kastration Kätzin', 'Mikrochip Katze'],
   'wildkatzenbaby-gefunden': ['Wildkatzenbaby gefunden', 'Wildkätzchen', 'Wildkatze oder Hauskatze', 'Wildkatzenjunge', 'Wildtierfund'],
@@ -2512,7 +2547,8 @@ function extractSection(source, id) {
   const match = marker.exec(source);
   if (!match) throw new Error(`Missing section: ${id}`);
   const start = match.index;
-  const nextCandidates = pageIds
+  const nextCandidates = pages
+    .map((page) => page.id)
     .filter((other) => other !== id)
     .map((other) => source.indexOf(`<section id="${other}" class="page`, start + 1))
     .filter((index) => index > start);

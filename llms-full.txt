@@ -174,7 +174,7 @@
 - https://wahre-haustierliebe.de/hitzefalle-auto/index.html - Sommerhitze und Hund im Auto einschätzen
 - https://wahre-haustierliebe.de/ernaehrung-taurin/index.html - Tierernährung, vegane Ernährung und Taurin verstehen
 - https://wahre-haustierliebe.de/realhaltung/index.html - Realistische Haltung und Kosten vor der Anschaffung prüfen
-- https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html - Zucht, Vermehrung und Adoption einordnen
+- https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html - Zucht, Vermehrung und Adoption einordnen und Züchter prüfen
 - https://wahre-haustierliebe.de/wildtierhaltung/index.html - Private Wildtierhaltung, Exoten und Wildschutz verstehen
 - https://wahre-haustierliebe.de/katzen/wildkatzenbaby-gefunden/index.html - Europäische Wildkatzen richtig einordnen, nicht als Haustier behandeln und bei einem Fund richtig handeln
 - https://wahre-haustierliebe.de/noch-nicht-bereit/index.html - Verantwortlich warten statt vorschnell ein Tier anschaffen
@@ -773,21 +773,47 @@ Sources:
 ### Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist
 URL: https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html
 Facts:
-- Vermehrung produziert Tiere für Nachfrage, während vorhandene Tiere bereits Zuhause suchen.
-- Auch ein einmaliger Wurf ist Zucht und begründet Verantwortung für das Muttertier und jedes einzelne Jungtier.
+- Seriöse Züchter zeigen nach TASSO und VIER PFOTEN Elterntiere und Zuchtstätte, lassen die Elterntiere untersuchen und beraten nach dem Kauf; illegale Händler treten professionell auf und verlangen oft ähnliche Preise.
+- Die Ahnentafel ist ein Auszug aus dem Zuchtbuch und belegt die Abstammung, nicht die Gesundheit; die Gesundheitsanforderungen legen die Rassezuchtvereine fest.
+- Die TVT hält fest: Rassestandards legalisieren keine Zucht von Tieren, die unter Schmerzen, Leiden oder Schäden leiden.
+- Nach der Allgemeinen Verwaltungsvorschrift zum Tierschutzgesetz gilt Zucht „in der Regel“ als gewerbsmäßig ab drei Hündinnen oder drei Würfen im Jahr bei Hunden und ab fünf Katzen oder Würfen bei Katzen.
 - Ein Wurf vor der Kastration hat bei Hündinnen und Kätzinnen keinen belegten gesundheitlichen oder seelischen Nutzen.
-- Seriösere Zuchtbedingungen lösen nicht das Grundproblem zusätzlicher Haustierproduktion.
-- Adoption ist die konsequentere Wahl, wenn kein zwingender Spezialfall vorliegt.
+- Auch seriöse Zucht erzeugt neue Tiere, während Tierheime nach Umfragen des Tierschutzbundes stark ausgelastet sind.
 Important boundaries:
-- Seriöse Zucht und illegale Vermehrung sind nicht dasselbe; beide bringen jedoch zusätzliche Tiere in eine Welt, in der viele vorhandene Tiere ein Zuhause suchen.
-- Bei Hündinnen ist der passende Kastrationszeitpunkt eine individuelle tierärztliche Entscheidung; die Widerlegung des Wurf-Mythos ersetzt diese Abwägung nicht.
-- Wer züchtet, übernimmt Verantwortung für Gesundheit, Unterbringung und Rücknahme jedes hervorgebrachten Tieres.
+- Aussagen von TASSO, VIER PFOTEN, Tierschutzbund und TVT sind Aussagen von Vereinen und Stiftungen und als solche gekennzeichnet.
+- Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel gibt es keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation, auf den sich diese Seite stützt.
+- Die Regelwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.
+- Das Gutachten zu § 11b stammt von 1999 und ist nach Angabe der TVT an vielen Stellen veraltet; eine amtlich anerkannte Liste der Qualzuchtmerkmale gab es nach der TVT im Dezember 2023 nicht.
+- Zur Massenzucht von Kleintieren und Vögeln für den Handel liegen keine unabhängigen Zahlen vor, auf die sich diese Seite stützt.
+- Wer züchtet, übernimmt Verantwortung für Gesundheit und Unterbringung jedes hervorgebrachten Tieres.
 Sources:
-- Deutscher Tierschutzbund: Tierheime: https://www.tierschutzbund.de/tiere-themen/tierheime-helfen/tierheime/
+- Tierschutzgesetz § 11: https://www.gesetze-im-internet.de/tierschg/__11.html
+- Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
+- Allgemeine Verwaltungsvorschrift zur Durchführung des Tierschutzgesetzes: https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_09022000_32135220006.htm
+- Tierschutz-Hundeverordnung: https://www.gesetze-im-internet.de/tierschhuv/BJNR083800001.html
+- Verordnung (EU) 2026/1818 über das Wohlergehen von Hunden und Katzen: https://eur-lex.europa.eu/eli/reg/2026/1818/oj/deu
+- TVT: Merkblatt Nr. 141 Qualzucht und Erbkrankheiten bei Heimtieren (12/2023): https://tierschutz.hessen.de/sites/tierschutz.hessen.de/files/2024-02/tvt-mb_141_qualzucht_beim_hund_dez._2023.pdf
+- Bundesministerium: Gutachten zur Auslegung von § 11b Tierschutzgesetz: https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html
+- QUEN: Merkblatt Katze, Rasse Perser: https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/
+- QUEN: Merkblatt Katze, Rasse Scottish Fold: https://qualzucht-datenbank.eu/merkblatt-katze-rasse-scottish-fold/
+- Deutscher Tierschutzbund: Qualzucht: https://www.tierschutzbund.de/tiere-themen/haustiere/qualzucht/
+- Deutscher Tierschutzbund: Haltung von Wellensittichen: https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf
+- Deutscher Tierschutzbund: Zwergkaninchen: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/
+- Deutscher Tierschutzbund: Welches Tier passt zu mir?: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf
+- Deutscher Tierschutzbund: Illegaler Welpenhandel: https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/
+- Deutscher Tierschutzbund: Positionspapier Internethandel (Stand 01/2021): https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Internethandel.pdf
+- Deutscher Tierschutzbund: Umfrage zur Auslastung der Tierheime (2024): https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/
+- TASSO: Seriöse Züchter erkennen: https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/vor-dem-einzug-eines-tieres/serioese-zuechter-erkennen?lang=de-DE
+- VIER PFOTEN: Checkliste für einen verantwortungsvollen Welpenkauf (2021): https://www.vier-pfoten.de/unseregeschichten/ratgeber-hund/checkliste-fuer-einen-verantwortungsvollen-welpenkauf
+- VIER PFOTEN: Was man über illegale Welpenverkäufer wissen muss (2022): https://www.vier-pfoten.de/unseregeschichten/ratgeber-hund/was-man-ueber-illegale-online-welpenhaendler-wissen-muss
+- VIER PFOTEN: Welpenwahnsinn auf Social Media: https://www.vier-pfoten.de/kampagnen-themen/themen/haustiere/hunde/illegaler-welpenhandel/welpenwahnsinn-auf-social-media
+- Tierschutzbeauftragte NRW: Faltblatt Illegaler Welpenhandel: https://www.mlv.nrw.de/wp-content/uploads/2023/08/Flyer-illegaler-Welpenhandel.pdf
+- VDH: Zucht-Ordnung (Stand 01.09.2024): https://www.vdh.de/fileadmin/media/ueber/downloads/satzung/2025/VDH-Zucht-Ordnung__VDH-ZO__mit_allen_Durchfuehrungsbestimmungen.pdf
+- ACVIM: Leitlinien zu Kardiomyopathien bei Katzen (2020): https://pmc.ncbi.nlm.nih.gov/articles/PMC7255676/
+- ZDRK: Der Verband: https://www.zdrk.de/der-zdrk
 - AVMA: Spaying and Neutering: https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering
 - International Cat Care: Why do I need to neuter my cat?: https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat
 - Merck Veterinary Manual: Schwergeburt bei Hund und Katze: https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-small-animal/dystocia-in-small-animals
-- Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
 
 ### Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar
 URL: https://wahre-haustierliebe.de/wildtierhaltung/index.html

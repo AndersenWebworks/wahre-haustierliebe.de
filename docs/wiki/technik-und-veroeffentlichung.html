@@ -55,7 +55,7 @@
             <tr><td>Generiert</td><td>alle <code>*/index.html</code>, <code>assets/site.css</code>, <code>assets/site.js</code>, <code>sitemap.xml</code>, <code>robots.txt</code>, <code>site.webmanifest</code>, <code>llms.txt</code>, <code>llms-full.txt</code>, <code>ai/site.json</code>, <code>ai/pages.json</code>, <code>ai/faq.json</code>, <code>assets/icons/*.png</code>, <code>assets/social/*.png</code></td></tr>
           </tbody>
         </table>
-        <p>Generierte Seiten werden nie direkt bearbeitet, sonst baut der nächste Build die Änderung zurück. Ausnahme sind handgepflegte Seiten in <code>handwrittenPages</code> (derzeit <code>katzen/kaetzchen-tierarzt/</code>): Sie stehen in Sitemap, <code>llms*</code> und <code>/ai</code>, ihr HTML fasst der Build aber nicht an.</p>
+        <p>Generierte Seiten werden nie direkt bearbeitet, sonst baut der nächste Build die Änderung zurück. Seiten vom Typ <code>staticOnly</code> ohne eigenen Abschnitt in der Quelle (etwa <code>realhaltung/</code>) liest der Build aus ihrer eigenen Datei zurück; weiterentwickelte Seiten bekommen deshalb einen Abschnitt in <code>src/site-source.html</code>, wie <code>zucht-und-vermehrung/</code> seit 7. November 2026. Ausnahme sind handgepflegte Seiten in <code>handwrittenPages</code> (derzeit <code>katzen/kaetzchen-tierarzt/</code>): Sie stehen in Sitemap, <code>llms*</code> und <code>/ai</code>, ihr HTML fasst der Build aber nicht an.</p>
         <p class="source">Quelle: <code>README.md</code> (Abschnitte „Quellen“, „Build“), <code>tools/build-static-pages.mjs</code> (<code>pages</code>, <code>handwrittenPages</code>, <code>robotsDisallow</code>)</p>
 
         <h2 id="build">Build</h2>

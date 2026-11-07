@@ -540,8 +540,8 @@ var staticSiteSearchIndex = [
   {
     "id": "zucht-und-vermehrung",
     "title": "Zucht und Vermehrung: Warum auch „gute Zucht“ nicht das Ideal ist",
-    "description": "Unterschied zwischen Züchter und Vermehrer, warum zusätzliche Haustierproduktion problematisch bleibt und warum Adoption die konsequentere Entscheidung ist.",
-    "terms": "Zucht, Vermehrung und Adoption einordnen zucht-und-vermehrung zucht und vermehrung"
+    "description": "Züchter oder Vermehrer? Was Papiere belegen, wo auch sorgfältige Zucht Qualzucht bedeutet, woran du getarnte Vermehrer erkennst und warum Adoption konsequenter ist.",
+    "terms": "Zucht, Vermehrung und Adoption einordnen und Züchter prüfen zucht-und-vermehrung zucht und vermehrung"
   },
   {
     "id": "wildtierhaltung",
@@ -592,6 +592,7 @@ function normalizeAssetUrls(root) {
       'pferde': { src: 'assets/images/horse-paddocks-shelter.jpg', alt: 'Weitläufige Pferdekoppeln mit mehreren Unterständen', position: 'center 50%', caption: 'Pferdehaltung beginnt bei Herde, Fläche und täglicher Bewegung.', purpose: 'Pferde-Seite: Haltungssystem statt romantisches Reitbild zeigen', shareReason: 'Das Bild soll die große Verpflichtung konkret machen.' },
       'kastration': { src: 'assets/images/feral-cat-tnr.jpg', alt: 'Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration', position: 'center 44%', caption: 'Bei Katzen schützt Kastration das einzelne Tier und verhindert weiteren ungewollten Nachwuchs.', purpose: 'Kastrations-Seite: Prävention und Streunerkatzenkontext zeigen', shareReason: 'Das Bild verbindet die Gesundheitsentscheidung mit dem Streunerkatzenschutz.' },
       'qualzucht': { src: 'assets/images/qualzucht-mops.jpg', alt: 'Mops als Beispiel für problematische Zuchtmerkmale', position: 'center 34%', caption: 'Süß darf kein Leidensmerkmal sein.', purpose: 'Qualzucht-Seite: problematische Zuchtmerkmale sachlich zeigen', shareReason: 'Das Bild soll Unbehagen erklären, ohne Clickbait zu werden.' },
+      'zucht-und-vermehrung': { src: 'assets/images/animal-shelter-fundraiser.jpg', alt: 'Menschen stehen bei einer Tierschutzaktion zusammen', position: 'center 45%', caption: 'Der Markt produziert neue Tiere, während vorhandene Tiere warten.', purpose: 'Zucht-Seite: vorhandene Tiere vor neu produzierten sichtbar machen', shareReason: 'Das Bild soll Adoption als konkrete Alternative zur Nachfrage nach neuen Tieren rahmen.' },
       'adoption': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund blickt aus seinem Zwinger im Tierheim', position: 'center 45%', caption: 'Im Tierheim wartet kein Ersatz, sondern ein echtes Tier.', purpose: 'Adoptions-Seite: zweite Chance statt Kaufversprechen zeigen', shareReason: 'Das Bild soll Adoption als konkrete, gute Entscheidung rahmen.' },
       'petitionen': { src: 'assets/images/tierheim-hund.jpg', alt: 'Hund im Tierheim als Bild für Tiere, die unter verantwortungsloser Vermittlung leiden', position: 'center 42%', caption: 'Online-Angebote brauchen Regeln, die Tiere wirksam schützen.', purpose: 'Petitions-Seite: das betroffene Tier vor Plattform und Forderung sichtbar machen', shareReason: 'Das Bild soll aus Information eine konkrete Unterstützung machen.' },
       'selbsttest': { src: 'assets/images/cats-cat-tree-pair.jpg', alt: 'Zwei Katzen liegen auf den Ebenen eines Kratzbaums', position: 'center 46%', caption: 'Bereit sein heißt, Bedürfnisse vor dem Wunsch zu prüfen.', purpose: 'Selbsttest-Seite: vorbereitete Haltung statt spontaner Wunsch zeigen', shareReason: 'Das Bild soll den Test als Entscheidungshilfe greifbar machen.' },
@@ -1201,6 +1202,7 @@ function normalizeAssetUrls(root) {
         pferde: ['Herde', 'Bewegung', 'Kosten über Jahre'],
         kastration: ['Prävention', 'Streuner stoppen', 'Mythen klären'],
         qualzucht: ['Form darf nicht leiden', 'Nachfrage stoppen', 'Adoption'],
+        'zucht-und-vermehrung': ['Nachfrage stoppen', 'Adoption zuerst', 'Vermehrer erkennen'],
         adoption: ['Seriös prüfen', 'Nicht billig kaufen', 'Zweite Chance'],
         selbsttest: ['15 Fragen', 'Ehrlich antworten', 'Vor dem Tier'],
         notfall: ['Anrufen', 'Sichern', 'Hinfahren'],
