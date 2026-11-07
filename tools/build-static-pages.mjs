@@ -4,7 +4,9 @@ import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import crypto from 'node:crypto';
 import { glossaryAnnotationsByPage, glossaryTerms } from './glossary-data.mjs';
+import { buildSearchIndex } from './search-index.mjs';
 import { playwrightModuleUrl } from './playwright-module.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -2821,6 +2823,8 @@ function prefixAssets(html, prefix) {
     .replace(/url\(['"]?assets\//g, `url('${prefix}assets/`);
 }
 
+let siteSearchScript = '';
+
 function rewriteScript(script) {
   let next = script;
   const routeMap = {
@@ -2833,7 +2837,8 @@ function rewriteScript(script) {
       title: page.title,
       description: page.description,
       terms: [page.intent, page.slug, page.id.replaceAll('-', ' ')].filter(Boolean).join(' '),
-    })), null, 2)};\n` +
+    })))};\n` +
+    `var staticSearchIndexVersion = '__SEARCH_INDEX_VERSION__';\n` +
     `function staticRouteFor(page) {\n` +
     `  var target = staticPageRoutes[page] || '/';\n` +
     `  var prefix = document.body ? (document.body.dataset.routePrefix || '') : '';\n` +
@@ -2938,6 +2943,12 @@ function rewriteScript(script) {
 
   next = next.replace("var hash = location.hash || '#startseite';\n      var url = 'https://wahre-haustierliebe.de/' + hash;", "var url = window.location.href.split('#')[0];");
   next = next.replace(/target\.insertAdjacentHTML\('afterend', item\.html\);\s*\}\);/, "target.insertAdjacentHTML('afterend', item.html);\n        });\n\n        normalizeAssetUrls(page);");
+
+  // Volltextsuche (src/site-search.js) ersetzt die frühere Kurzsuche; der Index wird erst bei Bedarf geladen.
+  if (!siteSearchScript) throw new Error('src/site-search.js fehlt.');
+  const searchPattern = /function siteSearchEntries\(\) \{[\s\S]*?(?=\n    function initSiteSearch\(\))/;
+  if (!searchPattern.test(next)) throw new Error('Suchfunktionen in site-source.html nicht gefunden.');
+  next = next.replace(searchPattern, () => siteSearchScript.replace(/\s+$/, ''));
 
   return next;
 }
@@ -3941,6 +3952,22 @@ function buildAiGlossary() {
   }, null, 2) + '\n';
 }
 
+async function writeSearchIndex() {
+  const json = await buildSearchIndex({
+    pages: publicPages,
+    glossaryTerms,
+    readPageHtml: async (page) => {
+      try { return await fs.readFile(outputPathFor(page), 'utf8'); } catch { return ''; }
+    },
+  });
+  const version = crypto.createHash('sha1').update(json).digest('hex').slice(0, 10);
+  await writeFileEnsured(path.join(projectRoot, 'assets', 'search-index.json'), json);
+  const siteJsPath = path.join(projectRoot, 'assets', 'site.js');
+  const siteJs = await fs.readFile(siteJsPath, 'utf8');
+  await writeFileEnsured(siteJsPath, siteJs.replace('__SEARCH_INDEX_VERSION__', version));
+  console.error(`Suchindex: ${Buffer.byteLength(json)} Bytes, Version ${version}`);
+}
+
 async function main() {
   validateGlossaryData();
   await ensureSource();
@@ -3958,6 +3985,7 @@ async function main() {
 
   const header = source.slice(bodyStart + '<body>'.length, firstSection).trimEnd();
   const commonAfterSections = source.slice(footerMarker, scriptMarker).trimEnd();
+  siteSearchScript = (await fs.readFile(path.join(projectRoot, 'src', 'site-search.js'), 'utf8')).replace(/\r\n/g, '\n');
   const script = rewriteScript(rawScript);
   const staticCss = `${style}\n\n/* Static SEO/GEO page build overrides */\n.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--primary); color: var(--white); padding: 0.75rem 1rem; border-radius: 0 0 var(--radius) 0; }\n.skip-link:focus { left: 0; }\n.static-site .page { display: block; animation: none; }\n.static-site .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }\n.static-site .nav-link, .static-site .dropdown-item, .static-site .mobile-nav-link { display: inline-flex; align-items: center; text-decoration: none; }\n.static-site .dropdown-item, .static-site .mobile-nav-link { display: flex; }\n.static-site [aria-current=\"page\"] { color: var(--primary); background: var(--primary-light); }\n.static-site a.door-card, .static-site a.entry-card, .static-site a.animal-card, .static-site a.card-link { text-decoration: none; color: inherit; }\n.static-site a.card-link { color: var(--primary); }\n.static-site a.btn { text-decoration: none; }\n.static-site .article-hero-copy, .static-site .article-hero-media { min-width: 0; }\n@media (max-width: 768px) { .static-site .page:not(#startseite) .hero .container { grid-template-columns: minmax(0, 1fr); } .static-site .page:not(#startseite) .hero h1 { overflow-wrap: anywhere; hyphens: auto; } }\n`;
   const designV5Css = await fs.readFile(path.join(projectRoot, 'src', 'design-v5.css'), 'utf8');
@@ -4047,6 +4075,7 @@ ${content}
   await writeFileEnsured(path.join(projectRoot, 'ai', 'faq.json'), buildAiFaq());
   await writeFileEnsured(path.join(projectRoot, 'ai', 'glossary.json'), buildAiGlossary());
   await prerenderSectionPages();
+  await writeSearchIndex();
   await execFileAsync(process.execPath, [path.join(projectRoot, 'tools', 'extract-public-copy-surface.mjs')], {
     cwd: projectRoot,
     windowsHide: true,
