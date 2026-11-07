@@ -861,7 +861,7 @@ export const glossaryAnnotationsByPage = {
     { from: 'beim seriösen Züchter', to: `beim seriösen ${mark('zuechter', 'Züchter')}` },
     { from: 'Brachyzephale Hunde', to: `${mark('brachyzephalie', 'Brachyzephale Hunde')}` },
     { from: 'Schutzgebühr und Vertrag.', to: `${mark('schutzgebuehr', 'Schutzgebühr')} und ${mark('schutzvertrag', 'Vertrag')}.` },
-    { from: 'Welpen aus osteuropäischen Vermehrerstationen', to: `Welpen aus osteuropäischen ${mark('vermehrer', 'Vermehrerstationen')}` },
+    { from: 'Viele Welpen aus Vermehrung kommen', to: `Viele Welpen aus ${mark('vermehrer', 'Vermehrung')} kommen` },
     { from: '<strong>Parvovirose</strong>', to: `<strong>${mark('parvovirose', 'Parvovirose')}</strong>` },
     { from: '<strong>Hüftgelenksdysplasie</strong>', to: `<strong>${mark('hueftdysplasie', 'Hüftgelenksdysplasie')}</strong>` },
     { from: 'nach fehlender Sozialisierung: Training', to: `nach fehlender ${mark('sozialisation', 'Sozialisierung')}: Training` },

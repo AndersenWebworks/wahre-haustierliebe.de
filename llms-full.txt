@@ -362,8 +362,8 @@ Sources:
 ### Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung
 URL: https://wahre-haustierliebe.de/pferde/index.html
 Facts:
-- Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.
-- Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.
+- Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.
+- Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.
 - Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.
 Important boundaries:
 - Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.
@@ -634,7 +634,7 @@ Facts:
 - Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).
 Important boundaries:
 - Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.
-- Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal.
+- Die Befragung selbst konnte nicht abgerufen werden; die Angabe beruht auf der Wiedergabe durch RidersDeal.
 Sources:
 - RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026): https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd
 - Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum): https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/
@@ -720,7 +720,7 @@ Facts:
 - Junge Meerschweinchen sollten mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Deutsche Tierschutzbund beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine strengere Vermittlungsorientierung.
 - Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.
 Important boundaries:
-- Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.
+- Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.
 - Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
 - Seriöse Adoption braucht Zeit und ehrliche Beratung.
 - Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.
@@ -749,15 +749,15 @@ Sources:
 URL: https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html
 Facts:
 - Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.
-- Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).
+- Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier braucht (§ 21 Absatz 5 Nummer 2).
 - Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.
 - Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).
-- Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.
+- Unabhängige Zahlen dazu, woher Kleinsäuger und Vögel im Zoofachhandel stammen, haben wir nicht gefunden.
 Important boundaries:
 - Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.
 - Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.
-- Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.
-- Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.
+- Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.
+- Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten haben wir nicht gefunden.
 - Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung.
 Sources:
 - ZZF: Ratgeber Zoofachhandel: https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/
@@ -998,10 +998,10 @@ Facts:
 - Auch seriöse Zucht erzeugt neue Tiere, während Tierheime nach Umfragen des Tierschutzbundes stark ausgelastet sind.
 Important boundaries:
 - Aussagen von TASSO, VIER PFOTEN, Tierschutzbund und TVT sind Aussagen von Vereinen und Stiftungen und als solche gekennzeichnet.
-- Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel gibt es keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation, auf den sich diese Seite stützt.
-- Die Regelwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.
+- Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel haben wir keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation gefunden.
+- Die Richtwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.
 - Das Gutachten zu § 11b stammt von 1999 und ist nach Angabe der TVT an vielen Stellen veraltet; eine amtlich anerkannte Liste der Qualzuchtmerkmale gab es nach der TVT im Dezember 2023 nicht.
-- Zur Massenzucht von Kleintieren und Vögeln für den Handel liegen keine unabhängigen Zahlen vor, auf die sich diese Seite stützt.
+- Zur Massenzucht von Kleintieren und Vögeln für den Handel haben wir keine unabhängigen Zahlen gefunden.
 - Wer züchtet, übernimmt Verantwortung für Gesundheit und Unterbringung jedes hervorgebrachten Tieres.
 Sources:
 - Tierschutzgesetz § 11: https://www.gesetze-im-internet.de/tierschg/__11.html

@@ -8,7 +8,7 @@
     },
     {
       "question": "Muss mich der Zoofachhandel beraten?",
-      "answer": "Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis nach § 11 Tierschutzgesetz und muss bei der erstmaligen Abgabe einer Tierart schriftliche Informationen zu den wesentlichen Bedürfnissen des Tieres mitgeben (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.",
+      "answer": "Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier wesentlich braucht (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.",
       "source": "https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html"
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "question": "Woran erkenne ich einen seriösen Züchter?",
-      "answer": "Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt diese Seite keinen eigenen Kriterienkatalog vor; die allgemeinen Prüfpunkte gelten auch hier.",
+      "answer": "Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt es keinen eigenen Kriterienkatalog; die allgemeinen Prüfpunkte gelten auch hier.",
       "source": "https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html"
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "question": "Wie finde ich ein Tierheim oder eine Notstation?",
-      "answer": "Der Tierheim-Finder des Deutschen Tierschutzbundes listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.",
+      "answer": "Im Tierheim-Finder des Deutschen Tierschutzbundes standen am 24. Oktober 2026 1.243 Einrichtungen. Man kann dort nach Einrichtungsart filtern, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.",
       "source": "https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html"
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "question": "Ab wann gilt Zucht als gewerbsmäßig?",
-      "answer": "Das Gesetz nennt keine Tierzahl. Die Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz (Fassung von 2000) nennt als Regelwerte unter anderem drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr bei Hunden und fünf oder mehr Katzen oder Würfe bei Katzen. Gewerbsmäßige Zucht von Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz. Wer darunter bleibt, ist nicht automatisch seriös, und die Regeln zum Qualzuchtverbot gelten für jede Zucht.",
+      "answer": "Das Gesetz nennt keine Tierzahl. Die Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz (Fassung von 2000) nennt als Richtwerte unter anderem drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr bei Hunden und fünf oder mehr Katzen oder Würfe bei Katzen. Gewerbsmäßige Zucht von Wirbeltieren braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Wer darunter bleibt, ist nicht automatisch seriös, und die Regeln zum Qualzuchtverbot gelten für jede Zucht.",
       "source": "https://wahre-haustierliebe.de/zucht-und-vermehrung/index.html"
     },
     {
@@ -318,7 +318,7 @@
     },
     {
       "question": "Ab wann darf ein Welpe von seiner Mutter getrennt werden?",
-      "answer": "Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung kommt nur infrage, wenn sie nach tierärztlichem Urteil zum Schutz vor Schmerzen, Leiden oder Schäden erforderlich ist. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.",
+      "answer": "Ein Welpe darf erst im Alter von über acht Wochen vom Muttertier getrennt werden (§ 2 Absatz 4 der Tierschutz-Hundeverordnung). Früher geht es nur, wenn ein Tierarzt die Trennung für nötig hält, um das Tier vor Schmerzen, Leiden oder Schäden zu schützen. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
@@ -328,7 +328,7 @@
     },
     {
       "question": "Was gilt bei Meerschweinchen und Kaninchen?",
-      "answer": "Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Verband beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine vorsichtigere Vermittlungsorientierung. Die 28-Tage-Regel betrifft nur das Absetzen in Zuchtkaninchenbeständen. Beide Arten brauchen Artgenossen.",
+      "answer": "Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Verband beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine vorsichtigere Vermittlungsorientierung. Die 28-Tage-Regel gilt nur für das Absetzen in Zuchtbetrieben für Kaninchen. Beide Arten brauchen Artgenossen.",
       "source": "https://wahre-haustierliebe.de/adoption/index.html"
     },
     {
