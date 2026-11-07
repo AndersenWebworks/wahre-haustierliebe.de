@@ -228,7 +228,7 @@
       "id": "hunde",
       "url": "https://wahre-haustierliebe.de/hunde/index.html",
       "title": "Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen",
-      "description": "Was Hundehaltung wirklich bedeutet: tägliche Zeit, Alleinbleiben, Kosten, Erziehung, Gesundheit und typische Fehler vor der Anschaffung.",
+      "description": "Was ein Hund von dir braucht: Wolf als Stammform, Alleinsein, Auslauf und Garten, Kosten pro Tag, pro Monat und über das ganze Leben, Bedenkzeit und Hilfe zur Entscheidung.",
       "intent": "Hund anschaffen oder Hundehaltung verbessern",
       "keywords": [
         "Hund halten",
@@ -242,9 +242,16 @@
         "Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.",
         "Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.",
         "Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.",
-        "Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, etwa 97 bis 257 Euro im Monat."
+        "Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, etwa 97 bis 257 Euro im Monat.",
+        "Der Hund stammt vom Wolf ab, ist aber kein Wolf: Ein Genomvergleich fand 36 Regionen, die bei der Domestikation verändert wurden, darunter Gene für Gehirn, Nervensystem und Stärkeverdauung.",
+        "Ein Wolfsrudel ist nach der Forschung eine Familie; die Vorstellung vom Alpha-Rudel stützt sich auf Wölfe in Gefangenschaft.",
+        "Eine Wolfsfamilie legt täglich etwa 40 Kilometer zurück; für Hunde gilt als Mindestmaß eine Stunde Auslauf täglich, wünschenswert sind zwei bis vier Stunden.",
+        "Der Aufenthalt im Garten ersetzt keinen Spaziergang."
       ],
       "citationGuardrails": [
+        "Die Forschung zum Wolf erklärt, woher Bedürfnisse kommen, und ist keine Erziehungsanleitung; der Hund ist kein Wolf.",
+        "Wann und wo der Hund domestiziert wurde, ist unter Fachleuten umstritten.",
+        "Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.",
         "Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.",
         "Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.",
         "Zwingerhaltung ist rechtlich nur unter Mindestanforderungen möglich; grundsätzlich verboten ist die Anbindehaltung.",
@@ -274,6 +281,50 @@
         {
           "label": "Bundestierärztekammer",
           "url": "https://www.bundestieraerztekammer.de"
+        },
+        {
+          "label": "NABU: FAQ zum Wolf",
+          "url": "https://www.nabu.de/tiere-und-pflanzen/saeugetiere/wolf/wissen/15812.html"
+        },
+        {
+          "label": "NABU: Artensteckbrief Wolf",
+          "url": "https://www.nabu.de/tiere-und-pflanzen/saeugetiere/wolf/wissen/artensteckbrief.html"
+        },
+        {
+          "label": "Mech (1999): Alpha status, dominance, and division of labor in wolf packs",
+          "url": "https://digitalcommons.unl.edu/usgsnpwrc/353/"
+        },
+        {
+          "label": "Freedman, Wayne (2017): Deciphering the origin of dogs",
+          "url": "https://doi.org/10.1146/annurev-animal-022114-110937"
+        },
+        {
+          "label": "Axelsson u. a. (2013): Genomic signature of dog domestication",
+          "url": "https://doi.org/10.1038/nature11837"
+        },
+        {
+          "label": "Cafazzo u. a. (2014): Free-ranging dogs, PLOS ONE",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0098594"
+        },
+        {
+          "label": "Kowalczyk u. a. (2026): The Role of Olfaction in Dogs",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12897092/"
+        },
+        {
+          "label": "Kinsman u. a. (2020): Sleep duration and behaviours in dogs",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7401528/"
+        },
+        {
+          "label": "Döring u. a. (2008): Genereller Leinenzwang für Hunde, Deutsches Tierärzteblatt",
+          "url": "https://www.tierhyg.vetmed.uni-muenchen.de/forschung/publikationen_download/2008_dtb_12_leine.pdf"
+        },
+        {
+          "label": "Horowitz (2009): Disambiguating the guilty look",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19520245/"
+        },
+        {
+          "label": "AVSAB: Position Statement on the Use of Dominance Theory",
+          "url": "https://avsab.org/wp-content/uploads/2018/03/Dominance_Position_Statement_download-10-3-14.pdf"
         }
       ],
       "social": {
@@ -428,7 +479,7 @@
       "id": "katzen",
       "url": "https://wahre-haustierliebe.de/katzen/index.html",
       "title": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
-      "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.",
+      "description": "Was eine Katze von dir braucht: Falbkatze als Stammform, Wohnung, Außenbereich und Freigang, belegte Maße, Kosten pro Tag, pro Monat und im ganzen Leben.",
       "intent": "Katze anschaffen oder Katzenhaltung artgerechter machen",
       "keywords": [
         "Katze halten",
@@ -443,16 +494,45 @@
         "Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.",
         "Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag, das sind rund 53 bis 112 Euro im Monat (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre, rund 69 Euro im Monat.",
         "Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.",
-        "Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion."
+        "Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.",
+        "Hauskatzen stammen von der Falbkatze ab; die Domestikation fand nach Erbgutanalysen im Nahen Osten statt. Wildkatzen leben überwiegend allein, Hauskatzen können in Gruppen leben.",
+        "Katzen fangen etwa 10 bis 20 kleine Beutetiere am Tag; bis zur Hälfte der Jagden scheitern (AAFP und ISFM).",
+        "Wohnungskatzen können gut leben, wenn die Umgebung ihre Verhaltensbedürfnisse erfüllt; kontrollierter Zugang nach draußen bietet mehr Anregung bei geringerem Risiko."
       ],
       "citationGuardrails": [
         "Die Kosten pro Tag sind eine Hochrechnung aus Spannen für eine gesunde Einzelkatze und keine Zusage; Notfälle, Betreuung und Urlaub sind nicht enthalten.",
         "Eine Quadratmeterzahl nennen die Quellen nicht; entscheidend ist, wie viel der Wohnung für die Katze nutzbar ist.",
-        "Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.",
+        "Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.",
+        "Die Falbkatze als Stammform erklärt, woher Bedürfnisse kommen; sie ist kein Haltungsvorbild, und ein einzelner erfasster Wert für ein Streifgebiet gilt nicht für alle Wildkatzen.",
+        "Die Streifgebietsgröße von 2,6 Hektar stammt aus einer Studie mit 92 Katzen mit Auslauf in Norwegen und gilt nicht für alle Freigängerkatzen.",
         "Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.",
         "Keine Ferndiagnose bei Verhaltensänderungen."
       ],
       "sources": [
+        {
+          "label": "Driscoll u. a. (2007): The Near Eastern origin of cat domestication, Science",
+          "url": "https://doi.org/10.1126/science.1139518"
+        },
+        {
+          "label": "Bradshaw (2018): Normal feline behaviour, Journal of Feline Medicine and Surgery",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/"
+        },
+        {
+          "label": "Animal Diversity Web: Felis silvestris",
+          "url": "https://animaldiversity.org/accounts/Felis_silvestris/"
+        },
+        {
+          "label": "FelineVMA: Meeting the Physical and Emotional Needs of Indoor Cats (2025)",
+          "url": "https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/"
+        },
+        {
+          "label": "FelineVMA: Indoor/Outdoor Lifestyle Position Statement (2024)",
+          "url": "https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/"
+        },
+        {
+          "label": "Bischof u. a. (2022): Mapping the catscape, Scientific Reports",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8993881/"
+        },
         {
           "label": "Deutscher Tierschutzbund: Katzenhaltung",
           "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/"
@@ -689,7 +769,7 @@
       "id": "pferde",
       "url": "https://wahre-haustierliebe.de/pferde/index.html",
       "title": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
-      "description": "Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.",
+      "description": "Wie Pferde in der Natur leben und was das für Box, Offenstall und Weide heißt: Herde, Dauerfressen, Bewegung, Selbsttest und Kosten pro Tag und Monat.",
       "intent": "Pferdehaltung und Pferdekauf realistisch prüfen",
       "keywords": [
         "Pferde halten",
@@ -700,12 +780,16 @@
       ],
       "facts": [
         "Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.",
-        "Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.",
-        "Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle."
+        "Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.",
+        "Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.",
+        "Hauspferde stammen von Pferden der westeurasischen Steppen ab; Przewalski-Pferde sind die einzigen noch lebenden Wildpferde, Mustangs und Brumbies sind verwilderte Nachkommen entlaufener Hauspferde.",
+        "Herden ziehen in der Steppe bis zu 16 Stunden am Tag und legen etwa 20 Kilometer zurück; der Magen fasst nur etwa 8 bis 10 Liter, das Futter wandert schnell hindurch."
       ],
       "citationGuardrails": [
         "Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.",
-        "Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht."
+        "Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.",
+        "Wie nah das Przewalski-Pferd mit dem Hauspferd verwandt ist, ist unter Fachleuten noch umstritten.",
+        "Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
       ],
       "sources": [
         {
@@ -727,6 +811,38 @@
         {
           "label": "Tierschutzgesetz § 2",
           "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Reitstall-Check",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf"
+        },
+        {
+          "label": "WWF Deutschland: Wildpferde",
+          "url": "https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde"
+        },
+        {
+          "label": "Animal Diversity Web: Equus caballus",
+          "url": "https://animaldiversity.org/accounts/Equus_caballus/"
+        },
+        {
+          "label": "Librado u. a. (2021): The origins and spread of domestic horses from the Western Eurasian steppes, Nature 598",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34671162/"
+        },
+        {
+          "label": "CAVALLO: So sehen Pferde (3. Januar 2012)",
+          "url": "https://www.cavallo.de/medizin/so-sehen-pferde/"
+        },
+        {
+          "label": "MSD Veterinary Manual für Tierhaltende: Digestive Disorders of Horses",
+          "url": "https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/introduction-to-digestive-disorders-of-horses"
+        },
+        {
+          "label": "Iowa State University Extension: Digestive Anatomy and Physiology of the Horse (archivierte Seite)",
+          "url": "https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse"
+        },
+        {
+          "label": "Tierschutzverein Dresden: Artgerechte Pferdehaltung",
+          "url": "https://tierschutzdresden.de/artgerechte-pferde-haltung/"
         }
       ],
       "social": {
@@ -1304,7 +1420,7 @@
         "Der Deutsche Tierschutzbund empfiehlt für Kitten mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern; für Katzen nennt das Gesetz keine Wochenzahl.",
         "Der Tierschutzbund rät, sich zuerst in Tierheimen umzusehen und gerade für Wohnungskatzen zwei Katzen aufzunehmen, die sich verstehen.",
         "Deutsche Tierheime nehmen jährlich rund 350.000 Tiere neu auf (Schätzung des Tierschutzbundes).",
-        "Eine Bedenkzeit von drei Nächten und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
+        "Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
       ],
       "citationGuardrails": [
         "Wer ein Tier aus Mitleid kauft, schafft meist Nachfrage für das nächste Tier; der Weg über das Tierheim ist die Empfehlung dieser Seite.",
@@ -1734,18 +1850,18 @@
         "Ratten"
       ],
       "facts": [
-        "Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6 m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20 Prozent mehr.",
+        "Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6 m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20 Prozent mehr.",
         "Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.",
-        "Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.",
+        "Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.",
         "Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.",
         "Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.",
-        "Das Streifgebiet eines Wildkaninchens umfasst oft etwa 4.000 bis 8.000 Quadratmeter; die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.",
+        "Das Streifgebiet eines Wildkaninchens umfasst oft etwa 4.000 bis 8.000 Quadratmeter; die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.",
         "Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.",
-        "Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Beträge pro Tag und pro Monat (rund 90 bis 164 Euro) sind eine Hochrechnung aus denselben Spannen.",
+        "Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Beträge pro Tag und pro Monat (rund 90 bis 164 Euro) sind eine Hochrechnung aus denselben Spannen.",
         "Zwergkaninchen mit besonders kleinem, rundem Kopf haben nach dem Gutachten zu Qualzüchtungen einen verkürzten Kiefer; die Schneidezähne nutzen sich dann nicht ab und werden zu lang."
       ],
       "citationGuardrails": [
-        "Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.",
+        "Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.",
         "Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.",
         "Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen."
       ],
@@ -1833,7 +1949,7 @@
       "id": "kleintiere-meerschweinchen",
       "url": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html",
       "title": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
-      "description": "Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.",
+      "description": "Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.",
       "intent": "Haltung, Kosten, Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.",
       "keywords": [
         "Meerschweinchen halten",
@@ -1845,17 +1961,22 @@
         "Kleintiere"
       ],
       "facts": [
-        "Meerschweinchen brauchen nach dem TVT-Merkblatt Nr. 159 mindestens 2 m² Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 m² mehr.",
+        "Meerschweinchen brauchen nach dem TVT-Merkblatt Nr. 159 mindestens 2 m² Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 m² mehr.",
         "Einzelhaltung ist grundsätzlich abzulehnen; der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren. Kaninchen sind kein Ersatz für Meerschweinchen.",
-        "Meerschweinchen werden 6 bis 8 Jahre alt, selten bis 12; Männchen sind gewöhnlich mit 3 bis 4 Wochen geschlechtsreif, Weibchen schon mit weniger als einem Monat.",
+        "Meerschweinchen werden 6 bis 8 Jahre alt, selten bis 12; Männchen sind gewöhnlich mit 3 bis 4 Wochen geschlechtsreif, Weibchen schon mit weniger als einem Monat.",
         "Für Meerschweinchen gibt es keine eigene gesetzliche Mindestabgabealter-Regel; der Deutsche Tierschutzbund nennt mindestens acht Wochen als Orientierung für Jungtiere.",
-        "Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000 Euro in acht Jahren; die Beträge pro Tag und pro Monat (rund 74 bis 136 Euro) sind eine Hochrechnung aus denselben Spannen.",
-        "Haarlose Meerschweinchen, Tiere mit gekräuselten Tasthaaren und extreme Langhaarformen sieht die TVT als Qualzucht; Gründe sind gestörte Wärmeregulation, fehlende Tasthaare als Sinnesorgan und Verfilzung."
+        "Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000 Euro in acht Jahren; die Beträge pro Tag und pro Monat (rund 74 bis 136 Euro) sind eine Hochrechnung aus denselben Spannen.",
+        "Haarlose Meerschweinchen, Tiere mit gekräuselten Tasthaaren und extreme Langhaarformen sieht die TVT als Qualzucht; Gründe sind gestörte Wärmeregulation, fehlende Tasthaare als Sinnesorgan und Verfilzung.",
+        "Hausmeerschweinchen stammen von südamerikanischen Wildmeerschweinchen ab. Das Aperea lebt in Gruppen aus einem Männchen, ein bis zwei Weibchen und den Jungen in dichtem Bewuchs; sein Revier umfasst 500 bis 1.000 Quadratmeter.",
+        "Meerschweinchen haben mehrere Aktivitätsphasen über 24 Stunden (polyphasisch), sind Fluchttiere und hitzeempfindlich; über 28 Grad kann ein Hitzschlag tödlich enden.",
+        "Der Deutsche Tierschutzbund nennt für ein Außengehege mit drei bis vier Tieren mindestens 4 Quadratmeter, Vier Pfoten für zwei bis drei Tiere mindestens 8 Quadratmeter; die TVT nennt als Mindestmaß 2 Quadratmeter für zwei bis vier Tiere.",
+        "Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“, „ein Tier allein reicht“ und „Kaninchen und Meerschweinchen sind ein schönes Paar“."
       ],
       "citationGuardrails": [
-        "Die Maße gelten für Meerschweinchen bis etwa 1,5 kg; größere Tiere brauchen deutlich mehr Platz.",
+        "Die Maße gelten für Meerschweinchen bis etwa 1,5 kg; größere Tiere brauchen deutlich mehr Platz.",
         "Die Acht-Wochen-Regel der Tierschutz-Hundeverordnung gilt für Welpen und darf nicht als gesetzliche Meerschweinchen-Regel missverstanden werden.",
-        "Eine Frühkastration ist eine tierärztliche Entscheidung und keine Abkürzung für eine schnelle Abgabe."
+        "Eine Frühkastration ist eine tierärztliche Entscheidung und keine Abkürzung für eine schnelle Abgabe.",
+        "Die Umrechnungen „Auf deine Größe“ beruhen auf der mittleren Körperlänge des Aperea (27 cm, Animal Diversity Web) und einer angenommenen Körpergröße von 1,75 m."
       ],
       "sources": [
         {
@@ -1893,11 +2014,27 @@
         {
           "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Cavia aperea (Brazilian guinea pig)",
+          "url": "https://animaldiversity.org/accounts/Cavia_aperea/"
+        },
+        {
+          "label": "Animal Diversity Web: Cavia porcellus (domestic guinea pig)",
+          "url": "https://animaldiversity.org/accounts/Cavia_porcellus/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“ (PDF)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf"
+        },
+        {
+          "label": "Vier Pfoten: Das Meerschweinchen als Haustier",
+          "url": "https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier"
         }
       ],
       "social": {
         "title": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
-        "description": "Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.",
+        "description": "Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-meerschweinchen.png",
         "imageAlt": "Zwei Meerschweinchen sitzen dicht beieinander im Gras.",
         "imageWidth": 1200,
@@ -1933,7 +2070,7 @@
       "id": "kleintiere-hamster",
       "url": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html",
       "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
-      "description": "Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.",
+      "description": "Wie der Goldhamster in der Natur lebt und was er braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Kosten pro Tag und Bedenkzeit.",
       "intent": "Goldhamsterhaltung vor der Anschaffung realistisch prüfen.",
       "keywords": [
         "Kleintiere halten",
@@ -1948,13 +2085,17 @@
         "Goldhamster sind nachtaktiv. Häufiges Wecken am Tag kann Verhaltensstörungen begünstigen.",
         "Ein sicheres Laufrad (25 bis 30 Zentimeter), Mehrkammerhaus, Sandbad und abwechslungsreiche Futtersuche gehören zur Haltung.",
         "Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.",
-        "Der Deutsche Tierschutzbund nennt für ein dreijähriges Tier mindestens 3.130 Euro ohne Tierarzt; die Beträge pro Tag und pro Monat (rund 87 bis 105 Euro) sind eine Hochrechnung aus derselben Spanne."
+        "Der Deutsche Tierschutzbund nennt für ein dreijähriges Tier mindestens 3.130 Euro ohne Tierarzt; die Beträge pro Tag und pro Monat (rund 87 bis 105 Euro) sind eine Hochrechnung aus derselben Spanne.",
+        "Alle Goldhamster in Menschenhand stammen vermutlich von einer Familie, die um 1930 in Syrien gefangen wurde. Wildtiere leben allein in Bauen von bis zu 9 Metern Länge und über 1 Meter Tiefe; bewohnte Baue lagen in einer Messung mindestens 118 Meter auseinander.",
+        "Goldhamster legen im Rad mehr als 18 Kilometer pro Nacht zurück; sie vertragen Kälte besser als Wärme, ab 34 Grad ist es lebensgefährlich, und sie orientieren sich vor allem über den Geruch.",
+        "Der Tierschutzbund nennt Goldhamster strikte Einzelgänger; Hamsterkugeln und -autos, Hamsterwatte und Gitterlaufräder gelten als tierschutzwidriges Zubehör."
       ],
       "citationGuardrails": [
         "Die Angaben dieser Seite beziehen sich auf Goldhamster. Zwerghamsterarten brauchen eine eigene Beurteilung ihrer Haltung.",
         "Mindestmaße allein machen ein Gehege nicht tiergerecht; Einstreu, Rückzug, sichere Einrichtung, Ruhe und Versorgung müssen ebenfalls passen.",
         "Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden.",
-        "Die Kosten sind Mindestwerte ohne Tierarzt."
+        "Die Kosten sind Mindestwerte ohne Tierarzt.",
+        "Das TVT-Merkblatt Nr. 156 (Goldhamster) liegt nur als Bilddatei vor und wurde für die Natur-Angaben nicht ausgewertet; die Angaben stützen sich auf Tierschutzbund und Animal Diversity Web."
       ],
       "sources": [
         {
@@ -1980,11 +2121,15 @@
         {
           "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Mesocricetus auratus (golden hamster)",
+          "url": "https://animaldiversity.org/accounts/Mesocricetus_auratus/"
         }
       ],
       "social": {
         "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
-        "description": "Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.",
+        "description": "Wie der Goldhamster in der Natur lebt und was er braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Kosten pro Tag und Bedenkzeit.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-hamster.png",
         "imageAlt": "Großes Hamstergehege mit tiefer Einstreu und Verstecken.",
         "imageWidth": 1200,
@@ -1995,7 +2140,7 @@
       "id": "kleintiere-ratten",
       "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
       "title": "Ratten halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.",
+      "description": "Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.",
       "intent": "Rattenhaltung vom Tier aus denken und verantwortungsvoll planen.",
       "keywords": [
         "Kleintiere halten",
@@ -2006,12 +2151,15 @@
       ],
       "facts": [
         "Ratten dürfen nach dem TVT-Merkblatt Nr. 160 nicht alleine gehalten werden; am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.",
-        "Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100 cm oder als Turm 80 × 50 × 120 cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.",
-        "Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.",
+        "Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100 cm oder als Turm 80 × 50 × 120 cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.",
+        "Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.",
         "Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.",
-        "Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.",
-        "Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250 Euro ohne Tierarzt, das sind rund 0,49 bis 1,14 Euro pro Tag und rund 15 bis 35 Euro im Monat.",
-        "Bei Nacktratten fehlt das Fell; ohne Fell kann ein Tier seine Körperwärme schlecht regeln, und es können Immundefekte auftreten (Gutachten zu Qualzüchtungen)."
+        "Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.",
+        "Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250 Euro ohne Tierarzt, das sind rund 0,49 bis 1,14 Euro pro Tag und rund 15 bis 35 Euro im Monat.",
+        "Bei Nacktratten fehlt das Fell; ohne Fell kann ein Tier seine Körperwärme schlecht regeln, und es können Immundefekte auftreten (Gutachten zu Qualzüchtungen).",
+        "Farbratten stammen von Laborratten ab, die aus Wanderratten gezüchtet wurden. Die TVT sieht kaum noch Gemeinsamkeiten mit der Stammform, der Zürcher Tierschutz sieht die Grundbedürfnisse als kaum verändert.",
+        "Wanderratten leben in großen Gruppen, graben unterirdische Baue, sind nachts und in der Dämmerung aktiv und haben ein Revier von im Mittel etwa 2.000 Quadratmetern; der Geruchssinn ist ihr wichtigster Sinn.",
+        "Außenhaltung ist für Ratten ungeeignet; Laufräder, Laufbälle und enge Plastikröhren sind ungeeignetes Zubehör; Kontakt zu Hunden und Katzen stresst Ratten."
       ],
       "citationGuardrails": [
         "Das Merkblatt stammt von 2014; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.",
@@ -2069,11 +2217,23 @@
         {
           "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Rattus norvegicus (Norway rat)",
+          "url": "https://animaldiversity.org/accounts/Rattus_norvegicus/"
+        },
+        {
+          "label": "Tierschutz Rheinland-Pfalz: Die Haltung von Ratten (Broschüre)",
+          "url": "https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf"
+        },
+        {
+          "label": "Zürcher Tierschutz: Haltung von Farbratten",
+          "url": "https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat"
         }
       ],
       "social": {
         "title": "Ratten halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.",
+        "description": "Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png",
         "imageAlt": "Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.",
         "imageWidth": 1200,
@@ -2084,7 +2244,7 @@
       "id": "kleintiere-degus-und-chinchillas",
       "url": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html",
       "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.",
+      "description": "Wie Degus und Chinchillas in der Natur leben und was sie brauchen: Gruppen, große Volieren, Temperaturen, Futter und grob geschätzte Kosten pro Tag.",
       "intent": "Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.",
       "keywords": [
         "Kleintiere halten",
@@ -2095,11 +2255,14 @@
       ],
       "facts": [
         "Degus und Chinchillas dürfen nicht allein gehalten werden; Degus am besten zu dritt bis zu fünft, Chinchillas mindestens paarweise.",
-        "Für zwei bis vier Degus nennt die TVT eine nutzbare Fläche von mindestens 2, besser 3 m², für zwei Chinchillas eine Voliere von mindestens 3 m³.",
-        "Chinchillas haben keine Schweiß- und Talgdrüsen; optimal sind 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit, über 28 °C ist nicht zuträglich.",
-        "Degus werden meist 4 bis 6 Jahre alt, selten bis 10; Chinchillas können über 20 Jahre alt werden.",
+        "Für zwei bis vier Degus nennt die TVT eine nutzbare Fläche von mindestens 2, besser 3 m², für zwei Chinchillas eine Voliere von mindestens 3 m³.",
+        "Chinchillas haben keine Schweiß- und Talgdrüsen; optimal sind 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit, über 28 °C ist nicht zuträglich.",
+        "Degus werden meist 4 bis 6 Jahre alt, selten bis 10; Chinchillas können über 20 Jahre alt werden.",
         "Degus dürfen grundsätzlich kein Obst bekommen (Diabetesneigung); Chinchillas vertragen kein frisches Grünfutter, Obst und Gemüse.",
-        "Grobe Schätzung ohne Tierarzt: drei Degus über fünf Jahre etwa 2.310 bis 4.590 Euro (1,26 bis 2,51 Euro pro Tag, etwa 38 bis 76 Euro im Monat), zwei Chinchillas über 20 Jahre etwa 9.300 bis 13.540 Euro (1,27 bis 1,85 Euro pro Tag, etwa 39 bis 56 Euro im Monat)."
+        "Grobe Schätzung ohne Tierarzt: drei Degus über fünf Jahre etwa 2.310 bis 4.590 Euro (1,26 bis 2,51 Euro pro Tag, etwa 38 bis 76 Euro im Monat), zwei Chinchillas über 20 Jahre etwa 9.300 bis 13.540 Euro (1,27 bis 1,85 Euro pro Tag, etwa 39 bis 56 Euro im Monat).",
+        "Degus stammen aus dem Westen Zentralchiles, leben in Gruppen aus ein bis zwei Männchen und zwei bis fünf Weibchen in selbst gegrabenen Bauen, sind tagaktiv und nutzen gemeinsam Sandbäder; eine Gruppe nutzt in der Natur etwa 200 Quadratmeter.",
+        "Chinchillas leben in den Anden in Kolonien, sind dämmerungs- und nachtaktiv, springen aus dem Stand bis zu 1 Meter hoch und stoßen beim Greifen am Rücken Fellbüschel ab; die Höhenangabe schwankt zwischen 3.000 bis 5.000 Metern (Animal Diversity Web) und über 5.000 Metern (TVT).",
+        "Die Bundestierärztekammer nennt Degus für Kinder eher ungeeignet und warnt davor, sie am Schwanz zu halten; der Tierschutzverein München nennt Chinchillas keinesfalls Kuscheltiere und das Kinderzimmer als Standort ungeeignet."
       ],
       "citationGuardrails": [
         "Das Chinchilla-Merkblatt stammt von 2012; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.",
@@ -2197,11 +2360,27 @@
         {
           "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Octodon degus (degu)",
+          "url": "https://animaldiversity.org/accounts/Octodon_degus/"
+        },
+        {
+          "label": "Animal Diversity Web: Chinchilla lanigera (long-tailed chinchilla)",
+          "url": "https://animaldiversity.org/accounts/Chinchilla_lanigera/"
+        },
+        {
+          "label": "Bundestierärztekammer: Kobold aus den Anden, Tierhaltertipp zu Degus (2014)",
+          "url": "https://bundestieraerztekammer.de/presse/pressemeldung.php?X=20140402124003"
+        },
+        {
+          "label": "Tierschutzverein München: Chinchillas – anspruchsvolle Haustiere",
+          "url": "https://tierschutzverein-muenchen.de/ratgeber-notfaelle/ratgeber/kleintiere-ratgeber/chinchillas-anspruchsvolle-haustiere"
         }
       ],
       "social": {
         "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.",
+        "description": "Wie Degus und Chinchillas in der Natur leben und was sie brauchen: Gruppen, große Volieren, Temperaturen, Futter und grob geschätzte Kosten pro Tag.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png",
         "imageAlt": "Kleintiergehege mit Verstecken und mehreren Bereichen.",
         "imageWidth": 1200,
@@ -2212,7 +2391,7 @@
       "id": "exoten-reptilien",
       "url": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
       "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-      "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.",
+      "description": "Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.",
       "intent": "Reptilienhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2223,13 +2402,16 @@
       ],
       "facts": [
         "Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.",
-        "Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.",
-        "UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.",
-        "Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200 Euro ohne Tierarzt, das sind rund 0,78 bis 1,15 Euro pro Tag und 24 bis 35 Euro pro Monat."
+        "Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.",
+        "UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.",
+        "Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200 Euro ohne Tierarzt, das sind rund 0,78 bis 1,15 Euro pro Tag und 24 bis 35 Euro pro Monat.",
+        "Bartagamen sind in der Natur Einzelgänger und tagaktiv; sie leben in trockenen Gebieten im Osten und in der Mitte Australiens und sonnen sich auf erhöhten Plätzen.",
+        "UV-B-Licht lässt die Haut Vitamin D3 bilden, das der Körper für die Kalziumaufnahme braucht; Reptilien können Salmonellen ausscheiden, auch wenn sie gesund wirken."
       ],
       "citationGuardrails": [
         "Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.",
-        "Die Kosten sind eine grobe Schätzung für ein einzelnes Tier aus Beispielpreisen vom November 2026, ohne Tierarzt und Notfälle; Preise und Strombedarf hängen von Gerät und Tarif ab."
+        "Die Kosten sind eine grobe Schätzung für ein einzelnes Tier aus Beispielpreisen vom November 2026, ohne Tierarzt und Notfälle; Preise und Strombedarf hängen von Gerät und Tarif ab.",
+        "Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
       ],
       "sources": [
         {
@@ -2237,7 +2419,7 @@
           "url": "https://www.terraristikladen.de/"
         },
         {
-          "label": "holzterrarium.de: OSB-Terrarium 150 × 80 × 80 cm (November 2026)",
+          "label": "holzterrarium.de: OSB-Terrarium 150 × 80 × 80 cm (November 2026)",
           "url": "https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/"
         },
         {
@@ -2259,11 +2441,23 @@
         {
           "label": "BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)",
           "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
+        },
+        {
+          "label": "Animal Diversity Web: Pogona vitticeps",
+          "url": "https://animaldiversity.org/accounts/Pogona_vitticeps/"
+        },
+        {
+          "label": "MSD Veterinary Manual: Nutritional, Metabolic, and Endocrine Diseases of Reptiles",
+          "url": "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles"
+        },
+        {
+          "label": "infektionsschutz.de (BZgA): Hygiene und Tiere (Stand 17. Juni 2025)",
+          "url": "https://www.infektionsschutz.de/hygienetipps/hygiene-und-tiere/"
         }
       ],
       "social": {
         "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-        "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.",
+        "description": "Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png",
         "imageAlt": "Bartagame ruht auf einem Ast im beleuchteten Terrarium.",
         "imageWidth": 1200,
@@ -2274,7 +2468,7 @@
       "id": "exoten-schildkroeten",
       "url": "https://wahre-haustierliebe.de/exoten/schildkroeten/index.html",
       "title": "Schildkröten halten - Wa(h)re Haustier(liebe)",
-      "description": "Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer und eine grobe Kostenschätzung pro Tag und Monat.",
+      "description": "Wie Griechische Landschildkröten im Mittelmeerraum leben und was das für Freianlage, Gewächshaus und Winterruhe heißt, dazu Selbsttest und Kosten pro Monat.",
       "intent": "Schildkrötenhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2284,15 +2478,18 @@
         "Meldepflicht"
       ],
       "facts": [
-        "Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.",
-        "Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.",
-        "Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.",
-        "Grobe Schätzung nach go4vet für eine einzelne Landschildkröte: 900 bis 1.850 Euro einmalig und etwa 53 bis 73 Euro im Monat einschließlich Tierarzt-Vorsorge und Notfall-Rücklage, das sind rund 1,78 bis 2,47 Euro pro Tag und 54 bis 75 Euro pro Monat über 80 Jahre bei gleichbleibenden Preisen."
+        "Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.",
+        "Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.",
+        "Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.",
+        "Grobe Schätzung nach go4vet für eine einzelne Landschildkröte: 900 bis 1.850 Euro einmalig und etwa 53 bis 73 Euro im Monat einschließlich Tierarzt-Vorsorge und Notfall-Rücklage, das sind rund 1,78 bis 2,47 Euro pro Tag und 54 bis 75 Euro pro Monat über 80 Jahre bei gleichbleibenden Preisen.",
+        "In der Natur nutzt ein erwachsenes Tier meist ein bis zwei Hektar und legt am Tag im Mittel 80 bis 85 Meter zurück; die Winterruhe dauert je nach Gebiet von Ende Oktober oder November bis Februar oder März."
       ],
       "citationGuardrails": [
         "Das TVT-Merkblatt beschreibt die Griechische Landschildkröte; Maurische Landschildkröten haben eigene Ansprüche.",
         "Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest.",
-        "Die Kosten sind eine grobe Schätzung aus der Praxis-Information von go4vet für ein einzelnes Tier, ohne Gruppe und ohne Operationen; über 80 Jahre ändern sich Preise."
+        "Die Kosten sind eine grobe Schätzung aus der Praxis-Information von go4vet für ein einzelnes Tier, ohne Gruppe und ohne Operationen; über 80 Jahre ändern sich Preise.",
+        "Die Angaben zu Revier, Wegstrecke und Tagesrhythmus stammen aus Feldstudien an wild lebenden Tieren in Frankreich, Griechenland, Italien und Spanien und gelten im Mittel; einzelne Tiere weichen ab.",
+        "Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
       ],
       "sources": [
         {
@@ -2314,13 +2511,25 @@
         {
           "label": "Auffangstation für Reptilien München e. V.",
           "url": "https://www.reptilienauffangstation.de"
+        },
+        {
+          "label": "Bertolero u. a. (2011): Testudo hermanni, Hermann’s Tortoise (IUCN/SSC Tortoise and Freshwater Turtle Specialist Group)",
+          "url": "https://iucn-tftsg.org/wp-content/uploads/file/Accounts/crm_5_059_hermanni_v1_2011.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Testudo hermanni",
+          "url": "https://animaldiversity.org/accounts/Testudo_hermanni/"
+        },
+        {
+          "label": "Tierschutzverein Dresden: Artgerechte Schildkrötenhaltung",
+          "url": "https://tierschutzdresden.de/artgerechte-schildkroeten-haltung/"
         }
       ],
       "social": {
         "title": "Schildkröten halten - Wa(h)re Haustier(liebe)",
-        "description": "Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer und eine grobe Kostenschätzung pro Tag und Monat.",
+        "description": "Wie Griechische Landschildkröten im Mittelmeerraum leben und was das für Freianlage, Gewächshaus und Winterruhe heißt, dazu Selbsttest und Kosten pro Monat.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-schildkroeten.png",
-        "imageAlt": "Reptil sitzt auf einem Stein in seinem Gehege.",
+        "imageAlt": "Bartagame sitzt auf einem Ast im Terrarium.",
         "imageWidth": 1200,
         "imageHeight": 630
       }
@@ -2329,7 +2538,7 @@
       "id": "exoten-fische",
       "url": "https://wahre-haustierliebe.de/exoten/fische/index.html",
       "title": "Fische halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Gutachten und Schweizer Tierschutz, dazu Kosten pro Tag und Monat.",
+      "description": "Wie Goldfische in der Natur leben und was das für Aquarium und Teich heißt: Gruppe, Beckenmaß, Wasserwerte, Futter, dazu Selbsttest und Kosten pro Monat.",
       "intent": "Fischhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2339,19 +2548,22 @@
         "Meldepflicht"
       ],
       "facts": [
-        "Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.",
-        "Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.",
-        "Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.",
-        "Grobe Schätzung für fünf Goldfische in einem 200-Liter-Becken über 20 Jahre aus Beispielpreisen deutscher Onlineshops: etwa 3.690 bis 5.190 Euro ohne Tierarzt, das sind rund 0,51 bis 0,71 Euro pro Tag und 15 bis 22 Euro pro Monat."
+        "Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.",
+        "Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.",
+        "Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.",
+        "Grobe Schätzung für fünf Goldfische in einem 200-Liter-Becken über 20 Jahre aus Beispielpreisen deutscher Onlineshops: etwa 3.690 bis 5.190 Euro ohne Tierarzt, das sind rund 0,51 bis 0,71 Euro pro Tag und 15 bis 22 Euro pro Monat.",
+        "Goldfische stammen aus Ostasien und leben dort gesellig in flachen, bewachsenen Gewässern; welche wilde Art genau ihr Vorfahr ist, beschreiben die Quellen unterschiedlich (Giebel oder Chinesische Silberkarausche)."
       ],
       "citationGuardrails": [
         "Das Zierfisch-Gutachten von 1998 wird überarbeitet; die Maße können sich ändern.",
         "Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler.",
-        "Die Kosten sind eine grobe Schätzung aus Beispielpreisen vom November 2026; Mengen für Bodengrund, Futter und Wasseraufbereiter sind Annahmen, Tierarzt, Unterschrank und Beleuchtung sind nicht eingerechnet."
+        "Die Kosten sind eine grobe Schätzung aus Beispielpreisen vom November 2026; Mengen für Bodengrund, Futter und Wasseraufbereiter sind Annahmen, Tierarzt, Unterschrank und Beleuchtung sind nicht eingerechnet.",
+        "Die Quellen nennen unterschiedliche Tagesrhythmen (tagaktiv oder dämmerungsaktiv) und unterschiedliche Vorfahren des Goldfischs; die Seite gibt beides wieder.",
+        "Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
       ],
       "sources": [
         {
-          "label": "Hornbach: Vollglas-Aquarium Marina 100 × 40 × 50 cm (November 2026)",
+          "label": "Hornbach: Vollglas-Aquarium Marina 100 × 40 × 50 cm (November 2026)",
           "url": "https://www.hornbach.de/p/vollglas-aquarium-marina-100-x-40-x-50-cm-floatglas-glasstaerke-8-0-mm-200-l/3477416/"
         },
         {
@@ -2377,11 +2589,19 @@
         {
           "label": "BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)",
           "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
+        },
+        {
+          "label": "Fachstelle Fischwissen: Goldfisch (Carassius auratus)",
+          "url": "https://fischwissen.ch/de/artenportraits/goldfisch"
+        },
+        {
+          "label": "Animal Diversity Web: Carassius auratus",
+          "url": "https://animaldiversity.org/accounts/Carassius_auratus/"
         }
       ],
       "social": {
         "title": "Fische halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Gutachten und Schweizer Tierschutz, dazu Kosten pro Tag und Monat.",
+        "description": "Wie Goldfische in der Natur leben und was das für Aquarium und Teich heißt: Gruppe, Beckenmaß, Wasserwerte, Futter, dazu Selbsttest und Kosten pro Monat.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-fische.png",
         "imageAlt": "Goldfische schwimmen zwischen Pflanzen in einem Aquarium.",
         "imageWidth": 1200,
@@ -2548,7 +2768,7 @@
       ],
       "facts": [
         "Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.",
-        "Ob eine Bedenkzeit von mindestens drei Nächten die Haltung verbessert, ist für Pferde nicht untersucht."
+        "Ob eine Bedenkzeit von einer Woche die Haltung verbessert, ist für Pferde nicht untersucht."
       ],
       "citationGuardrails": [
         "Eine Checkliste ersetzt keine Beratung durch eine Tierarztpraxis und keinen Stallbesuch."

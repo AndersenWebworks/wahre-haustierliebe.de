@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7715,7 +7739,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         <div class="pex-bedenkzeit">
           <p><strong>Ein Pferd muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Pferd an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Pferde nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du siehst das Pferd an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Pferde nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
         </div>
         <h3>Checkliste</h3>
         <ul class="checklist">
@@ -7732,7 +7756,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
         <div class="pex-karte">
           <span class="pex-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
           <ul>
-            <li><span><b>Wenn</b> es heißt „Das Pferd ist morgen weg, es gibt andere Interessenten“,</span><span><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span><b>Wenn</b> es heißt „Das Pferd ist morgen weg, es gibt andere Interessenten“,</span><span><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
             <li><span><b>Wenn</b> ich das Pferd nicht dort sehen darf, wo es lebt,</span><span><b>dann</b> fahre ich ohne Pferd wieder heim.</span></li>
             <li><span><b>Wenn</b> das Pferd allein ohne Artgenossen stehen soll,</span><span><b>dann</b> nehme ich keins mit.</span></li>
             <li><span><b>Wenn</b> es keine tierärztliche Ankaufsuntersuchung (Gesundheitsprüfung vor dem Kauf) geben soll,</span><span><b>dann</b> bestehe ich darauf oder sage ab (sie kostet laut RidersDeal etwa 300 bis 1.200 Euro).</span></li>
@@ -7796,7 +7820,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.</li><li>Ob eine Bedenkzeit von mindestens drei Nächten die Haltung verbessert, ist für Pferde nicht untersucht.</li></ul>
+              <ul><li>Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.</li><li>Ob eine Bedenkzeit von einer Woche die Haltung verbessert, ist für Pferde nicht untersucht.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>

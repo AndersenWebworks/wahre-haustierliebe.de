@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale</title>
-  <meta name="description" content="Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.">
+  <meta name="description" content="Was eine Katze von dir braucht: Falbkatze als Stammform, Wohnung, Außenbereich und Freigang, belegte Maße, Kosten pro Tag, pro Monat und im ganzen Leben.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7199,7 +7223,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "WebPage",
   "name": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
   "headline": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
-  "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.",
+  "description": "Was eine Katze von dir braucht: Falbkatze als Stammform, Wohnung, Außenbereich und Freigang, belegte Maße, Kosten pro Tag, pro Monat und im ganzen Leben.",
   "url": "https://wahre-haustierliebe.de/katzen/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7283,7 +7307,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "Article",
   "headline": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
   "name": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
-  "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.",
+  "description": "Was eine Katze von dir braucht: Falbkatze als Stammform, Wohnung, Außenbereich und Freigang, belegte Maße, Kosten pro Tag, pro Monat und im ganzen Leben.",
   "url": "https://wahre-haustierliebe.de/katzen/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/katzen/index.html",
   "image": {
@@ -7331,6 +7355,12 @@ body.static-site .start-trust { margin-top: 1.25rem; }
     }
   ],
   "citation": [
+    "https://doi.org/10.1126/science.1139518",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/",
+    "https://animaldiversity.org/accounts/Felis_silvestris/",
+    "https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/",
+    "https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8993881/",
     "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/",
     "https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/",
     "https://journals.sagepub.com/doi/10.1177/1098612X21993657",
@@ -7716,12 +7746,14 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         </figure>
       </div>
-    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#katzen-bedarf">Was eine Katze von dir braucht</a></li><li><a href="#katzen-tag">Ein Tag aus Sicht von zwei Katzen</a></li><li><a href="#katzen-lebenszeit">Was eine Katze über ihr ganzes Leben kostet</a></li><li><a href="#katzen-bevor">Bevor du entscheidest</a></li><li><a href="#katzen-weitere-themen">Weitere Themen</a></li></ol></details></nav>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#katzen-ausweg">Du hast schon eine Katze? So kommst du Schritt für Schritt weiter</a></li><li><a href="#katzen-natur">So lebt die Falbkatze in der Natur – und was das für deine Katze heißt</a></li><li><a href="#katzen-bedarf">Was eine Katze von dir braucht</a></li><li><a href="#katzen-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#katzen-tag">Ein Tag aus Sicht einer Katze: ohne Struktur und gut ausgestattet</a></li><li><a href="#katzen-verkaufssaetze">Sätze, die man oft hört – und was Katzen dazu brauchen</a></li><li><a href="#katzen-lebenszeit">Was eine Katze über ihr ganzes Leben kostet</a></li><li><a href="#katzen-selbsttest">Passen Katzen gerade in dein Leben?</a></li><li><a href="#katzen-bevor">Bevor du entscheidest</a></li><li><a href="#katzen-weitere-themen">Weitere Themen</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
         <p class="kv-einstieg">Du überlegst, eine Katze aufzunehmen, oder lebst schon mit einer? Dreh die Frage einmal um: <strong>Was braucht eine Katze von dir, und was davon hast du schon?</strong></p>
         <p class="kv-randnotiz">Katzen gelten oft als anspruchslos. Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> hält dagegen: „Doch diese Annahme ist falsch. Katzen haben ebenfalls vielfältige Bedürfnisse und ihre Haltungsanforderungen sind nicht zu unterschätzen.“</p>
+        <p class="nat-sprung"><a class="btn btn-outline" href="#katze-karte">Zur Karte für den Besuch beim Anbieter</a></p>
+        <nav class="nat-uebersicht" aria-label="Übersicht dieser Seite"><details><summary>Übersicht: Springe zu …</summary><ol><li><a href="#katzen-ausweg">Du hast schon eine Katze?</a></li><li><a href="#katzen-natur">So lebt die Falbkatze in der Natur</a></li><li><a href="#katzen-bedarf">Was eine Katze von dir braucht</a></li><li><a href="#katzen-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#katzen-tag">Ein Tag aus Sicht einer Katze</a></li><li><a href="#katzen-verkaufssaetze">Sätze, die man oft hört</a></li><li><a href="#katzen-lebenszeit">Was eine Katze kostet</a></li><li><a href="#katzen-selbsttest">Passen Katzen in dein Leben?</a></li><li><a href="#katzen-bevor">Bevor du entscheidest</a></li></ol></details></nav>
 
         <div class="info-box">
           <h3>Auf einen Blick</h3><div class="article-rhythm metric-grid" data-enhancement="katzen-merkmasse">
@@ -7737,6 +7769,115 @@ body.static-site .start-trust { margin-top: 1.25rem; }
             <li>Katzen verbergen Schmerz instinktiv – Verhaltensänderungen sind oft das einzige Warnsignal.</li>
           </ul>
         </div>
+
+        <div class="section-feedback-heading"><h2 id="katzen-ausweg">Du hast schon eine Katze? So kommst du Schritt für Schritt weiter</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-ausweg" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Eine Katze kann in einer Wohnung gut leben, wenn die Umgebung ihre natürlichen Bedürfnisse erfüllt (<a href="https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/" target="_blank" rel="noopener noreferrer">FelineVMA 2025</a>). Das lässt sich Schritt für Schritt verbessern, und du bestimmst das Tempo. Deine Katze muss dafür nirgendwohin.</p>
+        <ol class="nat-schritte">
+          <li><strong>Lass deine Katze untersuchen.</strong> Katzen jeden Alters sollten mindestens einmal im Jahr gründlich untersucht werden, Senioren über zehn Jahre alle sechs Monate (<a href="https://journals.sagepub.com/doi/10.1177/1098612X21993657" target="_blank" rel="noopener noreferrer">AAHA und AAFP 2021</a>). Der Tierschutzbund rät, jede Katze kastrieren zu lassen, mit einem Transponder zu kennzeichnen und kostenlos bei FINDEFIX zu registrieren (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+          <li><strong>Trenne die wichtigen Orte.</strong> Futter, Wasser, Toilette, Kratzmöglichkeit und Ruheplatz gehören an getrennte Stellen, in Haushalten mit mehreren Katzen jeweils mindestens zweimal (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>). Eine Toilette mehr, als Katzen im Haus leben, und möglichst weit weg von Futter und Wasser (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+          <li><strong>Biete Jagd und Spiel.</strong> Futterspielzeug, Fummelbretter und Spielzeug, das Beute nachahmt, ersetzen die Jagd. Der Tierschutzbund empfiehlt ein festes Ritual zu einer bestimmten Tageszeit (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Bei Spielen nimmst du Spielzeug und nicht Hände oder Füße (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</li>
+          <li><strong>Gib ihr Höhe und Rückzug.</strong> Klettermöglichkeiten, erhöhte Liegeflächen, ein Fensterplatz und mehrere Rückzugsbereiche gehören dazu (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Mindestens zwei Ruheplätze, auch einer mit Blick nach draußen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</li>
+          <li><strong>Sichere den Außenbereich und prüfe, ob eine zweite Katze passt.</strong> Ein gesicherter Balkon bringt Abwechslung und frische Luft (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Eine zweite Katze ist nur dann eine Hilfe, wenn die beiden zueinander passen. Zeigt sich eine Katze als Einzelgängerin, bleibt sie am besten allein (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Mehr dazu unter <a href="../katzen/sozialverhalten/index.html">Einzeljäger bedeutet nicht Einzelgänger</a> und <a href="../katzen/wohnungshaltung/index.html">Wohnung, Freigang oder gesicherter Außenbereich</a>.</li>
+        </ol>
+        <div class="nat-ausweg-fuss">
+          <p>Fehlt dir gerade Platz oder Geld für eine weitere Katze? Dann ist „Noch nicht“ eine gute Entscheidung. Hilfe dabei findest du auf der Seite <a href="../noch-nicht-bereit/index.html">Noch nicht bereit</a>. Tiere aus dem Tierschutz vermittelt die Seite <a href="../adoption/index.html">Adoption statt Kauf</a>.</p>
+        </div>
+
+        <div class="section-feedback-heading"><h2 id="katzen-natur">So lebt die Falbkatze in der Natur – und was das für deine Katze heißt</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-natur" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p class="nat-hinweis">Hauskatzen stammen von der Falbkatze ab, einer Wildkatze. Sie behalten viele Eigenschaften der Wildform (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>). Was sie brauchen, erklärt deshalb das Leben der Falbkatze.</p>
+
+        <h3>Woher sie kommen</h3>
+        <p>Hauskatzen stammen von der Falbkatze ab, auch Afrikanische Wildkatze genannt. Nach Erbgutanalysen von 979 Hauskatzen und fünf Wildkatzengruppen fand die Domestikation im Nahen Osten statt, zur Zeit der ersten Bauerndörfer im Fruchtbaren Halbmond (<a href="https://doi.org/10.1126/science.1139518" target="_blank" rel="noopener noreferrer">Driscoll u. a. 2007</a>). Nagetiere, die als Schädlinge in menschlichen Siedlungen lebten, waren die ursprüngliche Beute (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw 2018</a>). Die Falbkatze kommt in ganz Afrika in vielen Lebensräumen vor, nur in tropischen Regenwäldern fehlt sie. In Wüsten bleibt sie in Gebirgen und an Wasserläufen (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p>
+
+        <h3>So leben Wildkatzen</h3>
+        <dl class="nat-liste">
+          <div class="nat-eintrag"><dt>Allein oder Gruppe</dt><dd>Wildkatzen leben überwiegend allein. Kater markieren ihr Revier mit Urin, und es überlappt mit den Revieren mehrerer Weibchen (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Hauskatzen können dagegen in Gruppen leben: Um reichliche Futterquellen bilden sich Kolonien. Weibchen bilden den Kern, verwandte Tiere helfen bei der Aufzucht der Jungen, Kater arbeiten nicht zusammen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw 2018</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Revier</dt><dd>Ein erfasster Kater hatte ein Streifgebiet von 4,3&nbsp;km² (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Das ist nur ein Einzelwert, die Größe schwankt mit dem Lebensraum.</dd></div>
+          <div class="nat-eintrag"><dt>Tagesrhythmus</dt><dd>Wildkatzen sind meist nacht- und dämmerungsaktiv, bei wenig Störung auch tagsüber (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Nahrungssuche</dt><dd>Die Nahrung besteht hauptsächlich aus kleinen Nagetieren wie Mäusen und Ratten, regional sind Kaninchen bevorzugte Beute (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Hauskatzen sind Einzeljäger. Sie fangen etwa 10 bis 20 kleine Beutetiere am Tag, und bis zur Hälfte der Jagden scheitern (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Sinne</dt><dd>Der Geruchssinn ist etwa tausendmal empfindlicher als der des Menschen. Katzen hören über eine Oktave höher als wir, bis in den Ultraschall. Ihre Augen sind an sehr schwaches Licht angepasst, Farben unterscheiden sie schlechter als Menschen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw 2018</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Sicherheit</dt><dd>Katzen verstecken sich bei Bedrohung eher, als zu kämpfen, und sie verbergen oft Krankheit oder Schmerz (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>). Sie verlassen sich stärker auf die Sicherheit ihres Reviers als auf Bindungen an Menschen oder andere Katzen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw 2018</a>).</dd></div>
+        </dl>
+
+        <h3>Was das für die Haltung heißt</h3>
+        <p>Maßstab ist, was die Katze braucht. Das Mindestmaß ist nur die Untergrenze. Je nach Haltungsform liegen die Schwerpunkte anders.</p>
+        <div class="nat-haltung-grid">
+          <section class="nat-haltung" aria-labelledby="katzen-natur-wohnung">
+            <h4 id="katzen-natur-wohnung">Wohnung</h4>
+            <ul>
+              <li>Wohnungskatzen können gut leben, wenn die Umgebung ihre natürlichen Verhaltensbedürfnisse erfüllt (<a href="https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/" target="_blank" rel="noopener noreferrer">FelineVMA 2025</a>). Fehlt das, drohen Angst, stressbedingte Erkrankungen und Verhaltensprobleme (<a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>).</li>
+              <li>Dazu gehören ein sicherer Rückzugsort, getrennte wichtige Orte, Spiel und Jagd, verlässlicher Umgang und Rücksicht auf den Geruchssinn (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</li>
+              <li>Mehr dazu auf der Seite <a href="../katzen/wohnungshaltung/index.html">Wohnung, Freigang oder gesicherter Außenbereich</a>.</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="katzen-natur-aussen">
+            <h4 id="katzen-natur-aussen">Gesicherter Außenbereich</h4>
+            <ul>
+              <li>Kontrollierter Zugang bietet mehr Anregung bei geringerem Risiko. Genannt werden ein Außengehege, ein katzensicherer Zaun oder Spaziergänge mit Geschirr (<a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>).</li>
+              <li>Ein gesicherter Balkon bringt Abwechslung und frische Luft (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+              <li>Nachts sollten Katzen drinnen oder in einem Außengehege mit Zugang zum Haus sein (<a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="katzen-natur-freigang">
+            <h4 id="katzen-natur-freigang">Freigang</h4>
+            <ul>
+              <li>Der Tierschutzbund empfiehlt Freigang nur in ruhigen, grünen Gegenden und mit ständigem Zugang zurück ins Haus, zum Beispiel über eine Katzenklappe. Kätzchen gewöhnen sich erst einige Wochen ein, und die ersten Ausflüge begleitest du (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+              <li>In einer Studie mit 92 Katzen mit Auslauf in Norwegen verbrachten die Tiere im Mittel 79&nbsp;Prozent ihrer Zeit draußen im Umkreis von 50&nbsp;Metern um das Zuhause. Ihr durchschnittliches Streifgebiet war 2,6 Hektar groß (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8993881/" target="_blank" rel="noopener noreferrer">Bischof u. a. 2022</a>).</li>
+              <li>Junge und männliche Katzen riskieren eher Verletzungen und brauchen mehr Aufsicht (<a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>). Freigänger sollten kastriert, gekennzeichnet und registriert sein (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+            </ul>
+          </section>
+        </div>
+
+        <h3>In der Natur – im Haushalt</h3>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Gesellschaft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Überwiegend allein, Kolonien um reichliche Futterquellen (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw 2018</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Im Haushalt</span><p>Für reine Wohnungskatzen rät der Tierschutzbund zu zwei Katzen, die sich verstehen. Zeigt sich eine Katze als Einzelgängerin, bleibt sie allein (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Jagd und Futter</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>10 bis 20 kleine Beutetiere am Tag, bis zur Hälfte der Jagden scheitern (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Im Haushalt</span><p>AAFP und ISFM empfehlen, dass sich die Katze ihr Futter erarbeitet, zum Beispiel mit Futterspielzeug. Der Tierschutzbund nennt Fummelbretter (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>; <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Revier</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Ein erfasster Kater: 4,3&nbsp;km² (<a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Im Haushalt</span><p>Eine Quadratmeterzahl nennen die Leitlinien nicht. Wichtiger ist, wie viel der Wohnung die Katze nutzen kann (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>; <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Rückzug</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Verstecken statt kämpfen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Im Haushalt</span><p>Jede Katze braucht einen eigenen erhöhten Rückzugsort, am besten mit mehr als einem Zugang (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Warum Haltung am Ideal statt am Üblichen gemessen wird, steht auf der Seite <a href="../realhaltung/index.html">Realhaltung</a>. Katzen sind keine Wildtiere, ihre Bedürfnisse stammen aber aus dem Leben der Wildform. Wo bei Wildtieren die Grenze verläuft, steht auf der Seite <a href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>.</p>
+
+        <h3>Auf deine Größe umgerechnet</h3>
+        <div class="nat-vergleiche-koerper">
+          <div class="nat-koerper">
+            <p><strong>Das Revier.</strong> Die Katzen in der norwegischen Studie hatten im Mittel ein Streifgebiet von 2,6 Hektar, das sind 26.000&nbsp;m² (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8993881/" target="_blank" rel="noopener noreferrer">Bischof u. a. 2022</a>). Eine Wohnung von 60&nbsp;m² ist daran gemessen nur ein winziger Teil. Deshalb zählt, wie gut die Wohnung ausgestattet ist, mit Höhe, Rückzug und getrennten Orten.</p>
+            <p class="nat-rechnung">Rechnung: 2,6&nbsp;ha × 10.000&nbsp;m²/ha = 26.000&nbsp;m²; 26.000 ÷ 60 ≈ 433. Annahme: Die Wohnung hat 60&nbsp;m² und steht der Katze ganz offen.</p>
+          </div>
+          <div class="nat-koerper">
+            <p><strong>Die Jagd.</strong> Eine Katze fängt 10 bis 20 kleine Beutetiere am Tag, und bis zur Hälfte der Jagden scheitern (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>). Dann sind das bis zu 20 bis 40 Jagden. Für dich wäre das, als müsstest du täglich 20- bis 40-mal losziehen, um dein Essen zu bekommen. Ein voller Napf nimmt der Katze diese Beschäftigung.</p>
+            <p class="nat-rechnung">Rechnung: 10 ÷ 0,5 = 20; 20 ÷ 0,5 = 40.</p>
+          </div>
+        </div>
+
+        <h3>Quellen</h3>
+        <ul class="source-list" aria-label="Quellen zu: So lebt die Falbkatze in der Natur">
+          <li><a href="https://doi.org/10.1126/science.1139518" target="_blank" rel="noopener noreferrer">Driscoll u. a. (2007): The Near Eastern origin of cat domestication</a>, Science – Domestikation im Fruchtbaren Halbmond, 979 Hauskatzen und fünf Wildkatzengruppen.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw (2018): Normal feline behaviour … and why problem behaviours develop</a>, Journal of Feline Medicine and Surgery – solitärer, territorialer Vorfahr, Kolonien, Sinne.</li>
+          <li><a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Felis silvestris</a> – Lebensraum, überwiegend Einzelgängerin, Streifgebiet eines Katers, Nacht- und Dämmerungsaktivität, Beute.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM: Feline Environmental Needs Guidelines (2013)</a> – 10 bis 20 Beutetiere am Tag, fünf Säulen der Umwelt, Verstecken statt Kämpfen.</li>
+          <li><a href="https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/" target="_blank" rel="noopener noreferrer">FelineVMA: Meeting the Physical and Emotional Needs of Indoor Cats (2025)</a> – Wohnungskatzen können gut leben, wenn Verhaltensbedürfnisse erfüllt sind.</li>
+          <li><a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA: Indoor/Outdoor Lifestyle Position Statement (2024)</a> – Wohnung, kontrollierter Zugang, Freigang.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8993881/" target="_blank" rel="noopener noreferrer">Bischof u. a. (2022): Mapping the „catscape“ formed by a population of pet cats with outdoor access</a>, Scientific Reports 12 – Streifgebiet von 92 Katzen mit Auslauf.</li>
+          <li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenhaltung</a> – Artgenossen, Toiletten, Spiel, Balkon, Freigang, Kastration und Registrierung.</li>
+          <li><a href="https://journals.sagepub.com/doi/10.1177/1098612X21993657" target="_blank" rel="noopener noreferrer">AAHA und AAFP (2021): Feline Life Stage Guidelines</a> – Untersuchung jährlich, Senioren halbjährlich.</li>
+        </ul>
+        <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
 
         <div class="section-feedback-heading"><h2 id="katzen-bedarf">Was eine Katze von dir braucht</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-bedarf" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
@@ -7809,16 +7950,76 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </dl>
         </section>
 
-        <div class="section-feedback-heading"><h2 id="katzen-tag">Ein Tag aus Sicht von zwei Katzen</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <ol class="zeitleiste">
-          <li><span class="zeitleiste-when">Den größten Teil des Tages: Ruhe</span><p class="zeitleiste-what">Zwei Katzen schlafen im Mittel mehr als 13 Stunden. Dafür brauchen sie mindestens zwei Plätze, an die sie sich zurückziehen können, und niemanden, der sie dort herausholt.</p></li>
-          <li><span class="zeitleiste-when">Zwischendurch: Jagd und Spiel</span><p class="zeitleiste-what">Katzen jagen allein und fangen in der Natur viele kleine Beutetiere. In der Wohnung ersetzen Spielzeug, das Beute nachahmt, und Futtersuche dieses Verhalten. Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt, daraus ein festes Ritual zu einer bestimmten Tageszeit zu machen.</p></li>
-          <li><span class="zeitleiste-when">Wenn sie sich mögen: Nähe</span><p class="zeitleiste-what">Katzen, die zu einer Gruppe gehören, ruhen zusammen, putzen sich gegenseitig und reiben sich aneinander. Dass zwei Katzen am selben Napf oder auf demselben Sofa zusammenkommen, beweist das nicht. Vielleicht steht nur an dieser einen Stelle alles, was sie brauchen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</p></li>
-          <li><span class="zeitleiste-when">Mehrmals täglich: du</span><p class="zeitleiste-what">Du reinigst die Toiletten; der Tierschutzbund empfiehlt, die Hinterlassenschaften mehrmals täglich zu entfernen. Du stellst frisches Wasser und Futter hin und siehst beide Katzen an: Fressen sie, benutzen sie die Toilette, bewegen sie sich wie sonst?</p></li>
-          <li><span class="zeitleiste-when">Bei Lärm oder Besuch: Rückzug</span><p class="zeitleiste-what">Sich zu verstecken ist ein Weg, mit Stress umzugehen. Ein Platz, an dem eine Katze nicht gesehen wird, gehört deshalb zur Grundausstattung und ist keine Dekoration (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</p></li>
-          <li><span class="zeitleiste-when">Einmal im Jahr: du</span><p class="zeitleiste-what">Gründliche Untersuchung in der Tierarztpraxis, im Seniorenalter alle sechs Monate.</p></li>
+        <div class="section-feedback-heading"><h2 id="katzen-gute-haltung">So kann ein gutes Zuhause aussehen</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-gute-haltung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Gute Haltung braucht keinen Palast. Sie braucht ein vollständiges Revier mit den richtigen Orten und Dingen, die zum Verhalten der Katzen passen. Zwei Beispiele für zwei Katzen, die sich verstehen:</p>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 1: Eine Wohnung mit getrennten Orten und Höhe</h3>
+          <ul>
+            <li>Drei Toiletten für zwei Katzen, ohne Haube, an ruhigen Plätzen mit Übersicht und weit weg von Futter und Wasser (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+            <li>Mindestens zwei Futterstellen und zwei Ruheplätze an getrennten Orten, davon einer mit Blick nach draußen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</li>
+            <li>Klettermöglichkeiten, erhöhte Liegeflächen, Aussichtspunkte und Kratzmöglichkeiten (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+            <li>Täglich Spiel mit Spielzeug, das Beute nachahmt, als Ritual zu einer festen Tageszeit; das Futter dient teilweise als Aufgabe (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</li>
+          </ul>
+        </div>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 2: Eine Wohnung mit gesichertem Außenbereich</h3>
+          <ul>
+            <li>Die Ausstattung aus Beispiel 1 bleibt, denn der Außenbereich ergänzt die Wohnung und ersetzt sie nicht.</li>
+            <li>Ein gesicherter Balkon oder ein Außengehege bietet Licht, Luft, Gerüche und Wetter (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>; <a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>).</li>
+            <li>Nachts sind die Katzen drinnen oder in einem Außengehege mit Zugang zum Haus (<a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>).</li>
+            <li>Wie das Netz und die Türen gesichert werden, steht auf der Seite <a href="../katzen/wohnungshaltung/index.html">Wohnung, Freigang oder gesicherter Außenbereich</a>.</li>
+          </ul>
+        </div>
+        <p class="nat-fuss">Die Zahlen zählen Orte und Dinge, keine Quadratmeter. Eine Mindestfläche nennen die Quellen nicht.</p>
+
+        <div class="section-feedback-heading"><h2 id="katzen-tag">Ein Tag aus Sicht einer Katze: ohne Struktur und gut ausgestattet</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <span class="kv-beispiel-tag">Beispiel, kein echtes Tier</span>
+        <h3>Eine Wohnung ohne Struktur</h3>
+        <ol class="nat-ich">
+          <li><span class="nat-wann">Morgen</span><p>Es dämmert, und ich bin wach. Mein Napf steht direkt neben der Toilette.</p></li>
+          <li><span class="nat-wann">Über den Tag</span><p>Ich schlafe viel. Mein Platz liegt im Flur, und ständig geht jemand vorbei.</p></li>
+          <li><span class="nat-wann">Nachmittag</span><p>Es gibt nichts zu jagen. Mein Futter liegt im Napf, ich muss nichts suchen.</p></li>
+          <li><span class="nat-wann">Abend</span><p>Besuch kommt. Ich will mich verstecken, aber es gibt keinen Ort, an dem mich niemand sieht.</p></li>
         </ol>
-        <p class="text-muted">Gemeint sind zwei Katzen in reiner Wohnungshaltung. Freigänger erleben einen anderen Tag.</p>
+        <h3>Ein guter Tag zu zweit</h3>
+        <ol class="nat-ich nat-ich-gut">
+          <li><span class="nat-wann">Den größten Teil des Tages: Ruhe</span><p>Wir schlafen länger, als wir wach sind. Jeder von uns hat Plätze, an die wir uns zurückziehen, und niemand holt uns dort heraus.</p></li>
+          <li><span class="nat-wann">Zwischendurch: Jagd und Spiel</span><p>Zu einer festen Zeit wird gespielt. Das Spielzeug ahmt Beute nach. Auch unser Futter müssen wir manchmal erarbeiten.</p></li>
+          <li><span class="nat-wann">Wenn wir uns mögen: Nähe</span><p>Wir ruhen zusammen, putzen uns gegenseitig und reiben uns aneinander. Dass wir am selben Napf zusammenkommen, heißt das noch nicht, denn vielleicht steht nur dort alles, was wir brauchen.</p></li>
+          <li><span class="nat-wann">Mehrmals täglich: du</span><p>Du reinigst die Toiletten, stellst frisches Wasser und Futter hin und siehst uns beide an: Fressen wir, benutzen wir die Toilette, bewegen wir uns wie sonst?</p></li>
+          <li><span class="nat-wann">Bei Lärm oder Besuch: Rückzug</span><p>Wir verstecken uns an einem Platz, an dem uns niemand sieht. Das ist unser Weg, mit Stress umzugehen.</p></li>
+          <li><span class="nat-wann">Einmal im Jahr: du</span><p>Wir werden in der Tierarztpraxis gründlich untersucht, als Senioren alle sechs Monate.</p></li>
+        </ol>
+        <p class="text-muted">Die Abläufe stützen sich auf Angaben von Tierschutzbund, AAFP und ISFM sowie AAHA und AAFP; Hauskatzen schlafen im Mittel 13,2&nbsp;Stunden am Tag. Gemeint sind zwei Katzen in reiner Wohnungshaltung. Freigänger erleben einen anderen Tag.</p>
+
+        <div class="section-feedback-heading"><h2 id="katzen-verkaufssaetze">Sätze, die man oft hört – und was Katzen dazu brauchen</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-verkaufssaetze" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Einzelgänger</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Katzen sind Einzelgänger, die brauchen keine Gesellschaft.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Katzen jagen allein, können aber in Gruppen leben: Um reichliche Futterquellen bilden sich Kolonien (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw 2018</a>). Für reine Wohnungskatzen rät der Tierschutzbund zu zwei Katzen, die sich verstehen. Zeigt sich eine Katze als Einzelgängerin, bleibt sie am besten allein (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Pflege</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Katzen sind anspruchslos und kommen allein zurecht.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Der Tierschutzbund hält dagegen: Katzen haben ebenfalls vielfältige Bedürfnisse, und ihre Haltungsanforderungen sind nicht zu unterschätzen (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Wohnung</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Eine Katze gehört raus, in der Wohnung ist sie unglücklich.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Wohnungskatzen können gut leben, wenn die Umwelt ihre natürlichen Verhaltensbedürfnisse erfüllt (<a href="https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/" target="_blank" rel="noopener noreferrer">FelineVMA 2025</a>). Reine Wohnungshaltung vermeidet Außenrisiken, verlangt aber viel Aufwand (<a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA 2024</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Kastration</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Meine Katze bleibt in der Wohnung, die muss nicht kastriert werden.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Der Tierschutzbund empfiehlt, jede Katze kastrieren zu lassen, ob Wohnung oder Freigang (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Warum auch bei Wohnungskatzen Rolligkeit und Erkrankungsrisiken bleiben, steht unter <a href="../katzen/kastration/index.html">Kastration – auch bei Wohnungskatzen wichtig</a>.</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Abgabealter</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Mit acht Wochen kann das Kätzchen zu uns ziehen.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Kitten sollten mindestens zehn Wochen, besser zwölf, bei Mutter und Geschwistern bleiben (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Mehr dazu unter <a href="../katzen/entscheidung/index.html">Kätzchen aufnehmen</a>.</p></div>
+          </li>
+        </ul>
 
         <div class="section-feedback-heading"><h2 id="katzen-lebenszeit">Was eine Katze über ihr ganzes Leben kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-lebenszeit" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="kv-fakten">
@@ -7831,11 +8032,47 @@ body.static-site .start-trust { margin-top: 1.25rem; }
         <p>Zur Gegenprobe: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze, das sind rund 2,30 Euro am Tag und rund 69 Euro im Monat (13.300 ÷ 192 = 69,27). Die Einzelposten und ihre Quellen stehen auf der Seite <a href="../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>.</p>
         <p><strong>Plane vor dem Einzug mit dem Tagesbetrag.</strong> Richte drei Monate vorher einen Dauerauftrag ein, der monatlich 50 bis 105 Euro auf ein eigenes Konto legt. Wenn dir das schwerfällt, ist das schon die Antwort: noch warten.</p>
 
+        <div class="section-feedback-heading"><h2 id="katzen-selbsttest">Passen Katzen gerade in dein Leben?</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-selbsttest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Hake ab, was heute schon stimmt. Deine Kreuze werden nicht gespeichert und nirgendwohin gesendet.</p>
+        <details class="nat-test">
+          <summary>Sieben Fragen öffnen</summary>
+          <div class="nat-test-inhalt">
+            <ul>
+              <li><label><input type="checkbox"><span><strong>Gesellschaft:</strong> Ich nehme zwei Katzen auf, die sich verstehen, oder ich weiß, dass meine Katze lieber allein lebt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Revier:</strong> Meine Wohnung bietet Höhe, mindestens zwei Ruheplätze, getrennte Futter- und Toilettenorte und eine Toilette mehr, als Katzen im Haus leben.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Zeit:</strong> Ich spiele jeden Tag mit meinen Katzen und reinige die Toiletten mehrmals täglich.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Urlaub und Krankheit:</strong> Ich habe jemanden, der einspringt, wenn ich verreise oder ausfalle.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tierarzt:</strong> Ich kenne eine Praxis, auch für den Notfall nachts und am Wochenende, ich lasse jede Katze kastrieren, kennzeichnen und registrieren und habe eine Rücklage von mindestens 500 bis 1.000&nbsp;Euro.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tagesbetrag:</strong> Ich kann mindestens 1,70 bis 3,70&nbsp;Euro am Tag (53 bis 112&nbsp;Euro im Monat) für eine Katze aufbringen, ohne dass es mir schwerfällt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Lebensdauer:</strong> Ich kann mich viele Jahre kümmern. Eine Katze kann bis zu 20&nbsp;Jahre alt werden (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</span></label></li>
+            </ul>
+            <div class="nat-test-schluss">
+              <p><strong>Wenn du nicht alles abhaken konntest:</strong> Das ist ein ehrliches Ergebnis. „Noch nicht“ ist eine gute Entscheidung für dich und für die Tiere.</p>
+              <p><a href="../noch-nicht-bereit/index.html">Was jetzt hilft: Noch nicht bereit</a></p>
+            </div>
+          </div>
+        </details>
+
         <div class="section-feedback-heading"><h2 id="katzen-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="kv-bedenkzeit">
           <p><strong>Eine Katze muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst das Tier an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist bei Heimtieren nicht untersucht. Wer dir keine Zeit lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du besuchst das Tier an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist bei Heimtieren nicht untersucht. Wer dir keine Zeit lässt, nimmt dir die Entscheidung ab.</p>
         </div>
+        <div class="nat-bremse" id="katze-karte">
+          <span class="nat-bremse-titel">Bevor du eine Katze holst</span>
+          <p class="nat-bremse-gross">Schlaf eine Woche darüber.</p>
+          <p>Fünf Fragen an den Anbieter:</p>
+          <ol>
+            <li>Wie alt ist das Kätzchen? Der Tierschutzbund nennt mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+            <li>Darf ich die Mutterkatze und den Ort sehen, an dem die Tiere leben?</li>
+            <li>Ist das Tier tierärztlich untersucht, mit einem Transponder gekennzeichnet und registriert (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>)?</li>
+            <li>Wie verstehen sich die Katzen untereinander, und gibt es einen passenden Artgenossen (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>)?</li>
+            <li>Kann ich mich bei Fragen später melden, und was passiert, wenn es nicht passt?</li>
+          </ol>
+          <p class="nat-bremse-fuss">Du darfst auch „Noch nicht“ sagen. Fragen kostet nichts, und wer dir Zeit lässt, ist ein guter Gesprächspartner.</p>
+        </div>
+        <p class="nat-bremse-aktion"><a class="btn btn-outline" href="../assets/karten/karte-bevor-du-eine-katze-holst.png" download="karte-bevor-du-eine-katze-holst.png">Karte als Bild speichern</a></p>
+
         <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt, sich zuerst in Tierheimen umzusehen; dort warten auch ältere Katzen auf ein Zuhause. Die Reihenfolge, die wir empfehlen: erst Tierheim und Tierschutzverein, danach alles andere. Die Wenn-dann-Karte für den Besuch beim Anbieter und die Checkliste findest du auf der Seite <a href="../katzen/entscheidung/index.html">Kätzchen aufnehmen: was du wirklich wissen musst</a>.</p>
         <div class="kv-wege">
           <div class="kv-weg">
@@ -7975,15 +8212,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen, und zu einer Toilette mehr, als Katzen im Haus leben.</li><li>AAFP und ISFM nennen mindestens zwei Ruheplätze, zwei Futterstellen und zwei Toilettenorte an getrennten Stellen.</li><li>Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.</li><li>Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag, das sind rund 53 bis 112 Euro im Monat (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre, rund 69 Euro im Monat.</li><li>Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.</li><li>Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.</li></ul>
+              <ul><li>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen, und zu einer Toilette mehr, als Katzen im Haus leben.</li><li>AAFP und ISFM nennen mindestens zwei Ruheplätze, zwei Futterstellen und zwei Toilettenorte an getrennten Stellen.</li><li>Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.</li><li>Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag, das sind rund 53 bis 112 Euro im Monat (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre, rund 69 Euro im Monat.</li><li>Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.</li><li>Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.</li><li>Hauskatzen stammen von der Falbkatze ab; die Domestikation fand nach Erbgutanalysen im Nahen Osten statt. Wildkatzen leben überwiegend allein, Hauskatzen können in Gruppen leben.</li><li>Katzen fangen etwa 10 bis 20 kleine Beutetiere am Tag; bis zur Hälfte der Jagden scheitern (AAFP und ISFM).</li><li>Wohnungskatzen können gut leben, wenn die Umgebung ihre Verhaltensbedürfnisse erfüllt; kontrollierter Zugang nach draußen bietet mehr Anregung bei geringerem Risiko.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenhaltung</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM: Leitlinien zu den Umweltbedürfnissen von Katzen</a></li><li><a href="https://journals.sagepub.com/doi/10.1177/1098612X21993657" target="_blank" rel="noopener noreferrer">AAHA und AAFP: Leitlinien zu den Lebensabschnitten von Katzen 2021</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12322353/" target="_blank" rel="noopener noreferrer">Schlaf von Hunden und Katzen in der Tierklinik (mit Angabe zum Schlaf von Hauskatzen)</a></li><li><a href="https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/" target="_blank" rel="noopener noreferrer">VETO Tierschutz: Die Schutzgebühr im Tierschutz</a></li><li><a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/neuer-katzenschutzreport-alarmiert-strassenkatzenleid-ausser-kontrolle/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenschutzreport 2026</a></li><li><a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a></li></ul>
+              <ul><li><a href="https://doi.org/10.1126/science.1139518" target="_blank" rel="noopener noreferrer">Driscoll u. a. (2007): The Near Eastern origin of cat domestication, Science</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11395290/" target="_blank" rel="noopener noreferrer">Bradshaw (2018): Normal feline behaviour, Journal of Feline Medicine and Surgery</a></li><li><a href="https://animaldiversity.org/accounts/Felis_silvestris/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Felis silvestris</a></li><li><a href="https://catvets.com/resource/2025-meeting-the-physical-and-emotional-needs-of-indoor-cats/" target="_blank" rel="noopener noreferrer">FelineVMA: Meeting the Physical and Emotional Needs of Indoor Cats (2025)</a></li><li><a href="https://catvets.com/resource/2024-indoor-outdoor-lifestyle-position-statement/" target="_blank" rel="noopener noreferrer">FelineVMA: Indoor/Outdoor Lifestyle Position Statement (2024)</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8993881/" target="_blank" rel="noopener noreferrer">Bischof u. a. (2022): Mapping the catscape, Scientific Reports</a></li><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenhaltung</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM: Leitlinien zu den Umweltbedürfnissen von Katzen</a></li><li><a href="https://journals.sagepub.com/doi/10.1177/1098612X21993657" target="_blank" rel="noopener noreferrer">AAHA und AAFP: Leitlinien zu den Lebensabschnitten von Katzen 2021</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12322353/" target="_blank" rel="noopener noreferrer">Schlaf von Hunden und Katzen in der Tierklinik (mit Angabe zum Schlaf von Hauskatzen)</a></li><li><a href="https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/" target="_blank" rel="noopener noreferrer">VETO Tierschutz: Die Schutzgebühr im Tierschutz</a></li><li><a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/neuer-katzenschutzreport-alarmiert-strassenkatzenleid-ausser-kontrolle/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenschutzreport 2026</a></li><li><a href="https://streunerhilfe-plau.de" target="_blank" rel="noopener noreferrer">Streunerhilfe Plau e. V.</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die Kosten pro Tag sind eine Hochrechnung aus Spannen für eine gesunde Einzelkatze und keine Zusage; Notfälle, Betreuung und Urlaub sind nicht enthalten.</li><li>Eine Quadratmeterzahl nennen die Quellen nicht; entscheidend ist, wie viel der Wohnung für die Katze nutzbar ist.</li><li>Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.</li><li>Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.</li><li>Keine Ferndiagnose bei Verhaltensänderungen.</li></ul>
+              <ul><li>Die Kosten pro Tag sind eine Hochrechnung aus Spannen für eine gesunde Einzelkatze und keine Zusage; Notfälle, Betreuung und Urlaub sind nicht enthalten.</li><li>Eine Quadratmeterzahl nennen die Quellen nicht; entscheidend ist, wie viel der Wohnung für die Katze nutzbar ist.</li><li>Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.</li><li>Die Falbkatze als Stammform erklärt, woher Bedürfnisse kommen; sie ist kein Haltungsvorbild, und ein einzelner erfasster Wert für ein Streifgebiet gilt nicht für alle Wildkatzen.</li><li>Die Streifgebietsgröße von 2,6 Hektar stammt aus einer Studie mit 92 Katzen mit Auslauf in Norwegen und gilt nicht für alle Freigängerkatzen.</li><li>Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.</li><li>Keine Ferndiagnose bei Verhaltensänderungen.</li></ul>
             </article>
           </div>
         </div>

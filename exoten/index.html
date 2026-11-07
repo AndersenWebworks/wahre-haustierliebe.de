@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7734,7 +7758,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <article class="card">
             <div class="card-body">
               <h3>Reptilien halten</h3>
-              <p>Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.</p>
+              <p>Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.</p>
               <a class="card-link" href="../exoten/reptilien/index.html">Thema öffnen</a>
             </div>
           </article>
@@ -7748,14 +7772,14 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <article class="card">
             <div class="card-body">
               <h3>Schildkröten halten</h3>
-              <p>Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer und eine grobe Kostenschätzung pro Tag und Monat.</p>
+              <p>Wie Griechische Landschildkröten im Mittelmeerraum leben und was das für Freianlage, Gewächshaus und Winterruhe heißt, dazu Selbsttest und Kosten pro Monat.</p>
               <a class="card-link" href="../exoten/schildkroeten/index.html">Thema öffnen</a>
             </div>
           </article>
           <article class="card">
             <div class="card-body">
               <h3>Fische halten</h3>
-              <p>Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Gutachten und Schweizer Tierschutz, dazu Kosten pro Tag und Monat.</p>
+              <p>Wie Goldfische in der Natur leben und was das für Aquarium und Teich heißt: Gruppe, Beckenmaß, Wasserwerte, Futter, dazu Selbsttest und Kosten pro Monat.</p>
               <a class="card-link" href="../exoten/fische/index.html">Thema öffnen</a>
             </div>
           </article>

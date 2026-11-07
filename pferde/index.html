@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung</title>
-  <meta name="description" content="Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.">
+  <meta name="description" content="Wie Pferde in der Natur leben und was das für Box, Offenstall und Weide heißt: Herde, Dauerfressen, Bewegung, Selbsttest und Kosten pro Tag und Monat.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7199,7 +7223,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "WebPage",
   "name": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
   "headline": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
-  "description": "Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.",
+  "description": "Wie Pferde in der Natur leben und was das für Box, Offenstall und Weide heißt: Herde, Dauerfressen, Bewegung, Selbsttest und Kosten pro Tag und Monat.",
   "url": "https://wahre-haustierliebe.de/pferde/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7283,7 +7307,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "Article",
   "headline": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
   "name": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
-  "description": "Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.",
+  "description": "Wie Pferde in der Natur leben und was das für Box, Offenstall und Weide heißt: Herde, Dauerfressen, Bewegung, Selbsttest und Kosten pro Tag und Monat.",
   "url": "https://wahre-haustierliebe.de/pferde/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/pferde/index.html",
   "image": {
@@ -7335,7 +7359,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
     "https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/",
     "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd",
     "https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/",
-    "https://www.gesetze-im-internet.de/tierschg/__2.html"
+    "https://www.gesetze-im-internet.de/tierschg/__2.html",
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf",
+    "https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde",
+    "https://animaldiversity.org/accounts/Equus_caballus/",
+    "https://pubmed.ncbi.nlm.nih.gov/34671162/",
+    "https://www.cavallo.de/medizin/so-sehen-pferde/",
+    "https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/introduction-to-digestive-disorders-of-horses",
+    "https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse",
+    "https://tierschutzdresden.de/artgerechte-pferde-haltung/"
   ]
 }
   </script>
@@ -7698,7 +7730,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         </figure>
       </div>
-    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#pferde-braucht">Was ein Pferd von dir braucht</a></li><li><a href="#pferde-tag">Ein Tag aus Sicht eines Pferdes</a></li><li><a href="#pferde-jahre">Was es über die Jahre kostet</a></li><li><a href="#pferde-bevor">Bevor du entscheidest</a></li><li><a href="#pferde-weitere-themen">Weitere Themen</a></li></ol></details></nav>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#pferde-ausweg">Dein Pferd steht allein oder viel in der Box? So kommst du Schritt für Schritt weiter</a></li><li><a href="#pferde-natur">So lebt das Pferd in der Natur – und was das für die Haltung heißt</a></li><li><a href="#pferde-braucht">Was ein Pferd von dir braucht</a></li><li><a href="#pferde-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#pferde-tag">Ein Tag aus Sicht eines Pferdes: allein in der Box und in der Herde</a></li><li><a href="#pferde-saetze">Sätze, die man oft hört – und was Pferde dazu brauchen</a></li><li><a href="#pferde-jahre">Was es über die Jahre kostet</a></li><li><a href="#pferde-selbsttest">Passt ein Pferd gerade in dein Leben?</a></li><li><a href="#pferde-bevor">Bevor du entscheidest</a></li><li><a href="#pferde-weitere-themen">Weitere Themen</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -7706,10 +7738,10 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <h3>Auf einen Blick</h3>
           <ul>
             <li>Pferde sind <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die in der Gruppe Sicherheit findet. Alleinhaltung bedeutet oft massiven Stress." data-glossary-href="../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. Nach den Leitlinien des Bundeslandwirtschaftsministeriums (BMEL) passt ein einzelnes Pferd ohne Artgenossen nicht zu seinem natürlichen Sozialverhalten.</li>
-            <li>In der Natur sind Pferde in der Gruppe bis zu 16 Stunden am Tag unterwegs, meist im Schritt und beim Fressen. Eine kleine Koppel deckt das nicht ab.</li>
-            <li>Die laufenden Kosten liegen bei etwa 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat), ohne Notfälle.</li>
+            <li>In der Natur sind Pferde in der Gruppe bis zu 16&nbsp;Stunden am Tag unterwegs, meist im Schritt und beim Fressen. Eine kleine Koppel deckt das nicht ab.</li>
+            <li>Die laufenden Kosten liegen bei etwa 20 bis 31&nbsp;Euro pro Tag (600 bis 950&nbsp;Euro im Monat), ohne Notfälle.</li>
             <li>Du musst mindestens einmal am Tag nachsehen, ob es dem Pferd gut geht, auch am Wochenende und an Feiertagen.</li>
-            <li>Hauspferde werden durchschnittlich 25 bis 30 Jahre alt. Das ist eine Verpflichtung für Jahrzehnte.</li>
+            <li>Hauspferde werden durchschnittlich 25 bis 30&nbsp;Jahre alt. Das ist eine Verpflichtung für Jahrzehnte.</li>
           </ul>
         </div><div class="article-rhythm metric-grid" data-enhancement="pferde-stats">
             <div class="metric-card"><strong>bis 16 Std.</strong><span>Bewegung am Tag in der Gruppe, meist im Schritt und beim Fressen (BMEL-Leitlinien).</span></div>
@@ -7717,7 +7749,137 @@ body.static-site .start-trust { margin-top: 1.25rem; }
             <div class="metric-card"><strong>Herde</strong><span>Ein Pferd ist kein Solist. Sozialkontakt ist Grundbedürfnis.</span></div>
           </div>
 
-        <p>Dass du ein Pferd bei dir aufnehmen möchtest, ist ein schöner Gedanke. Dreh ihn einmal um: Was bräuchte ein Pferd von dir, und was davon hast du schon?</p>
+                <p class="kt-einstieg">Dass du ein Pferd bei dir aufnehmen möchtest, ist ein schöner Gedanke. <strong>Dreh ihn einmal um: Was bräuchte ein Pferd von dir, und was davon hast du schon?</strong></p>
+        <p class="nat-sprung"><a class="btn btn-outline" href="#pferd-karte">Zur Karte für den Besuch beim Anbieter</a></p>
+        <nav class="nat-uebersicht" aria-label="Übersicht dieser Seite"><details><summary>Übersicht: Springe zu …</summary><ol>
+  <li><a href="#pferde-ausweg">Du hast schon ein Pferd?</a></li>
+  <li><a href="#pferde-natur">So lebt das Pferd in der Natur</a></li>
+  <li><a href="#pferde-braucht">Was ein Pferd von dir braucht</a></li>
+  <li><a href="#pferde-gute-haltung">So kann ein gutes Zuhause aussehen</a></li>
+  <li><a href="#pferde-tag">Ein Tag aus Sicht eines Pferdes</a></li>
+  <li><a href="#pferde-saetze">Sätze, die man oft hört</a></li>
+  <li><a href="#pferde-jahre">Was es über die Jahre kostet</a></li>
+  <li><a href="#pferde-selbsttest">Passt ein Pferd in dein Leben?</a></li>
+  <li><a href="#pferde-bevor">Bevor du entscheidest</a></li>
+</ol></details></nav>
+
+        <div class="section-feedback-heading"><h2 id="pferde-ausweg">Dein Pferd steht allein oder viel in der Box? So kommst du Schritt für Schritt weiter</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-ausweg" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Viele Pferde stehen allein oder die meiste Zeit in einer Box, weil es in ihrem Stall so eingerichtet ist. Pferde brauchen Artgenossen und jeden Tag mehrere Stunden Bewegung (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>). Das lässt sich in kleinen Schritten ändern, und du bestimmst das Tempo.</p>
+        <ol class="nat-schritte">
+          <li><strong>Sorge zuerst für Kontakt.</strong> In jeder Haltungsform braucht ein Pferd mindestens Sicht-, Hör- und Geruchskontakt zu anderen Pferden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.1). Frag im Stall, ob dein Pferd einen Nachbarn sehen, hören und riechen kann.</li>
+          <li><strong>Gib ihm jeden Tag freie Bewegung.</strong> Reiten oder Training ersetzt freie Bewegung nicht vollständig, denn dabei fehlt das entspannte Gehen im Schritt. Weide oder Auslauf soll Pferden so oft wie möglich angeboten werden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.2). Steht dein Pferd in einer Box, rät der Tierschutzbund zu einem angrenzenden Auslauf, dem Paddock, und zusätzlich zu täglichem freiem Auslauf (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>).</li>
+          <li><strong>Prüfe das Futter.</strong> Raufutter wie Heu steht am besten durchgehend bereit. Gibt es das nicht, gehört es mindestens zwölf Stunden am Tag ins Futterangebot, mit Fresspausen von höchstens vier Stunden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.4). Wenn dein Stall nur zwei Mahlzeiten anbietet, sprich über engmaschige Heunetze oder Sparraufen, die das Heu langsamer freigeben.</li>
+          <li><strong>Suche eine Gruppe.</strong> Am besten geeignet ist nach dem Tierschutzbund die Gruppenhaltung im Offenstall (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>). Schau dir Ställe an und achte darauf, ob die Pferde dort Auslauf, Weide und Kontakt haben. Bei einem Wechsel zählt, dass sich die Pferde vertragen (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.1).</li>
+          <li><strong>Hol dir Hilfe, wenn es hakt.</strong> Eine Tierarztpraxis, die Pferde versorgt, hilft bei Fragen zu Zähnen, Hufen und Futter. Auch ein Tierschutzverein in deiner Nähe kann beraten.</li>
+        </ol>
+        <div class="nat-ausweg-fuss">
+          <p>Fehlt dir gerade Zeit, Geld oder ein passender Stall? Dann ist „Noch nicht“ eine gute Entscheidung. Hilfe dabei findest du auf der Seite <a href="../noch-nicht-bereit/index.html">Noch nicht bereit</a>. Wenn du einem Pferd keinen guten Platz bieten kannst, ist es verantwortungsvoll, einen Stall mit Gruppenhaltung für es zu suchen. Tiere aus dem Tierschutz vermittelt die Seite <a href="../adoption/index.html">Adoption statt Kauf</a>.</p>
+        </div>
+
+
+        <div class="section-feedback-heading"><h2 id="pferde-natur">So lebt das Pferd in der Natur – und was das für die Haltung heißt</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-natur" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p class="nat-hinweis">Das Pferd ist ein ehemaliges Steppentier mit hohem Licht- und Frischluftbedarf (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 3.3). Sein Körper und sein Verhalten passen bis heute zu einem Leben in offenem Grasland.</p>
+
+        <h3>Woher sie kommen</h3>
+        <p>Alle heutigen Hauspferde stammen nach der Auswertung von 273 alten Pferdegenomen, also entzifferten Erbgutdaten, von Pferden aus den westeurasischen Steppen ab, vor allem aus dem Gebiet an der unteren Wolga und am Don. Von dort breiteten sie sich ab etwa 2000 v. Chr. über Eurasien aus (<a href="https://pubmed.ncbi.nlm.nih.gov/34671162/" target="_blank" rel="noopener noreferrer">Librado u. a. 2021</a>). Als einzige noch lebende Wildpferde gelten die Przewalski-Pferde. Sie leben heute wieder in Schutzgebieten in der Mongolei, und alle Tiere stammen von Nachzuchten aus Zoos ab (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>). Wie nah sie dem Hauspferd verwandt sind, ist unter Fachleuten noch umstritten (<a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p>
+        <p>Mustangs, Brumbies und Namib-Wüstenpferde sind keine Wildpferde. Sie sind verwilderte Nachkommen entlaufener Hauspferde (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>). An solchen verwilderten Herden lässt sich beobachten, wie Pferde leben, wenn sie selbst entscheiden können.</p>
+
+        <h3>So leben Wildpferde und verwilderte Pferde</h3>
+        <dl class="nat-liste">
+          <div class="nat-eintrag"><dt>Herde</dt><dd>Przewalski-Pferde leben in Familienverbänden aus Stuten, ihren Nachkommen und einem Hengst. Gegenseitige Fellpflege hält die Gruppe zusammen (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>). Bei verwilderten Pferden bestehen Herden meist aus 5 bis 11 Stuten und 1 bis 4 Hengsten mit ihrem Nachwuchs, größere bis zu 26 Stuten (<a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Die Herde führt meist eine ältere Stute, der Hengst schützt sie (<a href="https://tierschutzdresden.de/artgerechte-pferde-haltung/" target="_blank" rel="noopener noreferrer">Tierschutzverein Dresden</a>). Mehr dazu steht auf der Seite <a href="../pferde/herde/index.html">Herdentiere, keine Solisten</a>.</dd></div>
+          <div class="nat-eintrag"><dt>Lebensraum und Wege</dt><dd>Pferde bevorzugen kühles Grasland, Steppen und Savannen in der Nähe von Wasser (<a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Herden ziehen nach Angaben des Tierschutzbundes bis zu 16&nbsp;Stunden am Tag durch die offene Steppe und legen dabei etwa 20&nbsp;Kilometer zurück, meist langsam im Schritt (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>). Eine verwilderte Herde in Neuseeland nutzte Gebiete von 0,96 bis 17,68 Quadratkilometern (<a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Fressen</dt><dd>Grasen nimmt den größten Teil der aktiven Zeit ein (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>). Der Magen fasst nur etwa 8 bis 10&nbsp;Liter, und das Futter wandert schnell hindurch. Darum können Pferde den ganzen Tag über fressen (<a href="https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/introduction-to-digestive-disorders-of-horses" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual</a>). Der Magen bildet auch dann Säure, wenn er leer ist. Fehlt Futter über viele Stunden, kann die Säure die Magenschleimhaut reizen und zu Geschwüren beitragen (<a href="https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse" target="_blank" rel="noopener noreferrer">Iowa State University Extension</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Tagesrhythmus</dt><dd>Przewalski-Pferde sind tagsüber und teilweise nachts aktiv (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>). Erwachsene Hauspferde ruhen etwa 7&nbsp;Stunden am Tag, auf mehrere Phasen verteilt, davon rund 80&nbsp;Prozent dösend im Stehen. Für den Tiefschlaf legen sie sich hin, am liebsten auf trockenem, weichem Boden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.3).</dd></div>
+          <div class="nat-eintrag"><dt>Sinne</dt><dd>Die großen Augen sitzen seitlich am Kopf und bieten fast einen Rundumblick von 360 Grad. Räumlich sehen Pferde nur in einem Bereich von etwa 15 bis 20 Grad. Direkt vor der Nase (etwa 50 bis 80&nbsp;Zentimeter) und hinter dem Schweif sehen sie nichts (<a href="https://www.cavallo.de/medizin/so-sehen-pferde/" target="_blank" rel="noopener noreferrer">CAVALLO, mit dem Augenarzt Dr. Willy Neumann</a>). Sehen ist der wichtigste Sinn. Dazu kommen aufrechte Ohren und Tasthaare an Nüstern, Maul und Wangen (<a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Flucht</dt><dd>Pferde sind Flucht-, Lauf- und Herdentiere (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>). Als Fluchttiere müssen sie Feinde möglichst früh erkennen, um zu fliehen (<a href="https://www.cavallo.de/medizin/so-sehen-pferde/" target="_blank" rel="noopener noreferrer">CAVALLO</a>).</dd></div>
+        </dl>
+
+        <h3>Was das für die Haltung heißt</h3>
+        <p>Maßstab ist, was ein Pferd braucht. Je nach Haltungsform liegen die Schwerpunkte anders. Die Formen im Vergleich stehen auf der Seite <a href="../pferde/haltungsformen/index.html">Haltungsformen</a>, die Flächenangaben auf der Seite <a href="../pferde/platzbedarf/index.html">Platzbedarf</a>.</p>
+        <div class="nat-haltung-grid">
+          <section class="nat-haltung" aria-labelledby="pferd-natur-box">
+            <h4 id="pferd-natur-box">Box</h4>
+            <ul>
+              <li>Die Box ist nur mit Sicht-, Hör- und Geruchskontakt zu anderen Pferden vertretbar (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.1).</li>
+              <li>Der Tierschutzbund rät zu einem angrenzenden Paddock und zusätzlich zu täglichem freiem Auslauf. Dann atmet das Pferd frische Luft statt der stickigen, ammoniakhaltigen Stallluft (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>).</li>
+              <li>Raufutter steht durchgehend bereit oder mindestens zwölf Stunden am Tag, mit Fresspausen von höchstens vier Stunden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.4).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="pferd-natur-offenstall">
+            <h4 id="pferd-natur-offenstall">Offenstall</h4>
+            <ul>
+              <li>Am besten geeignet ist nach dem Tierschutzbund die Gruppe im Offenstall. Die Pferde wählen selbst zwischen Unterstand, Auslauf und Wiese (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>).</li>
+              <li>Die Liegefläche ist trocken und verformbar und so groß, dass alle Pferde gleichzeitig ausgestreckt auf der Seite liegen können, auch die rangniedrigen (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.3).</li>
+              <li>Jedes Pferd hat einen eigenen Fressplatz. Bei größeren Gruppen sind mehrere kleine Unterstände besser als ein großer (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitte 2.1.4 und 3.1.1).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="pferd-natur-weide">
+            <h4 id="pferd-natur-weide">Weide und Auslauf</h4>
+            <ul>
+              <li>Für einen Auslauf mit bis zu zwei Pferden nennen die Leitlinien mindestens 150&nbsp;m², für jedes weitere Pferd 40&nbsp;m² mehr (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 4.7).</li>
+              <li>Weidegang soll allen Pferden so oft wie möglich angeboten werden, besonders Zuchtstuten, Fohlen und Jungpferden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.2).</li>
+              <li>Zäune sind gut sichtbar und stabil. Das Gesichtsfeld und das Fluchtverhalten des Pferdes verlangen das (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 3.1.2).</li>
+            </ul>
+          </section>
+        </div>
+
+        <h3>In der Natur – in vielen Haushalten</h3>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Gesellschaft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Familienverband aus Stuten, Nachwuchs und Hengst (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Ein einzelnes Pferd ohne Artgenossen widerspricht dem natürlichen Sozialverhalten. Fehlen Artgenossen, können Verhaltensstörungen auftreten (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.1).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Bewegung</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Bis zu 16&nbsp;Stunden am Tag, meist im Schritt (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.2).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Pferde leben oft in Boxen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>). Dort fehlt die freie Bewegung, und Training kann sie nicht vollständig ersetzen (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.2).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Futter</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Gras, den größten Teil der aktiven Zeit (<a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Viele Pferde bekommen nur zwei Mahlzeiten am Tag (<a href="https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse" target="_blank" rel="noopener noreferrer">Iowa State University Extension</a>). Lange Fresspausen können Magengeschwüre und Koliken (Bauchschmerzen durch Darmprobleme) begünstigen (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.4).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Ruhe</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Mehrere Ruhephasen, zum Tiefschlaf legen sich Pferde auf trockenen, weichen Boden (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.3).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Auf morastigem Boden legen sich Pferde nicht oder nur ungern hin. Fehlt eine trockene, weiche Liegefläche für alle, fehlt der Tiefschlaf (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.3).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Luft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Frische Luft unter freiem Himmel.</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Stallluft kann stickig und ammoniakhaltig sein (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>). Die großen Lungen brauchen aber Außenluftqualität (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 3.3).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Warum Haltung am Ideal statt am Üblichen gemessen wird, steht auf der Seite <a href="../realhaltung/index.html">Realhaltung</a>. Wo bei Wildtieren die Grenze verläuft, steht auf der Seite <a href="../wildtierhaltung/index.html">Private Wildtierhaltung</a>.</p>
+
+        <h3>Auf deine Größe umgerechnet</h3>
+        <div class="nat-vergleiche-koerper">
+          <div class="nat-koerper">
+            <p><strong>Zeit unterwegs.</strong> Ein Pferd ist in der Natur bis zu 16&nbsp;Stunden am Tag in Bewegung und legt dabei etwa 20&nbsp;Kilometer zurück (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>; <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.2). Das sind 1,25&nbsp;Kilometer pro Stunde, also ein Schlendern beim Fressen. Eine Stunde Reiten am Tag macht davon ein Sechzehntel aus. Auf deinen Tag übertragen: Du würdest von 24&nbsp;Stunden gut 16 gemächlich umhergehen und dabei essen, statt eine Stunde Sport zu treiben.</p>
+            <p class="nat-rechnung">Rechnung: 20&nbsp;km ÷ 16 h = 1,25&nbsp;km/h; 1 h ÷ 16 h = 0,0625, also gut 6&nbsp;Prozent; 16 h ÷ 24 h ≈ 0,67.</p>
+          </div>
+          <div class="nat-koerper">
+            <p><strong>Auslauf und Revier.</strong> Eine verwilderte Herde in Neuseeland nutzte Gebiete von 0,96 bis 17,68 Quadratkilometern (<a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Das kleinste davon misst 960.000&nbsp;Quadratmeter. Der Auslauf für zwei Pferde ist nach den Leitlinien mindestens 150&nbsp;Quadratmeter groß (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 4.7). Das sind rund 0,016&nbsp;Prozent. Wäre das Revier ein Fußballfeld, bliebe davon etwa ein Quadratmeter.</p>
+            <p class="nat-rechnung">Rechnung: 0,96 km² = 960.000&nbsp;m²; 150 ÷ 960.000 ≈ 0,00016, also 0,016&nbsp;Prozent; ein Fußballfeld von 105&nbsp;× 68 m misst 7.140&nbsp;m², davon 0,016&nbsp;Prozent sind etwa 1,1&nbsp;m². Stall und Weide kommen zum Auslauf dazu.</p>
+          </div>
+        </div>
+
+        <h3>Quellen</h3>
+        <ul class="source-list" aria-label="Quellen zu: So lebt das Pferd in der Natur">
+          <li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)</a> – Sozial-, Bewegungs-, Ruhe- und Fressverhalten, Steppentier, Box, Gruppenhaltung, Auslauf, Zäune.</li>
+          <li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Reitstall-Check</a> – Flucht-, Lauf- und Herdentiere, 16&nbsp;Stunden und etwa 20&nbsp;Kilometer in der Steppe, Offenstall, Box mit Paddock, Stallluft.</li>
+          <li><a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF Deutschland: Wildpferde</a> – Przewalski-Pferde, verwilderte Pferde, Familienverband, Fressen.</li>
+          <li><a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Equus caballus</a> – Lebensraum, Herdengröße verwilderter Pferde, Streifgebiet, Sinne, Verwandtschaft mit dem Przewalski-Pferd.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/34671162/" target="_blank" rel="noopener noreferrer">Librado u. a. (2021): The origins and spread of domestic horses from the Western Eurasian steppes, Nature 598</a> – Herkunft heutiger Hauspferde aus den westeurasischen Steppen.</li>
+          <li><a href="https://www.cavallo.de/medizin/so-sehen-pferde/" target="_blank" rel="noopener noreferrer">CAVALLO: So sehen Pferde (3. Januar 2012)</a> – Gesichtsfeld, räumliches Sehen, tote Bereiche.</li>
+          <li><a href="https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/introduction-to-digestive-disorders-of-horses" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual für Tierhaltende: Digestive Disorders of Horses</a> – Größe des Magens, Dauerfressen.</li>
+          <li><a href="https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse" target="_blank" rel="noopener noreferrer">Iowa State University Extension: Digestive Anatomy and Physiology of the Horse (archivierte Seite)</a> – Säurebildung bei leerem Magen, Geschwüre, Fütterungshäufigkeit.</li>
+          <li><a href="https://tierschutzdresden.de/artgerechte-pferde-haltung/" target="_blank" rel="noopener noreferrer">Tierschutzverein Dresden: Artgerechte Pferdehaltung</a> – Leitstute, Weidegang, Fresspausen, Decken.</li>
+        </ul>
+        <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
+
+
 
         <div class="section-feedback-heading"><h2 id="pferde-braucht">Was ein Pferd von dir braucht</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-braucht" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
@@ -7736,9 +7898,9 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 2</span><h3 id="pferde-f2">Platz und Bewegung</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Bewegung an jedem Tag über mehrere Stunden. Auslauf: 150 m² für bis zu zwei Pferde, 40 m² für jedes weitere.</p><p>In der Natur sind Pferde in der Gruppe bis zu 16 Stunden am Tag unterwegs, meist langsam im Schritt und beim Fressen. Arbeit oder Training können diese freie Bewegung nach den Leitlinien nicht vollständig ersetzen. Weidegang oder Auslauf soll den Pferden so oft wie möglich angeboten werden. Eine Einzelbox muss mindestens (2 × Widerristhöhe)² groß sein; die Widerristhöhe ist die Schulterhöhe des Pferdes.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.2, 4.3.1, 4.7 und Tabelle 5.</p></dd>
+            <dd><p class="pex-mass">Bewegung an jedem Tag über mehrere Stunden. Auslauf: 150&nbsp;m² für bis zu zwei Pferde, 40&nbsp;m² für jedes weitere.</p><p>In der Natur sind Pferde in der Gruppe bis zu 16&nbsp;Stunden am Tag unterwegs, meist langsam im Schritt und beim Fressen. Arbeit oder Training können diese freie Bewegung nach den Leitlinien nicht vollständig ersetzen. Weidegang oder Auslauf soll den Pferden so oft wie möglich angeboten werden. Eine Einzelbox muss mindestens (2&nbsp;× Widerristhöhe)² groß sein; die Widerristhöhe ist die Schulterhöhe des Pferdes.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.2, 4.3.1, 4.7 und Tabelle 5.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>150 m² sind zum Beispiel 10 m × 15 m, für zwei Pferde. Bei 1,48 m Widerristhöhe misst die Box mindestens 8,76 m², ein Quadrat von 2,96 m × 2,96 m. Und 16 Stunden sind zwei Drittel eines Tages.</p><p class="pex-rechnung">Rechnung: 10 × 15 = 150; (2 × 1,48)² = 2,96² = 8,76; 16 ÷ 24 ≈ 0,67.</p></dd>
+            <dd><p>150&nbsp;m² sind zum Beispiel 10 m ×&nbsp;15 m, für zwei Pferde. Bei 1,48 m Widerristhöhe misst die Box mindestens 8,76&nbsp;m², ein Quadrat von 2,96 m ×&nbsp;2,96 m. Und 16&nbsp;Stunden sind zwei Drittel eines Tages.</p><p class="pex-rechnung">Rechnung: 10&nbsp;× 15 = 150; (2&nbsp;× 1,48)² = 2,96² = 8,76; 16 ÷ 24 ≈ 0,67.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Wo bewegt sich dein Pferd an einem Tag, an dem du nicht reitest, und wie viele Stunden lang?</dd>
           </dl>
@@ -7747,9 +7909,9 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 3</span><h3 id="pferde-f3">Futter</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Raufutter möglichst durchgehend, mindestens 12 Stunden am Tag. Wasser steht immer bereit.</p><p>Verdauung und Verhalten des Pferdes sind darauf eingestellt, dass es fast ununterbrochen frisst. Steht nicht immer Raufutter bereit (Heu, Stroh oder Gras), soll es mindestens zwölf Stunden am Tag angeboten werden, möglichst ohne Fresspause von mehr als vier Stunden. Auch in der Gruppe braucht jedes Pferd einen eigenen Fressplatz. Größere Mengen Kraftfutter (zum Beispiel Hafer) gehören auf mindestens drei Mahlzeiten verteilt. Weil Verdauung und Verhalten auf ständiges Fressen eingestellt sind, können laut Leitlinien zum Beispiel Magengeschwüre und Koliken (Bauchschmerzen durch Darmprobleme) auftreten, wenn Raufutter fehlt oder dem Pferd Zeit und Ruhe zum Fressen fehlen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.4.</p></dd>
+            <dd><p class="pex-mass">Raufutter möglichst durchgehend, mindestens 12&nbsp;Stunden am Tag. Wasser steht immer bereit.</p><p>Verdauung und Verhalten des Pferdes sind darauf eingestellt, dass es fast ununterbrochen frisst. Steht nicht immer Raufutter bereit (Heu, Stroh oder Gras), soll es mindestens zwölf Stunden am Tag angeboten werden, möglichst ohne Fresspause von mehr als vier Stunden. Auch in der Gruppe braucht jedes Pferd einen eigenen Fressplatz. Größere Mengen Kraftfutter (zum Beispiel Hafer) gehören auf mindestens drei Mahlzeiten verteilt. Weil Verdauung und Verhalten auf ständiges Fressen eingestellt sind, können laut Leitlinien zum Beispiel Magengeschwüre und Koliken (Bauchschmerzen durch Darmprobleme) auftreten, wenn Raufutter fehlt oder dem Pferd Zeit und Ruhe zum Fressen fehlen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.4.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>Eine Nacht von 22 bis 6 Uhr dauert 8 Stunden und damit doppelt so lang wie die Fresspause, die die Leitlinien höchstens vorsehen.</p><p class="pex-rechnung">Rechnung: 6 Uhr − 22 Uhr = 8 Stunden; 8 ÷ 4 = 2.</p></dd>
+            <dd><p>Eine Nacht von 22 bis 6 Uhr dauert 8&nbsp;Stunden und damit doppelt so lang wie die Fresspause, die die Leitlinien höchstens vorsehen.</p><p class="pex-rechnung">Rechnung: 6 Uhr − 22 Uhr = 8&nbsp;Stunden; 8 ÷ 4 = 2.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Wer sorgt dafür, dass nachts und am frühen Morgen Raufutter bereitsteht, auch wenn du verreist bist?</dd>
           </dl>
@@ -7758,9 +7920,9 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 4</span><h3 id="pferde-f4">Ruhe und Tagesrhythmus</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Rund 7 Stunden Ruhe am Tag, auf mehrere Phasen verteilt, mit trockener, weicher Liegefläche für alle Pferde gleichzeitig.</p><p>Ausgewachsene Pferde ruhen etwa 7 Stunden am Tag, rund 80 Prozent davon dösend im Stehen. Für den Tiefschlaf (die Schlafphase mit schnellen Augenbewegungen) müssen sie sich hinlegen. Dafür muss der Ruheplatz trocken und weich sein. In der Gruppe muss die Liegefläche so groß sein, dass alle gleichzeitig ausgestreckt auf der Seite liegen können, auch die Tiere, die in der Rangordnung weiter unten stehen. Bei anhaltendem Regen, Kälte mit Wind, starker Sonne oder vielen Stechinsekten suchen Pferde Schutz vor dem Wetter. Dieser Schutz muss für alle Tiere gleichzeitig reichen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.3 und 3.1.1.</p></dd>
+            <dd><p class="pex-mass">Rund 7&nbsp;Stunden Ruhe am Tag, auf mehrere Phasen verteilt, mit trockener, weicher Liegefläche für alle Pferde gleichzeitig.</p><p>Ausgewachsene Pferde ruhen etwa 7&nbsp;Stunden am Tag, rund 80&nbsp;Prozent davon dösend im Stehen. Für den Tiefschlaf (die Schlafphase mit schnellen Augenbewegungen) müssen sie sich hinlegen. Dafür muss der Ruheplatz trocken und weich sein. In der Gruppe muss die Liegefläche so groß sein, dass alle gleichzeitig ausgestreckt auf der Seite liegen können, auch die Tiere, die in der Rangordnung weiter unten stehen. Bei anhaltendem Regen, Kälte mit Wind, starker Sonne oder vielen Stechinsekten suchen Pferde Schutz vor dem Wetter. Dieser Schutz muss für alle Tiere gleichzeitig reichen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.3 und 3.1.1.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>Von 7 Stunden Ruhe verbringt ein Pferd rund 5,6 Stunden dösend im Stehen. Für andere Ruhehaltungen bleiben etwa 1,4 Stunden.</p><p class="pex-rechnung">Rechnung: 7 × 0,8 = 5,6; 7 − 5,6 = 1,4.</p></dd>
+            <dd><p>Von 7&nbsp;Stunden Ruhe verbringt ein Pferd rund 5,6&nbsp;Stunden dösend im Stehen. Für andere Ruhehaltungen bleiben etwa 1,4&nbsp;Stunden.</p><p class="pex-rechnung">Rechnung: 7&nbsp;× 0,8 = 5,6; 7 − 5,6 = 1,4.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Gibt es einen Platz, an dem sich alle Pferde der Gruppe gleichzeitig und ungestört ablegen können?</dd>
           </dl>
@@ -7769,44 +7931,148 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 5</span><h3 id="pferde-f5">Gesundheit</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Jeden Tag ansehen. Hufe alle 6 bis 8 Wochen, Zähne mindestens einmal im Jahr.</p><p>Du musst mindestens einmal am Tag nachsehen, ob es jedem Pferd gut geht. Bei Pferden ohne Hufeisen sollte man in der Regel alle 6 bis 8 Wochen prüfen, ob die Hufe richtig stehen und wie stark sie abgenutzt sind. Die Zähne sollten einmal im Jahr kontrolliert werden, bei alten Pferden zweimal. Wurmkuren gibt es nur nach Absprache mit der Tierarztpraxis. Die Impfung gegen Tetanus (Wundstarrkrampf) ist aus Tierschutzsicht geboten. Hauspferde werden heute durchschnittlich 25 bis 30 Jahre alt, Ponys und Kleinpferde oft 30 bis 40 Jahre.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.2 bis 2.2.3; Lebenserwartung: <a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet</a>.</p></dd>
+            <dd><p class="pex-mass">Jeden Tag ansehen. Hufe alle 6 bis 8&nbsp;Wochen, Zähne mindestens einmal im Jahr.</p><p>Du musst mindestens einmal am Tag nachsehen, ob es jedem Pferd gut geht. Bei Pferden ohne Hufeisen sollte man in der Regel alle 6 bis 8&nbsp;Wochen prüfen, ob die Hufe richtig stehen und wie stark sie abgenutzt sind. Die Zähne sollten einmal im Jahr kontrolliert werden, bei alten Pferden zweimal. Wurmkuren gibt es nur nach Absprache mit der Tierarztpraxis. Die Impfung gegen Tetanus (Wundstarrkrampf) ist aus Tierschutzsicht geboten. Hauspferde werden heute durchschnittlich 25 bis 30&nbsp;Jahre alt, Ponys und Kleinpferde oft 30 bis 40&nbsp;Jahre.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.2 bis 2.2.3; Lebenserwartung: <a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet</a>.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>Ein Huftermin alle 6 bis 8 Wochen sind etwa 6 bis 9 Termine im Jahr, in 25 Jahren rund 160 bis 220.</p><p class="pex-rechnung">Rechnung: 52 ÷ 8 = 6,5; 52 ÷ 6 ≈ 8,7; mal 25 = 163 bis 217.</p></dd>
+            <dd><p>Ein Huftermin alle 6 bis 8&nbsp;Wochen sind etwa 6 bis 9 Termine im Jahr, in 25&nbsp;Jahren rund 160 bis 220.</p><p class="pex-rechnung">Rechnung: 52 ÷ 8 = 6,5; 52 ÷ 6 ≈ 8,7; mal 25 = 163 bis 217.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Welche Tierarztpraxis versorgt Pferde in deiner Nähe, und wie kommst du im Notfall nachts und am Wochenende an Hilfe?</dd>
           </dl>
         </section>
 
-        <div class="section-feedback-heading"><h2 id="pferde-tag">Ein Tag aus Sicht eines Pferdes</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+                <div class="section-feedback-heading"><h2 id="pferde-gute-haltung">So kann ein gutes Zuhause aussehen</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-gute-haltung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Gute Haltung braucht keinen Stall wie aus dem Katalog. Sie braucht die richtigen Maße und Einrichtungen, die zum Verhalten der Pferde passen. Zwei Beispiele nach den <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, gerechnet für Pferde mit 1,48&nbsp;Metern Widerristhöhe:</p>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 1: Offenstall für vier Pferde</h3>
+          <ul>
+            <li>Auslauf von mindestens 230&nbsp;m²: 150&nbsp;m² für die ersten zwei Pferde und je 40&nbsp;m² für die beiden weiteren.</li>
+            <li>Eine trockene, verformbare Liegefläche, auf der alle vier Pferde gleichzeitig ausgestreckt liegen können. Mehrere kleine Unterstände sind besser als ein großer, damit auch rangniedrige Pferde hineinkommen.</li>
+            <li>Für jedes Pferd ein eigener Fressplatz. Raufutter steht durchgehend bereit, sonst mindestens zwölf Stunden am Tag.</li>
+            <li>Frisches Wasser steht immer bereit. Weidegang gibt es so oft wie möglich.</li>
+          </ul>
+        </div>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 2: Zwei Pferde in Boxen mit Paddock</h3>
+          <ul>
+            <li>Jede Box misst mindestens 8,76&nbsp;m², nach der Formel (2&nbsp;× Widerristhöhe)².</li>
+            <li>Die Pferde haben Sicht-, Hör- und Geruchskontakt zueinander und einen direkt angrenzenden Paddock (der Auslauf für zwei Pferde misst mindestens 150&nbsp;m²). Dazu kommt täglich freier Auslauf oder Weidegang (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check</a>).</li>
+            <li>Die Einstreu ist sauber und trocken, die Stallluft entspricht der Außenluft.</li>
+            <li>Raufutter gibt es mindestens zwölf Stunden am Tag, mit Fresspausen von höchstens vier Stunden.</li>
+          </ul>
+        </div>
 
+
+        <div class="section-feedback-heading"><h2 id="pferde-tag">Ein Tag aus Sicht eines Pferdes: allein in der Box und in der Herde</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <span class="pex-beispiel-tag">Beispiel, kein bestimmtes Tier</span>
-        <ol class="zeitleiste">
-          <li><span class="zeitleiste-when">Den ganzen Tag</span><p class="zeitleiste-what">Das Pferd bewegt sich überwiegend langsam im Schritt und frisst dabei, in der Natur bis zu 16 Stunden. Raufutter steht durchgehend bereit oder wird in kurzen Abständen angeboten, denn die Verdauung ist auf ständiges Fressen eingestellt.</p></li>
-          <li><span class="zeitleiste-when">Verteilt über 24 Stunden</span><p class="zeitleiste-what">Mehrere Ruhephasen, zusammen etwa 7 Stunden, meist dösend im Stehen. Für den tiefen Schlaf legt sich das Pferd hin, wenn der Platz trocken, weich und sicher ist.</p></li>
-          <li><span class="zeitleiste-when">Bei Regen, Wind, Hitze oder vielen Insekten</span><p class="zeitleiste-what">Das Pferd sucht Schutz auf. Ein Unterstand oder Baumgruppen müssen allen Tieren der Gruppe gleichzeitig Platz bieten.</p></li>
-          <li class="pex-mensch"><span class="zeitleiste-when">Einmal täglich: du</span><p class="zeitleiste-what">Nachsehen, ob es dem Pferd gut geht, prüfen, ob die Tränke sauber ist und funktioniert, und regelmäßig Zäune und Einrichtungen ansehen.</p></li>
-          <li class="pex-mensch"><span class="zeitleiste-when">Alle 6 bis 8 Wochen: du</span><p class="zeitleiste-what">Hufe kontrollieren und pflegen lassen.</p></li>
+        <h3>Allein in der Box</h3>
+        <ol class="nat-ich">
+          <li><span class="nat-wann">Früher Morgen</span><p>Es ist still im Stall. Von meiner Box aus sehe ich kein anderes Pferd. Mein Körper ist darauf gebaut, den ganzen Tag zu gehen und zu fressen.</p></li>
+          <li><span class="nat-wann">Vormittag</span><p>Mein Heu ist längst gefressen. Bis zur nächsten Fütterung vergehen Stunden. Ich bin darauf eingestellt, fast ununterbrochen zu fressen, und mein Magen bildet auch leer Säure.</p></li>
+          <li><span class="nat-wann">Mittag</span><p>Ich werde eine Stunde geritten. In der Natur wäre ich bis zu 16&nbsp;Stunden in Bewegung, überwiegend im Schritt.</p></li>
+          <li><span class="nat-wann">Nachmittag</span><p>Ich stehe wieder in der Box. Die Luft ist stickig. Ein Tiefschlaf im Liegen ist hier schwer, wenn die Einstreu feucht ist.</p></li>
+          <li><span class="nat-wann">Abend</span><p>Nichts passiert. Manche Pferde fangen in einer solchen Lage an zu koppen oder zu weben, das heißt, sie saugen Luft in den Magen oder schaukeln hin und her.</p></li>
         </ol>
-        <p class="pex-legende">Nach den Verhaltensangaben der <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1 bis 2.2. Wie ein einzelnes Pferd seinen Tag verbringt, kann abweichen.</p>
+        <h3>Ein guter Tag in der Herde</h3>
+        <ol class="nat-ich nat-ich-gut">
+          <li><span class="nat-wann">Den ganzen Tag</span><p>Meine Herde und ich ziehen langsam über die Fläche und fressen dabei. Heu steht durchgehend bereit, denn meine Verdauung ist auf ständiges Fressen eingestellt.</p></li>
+          <li><span class="nat-wann">Zwischendurch</span><p>Wir dösen im Stehen, nebeneinander, mehrere Male über den Tag verteilt. Zusammen etwa 7&nbsp;Stunden.</p></li>
+          <li><span class="nat-wann">Bei Regen, Wind, Hitze oder vielen Insekten</span><p>Wir gehen in den Unterstand. Er bietet allen gleichzeitig Platz.</p></li>
+          <li><span class="nat-wann">Einmal täglich: du</span><p>Du siehst nach, ob es mir gut geht, ob die Tränke sauber ist und funktioniert, und du prüfst Zäune und Einrichtungen.</p></li>
+          <li><span class="nat-wann">Nachts</span><p>Die Liegefläche ist trocken und weich. Alle legen sich gleichzeitig hin, auch ich, wenn ich in der Rangordnung unten stehe.</p></li>
+          <li><span class="nat-wann">Alle 6 bis 8&nbsp;Wochen: du</span><p>Du lässt meine Hufe kontrollieren und pflegen.</p></li>
+        </ol>
+        <p class="pex-legende">Die Abläufe stützen sich auf die Angaben der <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a> (Abschnitte 2.1 bis 2.2), auf den <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Reitstall-Check des Tierschutzbundes</a> und auf das <a href="https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse" target="_blank" rel="noopener noreferrer">Merkblatt der Iowa State University</a>. Wie ein einzelnes Pferd seinen Tag verbringt, kann abweichen.</p>
 
-        <div class="section-feedback-heading"><h2 id="pferde-jahre">Was es über die Jahre kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-jahre" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+
+        <div class="section-feedback-heading"><h2 id="pferde-saetze">Sätze, die man oft hört – und was Pferde dazu brauchen</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-saetze" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Bewegung</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Mein Pferd wird jeden Tag geritten, das ist genug Bewegung.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Kontrollierte Bewegung wie Reiten oder Training kann die freie Bewegung nicht vollständig ersetzen (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.2). Pferde müssen neben dem Reiten täglich mehrere Stunden bewegt werden (<a href="https://tierschutzdresden.de/artgerechte-pferde-haltung/" target="_blank" rel="noopener noreferrer">Tierschutzverein Dresden</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Winter</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Im Winter braucht ein Pferd eine Decke.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Pferde regulieren ihre Körpertemperatur gut, und eine Decke stört dieses System. Mit Wetterschutz kommen die meisten erwachsenen Pferde bis etwa −15&nbsp;°C ohne Decke aus; bei älteren, mageren oder kranken Tieren kann sie sinnvoll sein (<a href="https://tierschutzdresden.de/artgerechte-pferde-haltung/" target="_blank" rel="noopener noreferrer">Tierschutzverein Dresden</a>). Auch die Leitlinien sagen, dass Pferde Hitze und Kälte nach Gewöhnung gut vertragen (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 3.3).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Ein Tier</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Pferd allein reicht, ich bin ja da.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Soziale Kontakte zu Artgenossen sind für Pferde unerlässlich. Ein einzelnes Pferd ohne Artgenossen widerspricht seinem natürlichen Sozialverhalten (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.1).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Füttern</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Zwei Mahlzeiten am Tag genügen.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Lange Fresspausen führen zu Stress und Koliken (<a href="https://tierschutzdresden.de/artgerechte-pferde-haltung/" target="_blank" rel="noopener noreferrer">Tierschutzverein Dresden</a>). Die Leitlinien verlangen Raufutter möglichst durchgehend oder mindestens zwölf Stunden am Tag (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>, Abschnitt 2.1.4).</p></div>
+          </li>
+        </ul>
+
+
+<div class="section-feedback-heading"><h2 id="pferde-jahre">Was es über die Jahre kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-jahre" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
         <div class="faktenzeile">
           <div><span class="zahl">20 bis 31&nbsp;€</span><span class="zahl-text">pro Tag laufende Kosten für ein Pferd bei Standardhaltung, ohne Notfälle</span></div>
           <div><span class="zahl">600 bis 950&nbsp;€</span><span class="zahl-text">pro Monat, der Richtwert, aus dem der Tagesbetrag errechnet ist</span></div>
-          <div><span class="zahl">180.000 bis 285.000&nbsp;€</span><span class="zahl-text">in 25 Jahren, Hochrechnung aus denselben Beträgen</span></div>
+          <div><span class="zahl">180.000 bis 285.000&nbsp;€</span><span class="zahl-text">in 25&nbsp;Jahren, Hochrechnung aus denselben Beträgen</span></div>
           <div><span class="zahl">9.000 bis 13.000&nbsp;€</span><span class="zahl-text">einmalig für Pferd und Erstausstattung, weniger als ein Zehntel davon</span></div>
         </div>
 
-        <p>Grundlage sind 600 bis 950 Euro im Monat. Diesen Richtwert nennt <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> für die Standardhaltung ohne besondere Vorkommnisse (pro Tag: 600 × 12 ÷ 365 ≈ 20, 950 × 12 ÷ 365 ≈ 31). Über 25 Jahre werden daraus 180.000 bis 285.000 Euro (7.200 bis 11.400 Euro im Jahr × 25). Wie das im Einzelnen zusammenkommt, steht auf <a href="../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
+        <p>Grundlage sind 600 bis 950&nbsp;Euro im Monat. Diesen Richtwert nennt <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> für die Standardhaltung ohne besondere Vorkommnisse (pro Tag: 600&nbsp;× 12 ÷ 365 ≈ 20, 950&nbsp;× 12 ÷ 365 ≈ 31). Über 25&nbsp;Jahre werden daraus 180.000 bis 285.000&nbsp;Euro (7.200 bis 11.400&nbsp;Euro im Jahr ×&nbsp;25). Wie das im Einzelnen zusammenkommt, steht auf <a href="../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
+
+                <div class="section-feedback-heading"><h2 id="pferde-selbsttest">Passt ein Pferd gerade in dein Leben?</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-selbsttest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Hake ab, was heute schon stimmt. Deine Kreuze werden nicht gespeichert und nirgendwohin gesendet.</p>
+        <details class="nat-test">
+          <summary>Sieben Fragen öffnen</summary>
+          <div class="nat-test-inhalt">
+            <ul>
+              <li><label><input type="checkbox"><span><strong>Artgenossen:</strong> Mein Pferd hat mindestens einen Artgenossen und in jedem Fall Sicht-, Hör- und Geruchskontakt, auch in zehn Jahren, wenn ein Tier stirbt oder auszieht.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Bewegung:</strong> Mein Pferd kann sich jeden Tag mehrere Stunden frei bewegen, auf Weide oder Auslauf mit mindestens 150&nbsp;m² für bis zu zwei Pferde.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Futter:</strong> Raufutter steht durchgehend oder mindestens zwölf Stunden am Tag bereit, auch nachts und am Wochenende.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Zeit:</strong> Ich sehe 365&nbsp;Tage im Jahr nach meinem Pferd, auch bei Krankheit und Urlaub, oder jemand vertritt mich zuverlässig.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tierarzt und Hufe:</strong> Ich habe eine Hufpflege alle 6 bis 8&nbsp;Wochen und eine Tierarztpraxis, die Pferde versorgt. Ich weiß, wohin ich im Notfall nachts oder am Wochenende fahre.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Kosten:</strong> Ich kann etwa 20 bis 31&nbsp;Euro am Tag tragen (600 bis 950&nbsp;Euro im Monat) und habe eine Rücklage für Notfälle.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Lebensdauer:</strong> Ich kann mich 25 bis 30&nbsp;Jahre kümmern. Ich habe als <a href="../pferde/reitbeteiligung/index.html">Reitbeteiligung</a> erlebt, wie der Alltag mit einem Pferd aussieht.</span></label></li>
+            </ul>
+            <div class="nat-test-schluss">
+              <p><strong>Wenn du nicht alles abhaken konntest:</strong> Das ist ein ehrliches Ergebnis. „Noch nicht“ ist eine gute Entscheidung für dich und für das Pferd.</p>
+              <p><a href="../noch-nicht-bereit/index.html">Was jetzt hilft: Noch nicht bereit</a></p>
+            </div>
+          </div>
+        </details>
+
 
         <div class="section-feedback-heading"><h2 id="pferde-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-
         <div class="pex-bedenkzeit">
           <p><strong>Ein Pferd muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Pferd an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Pferde nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du siehst das Pferd an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Pferde nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
         </div>
-        <p>Die Reihenfolge, die wir empfehlen: erst Tierschutzvereine und Auffangstellen, danach alles andere. Die Fragen für den Besuch beim Anbieter und die Checkliste stehen auf <a href="../pferde/entscheidung/index.html">Bevor ein Pferd einzieht</a>.</p>
+        <div class="nat-bremse" id="pferd-karte">
+          <span class="nat-bremse-titel">Bevor du ein Pferd holst</span>
+          <p class="nat-bremse-gross">Schlaf eine Woche darüber.</p>
+          <p>Fünf Fragen an den Anbieter:</p>
+          <ol>
+            <li>Wie alt ist das Pferd, und wie lebt es heute: in einer Gruppe, mit Auslauf und Weide?</li>
+            <li>Hat es Kontakt zu Artgenossen und jederzeit Raufutter (<a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a>)?</li>
+            <li>Gibt es eine tierärztliche Ankaufsuntersuchung, also eine Gesundheitsprüfung vor dem Kauf?</li>
+            <li>Kann ich das Pferd an zwei verschiedenen Tagen dort sehen, wo es lebt?</li>
+            <li>Was passiert, wenn es nicht passt? Gibt es eine Probezeit oder eine Reitbeteiligung?</li>
+          </ol>
+          <p class="nat-bremse-fuss">Du darfst auch „Noch nicht“ sagen. Fragen kostet nichts, und wer dir Zeit lässt, ist ein guter Gesprächspartner.</p>
+        </div>
+        <p class="nat-bremse-aktion"><a class="btn btn-outline" href="../assets/karten/pferd-karte-bevor-du-ein-pferd-holst.png" download="pferd-karte-bevor-du-ein-pferd-holst.png">Karte als Bild speichern</a></p>
+
+        <div class="pex-karte">
+          <span class="pex-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span><b>Wenn</b> es heißt „Das Pferd ist morgen weg, es gibt andere Interessenten“,</span><span><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
+            <li><span><b>Wenn</b> ich das Pferd nicht dort sehen darf, wo es lebt,</span><span><b>dann</b> fahre ich ohne Pferd wieder heim.</span></li>
+            <li><span><b>Wenn</b> das Pferd allein ohne Artgenossen stehen soll,</span><span><b>dann</b> nehme ich keins mit.</span></li>
+            <li><span><b>Wenn</b> es keine tierärztliche Ankaufsuntersuchung (Gesundheitsprüfung vor dem Kauf) geben soll,</span><span><b>dann</b> bestehe ich darauf oder sage ab (sie kostet laut RidersDeal etwa 300 bis 1.200&nbsp;Euro).</span></li>
+            <li><span><b>Wenn</b> mir ein Pferd leidtut,</span><span><b>dann</b> rufe ich zuerst einen Tierschutzverein an und frage dort, statt zu kaufen.</span></li>
+          </ul>
+          <p class="pex-karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf <a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+        <p>Die Reihenfolge, die wir empfehlen: erst Tierschutzvereine und Auffangstellen, danach alles andere. Weitere Fragen für den Besuch beim Anbieter und die Checkliste stehen auf <a href="../pferde/entscheidung/index.html">Bevor ein Pferd einzieht</a>.</p>
 
         <div class="pex-wege">
           <div class="pex-weg">
@@ -7914,15 +8180,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.</li><li>Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.</li><li>Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.</li></ul>
+              <ul><li>Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.</li><li>Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16&nbsp;Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.</li><li>Laufende Kosten: rund 20 bis 31&nbsp;Euro pro Tag (600 bis 950&nbsp;Euro im Monat) bei Standardhaltung, ohne Notfälle.</li><li>Hauspferde stammen von Pferden der westeurasischen Steppen ab; Przewalski-Pferde sind die einzigen noch lebenden Wildpferde, Mustangs und Brumbies sind verwilderte Nachkommen entlaufener Hauspferde.</li><li>Herden ziehen in der Steppe bis zu 16&nbsp;Stunden am Tag und legen etwa 20&nbsp;Kilometer zurück; der Magen fasst nur etwa 8 bis 10&nbsp;Liter, das Futter wandert schnell hindurch.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)</a></li><li><a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)</a></li><li><a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)</a></li><li><a href="https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/" target="_blank" rel="noopener noreferrer">Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 2</a></li></ul>
+              <ul><li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)</a></li><li><a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)</a></li><li><a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)</a></li><li><a href="https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/" target="_blank" rel="noopener noreferrer">Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 2</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Reitstall-Check</a></li><li><a href="https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde" target="_blank" rel="noopener noreferrer">WWF Deutschland: Wildpferde</a></li><li><a href="https://animaldiversity.org/accounts/Equus_caballus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Equus caballus</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/34671162/" target="_blank" rel="noopener noreferrer">Librado u. a. (2021): The origins and spread of domestic horses from the Western Eurasian steppes, Nature 598</a></li><li><a href="https://www.cavallo.de/medizin/so-sehen-pferde/" target="_blank" rel="noopener noreferrer">CAVALLO: So sehen Pferde (3. Januar 2012)</a></li><li><a href="https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/introduction-to-digestive-disorders-of-horses" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual für Tierhaltende: Digestive Disorders of Horses</a></li><li><a href="https://www.extension.iastate.edu/equine/synopsis-digestive-anatomy-and-physiology-horse" target="_blank" rel="noopener noreferrer">Iowa State University Extension: Digestive Anatomy and Physiology of the Horse (archivierte Seite)</a></li><li><a href="https://tierschutzdresden.de/artgerechte-pferde-haltung/" target="_blank" rel="noopener noreferrer">Tierschutzverein Dresden: Artgerechte Pferdehaltung</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.</li><li>Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.</li></ul>
+              <ul><li>Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.</li><li>Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.</li><li>Wie nah das Przewalski-Pferd mit dem Hauspferd verwandt ist, ist unter Fachleuten noch umstritten.</li><li>Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.</li></ul>
             </article>
           </div>
         </div>

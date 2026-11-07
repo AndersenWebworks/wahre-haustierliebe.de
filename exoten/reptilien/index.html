@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reptilien halten - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.">
+  <meta name="description" content="Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Exoten halten, Terrarium, UV-B, Reptilien, Meldepflicht">
   <meta property="og:title" content="Reptilien halten - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.">
+  <meta property="og:description" content="Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/exoten/reptilien/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png">
@@ -25,7 +25,7 @@
   <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Reptilien halten - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.">
+  <meta name="twitter:description" content="Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png">
   <meta name="twitter:image:alt" content="Bartagame ruht auf einem Ast im beleuchteten Terrarium.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/exoten/reptilien/index.html">
@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7199,7 +7223,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "WebPage",
   "name": "Reptilien halten - Wa(h)re Haustier(liebe)",
   "headline": "Reptilien halten - Wa(h)re Haustier(liebe)",
-  "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.",
+  "description": "Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.",
   "url": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7283,7 +7307,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "Article",
   "headline": "Reptilien halten - Wa(h)re Haustier(liebe)",
   "name": "Reptilien halten - Wa(h)re Haustier(liebe)",
-  "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.",
+  "description": "Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.",
   "url": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
   "image": {
@@ -7337,7 +7361,10 @@ body.static-site .start-trust { margin-top: 1.25rem; }
     "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf",
     "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2",
     "https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/",
-    "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
+    "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html",
+    "https://animaldiversity.org/accounts/Pogona_vitticeps/",
+    "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles",
+    "https://www.infektionsschutz.de/hygienetipps/hygiene-und-tiere/"
   ]
 }
   </script>
@@ -7692,7 +7719,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
       <div class="container">
         <div class="article-hero-copy">
           <h1>Reptilien halten</h1>
-                  <p>Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.</p>
+                  <p>Wie Bartagamen in Australien leben und was das fürs Terrarium heißt: Wärme, UV-B, Platz, Futter, Winterruhe, dazu Selbsttest und Kosten pro Monat.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 45%;" data-image-purpose="Reptilien halten: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7700,22 +7727,143 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         </figure>
       </div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#exoten-reptilien-reptilien-was-eine-bartagame-von-dir-braucht">Reptilien: Was eine Bartagame von dir braucht</a></li><li><a href="#reptilien-ausweg">Du hast schon eine Bartagame? So kommst du Schritt für Schritt weiter</a></li><li><a href="#reptilien-natur">So lebt die Bartagame in der Natur – und was das für die Haltung heißt</a></li><li><a href="#reptilien-braucht">Was eine Bartagame von dir braucht</a></li><li><a href="#reptilien-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#reptilien-tag">Ein Tag aus Sicht einer Bartagame: schwach beleuchtet und gut eingerichtet</a></li><li><a href="#reptilien-saetze">Sätze, die man oft hört – und was Bartagamen dazu brauchen</a></li><li><a href="#reptilien-jahre">Was es über die Jahre kostet</a></li><li><a href="#reptilien-selbsttest">Passt eine Bartagame gerade in dein Leben?</a></li><li><a href="#reptilien-bevor">Bevor du entscheidest</a></li><li><a href="#exoten-reptilien-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../exoten/index.html">Zurück zur Übersicht: Exoten</a></p>
         <div class="topic-page-content">
-<h2>Reptilien: Was eine Bartagame von dir braucht</h2>
-        <p>Bartagamen, Kornnattern, Leopardgeckos wirken unkompliziert: kein Gassi, kein Bellen, kein Fellverlust. Nach dem Tierschutzbund gelten Bartagamen als vermeintlich leichte Pfleglinge und werden bevorzugt als „Einsteigertiere“ gehalten. Dahinter steckt ein System aus Temperaturzonen, Luftfeuchtigkeit, UV-Licht und Ernährung.</p>
-        <p>Reptilien sind keine einzelne Tierart. Als Beispiel dient die Bartagame, die am häufigsten gehaltene Echse (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>). Andere Arten brauchen andere Maße; das <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a> nennt sie je Art in einer Tabelle. Das Bundesministerium überarbeitet das Gutachten derzeit zusammen mit unabhängigen Experten (Meldung vom 15. Oktober 2025, <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html" target="_blank" rel="noopener noreferrer">BMLEH</a>); die Maße können sich ändern.</p>
-        <h3 id="reptilien-braucht">Was eine Bartagame von dir braucht</h3>
+<h2 id="exoten-reptilien-reptilien-was-eine-bartagame-von-dir-braucht">Reptilien: Was eine Bartagame von dir braucht</h2>
+                <p class="kt-einstieg">Dass dich ein Terrarium mit einer Bartagame reizt, ist verständlich. <strong>Dreh die Frage einmal um: Was bräuchte eine Bartagame von dir, und was davon hast du schon?</strong></p>
+                <p class="kt-randnotiz">Bartagamen werden bevorzugt als Einsteigertiere gehalten und gelten als vermeintlich leichte Pfleglinge (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>). Dahinter steckt ein System aus Temperaturzonen, Luftfeuchtigkeit, UV-Licht und Ernährung. Reptilien sind keine einzelne Tierart. Als Beispiel dient die Bartagame, die am häufigsten gehaltene Echse. Andere Arten brauchen andere Maße; das <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a> nennt sie je Art in einer Tabelle. Das Bundesministerium überarbeitet das Gutachten derzeit zusammen mit unabhängigen Experten (Meldung vom 15. Oktober 2025, <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html" target="_blank" rel="noopener noreferrer">BMLEH</a>); die Maße können sich ändern.</p>
+        <p class="nat-sprung"><a class="btn btn-outline" href="#bartagame-karte">Zur Karte für den Besuch beim Anbieter</a></p>
+        <nav class="nat-uebersicht" aria-label="Übersicht dieser Seite"><details><summary>Übersicht: Springe zu …</summary><ol>
+  <li><a href="#reptilien-ausweg">Du hast schon eine Bartagame?</a></li>
+  <li><a href="#reptilien-natur">So lebt die Bartagame in der Natur</a></li>
+  <li><a href="#reptilien-braucht">Was eine Bartagame von dir braucht</a></li>
+  <li><a href="#reptilien-gute-haltung">So kann ein gutes Zuhause aussehen</a></li>
+  <li><a href="#reptilien-tag">Ein Tag aus Sicht einer Bartagame</a></li>
+  <li><a href="#reptilien-saetze">Sätze, die man oft hört</a></li>
+  <li><a href="#reptilien-jahre">Was es über die Jahre kostet</a></li>
+  <li><a href="#reptilien-selbsttest">Passt eine Bartagame in dein Leben?</a></li>
+  <li><a href="#reptilien-bevor">Bevor du entscheidest</a></li>
+</ol></details></nav>
+
+        <h2 id="reptilien-ausweg">Du hast schon eine Bartagame? So kommst du Schritt für Schritt weiter</h2>
+        <p>Vieles an der Haltung zeigt sich erst im Alltag: Licht, Wärme und Futter müssen zusammenpassen. Du kannst das Schritt für Schritt prüfen und verbessern, und du bestimmst das Tempo. Deine Bartagame muss dafür nirgendwohin.</p>
+        <ol class="nat-schritte">
+          <li><strong>Geh mit deiner Bartagame in eine Reptilienpraxis.</strong> Die Praxis wiegt das Tier, untersucht eine Kotprobe auf Parasiten und achtet auf Veränderungen am Skelett (<a href="https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/" target="_blank" rel="noopener noreferrer">Tierarztpraxis Dr. Lorenz</a>). Kotuntersuchungen sind nach dem Steckbrief mindestens zweimal im Jahr nötig (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+          <li><strong>Prüfe das Licht.</strong> UV-A und UV-B sind Pflicht. Auf der Verpackung sagen „Tageslicht“ oder „Vollspektrum“ nichts über den UV-B-Anteil aus. UV-B-Leuchtmittel geben nur etwa 6&nbsp;Monate UV-B ab und gehören dann ausgetauscht (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Das Leuchtmittel muss ausdrücklich als UV-B-Leuchte ausgewiesen sein, noch besser ist eine Messung (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual</a>).</li>
+          <li><strong>Miss nach.</strong> Miss Terrarium und Tier. Die Grundfläche beträgt 4&nbsp;× 5&nbsp;Kopf-Rumpf-Längen (gemessen von der Schnauzenspitze bis zum Schwanzansatz), die Höhe mindestens 3&nbsp;Kopf-Rumpf-Längen; die TVT nennt für ein ausgewachsenes Tier mindestens 150&nbsp;× 80&nbsp;× 80&nbsp;cm (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Ist dein Terrarium kleiner, plane ein größeres.</li>
+          <li><strong>Passe das Futter an.</strong> Erwachsene Tiere fressen zu etwa 80&nbsp;Prozent Grünfutter. Insekten machen nur etwa 20&nbsp;Prozent der Ration aus (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+          <li><strong>Prüfe, mit wem die Bartagame lebt.</strong> Von einem Paar aus Männchen und Weibchen rät der Steckbrief ab, zwei Männchen vertragen sich nicht. Frag die Reptilienpraxis, wie du Tiere trennen kannst. Bei Fragen hilft auch die <a href="https://www.reptilienauffangstation.de" target="_blank" rel="noopener noreferrer">Auffangstation für Reptilien München e. V.</a></li>
+        </ol>
+        <div class="nat-ausweg-fuss">
+          <p>Fehlt dir gerade Platz, Technik oder Zeit? Dann ist es verantwortungsvoll, Hilfe zu suchen, etwa bei einer Auffangstation. Auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a> findest du Wege, wenn du erst einmal wartest. Tiere aus dem Tierschutz vermittelt die Seite <a href="../../adoption/index.html">Adoption statt Kauf</a>.</p>
+        </div>
+
+
+        <h2 id="reptilien-natur">So lebt die Bartagame in der Natur – und was das für die Haltung heißt</h2>
+        <p class="nat-hinweis">Bartagamen sind Wildtiere und sollten auch als solche behandelt werden (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Ihre Bedürfnisse sind die eines Tieres aus Australiens Trockengebieten.</p>
+
+        <h3>Woher sie kommen</h3>
+        <p>Die Streifenköpfige Bartagame (Pogona vitticeps) lebt im Osten und in der Mitte Australiens, von der östlichen Hälfte Südaustraliens bis zum Südosten des Northern Territory. Ihr Lebensraum reicht von Wüste über Trockenwald bis zu Buschland (<a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Sie stammt aus busch- und baumbestandenen trockenen Gebieten (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). In Australien ist sie geschützt, und Tiere für die Haltung sollten ausnahmslos aus Nachzuchten stammen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p>
+
+        <h3>So leben Bartagamen in der Natur</h3>
+        <dl class="nat-liste">
+          <div class="nat-eintrag"><dt>Gruppe</dt><dd>In der Natur leben Bartagamen als Einzelgänger (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Männchen zeigen einander und Weibchen mit Kopfnicken und aufgestelltem, dunklem Bart, wer dominiert. Ein langsames Winken mit einem Vorderbein dient der Verständigung und kann Unterordnung ausdrücken (<a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Tagesrhythmus</dt><dd>Bartagamen sind tagaktiv und sehr bewegungsfreudig (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Sie sonnen sich auf umgestürzten Ästen, Zaunpfosten und anderen erhöhten Plätzen (<a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Sie klettern also und suchen Wärme von oben.</dd></div>
+          <div class="nat-eintrag"><dt>Wärme und Licht</dt><dd>Bartagamen brauchen eine hohe Lichtintensität, mit Zonen unterschiedlicher Wärme, UV-A und UV-B (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Das Terrarium bildet das nach: Der Boden hat 22 bis 25&nbsp;°C, einzelne Wärmeplätze erreichen bis zu 45&nbsp;°C. So können die Tiere zwischen warm und kühl wechseln.</dd></div>
+          <div class="nat-eintrag"><dt>Nahrung</dt><dd>Bartagamen sind Allesfresser, die nehmen, was sie finden: Pflanzen, Insekten, gelegentlich kleine Nager oder Echsen. Ihr großer Magen fasst viel Pflanzenkost (<a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Erwachsene Tiere fressen überwiegend pflanzlich, Insekten machen nur etwa 20&nbsp;Prozent der Ration aus. Jungtiere brauchen dagegen etwa 90&nbsp;Prozent tierische Kost (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Winter</dt><dd>Eine Winterruhe von 1 bis 2&nbsp;Monaten entspricht dem Verhalten im natürlichen Lebensraum und stärkt die Widerstandskraft (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Körperbau</dt><dd>Die Kopf-Rumpf-Länge beträgt 20 bis 25&nbsp;cm, mit Schwanz wird das Tier bis zu 60&nbsp;cm lang. Die Kehlhaut ist mit Stacheln besetzt und lässt sich beim Drohen aufrichten, daher der Name. Auf der Flucht läuft die Bartagame längere Strecken aufrecht auf den Hinterbeinen. Viele Tiere graben (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</dd></div>
+        </dl>
+
+        <h3>Was das für die Haltung heißt</h3>
+        <p>Maßstab ist, was eine Bartagame braucht. Das Mindestmaß ist nur die Untergrenze.</p>
+        <div class="nat-haltung-grid">
+          <section class="nat-haltung" aria-labelledby="bartagame-natur-terrarium">
+            <h4 id="bartagame-natur-terrarium">Terrarium</h4>
+            <ul>
+              <li>Das Terrarium ist dreidimensional strukturiert, mit Klettermöglichkeiten, Verstecken und freier Bodenfläche zum Laufen. Es gibt mindestens einen Sonnenplatz pro Tier (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+              <li>Der Bodengrund besteht aus einem Sand-Kies-Gemisch und liegt mindestens 20 bis 25&nbsp;Zentimeter hoch, weil viele Bartagamen graben (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+              <li>Die Tagphase dauert 12 bis 14&nbsp;Stunden, mit UV-A und UV-B. Die Leuchten sind so angebracht, dass das Tier sie nicht berühren und sich nicht verbrennen kann (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="bartagame-natur-wohnung">
+            <h4 id="bartagame-natur-wohnung">Wohnung und Hand</h4>
+            <ul>
+              <li>Bartagamen sind keine Kuscheltiere und legen keinen besonderen Wert auf Kontakt zu Menschen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+              <li>Sie bleiben im Terrarium und klettern nicht in der Wohnung oder auf dem Halter herum. Dort ist es zu kalt und zu feucht für sie (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+              <li>Mehr zur Frage, was Wildtiere im Haushalt bedeuten, steht auf der Seite <a href="../../wildtierhaltung/index.html">Private Wildtierhaltung</a>.</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="bartagame-natur-winter">
+            <h4 id="bartagame-natur-winter">Winterruhe</h4>
+            <ul>
+              <li>Dafür verkürzt du im Spätsommer über zwei Monate die Beleuchtungsdauer und stellst zwei Wochen vor Beginn das Füttern ein (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+              <li>Im Terrarium liegen die Temperaturen tagsüber bei 12 bis 18&nbsp;°C. Das gelingt im Wohnzimmer meist nicht; du brauchst einen anderen Raum (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+              <li>Nur gesunde Tiere gehen in die Winterruhe, nach einer Kotuntersuchung auf Parasiten (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</li>
+            </ul>
+          </section>
+        </div>
+
+        <h3>In der Natur – in vielen Haushalten</h3>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Gesellschaft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Einzelgänger (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Der starke Paarungstrieb des Männchens kann das Weibchen in einem Paar dauerhaft stressen, was schon zum Tod von Weibchen geführt hat. Zwei Männchen vertragen sich nicht (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Licht</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Sonnenlicht auf erhöhten Plätzen (<a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Häufig sind die Lichtintensitäten in Terrarien zu gering, was das Verhalten der Tiere beeinträchtigt (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). „Tageslicht“ und „Vollspektrum“ auf der Verpackung sagen nichts über den UV-B-Anteil (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Futter</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Pflanzen, Insekten und gelegentlich Kleintiere (<a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Bartagamen galten lange als reine Insektenfresser. Die einseitige Fütterung hat zu Krankheiten wie Gicht geführt (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Zuchtformen</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Schuppen schützen die Haut.</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Gezüchtete „Leatherbacks“ und „Silkbacks“ haben weniger oder keine Schuppen. Der Tierschutzbund sieht sie als Qualzuchten, weil sie sich leichter verletzen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Warum Haltung am Ideal statt am Üblichen gemessen wird, steht auf der Seite <a href="../../realhaltung/index.html">Realhaltung</a>.</p>
+
+        <h3>Auf deine Größe umgerechnet</h3>
+        <div class="nat-vergleiche-koerper">
+          <div class="nat-koerper">
+            <p><strong>Das Maß des Bundesministeriums.</strong> Das BMEL-Gutachten verlangt eine Grundfläche von 4&nbsp;× 5&nbsp;Kopf-Rumpf-Längen und eine Höhe von 3&nbsp;Kopf-Rumpf-Längen. Übertragen auf einen 1,75&nbsp;Meter großen Menschen wären das 7&nbsp;× 8,75&nbsp;Meter Grundfläche, also gut 61&nbsp;Quadratmeter, und 5,25&nbsp;Meter Höhe (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>).</p>
+            <p class="nat-rechnung">Rechnung: 4&nbsp;× 1,75 m = 7 m; 5&nbsp;× 1,75 m = 8,75 m; 7&nbsp;× 8,75 = 61,25&nbsp;m²; 3&nbsp;× 1,75 m = 5,25 m. Für den Menschen zählt die Körpergröße, denn er hat keinen Schwanz.</p>
+          </div>
+          <div class="nat-koerper">
+            <p><strong>Das Maß der TVT.</strong> Für ein ausgewachsenes Tier von bis zu 60&nbsp;Zentimetern Länge nennt die TVT mindestens 150&nbsp;× 80&nbsp;× 80&nbsp;cm (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief</a>). Das ist das 2,5-Fache der Tierlänge in der Länge und das 1,3-Fache in Breite und Höhe. Für dich wären das ein Raum von 4,4&nbsp;× 2,3&nbsp;Metern, rund 10&nbsp;Quadratmeter, mit 2,3&nbsp;Metern Höhe.</p>
+            <p class="nat-rechnung">Rechnung: 150 ÷ 60 = 2,5; 80 ÷ 60 ≈ 1,33; 2,5&nbsp;× 1,75 m ≈ 4,4 m; 1,33&nbsp;× 1,75 m ≈ 2,3 m; 4,4&nbsp;× 2,3 ≈ 10&nbsp;m².</p>
+          </div>
+        </div>
+
+        <h3>Quellen</h3>
+        <ul class="source-list" aria-label="Quellen zu: So lebt die Bartagame in der Natur">
+          <li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)</a> – Wildtier, Einzelgänger, trockene Lebensräume, tagaktiv, Terrarium, Licht, Wärme, Futter, Winterruhe, Zuchtformen.</li>
+          <li><a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Pogona vitticeps</a> – Verbreitung, Lebensraum, Sonnenplätze, Verhalten zwischen Männchen, Nahrung.</li>
+          <li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a> – Terrariengröße in Kopf-Rumpf-Längen.</li>
+          <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual: Nutritional, Metabolic, and Endocrine Diseases of Reptiles</a> – UV-B, Vitamin D3 und Kalziumaufnahme.</li>
+          <li><a href="https://www.infektionsschutz.de/hygienetipps/hygiene-und-tiere/" target="_blank" rel="noopener noreferrer">infektionsschutz.de (BZgA): Hygiene und Tiere (Stand 17. Juni 2025)</a> – Reptilien als mögliche Quelle von Salmonellen, Händewaschen, Haushalte mit Säuglingen und Kleinkindern.</li>
+        </ul>
+        <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
+
+
+        <h2 id="reptilien-braucht">Was eine Bartagame von dir braucht</h2>
+
 
         <section class="pex-feld" aria-labelledby="reptilien-f1">
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 1</span><h3 id="reptilien-f1">Artgenossen</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Einzelgänger in der Natur. Gruppe nur als ein Männchen mit 2 bis 4 Weibchen oder als reine Weibchengruppe.</p><p>Etwa gleich große Bartagamen können so gehalten werden, wenn Tiere, die in der Rangordnung unten stehen, ausweichen und sich zurückziehen können. Von einem Paar aus Männchen und Weibchen rät der Steckbrief ab, weil der starke Paarungstrieb das Weibchen dauerhaft stressen kann. Zwei Männchen vertragen sich nicht. Andere Arten gehören nicht ins selbe Terrarium.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund, Steckbrief Bartagame (Stand 07/2023)</a>, Abschnitt Vergesellschaftung.</p></dd>
+            <dd><p class="pex-mass">Einzelgänger in der Natur. Gruppe nur als ein Männchen mit 2 bis 4&nbsp;Weibchen oder als reine Weibchengruppe.</p><p>Etwa gleich große Bartagamen können so gehalten werden, wenn Tiere, die in der Rangordnung unten stehen, ausweichen und sich zurückziehen können. Von einem Paar aus Männchen und Weibchen rät der Steckbrief ab, weil der starke Paarungstrieb das Weibchen dauerhaft stressen kann. Zwei Männchen vertragen sich nicht. Andere Arten gehören nicht ins selbe Terrarium.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund, Steckbrief Bartagame (Stand 07/2023)</a>, Abschnitt Vergesellschaftung.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Ein Männchen mit zwei Weibchen sind drei Tiere. Der Steckbrief verlangt mindestens einen Sonnenplatz pro Tier, in dieser Gruppe also drei.</p></dd>
             <dt>Frage an dich</dt>
@@ -7735,9 +7883,9 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </div></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen. Die TVT nennt für ein ausgewachsenes Tier mindestens 150 × 80 × 80&nbsp;cm.</p><p>Das BMEL-Gutachten rechnet in Kopf-Rumpf-Längen (KRL) des größten Tieres. Die KRL misst das Tier von der Schnauzenspitze bis zum Schwanzansatz. Für jedes weitere Tier kommen 15&nbsp;Prozent Grundfläche dazu. Der Steckbrief nennt die Maße ausdrücklich als Mindestanforderungen, die man übertreffen soll. Der Bodengrund besteht aus einem Sand-Kies-Gemisch und liegt mindestens 20 bis 25&nbsp;Zentimeter hoch, weil viele Bartagamen graben. Das Terrarium ist dreidimensional strukturiert: Klettermöglichkeiten, Verstecke, aber auch freie Bodenfläche zum Laufen.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>, Abschnitte Platz- und Raumbedarf sowie Strukturierung; <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a>, Tabelle Echsen.</p></dd>
+            <dd><p class="pex-mass">Grundfläche 4&nbsp;× 5&nbsp;Kopf-Rumpf-Längen, Höhe mindestens 3&nbsp;Kopf-Rumpf-Längen. Die TVT nennt für ein ausgewachsenes Tier mindestens 150&nbsp;× 80&nbsp;× 80&nbsp;cm.</p><p>Das BMEL-Gutachten rechnet in Kopf-Rumpf-Längen (KRL) des größten Tieres. Die KRL misst das Tier von der Schnauzenspitze bis zum Schwanzansatz. Für jedes weitere Tier kommen 15&nbsp;Prozent Grundfläche dazu. Der Steckbrief nennt die Maße ausdrücklich als Mindestanforderungen, die man übertreffen soll. Der Bodengrund besteht aus einem Sand-Kies-Gemisch und liegt mindestens 20 bis 25&nbsp;Zentimeter hoch, weil viele Bartagamen graben. Das Terrarium ist dreidimensional strukturiert: Klettermöglichkeiten, Verstecke, aber auch freie Bodenfläche zum Laufen.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>, Abschnitte Platz- und Raumbedarf sowie Strukturierung; <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a>, Tabelle Echsen.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>Die Kopf-Rumpf-Länge einer Streifenköpfigen Bartagame liegt bei 20 bis 25&nbsp;cm. Bei 25&nbsp;cm ergibt das 125&nbsp;cm × 100&nbsp;cm Grundfläche und 75&nbsp;cm Höhe. Für drei Tiere kommen zweimal 15&nbsp;Prozent dazu, das sind rund 1,63&nbsp;m². Der Bodengrund in 25&nbsp;cm Höhe fasst auf der Grundfläche für ein Tier etwa 310&nbsp;Liter, mehr als zwölf Säcke zu je 25 Litern.</p><p class="pex-rechnung">Rechnung: 5 × 25 = 125&nbsp;cm; 4 × 25 = 100&nbsp;cm; 3 × 25 = 75&nbsp;cm; 1,25&nbsp;m² × 1,3 = 1,625&nbsp;m²; 1,25 m × 1,0 m × 0,25 m = 0,3125&nbsp;m³ = 312&nbsp;l.</p></dd>
+            <dd><p>Die Kopf-Rumpf-Länge einer Streifenköpfigen Bartagame liegt bei 20 bis 25&nbsp;cm. Bei 25&nbsp;cm ergibt das 125&nbsp;cm ×&nbsp;100&nbsp;cm Grundfläche und 75&nbsp;cm Höhe. Für drei Tiere kommen zweimal 15&nbsp;Prozent dazu, das sind rund 1,63&nbsp;m². Der Bodengrund in 25&nbsp;cm Höhe fasst auf der Grundfläche für ein Tier etwa 310&nbsp;Liter, mehr als zwölf Säcke zu je 25 Litern.</p><p class="pex-rechnung">Rechnung: 5&nbsp;× 25 = 125&nbsp;cm; 4&nbsp;× 25 = 100&nbsp;cm; 3&nbsp;× 25 = 75&nbsp;cm; 1,25&nbsp;m² ×&nbsp;1,3 = 1,625&nbsp;m²; 1,25 m ×&nbsp;1,0 m ×&nbsp;0,25 m = 0,3125&nbsp;m³ = 312&nbsp;l.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Wo steht das Terrarium dauerhaft, und passt dort eine Fläche von mindestens 1,25&nbsp;m² plus Höhe?</dd>
           </dl>
@@ -7748,7 +7896,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
             <dt>Das Maß</dt>
             <dd><p class="pex-mass">Erwachsene Bartagamen fressen überwiegend pflanzlich. Insekten machen nur etwa 20&nbsp;Prozent der Ration aus.</p><p>Bei erwachsenen Tieren reichen zum Beispiel zwei Heuschrecken pro Woche als tierische Ration, ergänzt durch vielfältige Pflanzenkost: Wiesengräser und -kräuter, in kleineren Mengen Gemüse, Obst nur ausnahmsweise. Jungtiere brauchen dagegen etwa 90&nbsp;Prozent tierische Kost. Mineral- und Vitaminergänzung sowie zerkleinerte Sepiaschale gehören ins Terrarium; Trinkwasser muss täglich frisch angeboten werden.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>, Abschnitt Ernährung.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>Zwei Heuschrecken pro Woche sind 104 im Jahr, in zehn Jahren 1.040 lebende Tiere, die du beschaffen und lagern musst.</p><p class="pex-rechnung">Rechnung: 2 × 52 = 104; 104 × 10 = 1.040.</p></dd>
+            <dd><p>Zwei Heuschrecken pro Woche sind 104 im Jahr, in zehn Jahren 1.040 lebende Tiere, die du beschaffen und lagern musst.</p><p class="pex-rechnung">Rechnung: 2&nbsp;× 52 = 104; 104&nbsp;× 10 = 1.040.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Bist du bereit, lebende Futtertiere zu halten oder zu beschaffen, und wer versorgt die Tiere, wenn du verreist?</dd>
           </dl>
@@ -7768,32 +7916,88 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 5</span><h3 id="reptilien-f5">Gesundheit</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">UV-A und UV-B gehören unbedingt dazu, UV-B-Leuchtmittel nach etwa 6&nbsp;Monaten tauschen. Einmal pro Woche wiegen, Kotproben mindestens zweimal im Jahr.</p><p>Fehlt UV-B-Licht oder Kalzium, kann das zu Veränderungen am Skelett führen, einer Stoffwechselerkrankung der Knochen (Metabolic Bone Disease; <a href="https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/" target="_blank" rel="noopener noreferrer">Tierarztpraxis Dr. Renate Lorenz, Metabolic Bone Disease</a>). Neue Tiere kommen zuerst mindestens 6&nbsp;Wochen in ein eigenes Terrarium zur Quarantäne. Reptilien tragen häufig Salmonellen. Deshalb gehört Händewaschen nach der Arbeit im Terrarium zu den empfohlenen Hygieneregeln; besondere Vorsicht gilt bei Kleinkindern, Schwangeren und Menschen mit geschwächtem Immunsystem. Bartagamen werden bis zu 10&nbsp;Jahre, manchmal über 15&nbsp;Jahre alt.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>, Abschnitte Klimawerte, Pflege und Quarantäne, Allgemeines.</p></dd>
+            <dd><p class="pex-mass">UV-A und UV-B gehören unbedingt dazu, UV-B-Leuchtmittel nach etwa 6&nbsp;Monaten tauschen. Einmal pro Woche wiegen, Kotproben mindestens zweimal im Jahr.</p><p>Fehlt UV-B-Licht oder Kalzium, kann das zu Veränderungen am Skelett führen, einer Stoffwechselerkrankung der Knochen (Metabolic Bone Disease; <a href="https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/" target="_blank" rel="noopener noreferrer">Tierarztpraxis Dr. Renate Lorenz, Metabolic Bone Disease</a>). Der Zusammenhang: Auf der Haut bildet UV-B-Licht Vitamin D3, und der Körper braucht es, um Kalzium aufzunehmen. Fehlt UV-B oder Kalzium, bleibt zu wenig Kalzium für feste Knochen (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual</a>). Neue Tiere kommen zuerst mindestens 6&nbsp;Wochen in ein eigenes Terrarium zur Quarantäne. Reptilien können Salmonellen ausscheiden, auch wenn sie gesund wirken. Deshalb wäschst du dir nach jedem Kontakt mit dem Tier und nach der Arbeit im Terrarium die Hände. Für Haushalte mit Säuglingen, Kleinkindern oder abwehrgeschwächten Menschen eignen sich Reptilien nicht (<a href="https://www.infektionsschutz.de/hygienetipps/hygiene-und-tiere/" target="_blank" rel="noopener noreferrer">infektionsschutz.de</a>). Bartagamen werden bis zu 10&nbsp;Jahre, manchmal über 15&nbsp;Jahre alt.</p><p class="pex-quelle">Quelle: <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>, Abschnitte Klimawerte, Pflege und Quarantäne, Allgemeines.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>Bei einem Tausch alle 6&nbsp;Monate sind das in zehn Jahren 20 UV-B-Leuchtmittel. Zehn Jahre sind 3.650&nbsp;Tage, an denen das Terrarium versorgt werden muss.</p><p class="pex-rechnung">Rechnung: 10 × 2 = 20; 10 × 365 = 3.650.</p></dd>
+            <dd><p>Bei einem Tausch alle 6&nbsp;Monate sind das in zehn Jahren 20 UV-B-Leuchtmittel. Zehn Jahre sind 3.650&nbsp;Tage, an denen das Terrarium versorgt werden muss.</p><p class="pex-rechnung">Rechnung: 10&nbsp;× 2 = 20; 10&nbsp;× 365 = 3.650.</p></dd>
             <dt>Frage an dich</dt>
             <dd class="pex-frage">Kennst du eine Tierarztpraxis, die sich mit Reptilien auskennt, und wohin fährst du im Notfall nachts oder am Wochenende mit dem Tier?</dd>
           </dl>
         </section>
 
-        <h3 id="reptilien-tag">Ein Tag aus Sicht einer Bartagame</h3>
+                <h2 id="reptilien-gute-haltung">So kann ein gutes Zuhause aussehen</h2>
+        <p>Gute Haltung braucht keine Einrichtung wie aus dem Katalog. Sie braucht die richtigen Maße, Licht und Wärme, die zum Verhalten der Tiere passen. Zwei Beispiele nach dem <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Steckbrief des Tierschutzbundes</a>:</p>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 1: Eine Bartagame im Terrarium von 150&nbsp;× 100&nbsp;× 80&nbsp;cm</h3>
+          <ul>
+            <li>Das Maß erfüllt die Angaben der TVT (mindestens 150&nbsp;× 80&nbsp;× 80&nbsp;cm) und bei einer Kopf-Rumpf-Länge von 25&nbsp;cm auch die des BMEL-Gutachtens (125&nbsp;× 100&nbsp;× 75&nbsp;cm).</li>
+            <li>Der Bodengrund aus Sand und Kies ist 20 bis 25&nbsp;cm hoch. Daneben gibt es Äste mit breitem Durchmesser, Steine und Korkröhren zum Klettern und Verstecken, und freie Bodenfläche zum Laufen.</li>
+            <li>Ein Sonnenplatz erreicht an einzelnen Stellen bis 45&nbsp;°C, am Boden liegen 22 bis 25&nbsp;°C. UV-A und UV-B laufen 12 bis 14&nbsp;Stunden am Tag, UV-B-Leuchtmittel werden nach etwa 6&nbsp;Monaten getauscht.</li>
+            <li>Dazu kommen ein Wassernapf, eine feuchte Ecke, ein Thermometer und ein Hygrometer im Terrarium und ein Schutzgitter um die Strahler. Plastikpflanzen fehlen, weil die Tiere sie fressen könnten.</li>
+          </ul>
+        </div>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 2: Eine kleine Gruppe, ein Männchen und zwei Weibchen</h3>
+          <ul>
+            <li>Für drei ausgewachsene Tiere nennt der Steckbrief als Beispiel 250&nbsp;× 200&nbsp;× 100&nbsp;cm.</li>
+            <li>Jedes Tier hat einen eigenen Sonnenplatz, also drei, und es gibt mehrere Futterplätze, damit auch rangniedrige Tiere fressen können.</li>
+            <li>Die Tiere sind etwa gleich groß. Rangniedrige Tiere können ausweichen und sich zurückziehen.</li>
+            <li>Alternativ lebt eine reine Weibchengruppe zusammen. Ein Paar aus Männchen und Weibchen sollte es nicht sein.</li>
+          </ul>
+        </div>
 
+
+        <h2 id="reptilien-tag">Ein Tag aus Sicht einer Bartagame: schwach beleuchtet und gut eingerichtet</h2>
         <span class="pex-beispiel-tag">Beispiel, kein bestimmtes Tier</span>
-        <ol class="zeitleiste">
-          <li><span class="zeitleiste-when">Morgens</span><p class="zeitleiste-what">Das Licht geht an, und die Bartagame wärmt sich an einem Sonnenplatz mit bis zu 45&nbsp;°C an einzelnen Stellen auf. Bartagamen sind tagaktiv und sehr bewegungsfreudig.</p></li>
-          <li><span class="zeitleiste-when">Tagsüber</span><p class="zeitleiste-what">Die Tiere laufen, klettern und graben, wenn das Terrarium dafür Struktur und Bodengrund bietet. Zonen unterschiedlicher Lichtintensität und Wärme lassen sie zwischen warm und kühl wechseln.</p></li>
-          <li class="pex-mensch"><span class="zeitleiste-when">Täglich: du</span><p class="zeitleiste-what">Terrarium kontrollieren, Kot samt umgebendem Bodengrund und Futterreste entfernen, Wasser- und Badegefäß reinigen und neu füllen, frisches Trinkwasser anbieten.</p></li>
-          <li><span class="zeitleiste-when">Abends und nachts</span><p class="zeitleiste-what">Nach 12 bis 14&nbsp;Stunden geht das Licht aus; die Temperatur sinkt auf 20 bis 23&nbsp;°C, die Luftfeuchtigkeit steigt auf 60 bis 80&nbsp;Prozent.</p></li>
-          <li class="pex-mensch"><span class="zeitleiste-when">Einmal pro Woche: du</span><p class="zeitleiste-what">Das Tier wiegen, um Veränderungen früh zu bemerken.</p></li>
+        <h3>Im zu kleinen, schwach beleuchteten Terrarium</h3>
+        <ol class="nat-ich">
+          <li><span class="nat-wann">Morgens</span><p>Das Licht geht an. Ich bin tagaktiv und will mich aufwärmen. Die Lampe ist schwach, und ich finde nirgends einen erhöhten Sonnenplatz, an dem es richtig warm wird.</p></li>
+          <li><span class="nat-wann">Vormittag</span><p>Ich laufe die Länge meines Terrariums ab, dann ist es zu Ende. Zum Graben ist der Boden zu flach. Ich klettere gern, aber es gibt nichts zum Klettern.</p></li>
+          <li><span class="nat-wann">Mittag</span><p>Neben mir lebt eine zweite Bartagame. Wenn sie mich bedrängt, kann ich ihr nicht ausweichen.</p></li>
+          <li><span class="nat-wann">Nachmittag</span><p>Es gibt Heimchen als Futter, aber kaum Pflanzen. In der Natur fresse ich überwiegend Pflanzen.</p></li>
+          <li><span class="nat-wann">Abends</span><p>Das Licht geht aus. Die UV-B-Leuchte läuft seit über einem Jahr. Nach etwa 6&nbsp;Monaten gibt sie kein UV-B mehr ab.</p></li>
         </ol>
-        <p class="pex-legende">Der Ablauf stützt sich auf die Angaben des <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a>. Wie eine bestimmte Bartagame ihren Tag verbringt, kann abweichen.</p>
+        <h3>Ein guter Tag im gut eingerichteten Terrarium</h3>
+        <ol class="nat-ich nat-ich-gut">
+          <li><span class="nat-wann">Morgens</span><p>Das Licht geht an, und ich wärme mich auf einem Sonnenplatz auf, an dem es bis zu 45&nbsp;°C warm wird.</p></li>
+          <li><span class="nat-wann">Tagsüber</span><p>Ich laufe, klettere und grabe. Zonen mit unterschiedlicher Helligkeit und Wärme lassen mich zwischen warm und kühl wechseln.</p></li>
+          <li><span class="nat-wann">Täglich: du</span><p>Du kontrollierst das Terrarium, entfernst Kot samt umgebendem Bodengrund und Futterreste, reinigst Wasser- und Badegefäß und füllst frisches Trinkwasser nach.</p></li>
+          <li><span class="nat-wann">Abends und nachts</span><p>Nach 12 bis 14&nbsp;Stunden geht das Licht aus. Die Temperatur sinkt auf 20 bis 23&nbsp;°C, die Luftfeuchtigkeit steigt auf 60 bis 80&nbsp;Prozent.</p></li>
+          <li><span class="nat-wann">Einmal pro Woche: du</span><p>Du wiegst mich, damit Veränderungen früh auffallen.</p></li>
+        </ol>
+        <p class="pex-legende">Die Abläufe stützen sich auf den <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Steckbrief Bartagame</a> und auf <a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>. Wie eine bestimmte Bartagame ihren Tag verbringt, kann abweichen.</p>
 
-        <h3 id="reptilien-jahre">Wie lange, und was es kostet</h3>
+
+        <h2 id="reptilien-saetze">Sätze, die man oft hört – und was Bartagamen dazu brauchen</h2>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Einsteigertier</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Eine Bartagame ist ein Anfängertier und braucht kaum etwas.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Bartagamen werden bevorzugt als Einsteigertiere gehalten und gelten als vermeintlich leichte Pfleglinge (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Die Haltung braucht Temperaturzonen, Luftfeuchtigkeit, UV-Licht und abwechslungsreiches Futter.</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Futter</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Bartagamen müssen sich ausschließlich von Insekten ernähren.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Der Tierschutzbund nennt diese weit verbreitete Information falsch. Sie verursacht Gicht und einen frühen Tod. Die Nahrung erwachsener Tiere besteht zu 80&nbsp;Prozent aus Grünfutter (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Licht</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Eine Tageslicht- oder Vollspektrumlampe reicht.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Die Angabe „Tageslicht“ oder „Vollspektrum“ gibt keinen Hinweis auf einen ausreichenden UV-B-Anteil (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Begriffe wie „full“ oder „natural“ garantieren keine UV-B-Abgabe (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Auslauf</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Die Bartagame darf frei durch die Wohnung laufen und auf mir sitzen.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Bartagamen sollten im Terrarium bleiben. In der Wohnung ist es zu kalt und zu feucht für sie, und das Herumklettern dient nur den Vorlieben des Halters, nicht dem Wohl des Tieres (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+        </ul>
+
+
+        <h2 id="reptilien-jahre">Was es über die Jahre kostet</h2>
 
         <div class="faktenzeile">
           <div><span class="zahl">10 bis über 15&nbsp;Jahre</span><span class="zahl-text">kann eine Streifenköpfige Bartagame alt werden</span></div>
-          <div><span class="zahl">3.650&nbsp;Tage</span><span class="zahl-text">tägliche Versorgung in zehn Jahren (10 × 365)</span></div>
-          <div><span class="zahl">20 Lampen</span><span class="zahl-text">UV-B-Leuchtmittel in zehn Jahren bei Wechsel alle 6&nbsp;Monate</span></div>
+          <div><span class="zahl">3.650&nbsp;Tage</span><span class="zahl-text">tägliche Versorgung in zehn Jahren (10&nbsp;× 365)</span></div>
+          <div><span class="zahl">20&nbsp;Lampen</span><span class="zahl-text">UV-B-Leuchtmittel in zehn Jahren bei Wechsel alle 6&nbsp;Monate</span></div>
         </div>
 
         <h3>Eine grobe Schätzung, kein Festpreis</h3>
@@ -7820,7 +8024,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 <thead><tr><th>Posten</th><th>Einmalig</th><th>Monatlich</th></tr></thead>
 <tbody>
 <tr><td data-label="Posten">Eine Bartagame (Beispielpreise für Nachzuchten)</td><td data-label="Einmalig">20–100&nbsp;€</td><td data-label="Monatlich">–</td></tr>
-<tr><td data-label="Posten">Terrarium 150 × 80 × 80&nbsp;cm, neu (299,95 bis 399&nbsp;€)</td><td data-label="Einmalig">300–399&nbsp;€</td><td data-label="Monatlich">–</td></tr>
+<tr><td data-label="Posten">Terrarium 150&nbsp;× 80&nbsp;× 80&nbsp;cm, neu (299,95 bis 399&nbsp;€)</td><td data-label="Einmalig">300–399&nbsp;€</td><td data-label="Monatlich">–</td></tr>
 <tr><td data-label="Posten">Beleuchtung und Regelung (UV-B-Leuchte mit Röhre 69,90&nbsp;€, Wärmespot ab 10,74&nbsp;€, Thermostat 44,40 bis 78,95&nbsp;€)</td><td data-label="Einmalig">125–160&nbsp;€</td><td data-label="Monatlich">–</td></tr>
 <tr><td data-label="Posten">Bodengrund, mindestens 250&nbsp;kg Sand-Lehm-Gemisch (10 Säcke zu 29,90&nbsp;€)</td><td data-label="Einmalig">299&nbsp;€</td><td data-label="Monatlich">–</td></tr>
 <tr><td data-label="Posten">Einrichtung und Messgerät (Korkrinde, Korkröhre, Thermo-Hygrometer)</td><td data-label="Einmalig">27&nbsp;€</td><td data-label="Monatlich">–</td></tr>
@@ -7830,23 +8034,59 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 <tr class="total"><td data-label="Posten">Gesamt über zehn Jahre</td><td colspan="2" data-label="Einmalig / Monatlich">ca. 2.840–4.200&nbsp;€</td></tr>
 </tbody>
 </table>
-<p class="text-muted">Rechenweg. Einmalig: 20 + 299,95 + 125,04 + 299 + 26,77 = 770,76&nbsp;€ bis 100 + 399 + 159,59 + 299 + 26,77 = 984,36&nbsp;€. Laufend: 3,32 + Strom + 2,98 = 17,21 bis 26,79&nbsp;€ im Monat, mal 120&nbsp;Monate = 2.065 bis 3.215&nbsp;€. Zusammen 2.836 bis 4.199&nbsp;€, geteilt durch 3.650&nbsp;Tage (zehn Jahre) sind 0,78 bis 1,15&nbsp;€ pro Tag, geteilt durch 120&nbsp;Monate 24 bis 35&nbsp;€ pro Monat. Strom: UV-B-Leuchte mit 39&nbsp;Watt plus ein Wärmespot mit 35 bis 100&nbsp;Watt, 13&nbsp;Stunden Licht am Tag (die Spanne des Wärmespots ist eine Annahme): 74 bis 139&nbsp;W × 13&nbsp;h × 30,4 ÷&nbsp;1.000 = 29 bis 55&nbsp;Kilowattstunden im Monat, mal 0,373&nbsp;€ (durchschnittlicher Haushaltsstrompreis, <a href="https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/" target="_blank" rel="noopener noreferrer">BDEW</a>, Oktober 2026) sind 10,91 bis 20,49&nbsp;€. Futter: zwei Heuschrecken pro Woche sind etwa 9 im Monat, das ist eine Dose (2,98&nbsp;€).</p>
-<p class="text-muted">Woher die Zahlen kommen. Terrarium: <a href="https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/" target="_blank" rel="noopener noreferrer">OSB-Terrarium 150 × 80 × 80&nbsp;cm für 299,95&nbsp;€</a> und <a href="https://www.ms-reptilien.de/holzterrarium-150x80x80cm-mit-seitenbelueftung" target="_blank" rel="noopener noreferrer">Holzterrarium 150 × 80 × 80&nbsp;cm für 399&nbsp;€</a>. Technik bei Terraristikladen: <a href="https://www.terraristikladen.de/terrarienbeleuchtung/fassungen-zubehoer/arcadia-pro-t5-kit-desert-12-uv-b-39-w-870-mm" target="_blank" rel="noopener noreferrer">Arcadia-UV-B-Kit 39 W</a> (69,90&nbsp;€), <a href="https://www.terraristikladen.de/terrarienbeleuchtung/leuchtstoffroehren/t5-leuchtstoffroehren/arcadia-d3-reptile-t5-desert-12-uvb" target="_blank" rel="noopener noreferrer">Ersatzröhre</a> (19,93&nbsp;€), <a href="https://www.terraristikladen.de/terrarienbeleuchtung/tageslicht-waermelampen/lucky-reptile-halogen-sun-in-allen-wattstaerken" target="_blank" rel="noopener noreferrer">Halogenspot 35 W</a> (10,74&nbsp;€) und <a href="https://www.terraristikladen.de/terrarientechnik-klima/messen-regeln/thermostate/thermostat-mit-dimm-funktion" target="_blank" rel="noopener noreferrer">Thermostat</a> (44,40&nbsp;€; ein Tag-Nacht-Thermostat kostet 78,95&nbsp;€). Einrichtung: <a href="https://www.terraristikladen.de/einrichtung-deko/bodengrund/terrariensand-wuestensand-lehm/hobby-terrano-wuestensand" target="_blank" rel="noopener noreferrer">Wüstensand, 25&nbsp;kg für 29,90&nbsp;€</a> (bei einer Bodenhöhe von 20 bis 25&nbsp;cm auf 1,2&nbsp;m² sind es 240 bis 300&nbsp;Liter, 250&nbsp;kg sind deshalb eher eine Untergrenze), <a href="https://www.terraristikladen.de/einrichtung-deko/wurzeln-aeste-hoelzer/korkrinde-korkstuecke" target="_blank" rel="noopener noreferrer">Korkrinde</a> (9,99&nbsp;€), Korkröhre (4,99&nbsp;€) und <a href="https://www.terraristikladen.de/terrarientechnik-klima/messen-regeln/thermo-hygrometer/hobby-digitales-hygrometer-thermometer" target="_blank" rel="noopener noreferrer">Thermo-Hygrometer</a> (11,79&nbsp;€). Futter: <a href="https://www.terraristikladen.de/futtertiere-ernaehrung/futterinsekten/wuestenheuschrecken-in-der-dose" target="_blank" rel="noopener noreferrer">Wüstenheuschrecken, 9 Stück für 2,98&nbsp;€</a>. Der Preis des Tiers (20 bis 100&nbsp;€) ist ein Richtwert für Nachzuchten und gilt nicht für Tiere aus Auffangstationen. Stand der Preise: November 2026.</p>
+<p class="text-muted">Rechenweg. Einmalig: 20 + 299,95 + 125,04 + 299 + 26,77 = 770,76&nbsp;€ bis 100 + 399 + 159,59 + 299 + 26,77 = 984,36&nbsp;€. Laufend: 3,32 + Strom + 2,98 = 17,21 bis 26,79&nbsp;€ im Monat, mal 120&nbsp;Monate = 2.065 bis 3.215&nbsp;€. Zusammen 2.836 bis 4.199&nbsp;€, geteilt durch 3.650&nbsp;Tage (zehn Jahre) sind 0,78 bis 1,15&nbsp;€ pro Tag, geteilt durch 120&nbsp;Monate 24 bis 35&nbsp;€ pro Monat. Strom: UV-B-Leuchte mit 39&nbsp;Watt plus ein Wärmespot mit 35 bis 100&nbsp;Watt, 13&nbsp;Stunden Licht am Tag (die Spanne des Wärmespots ist eine Annahme): 74 bis 139&nbsp;W ×&nbsp;13&nbsp;h ×&nbsp;30,4 ÷&nbsp;1.000 = 29 bis 55&nbsp;Kilowattstunden im Monat, mal 0,373&nbsp;€ (durchschnittlicher Haushaltsstrompreis, <a href="https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/" target="_blank" rel="noopener noreferrer">BDEW</a>, Oktober 2026) sind 10,91 bis 20,49&nbsp;€. Futter: zwei Heuschrecken pro Woche sind etwa 9 im Monat, das ist eine Dose (2,98&nbsp;€).</p>
+<p class="text-muted">Woher die Zahlen kommen. Terrarium: <a href="https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/" target="_blank" rel="noopener noreferrer">OSB-Terrarium 150&nbsp;× 80&nbsp;× 80&nbsp;cm für 299,95&nbsp;€</a> und <a href="https://www.ms-reptilien.de/holzterrarium-150x80x80cm-mit-seitenbelueftung" target="_blank" rel="noopener noreferrer">Holzterrarium 150&nbsp;× 80&nbsp;× 80&nbsp;cm für 399&nbsp;€</a>. Technik bei Terraristikladen: <a href="https://www.terraristikladen.de/terrarienbeleuchtung/fassungen-zubehoer/arcadia-pro-t5-kit-desert-12-uv-b-39-w-870-mm" target="_blank" rel="noopener noreferrer">Arcadia-UV-B-Kit 39 W</a> (69,90&nbsp;€), <a href="https://www.terraristikladen.de/terrarienbeleuchtung/leuchtstoffroehren/t5-leuchtstoffroehren/arcadia-d3-reptile-t5-desert-12-uvb" target="_blank" rel="noopener noreferrer">Ersatzröhre</a> (19,93&nbsp;€), <a href="https://www.terraristikladen.de/terrarienbeleuchtung/tageslicht-waermelampen/lucky-reptile-halogen-sun-in-allen-wattstaerken" target="_blank" rel="noopener noreferrer">Halogenspot 35 W</a> (10,74&nbsp;€) und <a href="https://www.terraristikladen.de/terrarientechnik-klima/messen-regeln/thermostate/thermostat-mit-dimm-funktion" target="_blank" rel="noopener noreferrer">Thermostat</a> (44,40&nbsp;€; ein Tag-Nacht-Thermostat kostet 78,95&nbsp;€). Einrichtung: <a href="https://www.terraristikladen.de/einrichtung-deko/bodengrund/terrariensand-wuestensand-lehm/hobby-terrano-wuestensand" target="_blank" rel="noopener noreferrer">Wüstensand, 25&nbsp;kg für 29,90&nbsp;€</a> (bei einer Bodenhöhe von 20 bis 25&nbsp;cm auf 1,2&nbsp;m² sind es 240 bis 300&nbsp;Liter, 250&nbsp;kg sind deshalb eher eine Untergrenze), <a href="https://www.terraristikladen.de/einrichtung-deko/wurzeln-aeste-hoelzer/korkrinde-korkstuecke" target="_blank" rel="noopener noreferrer">Korkrinde</a> (9,99&nbsp;€), Korkröhre (4,99&nbsp;€) und <a href="https://www.terraristikladen.de/terrarientechnik-klima/messen-regeln/thermo-hygrometer/hobby-digitales-hygrometer-thermometer" target="_blank" rel="noopener noreferrer">Thermo-Hygrometer</a> (11,79&nbsp;€). Futter: <a href="https://www.terraristikladen.de/futtertiere-ernaehrung/futterinsekten/wuestenheuschrecken-in-der-dose" target="_blank" rel="noopener noreferrer">Wüstenheuschrecken, 9 Stück für 2,98&nbsp;€</a>. Der Preis des Tiers (20 bis 100&nbsp;€) ist ein Richtwert für Nachzuchten und gilt nicht für Tiere aus Auffangstationen. Stand der Preise: November 2026.</p>
 <p class="text-muted">Nicht in der Summe: Tierarzt und Notfälle, Pflanzenkost und Futtertiere für Jungtiere, Kalzium und Vitamine, Ersatz für Spot und Thermostat, Betreuung im Urlaub. Als Beispiel für die Tierarztrechnung nennt die <a href="https://www.gesetze-im-internet.de/got_2022/anlage.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a> für eine allgemeine Untersuchung 15,39&nbsp;€ (einfacher Satz) bis 46,17&nbsp;€ (dreifacher Satz); Kotproben sind nach dem Steckbrief mindestens zweimal im Jahr nötig.</p>
 
-        <h3 id="reptilien-bevor">Bevor du entscheidest</h3>
+
+        <h2 id="reptilien-selbsttest">Passt eine Bartagame gerade in dein Leben?</h2>
+        <p>Hake ab, was heute schon stimmt. Deine Kreuze werden nicht gespeichert und nirgendwohin gesendet.</p>
+        <details class="nat-test">
+          <summary>Sieben Fragen öffnen</summary>
+          <div class="nat-test-inhalt">
+            <ul>
+              <li><label><input type="checkbox"><span><strong>Platz:</strong> Ich habe einen festen Platz für ein Terrarium von mindestens 150&nbsp;× 80&nbsp;× 80&nbsp;cm, auch nach einem Umzug.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Technik:</strong> Ich kann UV-B-Leuchte, Wärmespot und Messgeräte einrichten und die UV-B-Leuchte alle 6&nbsp;Monate tauschen.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Futter:</strong> Ich besorge täglich frische Pflanzen und halte lebende Futterinsekten oder beschaffe sie.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Zeit:</strong> Ich kontrolliere jeden Tag Temperatur, Licht und Wasser. Das sind 3.650&nbsp;Tage in zehn Jahren. Jemand vertritt mich im Urlaub.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Winterruhe:</strong> Ich habe einen Raum mit 12 bis 18&nbsp;°C für die Winterruhe, in dem ich die Beleuchtung verkürzen kann.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tierarzt:</strong> Ich kenne eine Reptilienpraxis und weiß, wohin ich im Notfall nachts oder am Wochenende fahre.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Kosten und Dauer:</strong> Ich kann rund 24 bis 35&nbsp;Euro im Monat tragen (grob geschätzt, ohne Tierarzt) und mich 10 bis über 15&nbsp;Jahre kümmern.</span></label></li>
+            </ul>
+            <div class="nat-test-schluss">
+              <p><strong>Wenn du nicht alles abhaken konntest:</strong> Das ist ein ehrliches Ergebnis. „Noch nicht“ ist eine gute Entscheidung für dich und für das Tier.</p>
+              <p><a href="../../noch-nicht-bereit/index.html">Was jetzt hilft: Noch nicht bereit</a></p>
+            </div>
+          </div>
+        </details>
 
 
+        <h2 id="reptilien-bevor">Bevor du entscheidest</h2>
         <div class="pex-bedenkzeit">
           <p><strong>Eine Bartagame muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
+        <div class="nat-bremse" id="bartagame-karte">
+          <span class="nat-bremse-titel">Bevor du eine Bartagame holst</span>
+          <p class="nat-bremse-gross">Schlaf eine Woche darüber.</p>
+          <p>Fünf Fragen an den Anbieter:</p>
+          <ol>
+            <li>Stammt das Tier aus einer Nachzucht? Bartagamen sollten ausnahmslos aus Nachzuchten stammen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+            <li>Wie alt ist das Tier, welches Geschlecht hat es, und mit wem lebt es? Ein Paar aus Männchen und Weibchen sollte es nicht sein.</li>
+            <li>Kann ich sehen, wie das Tier lebt, mit UV-B-Licht, Sonnenplatz und Bodengrund?</li>
+            <li>Gibt es eine Kotuntersuchung auf Parasiten und ein aktuelles Gewicht?</li>
+            <li>Kann ich das Tier zurückgeben, wenn es nicht passt?</li>
+          </ol>
+          <p class="nat-bremse-fuss">Du darfst auch „Noch nicht“ sagen. Fragen kostet nichts, und wer dir Zeit lässt, ist ein guter Gesprächspartner.</p>
+        </div>
+        <p class="nat-bremse-aktion"><a class="btn btn-outline" href="../../assets/karten/bartagame-karte-bevor-du-eine-bartagame-holst.png" download="bartagame-karte-bevor-du-eine-bartagame-holst.png">Karte als Bild speichern</a></p>
 
         <div class="pex-karte">
           <span class="pex-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
           <ul>
+            <li><span><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
             <li><span><b>Wenn</b> es heißt „Das ist ein Anfängertier, das braucht kaum etwas“,</span><span><b>dann</b> lese ich zuerst den Steckbrief des Tierschutzbundes; er nennt Bartagamen vermeintlich leichte Pfleglinge.</span></li>
-            <li><span><b>Wenn</b> Terrarium und Technik als „Komplettset“ angeboten werden,</span><span><b>dann</b> rechne ich die Maße nach (5 × 4 × 3 Kopf-Rumpf-Längen) und kaufe nur, was dazu passt.</span></li>
+            <li><span><b>Wenn</b> Terrarium und Technik als „Komplettset“ angeboten werden,</span><span><b>dann</b> rechne ich die Maße nach (5&nbsp;× 4&nbsp;× 3&nbsp;Kopf-Rumpf-Längen) und kaufe nur, was dazu passt.</span></li>
             <li><span><b>Wenn</b> es keine Angaben zur Herkunft gibt,</span><span><b>dann</b> fahre ich ohne Tier heim. Bartagamen sollten aus Nachzuchten stammen.</span></li>
             <li><span><b>Wenn</b> mir ein Tier leidtut,</span><span><b>dann</b> frage ich zuerst bei Tierheim und Reptilien-Auffangstation nach, statt zu kaufen.</span></li>
           </ul>
@@ -7873,17 +8113,17 @@ body.static-site .start-trust { margin-top: 1.25rem; }
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
           <div class="topic-context-head">
             <span class="eyebrow">Exoten</span>
-            <h2>Weitere Themen in diesem Bereich</h2>
+            <h2 id="exoten-reptilien-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</h2>
           </div>
           <div class="topic-context-grid">
 
           <a class="topic-context-link" href="../../exoten/schildkroeten/index.html">
             <strong>Schildkröten halten</strong>
-            <span>Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer und eine grobe Kostenschätzung pro Tag und Monat.</span>
+            <span>Wie Griechische Landschildkröten im Mittelmeerraum leben und was das für Freianlage, Gewächshaus und Winterruhe heißt, dazu Selbsttest und Kosten pro Monat.</span>
           </a>
           <a class="topic-context-link" href="../../exoten/fische/index.html">
             <strong>Fische halten</strong>
-            <span>Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Gutachten und Schweizer Tierschutz, dazu Kosten pro Tag und Monat.</span>
+            <span>Wie Goldfische in der Natur leben und was das für Aquarium und Teich heißt: Gruppe, Beckenmaß, Wasserwerte, Futter, dazu Selbsttest und Kosten pro Monat.</span>
           </a>
           </div>
         </nav>
@@ -7896,15 +8136,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.</li><li>Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.</li><li>UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.</li><li>Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200 Euro ohne Tierarzt, das sind rund 0,78 bis 1,15 Euro pro Tag und 24 bis 35 Euro pro Monat.</li></ul>
+              <ul><li>Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.</li><li>Grundfläche 4&nbsp;× 5&nbsp;Kopf-Rumpf-Längen, Höhe mindestens 3&nbsp;Kopf-Rumpf-Längen; die TVT nennt mindestens 150&nbsp;× 80&nbsp;× 80&nbsp;cm.</li><li>UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6&nbsp;Monaten getauscht.</li><li>Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200&nbsp;Euro ohne Tierarzt, das sind rund 0,78 bis 1,15&nbsp;Euro pro Tag und 24 bis 35&nbsp;Euro pro Monat.</li><li>Bartagamen sind in der Natur Einzelgänger und tagaktiv; sie leben in trockenen Gebieten im Osten und in der Mitte Australiens und sonnen sich auf erhöhten Plätzen.</li><li>UV-B-Licht lässt die Haut Vitamin D3 bilden, das der Körper für die Kalziumaufnahme braucht; Reptilien können Salmonellen ausscheiden, auch wenn sie gesund wirken.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.terraristikladen.de/" target="_blank" rel="noopener noreferrer">Terraristikladen: Beispielpreise für Beleuchtung, Thermostat, Bodengrund und Futter (November 2026)</a></li><li><a href="https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/" target="_blank" rel="noopener noreferrer">holzterrarium.de: OSB-Terrarium 150 × 80 × 80 cm (November 2026)</a></li><li><a href="https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/" target="_blank" rel="noopener noreferrer">BDEW: Strompreisanalyse (Haushaltsstrompreis, Oktober 2026)</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)</a></li><li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a></li><li><a href="https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/" target="_blank" rel="noopener noreferrer">Tierarztpraxis Dr. Renate Lorenz: Metabolic Bone Disease bei Reptilien</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html" target="_blank" rel="noopener noreferrer">BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)</a></li></ul>
+              <ul><li><a href="https://www.terraristikladen.de/" target="_blank" rel="noopener noreferrer">Terraristikladen: Beispielpreise für Beleuchtung, Thermostat, Bodengrund und Futter (November 2026)</a></li><li><a href="https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/" target="_blank" rel="noopener noreferrer">holzterrarium.de: OSB-Terrarium 150&nbsp;× 80&nbsp;× 80&nbsp;cm (November 2026)</a></li><li><a href="https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/" target="_blank" rel="noopener noreferrer">BDEW: Strompreisanalyse (Haushaltsstrompreis, Oktober 2026)</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)</a></li><li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&amp;v=2" target="_blank" rel="noopener noreferrer">BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)</a></li><li><a href="https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/" target="_blank" rel="noopener noreferrer">Tierarztpraxis Dr. Renate Lorenz: Metabolic Bone Disease bei Reptilien</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html" target="_blank" rel="noopener noreferrer">BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)</a></li><li><a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Pogona vitticeps</a></li><li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-metabolic-and-endocrine-diseases-of-reptiles" target="_blank" rel="noopener noreferrer">MSD Veterinary Manual: Nutritional, Metabolic, and Endocrine Diseases of Reptiles</a></li><li><a href="https://www.infektionsschutz.de/hygienetipps/hygiene-und-tiere/" target="_blank" rel="noopener noreferrer">infektionsschutz.de (BZgA): Hygiene und Tiere (Stand 17. Juni 2025)</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.</li><li>Die Kosten sind eine grobe Schätzung für ein einzelnes Tier aus Beispielpreisen vom November 2026, ohne Tierarzt und Notfälle; Preise und Strombedarf hängen von Gerät und Tarif ab.</li></ul>
+              <ul><li>Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.</li><li>Die Kosten sind eine grobe Schätzung für ein einzelnes Tier aus Beispielpreisen vom November 2026, ohne Tierarzt und Notfälle; Preise und Strombedarf hängen von Gerät und Tarif ab.</li><li>Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.</li></ul>
             </article>
           </div>
         </div>

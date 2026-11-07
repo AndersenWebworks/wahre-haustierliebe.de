@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7718,12 +7742,12 @@ body.static-site .start-trust { margin-top: 1.25rem; }
         <h3>Bedenkzeit</h3>
         <div class="kv-bedenkzeit">
           <p><strong>Wellensittiche müssen nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du besuchst die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
         <div class="kv-karte">
           <span class="kv-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
           <ul>
-            <li><span class="kv-wenn"><b>Wenn</b> es heißt „nur noch heute“ oder „andere Interessenten warten“,</span><span class="kv-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kv-wenn"><b>Wenn</b> es heißt „nur noch heute“ oder „andere Interessenten warten“,</span><span class="kv-dann"><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
             <li><span class="kv-wenn"><b>Wenn</b> ich nur einen einzelnen Vogel mitnehmen soll oder ein Paar getrennt werden soll,</span><span class="kv-dann"><b>dann</b> nehme ich keinen mit. Der Tierschutzbund nennt Einzelhaltung tierschutzwidrig und rät, Paare nicht zu trennen.</span></li>
             <li><span class="kv-wenn"><b>Wenn</b> ich die Vögel nicht dort sehen darf, wo sie leben, oder sie einzeln in sehr kleinen Käfigen sitzen,</span><span class="kv-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
             <li><span class="kv-wenn"><b>Wenn</b> mir ein Vogel leidtut,</span><span class="kv-dann"><b>dann</b> rufe ich das nächste Tierheim an und frage dort nach Wellensittichen, statt zu kaufen.</span></li>
@@ -7734,7 +7758,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
         <h3>Checkliste</h3>
         <ul class="checklist">
           <li>Ich habe zuerst im Tierheim oder bei einer Tierschutzorganisation angefragt, ob dort Wellensittiche ein Zuhause suchen (<a href="../../adoption/index.html">Adoption</a>).</li>
-          <li>Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte.</li>
+          <li>Zwischen dem ersten Besuch und der Zusage liegt eine Woche.</li>
           <li>Ich nehme mindestens zwei passende Tiere auf, am besten vier oder mehr, und trenne keine bestehenden Paare.</li>
           <li>Ich habe dauerhaft Platz für eine große Voliere, in der die Vögel waagerecht fliegen können (für zwei bis sechs Vögel mindestens 2 × 1 × 2&nbsp;Meter, Tierschutzbund) und täglich mehrere Stunden sicheren Freiflug.</li>
           <li>Ich kann einen ganzen Raum vogelsicher machen und Küche, Dämpfe, Rauch, Duftstoffe, Giftpflanzen, offene Fenster und andere Haustiere zuverlässig fernhalten.</li>

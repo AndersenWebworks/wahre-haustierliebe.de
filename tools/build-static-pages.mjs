@@ -1160,7 +1160,7 @@ const evidenceByPage = {
   'pferde-entscheidung': {
     facts: [
       'Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.',
-      'Ob eine Bedenkzeit von mindestens drei Nächten die Haltung verbessert, ist für Pferde nicht untersucht.',
+      'Ob eine Bedenkzeit von einer Woche die Haltung verbessert, ist für Pferde nicht untersucht.',
     ],
     sources: [
       ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],

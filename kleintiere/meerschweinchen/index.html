@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.">
+  <meta name="description" content="Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Meerschweinchen halten, Meerschweinchen abgeben, Abgabealter, Mindestabgabealter, Frühkastration, Gruppenhaltung, Kleintiere">
   <meta property="og:title" content="Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.">
+  <meta property="og:description" content="Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-meerschweinchen.png">
@@ -25,7 +25,7 @@
   <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.">
+  <meta name="twitter:description" content="Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-meerschweinchen.png">
   <meta name="twitter:image:alt" content="Zwei Meerschweinchen sitzen dicht beieinander im Gras.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html">
@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7199,7 +7223,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "WebPage",
   "name": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
   "headline": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
-  "description": "Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.",
+  "description": "Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.",
   "url": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7291,7 +7315,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "Article",
   "headline": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
   "name": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
-  "description": "Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.",
+  "description": "Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.",
   "url": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html",
   "image": {
@@ -7355,7 +7379,11 @@ body.static-site .start-trust { margin-top: 1.25rem; }
     "https://www.gesetze-im-internet.de/tierschg/__2.html",
     "https://www.gesetze-im-internet.de/tierschg/__11c.html",
     "https://www.gesetze-im-internet.de/tierschhuv/BJNR083800001.html",
-    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf",
+    "https://animaldiversity.org/accounts/Cavia_aperea/",
+    "https://animaldiversity.org/accounts/Cavia_porcellus/",
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf",
+    "https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier"
   ]
 }
   </script>
@@ -7377,7 +7405,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
       "name": "Wie viel Platz brauchen Meerschweinchen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nach dem TVT-Merkblatt Nr. 159 mindestens 2 Quadratmeter Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 Quadratmeter mehr. Ein Käfig darf nur ein Rückzugsort sein."
+        "text": "Nach dem TVT-Merkblatt Nr. 159 mindestens 2 Quadratmeter Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 Quadratmeter mehr. Ein Käfig darf nur ein Rückzugsort sein."
       }
     },
     {
@@ -7758,7 +7786,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         </figure>
       </div>
-    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-meerschweinchen-meerschweinchen-ziehen-ein-was-brauchen-sie-von-dir">Meerschweinchen ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-meerschweinchen-beduerfnisse">Was ein Meerschweinchen von dir braucht</a></li><li><a href="#kleintiere-meerschweinchen-tag">Ein Tag aus Sicht einer Meerschweinchengruppe</a></li><li><a href="#kleintiere-meerschweinchen-tierleben">Was es über die Jahre kostet</a></li><li><a href="#kleintiere-meerschweinchen-abgabe">Abgabealter, Geschlechtsreife und Abgabe</a></li><li><a href="#kleintiere-meerschweinchen-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-meerschweinchen-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-meerschweinchen-meerschweinchen-ziehen-ein-was-brauchen-sie-von-dir">Meerschweinchen ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-meerschweinchen-ausweg">Du hast schon ein einzelnes Meerschweinchen? So kommst du Schritt für Schritt weiter</a></li><li><a href="#kleintiere-meerschweinchen-natur">So leben Meerschweinchen in der Natur – und was das für die Haltung heißt</a></li><li><a href="#kleintiere-meerschweinchen-beduerfnisse">Was ein Meerschweinchen von dir braucht</a></li><li><a href="#kleintiere-meerschweinchen-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#kleintiere-meerschweinchen-tag">Ein Tag aus Sicht eines Meerschweinchens: allein und in der Gruppe</a></li><li><a href="#kleintiere-meerschweinchen-verkaufssaetze">Sätze, die man oft hört – und was Meerschweinchen dazu brauchen</a></li><li><a href="#kleintiere-meerschweinchen-tierleben">Was es über die Jahre kostet</a></li><li><a href="#kleintiere-meerschweinchen-abgabe">Abgabealter, Geschlechtsreife und Abgabe</a></li><li><a href="#kleintiere-meerschweinchen-selbsttest">Passen Meerschweinchen gerade in dein Leben?</a></li><li><a href="#kleintiere-meerschweinchen-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-meerschweinchen-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -7767,6 +7795,122 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 <h2 id="kleintiere-meerschweinchen-meerschweinchen-ziehen-ein-was-brauchen-sie-von-dir">Meerschweinchen ziehen ein. Was brauchen sie von dir?</h2>
         <p class="kt-einstieg">Dass du Meerschweinchen bei dir aufnehmen möchtest, ist ein schöner Gedanke. <strong>Dreh ihn einmal um: Was bräuchten Meerschweinchen von dir, und was davon hast du schon?</strong></p>
         <p class="kt-randnotiz">Meerschweinchen gelten als pflegeleichte Kindertiere. Die <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> schreibt dagegen, ihre Haltung sei aufwendig und erfordere umfassendes Wissen; die früher übliche reine Käfighaltung sei nicht tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 159</a>). Sie sind Fluchttiere und keine Schmusetiere.</p>
+        <p class="nat-sprung"><a class="btn btn-outline" href="#meerschweinchen-karte">Zur Karte für den Besuch beim Anbieter</a></p>
+        <nav class="nat-uebersicht" aria-label="Übersicht dieser Seite"><details><summary>Übersicht: Springe zu …</summary><ol><li><a href="#kleintiere-meerschweinchen-ausweg">Du hast schon ein einzelnes Meerschweinchen?</a></li><li><a href="#kleintiere-meerschweinchen-natur">So leben Meerschweinchen in der Natur</a></li><li><a href="#kleintiere-meerschweinchen-beduerfnisse">Was ein Meerschweinchen von dir braucht</a></li><li><a href="#kleintiere-meerschweinchen-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#kleintiere-meerschweinchen-tag">Ein Tag aus Sicht eines Meerschweinchens</a></li><li><a href="#kleintiere-meerschweinchen-verkaufssaetze">Sätze, die man oft hört</a></li><li><a href="#kleintiere-meerschweinchen-tierleben">Was es über die Jahre kostet</a></li><li><a href="#kleintiere-meerschweinchen-abgabe">Abgabealter, Geschlechtsreife und Abgabe</a></li><li><a href="#kleintiere-meerschweinchen-selbsttest">Passen Meerschweinchen in dein Leben?</a></li><li><a href="#kleintiere-meerschweinchen-entscheiden">Bevor du entscheidest</a></li></ol></details></nav>
+
+        <h2 id="kleintiere-meerschweinchen-ausweg">Du hast schon ein einzelnes Meerschweinchen? So kommst du Schritt für Schritt weiter</h2>
+        <p>Meerschweinchen sind gesellige Tiere. Die TVT lehnt Einzelhaltung grundsätzlich ab (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>), und auch durch liebevolle Pflege kann ein Mensch einen Artgenossen nicht ersetzen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Lebt dein Meerschweinchen allein, kannst du das ändern. Du bestimmst das Tempo, und dein Tier muss dafür nirgendwohin.</p>
+        <ol class="nat-schritte">
+          <li><strong>Lass dein Meerschweinchen untersuchen.</strong> Eine Tierarztpraxis, die Meerschweinchen kennt, prüft Gesundheit, Zähne, Gewicht und Geschlecht. Ist es ein Männchen, besprichst du die Kastration. Der Tierschutzbund rät dazu, Böckchen kastrieren zu lassen, damit es nicht plötzlich Nachwuchs gibt. Sind sie schon geschlechtsreif, können sie nach dem Eingriff noch bis zu sechs Wochen zeugungsfähig sein und bleiben so lange von Weibchen getrennt (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+          <li><strong>Mach Platz.</strong> Für zwei bis vier Meerschweinchen brauchst du mindestens 2&nbsp;m² Grundfläche, für jedes weitere Tier 0,5&nbsp;m² mehr. Dazu gehört pro Tier mindestens eine Schlafhöhle mit zwei Ausgängen und weitere Verstecke (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          <li><strong>Suche Gesellschaft im Tierschutz.</strong> Frag im Tierheim oder bei einer Meerschweinchen-Notstation. Die TVT empfiehlt ein kastriertes Männchen, das gut mit anderen auskommt, zusammen mit einem oder mehreren Weibchen, oder eine reine Weibchengruppe (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Der Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren, weil sich Meerschweinchen schon zu zweit schnell langweilen (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Ein Kaninchen ist kein Ersatz: Das Verhalten ist zu verschieden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          <li><strong>Führt sie behutsam zusammen.</strong> Erwachsene Tiere führst du vorsichtig, unter ständiger Aufsicht und auf neutralem Boden zusammen, also in einem Raum, den keines als sein Revier kennt. Dauerhafter Streit hat nach der TVT häufig mit zu wenig Platz und zu wenigen Rückzugsorten zu tun (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Plane deshalb für jedes Tier ein eigenes Versteck ein.</li>
+          <li><strong>Hol dir Hilfe, wenn es hakt.</strong> Eine meerschweinchenkundige Tierarztpraxis, eine Notstation oder ein Tierschutzverein in deiner Nähe kann dich beraten.</li>
+        </ol>
+        <div class="nat-ausweg-fuss">
+          <p>Fehlt dir gerade Platz oder Geld für weitere Tiere? „Noch nicht“ ist dann eine gute Entscheidung. Hilfe dabei findest du auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a>. Tiere aus dem Tierschutz vermittelt die Seite <a href="../../adoption/index.html">Adoption statt Kauf</a>.</p>
+        </div>
+
+        <h2 id="kleintiere-meerschweinchen-natur">So leben Meerschweinchen in der Natur – und was das für die Haltung heißt</h2>
+        <p class="nat-hinweis">Hausmeerschweinchen stammen von südamerikanischen Wildmeerschweinchen ab. Äußerlich unterscheiden sie sich durch die Zucht zum Teil stark von der Wildform, in ihrem Verhalten weniger (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p>
+
+        <h3>Woher sie kommen</h3>
+        <p>Die Wildmeerschweinchen leben in Südamerika, in Buschsteppen und im Grasland, bis in die Hochebenen der Anden in 4.000&nbsp;Metern Höhe (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Als Stammart der Hausform gilt das Aperea (<em>Cavia aperea</em>). Es mag Flächen mit dichtem Bewuchs und legt darin Pfade und Tunnel an (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Die Hausform gibt es in der freien Natur nicht mehr (<a href="https://animaldiversity.org/accounts/Cavia_porcellus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p>
+
+        <h3>So leben Wildmeerschweinchen</h3>
+        <dl class="nat-liste">
+          <div class="nat-eintrag"><dt>Gruppe</dt><dd>Die Tiere sind gesellig und leben in kleinen Gruppen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Das Aperea lebt in Gruppen aus einem Männchen, ein bis zwei Weibchen und ihren Jungen (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Der Tierschutzbund nennt Gruppen von drei bis zehn Tieren (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Sie verständigen sich mit Quieken, Pfeifen, Gurren und Glucksen. Bei Gefahr warnen schrille Schreie die ganze Gruppe (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>; <a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Tagesrhythmus</dt><dd>Meerschweinchen haben mehrere Aktivitätsphasen über 24&nbsp;Stunden, vor allem am Tag und in der Dämmerung, aber auch nachts (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Das Aperea geht tagsüber und in der Dämmerung nur für kurze Zeit zum Fressen hinaus und sucht dann wieder Deckung (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Streifgebiet</dt><dd>Das Revier eines Aperea ist 500 bis 1.000&nbsp;m² groß, also etwa ein Quadrat mit 22 bis 32&nbsp;Metern Seitenlänge (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Nahrungssuche</dt><dd>Wildmeerschweinchen fressen vor allem Gräser, dazu Samen, Blätter, Stängel und manchmal Wurzeln. Sie fressen in der Gruppe. Dann muss jedes Tier weniger Zeit damit verbringen, nach Feinden Ausschau zu halten (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Sinne und Verhalten</dt><dd>Meerschweinchen sind Fluchttiere. Bei Gefahr fliehen sie oder verfallen in eine Schreckstarre (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Sie sind sehr geräuschempfindlich, und eine Hand, die sich von oben nähert, kann auf sie wie ein Greifvogel wirken (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Sie haben einen großen Bewegungsdrang mit Sprints und kleinen Luftsprüngen, dem „Popcornen“ (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Körperbau</dt><dd>Die Zähne wachsen ein Leben lang und nutzen sich vor allem beim Kauen von Heu und anderem rohfaserreichem Futter ab (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Meerschweinchen können Vitamin C nicht selbst bilden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Ihre Knochen haben eine geringe Dichte, bei falschem Hochheben kann ein Knochen brechen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Bei Temperaturen über 28&nbsp;°C kann ein Hitzschlag tödlich enden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+        </dl>
+
+        <h3>Was das für die Haltung heißt</h3>
+        <p>Maßstab ist, was ein Meerschweinchen braucht. Das Mindestmaß ist nur die Untergrenze. Meerschweinchen lassen sich drinnen und draußen halten, entscheidend ist, dass die Bedürfnisse erfüllt werden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p>
+        <div class="nat-haltung-grid">
+          <section class="nat-haltung" aria-labelledby="meerschweinchen-natur-innen">
+            <h4 id="meerschweinchen-natur-innen">Innenhaltung</h4>
+            <ul>
+              <li>Ein Gehege mit mindestens 2&nbsp;m² für zwei bis vier Tiere. Ein Käfig von mindestens 120&nbsp;×&nbsp;60&nbsp;×&nbsp;50&nbsp;cm darf nur ein Rückzugsort sein und steht dauerhaft offen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Vier Pfoten nennt für zwei bis drei Tiere sogar mindestens 8&nbsp;m² (<a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten</a>).</li>
+              <li>Pro Tier eine Höhle mit zwei Ausgängen, dazu Korkröhren und Hängematten. Die Laufstrecken sind zumindest teilweise überdacht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Flachdächer und sanfte Rampen, damit die Tiere sich einen Überblick verschaffen können (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+              <li>Ein ruhiger, heller, gut belüfteter Standort ohne direkte Sonne und ohne Heizkörper. Wohl fühlen sie sich bei 15 bis 22&nbsp;Grad (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="meerschweinchen-natur-aussen">
+            <h4 id="meerschweinchen-natur-aussen">Außenhaltung</h4>
+            <ul>
+              <li>Ganzjährig möglich, vorrangig für kurzhaarige Rassen. Die Tiere gewöhnst du an das Klima: Der Umzug nach draußen sollte frühestens im Mai und spätestens Anfang September erfolgen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Mindestens 2&nbsp;m² strukturierter Auslauf für zwei bis vier Tiere. Der Tierschutzbund nennt für drei bis vier Tiere mindestens 4&nbsp;m², zur Hälfte in der Sonne, zur Hälfte im Schatten (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Nach der TVT liegt mindestens die Hälfte der Fläche ständig im Schatten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Ein frostfreies, gut isoliertes Schutzhaus, in dem sich kein Kondenswasser bildet (Schimmelgefahr) (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Ein- und ausbruchsicher gegen Fuchs, Marder, Greifvögel und Katzen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="meerschweinchen-natur-auslauf">
+            <h4 id="meerschweinchen-natur-auslauf">Freigang und Auslauf</h4>
+            <ul>
+              <li>Auch im Freilauf brauchen die Tiere viele Unterschlupfmöglichkeiten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Leinen und Geschirre sind ungeeignet und kein Ersatz für Freilauf (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Ungesicherte Stromkabel werden angenagt. Sichere den Auslauf also vorher (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Gras auf der Wiese darf nicht frisch gedüngt oder mit Unkrautvernichter behandelt sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            </ul>
+          </section>
+        </div>
+
+        <h3>In der Natur – in vielen Haushalten</h3>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Gesellschaft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Kleine Gruppe aus Artgenossen, nach dem Tierschutzbund drei bis zehn Tiere (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Ein Mensch oder ein Kaninchen ersetzt die Gruppe nicht. Die TVT lehnt Einzelhaltung grundsätzlich ab und hält die Haltung mit Kaninchen wegen des unterschiedlichen Verhaltens für nicht tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Platz und Wege</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Ein Revier von 500 bis 1.000&nbsp;m² mit Pfaden durch dichten Bewuchs (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Die früher übliche reine Käfighaltung ist nach der TVT nicht tiergerecht, weil Meerschweinchen sich viel bewegen und ein komplexes Sozialverhalten haben (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Futter</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Vor allem Gräser, in der Gruppe gefressen (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Viele Pellet-, Getreide- und Luzernemischungen, Leckerlis sowie Salz- und Lecksteine hält die TVT für ungeeignet. Sie enthalten zu viel Zucker und Energie und zu viel Calcium oder Natrium (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Sicherheit</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Dichter Bewuchs bietet Deckung, die Gruppe warnt sich mit Schreien (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Offene Gehege ohne Verstecke, dazu Hände von oben. Stillhalten ist kein Zeichen von Wohlbefinden, sondern von Angst (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Klima</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Offene Landschaft mit starken Temperaturschwankungen: Nach dem Animal Diversity Web verträgt die Hausform 22&nbsp;°C am Tag und bis zu −7&nbsp;°C in der Nacht (<a href="https://animaldiversity.org/accounts/Cavia_porcellus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Sonne am Fenster oder ein Platz neben der Heizung: Hitze mögen und vertragen Meerschweinchen nicht (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Über 28&nbsp;°C kann ein Hitzschlag tödlich enden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Warum Haltung am Ideal statt am Üblichen gemessen wird, steht auf der Seite <a href="../../realhaltung/index.html">Realhaltung</a>. Meerschweinchen sind keine Wildtiere, ihre Bedürfnisse stammen aber aus dem Leben ihrer wilden Verwandten. Wo bei Wildtieren die Grenze verläuft, steht auf der Seite <a href="../../wildtierhaltung/index.html">Private Wildtierhaltung</a>.</p>
+
+        <h3>Auf deine Größe umgerechnet</h3>
+        <div class="nat-vergleiche-koerper">
+          <div class="nat-koerper">
+            <p><strong>Revier und Mindestfläche.</strong> Ein Aperea ist im Mittel 27&nbsp;cm lang und hat ein Revier von 500 bis 1.000&nbsp;m² (<a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Wärst du 1,75 m groß und hättest dieselben Verhältnisse, läge dein Revier bei etwa 2 bis 4&nbsp;Hektar, das sind drei bis sechs Fußballfelder. Die Mindestfläche für zwei Meerschweinchen beträgt 2&nbsp;m², also 1&nbsp;m² pro Tier (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Für dich allein wären das umgerechnet rund 41&nbsp;m².</p>
+            <p class="nat-rechnung">Rechnung: 1,75 m ÷ 0,274 m ≈ 6,4; 6,4&nbsp;×&nbsp;6,4 ≈ 41. Revier: 500&nbsp;m² × 41 ≈ 20.500&nbsp;m² und 1.000&nbsp;m² × 41 ≈ 41.000&nbsp;m², also etwa 2 bis 4&nbsp;Hektar; ein Fußballfeld hat rund 7.140&nbsp;m² (105&nbsp;×&nbsp;68 m). Mindestfläche: 1&nbsp;m² × 41 ≈ 41&nbsp;m².</p>
+          </div>
+          <div class="nat-koerper">
+            <p><strong>Käfig und Wohnung.</strong> Ein Käfig von 120&nbsp;×&nbsp;60 Zentimetern misst 0,72&nbsp;m². Er darf nach der TVT nur ein Rückzugsort sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>). Wäre er das ganze Zuhause, blieben 36&nbsp;Prozent der Mindestfläche. Bei einer Wohnung mit 60&nbsp;m² wären das 21,6&nbsp;m² für alles, ungefähr ein Raum von 4,6&nbsp;×&nbsp;4,6&nbsp;Metern.</p>
+            <p class="nat-rechnung">Rechnung: 1,2 m × 0,6 m = 0,72&nbsp;m²; 0,72 ÷ 2 = 0,36; 0,36&nbsp;×&nbsp;60&nbsp;m² = 21,6&nbsp;m²; √21,6 ≈ 4,6.</p>
+          </div>
+        </div>
+
+        <h3>Quellen</h3>
+        <ul class="source-list" aria-label="Quellen zu: So leben Meerschweinchen in der Natur">
+          <li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz (TVT): Merkblatt Nr. 159 „Meerschweinchen“ (Stand Oktober 2020)</a> – Abstammung, Verhalten, polyphasische Aktivität, Platzbedarf, Innen- und Außenhaltung, Schatten, Hitze, Futter, Knochen, Gesellschaft.</li>
+          <li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“</a> – Herkunft, Gruppen von drei bis zehn Tieren, Laute, Fluchtverhalten, Außengehege ab 4&nbsp;m², Raumtemperatur, Standort.</li>
+          <li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Meerschweinchen</a> – Lebensweise, Gruppen, Kastration und Wartezeit, mindestens drei Tiere bei Adoption.</li>
+          <li><a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Cavia aperea, Brazilian guinea pig</a> – Lebensraum, Gruppen, Tunnel im Bewuchs, Aktivität, Revier von 500 bis 1.000&nbsp;m², Nahrung, Warnrufe.</li>
+          <li><a href="https://animaldiversity.org/accounts/Cavia_porcellus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Cavia porcellus, domestic guinea pig</a> – Hausform nicht mehr in der freien Natur, Temperaturspanne, lebenslang wachsende Zähne.</li>
+          <li><a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten: Das Meerschweinchen als Haustier</a> – Fläche von mindestens 8&nbsp;m² für zwei bis drei Tiere, keine Kuscheltiere, nicht für Kinder unter zehn Jahren.</li>
+        </ul>
+        <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
 
         <h2 id="kleintiere-meerschweinchen-beduerfnisse">Was ein Meerschweinchen von dir braucht</h2>
 
@@ -7788,10 +7932,10 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">2&nbsp;m² Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5&nbsp;m² mehr.</p>
-          <p>Ein Käfig von mindestens 120 × 60 × 50&nbsp;cm kann Teil des Geheges sein, darf aber nur ein Rückzugsort sein und muss dauerhaft offen stehen. Pro Tier gehört mindestens eine Schlafhöhle mit zwei Ausgängen ins Gehege, dazu weitere Verstecke wie Korkröhren (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 159</a>). Für ein Außengehege nennt der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> mindestens vier Quadratmeter, ein- und ausbruchssicher und mit wetterfestem Schlafhaus.</p></dd>
+          <p>Ein Käfig von mindestens 120&nbsp;×&nbsp;60&nbsp;×&nbsp;50&nbsp;cm kann Teil des Geheges sein, darf aber nur ein Rückzugsort sein und muss dauerhaft offen stehen. Pro Tier gehört mindestens eine Schlafhöhle mit zwei Ausgängen ins Gehege, dazu weitere Verstecke wie Korkröhren (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 159</a>). Für ein Außengehege nennt der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> mindestens vier Quadratmeter, ein- und ausbruchssicher und mit wetterfestem Schlafhaus.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>2&nbsp;m² sind zum Beispiel 1 m × 2 m. Ein Käfig mit 120 × 60&nbsp;cm deckt davon 0,72&nbsp;m² ab, das sind 36&nbsp;Prozent der Fläche. Bei sechs Tieren sind es 3&nbsp;m².</p>
-          <p class="kt-rechnung">Rechnung: 1,2 m × 0,6 m = 0,72&nbsp;m²; 0,72 ÷&nbsp;2 = 0,36. Sechs Tiere: 2&nbsp;m² + 2 × 0,5&nbsp;m² = 3&nbsp;m².</p></dd>
+            <dd><p>2&nbsp;m² sind zum Beispiel 1 m × 2 m. Ein Käfig mit 120&nbsp;×&nbsp;60&nbsp;cm deckt davon 0,72&nbsp;m² ab, das sind 36&nbsp;Prozent der Fläche. Bei sechs Tieren sind es 3&nbsp;m².</p>
+          <p class="kt-rechnung">Rechnung: 1,2 m × 0,6 m = 0,72&nbsp;m²; 0,72 ÷&nbsp;2 = 0,36. Sechs Tiere: 2&nbsp;m² + 2&nbsp;×&nbsp;0,5&nbsp;m² = 3&nbsp;m².</p></dd>
             <dt class="kt-t-frage">Frage an dich</dt>
             <dd class="kt-frage">Wo in deinem Zuhause können 2&nbsp;Quadratmeter dauerhaft den Tieren gehören, und was geschieht, wenn aus zwei Tieren eine größere Gruppe wird?</dd>
           </dl>
@@ -7805,7 +7949,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <p>Beim Frischfutter sind es nach der TVT 70&nbsp;Prozent Grünfutter, 20&nbsp;Prozent Gemüse und höchstens 10&nbsp;Prozent Obst. Viele Pellet-, Getreide- und Luzernemischungen, Leckerlis sowie Salz- und Lecksteine sind ungeeignet. Wasser muss immer bereitstehen. Meerschweinchen können Vitamin C nicht selbst bilden und leiden daher häufig an Skorbut (Vitamin-C-Mangel). Das Vitamin C sollen sie vor allem über Frischfutter bekommen, zum Beispiel über Paprika und Kräuter (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 159</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Rechenbeispiel: Zwei Tiere mit je 1&nbsp;kg Gewicht brauchen am Tag 400&nbsp;g Frischfutter, davon 280&nbsp;g Gräser, Kräuter und Bittersalate. Jeden Tag, auch am Wochenende.</p>
-          <p class="kt-rechnung">Rechnung: 2 × 1&nbsp;kg × 200&nbsp;g = 400&nbsp;g; 70&nbsp;% davon = 280&nbsp;g.</p></dd>
+          <p class="kt-rechnung">Rechnung: 2&nbsp;×&nbsp;1&nbsp;kg × 200&nbsp;g = 400&nbsp;g; 70&nbsp;% davon = 280&nbsp;g.</p></dd>
             <dt class="kt-t-frage">Frage an dich</dt>
             <dd class="kt-frage">Wer besorgt das frisch und täglich, auch wenn du krank bist oder verreist?</dd>
           </dl>
@@ -7838,15 +7982,78 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </dl>
         </div>
 
-        <h2 id="kleintiere-meerschweinchen-tag">Ein Tag aus Sicht einer Meerschweinchengruppe</h2>
-        <span class="kt-beispiel">Beispiel, keine echte Gruppe</span>
-        <ol class="kt-zeit">
-          <li><span class="kt-wann">Über den ganzen Tag</span><p>Die Tiere wechseln zwischen Fressen, Laufen und Ruhen. Heu steht die ganze Zeit bereit, denn die Zähne wachsen lebenslang und werden vor allem beim Kauen von rohfaserreichem Grundfutter abgenutzt.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Jeden Tag: du</span><p>Kot und Urin entfernen, Wasserbehälter gründlich reinigen, Frischfutter geben und alle Tiere ansehen.</p></li>
-          <li><span class="kt-wann">Tag und Nacht</span><p>Mehrere Wach- und Ruhephasen, auch in der Nacht. Jedes Tier braucht einen sicheren Rückzugsort, am besten mit mehr als einem Ausgang.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Bei jeder Kontrolle: du</span><p>Auf Gewicht, Zähne, Fressverhalten und Kot achten; bei Auffälligkeiten zeitnah in die Praxis.</p></li>
+        <h2 id="kleintiere-meerschweinchen-gute-haltung">So kann ein gutes Zuhause aussehen</h2>
+        <p>Gute Haltung braucht keinen Garten wie aus dem Katalog. Sie braucht die richtigen Maße und Dinge, die zum Verhalten der Tiere passen. Zwei Beispiele für eine Gruppe von drei Meerschweinchen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>):</p>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 1: Ein Zimmergehege für drei</h3>
+          <ul>
+            <li>Eine Grundfläche von 2&nbsp;m², zum Beispiel 1 m × 2 m. Flache, gesicherte Rampen oder Stufen zu weiteren Ebenen vergrößern die nutzbare Fläche (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Pro Tier eine Schlafhöhle mit zwei Ausgängen und zusätzlich Korkröhren als Unterschlupf (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Ein Häuschen mit Flachdach als Aussichtspunkt, erreichbar über eine sanft ansteigende Rampe (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            <li>Die Heuraufe hängt außen oder ist abgedeckt, damit sich kein Tier darin verfängt (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Ein Käfigunterteil mit Brücken dient als Rückzugsort, die Tür ist abgebaut (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Ein ruhiger, heller Platz bei 15 bis 22&nbsp;Grad, nicht neben der Heizung (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+          </ul>
+        </div>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 2: Ein Außengehege mit Schutzhaus</h3>
+          <ul>
+            <li>Mindestens 4&nbsp;m² für drei bis vier Tiere, zur Hälfte in der Sonne und zur Hälfte im Schatten (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            <li>Überdeckt und eingegraben, damit weder Hunde, Katzen, Füchse, Greifvögel oder Marder hinein noch die Tiere hinaus können (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            <li>Ein geräumiges, wetterfestes und frostfreies Schlafhaus mit mehreren Kammern, dazu eine überdachte Futterstelle und viele Unterschlüpfe (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            <li>Ein Hohldach über dem Flachdach, damit im Sommer kein Hitzestau entsteht (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            <li>Der Umzug nach draußen erfolgt zwischen Mai und Anfang September (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          </ul>
+        </div>
+
+        <h2 id="kleintiere-meerschweinchen-tag">Ein Tag aus Sicht eines Meerschweinchens: allein und in der Gruppe</h2>
+        <span class="kt-beispiel">Beispiel, kein echtes Tier</span>
+        <h3>Allein im Käfig</h3>
+        <ol class="nat-ich">
+          <li><span class="nat-wann">Früher Morgen</span><p>Ich bin wach und will laufen. Mein Käfig ist einen Meter und zwanzig Zentimeter lang. Nach ein paar Schritten stehe ich an der Wand.</p></li>
+          <li><span class="nat-wann">Vormittag</span><p>Ich bin allein. Meine Art verständigt sich mit Quieken, Pfeifen und Gurren. Hier antwortet niemand.</p></li>
+          <li><span class="nat-wann">Mittag</span><p>Ich habe ein einziges Häuschen. Wenn eine Hand von oben kommt, kann ich nirgends hin. Von oben kommen in der Natur Greifvögel.</p></li>
+          <li><span class="nat-wann">Nachmittag</span><p>Jemand hebt mich hoch. Ich werde starr und bewege mich nicht. Das ist keine Ruhe. Es ist Schreckstarre.</p></li>
+          <li><span class="nat-wann">Abend</span><p>Mein Heu ist aufgebraucht. Meine Zähne wachsen ein Leben lang. Sie nutzen sich nur ab, wenn ich Heu kaue.</p></li>
         </ol>
-        <p class="kt-legende">Der Ablauf stützt sich auf die Verhaltensangaben des TVT-Merkblatts. Wie eine bestimmte Gruppe ihren Tag verbringt, kann abweichen.</p>
+        <h3>Ein guter Tag in der Gruppe</h3>
+        <ol class="nat-ich nat-ich-gut">
+          <li><span class="nat-wann">Über den Tag</span><p>Wir sind zu dritt. Wir wechseln zwischen Fressen, Laufen und Ruhen, am Tag, in der Dämmerung und auch nachts. Zwischendurch machen wir kleine Luftsprünge.</p></li>
+          <li><span class="nat-wann">Morgens: du</span><p>Du entfernst Kot und Urin, reinigst die Wasserschale gründlich und gibst frisches Gemüse und Kräuter. Dort ist das Vitamin C drin, das wir nicht selbst bilden können. Du siehst uns alle an.</p></li>
+          <li><span class="nat-wann">Tagsüber</span><p>Jeder von uns hat eine Höhle mit zwei Ausgängen. Wenn wir ruhen, sind wir nicht allein. Heu steht die ganze Zeit bereit.</p></li>
+          <li><span class="nat-wann">Abends</span><p>Wir laufen durch das Gehege, über die Rampe aufs Dach. Von dort überblicken wir alles.</p></li>
+          <li><span class="nat-wann">Einmal pro Woche: du</span><p>Du prüfst Gewicht und Zähne und siehst nach, ob eines von uns weniger frisst.</p></li>
+        </ol>
+        <p class="kt-legende">Die Abläufe stützen sich auf Verhaltensangaben aus dem TVT-Merkblatt Nr. 159 und vom Tierschutzbund. Das Käfigmaß ist ein Beispiel. Wie ein bestimmtes Tier seinen Tag verbringt, kann abweichen. Quellen: <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>; <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>.</p>
+
+        <h2 id="kleintiere-meerschweinchen-verkaufssaetze">Sätze, die man oft hört – und was Meerschweinchen dazu brauchen</h2>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Kinder und Pflege</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Meerschweinchen sind anspruchslos und pflegeleicht, also ideal für Kinder.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Vier Pfoten nennt das eine Annahme, die nicht stimmt: Die Haltung ist zeitaufwendig und verlangt genaue Kenntnis der Bedürfnisse. Meerschweinchen sind keine Kuscheltiere und für Kinder unter zehn Jahren nicht geeignet (<a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten</a>). Die TVT nennt die Haltung aufwendig (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Käfig</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Käfig reicht.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Die bisher häufig übliche reine Käfighaltung ist laut TVT nicht tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Ein Tier</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Meerschweinchen allein reicht, wenn ich mich viel kümmere.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Auch durch liebevolle Pflege kann der Mensch Artgenossen nicht ersetzen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Die TVT lehnt Einzelhaltung grundsätzlich ab (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Kuscheln</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Meerschweinchen sind zahm und lassen sich gern auf den Arm nehmen.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Haben Meerschweinchen Angst, erstarren sie. Sie lassen sich dann zwar aufheben und streicheln, sind aber innerlich großem Stress ausgesetzt (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>). Gestreichelt werden sie nur, wenn sie freiwillig den Kontakt suchen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Kaninchen</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Kaninchen und Meerschweinchen sind ein schönes Paar.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Die gemeinsame Haltung ist wegen des unterschiedlichen Verhaltens nicht tiergerecht. Kaninchen können Atemwegsinfektionen übertragen, die für Meerschweinchen tödlich sein können (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+        </ul>
 
         <h2 id="kleintiere-meerschweinchen-tierleben">Was es über die Jahre kostet</h2>
         <div class="metric-grid article-rhythm" aria-label="Kosten für zwei Meerschweinchen auf einen Blick">
@@ -8061,15 +8268,52 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <p>Ein Meerschweinchen ist abgabebereit, wenn nicht nur sein Alter, sondern die ganze Übergabe stimmt: Entwicklung, Gesundheit, Geschlecht, Gruppe, Platz, Transport und die Menschen, die danach dauerhaft für es verantwortlich sind.</p>
         </div>
 
+        <h2 id="kleintiere-meerschweinchen-selbsttest">Passen Meerschweinchen gerade in dein Leben?</h2>
+        <p>Hake ab, was heute schon stimmt. Deine Kreuze werden nicht gespeichert und nirgendwohin gesendet.</p>
+        <details class="nat-test">
+          <summary>Sieben Fragen öffnen</summary>
+          <div class="nat-test-inhalt">
+            <ul>
+              <li><label><input type="checkbox"><span><strong>Gruppe:</strong> Ich nehme mindestens zwei, besser drei Meerschweinchen auf, oder ich habe schon eins und suche ihm Gesellschaft im Tierschutz.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Platz:</strong> Ich kann den Tieren dauerhaft mindestens 2&nbsp;m² überlassen und weiß, wo 0,5&nbsp;m² mehr für jedes weitere Tier entstehen.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Zeit:</strong> Ich sorge jeden Tag für Heu, Frischfutter, Wasser und Reinigung und sehe alle Tiere an. Vier Pfoten rechnet mit mindestens einer Stunde täglich (<a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten</a>).</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Urlaub und Krankheit:</strong> Ich habe jemanden, der Meerschweinchen kennt und einspringt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tierarzt:</strong> Ich kenne eine Praxis, die Meerschweinchen behandelt, und habe Geld für Kastration, Zähne und Notfälle.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tagesbetrag:</strong> Ich kann rund 2,40 bis 4,50&nbsp;Euro am Tag (rund 74 bis 136&nbsp;Euro im Monat) für zwei Tiere aufbringen, ohne dass es mir schwerfällt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Lebensdauer:</strong> Ich kann mich 6 bis 8&nbsp;Jahre kümmern (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</span></label></li>
+            </ul>
+            <div class="nat-test-schluss">
+              <p><strong>Wenn du nicht alles abhaken konntest:</strong> Das ist ein ehrliches Ergebnis. „Noch nicht“ ist eine gute Entscheidung für dich und für die Tiere.</p>
+              <p><a href="../../noch-nicht-bereit/index.html">Was jetzt hilft: Noch nicht bereit</a></p>
+            </div>
+          </div>
+        </details>
+
         <h2 id="kleintiere-meerschweinchen-entscheiden">Bevor du entscheidest</h2>
         <div class="kt-bedenkzeit">
           <p><strong>Meerschweinchen müssen nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du siehst die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
+        <div class="nat-bremse" id="meerschweinchen-karte">
+          <span class="nat-bremse-titel">Bevor du Meerschweinchen holst</span>
+          <p class="nat-bremse-gross">Schlaf eine Woche darüber.</p>
+          <p>Fünf Fragen an den Anbieter:</p>
+          <ol>
+            <li>Wie alt sind die Tiere? Jungtiere sollten beim Einzug mindestens acht Wochen alt sein (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund-Broschüre</a>).</li>
+            <li>Wurde das Geschlecht von einer erfahrenen Person sicher bestimmt, und sind die Böckchen kastriert (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>)?</li>
+            <li>Leben die Tiere schon als Gruppe zusammen, und bleiben sie zusammen?</li>
+            <li>Kann ich sehen, wo und wie die Tiere leben?</li>
+            <li>Kann ich ein Tier zurückgeben, wenn es nicht passt?</li>
+          </ol>
+          <p class="nat-bremse-fuss">Du darfst auch „Noch nicht“ sagen. Fragen kostet nichts, und wer dir Zeit lässt, ist ein guter Gesprächspartner.</p>
+        </div>
+        <p class="nat-bremse-aktion"><a class="btn btn-outline" href="../../assets/karten/karte-bevor-du-meerschweinchen-holst.png" download="karte-bevor-du-meerschweinchen-holst.png">Karte als Bild speichern</a></p>
+
+
         <div class="kt-karte">
           <span class="kt-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
           <ul>
-            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> ich nur ein einzelnes Meerschweinchen mitnehmen soll,</span><span class="kt-dann"><b>dann</b> nehme ich keins mit.</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> das Geschlecht nur geschätzt wird („sehen wir später“),</span><span class="kt-dann"><b>dann</b> lasse ich es vorher fachkundig bestimmen oder nehme kein Tier mit.</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> ich die Tiere nicht dort sehen darf, wo sie leben,</span><span class="kt-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
@@ -8119,15 +8363,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/hamster/index.html">
             <strong>Goldhamster halten</strong>
-            <span>Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
+            <span>Wie der Goldhamster in der Natur lebt und was er braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Kosten pro Tag und Bedenkzeit.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/ratten/index.html">
             <strong>Ratten halten</strong>
-            <span>Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.</span>
+            <span>Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/degus-chinchillas/index.html">
             <strong>Degus und Chinchillas halten</strong>
-            <span>Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.</span>
+            <span>Wie Degus und Chinchillas in der Natur leben und was sie brauchen: Gruppen, große Volieren, Temperaturen, Futter und grob geschätzte Kosten pro Tag.</span>
           </a>
           </div>
         </nav>
@@ -8144,7 +8388,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
             </details>
             <details class="faq-item">
               <summary>Wie viel Platz brauchen Meerschweinchen?</summary>
-              <p>Nach dem TVT-Merkblatt Nr. 159 mindestens 2 Quadratmeter Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 Quadratmeter mehr. Ein Käfig darf nur ein Rückzugsort sein.</p>
+              <p>Nach dem TVT-Merkblatt Nr. 159 mindestens 2&nbsp;Quadratmeter Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5&nbsp;Quadratmeter mehr. Ein Käfig darf nur ein Rückzugsort sein.</p>
             </details>
             <details class="faq-item">
               <summary>Dürfen Meerschweinchen mit Kaninchen zusammenleben?</summary>
@@ -8163,15 +8407,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Meerschweinchen brauchen nach dem TVT-Merkblatt Nr. 159 mindestens 2 m² Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 m² mehr.</li><li>Einzelhaltung ist grundsätzlich abzulehnen; der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren. Kaninchen sind kein Ersatz für Meerschweinchen.</li><li>Meerschweinchen werden 6 bis 8 Jahre alt, selten bis 12; Männchen sind gewöhnlich mit 3 bis 4 Wochen geschlechtsreif, Weibchen schon mit weniger als einem Monat.</li><li>Für Meerschweinchen gibt es keine eigene gesetzliche Mindestabgabealter-Regel; der Deutsche Tierschutzbund nennt mindestens acht Wochen als Orientierung für Jungtiere.</li><li>Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000 Euro in acht Jahren; die Beträge pro Tag und pro Monat (rund 74 bis 136 Euro) sind eine Hochrechnung aus denselben Spannen.</li><li>Haarlose Meerschweinchen, Tiere mit gekräuselten Tasthaaren und extreme Langhaarformen sieht die TVT als Qualzucht; Gründe sind gestörte Wärmeregulation, fehlende Tasthaare als Sinnesorgan und Verfilzung.</li></ul>
+              <ul><li>Meerschweinchen brauchen nach dem TVT-Merkblatt Nr. 159 mindestens 2&nbsp;m² Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5&nbsp;m² mehr.</li><li>Einzelhaltung ist grundsätzlich abzulehnen; der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren. Kaninchen sind kein Ersatz für Meerschweinchen.</li><li>Meerschweinchen werden 6 bis 8&nbsp;Jahre alt, selten bis 12; Männchen sind gewöhnlich mit 3 bis 4&nbsp;Wochen geschlechtsreif, Weibchen schon mit weniger als einem Monat.</li><li>Für Meerschweinchen gibt es keine eigene gesetzliche Mindestabgabealter-Regel; der Deutsche Tierschutzbund nennt mindestens acht Wochen als Orientierung für Jungtiere.</li><li>Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000&nbsp;Euro in acht Jahren; die Beträge pro Tag und pro Monat (rund 74 bis 136&nbsp;Euro) sind eine Hochrechnung aus denselben Spannen.</li><li>Haarlose Meerschweinchen, Tiere mit gekräuselten Tasthaaren und extreme Langhaarformen sieht die TVT als Qualzucht; Gründe sind gestörte Wärmeregulation, fehlende Tasthaare als Sinnesorgan und Verfilzung.</li><li>Hausmeerschweinchen stammen von südamerikanischen Wildmeerschweinchen ab. Das Aperea lebt in Gruppen aus einem Männchen, ein bis zwei Weibchen und den Jungen in dichtem Bewuchs; sein Revier umfasst 500 bis 1.000&nbsp;Quadratmeter.</li><li>Meerschweinchen haben mehrere Aktivitätsphasen über 24&nbsp;Stunden (polyphasisch), sind Fluchttiere und hitzeempfindlich; über 28&nbsp;Grad kann ein Hitzschlag tödlich enden.</li><li>Der Deutsche Tierschutzbund nennt für ein Außengehege mit drei bis vier Tieren mindestens 4&nbsp;Quadratmeter, Vier Pfoten für zwei bis drei Tiere mindestens 8&nbsp;Quadratmeter; die TVT nennt als Mindestmaß 2&nbsp;Quadratmeter für zwei bis vier Tiere.</li><li>Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“, „ein Tier allein reicht“ und „Kaninchen und Meerschweinchen sind ein schönes Paar“.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://meerschweinchenwiese.de/nachwuchs/qualzuchten" target="_blank" rel="noopener noreferrer">Tierärztin Viola Schillinger: Qualzuchten bei Meerschweinchen (Meerschweinchenwiese)</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 159: Meerschweinchen, Stand Oktober 2020</a></li><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Meerschweinchen</a></li><li><a href="https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“</a></li><li><a href="https://www.go4vet.com/kleintiere/krankheiten/tierarztkosten-meerschweinchen-was-solltest-du-einplanen/" target="_blank" rel="noopener noreferrer">go4vet: Tierarztkosten Meerschweinchen</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 2</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__11c.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11c</a></li><li><a href="https://www.gesetze-im-internet.de/tierschhuv/BJNR083800001.html" target="_blank" rel="noopener noreferrer">Tierschutz-Hundeverordnung</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li></ul>
+              <ul><li><a href="https://meerschweinchenwiese.de/nachwuchs/qualzuchten" target="_blank" rel="noopener noreferrer">Tierärztin Viola Schillinger: Qualzuchten bei Meerschweinchen (Meerschweinchenwiese)</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_159_Meerschweinchen_1.pdf&amp;did=40" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 159: Meerschweinchen, Stand Oktober 2020</a></li><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Meerschweinchen</a></li><li><a href="https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“</a></li><li><a href="https://www.go4vet.com/kleintiere/krankheiten/tierarztkosten-meerschweinchen-was-solltest-du-einplanen/" target="_blank" rel="noopener noreferrer">go4vet: Tierarztkosten Meerschweinchen</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 2</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__11c.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11c</a></li><li><a href="https://www.gesetze-im-internet.de/tierschhuv/BJNR083800001.html" target="_blank" rel="noopener noreferrer">Tierschutz-Hundeverordnung</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li><li><a href="https://animaldiversity.org/accounts/Cavia_aperea/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Cavia aperea (Brazilian guinea pig)</a></li><li><a href="https://animaldiversity.org/accounts/Cavia_porcellus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Cavia porcellus (domestic guinea pig)</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Meerschweinchen_web.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“ (PDF)</a></li><li><a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/meerschweinchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten: Das Meerschweinchen als Haustier</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die Maße gelten für Meerschweinchen bis etwa 1,5 kg; größere Tiere brauchen deutlich mehr Platz.</li><li>Die Acht-Wochen-Regel der Tierschutz-Hundeverordnung gilt für Welpen und darf nicht als gesetzliche Meerschweinchen-Regel missverstanden werden.</li><li>Eine Frühkastration ist eine tierärztliche Entscheidung und keine Abkürzung für eine schnelle Abgabe.</li></ul>
+              <ul><li>Die Maße gelten für Meerschweinchen bis etwa 1,5&nbsp;kg; größere Tiere brauchen deutlich mehr Platz.</li><li>Die Acht-Wochen-Regel der Tierschutz-Hundeverordnung gilt für Welpen und darf nicht als gesetzliche Meerschweinchen-Regel missverstanden werden.</li><li>Eine Frühkastration ist eine tierärztliche Entscheidung und keine Abkürzung für eine schnelle Abgabe.</li><li>Die Umrechnungen „Auf deine Größe“ beruhen auf der mittleren Körperlänge des Aperea (27&nbsp;cm, Animal Diversity Web) und einer angenommenen Körpergröße von 1,75 m.</li></ul>
             </article>
           </div>
         </div>

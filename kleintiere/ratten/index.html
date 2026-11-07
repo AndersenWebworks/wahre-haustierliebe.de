@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ratten halten - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.">
+  <meta name="description" content="Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten">
   <meta property="og:title" content="Ratten halten - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.">
+  <meta property="og:description" content="Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/kleintiere/ratten/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png">
@@ -25,7 +25,7 @@
   <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ratten halten - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.">
+  <meta name="twitter:description" content="Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png">
   <meta name="twitter:image:alt" content="Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/kleintiere/ratten/index.html">
@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7199,7 +7223,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "WebPage",
   "name": "Ratten halten - Wa(h)re Haustier(liebe)",
   "headline": "Ratten halten - Wa(h)re Haustier(liebe)",
-  "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.",
+  "description": "Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.",
   "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7283,7 +7307,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
   "@type": "Article",
   "headline": "Ratten halten - Wa(h)re Haustier(liebe)",
   "name": "Ratten halten - Wa(h)re Haustier(liebe)",
-  "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.",
+  "description": "Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.",
   "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
   "image": {
@@ -7343,7 +7367,10 @@ body.static-site .start-trust { margin-top: 1.25rem; }
     "https://rattenzauber.de/kosten.html",
     "https://www.ratteneck.eu/thread/23222-was-kosten-ratten-ich-habe-nachgerechnet/",
     "https://farbratten.com/ratten-tierarzt-kosten/",
-    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf",
+    "https://animaldiversity.org/accounts/Rattus_norvegicus/",
+    "https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf",
+    "https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat"
   ]
 }
   </script>
@@ -7373,7 +7400,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
       "name": "Wie alt werden Ratten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4 Jahren. Ratten bilden außerdem erblich bedingt oft Tumore."
+        "text": "Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4 Jahren. Ratten bilden außerdem erblich bedingt oft Tumore."
       }
     },
     {
@@ -7381,7 +7408,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
       "name": "Was kosten zwei Ratten pro Tag?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Grob geschätzt etwa 0,49 bis 1,14 Euro pro Tag, gerechnet über drei Jahre ohne Tierarzt (zusammen rund 540 bis 1.250 Euro). Eine Kostenrechnung eines Tierschutzverbands gibt es nicht; die Schätzung beruht auf Beispielpreisen und Haltererfahrungen, der Rechenweg steht auf der Seite. Für den Tierarzt solltest du mindestens 100 Euro pro Ratte zurücklegen."
+        "text": "Grob geschätzt etwa 0,49 bis 1,14 Euro pro Tag, gerechnet über drei Jahre ohne Tierarzt (zusammen rund 540 bis 1.250 Euro). Eine Kostenrechnung eines Tierschutzverbands gibt es nicht; die Schätzung beruht auf Beispielpreisen und Haltererfahrungen, der Rechenweg steht auf der Seite. Für den Tierarzt solltest du mindestens 100 Euro pro Ratte zurücklegen."
       }
     }
   ]
@@ -7738,7 +7765,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
       <div class="container">
         <div class="article-hero-copy">
           <h1>Ratten halten</h1>
-                  <p>Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.</p>
+                  <p>Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Ratten halten: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7746,7 +7773,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         </figure>
       </div>
-    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-ratten-zwei-ratten-ziehen-ein-was-brauchen-sie-von-dir">Zwei Ratten ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-ratten-beduerfnisse">Was eine Ratte von dir braucht</a></li><li><a href="#kleintiere-ratten-tag">Ein Tag aus Sicht einer Rattengruppe</a></li><li><a href="#kleintiere-ratten-tierleben">Was zwei Ratten über ihr Leben kosten</a></li><li><a href="#kleintiere-ratten-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-ratten-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-ratten-zwei-ratten-ziehen-ein-was-brauchen-sie-von-dir">Zwei Ratten ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-ratten-ausweg">Du hast schon eine einzelne Ratte? So kommst du Schritt für Schritt weiter</a></li><li><a href="#kleintiere-ratten-natur">So leben Ratten in der Natur – und was das für die Haltung heißt</a></li><li><a href="#kleintiere-ratten-beduerfnisse">Was eine Ratte von dir braucht</a></li><li><a href="#kleintiere-ratten-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#kleintiere-ratten-tag">Ein Tag aus Sicht einer Ratte: allein und in der Gruppe</a></li><li><a href="#kleintiere-ratten-verkaufssaetze">Sätze, die man oft hört – und was Ratten dazu brauchen</a></li><li><a href="#kleintiere-ratten-tierleben">Was zwei Ratten über ihr Leben kosten</a></li><li><a href="#kleintiere-ratten-selbsttest">Passen Ratten gerade in dein Leben?</a></li><li><a href="#kleintiere-ratten-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-ratten-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -7755,6 +7782,121 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 <h2 id="kleintiere-ratten-zwei-ratten-ziehen-ein-was-brauchen-sie-von-dir">Zwei Ratten ziehen ein. Was brauchen sie von dir?</h2>
         <p class="kt-einstieg">Ratten sind das Gegenteil ihres Rufs: intelligent, neugierig und sozial. <strong>Dreh deinen Wunsch einmal um: Was bräuchten zwei Ratten von dir, und was davon hast du schon?</strong></p>
         <p class="kt-randnotiz">Die <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> beschreibt Farbratten als intelligente, neugierige Nager, die sehr schnell ein enges Verhältnis zu ihrem Halter entwickeln und ihn an Geruch und Stimme wiedererkennen. Kinder unter 10&nbsp;Jahren sollen Ratten nach dem Merkblatt nur unter Aufsicht von Erwachsenen pflegen, weil der Umgang ein Feingefühl erfordert, das bei kleinen Kindern im Allgemeinen noch nicht ausgebildet ist (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p>
+        <p class="nat-sprung"><a class="btn btn-outline" href="#ratten-karte">Zur Karte für den Besuch beim Anbieter</a></p>
+        <nav class="nat-uebersicht" aria-label="Übersicht dieser Seite"><details><summary>Übersicht: Springe zu …</summary><ol><li><a href="#kleintiere-ratten-ausweg">Du hast schon eine einzelne Ratte?</a></li><li><a href="#kleintiere-ratten-natur">So leben Ratten in der Natur</a></li><li><a href="#kleintiere-ratten-beduerfnisse">Was eine Ratte von dir braucht</a></li><li><a href="#kleintiere-ratten-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#kleintiere-ratten-tag">Ein Tag aus Sicht einer Ratte</a></li><li><a href="#kleintiere-ratten-verkaufssaetze">Sätze, die man oft hört</a></li><li><a href="#kleintiere-ratten-tierleben">Was zwei Ratten über ihr Leben kosten</a></li><li><a href="#kleintiere-ratten-selbsttest">Passen Ratten in dein Leben?</a></li><li><a href="#kleintiere-ratten-entscheiden">Bevor du entscheidest</a></li></ol></details></nav>
+
+        <h2 id="kleintiere-ratten-ausweg">Du hast schon eine einzelne Ratte? So kommst du Schritt für Schritt weiter</h2>
+        <p>Ratten leben in der Natur in Großfamilien. Die TVT schreibt, dass sie trotz der engen Bindung an den Menschen nicht allein gehalten werden dürfen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Das Zusammenleben mit mehreren Ratten schadet der Bindung an dich nicht: Zwei oder mehr Tiere werden ebenso zutraulich wie eine einzeln gehaltene Ratte, wenn du dich täglich mit ihnen beschäftigst (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Lebt deine Ratte allein, kannst du das ändern. Du bestimmst das Tempo, und deine Ratte muss dafür nirgendwohin.</p>
+        <ol class="nat-schritte">
+          <li><strong>Lass deine Ratte untersuchen.</strong> Eine Tierarztpraxis, die Ratten behandelt, prüft Gesundheit, Zähne und Gewicht. Ratten bilden oft Tumore, und Läuse oder Rattenmilben kommen vor (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Bei Männchen besprichst du die Kastration. Das ist nötig, wenn Männchen und Weibchen zusammenleben sollen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          <li><strong>Mach Platz.</strong> Ein Käfig für bis zu drei Ratten ist mindestens 100&nbsp;×&nbsp;50&nbsp;×&nbsp;100&nbsp;cm groß, als Turm 80&nbsp;×&nbsp;50&nbsp;×&nbsp;120&nbsp;cm, jeweils mit mehreren soliden Etagen. Dazu kommt ein kontrollierter Freilauf (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Für jedes Tier braucht es ein Versteck (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</li>
+          <li><strong>Suche Gesellschaft im Tierschutz.</strong> Frag im Tierheim oder bei einer Rattenhilfe. Die Tiere sollten gleichgeschlechtlich sein, oder es sind Weibchen mit kastrierten Männchen (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Soll einer erwachsenen Ratte ein Artgenosse zugesellt werden, klappt das gewöhnlich mit einem Jungtier am besten (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Am einfachsten ist es, zwei Jungtiere gemeinsam in eine Gruppe einzugliedern (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Eine Gruppe von drei bis sechs Tieren ist nach dem Tierschutz Rheinland-Pfalz optimal (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+          <li><strong>Führt sie behutsam zusammen.</strong> Ratten erkennen ihre Gruppenmitglieder am Geruch. Fremde Artgenossen werden zunächst als Reviereindringlinge bekämpft (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Ratten lassen sich deshalb nicht einfach mit fremden Ratten zusammensetzen, und du solltest dich vorher über die richtige Vergesellschaftung informieren (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>). Eine Rattenhilfe oder ein Tierheim berät dich dabei.</li>
+          <li><strong>Hol dir Hilfe, wenn es hakt.</strong> Eine Tierarztpraxis, die Ratten kennt, oder ein Tierschutzverein in deiner Nähe kann dich beraten.</li>
+        </ol>
+        <div class="nat-ausweg-fuss">
+          <p>Fehlt dir gerade Platz oder Geld für weitere Ratten? „Noch nicht“ ist dann eine gute Entscheidung. Hilfe dabei findest du auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a>. Tiere aus dem Tierschutz vermittelt die Seite <a href="../../adoption/index.html">Adoption statt Kauf</a>.</p>
+        </div>
+
+        <h2 id="kleintiere-ratten-natur">So leben Ratten in der Natur – und was das für die Haltung heißt</h2>
+        <p class="nat-hinweis">Farbratten stammen von Laborratten ab, die aus Wanderratten gezüchtet wurden (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Die TVT betont, dass sie mit der Wildform nicht mehr viel gemein haben (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Der Zürcher Tierschutz schreibt dagegen, dass sich die Grundbedürfnisse von Farbratten und wilden Wanderratten kaum unterscheiden (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</p>
+
+        <h3>Woher sie kommen</h3>
+        <p>Die Wanderratte (<em>Rattus norvegicus</em>) stammt ursprünglich aus Nordchina und lebte dort in Wäldern und Buschland. Heute lebt sie fast überall, wo Menschen leben (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Die Albinoform der Laborratte wurde schon 1890 gezüchtet, aus ihr entstand durch Inzucht die Farbratte (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p>
+
+        <h3>So leben Wanderratten</h3>
+        <dl class="nat-liste">
+          <div class="nat-eintrag"><dt>Gruppe</dt><dd>Wanderratten leben in großen Gruppen mit einer Rangordnung (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Die Tiere erkennen Gruppenmitglieder am Geruch und prüfen bei jeder Begegnung den Duft. Sie verständigen sich mit Körpersprache, Duftsignalen und Lauten im Ultraschall, die wir nicht hören können (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Bau</dt><dd>Ratten legen unterirdische Baue mit Kammern für Vorräte, Nester und als letzten Zufluchtsort an (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Weil sie von Natur aus unterirdisch leben, sind Unterschlupfmöglichkeiten sehr wichtig (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Tagesrhythmus</dt><dd>Wanderratten sind vor allem nachts und in der Dämmerung aktiv (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Sie schlafen nur stundenweise. Ihr Wach-Ruhe-Rhythmus beträgt etwa 1,5 bis 2,5&nbsp;Stunden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Tagsüber schlafen sie die meiste Zeit (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Streifgebiet</dt><dd>Das Revier einer Gruppe umfasst im Durchschnitt etwa 2.000&nbsp;m² und misst bis zu 50&nbsp;Meter im Durchmesser. Auf der Suche nach Futter gehen die Tiere nachts auf lange Streifzüge, auf Wegen, die sie gelernt haben (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Nahrung</dt><dd>Ratten sind Allesfresser. Die Wanderratte frisst vorwiegend Pflanzen, aber auch Eier, Insekten und andere Tiere (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Sinne</dt><dd>Der Geruchssinn ist der wichtigste Sinn. Mit den Pfoten und den Schnurrhaaren finden Ratten ihren Weg auch in völliger Dunkelheit und spüren feinste Erschütterungen im Boden (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Als Nachttiere sehen sie bei Tageslicht nicht besonders gut, Albinos sind extrem lichtempfindlich (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Lernen</dt><dd>Ratten sind auffallend intelligent und lernfähig (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Wanderratten merken sich ihren Weg durch komplexe Bausysteme (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Farbratten sind neugierig und erkennen ihren Halter an Geruch und Stimme (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+        </dl>
+
+        <h3>Was das für die Haltung heißt</h3>
+        <p>Maßstab ist, was eine Ratte braucht. Das Mindestmaß ist nur die Untergrenze. Ratten gehören nach Angabe des Zürcher Tierschutzes in die Wohnung (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>). Entscheidend sind deshalb Gehege, Freilauf und ein geeigneter Platz.</p>
+        <div class="nat-haltung-grid">
+          <section class="nat-haltung" aria-labelledby="ratten-natur-gehege">
+            <h4 id="ratten-natur-gehege">Gehege</h4>
+            <ul>
+              <li>Ein Käfig für bis zu drei Ratten von mindestens 100&nbsp;×&nbsp;50&nbsp;×&nbsp;100&nbsp;cm oder als Turm 80&nbsp;×&nbsp;50&nbsp;×&nbsp;120&nbsp;cm, jeweils mit mehreren Etagen. Erhöhte Ebenen aus Gitter sind nicht geeignet (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Der Zürcher Tierschutz nennt für höchstens vier Ratten mindestens 100&nbsp;×&nbsp;70&nbsp;×&nbsp;155&nbsp;cm und mindestens so viele Verstecke wie Ratten (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</li>
+              <li>Mehrere Schlafhäuschen, Kletteräste, Leitern, Seile, Hängematten und Liegebretter auf verschiedenen Ebenen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Jedes Schlafhäuschen misst mindestens 15&nbsp;×&nbsp;20&nbsp;cm, damit zwei Ratten bequem hineinpassen (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+              <li>Handelsübliche Laufräder sind zu klein und erzwingen eine unnatürliche Körperhaltung (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="ratten-natur-ruhe">
+            <h4 id="ratten-natur-ruhe">Ruhe, Licht und Klima</h4>
+            <ul>
+              <li>Ein ruhiger, zugfreier, nicht zu heller Ort, am besten in Tischhöhe (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Raumtemperatur von 18 bis 23&nbsp;°C, nie direkte Sonne. Ratten erkranken bei Zugluft und Kälte und leiden unter Lärm (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+              <li>Albinoratten gehören in einen dunkleren Raum (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Eine Außenhaltung ist ungeeignet: Helles Sonnenlicht schadet den Augen, und das Fell schützt nicht vor großen Temperaturunterschieden (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="ratten-natur-freilauf">
+            <h4 id="ratten-natur-freilauf">Freilauf</h4>
+            <ul>
+              <li>Ein kontrollierter Freilauf ist wegen des Erkundungsverhaltens notwendig. Stromkabel, offene Fenster und Giftpflanzen müssen vorher ausgeschaltet sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Lass die Tiere nur unter Aufsicht laufen. Schranktüren, Schubladen und enge Spalten zwischen Möbeln und Wand müssen unzugänglich sein (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+              <li>Freilauf und Zuwendung legst du auf die Hauptaktivitätszeiten am Abend und Morgen (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+              <li>Ratten setzen beim Freilauf überall Kot und Urin ab (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+            </ul>
+          </section>
+        </div>
+
+        <h3>In der Natur – in vielen Haushalten</h3>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Gesellschaft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Große Gruppen mit Rangordnung, die sich am Geruch erkennen (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Eine einzelne Ratte. Ohne den ständigen Kontakt zu Artgenossen verkümmern Ratten (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Platz und Wege</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Ein Revier von rund 2.000&nbsp;m² und lange Streifzüge auf gelernten Wegen (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Ein Käfig. Selbst ein großer und optimal eingerichteter Käfig wird dem Bewegungsdrang und dem Erkundungsverhalten von Ratten nicht gerecht (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>). Deshalb ist der Freilauf nötig.</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Tagesrhythmus</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Stundenweise Schlaf, aktiv vor allem nachts und in der Dämmerung (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Hauptaktivität am Abend und Morgen. Für jüngere Kinder, die sich tagsüber mit dem Tier beschäftigen wollen, ist eine Ratte deshalb nicht das geeignete Haustier (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Futter</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Futtersuche in einem großen Gebiet, Allesfresser (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Futter im Napf. Besser ist es, das Futter so anzubieten, dass sich die Tiere es erarbeiten müssen, etwa in Pappröhren versteckt (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Verstecke</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Unterirdische Baue mit Nest- und Vorratskammern (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Zu wenige Häuschen und Röhren. Mindestens so viele Verstecke, wie Ratten da sind (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Warum Haltung am Ideal statt am Üblichen gemessen wird, steht auf der Seite <a href="../../realhaltung/index.html">Realhaltung</a>. Farbratten sind keine Wildtiere, ihre Bedürfnisse stammen aber zum großen Teil aus dem Leben der Wildform. Wo bei Wildtieren die Grenze verläuft, steht auf der Seite <a href="../../wildtierhaltung/index.html">Private Wildtierhaltung</a>.</p>
+
+        <h3>Auf deine Größe umgerechnet</h3>
+        <div class="nat-vergleiche-koerper">
+          <div class="nat-koerper">
+            <p><strong>Revier und Käfig.</strong> Das Revier einer Rattengruppe misst im Mittel 2.000&nbsp;m² (<a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Der Mindestkäfig für bis zu drei Ratten hat eine Grundfläche von 0,5&nbsp;m² (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Das Revier ist 4.000-mal so groß. Würde ein Mensch im selben Verhältnis leben, hätte er in einem Raum von 3&nbsp;×&nbsp;3&nbsp;Metern ein Revier von 36.000&nbsp;m², das sind gut fünf Fußballfelder.</p>
+            <p class="nat-rechnung">Rechnung: 1 m × 0,5 m = 0,5&nbsp;m²; 2.000 ÷ 0,5 = 4.000; 3 m × 3 m = 9&nbsp;m²; 9&nbsp;×&nbsp;4.000 = 36.000&nbsp;m²; ein Fußballfeld hat rund 7.140&nbsp;m², 36.000 ÷ 7.140 ≈ 5.</p>
+          </div>
+          <div class="nat-koerper">
+            <p><strong>Raum pro Tier.</strong> Im Mindestkäfig von 100&nbsp;×&nbsp;50&nbsp;×&nbsp;100&nbsp;cm haben drei Ratten zusammen 500&nbsp;Liter, jede also gut 166&nbsp;Liter (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Nehmen wir eine Ratte von 400&nbsp;g und dich mit 70&nbsp;kg an, bist du 175-mal so schwer. Umgerechnet hättest du rund 29&nbsp;m³ Raum, das sind etwa 12&nbsp;m² Zimmerfläche bei 2,4 m Raumhöhe.</p>
+            <p class="nat-rechnung">Rechnung: 1 m × 0,5 m × 1 m = 0,5&nbsp;m³ = 500&nbsp;Liter; 500 ÷ 3 ≈ 166&nbsp;Liter; 70&nbsp;kg ÷ 0,4&nbsp;kg = 175; 0,166&nbsp;m³ × 175 ≈ 29&nbsp;m³; 29 ÷ 2,4 ≈ 12&nbsp;m².</p>
+          </div>
+        </div>
+
+        <h3>Quellen</h3>
+        <ul class="source-list" aria-label="Quellen zu: So leben Ratten in der Natur">
+          <li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz (TVT): Merkblatt Nr. 160 „Ratten“ (Stand April 2014)</a> – Stammform, Sozialverbände, Käfigmaße, Ausstattung, Rhythmus, Freilauf, Futter, Lebenserwartung.</li>
+          <li><a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz: Broschüre „Die Haltung von Ratten“</a> – Herkunft, Rudelleben, Sinne, Rhythmus, Gruppengröße, Standort, Raumtemperatur, Freilauf, Umgang.</li>
+          <li><a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz: Haltung von Farbratten</a> – Grundbedürfnisse, Gehegemaß, Verstecke, Gruppenhaltung, Außenhaltung ungeeignet, ungeeignetes Zubehör.</li>
+          <li><a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Rattus norvegicus, Norway rat</a> – Herkunft, Lebensraum, Gruppen, Baue, Aktivität, Revier, Sinne, Nahrung.</li>
+        </ul>
+        <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
 
         <h2 id="kleintiere-ratten-beduerfnisse">Was eine Ratte von dir braucht</h2>
 
@@ -7829,16 +7971,78 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </dl>
         </div>
 
-        <h2 id="kleintiere-ratten-tag">Ein Tag aus Sicht einer Rattengruppe</h2>
-        <span class="kt-beispiel">Beispiel, keine echte Gruppe</span>
-        <ol class="kt-zeit">
-          <li><span class="kt-wann">Über den ganzen Tag</span><p>Ratten schlafen nur stundenweise. Sie haben einen Wach-Ruhe-Rhythmus von etwa 1,5 bis 2,5&nbsp;Stunden und sind deshalb im Lauf des Tages mehrfach wach. Dafür brauchen sie Schlafhäuschen in verschiedenen Ebenen, Kletterwege und etwas zu tun.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Täglich: du</span><p>Trinkwasser erneuern, Futter anbieten, möglichst so versteckt, dass die Tiere es erarbeiten, und frisches Nagematerial bereithalten.</p></li>
-          <li><span class="kt-wann">Freilauf</span><p>Kontrollierter Freilauf in einem Raum, in dem Stromkabel, offene Fenster und Giftpflanzen ausgeschaltet sind. Die Tiere erkunden und klettern.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Mit dir</span><p>Etwa 2&nbsp;Stunden pro Tag Beschäftigung und Spiel, mit Ruhe, ohne die Tiere am Schwanz zu greifen.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Einmal pro Woche: du</span><p>Das Rattenheim gründlich reinigen und etwas alte Streu in die frische mischen.</p></li>
+        <h2 id="kleintiere-ratten-gute-haltung">So kann ein gutes Zuhause aussehen</h2>
+        <p>Gute Haltung braucht keinen Garten wie aus dem Katalog. Sie braucht die richtigen Maße und Dinge, die zum Verhalten der Tiere passen. Zwei Beispiele für eine Gruppe von drei Ratten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>):</p>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 1: Ein Käfig mit Etagen und Freilauf</h3>
+          <ul>
+            <li>Ein Käfig von mindestens 100&nbsp;×&nbsp;50&nbsp;×&nbsp;100&nbsp;cm mit mehreren soliden Etagen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Auf jeder Ebene Schlafhäuschen mit mindestens 15&nbsp;×&nbsp;20&nbsp;cm, dazu Hängematten, Kletteräste, Leitern und Seile (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>; <a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+            <li>Unbedruckter, unparfümierter Zellstoff als Nistmaterial, Kleintierstreu, Heu oder Stroh als Einstreu (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Mindestens einmal pro Woche frisches Nagematerial, zum Beispiel ungespritzte Zweige (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Ein ruhiger, zugfreier und nicht zu heller Platz in Tischhöhe bei 18 bis 23&nbsp;°C (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>; <a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+            <li>Einmal pro Woche reinigst du gründlich und mischst etwas alte Streu unter die frische (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          </ul>
+        </div>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 2: Ein gesicherter Raum für den Freilauf</h3>
+          <ul>
+            <li>Stromkabel, offene Fenster und Giftpflanzen sind ausgeschaltet (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Schranktüren, Schubladen und enge Spalten zwischen Möbeln und Wand sind unzugänglich (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+            <li>Futter ist in Pappröhren versteckt, die Ratten müssen es sich erarbeiten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Hund und Katze sind nicht im Raum (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</li>
+            <li>Etwa 2&nbsp;Stunden täglich Beschäftigung und Spiel mit dir, vor allem am Abend und Morgen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>; <a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+          </ul>
+        </div>
+
+        <h2 id="kleintiere-ratten-tag">Ein Tag aus Sicht einer Ratte: allein und in der Gruppe</h2>
+        <span class="kt-beispiel">Beispiel, kein echtes Tier</span>
+        <h3>Allein im kleinen Käfig</h3>
+        <ol class="nat-ich">
+          <li><span class="nat-wann">Früher Morgen</span><p>Ich bin wach und will klettern und erkunden. Meine Nase kennt jeden Winkel meines Käfigs schon.</p></li>
+          <li><span class="nat-wann">Vormittag</span><p>Ich schlafe ein paar Stunden und wache wieder auf. Wenn ich wach werde, ist niemand da, an dem ich riechen kann.</p></li>
+          <li><span class="nat-wann">Mittag</span><p>Ich habe ein Häuschen und ein Laufrad. Das Rad ist zu klein. Ich muss mich krumm machen, wenn ich laufe.</p></li>
+          <li><span class="nat-wann">Nachmittag</span><p>Der Käfig steht am Fenster. Es zieht, und ich friere. Davon kann ich krank werden.</p></li>
+          <li><span class="nat-wann">Abend</span><p>Endlich kommt jemand. Die Hand packt mich am Schwanz. Das ist äußerst unangenehm und kann mich verletzen.</p></li>
         </ol>
-        <p class="kt-legende">Der Ablauf stützt sich auf die Verhaltensangaben des TVT-Merkblatts. Wie eine bestimmte Gruppe ihren Tag verbringt, kann abweichen.</p>
+        <h3>Ein guter Tag in der Gruppe</h3>
+        <ol class="nat-ich nat-ich-gut">
+          <li><span class="nat-wann">Früher Morgen</span><p>Wir sind zu dritt. Wir beschnuppern uns, putzen uns und klettern über Äste und Seile.</p></li>
+          <li><span class="nat-wann">Danach: du</span><p>Du erneuerst das Trinkwasser, versteckst das Futter in Pappröhren und legst frische Zweige zum Nagen hin.</p></li>
+          <li><span class="nat-wann">Tagsüber</span><p>Wir schlafen stundenweise zusammen in einer Hängematte und werden zwischendurch wieder munter. Wir nagen und erkunden.</p></li>
+          <li><span class="nat-wann">Abend: du</span><p>Du lässt uns in einem gesicherten Raum laufen und bleibst bei uns, etwa 2&nbsp;Stunden lang. Du nimmst uns mit einer Hand am Brustkorb hoch, die andere stützt unser Hinterteil.</p></li>
+          <li><span class="nat-wann">Einmal pro Woche: du</span><p>Du reinigst unser Heim gründlich und mischst etwas alte Streu unter die frische, damit es nach uns riecht.</p></li>
+        </ol>
+        <p class="kt-legende">Die Abläufe stützen sich auf Verhaltensangaben aus dem TVT-Merkblatt Nr. 160 und der Broschüre des Tierschutzes Rheinland-Pfalz. Wie eine bestimmte Gruppe ihren Tag verbringt, kann abweichen. Quellen: <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>; <a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>.</p>
+
+        <h2 id="kleintiere-ratten-verkaufssaetze">Sätze, die man oft hört – und was Ratten dazu brauchen</h2>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Pflege</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ratten sind günstig und unkompliziert.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Der Zürcher Tierschutz schreibt, Ratten ließen sich schnell und günstig kaufen und würden wie viele vermeintlich anspruchslose Kleintiere oft in viel zu kleinen Gehegen gehalten. Eine bedürfnisorientierte Haltung ist aufwendig und braucht viel Platz, ausreichend Zeit und Wissen (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>). Der Tierschutz Rheinland-Pfalz sieht eine artgerechte Haltung nur mit sehr großem Aufwand (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Kinder</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Eine Ratte ist ein tolles Tier für Kinder.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Kinder unter 10&nbsp;Jahren sollen Ratten nach dem TVT-Merkblatt nur unter Aufsicht von Erwachsenen pflegen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Ratten werden vor allem abends aktiv und leben nur kurz. Für jüngere Kinder sind sie deshalb nicht das geeignete Haustier (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Allein</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Eine einzelne Ratte wird zahmer und bindet sich stärker an mich.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Die Befürchtung, bei mehreren Ratten sei eine Bindung an den Menschen schwieriger, ist unbegründet. Mehrere Ratten werden ebenso zutraulich, wenn du dich täglich mit ihnen beschäftigst (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Laufrad und Laufball</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Laufrad oder ein Laufball gleicht den fehlenden Platz aus.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Handelsübliche Laufräder sind laut TVT allesamt zu klein, und Joggingbälle gelten als problematisch (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>). Der Zürcher Tierschutz nennt Laufräder, Nager-Laufbälle und enge Plastikröhren als ungeeignetes Zubehör (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Hund und Katze</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Meine Katze ist ganz lieb zu der Ratte.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Der Kontakt zu Hunden und Katzen, die mit den Ratten lieb umzugehen scheinen, stresst Ratten enorm. Einige Ratten reagieren schon auf den Geruch von Katzen panisch (<a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz</a>).</p></div>
+          </li>
+        </ul>
 
         <h2 id="kleintiere-ratten-tierleben">Was zwei Ratten über ihr Leben kosten</h2>
         <div class="warning-box">
@@ -7911,15 +8115,52 @@ body.static-site .start-trust { margin-top: 1.25rem; }
         </ul>
         <p class="text-muted">Die Zeit- und Lebensdauerangaben stammen aus dem <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>, Stand April 2014.</p>
 
+        <h2 id="kleintiere-ratten-selbsttest">Passen Ratten gerade in dein Leben?</h2>
+        <p>Hake ab, was heute schon stimmt. Deine Kreuze werden nicht gespeichert und nirgendwohin gesendet.</p>
+        <details class="nat-test">
+          <summary>Sieben Fragen öffnen</summary>
+          <div class="nat-test-inhalt">
+            <ul>
+              <li><label><input type="checkbox"><span><strong>Gruppe:</strong> Ich nehme mindestens zwei Ratten auf, besser drei bis sechs, gleichgeschlechtlich oder Weibchen mit kastrierten Männchen. Oder ich habe schon eine und suche ihr Gesellschaft im Tierschutz (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Platz:</strong> Ich kann den Tieren dauerhaft einen Käfig von mindestens 100&nbsp;×&nbsp;50&nbsp;×&nbsp;100&nbsp;cm mit Etagen überlassen und einen sicheren Raum für den Freilauf.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Zeit:</strong> Ich habe jeden Tag etwa 2&nbsp;Stunden für Beschäftigung und Spiel, vor allem am Abend und Morgen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Schmutz:</strong> Ich komme damit zurecht, dass Ratten stark riechen und beim Freilauf überall Kot und Urin absetzen. Das Heim reinige ich jede Woche gründlich (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>; <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tierarzt:</strong> Ich kenne eine Praxis, die Ratten behandelt, und habe Geld für Tumoroperationen und Notfälle zurückgelegt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tagesbetrag:</strong> Ich kann rund 0,49 bis 1,14&nbsp;Euro am Tag (rund 15 bis 35&nbsp;Euro im Monat, grob geschätzt) für zwei Ratten aufbringen, ohne dass es mir schwerfällt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Lebensdauer:</strong> Ich kann mich 2 bis 4&nbsp;Jahre kümmern und halte auch den frühen Abschied aus (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</span></label></li>
+            </ul>
+            <div class="nat-test-schluss">
+              <p><strong>Wenn du nicht alles abhaken konntest:</strong> Das ist ein ehrliches Ergebnis. „Noch nicht“ ist eine gute Entscheidung für dich und für die Tiere.</p>
+              <p><a href="../../noch-nicht-bereit/index.html">Was jetzt hilft: Noch nicht bereit</a></p>
+            </div>
+          </div>
+        </details>
+
         <h2 id="kleintiere-ratten-entscheiden">Bevor du entscheidest</h2>
         <div class="kt-bedenkzeit">
           <p><strong>Ratten müssen nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du siehst die Tiere an zwei verschiedenen Tagen. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
+        <div class="nat-bremse" id="ratten-karte">
+          <span class="nat-bremse-titel">Bevor du Ratten holst</span>
+          <p class="nat-bremse-gross">Schlaf eine Woche darüber.</p>
+          <p>Fünf Fragen an den Anbieter:</p>
+          <ol>
+            <li>Wie alt sind die Tiere? Junge Ratten setzt man mit 4 bis 5&nbsp;Wochen ab (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Ist das Geschlecht geklärt? Sind Männchen und Weibchen getrennt oder die Männchen kastriert (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT</a>)?</li>
+            <li>Zeigen die Tiere tränende Augen, Atemgeräusche, Appetitlosigkeit oder auffällig wenig Aktivität? Das sind Anzeichen einer Erkrankung (<a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz</a>).</li>
+            <li>Kann ich sehen, wo und wie die Tiere leben?</li>
+            <li>Kann ich ein Tier zurückgeben, wenn es nicht passt?</li>
+          </ol>
+          <p class="nat-bremse-fuss">Du darfst auch „Noch nicht“ sagen. Fragen kostet nichts, und wer dir Zeit lässt, ist ein guter Gesprächspartner.</p>
+        </div>
+        <p class="nat-bremse-aktion"><a class="btn btn-outline" href="../../assets/karten/karte-bevor-du-ratten-holst.png" download="karte-bevor-du-ratten-holst.png">Karte als Bild speichern</a></p>
+
+
         <div class="kt-karte">
           <span class="kt-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
           <ul>
-            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> ich nur eine einzelne Ratte mitnehmen soll,</span><span class="kt-dann"><b>dann</b> nehme ich keine mit.</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> mir Tiere unbekannten Geschlechts oder aus gemischter Haltung mit möglichem Nachwuchs angeboten werden,</span><span class="kt-dann"><b>dann</b> lasse ich das Geschlecht klären und plane die Kastration, bevor ich zusage – oder nehme keine mit.</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> ich die Tiere nicht dort sehen darf, wo sie leben,</span><span class="kt-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
@@ -7961,7 +8202,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen/index.html">
             <strong>Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter</strong>
-            <span>Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.</span>
+            <span>Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen-kosten/index.html">
             <strong>Was Meerschweinchen wirklich kosten</strong>
@@ -7969,11 +8210,11 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/hamster/index.html">
             <strong>Goldhamster halten</strong>
-            <span>Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
+            <span>Wie der Goldhamster in der Natur lebt und was er braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Kosten pro Tag und Bedenkzeit.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/degus-chinchillas/index.html">
             <strong>Degus und Chinchillas halten</strong>
-            <span>Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.</span>
+            <span>Wie Degus und Chinchillas in der Natur leben und was sie brauchen: Gruppen, große Volieren, Temperaturen, Futter und grob geschätzte Kosten pro Tag.</span>
           </a>
           </div>
         </nav>
@@ -7994,11 +8235,11 @@ body.static-site .start-trust { margin-top: 1.25rem; }
             </details>
             <details class="faq-item">
               <summary>Wie alt werden Ratten?</summary>
-              <p>Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4 Jahren. Ratten bilden außerdem erblich bedingt oft Tumore.</p>
+              <p>Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4&nbsp;Jahren. Ratten bilden außerdem erblich bedingt oft Tumore.</p>
             </details>
             <details class="faq-item">
               <summary>Was kosten zwei Ratten pro Tag?</summary>
-              <p>Grob geschätzt etwa 0,49 bis 1,14 Euro pro Tag, gerechnet über drei Jahre ohne Tierarzt (zusammen rund 540 bis 1.250 Euro). Eine Kostenrechnung eines Tierschutzverbands gibt es nicht; die Schätzung beruht auf Beispielpreisen und Haltererfahrungen, der Rechenweg steht auf der Seite. Für den Tierarzt solltest du mindestens 100 Euro pro Ratte zurücklegen.</p>
+              <p>Grob geschätzt etwa 0,49 bis 1,14&nbsp;Euro pro Tag, gerechnet über drei Jahre ohne Tierarzt (zusammen rund 540 bis 1.250&nbsp;Euro). Eine Kostenrechnung eines Tierschutzverbands gibt es nicht; die Schätzung beruht auf Beispielpreisen und Haltererfahrungen, der Rechenweg steht auf der Seite. Für den Tierarzt solltest du mindestens 100&nbsp;Euro pro Ratte zurücklegen.</p>
             </details>
           </div>
         </div>
@@ -8009,11 +8250,11 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Ratten dürfen nach dem TVT-Merkblatt Nr. 160 nicht alleine gehalten werden; am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.</li><li>Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100 cm oder als Turm 80 × 50 × 120 cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.</li><li>Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.</li><li>Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.</li><li>Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.</li><li>Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250 Euro ohne Tierarzt, das sind rund 0,49 bis 1,14 Euro pro Tag und rund 15 bis 35 Euro im Monat.</li><li>Bei Nacktratten fehlt das Fell; ohne Fell kann ein Tier seine Körperwärme schlecht regeln, und es können Immundefekte auftreten (Gutachten zu Qualzüchtungen).</li></ul>
+              <ul><li>Ratten dürfen nach dem TVT-Merkblatt Nr. 160 nicht alleine gehalten werden; am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.</li><li>Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100&nbsp;cm oder als Turm 80 × 50 × 120&nbsp;cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.</li><li>Die Lebenserwartung liegt bei 2 bis 4&nbsp;Jahren; erblich bedingt bilden Ratten oft Tumore.</li><li>Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.</li><li>Ratten sollten von Kindern unter 10&nbsp;Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.</li><li>Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250&nbsp;Euro ohne Tierarzt, das sind rund 0,49 bis 1,14&nbsp;Euro pro Tag und rund 15 bis 35&nbsp;Euro im Monat.</li><li>Bei Nacktratten fehlt das Fell; ohne Fell kann ein Tier seine Körperwärme schlecht regeln, und es können Immundefekte auftreten (Gutachten zu Qualzüchtungen).</li><li>Farbratten stammen von Laborratten ab, die aus Wanderratten gezüchtet wurden. Die TVT sieht kaum noch Gemeinsamkeiten mit der Stammform, der Zürcher Tierschutz sieht die Grundbedürfnisse als kaum verändert.</li><li>Wanderratten leben in großen Gruppen, graben unterirdische Baue, sind nachts und in der Dämmerung aktiv und haben ein Revier von im Mittel etwa 2.000&nbsp;Quadratmetern; der Geruchssinn ist ihr wichtigster Sinn.</li><li>Außenhaltung ist für Ratten ungeeignet; Laufräder, Laufbälle und enge Plastikröhren sind ungeeignetes Zubehör; Kontakt zu Hunden und Katzen stresst Ratten.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf" target="_blank" rel="noopener noreferrer">Gutachten zur Auslegung von § 11b Tierschutzgesetz (Verbot von Qualzüchtungen)</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160: Heimtiere – Ratten, Stand April 2014</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/anlage.html" target="_blank" rel="noopener noreferrer">GOT, Anlage: Gebührenverzeichnis (Nr. 17, 338, 379, 412, 413)</a></li><li><a href="https://www.zooplus.de/shop/nager_kleintiere/kaefige_freigehege/ratte" target="_blank" rel="noopener noreferrer">zooplus: Rattenkäfige (Beispielpreise)</a></li><li><a href="https://www.zooplus.de/shop/nager_kleintiere/kaefigzubehoer/ratte" target="_blank" rel="noopener noreferrer">zooplus: Käfigzubehör für Ratten (Beispielpreise)</a></li><li><a href="https://tierheimduisburg.de/schutzgebuehren/" target="_blank" rel="noopener noreferrer">Tierheim Duisburg: Schutzgebühren</a></li><li><a href="https://www.tierheim-goeppingen.de/tierheim/vermittlungsgebuehren/" target="_blank" rel="noopener noreferrer">Tierheim Göppingen: Vermittlungsgebühren</a></li><li><a href="https://quellenhof-passbrunn.de/tiervermittlung/schutzgebuehr.php" target="_blank" rel="noopener noreferrer">Quellenhof Passbrunn: Schutzgebühren</a></li><li><a href="https://rattenzauber.de/kosten.html" target="_blank" rel="noopener noreferrer">Rattenzauber: Die Kosten bei der Rattenhaltung</a></li><li><a href="https://www.ratteneck.eu/thread/23222-was-kosten-ratten-ich-habe-nachgerechnet/" target="_blank" rel="noopener noreferrer">Rattenforum Ratteneck: Was kosten Ratten? (2018)</a></li><li><a href="https://farbratten.com/ratten-tierarzt-kosten/" target="_blank" rel="noopener noreferrer">farbratten.com: Ratten und die Tierarztkosten</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li></ul>
+              <ul><li><a href="https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf" target="_blank" rel="noopener noreferrer">Gutachten zur Auslegung von § 11b Tierschutzgesetz (Verbot von Qualzüchtungen)</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160: Heimtiere – Ratten, Stand April 2014</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/anlage.html" target="_blank" rel="noopener noreferrer">GOT, Anlage: Gebührenverzeichnis (Nr. 17, 338, 379, 412, 413)</a></li><li><a href="https://www.zooplus.de/shop/nager_kleintiere/kaefige_freigehege/ratte" target="_blank" rel="noopener noreferrer">zooplus: Rattenkäfige (Beispielpreise)</a></li><li><a href="https://www.zooplus.de/shop/nager_kleintiere/kaefigzubehoer/ratte" target="_blank" rel="noopener noreferrer">zooplus: Käfigzubehör für Ratten (Beispielpreise)</a></li><li><a href="https://tierheimduisburg.de/schutzgebuehren/" target="_blank" rel="noopener noreferrer">Tierheim Duisburg: Schutzgebühren</a></li><li><a href="https://www.tierheim-goeppingen.de/tierheim/vermittlungsgebuehren/" target="_blank" rel="noopener noreferrer">Tierheim Göppingen: Vermittlungsgebühren</a></li><li><a href="https://quellenhof-passbrunn.de/tiervermittlung/schutzgebuehr.php" target="_blank" rel="noopener noreferrer">Quellenhof Passbrunn: Schutzgebühren</a></li><li><a href="https://rattenzauber.de/kosten.html" target="_blank" rel="noopener noreferrer">Rattenzauber: Die Kosten bei der Rattenhaltung</a></li><li><a href="https://www.ratteneck.eu/thread/23222-was-kosten-ratten-ich-habe-nachgerechnet/" target="_blank" rel="noopener noreferrer">Rattenforum Ratteneck: Was kosten Ratten? (2018)</a></li><li><a href="https://farbratten.com/ratten-tierarzt-kosten/" target="_blank" rel="noopener noreferrer">farbratten.com: Ratten und die Tierarztkosten</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li><li><a href="https://animaldiversity.org/accounts/Rattus_norvegicus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Rattus norvegicus (Norway rat)</a></li><li><a href="https://www.tierschutz-rlp.de/fileadmin/user_upload/PDF/Broschueren/Haltung_von_Ratten.pdf" target="_blank" rel="noopener noreferrer">Tierschutz Rheinland-Pfalz: Die Haltung von Ratten (Broschüre)</a></li><li><a href="https://www.zuerchertierschutz.ch/en/keeping-a-pet/colored-rats/keeping-a-colored-rat" target="_blank" rel="noopener noreferrer">Zürcher Tierschutz: Haltung von Farbratten</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>

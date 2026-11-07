@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7682,7 +7706,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <p>Es gibt keine zentrale bundesweite Nottierarzt-Suche. Wähle dein Bundesland und prüfe den Dienst immer telefonisch, bevor du losfährst.</p>
           <div class="article-kicker"><span>Bundesland wählen</span><span>Anrufen</span><span>Hinfahren</span></div>
         </div><figure class="article-hero-media image-context-card" style="--image-position:center 50%;"><img src="../../assets/images/optimized/vet-office-with-dog.jpg" alt="Hund sitzt ruhig in einer Tierarztpraxis" loading="eager" decoding="async" width="1200" height="900" fetchpriority="high"><figcaption class="context-caption">Notdienste wechseln. Ein kurzer Anruf spart im Ernstfall Zeit.</figcaption></figure></div>
-      </div>
+      </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hinweis-tierarzt-notdienst-1">Quellen und Stand</a></li><li><a href="#tierarzt-notdienst-fachquellen-und-wichtige-grenzen">Fachquellen und wichtige Grenzen</a></li><li><a href="#tierarzt-notdienst-weitere-themen">Weitere Themen</a></li><li><a href="#tierarzt-notdienst-weitere-themen">Weitere Themen</a></li></ol></details></nav>
 
       <div class="section"><div class="container">
         <div class="warning-box">
@@ -7838,7 +7862,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 
         <div class="article-rhythm evidence-block" data-evidence-block="tierarzt-notdienst">
           <span class="eyebrow">Fachquellen und wichtige Grenzen</span>
-          <h2>Fachquellen und wichtige Grenzen</h2>
+          <h2 id="tierarzt-notdienst-fachquellen-und-wichtige-grenzen">Fachquellen und wichtige Grenzen</h2>
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kernfakten</h3>
@@ -7855,6 +7879,105 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </div>
         </div>
 
+        <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen">
+          <div class="topic-context-head">
+            <span class="eyebrow">Notfall</span>
+            <h2 id="tierarzt-notdienst-weitere-themen">Weitere Themen</h2>
+          </div>
+          <div class="topic-context-grid">
+
+          <a class="topic-context-link" href="../../notfall/index.html">
+            <strong>Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst</strong>
+            <span>Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.</span>
+          </a>
+          <a class="topic-context-link" href="../../notfallplan-haustier/index.html">
+            <strong>Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst</strong>
+            <span>Haustier-Notfallplan für Krankheit, Unfall oder Krankenhaus: Betreuung, Schlüssel, Futter, Medikamente, Tierarzt, Vollmacht, Kosten und Unterlagen vorbereiten.</span>
+          </a>
+          <a class="topic-context-link" href="../../hitzefalle-auto/index.html">
+            <strong>Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind</strong>
+            <span>Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.</span>
+          </a>
+          <a class="topic-context-link" href="../../katzen/wildkatzenbaby-gefunden/index.html">
+            <strong>Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln</strong>
+            <span>Warum eine Europäische Wildkatze kein Haustier werden kann, warum Mitnehmen ihr schadet und welche Schritte bei einem Fund wirklich helfen.</span>
+          </a>
+          <a class="topic-context-link" href="../../hunde/gesundheit/index.html">
+            <strong>Häufige Gesundheitsprobleme beim Hund</strong>
+            <span>Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.</span>
+          </a>
+          <a class="topic-context-link" href="../../voegel/krankheit-erkennen/index.html">
+            <strong>Krankheit bei Vögeln erkennen</strong>
+            <span>Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.</span>
+          </a>
+          </div>
+        </nav>
+        <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen">
+          <div class="topic-context-head">
+            <span class="eyebrow">Notfall</span>
+            <h2 id="tierarzt-notdienst-weitere-themen">Weitere Themen</h2>
+          </div>
+          <div class="topic-context-grid">
+
+          <a class="topic-context-link" href="../../notfall/index.html">
+            <strong>Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst</strong>
+            <span>Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.</span>
+          </a>
+          <a class="topic-context-link" href="../../notfallplan-haustier/index.html">
+            <strong>Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst</strong>
+            <span>Haustier-Notfallplan für Krankheit, Unfall oder Krankenhaus: Betreuung, Schlüssel, Futter, Medikamente, Tierarzt, Vollmacht, Kosten und Unterlagen vorbereiten.</span>
+          </a>
+          <a class="topic-context-link" href="../../hitzefalle-auto/index.html">
+            <strong>Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind</strong>
+            <span>Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.</span>
+          </a>
+          <a class="topic-context-link" href="../../katzen/wildkatzenbaby-gefunden/index.html">
+            <strong>Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln</strong>
+            <span>Warum eine Europäische Wildkatze kein Haustier werden kann, warum Mitnehmen ihr schadet und welche Schritte bei einem Fund wirklich helfen.</span>
+          </a>
+          <a class="topic-context-link" href="../../hunde/gesundheit/index.html">
+            <strong>Häufige Gesundheitsprobleme beim Hund</strong>
+            <span>Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.</span>
+          </a>
+          <a class="topic-context-link" href="../../voegel/krankheit-erkennen/index.html">
+            <strong>Krankheit bei Vögeln erkennen</strong>
+            <span>Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.</span>
+          </a>
+          </div>
+        </nav>
+        <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen">
+          <div class="topic-context-head">
+            <span class="eyebrow">Notfall</span>
+            <h2>Weitere Themen</h2>
+          </div>
+          <div class="topic-context-grid">
+
+          <a class="topic-context-link" href="../../notfall/index.html">
+            <strong>Tier-Notfall: Warnsignale, Vergiftung und wann du sofort handeln musst</strong>
+            <span>Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.</span>
+          </a>
+          <a class="topic-context-link" href="../../notfallplan-haustier/index.html">
+            <strong>Notfallplan fürs Haustier: Versorgung sichern, wenn du ausfällst</strong>
+            <span>Haustier-Notfallplan für Krankheit, Unfall oder Krankenhaus: Betreuung, Schlüssel, Futter, Medikamente, Tierarzt, Vollmacht, Kosten und Unterlagen vorbereiten.</span>
+          </a>
+          <a class="topic-context-link" href="../../hitzefalle-auto/index.html">
+            <strong>Hund im Auto bei Hitze: Warum zehn Minuten lebensgefährlich sind</strong>
+            <span>Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.</span>
+          </a>
+          <a class="topic-context-link" href="../../katzen/wildkatzenbaby-gefunden/index.html">
+            <strong>Wildkatzenbaby gefunden: Nicht mitnehmen, richtig handeln</strong>
+            <span>Warum eine Europäische Wildkatze kein Haustier werden kann, warum Mitnehmen ihr schadet und welche Schritte bei einem Fund wirklich helfen.</span>
+          </a>
+          <a class="topic-context-link" href="../../hunde/gesundheit/index.html">
+            <strong>Häufige Gesundheitsprobleme beim Hund</strong>
+            <span>Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.</span>
+          </a>
+          <a class="topic-context-link" href="../../voegel/krankheit-erkennen/index.html">
+            <strong>Krankheit bei Vögeln erkennen</strong>
+            <span>Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.</span>
+          </a>
+          </div>
+        </nav>
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen">
           <div class="topic-context-head">
             <span class="eyebrow">Notfall</span>

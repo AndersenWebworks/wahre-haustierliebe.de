@@ -7190,6 +7190,30 @@ body.static-site .start-trust { margin-top: 1.25rem; }
 @media (max-width: 760px) {
   body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
 }
+/* ===== Paket muster: Teamergänzungen für alle Tierseiten (Sprungknopf zur Karte, Übersicht mit Sprungmarken) ===== */
+.nat-sprung { margin: 0.6rem 0 0.8rem; max-width: none; }
+.nat-sprung .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+.nat-uebersicht { margin: 0 0 1.4rem; max-width: none; }
+.nat-uebersicht details { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.nat-uebersicht summary { cursor: pointer; padding: 0.7rem 1rem; font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; }
+.nat-uebersicht ol { list-style: none; counter-reset: nat-uebersicht; margin: 0; padding: 0 1rem 0.8rem; columns: 2 16rem; column-gap: 2rem; }
+.nat-uebersicht li { counter-increment: nat-uebersicht; margin: 0 0 0.35rem; padding-left: 1.7rem; position: relative; break-inside: avoid; max-width: none; font-size: 0.95rem; }
+.nat-uebersicht li::before { content: counter(nat-uebersicht) "."; position: absolute; left: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.nat-bremse, .kt-karte, [id$="-karte"] { scroll-margin-top: 5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  .nat-uebersicht ol { columns: 1; }
+  .nat-sprung .btn { display: block; }
+}
+/* Eine Übersicht je Bildschirm: Auf breiten Bildschirmen steht das Inhaltsverzeichnis links neben dem Text, dort entfällt die Übersicht im Text.
+   Auf Handy und Tablet ersetzt die kompakte, zugeklappte Übersicht das lange, aufgeklappte Inhaltsverzeichnis. */
+@media (min-width: 1041px) {
+  .nat-uebersicht { display: none; }
+}
+@media (max-width: 1040px) {
+  body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
+}
 
 
   </style>
@@ -7360,10 +7384,10 @@ body.static-site .start-trust { margin-top: 1.25rem; }
     },
     {
       "@type": "Question",
-      "name": "Bedeuten 28 Tage, dass ein Kaninchen abgegeben werden darf?",
+      "name": "Bedeuten 28 Tage, dass ein Kaninchen abgegeben werden darf?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Die Regel von über 28 Tagen in § 37 Tierschutz-Nutztierhaltungsverordnung betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen. Sie ist keine Empfehlung für den Umzug eines Heimtierkaninchens."
+        "text": "Nein. Die Regel von über 28 Tagen in § 37 Tierschutz-Nutztierhaltungsverordnung betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen. Sie ist keine Empfehlung für den Umzug eines Heimtierkaninchens."
       }
     }
   ]
@@ -7740,9 +7764,11 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </div>
         <p class="kt-einstieg">Dass du Kaninchen bei dir aufnehmen möchtest, ist ein schöner Gedanke. <strong>Dreh ihn einmal um: Was bräuchten zwei Kaninchen von dir, und was davon hast du schon?</strong></p>
         <p class="kt-randnotiz">Kaninchen gelten als einfache Einsteigertiere. Die <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> schreibt dagegen, ihre Haltung sei aufwendig und erfordere umfassendes Wissen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>). Sie sind Fluchttiere und keine Schmusetiere.</p>
+        <p class="nat-sprung"><a class="btn btn-outline" href="#kaninchen-karte">Zur Karte für den Besuch beim Anbieter</a></p>
+        <nav class="nat-uebersicht" aria-label="Übersicht dieser Seite"><details><summary>Übersicht: Springe zu …</summary><ol><li><a href="#kleintiere-kaninchen-ausweg">Du hast schon ein einzelnes Kaninchen?</a></li><li><a href="#kleintiere-kaninchen-natur">So lebt das Kaninchen in der Natur</a></li><li><a href="#kleintiere-kaninchen-beduerfnisse">Was ein Kaninchen von dir braucht</a></li><li><a href="#kleintiere-kaninchen-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#kleintiere-kaninchen-tag">Ein Tag aus Sicht eines Kaninchens</a></li><li><a href="#kleintiere-kaninchen-verkaufssaetze">Sätze, die man oft hört</a></li><li><a href="#kleintiere-kaninchen-tierleben">Was es über die Jahre kostet</a></li><li><a href="#kleintiere-kaninchen-abgabe">Abgabealter und Kastration</a></li><li><a href="#kleintiere-kaninchen-selbsttest">Passt ein Kaninchenpaar in dein Leben?</a></li><li><a href="#kleintiere-kaninchen-entscheiden">Bevor du entscheidest</a></li></ol></details></nav>
 
         <h2 id="kleintiere-kaninchen-ausweg">Du hast schon ein einzelnes Kaninchen? So kommst du Schritt für Schritt weiter</h2>
-        <p>Viele Kaninchen leben allein, weil niemand es ihren Menschen erklärt hat. Der Tierschutzbund schreibt, dass viele Kaninchen aus Unwissenheit falsch gehalten werden (<a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Das ist kein Vorwurf. Du kannst es ändern, und du bestimmst das Tempo. Dein Kaninchen muss dafür nirgendwohin.</p>
+        <p>Kaninchen sind keine Einzelgänger und fühlen sich nur in Gesellschaft wohl (<a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Lebt dein Kaninchen allein, kannst du das ändern. Du bestimmst das Tempo, und dein Kaninchen muss dafür nirgendwohin.</p>
         <ol class="nat-schritte">
           <li><strong>Lass dein Kaninchen untersuchen.</strong> Eine Tierarztpraxis, die sich mit Kaninchen auskennt, prüft Gesundheit, Zähne und Gewicht. Sie impft gegen die Hämorrhagische Kaninchenseuche (RHD) und gegen Myxomatose und bespricht mit dir die Kastration. Männliche Tiere lässt du am besten kastrieren. Vor dem Verpaaren rät die TVT zu einer Blutuntersuchung auf Enzephalitozoonose, eine Infektionskrankheit (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
           <li><strong>Mach Platz.</strong> Für zwei Kaninchen brauchst du mindestens 6&nbsp;m² mit einer Seitenlänge von 2,4&nbsp;Metern (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Dazu gehört für jedes Tier eine Schlafhöhle.</li>
@@ -7853,7 +7879,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <li><a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Oryctolagus cuniculus, European rabbit</a> – Verbreitung nach der Eiszeit (Iberische Halbinsel, Teile Frankreichs und Nordwestafrikas), Lebensraum mit sandigem Boden, Bau, überwiegend nachtaktiv, Streifgebiet, Nahrung.</li>
           <li><a href="https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf" target="_blank" rel="noopener noreferrer">Sachverständigengruppe Tierschutz und Heimtierzucht: Gutachten zur Auslegung von § 11b Tierschutzgesetz (Verbot von Qualzüchtungen)</a> – Selektion auf Klein- und Rundköpfigkeit, Kieferverkürzung (Brachygnathie), Zähne nutzen sich nicht ab.</li>
           <li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Zwergkaninchen</a> – Wildkaninchen im Südwesten Europas, Zähne wachsen ein Leben lang, täglicher Auslauf bei Innenhaltung.</li>
-          <li><a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Pressemeldung „Tierschutzbund gibt Tipps zur artgemäßen Haltung von Zwergkaninchen“ (21. März 2023)</a> – Kaninchen aus Unwissenheit falsch gehalten, keine Einzelgänger, Stress durch Hochheben, kleiner Käfig und Muskulatur, eher für ältere Kinder.</li>
+          <li><a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Pressemeldung „Tierschutzbund gibt Tipps zur artgemäßen Haltung von Zwergkaninchen“ (21. März 2023)</a> – viele Kaninchen falsch gehalten, keine Einzelgänger, Stress durch Hochheben, kleiner Käfig und Muskulatur, eher für ältere Kinder.</li>
           <li><a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten: Das Kaninchen als Heimtier</a> – Annahme „anspruchslos und pflegeleicht, ideal für Kinder“ ist falsch, nicht für Kinder unter zehn Jahren, handelsübliche Käfige zu klein.</li>
         </ul>
         <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
@@ -8128,7 +8154,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen/index.html">
             <strong>Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter</strong>
-            <span>Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.</span>
+            <span>Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen-kosten/index.html">
             <strong>Was Meerschweinchen wirklich kosten</strong>
@@ -8136,15 +8162,15 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/hamster/index.html">
             <strong>Goldhamster halten</strong>
-            <span>Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
+            <span>Wie der Goldhamster in der Natur lebt und was er braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Kosten pro Tag und Bedenkzeit.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/ratten/index.html">
             <strong>Ratten halten</strong>
-            <span>Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.</span>
+            <span>Wie Ratten in der Natur leben und was sie brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/degus-chinchillas/index.html">
             <strong>Degus und Chinchillas halten</strong>
-            <span>Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.</span>
+            <span>Wie Degus und Chinchillas in der Natur leben und was sie brauchen: Gruppen, große Volieren, Temperaturen, Futter und grob geschätzte Kosten pro Tag.</span>
           </a>
           </div>
         </nav>
@@ -8160,8 +8186,8 @@ body.static-site .start-trust { margin-top: 1.25rem; }
               <p>Der Deutsche Tierschutzbund empfiehlt beim Einzug mindestens zehn Wochen. Zwölf Wochen sind die vorsichtigere Orientierung, wie die Vermittlungspraxis einer spezialisierten Tierhilfe zeigt. Kaninchen ziehen niemals allein, sondern mit einem passenden Artgenossen ein.</p>
             </details>
             <details class="faq-item">
-              <summary>Bedeuten 28 Tage, dass ein Kaninchen abgegeben werden darf?</summary>
-              <p>Nein. Die Regel von über 28 Tagen in § 37 Tierschutz-Nutztierhaltungsverordnung betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen. Sie ist keine Empfehlung für den Umzug eines Heimtierkaninchens.</p>
+              <summary>Bedeuten 28&nbsp;Tage, dass ein Kaninchen abgegeben werden darf?</summary>
+              <p>Nein. Die Regel von über 28&nbsp;Tagen in § 37 Tierschutz-Nutztierhaltungsverordnung betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen. Sie ist keine Empfehlung für den Umzug eines Heimtierkaninchens.</p>
             </details>
           </div>
         </div>
@@ -8172,7 +8198,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6 m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20 Prozent mehr.</li><li>Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.</li><li>Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.</li><li>Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.</li><li>Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.</li><li>Das Streifgebiet eines Wildkaninchens umfasst oft etwa 4.000 bis 8.000 Quadratmeter; die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.</li><li>Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.</li><li>Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Beträge pro Tag und pro Monat (rund 90 bis 164 Euro) sind eine Hochrechnung aus denselben Spannen.</li><li>Zwergkaninchen mit besonders kleinem, rundem Kopf haben nach dem Gutachten zu Qualzüchtungen einen verkürzten Kiefer; die Schneidezähne nutzen sich dann nicht ab und werden zu lang.</li></ul>
+              <ul><li>Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6&nbsp;m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20&nbsp;Prozent mehr.</li><li>Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.</li><li>Die Regel von über 28&nbsp;Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.</li><li>Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.</li><li>Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.</li><li>Das Streifgebiet eines Wildkaninchens umfasst oft etwa 4.000 bis 8.000&nbsp;Quadratmeter; die Mindestfläche für zwei Heimkaninchen beträgt 6&nbsp;Quadratmeter.</li><li>Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.</li><li>Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770&nbsp;Euro in zehn Jahren; die Beträge pro Tag und pro Monat (rund 90 bis 164&nbsp;Euro) sind eine Hochrechnung aus denselben Spannen.</li><li>Zwergkaninchen mit besonders kleinem, rundem Kopf haben nach dem Gutachten zu Qualzüchtungen einen verkürzten Kiefer; die Schneidezähne nutzen sich dann nicht ab und werden zu lang.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
@@ -8180,7 +8206,7 @@ body.static-site .start-trust { margin-top: 1.25rem; }
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.</li><li>Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.</li><li>Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.</li></ul>
+              <ul><li>Die Maße gelten für Kaninchen bis 3&nbsp;kg; schwerere Tiere brauchen deutlich mehr Platz.</li><li>Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.</li><li>Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.</li></ul>
             </article>
           </div>
         </div>
