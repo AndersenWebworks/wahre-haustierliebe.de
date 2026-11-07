@@ -12833,7 +12833,7 @@
         else step = TEST_NEXT_STEPS.bereit;
         if (step === TEST_NEXT_STEPS.bereit) {
           resultClass = 'result-green';
-          title = 'Deine Antworten passen zu einem Tier, mit Fragen.';
+          title = 'Deine Antworten sprechen für ein Tier. Ein paar Fragen bleiben offen.';
           intro = 'Das ist ein Zwischenstand und kein Auftrag. Ein Tier aufzunehmen ist eine Entscheidung für viele Jahre, und das Ergebnis beruht auf deiner eigenen Einschätzung.';
         } else {
           resultClass = 'result-yellow';
@@ -12849,7 +12849,7 @@
         }).join('') + '</ul>';
       }
 
-      var waitText = '<p><strong>Lass das Ergebnis drei Tage liegen.</strong> Entscheide erst danach, bei einem Tier frühestens in 14 Tagen. Wenn dir ein bestimmtes Tier gefällt, dann schlafe mindestens drei Nächte darüber, bevor du zusagst. Mach den Test danach gern noch einmal.</p>';
+      var waitText = '<p><strong>Lass das Ergebnis ein paar Tage liegen</strong> und mach den Test dann noch einmal. Gefällt dir schon ein bestimmtes Tier, schlaf mindestens drei Nächte darüber, bevor du zusagst. Ein gutes Tierheim lässt dir diese Zeit.</p>';
 
       resultDiv.className = 'test-result visible ' + resultClass;
       resultDiv.innerHTML = '<h2>' + title + '</h2><p>' + intro + '</p>' + openList +
