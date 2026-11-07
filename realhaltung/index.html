@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7477,12 +7501,12 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </div>
           </div>
       <div class="section-feedback-heading"><h2 id="hinweis-realhaltung-1">Die Lücke zwischen normal und vertretbar</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-realhaltung-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-      <p>Viele Haustiere leben in Haltungen, die gesellschaftlich normal aussehen: Hamsterkäfig im Kinderzimmer, Kaninchenstall im Garten, einzelner Vogel im Käfig, Hund mit Garten, Katze ohne Beschäftigung. Das wirkt vertraut. Genau das macht es gefährlich. Vertraut heißt nicht gut.</p>
+      <p>Viele Haustiere leben in Haltungen, die gesellschaftlich normal aussehen: Hamsterkäfig im Kinderzimmer, Kaninchenstall im Garten, einzelner Vogel im Käfig, Hund mit Garten, Katze ohne Beschäftigung. Das wirkt vertraut, und was vertraut wirkt, stellt kaum jemand infrage. Vertraut heißt nicht gut.</p>
       <p>Vertretbare Haltung endet deshalb nicht am gesetzlichen Mindestmaß. Entscheidend ist, ob Sozialkontakt, Bewegung, Rückzug, Futteraufnahme und artgemäßes Verhalten im Alltag tatsächlich möglich sind.</p>
       <table class="cost-table"><thead><tr><th>Tier</th><th>Typische Realhaltung</th><th>Wirklich vertretbarer Maßstab</th></tr></thead><tbody><tr><td data-label="Tier">Hamster</td><td data-label="Typische Realhaltung">kleiner Käfig, Kinderzimmer, tagsüber geweckt</td><td data-label="Wirklich vertretbarer Maßstab">großes strukturiertes Gehege, tiefe Einstreu, Ruhe am Tag, kein Kuscheltieranspruch</td></tr><tr><td data-label="Tier">Kaninchen</td><td data-label="Typische Realhaltung">Stall oder kleiner Auslauf, oft allein oder zu zweit ohne echte Fläche</td><td data-label="Wirklich vertretbarer Maßstab"><span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="obligat-sozial" data-glossary-title="Obligat sozial" data-glossary-text="Tierart, die Artgenossen unbedingt braucht. Alleinhaltung ist dann kein kleiner Kompromiss." data-glossary-href="../glossar/index.html#obligat-sozial">Gruppen-/Paarhaltung</span>, dauerhaft viel Fläche, Buddeln, Verstecke, Wetterschutz und tierärztliche Zahnkontrolle</td></tr><tr><td data-label="Tier">Wellensittiche</td><td data-label="Typische Realhaltung">Käfig, manchmal Einzelhaltung, Küche/Wohnzimmerluft</td><td data-label="Wirklich vertretbarer Maßstab">Schwarm oder mindestens Paar, <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="freiflug" data-glossary-title="Freiflug" data-glossary-text="Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum." data-glossary-href="../glossar/index.html#freiflug">Freiflug</span>, <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="uv-b" data-glossary-title="UV-B-Strahlung" data-glossary-text="Unsichtbares UV-Licht, das viele Reptilien für Vitamin D3 und Kalzium brauchen und Vögel zum Farbensehen nutzen." data-glossary-href="../glossar/index.html#uv-b">UV-Licht</span>, saubere Luft ohne Rauch, Duftstoffe und Küchendämpfe</td></tr><tr><td data-label="Tier">Hund</td><td data-label="Typische Realhaltung">lange allein, Garten als Ausgleich, Wochenend-Auslastung</td><td data-label="Wirklich vertretbarer Maßstab">tägliche Beziehung, Betreuung, Bewegung, Training, <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../glossar/index.html#artgenosse">Sozialkontakt</span> und Notfallbudget</td></tr></tbody></table>
       <div class="section-feedback-heading"><h2 id="hinweis-realhaltung-2">Der Kaufpreis lügt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-realhaltung-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
       <p>Ein Tier kann billig sein. Seine Haltung ist es nicht. Ein Hamster für wenige Euro, ein geschenkter Käfig oder ein günstiger Welpe aus Kleinanzeigen lassen die Haltung billig erscheinen. Dieser erste Eindruck täuscht: Man denkt an den Startpreis, nicht an Jahre voller Futter, Einstreu, Einrichtung, Tierarzt, Medikamente, Urlaubslösung und Notfälle.</p>
-      <div class="article-rhythm argument-grid"><article class="rhythm-card"><span class="eyebrow">Erster Eindruck</span><h3>Niedriger Kaufpreis verschleiert Folgekosten</h3><p>Je niedriger der Kaufpreis, desto leichter unterschätzen Menschen die Verpflichtung.</p></article><article class="rhythm-card"><span class="eyebrow">Realität</span><h3>Tierarzt-Notfälle brauchen Rücklagen</h3><p>Untersuchungen, Medikamente oder Operationen müssen auch dann bezahlt werden können, wenn sie unerwartet nötig werden.</p></article><article class="rhythm-card"><span class="eyebrow">Abwägung</span><h3>Medizinische Versorgung geht vor Urlaub</h3><p>Wer notwendige Behandlung und eigene Freizeit nicht gleichzeitig finanzieren kann, braucht vor der Anschaffung eine größere Rücklage.</p></article></div>
+      <div class="article-rhythm argument-grid"><article class="rhythm-card"><span class="eyebrow">Erster Eindruck</span><h3>Niedriger Kaufpreis verschleiert Folgekosten</h3><p>Ein niedriger Kaufpreis lässt die Verpflichtung kleiner wirken, als sie ist.</p></article><article class="rhythm-card"><span class="eyebrow">Realität</span><h3>Tierarzt-Notfälle brauchen Rücklagen</h3><p>Untersuchungen, Medikamente oder Operationen müssen auch dann bezahlt werden können, wenn sie unerwartet nötig werden.</p></article><article class="rhythm-card"><span class="eyebrow">Abwägung</span><h3>Medizinische Versorgung geht vor Urlaub</h3><p>Wer notwendige Behandlung und eigene Freizeit nicht gleichzeitig finanzieren kann, braucht vor der Anschaffung eine größere Rücklage.</p></article></div>
       <div class="section-feedback-heading"><h2 id="hinweis-realhaltung-3">Kinder und Tiere</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-realhaltung-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
       <p>Ein Tier ist kein Übungsobjekt. Kinder können füttern helfen, beobachten, lernen und mitfühlen. Aber sie können nicht die letzte Verantwortung tragen. Wenn ein Kind keine Lust mehr hat, krank ist, in die Pubertät kommt oder das Tier nicht so reagiert wie erhofft, bleibt das Tier trotzdem vollständig abhängig von den Erwachsenen.</p>
       <p>„Du bist alt genug, dich allein um den Hamster zu kümmern“ klingt nach Pädagogik. Für das Tier kann es Vernachlässigung bedeuten. Verantwortung lernt ein Kind an erwachsenen Vorbildern, nicht daran, dass ein Lebewesen die Fehler eines Kindes ausbaden muss.</p>

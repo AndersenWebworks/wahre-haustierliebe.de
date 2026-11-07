@@ -5,7 +5,7 @@ export const glossaryTerms = [
     key: 'adoption',
     title: 'Adoption',
     summary: 'Aufnahme eines bereits vorhandenen Tieres aus Tierheim, Tierschutz oder Pflegestelle statt Kauf aus neuer Zucht oder Handel.',
-    description: 'Ein Tier aus dem Tierheim, von einer Tierschutzorganisation oder aus einer Pflegestelle bei sich aufnehmen. So entsteht keine zusätzliche Nachfrage nach neu gezüchteten Tieren.',
+    description: 'Ein Tier aus dem Tierheim, von einer Tierschutzorganisation oder aus einer Pflegestelle bei sich aufnehmen. Dafür wird kein neu gezüchtetes Tier gekauft.',
   },
   {
     key: 'aktivstall',
@@ -23,7 +23,7 @@ export const glossaryTerms = [
     key: 'albinismus',
     title: 'Albinismus',
     summary: 'Angeborener Farbstoffmangel, der je nach Tierart zu Lichtempfindlichkeit und Sehproblemen führen kann.',
-    description: 'Angeborener Mangel an Farbstoff in Haut, Augen und Fell oder Schuppen. Er kann Lichtempfindlichkeit und Sehprobleme verursachen; wird gezielt darauf gezüchtet, bleiben diese Belastungen bestehen.',
+    description: 'Angeborener Mangel an Farbstoff in Haut, Augen und Fell oder Schuppen. Dem Körper fehlt ein Enzym, das Pigment bildet. Ohne Pigment fehlt der Lichtschutz: Die Tiere sind lichtempfindlich, bekommen leichter Sonnenbrand und erkranken eher an Hautkrebs (Bundestierärztekammer, Gutachten zu Qualzuchten). Auch Sehprobleme sind möglich. Wird gezielt darauf gezüchtet, bleiben diese Belastungen bestehen.',
   },
   {
     key: 'anbindehaltung',
@@ -59,7 +59,7 @@ export const glossaryTerms = [
     key: 'atemnot',
     title: 'Atemnot',
     summary: 'Erschwerte oder auffällige Atmung. Bei Tieren immer ernst nehmen und im Zweifel sofort tierärztlich abklären.',
-    description: 'Erschwerte, schnelle, laute oder sichtbar angestrengte Atmung. Bei Tieren ist das ein Notfallzeichen: Lass es sofort in der Tierarztpraxis abklären.',
+    description: 'Erschwerte, schnelle, laute oder sichtbar angestrengte Atmung. Bei Tieren ist das ein Notfallzeichen: Lass es sofort in einer Tierarztpraxis oder im tierärztlichen Notdienst abklären.',
   },
   {
     key: 'beutetier',
@@ -77,7 +77,7 @@ export const glossaryTerms = [
     key: 'brachyzephalie',
     title: 'Brachyzephalie',
     summary: 'Extrem verkürzte Schädelform („Kurzköpfigkeit“), die häufig zu Atemnot, Augenproblemen und Hitzeempfindlichkeit führt.',
-    description: 'Extrem verkürzte Schädelform, im Alltag „Kurzköpfigkeit“. Bei Hunden und Katzen kann sie zu dauerhafter Atemnot, Augenproblemen, Zahnfehlstellungen und hoher Hitzeempfindlichkeit führen.',
+    description: 'Extrem verkürzte Schädelform, im Alltag „Kurzköpfigkeit“. Bei Hunden und Katzen kann sie zu dauerhafter Atemnot, Augenproblemen, Zahnfehlstellungen und hoher Hitzeempfindlichkeit führen. Der Grund: Die Schädelknochen wachsen nicht im richtigen Verhältnis zueinander. Bei Hunden werden Nasenöffnungen und Nasengänge eng und der weiche Gaumen ist zu lang, sodass sie schlechter Luft bekommen und ihre Körpertemperatur schlechter regeln. Die Augen treten hervor, und der verkürzte Kiefer lässt die Zähne mitunter nicht richtig schließen (Bundestierärztekammer, Gutachten zu Qualzuchten).',
   },
   {
     key: 'brachyzephales-atemwegssyndrom',
@@ -179,13 +179,13 @@ export const glossaryTerms = [
     key: 'got',
     title: 'GOT',
     summary: 'Gebührenordnung für Tierärzte. Sie regelt, wie tierärztliche Leistungen in Deutschland abgerechnet werden.',
-    description: 'Gebührenordnung für Tierärzte. Sie legt fest, wie tierärztliche Leistungen in Deutschland abgerechnet werden, und erklärt, warum Tierarztkosten nicht frei erfunden sind.',
+    description: 'Gebührenordnung für Tierärzte. Sie legt fest, wie tierärztliche Leistungen in Deutschland abgerechnet werden, und gibt damit einen festen Rahmen für die Preise einer Praxis vor.',
   },
   {
     key: 'harnroehrenverschluss',
     title: 'Harnröhrenverschluss',
     summary: 'Verstopfte Harnröhre: Das Tier kann nicht urinieren. Besonders bei Katern ein sofortiger Notfall.',
-    description: 'Die Harnröhre ist verstopft, das Tier kann nicht oder kaum urinieren. Besonders bei Katern wird das schnell lebensgefährlich und braucht sofort Hilfe in der Tierarztpraxis.',
+    description: 'Die Harnröhre ist verstopft, das Tier kann nicht oder kaum urinieren. Besonders bei Katern wird das schnell lebensgefährlich und braucht sofort Hilfe in einer Tierarztpraxis oder im tierärztlichen Notdienst.',
   },
   {
     key: 'harnstopp',
@@ -221,7 +221,7 @@ export const glossaryTerms = [
     key: 'hitzschlag',
     title: 'Hitzschlag',
     summary: 'Lebensgefährliche Überhitzung des Körpers. Bei Tieren zählen schnelles, vorsichtiges Kühlen und tierärztliche Hilfe.',
-    description: 'Lebensgefährliche Überhitzung des Körpers. Warnzeichen sind starkes Hecheln, Schwäche, Taumeln, Erbrechen, Krämpfe oder Zusammenbruch. Handle sofort und ruf die Tierarztpraxis an.',
+    description: 'Lebensgefährliche Überhitzung des Körpers. Warnzeichen sind starkes Hecheln, Schwäche, Taumeln, Erbrechen, Krämpfe oder Zusammenbruch. Handle sofort und ruf eine Tierarztpraxis oder den tierärztlichen Notdienst an.',
   },
   {
     key: 'homoeopathie',
@@ -287,13 +287,13 @@ export const glossaryTerms = [
     key: 'kollaps',
     title: 'Kollaps',
     summary: 'Plötzlicher Zusammenbruch oder starke Kreislaufschwäche. Bei Tieren immer ernst nehmen.',
-    description: 'Plötzlicher Zusammenbruch, starke Schwäche oder Kreislaufversagen. Die Ursachen reichen von Schmerz, Hitze und Herzproblemen bis zu Vergiftung oder Blutverlust. Lass das Tier sofort in der Tierarztpraxis untersuchen.',
+    description: 'Plötzlicher Zusammenbruch, starke Schwäche oder Kreislaufversagen. Die Ursachen reichen von Schmerz, Hitze und Herzproblemen bis zu Vergiftung oder Blutverlust. Lass das Tier sofort in einer Tierarztpraxis oder im tierärztlichen Notdienst untersuchen.',
   },
   {
     key: 'krampfanfall',
     title: 'Krampfanfall',
     summary: 'Unkontrollierte Muskelkrämpfe oder Bewusstseinsstörung. Nach einem Anfall in der Tierarztpraxis abklären lassen.',
-    description: 'Anfall mit unkontrollierten Muskelbewegungen, Bewusstseinsveränderung, Speicheln oder Orientierungslosigkeit. Bleib bei dem Tier, halte es nicht fest und lass es danach in der Tierarztpraxis abklären.',
+    description: 'Anfall mit unkontrollierten Muskelbewegungen, Bewusstseinsveränderung, Speicheln oder Orientierungslosigkeit. Bleib bei dem Tier, halte es nicht fest und lass es danach in einer Tierarztpraxis oder im tierärztlichen Notdienst abklären.',
   },
   {
     key: 'leinenpflicht',
@@ -341,7 +341,7 @@ export const glossaryTerms = [
     key: 'metabolische-knochenerkrankung',
     title: 'Metabolische Knochenerkrankung',
     summary: 'Knochenerweichung bei Reptilien, meist durch UV-B-, Vitamin-D3- oder Kalziummangel.',
-    description: 'Knochenerweichung bei Reptilien, oft durch fehlende UV-B-Strahlung oder einen Mangel an Vitamin D3 und Kalzium. Sie führt zu Verformungen, Schmerzen und schweren Organschäden.',
+    description: 'Knochenerweichung bei Reptilien. Ohne UV-B-Strahlung kann der Körper kein Vitamin D3 bilden und Kalzium nicht verwerten; fehlen Vitamin D3 oder Kalzium im Futter, entsteht derselbe Mangel. Die Knochen werden weich, verformen sich und schmerzen, dazu kommen schwere Organschäden.',
   },
   {
     key: 'nachtaktiv',
@@ -389,7 +389,7 @@ export const glossaryTerms = [
     key: 'osteochondrodysplasie',
     title: 'Osteochondrodysplasie',
     summary: 'Erbliche Knorpel- und Knochenerkrankung, bekannt bei Scottish-Fold-Katzen.',
-    description: 'Erbliche Erkrankung von Knorpel und Knochen. Bei Scottish-Fold-Katzen hängt sie mit den gefalteten Ohren zusammen und kann lebenslange Schmerzen verursachen.',
+    description: 'Erbliche Erkrankung von Knorpel und Knochen. Bei Scottish-Fold-Katzen ist das Faltohr selbst Teil des Knorpeldefekts. Die Erkrankung kann lebenslange Schmerzen verursachen.',
   },
   {
     key: 'parvovirose',
@@ -587,7 +587,7 @@ export const glossaryTerms = [
     key: 'tierklinik',
     title: 'Tierklinik',
     summary: 'Tiermedizinische Einrichtung mit erweitertem Leistungsangebot, oft wichtig bei Notfällen außerhalb normaler Praxiszeiten.',
-    description: 'Tiermedizinische Einrichtung mit mehr Möglichkeiten als eine normale Praxis. Bei schweren Notfällen, Operationen oder nachts und am Wochenende ist sie oft die richtige Anlaufstelle.',
+    description: 'Tiermedizinische Einrichtung mit mehr Möglichkeiten als eine normale Praxis. Bei schweren Notfällen und Operationen, auch im Notfall nachts oder am Wochenende, ist sie oft die richtige Anlaufstelle.',
   },
   {
     key: 'tierphysiotherapie',
@@ -699,7 +699,7 @@ export const glossaryTerms = [
     key: 'zahnfehlstellung',
     title: 'Zahnfehlstellung',
     summary: 'Zähne oder Kiefer stehen falsch, sodass Fressen, Atmung, Pflege oder Schmerzfreiheit leiden können.',
-    description: 'Zähne oder Kiefer stehen falsch. Bei Kaninchen, Meerschweinchen, kurzköpfigen Hunden und Qualzuchten kann das Fressen, Atmung, Augen, Pflege und Schmerzfreiheit stark beeinträchtigen.',
+    description: 'Zähne oder Kiefer stehen falsch. Bei Kaninchen, Meerschweinchen, kurzköpfigen Hunden und Qualzuchten kann es das Fressen, die Atmung, die Augen und die Pflege stark beeinträchtigen und Schmerzen verursachen. Bei Kaninchen mit verkürztem Kiefer zum Beispiel nutzen sich die ständig nachwachsenden Schneidezähne nicht genug ab und werden zu lang, bis die Tiere kaum noch fressen können (Bundestierärztekammer, Gutachten zu Qualzuchten).',
   },
   {
     key: 'zoonose',
@@ -764,7 +764,7 @@ export const glossaryAnnotationsByPage = {
   ],
   mensch: [
     { from: 'Tiere – besonders Beutetiere wie <a href="#voegel"', to: `Tiere – besonders ${mark('beutetier', 'Beutetiere')} wie <a href="#voegel"` },
-    { from: 'Die Psychologie nennt diesen inneren Widerspruch kognitive Dissonanz;', to: `Die Psychologie nennt diesen inneren Widerspruch ${mark('kognitive-dissonanz', 'kognitive Dissonanz')};` },
+    { from: 'Die Psychologie nennt diesen inneren Widerspruch kognitive Dissonanz.', to: `Die Psychologie nennt diesen inneren Widerspruch ${mark('kognitive-dissonanz', 'kognitive Dissonanz')}.` },
     { from: 'damit steigt das Risiko für FIV.', to: `damit steigt das Risiko für ${mark('fiv', 'FIV')}.` },
     { from: 'Viele Tiere sind im Tierheim wegen', to: `Viele Tiere sind im ${mark('tierheim', 'Tierheim')} wegen` },
     { from: 'etwa bei Parvovirose, bei', to: `etwa bei ${mark('parvovirose', 'Parvovirose')}, bei` },
@@ -908,7 +908,7 @@ export const glossaryAnnotationsByPage = {
     { from: 'Patenschaften</h3>', to: `${mark('patenschaft', 'Patenschaften')}</h3>` },
     { from: 'Pflegestelle werden</h3>', to: `${mark('pflegestelle', 'Pflegestelle')} werden</h3>` },
     { from: 'Tierschutzorganisationen suchen immer Pflegestellen', to: `Tierschutzorganisationen suchen immer ${mark('pflegestelle', 'Pflegestellen')}` },
-    { from: 'Ein Notfallfonds von 1.000 bis 2.000 Euro', to: `Ein ${mark('notfallfonds', 'Notfallfonds')} von 1.000 bis 2.000 Euro` },
+    { from: 'Ein Notfallfonds von 1.000 bis 2.000&nbsp;Euro', to: `Ein ${mark('notfallfonds', 'Notfallfonds')} von 1.000 bis 2.000&nbsp;Euro` },
     { from: 'Du schaffst keine Nachfrage bei Vermehrern.', to: `Du schaffst keine Nachfrage bei ${mark('vermehrer', 'Vermehrern')}.` },
     { from: 'Wenn die Zeit reif ist: Adoption', to: `Wenn die Zeit reif ist: ${mark('adoption', 'Adoption')}` },
   ],
