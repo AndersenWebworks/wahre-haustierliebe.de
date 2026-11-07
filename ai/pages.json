@@ -1987,7 +1987,7 @@
       "id": "kleintiere-ratten",
       "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
       "title": "Ratten halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.",
+      "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.",
       "intent": "Rattenhaltung vom Tier aus denken und verantwortungsvoll planen.",
       "keywords": [
         "Kleintiere halten",
@@ -2001,11 +2001,12 @@
         "Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100 cm oder als Turm 80 × 50 × 120 cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.",
         "Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.",
         "Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.",
-        "Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden."
+        "Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.",
+        "Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250 Euro ohne Tierarzt, das sind rund 0,49 bis 1,14 Euro pro Tag."
       ],
       "citationGuardrails": [
         "Das Merkblatt stammt von 2014; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.",
-        "Konkrete Tierarztkosten unterscheiden sich von Praxis zu Praxis; die Seite nennt deshalb keine Summe.",
+        "Die Kosten sind eine eigene grobe Schätzung aus Beispielpreisen (Onlineshops, Tierheime, Haltererfahrungen) ohne Tierarzt; die Tierarztbeispiele folgen der GOT und sind Orientierung, keine Preisliste einer Praxis.",
         "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
       ],
       "sources": [
@@ -2018,13 +2019,49 @@
           "url": "https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html"
         },
         {
+          "label": "GOT, Anlage: Gebührenverzeichnis (Nr. 17, 338, 379, 412, 413)",
+          "url": "https://www.gesetze-im-internet.de/got_2022/anlage.html"
+        },
+        {
+          "label": "zooplus: Rattenkäfige (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/kaefige_freigehege/ratte"
+        },
+        {
+          "label": "zooplus: Käfigzubehör für Ratten (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/kaefigzubehoer/ratte"
+        },
+        {
+          "label": "Tierheim Duisburg: Schutzgebühren",
+          "url": "https://tierheimduisburg.de/schutzgebuehren/"
+        },
+        {
+          "label": "Tierheim Göppingen: Vermittlungsgebühren",
+          "url": "https://www.tierheim-goeppingen.de/tierheim/vermittlungsgebuehren/"
+        },
+        {
+          "label": "Quellenhof Passbrunn: Schutzgebühren",
+          "url": "https://quellenhof-passbrunn.de/tiervermittlung/schutzgebuehr.php"
+        },
+        {
+          "label": "Rattenzauber: Die Kosten bei der Rattenhaltung",
+          "url": "https://rattenzauber.de/kosten.html"
+        },
+        {
+          "label": "Rattenforum Ratteneck: Was kosten Ratten? (2018)",
+          "url": "https://www.ratteneck.eu/thread/23222-was-kosten-ratten-ich-habe-nachgerechnet/"
+        },
+        {
+          "label": "farbratten.com: Ratten und die Tierarztkosten",
+          "url": "https://farbratten.com/ratten-tierarzt-kosten/"
+        },
+        {
           "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
         }
       ],
       "social": {
         "title": "Ratten halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.",
+        "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png",
         "imageAlt": "Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.",
         "imageWidth": 1200,
@@ -2035,7 +2072,7 @@
       "id": "kleintiere-degus-und-chinchillas",
       "url": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html",
       "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.",
+      "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.",
       "intent": "Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.",
       "keywords": [
         "Kleintiere halten",
@@ -2049,11 +2086,12 @@
         "Für zwei bis vier Degus nennt die TVT eine nutzbare Fläche von mindestens 2, besser 3 m², für zwei Chinchillas eine Voliere von mindestens 3 m³.",
         "Chinchillas haben keine Schweiß- und Talgdrüsen; optimal sind 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit, über 28 °C ist nicht zuträglich.",
         "Degus werden meist 4 bis 6 Jahre alt, selten bis 10; Chinchillas können über 20 Jahre alt werden.",
-        "Degus dürfen grundsätzlich kein Obst bekommen (Diabetesneigung); Chinchillas vertragen kein frisches Grünfutter, Obst und Gemüse."
+        "Degus dürfen grundsätzlich kein Obst bekommen (Diabetesneigung); Chinchillas vertragen kein frisches Grünfutter, Obst und Gemüse.",
+        "Grobe Schätzung ohne Tierarzt: drei Degus über fünf Jahre etwa 2.310 bis 4.590 Euro (1,26 bis 2,51 Euro pro Tag), zwei Chinchillas über 20 Jahre etwa 9.300 bis 13.540 Euro (1,27 bis 1,85 Euro pro Tag)."
       ],
       "citationGuardrails": [
         "Das Chinchilla-Merkblatt stammt von 2012; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.",
-        "Konkrete Kosten hängen von Art, Gruppengröße und Ausstattung ab; die Seite nennt deshalb keine Summe.",
+        "Die Kosten sind eine eigene grobe Schätzung aus Beispielpreisen (Onlineshops, Tierheime, Haltererfahrungen) ohne Tierarzt; die 3-m³-Voliere für Chinchillas ist aus Fertigvolieren hochgerechnet, die Tierarztbeispiele folgen der GOT.",
         "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
       ],
       "sources": [
@@ -2070,13 +2108,85 @@
           "url": "https://www.gesetze-im-internet.de/tierschg/__11b.html"
         },
         {
+          "label": "GOT, Anlage: Gebührenverzeichnis (Nr. 17, 166, 338, 927)",
+          "url": "https://www.gesetze-im-internet.de/got_2022/anlage.html"
+        },
+        {
+          "label": "zooplus: Käfige für Degus (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/kaefige_freigehege/degukaefige"
+        },
+        {
+          "label": "zooplus: Käfige für Chinchillas (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/kaefige_freigehege/chinchilla"
+        },
+        {
+          "label": "zooplus: Käfigzubehör für Degus (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/kaefigzubehoer/degu"
+        },
+        {
+          "label": "zooplus: Chinchillafutter (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/futter/chinchilla"
+        },
+        {
+          "label": "zooplus: Heu und Einstreu (Beispielpreise)",
+          "url": "https://www.zooplus.de/shop/nager_kleintiere/heu_streu"
+        },
+        {
+          "label": "Fressnapf: Spielzeug und Laufräder für Degus (Beispielpreise)",
+          "url": "https://www.fressnapf.de/c/kleintier/arten/degu/spielzeug/"
+        },
+        {
+          "label": "Tierheim Duisburg: Schutzgebühren",
+          "url": "https://tierheimduisburg.de/schutzgebuehren/"
+        },
+        {
+          "label": "Tierheim Göppingen: Vermittlungsgebühren",
+          "url": "https://www.tierheim-goeppingen.de/tierheim/vermittlungsgebuehren/"
+        },
+        {
+          "label": "Tierheim Worms: Schutzgebühren",
+          "url": "https://www.tierheimworms.de/vermittlung/schutzgebuehren/"
+        },
+        {
+          "label": "Tierheim Wilhelmshaven: Preisliste",
+          "url": "https://tierheim-whv.de/preisliste/"
+        },
+        {
+          "label": "Quellenhof Passbrunn: Schutzgebühren",
+          "url": "https://quellenhof-passbrunn.de/tiervermittlung/schutzgebuehr.php"
+        },
+        {
+          "label": "mein-degu.de: Was kostet ein Degu?",
+          "url": "https://www.mein-degu.de/info_kosten.php"
+        },
+        {
+          "label": "dein-degu.de: Ernährung",
+          "url": "https://www.dein-degu.de/home/informationen-zu-degus/ern%C3%A4hrung/"
+        },
+        {
+          "label": "haustierratgeber.de: Chinchilla als Haustier",
+          "url": "https://www.haustierratgeber.de/kleintiere/kleintier-arten/eigenschaften-kleintiere/weniger-fuer-kinder-geeignet/chinchilla/"
+        },
+        {
+          "label": "t-online: Chinchilla, Preis und Kosten (2014)",
+          "url": "https://www.t-online.de/leben/familie/haustiere-tiere/id_71225394/chinchilla-preis-und-kosten-fuer-haltung-und-pflege.html"
+        },
+        {
+          "label": "mypet.ch: Chinchillafutter, Monatsmengen",
+          "url": "https://mypet.ch/chinchilla-futter-bestellen/"
+        },
+        {
+          "label": "test.de: Mobile Klimaanlagen im Test (Mai 2026)",
+          "url": "https://www.test.de/Mobile-Klimaanlagen-im-Test-Flexibel-aber-wenig-effizient-6228399-0/"
+        },
+        {
           "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
         }
       ],
       "social": {
         "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.",
+        "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png",
         "imageAlt": "Kleintiergehege mit Verstecken und mehreren Bereichen.",
         "imageWidth": 1200,
