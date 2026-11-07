@@ -337,7 +337,7 @@ const topicPages = [
   ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
   ['hunde-kastration', 'hunde', 'hunde/kastration', 'Kastration beim Hund', 'Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.', 'Kastration beim Hund als Einzelfallentscheidung verstehen.'],
   ['hunde-hofhaltung-und-zwinger', 'hunde', 'hunde/hofhaltung-und-zwinger', 'Hofhaltung und Zwinger', 'Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.', 'Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.'],
-  ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.'],
+  ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.'],
   ['hunde-entscheidung', 'hunde', 'hunde/entscheidung', 'Bevor ein Hund einzieht', 'Die wichtigsten Fragen, bevor aus dem Wunsch nach einem Hund echte Verantwortung wird.', 'Entscheidung vor der Hundeadoption oder Anschaffung prüfen.'],
   ['katzen-sozialverhalten', 'katzen', 'katzen/sozialverhalten', 'Katzen sind keine einfachen Einzelgänger', 'Warum Katzen zwar allein jagen, aber trotzdem Sozialkontakt, Struktur und ein passendes Revier brauchen.', 'Sozialverhalten von Katzen verstehen.'],
   ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnung oder Freigang bei Katzen', 'Wohnung, gesicherter Außenbereich oder Freigang: Risiken, vollständiges Wohnungsrevier, Umstellungen, Warnzeichen und Entscheidungshilfen.', 'Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.', { priority: '0.82', lastmod: '2026-08-06' }],
@@ -491,7 +491,7 @@ const faqByPage = {
     ['Was mache ich mit einem bereits zu früh übernommenen Vogel?', 'Lass ihn vogelkundig untersuchen, sichere die Ernährung und plane eine ruhige Vergesellschaftung mit passenden Artgenossen. Gib Alter, Herkunft und bekannte Probleme offen weiter. Hilfe für ein bereits getrenntes Tier ist richtig; frühe Trennung wird dadurch nicht richtig.'],
   ],
   kleintiere: [
-    ['Wie viel Platz braucht ein Kaninchen?', 'Mindestens 2-3 Quadratmeter pro Kaninchen als dauerhaft zugängliche Grundfläche plus täglichen Auslauf. Handelsübliche Käfige sind fast immer zu klein.'],
+    ['Wie viel Platz braucht ein Kaninchen?', 'Für zwei Kaninchen mindestens 6 Quadratmeter dauerhaft zugängliche Grundfläche, für jedes weitere Tier mindestens 20 Prozent mehr, plus täglichen Auslauf. Handelsübliche Käfige sind fast immer zu klein.'],
   ],
   'kleintiere-kaninchen': [
     ['Ab wann sollte ein junges Kaninchen ausziehen?', 'Der Deutsche Tierschutzbund empfiehlt beim Einzug mindestens zehn Wochen. Zwölf Wochen sind die vorsichtigere Orientierung, wie die Vermittlungspraxis einer spezialisierten Tierhilfe zeigt. Kaninchen ziehen niemals allein, sondern mit einem passenden Artgenossen ein.'],
@@ -785,7 +785,7 @@ const evidenceByPage = {
     facts: [
       'Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.',
       'Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.',
-      'Goldhamster sind nachtaktiv. Tagsüberes Wecken stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.',
+      'Goldhamster sind nachtaktiv. Wecken am Tag stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.',
       'Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.',
       'Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.',
     ],
@@ -825,7 +825,7 @@ const evidenceByPage = {
       'Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen.',
     ],
     sources: [
-      ['FN: Tierschutz im Pferdesport', 'https://www.pferdesport-deutschland.de/tierschutz/tierschutz'],
+      ['FN: Tierschutz im Pferdesport', 'https://www.pferdesport-deutschland.de/ausbildung/pferdehaltung/tierschutz'],
       ['Deutscher Tierschutzbund', 'https://www.tierschutzbund.de'],
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
     ],
@@ -847,6 +847,7 @@ const evidenceByPage = {
     ],
     sources: [
       ['WSAVA: Reproduction Control Guidelines 2024', 'https://wsava.org/global-guidelines/reproduction-guidelines/'],
+      ['WSAVA: Zusammenfassung der Leitlinie (PDF)', 'https://wsava.org/wp-content/uploads/2024/06/Executive-Summary.pdf'],
       ['AVMA: Spaying and Neutering', 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering'],
       ['International Cat Care: Why do I need to neuter my cat?', 'https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat'],
       ['Merck Veterinary Manual: Geburt bei Hündinnen und Kätzinnen', 'https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs-and-cats/labor-delivery-and-postpartum-care-in-bitches-and-queens'],
@@ -961,7 +962,7 @@ const evidenceByPage = {
       'VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.',
       'Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.',
       'PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.',
-      'Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf eBay Kleinanzeigen auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.',
+      'Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf Kleinanzeigen (früher eBay Kleinanzeigen) auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.',
       'Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.',
     ],
     sources: [
@@ -1012,7 +1013,9 @@ const evidenceByPage = {
       'Vor der Fahrt muss die Praxis oder Klinik telefonisch bestätigen, dass sie erreichbar ist.',
     ],
     sources: [
-      ['Bundestierärztekammer', 'https://www.bundestieraerztekammer.de'],
+      ['Bundestierärztekammer: Mitgliederübersicht', 'https://www.bundestieraerztekammer.de/btk/mitglieder/'],
+      ['Bundestierärztekammer: Notdienst-Einordnung', 'https://www.bundestieraerztekammer.de/presse/2019/08/notdienst-flyer.php'],
+      ['Thieme Vet-News: Übersicht zentraler Notrufnummern', 'https://tiermedizin.thieme.de/aktuelles/vet-news/detail/zentrale-rufnummer-fuer-tieraerztlichen-notdienst-1717'],
     ],
     guardrails: [
       'Öffnungszeiten und Erreichbarkeit können sich ändern; ruf vor der Anfahrt beim Notdienst an.',
@@ -1117,7 +1120,7 @@ const evidenceByPage = {
       ['Bürgerliches Gesetzbuch § 965', 'https://www.gesetze-im-internet.de/bgb/__965.html'],
       ['Kessler und Turner 1997: Katzen in Pensionen (Animal Welfare)', 'https://www.cambridge.org/core/journals/animal-welfare/article/stress-and-adaptation-of-cats-felis-silvestris-catus-housed-singly-in-pairs-and-in-groups-in-boarding-catteries/2D392373D18F8146505DF830A908B694'],
       ['Rooney et al. 2007: Hunde in Zwingern (Physiology & Behavior)', 'https://europepmc.org/article/MED/17617429'],
-      ['SWR: Tierheime voll, mehr Haustiere ausgesetzt', 'https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html'],
+      ['SWR: Tierheime voll, mehr Haustiere ausgesetzt', 'https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-tierhaltung-armut-100.html'],
       ['Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025', 'https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen'],
       ['Hamburger Tierschutzverein: Viele Aussetzungen 2024', 'https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/viele-aussetzungen-tierheim-fuellt-sich-mit-urlaubsopfern'],
       ['Deutscher Tierschutzbund: Trendumfrage Tierheime 2024', 'https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/'],

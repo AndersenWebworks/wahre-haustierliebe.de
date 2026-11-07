@@ -190,7 +190,7 @@ Facts:
 - VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.
 - Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.
 - PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.
-- Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf eBay Kleinanzeigen auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.
+- Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf Kleinanzeigen (früher eBay Kleinanzeigen) auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.
 - Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen.
 Important boundaries:
 - Unterschriftenzahlen und Fristen werden nicht übernommen, weil sie sich verändern können.
@@ -303,7 +303,7 @@ Important boundaries:
 - Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.
 Sources:
 - Deutscher Tierschutzbund: Wellensittiche richtig halten: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/
-- Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen: https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf
+- Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf
 - Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 - Tierschutzgesetz § 11c: https://www.gesetze-im-internet.de/tierschg/__11c.html
@@ -345,7 +345,7 @@ Important boundaries:
 - Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.
 - Ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.
 Sources:
-- FN: Tierschutz im Pferdesport: https://www.pferdesport-deutschland.de/tierschutz/tierschutz
+- FN: Tierschutz im Pferdesport: https://www.pferdesport-deutschland.de/ausbildung/pferdehaltung/tierschutz
 - Deutscher Tierschutzbund: https://www.tierschutzbund.de
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 
@@ -425,7 +425,7 @@ URL: https://wahre-haustierliebe.de/kleintiere/hamster/index.html
 Facts:
 - Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.
 - Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.
-- Goldhamster sind nachtaktiv. Tagsüberes Wecken stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.
+- Goldhamster sind nachtaktiv. Wecken am Tag stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.
 - Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.
 - Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.
 Important boundaries:
@@ -457,6 +457,7 @@ Important boundaries:
 - Zeitpunkt, Operationsverfahren, Narkoserisiko und Nachsorge müssen tierärztlich für das konkrete Tier festgelegt werden.
 Sources:
 - WSAVA: Reproduction Control Guidelines 2024: https://wsava.org/global-guidelines/reproduction-guidelines/
+- WSAVA: Zusammenfassung der Leitlinie (PDF): https://wsava.org/wp-content/uploads/2024/06/Executive-Summary.pdf
 - AVMA: Spaying and Neutering: https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering
 - International Cat Care: Why do I need to neuter my cat?: https://icatcare.org/articles/why-do-i-need-to-neuter-my-cat
 - Merck Veterinary Manual: Geburt bei Hündinnen und Kätzinnen: https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs-and-cats/labor-delivery-and-postpartum-care-in-bitches-and-queens
@@ -489,7 +490,7 @@ Sources:
 - BMEL: Gutachten zur Auslegung von § 11b TierSchG: https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html
 - RVC VetCompass Brachycephaly: https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass
 - OMIA - Online Mendelian Inheritance in Animals: https://omia.org/home/
-- UFAW Genetic Welfare Problems: https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro
+- Science for Animal Welfare (ehemals UFAW): Genetic Welfare Problems of Companion Animals: https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/
 - UC Davis Veterinary Genetics Laboratory: https://vgl.ucdavis.edu/dna-tests/cat
 - LSU Deafness in Dogs & Cats: https://www.lsu.edu/vetmed/deafness/index.php
 
@@ -569,6 +570,7 @@ Sources:
 - Auffangstation für Reptilien München: Jahresbericht 2019: https://www.reptilienauffangstation.de/Aktuelles%20und%20Wissen/Downloads%20und%20Wissen/Jahresberichte/Jahresbericht%202019.pdf
 - Bundesministerium: Überarbeitung der Haltungsgutachten für Zierfische und Reptilien: https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html
 - Europäisches Parlament: Erste EU-Regeln für Hunde und Katzen: https://www.europarl.europa.eu/news/de/press-room/20250616IPR28963/erste-eu-regeln-fur-wohlergehen-und-ruckverfolgbarkeit-von-hunden-und-katzen
+- EUR-Lex: Verordnung (EU) 2026/1818 über das Wohlergehen von Hunden und Katzen und deren Rückverfolgbarkeit: https://eur-lex.europa.eu/eli/reg/2026/1818/oj
 
 ### Haustier-Selbsttest: Bin ich bereit für ein Tier?
 URL: https://wahre-haustierliebe.de/selbsttest/index.html
@@ -606,7 +608,9 @@ Important boundaries:
 - Öffnungszeiten und Erreichbarkeit können sich ändern; ruf vor der Anfahrt beim Notdienst an.
 - Bei akuten Notfällen sofort telefonieren und losfahren, statt Symptome lange online zu sortieren.
 Sources:
-- Bundestierärztekammer: https://www.bundestieraerztekammer.de
+- Bundestierärztekammer: Mitgliederübersicht: https://www.bundestieraerztekammer.de/btk/mitglieder/
+- Bundestierärztekammer: Notdienst-Einordnung: https://www.bundestieraerztekammer.de/presse/2019/08/notdienst-flyer.php
+- Thieme Vet-News: Übersicht zentraler Notrufnummern: https://tiermedizin.thieme.de/aktuelles/vet-news/detail/zentrale-rufnummer-fuer-tieraerztlichen-notdienst-1717
 
 ### Tiermythen und Homöopathie bei Tieren: Was stimmt wirklich?
 URL: https://wahre-haustierliebe.de/wissen/index.html
@@ -707,7 +711,7 @@ Sources:
 - Bürgerliches Gesetzbuch § 965: https://www.gesetze-im-internet.de/bgb/__965.html
 - Kessler und Turner 1997: Katzen in Pensionen (Animal Welfare): https://www.cambridge.org/core/journals/animal-welfare/article/stress-and-adaptation-of-cats-felis-silvestris-catus-housed-singly-in-pairs-and-in-groups-in-boarding-catteries/2D392373D18F8146505DF830A908B694
 - Rooney et al. 2007: Hunde in Zwingern (Physiology & Behavior): https://europepmc.org/article/MED/17617429
-- SWR: Tierheime voll, mehr Haustiere ausgesetzt: https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html
+- SWR: Tierheime voll, mehr Haustiere ausgesetzt: https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-tierhaltung-armut-100.html
 - Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025: https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/sommerferien-beginnen-wieder-mit-vielen-tieraussetzungen
 - Hamburger Tierschutzverein: Viele Aussetzungen 2024: https://www.hamburger-tierschutzverein.de/ueber-uns/tierschutz-blog/viele-aussetzungen-tierheim-fuellt-sich-mit-urlaubsopfern
 - Deutscher Tierschutzbund: Trendumfrage Tierheime 2024: https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/
@@ -844,8 +848,7 @@ Important boundaries:
 - Zähmung, Gewöhnung und Domestikation sind nicht dasselbe: Ein einzelnes Tier wird durch Handaufzucht nicht zur Hauskatze und eine Fachstation ist kein privater Haushalt.
 - Die Sicherheits- und Verhaltensrisiken sind nicht bloß eine Frage von Aufwand; eine Wildkatze bleibt ein Wildtier und kann in Bedrängnis beißen oder kratzen.
 - Die konkreten artenschutzrechtlichen Anforderungen und Zuständigkeiten können vom Einzelfall und vom Bundesland abhängen; die Seite ersetzt keine Rechtsberatung.
-- Eine private Aufzucht macht aus einer Wildkatze kein Haustier; überlasse Haltung, Versorgung und mögliche Auswilderung genehmigten Fachstellen.
-- Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.
+- Eine private Aufzucht macht aus einer Wildkatze kein Haustier; Haltung, Versorgung und mögliche Auswilderung gehören zu genehmigten Fachstellen mit entsprechender Erfahrung.
 - Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.
 Sources:
 - BUND: Projekt Vorsicht Wildkatze: https://www.bund.net/themen/tiere-pflanzen/projekt-vorsicht-wildkatze/
@@ -857,6 +860,7 @@ Sources:
 - Wildkatze Baden-Württemberg: Tierschutz: https://www.wildkatze-bw.de/massnahmen/tierschutz
 - FVA Wildtierinstitut: Leitfaden Wildkätzchenfund: https://www.wildkatze-bw.de/fileadmin/user_upload/FVA_Leitfaden_Wildkaetzchenfund.pdf
 - Bundesnaturschutzgesetz § 44: https://www.gesetze-im-internet.de/bnatschg_2009/__44.html
+- Bundesnaturschutzgesetz § 45 Abs. 5 (verletzte, hilflose oder kranke Tiere): https://www.gesetze-im-internet.de/bnatschg_2009/__45.html
 - Bundesnaturschutzgesetz § 46: https://www.gesetze-im-internet.de/bnatschg_2009/__46.html
 - Bundesartenschutzverordnung § 7: https://www.gesetze-im-internet.de/bartschv_2005/__7.html
 - Bürgerliches Gesetzbuch § 833: https://www.gesetze-im-internet.de/bgb/__833.html

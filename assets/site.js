@@ -222,7 +222,7 @@ var staticSiteSearchIndex = [
   {
     "id": "hunde-gesundheit",
     "title": "Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe)",
-    "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.",
+    "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.",
     "terms": "Gesundheitsrisiken bei Hunden erkennen und vorbeugen. hunde/gesundheit hunde gesundheit"
   },
   {
@@ -629,7 +629,7 @@ function normalizeAssetUrls(root) {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
             <div class="metric-card"><strong>4–5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
-            <div class="metric-card"><strong>12–20 Tsd. €</strong><span>realistische Lebenszeitkosten, bevor chronische Krankheiten dazukommen.</span></div>
+            <div class="metric-card"><strong>14–37 Tsd. €</strong><span>Lebenszeitkosten über zwölf Jahre, im Mittel etwa 26.000 €. Notfälle sind nicht eingerechnet.</span></div>
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>`
         },
@@ -686,7 +686,7 @@ function normalizeAssetUrls(root) {
           afterSelector: '.info-box',
           html: `<div class="article-rhythm metric-grid" data-enhancement="pferde-stats">
             <div class="metric-card"><strong>15–30 km</strong><span>natürliche Tagesbewegung im Schritt, grasen und Sozialkontakt eingeschlossen.</span></div>
-            <div class="metric-card"><strong>20+ Jahre</strong><span>Verpflichtung, Kosten und Alltag ändern sich über Jahrzehnte.</span></div>
+            <div class="metric-card"><strong>25–30 Jahre</strong><span>und mehr: Verpflichtung, Kosten und Alltag ändern sich über Jahrzehnte.</span></div>
             <div class="metric-card"><strong>Herde</strong><span>Ein Pferd ist kein Solist. Sozialkontakt ist Grundbedürfnis.</span></div>
           </div>`
         }
@@ -862,10 +862,10 @@ function normalizeAssetUrls(root) {
           afterSelector: '.warning-box',
           html: `<div class="article-rhythm share-callout" data-enhancement="katzen-kastration-share">
             <span class="eyebrow">Kastration teilen</span>
-            <h3>2 Millionen Streunerkatzen sind kein Naturproblem.</h3>
+            <h3>Mehrere Millionen Straßenkatzen sind kein Naturproblem.</h3>
             <p>Sie sind die Folge davon, dass zu viele Freigänger nicht kastriert werden. Jeder weitere ungeplante Wurf vergrößert die Zahl der Tiere, für die ein dauerhaftes Zuhause und medizinische Versorgung gebraucht werden.</p>
             <div class="share-actions">
-              <button class="share-btn" onclick="shareThis('whatsapp', '2 Millionen Streunerkatzen in Deutschland: Kastration ist praktischer Tierschutz. Lies das:')">WhatsApp</button>
+              <button class="share-btn" onclick="shareThis('whatsapp', 'Mehrere Millionen Straßenkatzen in Deutschland: Kastration ist praktischer Tierschutz. Lies das:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
             </div>
           </div>`
@@ -918,7 +918,7 @@ function normalizeAssetUrls(root) {
           afterHeading: 'Hamster',
           html: `<div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
             <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
-            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Tagsüberes Wecken stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
+            <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Wecken am Tag stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
             <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
           </div>`
         }
@@ -1192,7 +1192,7 @@ function normalizeAssetUrls(root) {
     function hydrateArticleKickers() {
       var labels = {
         mensch: ['Vor dem Kauf', 'Selbstlügen prüfen', 'Verzicht ist erlaubt'],
-        hunde: ['4–5 h allein', '12–20 Tsd. €', 'Beziehung täglich'],
+        hunde: ['4–5 h allein', '14–37 Tsd. €', 'Beziehung täglich'],
         'hund-im-buero': ['Rückzug', 'klare Regeln', 'Stress sehen'],
         'hunde-stadtfest-rummel': ['Lärm', 'Gedränge', 'Stress sehen'],
         katzen: ['Nicht allein denken', 'Kastration schützt', 'Leises Leiden'],
@@ -1246,7 +1246,7 @@ function normalizeAssetUrls(root) {
     function hydrateMythRows() {
       var mythList = document.getElementById('myth-list');
       if (!mythList || mythList.dataset.rowsHydrated === 'true') return;
-      var statuses = ['Kontext', 'Kontext', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
+      var statuses = ['Kontext', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
       mythList.querySelectorAll('.accordion-header').forEach(function(header, index) {
         var claim = header.textContent.replace(/\s+/g, ' ').trim();
         header.textContent = '';

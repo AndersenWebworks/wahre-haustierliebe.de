@@ -150,7 +150,7 @@
         "VIER PFOTEN nennt zu frühe Trennung vom Muttertier und Online-Verkauf als Bestandteile des unregulierten Welpenhandels.",
         "Die Petition von PETA Deutschland fordert acht genannte Zoohandelsketten, Gartencenter und Baumarktunternehmen auf, den Verkauf lebender Tiere zu beenden.",
         "PETA nennt Kaninchen, Meerschweinchen, Hamster und Vögel als betroffene Tiergruppen und begründet die Forderung mit dokumentierten Zuständen in Zuchtbetrieben.",
-        "Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf eBay Kleinanzeigen auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.",
+        "Die Change.org-Petition fordert, Einschränkungen der Tiervermittlung auf Kleinanzeigen (früher eBay Kleinanzeigen) auch auf Kleinsäuger wie Meerschweinchen, Kaninchen, Hamster und Degus anzuwenden.",
         "Wa(h)re Haustier(liebe) führt keine dieser Petitionen selbst, sondern verweist zu den Petitionsseiten der initiierenden Organisationen."
       ],
       "citationGuardrails": [
@@ -480,7 +480,7 @@
         },
         {
           "label": "Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen",
-          "url": "https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf"
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf"
         },
         {
           "label": "Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche",
@@ -615,7 +615,7 @@
       "sources": [
         {
           "label": "FN: Tierschutz im Pferdesport",
-          "url": "https://www.pferdesport-deutschland.de/tierschutz/tierschutz"
+          "url": "https://www.pferdesport-deutschland.de/ausbildung/pferdehaltung/tierschutz"
         },
         {
           "label": "Deutscher Tierschutzbund",
@@ -877,7 +877,7 @@
       "id": "hunde-gesundheit",
       "url": "https://wahre-haustierliebe.de/hunde/gesundheit/index.html",
       "title": "Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe)",
-      "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.",
+      "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.",
       "intent": "Gesundheitsrisiken bei Hunden erkennen und vorbeugen.",
       "keywords": [
         "Hund halten",
@@ -892,7 +892,7 @@
       "sources": [],
       "social": {
         "title": "Häufige Gesundheitsprobleme beim Hund - Wa(h)re Haustier(liebe)",
-        "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Ohrenprobleme und Gelenkleiden früh ernst nehmen.",
+        "description": "Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.",
         "image": "https://wahre-haustierliebe.de/assets/social/hunde-gesundheit.png",
         "imageAlt": "Hund sitzt aufmerksam in einer Tierarztpraxis.",
         "imageWidth": 1200,
@@ -1674,7 +1674,7 @@
       "facts": [
         "Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.",
         "Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.",
-        "Goldhamster sind nachtaktiv. Tagsüberes Wecken stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.",
+        "Goldhamster sind nachtaktiv. Wecken am Tag stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.",
         "Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.",
         "Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen."
       ],
@@ -2024,6 +2024,10 @@
           "url": "https://wsava.org/global-guidelines/reproduction-guidelines/"
         },
         {
+          "label": "WSAVA: Zusammenfassung der Leitlinie (PDF)",
+          "url": "https://wsava.org/wp-content/uploads/2024/06/Executive-Summary.pdf"
+        },
+        {
           "label": "AVMA: Spaying and Neutering",
           "url": "https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering"
         },
@@ -2139,8 +2143,8 @@
           "url": "https://omia.org/home/"
         },
         {
-          "label": "UFAW Genetic Welfare Problems",
-          "url": "https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro"
+          "label": "Science for Animal Welfare (ehemals UFAW): Genetic Welfare Problems of Companion Animals",
+          "url": "https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/"
         },
         {
           "label": "UC Davis Veterinary Genetics Laboratory",
@@ -2391,6 +2395,10 @@
         {
           "label": "Europäisches Parlament: Erste EU-Regeln für Hunde und Katzen",
           "url": "https://www.europarl.europa.eu/news/de/press-room/20250616IPR28963/erste-eu-regeln-fur-wohlergehen-und-ruckverfolgbarkeit-von-hunden-und-katzen"
+        },
+        {
+          "label": "EUR-Lex: Verordnung (EU) 2026/1818 über das Wohlergehen von Hunden und Katzen und deren Rückverfolgbarkeit",
+          "url": "https://eur-lex.europa.eu/eli/reg/2026/1818/oj"
         }
       ],
       "social": {
@@ -2507,8 +2515,16 @@
       ],
       "sources": [
         {
-          "label": "Bundestierärztekammer",
-          "url": "https://www.bundestieraerztekammer.de"
+          "label": "Bundestierärztekammer: Mitgliederübersicht",
+          "url": "https://www.bundestieraerztekammer.de/btk/mitglieder/"
+        },
+        {
+          "label": "Bundestierärztekammer: Notdienst-Einordnung",
+          "url": "https://www.bundestieraerztekammer.de/presse/2019/08/notdienst-flyer.php"
+        },
+        {
+          "label": "Thieme Vet-News: Übersicht zentraler Notrufnummern",
+          "url": "https://tiermedizin.thieme.de/aktuelles/vet-news/detail/zentrale-rufnummer-fuer-tieraerztlichen-notdienst-1717"
         }
       ],
       "social": {
@@ -2853,7 +2869,7 @@
         },
         {
           "label": "SWR: Tierheime voll, mehr Haustiere ausgesetzt",
-          "url": "https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-armut-100.html"
+          "url": "https://www.swr.de/swraktuell/baden-wuerttemberg/stuttgart/haustiere-ausgesetzt-volle-tierheime-tierleid-tierhaltung-armut-100.html"
         },
         {
           "label": "Hamburger Tierschutzverein: Sommerferien und Tieraussetzungen 2025",
@@ -3280,8 +3296,7 @@
         "Zähmung, Gewöhnung und Domestikation sind nicht dasselbe: Ein einzelnes Tier wird durch Handaufzucht nicht zur Hauskatze und eine Fachstation ist kein privater Haushalt.",
         "Die Sicherheits- und Verhaltensrisiken sind nicht bloß eine Frage von Aufwand; eine Wildkatze bleibt ein Wildtier und kann in Bedrängnis beißen oder kratzen.",
         "Die konkreten artenschutzrechtlichen Anforderungen und Zuständigkeiten können vom Einzelfall und vom Bundesland abhängen; die Seite ersetzt keine Rechtsberatung.",
-        "Eine private Aufzucht macht aus einer Wildkatze kein Haustier; überlasse Haltung, Versorgung und mögliche Auswilderung genehmigten Fachstellen.",
-        "Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.",
+        "Eine private Aufzucht macht aus einer Wildkatze kein Haustier; Haltung, Versorgung und mögliche Auswilderung gehören zu genehmigten Fachstellen mit entsprechender Erfahrung.",
         "Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen."
       ],
       "sources": [
@@ -3320,6 +3335,10 @@
         {
           "label": "Bundesnaturschutzgesetz § 44",
           "url": "https://www.gesetze-im-internet.de/bnatschg_2009/__44.html"
+        },
+        {
+          "label": "Bundesnaturschutzgesetz § 45 Abs. 5 (verletzte, hilflose oder kranke Tiere)",
+          "url": "https://www.gesetze-im-internet.de/bnatschg_2009/__45.html"
         },
         {
           "label": "Bundesnaturschutzgesetz § 46",
