@@ -11051,7 +11051,7 @@
     <div class="hero" style="background: linear-gradient(135deg, #5A6B3A 0%, #3D4A25 100%);">
       <div class="container">
         <h1>Bist du bereit für ein Tier?</h1>
-        <p>15 Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation. Antworte so, wie dein Alltag wirklich ist, nicht so, wie er im besten Fall wäre.</p>
+        <p>16 Fragen: zuerst die Tierart, dann Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation. Antworte so, wie dein Alltag wirklich ist, nicht so, wie er im besten Fall wäre.</p>
       </div>
     </div>
 
@@ -11068,17 +11068,34 @@
           <div class="test-progress-card" id="test-progress-card">
             <div class="test-progress-top">
               <div class="test-step-metadata">
-                <span class="test-progress-label" id="test-progress-label">Schritt 1 von 15</span>
-                <span class="test-step-title" id="test-step-title">Zeit im Alltag</span>
+                <span class="test-progress-label" id="test-progress-label">Schritt 1 von 16</span>
+                <span class="test-step-title" id="test-step-title">Tierart</span>
               </div>
-              <span class="test-progress-label" id="test-answered-label">0/15 beantwortet</span>
+              <span class="test-progress-label" id="test-answered-label">0/16 beantwortet</span>
             </div>
             <div class="test-progress-track" aria-hidden="true"><div class="test-progress-bar" id="test-progress-bar"></div></div>
           </div>
           <p class="test-step-status" id="test-step-status" role="status" aria-live="polite" aria-atomic="true"></p>
 
+          <div class="test-question" data-question="0">
+            <h3>1. Um welche Tierart geht es?</h3>
+            <div class="test-options">
+              <label class="test-option"><input type="radio" name="tierart" value="hund"> Einen Hund</label>
+              <label class="test-option"><input type="radio" name="tierart" value="katze"> Eine Katze</label>
+              <label class="test-option"><input type="radio" name="tierart" value="vogel"> Wellensittiche oder andere Vögel</label>
+              <label class="test-option"><input type="radio" name="tierart" value="kaninchen"> Kaninchen</label>
+              <label class="test-option"><input type="radio" name="tierart" value="meerschweinchen"> Meerschweinchen</label>
+              <label class="test-option"><input type="radio" name="tierart" value="hamster"> Einen Hamster</label>
+              <label class="test-option"><input type="radio" name="tierart" value="ratte"> Ratten</label>
+              <label class="test-option"><input type="radio" name="tierart" value="degu"> Degus oder Chinchillas</label>
+              <label class="test-option"><input type="radio" name="tierart" value="pferd"> Ein Pferd</label>
+              <label class="test-option"><input type="radio" name="tierart" value="exot"> Reptilien, Schildkröten, Fische oder andere Exoten</label>
+              <label class="test-option"><input type="radio" name="tierart" value="offen"> Das weiß ich noch nicht</label>
+            </div>
+          </div>
+
           <div class="test-question" data-question="1">
-            <h3>1. Wie viele Stunden am Tag bist du zu Hause?</h3>
+            <h3>2. Wie viele Stunden am Tag bist du zu Hause?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q1" value="2"> Mehr als 8 Stunden – ich arbeite von zu Hause oder bin oft da.</label>
               <label class="test-option"><input type="radio" name="q1" value="1"> 4–8 Stunden – normaler Arbeitsalltag, aber ich komme mittags heim oder habe Teilzeit.</label>
@@ -11087,7 +11104,7 @@
           </div>
 
           <div class="test-question" data-question="2">
-            <h3>2. Hast du Rücklagen für tierärztliche Notfälle?</h3>
+            <h3>3. Hast du Rücklagen für tierärztliche Notfälle?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q2" value="2"> Ja, ich habe mindestens 1.000–2.000 Euro als Puffer (Richtwert für Hund oder Katze).</label>
               <label class="test-option"><input type="radio" name="q2" value="1"> Ich könnte es im Notfall irgendwie organisieren.</label>
@@ -11096,7 +11113,7 @@
           </div>
 
           <div class="test-question" data-question="3">
-            <h3>3. Wie stabil ist deine Lebenssituation?</h3>
+            <h3>4. Wie stabil ist deine Lebenssituation?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q3" value="2"> Feste Wohnung, stabiler Job, keine großen Veränderungen in Sicht.</label>
               <label class="test-option"><input type="radio" name="q3" value="1"> Meistens stabil, aber ein Umzug oder Jobwechsel ist denkbar.</label>
@@ -11105,7 +11122,7 @@
           </div>
 
           <div class="test-question" data-question="4">
-            <h3>4. Sind alle im Haushalt einverstanden?</h3>
+            <h3>5. Sind alle im Haushalt einverstanden?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q4" value="2"> Ja, alle sind begeistert und bereit, Verantwortung mitzutragen.</label>
               <label class="test-option"><input type="radio" name="q4" value="1"> Die meisten sind dafür, aber nicht alle gleich enthusiastisch.</label>
@@ -11114,7 +11131,7 @@
           </div>
 
           <div class="test-question" data-question="5">
-            <h3>5. Bist du bereit, dein Tier 10–20 Jahre zu versorgen?</h3>
+            <h3>6. Bist du bereit, dein Tier 10–20 Jahre zu versorgen?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q5" value="2"> Ja, ich habe die Dauer im Blick und bin bereit.</label>
               <label class="test-option"><input type="radio" name="q5" value="1"> Im Prinzip ja, aber so weit in die Zukunft denke ich ungern.</label>
@@ -11123,7 +11140,7 @@
           </div>
 
           <div class="test-question" data-question="6">
-            <h3>6. Hast du einen Plan für Urlaub und Notfälle?</h3>
+            <h3>7. Hast du einen Plan für Urlaub und Notfälle?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q6" value="2"> Ja – Familie, Freunde oder professionelle Betreuung stehen bereit.</label>
               <label class="test-option"><input type="radio" name="q6" value="1"> Ich würde mich darum kümmern, wenn es so weit ist.</label>
@@ -11132,7 +11149,7 @@
           </div>
 
           <div class="test-question" data-question="7">
-            <h3>7. Warum willst du ein Tier?</h3>
+            <h3>8. Warum willst du ein Tier?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q7" value="2"> Ich habe mich gründlich informiert und will einem Tier ein gutes Zuhause geben.</label>
               <label class="test-option"><input type="radio" name="q7" value="1"> Ich wünsche mir Gesellschaft und glaube, ein Tier würde mir guttun.</label>
@@ -11141,7 +11158,7 @@
           </div>
 
           <div class="test-question" data-question="8">
-            <h3>8. Hast du dich über die spezifischen Bedürfnisse der gewünschten Tierart informiert?</h3>
+            <h3>9. Hast du dich über die spezifischen Bedürfnisse der gewünschten Tierart informiert?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q8" value="2"> Ja, ausführlich – Fachbücher, Tierschutzorganisationen, Erfahrungsberichte.</label>
               <label class="test-option"><input type="radio" name="q8" value="1"> Ein bisschen – Internet, Bekannte, Zoohandlung.</label>
@@ -11150,7 +11167,7 @@
           </div>
 
           <div class="test-question" data-question="9">
-            <h3>9. Wie reagierst du, wenn dein Tier etwas beschädigt oder sich daneben benimmt?</h3>
+            <h3>10. Wie reagierst du, wenn dein Tier etwas beschädigt oder sich daneben benimmt?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q9" value="2"> Ich weiß, dass Tiere keine Menschen sind, und suche nach der Ursache.</label>
               <label class="test-option"><input type="radio" name="q9" value="1"> Ich wäre genervt, aber ich würde mich zusammenreißen.</label>
@@ -11159,7 +11176,7 @@
           </div>
 
           <div class="test-question" data-question="10">
-            <h3>10. Bist du bereit, dein Tier kastrieren zu lassen?</h3>
+            <h3>11. Bist du bereit, dein Tier kastrieren zu lassen?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q10" value="2"> Ja, wenn es medizinisch oder aus Tierschutzsicht sinnvoll ist.</label>
               <label class="test-option"><input type="radio" name="q10" value="1"> Eher ja, aber ich habe Bedenken.</label>
@@ -11168,7 +11185,7 @@
           </div>
 
           <div class="test-question" data-question="11">
-            <h3>11. Kannst du dir vorstellen, ein altes oder krankes Tier zu pflegen?</h3>
+            <h3>12. Kannst du dir vorstellen, ein altes oder krankes Tier zu pflegen?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q11" value="2"> Ja – das gehört dazu, und ich bin darauf vorbereitet.</label>
               <label class="test-option"><input type="radio" name="q11" value="1"> Ich hoffe, dass es nicht so weit kommt, aber ich würde es versuchen.</label>
@@ -11177,7 +11194,7 @@
           </div>
 
           <div class="test-question" data-question="12">
-            <h3>12. Hast du einen Tierarzt in der Nähe?</h3>
+            <h3>13. Hast du einen Tierarzt in der Nähe?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q12" value="2"> Ja, und ich habe mich über Notdienste und Spezialisten informiert.</label>
               <label class="test-option"><input type="radio" name="q12" value="1"> Ich weiß ungefähr, wo einer ist.</label>
@@ -11186,7 +11203,7 @@
           </div>
 
           <div class="test-question" data-question="13">
-            <h3>13. Was passiert mit dem Tier, wenn sich dein Leben ändert?</h3>
+            <h3>14. Was passiert mit dem Tier, wenn sich dein Leben ändert?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q13" value="2"> Ich behalte das Tier – egal, was sich ändert. Im äußersten Notfall suche ich verantwortungsvoll ein neues Zuhause.</label>
               <label class="test-option"><input type="radio" name="q13" value="1"> Ich hoffe, dass es nicht dazu kommt, aber ich hätte keine feste Lösung.</label>
@@ -11195,7 +11212,7 @@
           </div>
 
           <div class="test-question" data-question="14">
-            <h3>14. Wie viel Platz hast du?</h3>
+            <h3>15. Wie viel Platz hast du?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q14" value="2"> Genug Platz für die Bedürfnisse der Tierart – inklusive Freilauf, Rückzugsorte und artgerechte Einrichtung.</label>
               <label class="test-option"><input type="radio" name="q14" value="1"> Es geht – nicht ideal, aber ich würde mein Bestes tun.</label>
@@ -11204,7 +11221,7 @@
           </div>
 
           <div class="test-question" data-question="15">
-            <h3>15. Hast du Allergien gegen Tierhaare, Federn oder Staub?</h3>
+            <h3>16. Hast du Allergien gegen Tierhaare, Federn oder Staub?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q15" value="2"> Nein, getestet und kein Problem.</label>
               <label class="test-option"><input type="radio" name="q15" value="1"> Nicht getestet, aber bisher keine Symptome.</label>
@@ -13480,7 +13497,7 @@
         qualzucht: ['Form darf nicht leiden', 'Nachfrage stoppen', 'Adoption'],
         'zucht-und-vermehrung': ['Nachfrage stoppen', 'Adoption zuerst', 'Vermehrer erkennen'],
         adoption: ['Seriös prüfen', 'Nicht billig kaufen', 'Zweite Chance'],
-        selbsttest: ['15 Fragen', 'Ehrlich antworten', 'Vor dem Tier'],
+        selbsttest: ['16 Fragen', 'Ehrlich antworten', 'Vor dem Tier'],
         notfall: ['Anrufen', 'Sichern', 'Hinfahren'],
         wissen: [
           { text: 'Mythen', href: '#mythen' },
@@ -13540,10 +13557,12 @@
     }
 
     var currentTestStep = 1;
-    var TEST_TOTAL_QUESTIONS = 15;
+    var TEST_TOTAL_QUESTIONS = 15; // gewertete Fragen q1 bis q15; dazu kommt die Tierart-Frage ohne Punkte
+    var TEST_PROGRESS_TOTAL = TEST_TOTAL_QUESTIONS + 1;
     var TEST_STEP_SIZE = 1;
-    var TEST_TOTAL_STEPS = Math.ceil(TEST_TOTAL_QUESTIONS / TEST_STEP_SIZE);
+    var TEST_TOTAL_STEPS = Math.ceil(TEST_PROGRESS_TOTAL / TEST_STEP_SIZE);
     var TEST_STEP_TITLES = [
+      'Tierart',
       'Zeit im Alltag',
       'Finanzieller Puffer',
       'Stabilität',
@@ -13567,24 +13586,29 @@
       updateTestProgress();
     }
 
+    // Frage 0 ist die Tierart (Feldname "tierart"), Frage 1 bis 15 sind die gewerteten Fragen (Feldname "qN").
     function getTestStepForQuestion(questionNumber) {
-      return Math.ceil(questionNumber / TEST_STEP_SIZE);
+      return Math.ceil((questionNumber + 1) / TEST_STEP_SIZE);
+    }
+
+    function testFieldName(questionNumber) {
+      return questionNumber === 0 ? 'tierart' : 'q' + questionNumber;
     }
 
     function getAnsweredTestCount() {
       var answered = 0;
-      for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
-        if (document.querySelector('input[name="q' + i + '"]:checked')) answered++;
+      for (var i = 0; i <= TEST_TOTAL_QUESTIONS; i++) {
+        if (document.querySelector('input[name="' + testFieldName(i) + '"]:checked')) answered++;
       }
       return answered;
     }
 
     function isTestQuestionAnswered(questionNumber) {
-      return Boolean(document.querySelector('input[name="q' + questionNumber + '"]:checked'));
+      return Boolean(document.querySelector('input[name="' + testFieldName(questionNumber) + '"]:checked'));
     }
 
     function isCurrentTestStepComplete() {
-      var start = ((currentTestStep - 1) * TEST_STEP_SIZE) + 1;
+      var start = (currentTestStep - 1) * TEST_STEP_SIZE;
       var end = Math.min(start + TEST_STEP_SIZE - 1, TEST_TOTAL_QUESTIONS);
       for (var i = start; i <= end; i++) {
         if (!isTestQuestionAnswered(i)) return false;
@@ -13593,7 +13617,7 @@
     }
 
     function getFirstIncompleteTestQuestion() {
-      for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
+      for (var i = 0; i <= TEST_TOTAL_QUESTIONS; i++) {
         if (!isTestQuestionAnswered(i)) return i;
       }
       return null;
@@ -13613,7 +13637,7 @@
       });
 
       var answered = getAnsweredTestCount();
-      var percent = Math.round((answered / TEST_TOTAL_QUESTIONS) * 100);
+      var percent = Math.round((answered / TEST_PROGRESS_TOTAL) * 100);
       var stepLabel = document.getElementById('test-progress-label');
       var answeredLabel = document.getElementById('test-answered-label');
       var stepTitle = document.getElementById('test-step-title');
@@ -13623,7 +13647,7 @@
       var submit = document.getElementById('test-submit');
 
       if (stepLabel) stepLabel.textContent = 'Schritt ' + currentTestStep + ' von ' + TEST_TOTAL_STEPS;
-      if (answeredLabel) answeredLabel.textContent = answered + '/' + TEST_TOTAL_QUESTIONS + ' beantwortet';
+      if (answeredLabel) answeredLabel.textContent = answered + '/' + TEST_PROGRESS_TOTAL + ' beantwortet';
       if (stepTitle) stepTitle.textContent = TEST_STEP_TITLES[currentTestStep - 1] || 'Selbsttest';
       if (bar) bar.style.width = Math.max(7, percent) + '%';
       if (bar) bar.setAttribute('aria-valuenow', String(answered));
@@ -14786,7 +14810,7 @@
       if (progressBar) {
         progressBar.setAttribute('role', 'progressbar');
         progressBar.setAttribute('aria-valuemin', '0');
-        progressBar.setAttribute('aria-valuemax', String(TEST_TOTAL_QUESTIONS));
+        progressBar.setAttribute('aria-valuemax', String(TEST_PROGRESS_TOTAL));
       }
       initCollaborationFlow();
     }
@@ -15119,12 +15143,49 @@
     // Kein Punktestand im Ergebnis: Je nach Antworten steht genau ein konkreter nächster Schritt da.
     var TEST_SHARE_URL = 'https://wahre-haustierliebe.de/selbsttest/';
     var TEST_SHARE_TEXTS = {
-      test: 'Bevor ein Tier einzieht, lohnt sich ein ehrlicher Blick auf den eigenen Alltag. Dieser Test stellt 15 Fragen dazu, ohne Punktewertung:',
+      test: 'Bevor ein Tier einzieht, lohnt sich ein ehrlicher Blick auf den eigenen Alltag. Dieser Test stellt 16 Fragen dazu, ohne Punktewertung:',
       frage: 'Würdest du in zwölf Jahren noch die Zeit, das Geld und die Wohnung für dein Tier haben? Wo wirst du dann wohnen und arbeiten, und wie alt ist dein Tier dann?'
     };
+    // Zielseiten je Tierart für die Schritte "Kosten" und "Zeit". Wo es keine eigene Kostenseite gibt,
+    // führt der Link auf die Artenseite; "exot" führt auf die Exoten-Übersicht, "offen" auf "Noch nicht bereit".
+    var TEST_SPECIES = {
+      hund:            { kosten: 'hunde-kosten',                      zeit: 'hunde-allein-zu-hause',            geldLabel: 'Kostenrechnung für Hunde ansehen',            zeitLabel: 'Lesen, wie lange ein Hund allein bleiben kann' },
+      katze:           { kosten: 'katzen-kosten',                     zeit: 'katzen',                           geldLabel: 'Kostenrechnung für Katzen ansehen',           zeitLabel: 'Lesen, was Katzen im Alltag brauchen' },
+      vogel:           { kosten: 'voegel-kosten',                     zeit: 'voegel-alltag-kosten-betreuung',   geldLabel: 'Kosten der Wellensittich-Haltung ansehen',    zeitLabel: 'Lesen, wie viel Alltag Vögel brauchen' },
+      kaninchen:       { kosten: 'kleintiere-kaninchen-kosten',       zeit: 'kleintiere-kaninchen',             geldLabel: 'Kosten der Kaninchenhaltung ansehen',         zeitLabel: 'Lesen, was Kaninchen im Alltag brauchen' },
+      meerschweinchen: { kosten: 'kleintiere-meerschweinchen-kosten', zeit: 'kleintiere-meerschweinchen',       geldLabel: 'Kosten der Meerschweinchenhaltung ansehen',   zeitLabel: 'Lesen, was Meerschweinchen im Alltag brauchen' },
+      hamster:         { kosten: 'kleintiere-hamster',                zeit: 'kleintiere-hamster',               geldLabel: 'Zur Seite über Hamster',                      zeitLabel: 'Zur Seite über Hamster' },
+      ratte:           { kosten: 'kleintiere-ratten',                 zeit: 'kleintiere-ratten',                geldLabel: 'Zur Seite über Ratten',                       zeitLabel: 'Zur Seite über Ratten' },
+      degu:            { kosten: 'kleintiere-degus-und-chinchillas',  zeit: 'kleintiere-degus-und-chinchillas', geldLabel: 'Zur Seite über Degus und Chinchillas',        zeitLabel: 'Zur Seite über Degus und Chinchillas' },
+      pferd:           { kosten: 'pferde-kosten',                     zeit: 'pferde',                           geldLabel: 'Kostenrechnung für Pferde ansehen',           zeitLabel: 'Lesen, was Pferde im Alltag brauchen' },
+      exot:            { kosten: 'exoten',                            zeit: 'exoten',                           geldLabel: 'Zur Übersicht über Exoten',                   zeitLabel: 'Zur Übersicht über Exoten' },
+      offen:           { kosten: 'noch-nicht-bereit',                 zeit: 'noch-nicht-bereit',                geldLabel: 'Was jetzt sinnvoll ist, solange die Tierart offen ist', zeitLabel: 'Was jetzt sinnvoll ist, solange die Tierart offen ist' }
+    };
+
+    function getTestSpeciesKey() {
+      var sel = document.querySelector('input[name="tierart"]:checked');
+      return sel && TEST_SPECIES[sel.value] ? sel.value : 'offen';
+    }
+
+    function getTestMoneyStep(key) {
+      var sp = TEST_SPECIES[key];
+      var text;
+      if (key === 'offen') text = 'Bei den Rücklagen ist noch Luft nach oben. Weil du noch nicht weißt, welche Tierart es werden soll, lassen sich die Kosten noch nicht ausrechnen. Diese Seite zeigt, was in der Zwischenzeit hilft.';
+      else if (sp.kosten.slice(-7) === '-kosten') text = 'Bei den Rücklagen ist noch Luft nach oben. Das lässt sich ändern. Rechne einmal durch, was die Haltung über das ganze Tierleben kostet.';
+      else if (key === 'exot') text = 'Bei den Rücklagen ist noch Luft nach oben. Exoten brauchen oft teure Technik und tierärztliche Betreuung. Die Übersicht zeigt, was dazugehört.';
+      else text = 'Bei den Rücklagen ist noch Luft nach oben. Das lässt sich ändern. Für diese Tierart gibt es noch keine eigene Kostenseite. Die Seite zur Tierart zeigt, was die Haltung ausmacht.';
+      return { page: sp.kosten, label: sp.geldLabel, text: text };
+    }
+
+    function getTestTimeStep(key) {
+      var sp = TEST_SPECIES[key];
+      var text = key === 'offen'
+        ? 'Bei der Zeit im Alltag ist noch etwas offen. Wie viel Zeit ein Tier braucht, hängt stark von der Tierart ab. Diese Seite zeigt, was in der Zwischenzeit hilft.'
+        : 'Bei der Zeit im Alltag ist noch etwas offen. Schau dir an, wie viel Zeit und Aufmerksamkeit diese Tierart braucht und was das für deinen Tag heißt.';
+      return { page: sp.zeit, label: sp.zeitLabel, text: text };
+    }
+
     var TEST_NEXT_STEPS = {
-      geld: { page: 'hunde-kosten', label: 'Kostenrechnung über das ganze Tierleben ansehen', text: 'Bei den Rücklagen ist noch Luft nach oben. Das lässt sich ändern. Rechne einmal durch, was ein Tier über sein ganzes Leben kostet, am Beispiel Hund. Für Katzen, Kleintiere und Vögel gibt es eigene Kostenseiten.' },
-      zeit: { page: 'hunde-allein-zu-hause', label: 'Lesen, wie lange ein Tier allein bleiben kann', text: 'Bei der Zeit im Alltag ist noch etwas offen. Schau dir an, wie lange Tiere allein bleiben können und was sie dabei brauchen, am Beispiel Hund.' },
       betreuung: { page: 'tiere-und-urlaub', label: 'Betreuung für Urlaub und Notfälle planen', text: 'Für Urlaub und Notfälle steht noch keine feste Betreuung. Diese Seite zeigt, wie sie aussehen kann, bevor ein Tier einzieht.' },
       probe: { page: 'noch-nicht-bereit', label: 'Ausprobieren, ohne ein Tier zu holen', text: 'Ein paar Antworten sind noch offen. Dafür gibt es Wege, die Tieren helfen und dir Erfahrung geben, ohne dass ein Tier einzieht: Gassi gehen, Patenschaft, Pflegestelle.' },
       nochnicht: { page: 'noch-nicht-bereit', label: 'Was jetzt sinnvoll ist, wenn es noch nicht passt', text: '„Noch nicht“ ist eine vollwertige Entscheidung, keine Niederlage. Auf dieser Seite stehen Wege, wie du Tieren nah sein kannst, ohne selbst eines zu halten, und wie du später neu entscheidest.' },
@@ -15155,11 +15216,11 @@
         }
       }
 
-      if (answered < TEST_TOTAL_QUESTIONS) {
+      if (answered + (isTestQuestionAnswered(0) ? 1 : 0) < TEST_PROGRESS_TOTAL) {
         var firstIncomplete = getFirstIncompleteTestQuestion();
         currentTestStep = getTestStepForQuestion(firstIncomplete);
         updateTestProgress({ scroll: true });
-        setTestStepStatus('Es fehlt noch Frage ' + firstIncomplete + '. Danach kann ich deine Auswertung anzeigen.');
+        setTestStepStatus('Es fehlt noch Frage ' + (firstIncomplete + 1) + '. Danach kann ich deine Auswertung anzeigen.');
         return;
       }
 
@@ -15176,8 +15237,8 @@
         intro = 'Deine Antworten zeigen, dass ein Tier gerade nicht gut in deinen Alltag passt. Dass du dir die Fragen vorab gestellt hast, ist der Teil, der Tieren hilft. Lebensumstände ändern sich, und „Noch nicht“ bedeutet nicht „Nie“.';
         step = TEST_NEXT_STEPS.nochnicht;
       } else {
-        if (zero[2]) step = TEST_NEXT_STEPS.geld;
-        else if (zero[1]) step = TEST_NEXT_STEPS.zeit;
+        if (zero[2]) step = getTestMoneyStep(getTestSpeciesKey());
+        else if (zero[1]) step = getTestTimeStep(getTestSpeciesKey());
         else if (zero[6] || zero[13]) step = TEST_NEXT_STEPS.betreuung;
         else if (total < 24) step = TEST_NEXT_STEPS.probe;
         else step = TEST_NEXT_STEPS.bereit;
@@ -15195,7 +15256,7 @@
       var openList = '';
       if (open.length) {
         openList = '<p class="mt-2"><strong>Hier kannst du noch genauer hinschauen:</strong></p><ul>' + open.map(function(o) {
-          return '<li>' + escapeTestHtml(TEST_STEP_TITLES[o.nr - 1]) + '</li>';
+          return '<li>' + escapeTestHtml(TEST_STEP_TITLES[o.nr]) + '</li>';
         }).join('') + '</ul>';
       }
 

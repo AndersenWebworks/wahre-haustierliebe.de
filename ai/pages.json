@@ -2843,7 +2843,7 @@
       "id": "selbsttest",
       "url": "https://wahre-haustierliebe.de/selbsttest/index.html",
       "title": "Haustier-Selbsttest: Bin ich bereit für ein Tier?",
-      "description": "15 Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.",
+      "description": "16 Fragen zu Tierart, Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.",
       "intent": "Selbsttest vor Haustieranschaffung",
       "keywords": [
         "Haustier Selbsttest",
@@ -2873,7 +2873,7 @@
       ],
       "social": {
         "title": "Der Haustier-Selbsttest - Wa(h)re Haustier(liebe)",
-        "description": "15 Fragen zu Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.",
+        "description": "16 Fragen zu Tierart, Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.",
         "image": "https://wahre-haustierliebe.de/assets/social/selbsttest.png",
         "imageAlt": "Zwei Katzen liegen auf den Ebenen eines Kratzbaums.",
         "imageWidth": 1200,

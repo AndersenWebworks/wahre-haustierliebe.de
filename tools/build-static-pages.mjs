@@ -211,7 +211,7 @@ const pages = [
     id: 'selbsttest',
     slug: 'selbsttest',
     title: 'Haustier-Selbsttest: Bin ich bereit für ein Tier?',
-    description: '15 Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.',
+    description: '16 Fragen zu Tierart, Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.',
     intent: 'Selbsttest vor Haustieranschaffung',
     priority: '0.85',
     lastmod: '2026-11-07',
@@ -2213,7 +2213,7 @@ const socialCopyByPage = {
   selbsttest: {
     eyebrow: 'Bereit für ein Haustier?',
     title: 'Der Haustier-Selbsttest',
-    description: '15 Fragen zu Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.',
+    description: '16 Fragen zu Tierart, Zeit, Geld, Wohnsituation, Betreuung und Motivation vor der Anschaffung.',
   },
   notfall: {
     eyebrow: 'Tier-Notfall erkennen',
