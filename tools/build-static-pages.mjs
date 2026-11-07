@@ -202,6 +202,7 @@ const pages = [
     description: '15 Fragen zu Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation vor der Entscheidung für ein Haustier.',
     intent: 'Selbsttest vor Haustieranschaffung',
     priority: '0.85',
+    lastmod: '2026-11-07',
   },
   {
     id: 'notfall',
@@ -979,8 +980,8 @@ const evidenceByPage = {
   selbsttest: {
     facts: [
       'Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.',
-      'Strenge Antworten schützen das Tier vor späterer Überforderung.',
-      'Ein schlechtes Ergebnis ist kein Urteil, sondern ein Hinweis, noch zu warten.',
+      'Ehrliche Antworten schützen das Tier vor späterer Überforderung.',
+      'Am Ende steht kein Punktestand, sondern ein konkreter nächster Schritt. „Noch nicht“ ist eine gleichwertige Entscheidung und kein Urteil.',
     ],
     sources: [
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],

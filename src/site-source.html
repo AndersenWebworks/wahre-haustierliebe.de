@@ -10672,7 +10672,8 @@
           html: `<div class="article-rhythm decision-band" data-enhancement="selbsttest-share">
             <span class="eyebrow">Vorher teilen</span>
             <h3>Der beste Zeitpunkt für diesen Test ist vor dem Tier.</h3>
-            <p>Schick ihn jemandem, der gerade „nur mal guckt“. Nach dem Kauf wird aus Einsicht viel schneller Rechtfertigung.</p>
+            <p>Du kannst ihn jemandem schicken, der gerade über ein Tier nachdenkt. Am Ende steht keine Punktzahl, sondern ein nächster Schritt, und du musst nichts von deinen Antworten preisgeben.</p>
+            <div class="share-bar"><button type="button" class="share-btn" onclick="shareSelfTest('test')">Test teilen</button><button type="button" class="share-btn" onclick="shareSelfTest('frage')">Eine Frage teilen</button></div>
           </div>`
         }
       ],
@@ -12765,13 +12766,41 @@
     }
 
     // ===== SELF-TEST EVALUATION =====
+    // Kein Punktestand im Ergebnis: Je nach Antworten steht genau ein konkreter nächster Schritt da.
+    var TEST_SHARE_URL = 'https://wahre-haustierliebe.de/selbsttest/';
+    var TEST_SHARE_TEXTS = {
+      test: 'Bevor ein Tier einzieht, lohnt sich ein ehrlicher Blick auf den eigenen Alltag. Dieser Test stellt 15 Fragen dazu, ohne Punktewertung:',
+      frage: 'Würdest du in zwölf Jahren noch die Zeit, das Geld und die Wohnung für dein Tier haben? Wo wirst du dann wohnen und arbeiten, und wie alt ist dein Tier dann?'
+    };
+    var TEST_NEXT_STEPS = {
+      geld: { page: 'hunde-kosten', label: 'Kostenrechnung über das ganze Tierleben ansehen', text: 'Bei den Rücklagen ist noch Luft nach oben. Das lässt sich ändern. Rechne einmal durch, was ein Tier über sein ganzes Leben kostet, am Beispiel Hund. Für Katzen, Kleintiere und Vögel gibt es eigene Kostenseiten.' },
+      zeit: { page: 'hunde-allein-zu-hause', label: 'Lesen, wie lange ein Tier allein bleiben kann', text: 'Bei der Zeit im Alltag ist noch etwas offen. Schau dir an, wie lange Tiere allein bleiben können und was sie dabei brauchen, am Beispiel Hund.' },
+      betreuung: { page: 'tiere-und-urlaub', label: 'Betreuung für Urlaub und Notfälle planen', text: 'Für Urlaub und Notfälle steht noch keine feste Betreuung. Diese Seite zeigt, wie sie aussehen kann, bevor ein Tier einzieht.' },
+      probe: { page: 'noch-nicht-bereit', label: 'Ausprobieren, ohne ein Tier zu holen', text: 'Ein paar Antworten sind noch offen. Dafür gibt es Wege, die Tieren helfen und dir Erfahrung geben, ohne dass ein Tier einzieht: Gassi gehen, Patenschaft, Pflegestelle.' },
+      nochnicht: { page: 'noch-nicht-bereit', label: 'Was jetzt sinnvoll ist, wenn es noch nicht passt', text: '„Noch nicht“ ist eine vollwertige Entscheidung, keine Niederlage. Auf dieser Seite stehen Wege, wie du Tieren nah sein kannst, ohne selbst eines zu halten, und wie du später neu entscheidest.' },
+      bereit: { page: 'adoption', label: 'Zum Weg über Tierheim und Tierschutz', text: 'Wenn du ein Tier aufnehmen möchtest, ist der Tierschutz der erste Weg. Frage in einem Tierheim in deiner Nähe an und lass dich beraten. Du musst dort kein Tier mitnehmen.' }
+    };
+
+    function getTestOpenQuestions() {
+      var open = [];
+      for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
+        var sel = document.querySelector('input[name="q' + i + '"]:checked');
+        if (sel && parseInt(sel.value, 10) < 2) open.push({ nr: i, value: parseInt(sel.value, 10) });
+      }
+      return open;
+    }
+
+    function escapeTestHtml(str) {
+      return String(str).replace(/[&<>"]/g, function(c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+    }
+
     function evaluateTest() {
       var total = 0;
       var answered = 0;
       for (var i = 1; i <= TEST_TOTAL_QUESTIONS; i++) {
         var selected = document.querySelector('input[name="q' + i + '"]:checked');
         if (selected) {
-          total += parseInt(selected.value);
+          total += parseInt(selected.value, 10);
           answered++;
         }
       }
@@ -12786,29 +12815,68 @@
 
       setTestStepStatus('');
       var resultDiv = document.getElementById('test-result');
-      var maxScore = 30;
-      var percent = Math.round((total / maxScore) * 100);
-      var resultClass, title, text;
+      var open = getTestOpenQuestions();
+      var zero = {};
+      open.forEach(function(o) { if (o.value === 0) zero[o.nr] = true; });
+      var resultClass, title, intro, step;
 
-      if (total >= 24) {
-        resultClass = 'result-green';
-        title = 'Du scheinst bereit zu sein.';
-        text = '<p>Deine Antworten zeigen, dass du dir ernsthafte Gedanken gemacht hast und deine Lebenssituation grundsätzlich zu einem Tier passt. Das ist ein gutes Zeichen.</p><p>Aber: Dieser Test ersetzt keine gründliche Recherche zur konkreten Tierart. Informiere dich bei der Tierart, die dich interessiert: <a href="#hunde" onclick="navigateTo(\'hunde\');return false">Hunde</a>, <a href="#katzen" onclick="navigateTo(\'katzen\');return false">Katzen</a>, <a href="#voegel" onclick="navigateTo(\'voegel\');return false">Vögel</a>, <a href="#kleintiere" onclick="navigateTo(\'kleintiere\');return false">Kleintiere</a>, <a href="#exoten" onclick="navigateTo(\'exoten\');return false">Exoten</a> oder <a href="#pferde" onclick="navigateTo(\'pferde\');return false">Pferde</a>. Und erwäge, dein Tier <a href="#adoption" onclick="navigateTo(\'adoption\');return false">aus dem Tierschutz zu adoptieren</a>.</p>';
-      } else if (total >= 16) {
-        resultClass = 'result-yellow';
-        title = 'Es gibt Punkte, über die du nachdenken solltest.';
-        text = '<p>Einige deiner Antworten zeigen, dass noch nicht alles passt – oder dass du dir über bestimmte Aspekte der Tierhaltung noch nicht im Klaren bist. Das ist kein Urteil. Es ist eine Einladung, ehrlich hinzuschauen.</p><p>Vielleicht ist jetzt nicht der richtige Zeitpunkt. Vielleicht wird es das in einem Jahr. Oder du findest Lösungen für die offenen Punkte. Nimm dir die Zeit.</p>';
-      } else {
+      if (total < 16) {
         resultClass = 'result-red';
-        title = 'Ein Tier passt gerade nicht in dein Leben.';
-        text = '<p>Das klingt härter, als es gemeint ist. Deine Antworten zeigen, dass deine aktuelle Lebenssituation einem Tier nicht gerecht werden würde – finanziell, zeitlich oder von den Rahmenbedingungen her.</p><p>Das ist keine Schande. Im Gegenteil: Dass du diesen Test machst, zeigt, dass dir Tiere am Herzen liegen. Und genau deshalb wäre die verantwortungsvollste Entscheidung, jetzt kein Tier zu holen. Lebenssituationen ändern sich. Vielleicht passt es irgendwann – und dann bist du bereit.</p>';
+        title = 'Noch nicht, und das ist eine gute Entscheidung.';
+        intro = 'Deine Antworten zeigen, dass ein Tier gerade nicht gut in deinen Alltag passt. Dass du dir die Fragen vorab gestellt hast, ist der Teil, der Tieren hilft. Lebensumstände ändern sich, und „Noch nicht“ bedeutet nicht „Nie“.';
+        step = TEST_NEXT_STEPS.nochnicht;
+      } else {
+        if (zero[2]) step = TEST_NEXT_STEPS.geld;
+        else if (zero[1]) step = TEST_NEXT_STEPS.zeit;
+        else if (zero[6] || zero[13]) step = TEST_NEXT_STEPS.betreuung;
+        else if (total < 24) step = TEST_NEXT_STEPS.probe;
+        else step = TEST_NEXT_STEPS.bereit;
+        if (step === TEST_NEXT_STEPS.bereit) {
+          resultClass = 'result-green';
+          title = 'Deine Antworten passen zu einem Tier, mit Fragen.';
+          intro = 'Das ist ein Zwischenstand und kein Auftrag. Ein Tier aufzunehmen ist eine Entscheidung für viele Jahre, und das Ergebnis beruht auf deiner eigenen Einschätzung.';
+        } else {
+          resultClass = 'result-yellow';
+          title = 'Ein paar Fragen sind noch offen.';
+          intro = 'Das ist kein Urteil. Es zeigt, wo sich vor einer Entscheidung noch etwas klären lässt.';
+        }
       }
 
-      var shareText = 'Ich habe den Tierhalter-Selbsttest gemacht – ' + total + ' von ' + maxScore + ' Punkten. Wie bereit bist du?';
+      var openList = '';
+      if (open.length) {
+        openList = '<p class="mt-2"><strong>Hier kannst du noch genauer hinschauen:</strong></p><ul>' + open.map(function(o) {
+          return '<li>' + escapeTestHtml(TEST_STEP_TITLES[o.nr - 1]) + '</li>';
+        }).join('') + '</ul>';
+      }
+
+      var waitText = '<p><strong>Lass das Ergebnis drei Tage liegen.</strong> Entscheide erst danach, bei einem Tier frühestens in 14 Tagen. Wenn dir ein bestimmtes Tier gefällt, dann schlafe mindestens drei Nächte darüber, bevor du zusagst. Mach den Test danach gern noch einmal.</p>';
 
       resultDiv.className = 'test-result visible ' + resultClass;
-      resultDiv.innerHTML = '<h2>' + title + '</h2><p class="text-muted">Ergebnis: ' + total + ' von ' + maxScore + ' Punkten (' + percent + ' %)</p>' + text + '<div class="mt-2"><button class="btn btn-outline" onclick="navigateTo(\'mensch\')">Mehr über die Psychologie der Tierhaltung</button></div>' + '<p class="share-label mt-2">Fordere Freunde heraus – teile den Test:</p><div class="share-bar"><button class="share-btn" onclick="shareThis(\'whatsapp\', \'' + shareText.replace(/'/g, "\\'") + '\')">WhatsApp</button><button class="share-btn" onclick="shareThis(\'facebook\')">Facebook</button><button class="share-btn" onclick="shareThis(\'email\', \'' + shareText.replace(/'/g, "\\'") + '\')">E-Mail</button><button class="share-btn" onclick="shareThis(\'copy\')">Link kopieren</button></div>';
+      resultDiv.innerHTML = '<h2>' + title + '</h2><p>' + intro + '</p>' + openList +
+        '<div class="test-next-step"><span class="eyebrow">Dein nächster Schritt</span><p>' + step.text + '</p><a class="btn btn-primary" href="#' + step.page + '" onclick="navigateTo(\'' + step.page + '\');return false">' + step.label + '</a></div>' +
+        waitText +
+        '<div class="test-share"><p class="share-label"><strong>Weitergeben, ohne Ergebnis:</strong> Teile die Einladung zum Test oder eine einzelne Frage. Dein Ergebnis wird nicht mitgeschickt und nirgends gespeichert.</p><div class="share-bar"><button type="button" class="share-btn" onclick="shareSelfTest(\'test\')">Test teilen</button><button type="button" class="share-btn" onclick="shareSelfTest(\'frage\')">Eine Frage teilen</button></div></div>' +
+        '<div class="mt-2"><button type="button" class="btn btn-outline" onclick="navigateTo(\'mensch\')">Mehr über die Psychologie der Tierhaltung</button></div>';
       scrollElementIntoView(resultDiv, { behavior: 'smooth', block: 'start' });
+    }
+
+    // Teilen ohne Punkte: Web Share API, Rückfall auf "Link kopieren". Nichts geht an einen Server.
+    function shareSelfTest(kind) {
+      var text = TEST_SHARE_TEXTS[kind] || TEST_SHARE_TEXTS.test;
+      var data = { title: 'Bist du bereit für ein Tier?', text: text, url: TEST_SHARE_URL };
+      function copyFallback() {
+        var full = text + ' ' + TEST_SHARE_URL;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(full).then(function() { showToast('Text und Link kopiert'); }, function() { window.prompt('Zum Kopieren:', full); });
+        } else {
+          window.prompt('Zum Kopieren:', full);
+        }
+      }
+      if (navigator.share) {
+        navigator.share(data).catch(function(err) { if (!err || err.name !== 'AbortError') copyFallback(); });
+      } else {
+        copyFallback();
+      }
     }
 
     // ===== SHARE FUNCTION =====
