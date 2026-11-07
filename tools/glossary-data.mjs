@@ -172,8 +172,8 @@ export const glossaryTerms = [
   {
     key: 'globuli',
     title: 'Globuli',
-    summary: 'Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar.',
-    description: 'Kleine Zuckerkügelchen aus der Homöopathie. Sie dienen als Träger für potenzierte Substanzen; in üblichen Potenzen ist kein Wirkstoff mehr nachweisbar.',
+    summary: 'Zuckerkügelchen aus der Homöopathie. Ab etwa D24 bzw. C12 ist rechnerisch kein Molekül des Ausgangsstoffs mehr enthalten.',
+    description: 'Kleine Zuckerkügelchen aus der Homöopathie. Sie dienen als Träger für potenzierte Substanzen; in niedrigen Potenzen wie D1 bis D6 ist der Ausgangsstoff noch enthalten, ab etwa D24 bzw. C12 rechnerisch kein Molekül mehr. Eine Wirkung über den Placeboeffekt hinaus ist nicht belegt.',
   },
   {
     key: 'got',
@@ -249,8 +249,8 @@ export const glossaryTerms = [
   },
   {
     key: 'insulinschock',
-    title: 'Insulinschock',
-    summary: 'Gefährliche Unterzuckerung durch zu viel Insulinwirkung. Bei Hunden kann Xylit so etwas auslösen.',
+    title: 'Unterzuckerung durch Xylit',
+    summary: 'Bei Hunden löst Xylit (Birkenzucker) eine massive Insulinausschüttung aus. Der Blutzucker fällt gefährlich ab, höhere Mengen schädigen zusätzlich die Leber.',
     description: 'Gefährliche Unterzuckerung, wenn zu viel Insulin wirkt oder ausgeschüttet wird. Bei Hunden kann Xylit eine massive Insulinausschüttung auslösen und dadurch sehr schnell lebensbedrohlich werden.',
   },
   {
@@ -346,7 +346,7 @@ export const glossaryTerms = [
   {
     key: 'nachtaktiv',
     title: 'Nachtaktiv',
-    summary: 'Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress.',
+    summary: 'Tier ist vor allem nachts aktiv. Wer es tagsüber weckt, setzt es oft unter Stress.',
     description: 'Tier ist vor allem in Dämmerung oder Nacht aktiv. Bei nachtaktiven Tieren bedeutet tagsüberes Wecken häufig Stress und widerspricht dem natürlichen Rhythmus.',
   },
   {
@@ -743,7 +743,7 @@ export const glossaryAnnotationsByPage = {
   ],
   startseite: [
     {
-      from: 'Goldfischglas, Einzelvogel, Katermythen, <span class="glossary-term" data-glossary-title="Globuli" data-glossary-text="Kleine Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar." data-glossary-href="glossar/index.html">Globuli</span>: Was stimmt wirklich?',
+      from: 'Goldfischglas, Einzelvogel, Katermythen, <span class="glossary-term" data-glossary-title="Globuli" data-glossary-text="Kleine Zuckerkügelchen aus der Homöopathie. Ab etwa D24 bzw. C12 ist rechnerisch kein Molekül des Ausgangsstoffs mehr enthalten." data-glossary-href="glossar/index.html">Globuli</span>: Was stimmt wirklich?',
       to: `Goldfischglas, Einzelvogel, Katermythen, ${mark('globuli', 'Globuli')}: Was stimmt wirklich?`,
     },
     { from: 'Viele Kleintiere brauchen Fläche, Struktur, Artgenossen und Rückzugsorte', to: `Viele Kleintiere brauchen Fläche, Struktur, ${mark('artgenosse', 'Artgenossen')} und Rückzugsorte` },
@@ -765,10 +765,10 @@ export const glossaryAnnotationsByPage = {
   mensch: [
     { from: 'Tiere – besonders Beutetiere wie <a href="#voegel"', to: `Tiere – besonders ${mark('beutetier', 'Beutetiere')} wie <a href="#voegel"` },
     { from: 'Es ist kognitive Dissonanz – ein psychologischer Schutzmechanismus.', to: `Es ist ${mark('kognitive-dissonanz', 'kognitive Dissonanz')} – ein psychologischer Schutzmechanismus.` },
-    { from: 'Bissverletzungen. FIV. Ein deutlich kürzeres Leben.', to: `Bissverletzungen. ${mark('fiv', 'FIV')}. Ein deutlich kürzeres Leben.` },
-    { from: 'Die meisten Tierheimtiere sind dort, weil Menschen versagt haben', to: `Die meisten ${mark('tierheim', 'Tierheimtiere')} sind dort, weil Menschen versagt haben` },
-    { from: 'Parvovirose-Behandlung (2.000–5.000 €)', to: `${mark('parvovirose', 'Parvovirose')}-Behandlung (2.000–5.000 €)` },
-    { from: 'Verhaltenstherapie wegen Frühentwöhnung', to: `Verhaltenstherapie wegen fehlender ${mark('sozialisation', 'Sozialisation')}` },
+    { from: 'höheres Risiko für FIV.', to: `höheres Risiko für ${mark('fiv', 'FIV')}.` },
+    { from: 'Viele Tiere sind im Tierheim wegen', to: `Viele Tiere sind im ${mark('tierheim', 'Tierheim')} wegen` },
+    { from: 'etwa bei Parvovirose, bei', to: `etwa bei ${mark('parvovirose', 'Parvovirose')}, bei` },
+    { from: 'an der Sozialisierung, an den', to: `an der ${mark('sozialisation', 'Sozialisierung')}, an den` },
   ],
   hunde: [
     { from: 'Kastration beim Rüden: ca. 200–400 Euro, bei der Hündin: ca. 400–800 Euro (GOT 2022).', to: `Kastration beim Rüden: ca. 200–400 Euro, bei der Hündin: ca. 400–800 Euro (${mark('got', 'GOT 2022')}).` },
@@ -881,7 +881,7 @@ export const glossaryAnnotationsByPage = {
     { from: 'Harnröhrenverschluss = Notfall', to: `${mark('harnroehrenverschluss', 'Harnröhrenverschluss')} = Notfall` },
     { from: 'Schokolade</strong> (Theobromin)', to: `Schokolade</strong> (${mark('theobromin', 'Theobromin')})` },
     { from: '<strong>Xylit</strong> (Birkenzucker)', to: `<strong>${mark('xylit', 'Xylit')}</strong> (Birkenzucker)` },
-    { from: 'lebensbedrohlichem Insulinschock', to: `lebensbedrohlichem ${mark('insulinschock', 'Insulinschock')}` },
+    { from: 'lebensbedrohlicher Unterzuckerung', to: `lebensbedrohlicher ${mark('insulinschock', 'Unterzuckerung')}` },
     { from: '<strong>Permethrin</strong> (in manchen Hunde-Flohmitteln)', to: `<strong>${mark('permethrin', 'Permethrin')}</strong> (in manchen Hunde-Flohmitteln)` },
     { from: '<strong>Teflon-Dämpfe</strong> (PTFE)', to: `<strong>${mark('ptfe', 'Teflon-Dämpfe (PTFE)')}</strong>` },
     { from: 'Hitzschlag (Hund im Auto, Sommerüberhitzung)', to: `${mark('hitzschlag', 'Hitzschlag')} (Hund im Auto, Sommerüberhitzung)` },

@@ -231,8 +231,8 @@
     {
       "key": "globuli",
       "title": "Globuli",
-      "summary": "Zuckerkügelchen aus der Homöopathie. In üblichen Potenzen ist kein Wirkstoff mehr nachweisbar.",
-      "description": "Kleine Zuckerkügelchen aus der Homöopathie. Sie dienen als Träger für potenzierte Substanzen; in üblichen Potenzen ist kein Wirkstoff mehr nachweisbar.",
+      "summary": "Zuckerkügelchen aus der Homöopathie. Ab etwa D24 bzw. C12 ist rechnerisch kein Molekül des Ausgangsstoffs mehr enthalten.",
+      "description": "Kleine Zuckerkügelchen aus der Homöopathie. Sie dienen als Träger für potenzierte Substanzen; in niedrigen Potenzen wie D1 bis D6 ist der Ausgangsstoff noch enthalten, ab etwa D24 bzw. C12 rechnerisch kein Molekül mehr. Eine Wirkung über den Placeboeffekt hinaus ist nicht belegt.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#globuli"
     },
     {
@@ -326,13 +326,6 @@
       "summary": "Fehlentwicklung des Hüftgelenks, besonders bei größeren Hunderassen relevant.",
       "description": "Fehlentwicklung des Hüftgelenks, häufig erblich mitbedingt. Sie kann Schmerzen, Lahmheit und Arthrose verursachen und ist bei vielen großen Hunderassen relevant.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#hueftdysplasie"
-    },
-    {
-      "key": "insulinschock",
-      "title": "Insulinschock",
-      "summary": "Gefährliche Unterzuckerung durch zu viel Insulinwirkung. Bei Hunden kann Xylit so etwas auslösen.",
-      "description": "Gefährliche Unterzuckerung, wenn zu viel Insulin wirkt oder ausgeschüttet wird. Bei Hunden kann Xylit eine massive Insulinausschüttung auslösen und dadurch sehr schnell lebensbedrohlich werden.",
-      "url": "https://wahre-haustierliebe.de/glossar/index.html#insulinschock"
     },
     {
       "key": "kastration",
@@ -450,7 +443,7 @@
     {
       "key": "nachtaktiv",
       "title": "Nachtaktiv",
-      "summary": "Tier ist vor allem nachts aktiv. Tagsüberes Wecken bedeutet oft Stress.",
+      "summary": "Tier ist vor allem nachts aktiv. Wer es tagsüber weckt, setzt es oft unter Stress.",
       "description": "Tier ist vor allem in Dämmerung oder Nacht aktiv. Bei nachtaktiven Tieren bedeutet tagsüberes Wecken häufig Stress und widerspricht dem natürlichen Rhythmus.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#nachtaktiv"
     },
@@ -768,6 +761,13 @@
       "summary": "Urinieren oder Kotabsatz außerhalb des vorgesehenen Platzes. Bei Katzen oft Warnsignal statt Protest.",
       "description": "Urinieren oder Kotabsatz außerhalb des vorgesehenen Platzes. Bei Katzen ist Unsauberkeit selten bloßer Protest; häufig stecken Schmerzen, Stress, Harnwegserkrankungen oder ungeeignete Toilettenbedingungen dahinter.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#unsauberkeit"
+    },
+    {
+      "key": "insulinschock",
+      "title": "Unterzuckerung durch Xylit",
+      "summary": "Bei Hunden löst Xylit (Birkenzucker) eine massive Insulinausschüttung aus. Der Blutzucker fällt gefährlich ab, höhere Mengen schädigen zusätzlich die Leber.",
+      "description": "Gefährliche Unterzuckerung, wenn zu viel Insulin wirkt oder ausgeschüttet wird. Bei Hunden kann Xylit eine massive Insulinausschüttung auslösen und dadurch sehr schnell lebensbedrohlich werden.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#insulinschock"
     },
     {
       "key": "uv-b",

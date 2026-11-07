@@ -616,7 +616,7 @@ function normalizeAssetUrls(root) {
           </div>`
         },
         {
-          afterHeading: 'Die häufigsten Selbstlügen',
+          afterHeading: 'Sätze, die man oft hört',
           html: `<div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
             <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin.“</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
             <article class="rhythm-card"><span class="eyebrow">Realität</span><h3>„Es ist doch nur ein Tier.“</h3><p>Genau deshalb ist die Verantwortung größer: Das Tier kann nicht kündigen, ausziehen oder widersprechen.</p></article>
@@ -1191,7 +1191,7 @@ function normalizeAssetUrls(root) {
 
     function hydrateArticleKickers() {
       var labels = {
-        mensch: ['Vor dem Kauf', 'Selbstlügen prüfen', 'Verzicht ist erlaubt'],
+        mensch: ['Vor dem Kauf', 'Oft gehörte Sätze', 'Verzicht ist erlaubt'],
         hunde: ['4–5 h allein', '14–37 Tsd. €', 'Beziehung täglich'],
         'hund-im-buero': ['Rückzug', 'klare Regeln', 'Stress sehen'],
         'hunde-stadtfest-rummel': ['Lärm', 'Gedränge', 'Stress sehen'],
@@ -1246,7 +1246,7 @@ function normalizeAssetUrls(root) {
     function hydrateMythRows() {
       var mythList = document.getElementById('myth-list');
       if (!mythList || mythList.dataset.rowsHydrated === 'true') return;
-      var statuses = ['Kontext', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
+      var statuses = ['Kontext', 'Kontext', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Kontext', 'Falsch', 'Falsch', 'Falsch', 'Teils'];
       mythList.querySelectorAll('.accordion-header').forEach(function(header, index) {
         var claim = header.textContent.replace(/\s+/g, ' ').trim();
         header.textContent = '';
