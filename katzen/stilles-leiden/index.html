@@ -7096,6 +7096,101 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket menue: Menü nach Lebenslage (Ich will ein Tier, Tierarten, Notfall, Nachschlagen, Mitmachen), Handymenü mit aufklappbaren Gruppen, Startseite mit fünf Einstiegen ===== */
+
+/* Desktop: weitere Auswahlmenüs */
+body.static-site .dropdown-menu-wide { width: min(660px, calc(100vw - 2rem)); padding: 1rem; }
+body.static-site .dropdown-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1.4rem; }
+body.static-site .dropdown-group { display: grid; align-content: start; gap: 0.1rem; }
+body.static-site .dropdown-heading {
+  margin: 0.7rem 0 0.2rem; padding: 0.35rem 0.55rem 0.3rem; border-top: 1px solid var(--rule-strong);
+  font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);
+}
+body.static-site .dropdown-heading:first-child { margin-top: 0; border-top: 0; }
+body.static-site .dropdown-menu > .dropdown-item,
+body.static-site .dropdown-group > .dropdown-item { display: block; padding: 0.55rem 0.7rem; text-decoration: none; line-height: 1.3; }
+body.static-site .dropdown-end .dropdown-menu { left: auto; right: 0; transform: none; }
+body.static-site .dropdown-notfall .dropdown-toggle { color: var(--red-dark); font-weight: 700; }
+body.static-site .dropdown-menu { min-width: 250px; }
+body.static-site .dropdown-notfall .dropdown-menu { border-color: var(--red); border-top: 3px solid var(--red); }
+body.static-site .dropdown-notfall .dropdown-item:first-child { font-weight: 700; color: var(--red-dark); }
+body.static-site .dropdown-item[aria-current="page"] { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; }
+body.static-site .dropdown-menu a:focus-visible, body.static-site .dropdown-menu button:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+
+/* Handymenü schon ab Tablet-Breite: die Leiste würde sonst überlaufen */
+@media (max-width: 1120px) {
+  body.static-site .nav-links { display: none; }
+  body.static-site .hamburger { display: block; min-width: 44px; min-height: 44px; padding: 0.5rem 0.65rem; }
+  body.static-site .site-header .header-inner { height: 64px; }
+  body.static-site .mobile-nav { top: 64px; }
+}
+
+/* Handymenü: aufklappbare Gruppen */
+body.static-site .mobile-nav { padding: 0.75rem 1rem 2rem; overscroll-behavior: contain; }
+body.static-site .mobile-nav-link { min-height: 48px; padding: 0.6rem 0.25rem; text-decoration: none; box-sizing: border-box; }
+body.static-site .mobile-group, body.static-site .mobile-subgroup { border-bottom: 1px solid var(--rule-strong); }
+body.static-site .mobile-group-summary, body.static-site .mobile-subgroup-summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 52px; box-sizing: border-box;
+  padding: 0.6rem 0.25rem; cursor: pointer; list-style: none; font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--ink);
+}
+body.static-site .mobile-subgroup-summary { min-height: 48px; font-family: var(--font-sans); font-size: 1.02rem; font-weight: 700; }
+body.static-site .mobile-group-summary::-webkit-details-marker, body.static-site .mobile-subgroup-summary::-webkit-details-marker { display: none; }
+body.static-site .mobile-group-summary::after, body.static-site .mobile-subgroup-summary::after {
+  content: ""; flex: 0 0 auto; width: 0.6rem; height: 0.6rem; margin-right: 0.3rem;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.15s ease;
+}
+body.static-site details[open] > .mobile-group-summary::after, body.static-site details[open] > .mobile-subgroup-summary::after { transform: rotate(-135deg); }
+body.static-site .mobile-group-body { padding: 0 0 0.6rem 0.5rem; }
+body.static-site .mobile-subgroup { border-bottom: 1px solid var(--rule); }
+body.static-site .mobile-subgroup:last-child { border-bottom: 0; }
+body.static-site .mobile-group-body .mobile-nav-link { font-size: 1rem; }
+body.static-site .mobile-group-label {
+  margin: 0.9rem 0 0.1rem; padding: 0.2rem 0.25rem; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);
+}
+body.static-site .mobile-group-alarm { background: var(--red-tint); border-left: 4px solid var(--red); border-bottom-color: var(--red); margin: 0.4rem 0; padding-left: 0.6rem; }
+body.static-site .mobile-group-alarm > .mobile-group-summary { color: var(--red-dark); }
+body.static-site .mobile-group-alarm .mobile-nav-link:first-child { font-weight: 700; color: var(--red-dark); }
+body.static-site .mobile-nav [aria-current="page"] { font-weight: 700; color: var(--green-dark); }
+body.static-site .mobile-nav summary:focus-visible, body.static-site .mobile-nav-link:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+
+/* Startseite: ein Satz, Suche, fünf Einstiege im ersten Bildschirm */
+body.static-site #startseite .hero .container { display: block; }
+body.static-site #startseite .hero { padding: clamp(1.75rem, 4vw, 3rem) 0 clamp(1.75rem, 4vw, 2.5rem); }
+body.static-site #startseite .hero h1 { max-width: 22ch; font-size: clamp(2rem, 4.6vw, 3.4rem); margin: 0 0 0.6rem; }
+body.static-site #startseite .hero .hero-sentence { margin: 0 0 1.25rem; font-size: clamp(1.1rem, 2.2vw, 1.3rem); max-width: 40rem; }
+body.static-site .start-search { max-width: 40rem; margin: 0 0 1.5rem; }
+body.static-site .start-search-label { display: block; margin: 0 0 0.3rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+body.static-site .start-search-input { min-height: 48px; font-size: 1rem; box-sizing: border-box; border: 1.5px solid var(--ink); border-radius: 2px; background: var(--card); }
+body.static-site .start-search-results { margin: 0.4rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.2rem; background: var(--card); }
+body.static-site .start-search-results:empty { display: none; }
+body.static-site .start-search-results .site-search-result { padding: 0.65rem 0.75rem; }
+body.static-site #startseite .hero .door-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.75rem; margin: 0; }
+body.static-site #startseite .hero .door-card { display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-start; text-align: left; padding: 0.9rem 0.95rem; min-height: 44px; cursor: pointer; font-family: var(--font-sans); }
+body.static-site #startseite .hero .door-card h3 { font-size: 1.08rem; line-height: 1.25; margin: 0; }
+body.static-site #startseite .hero .door-card p { font-size: 0.9rem; line-height: 1.4; margin: 0; color: var(--ink-2); max-width: none; }
+body.static-site #startseite .hero .door-card .more { margin-top: auto; padding-top: 0.3rem; font-size: 0.88rem; font-weight: 700; color: var(--green-dark); }
+body.static-site #startseite .hero .door-card-alarm { border-color: var(--red); border-width: 2px; background: var(--red-tint); }
+body.static-site #startseite .hero .door-card-alarm .door-mark, body.static-site #startseite .hero .door-card-alarm .more { color: var(--red-dark); }
+@media (max-width: 1120px) {
+  body.static-site #startseite .hero .door-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  body.static-site #startseite .hero .door-grid { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  body.static-site #startseite .hero .door-card { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 0.7rem; padding: 0.7rem 0.8rem; }
+  body.static-site #startseite .hero .door-card .door-mark { grid-row: 1 / span 2; align-self: start; }
+  body.static-site #startseite .hero .door-card p, body.static-site #startseite .hero .door-card .more { display: none; }
+  body.static-site #startseite .hero .door-card h3 { font-size: 1.02rem; }
+  body.static-site #startseite .hero { padding-bottom: 1.5rem; }
+}
+body.static-site .start-evidence .hero-visual-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.25rem, 4vw, 3rem); align-items: start; position: relative; }
+body.static-site .start-evidence .hero-lead-image { margin: 0; }
+body.static-site .start-evidence .hero-evidence-grid { display: grid; gap: 1rem; align-content: start; }
+body.static-site .start-trust { margin-top: 1.25rem; }
+@media (max-width: 760px) {
+  body.static-site .start-evidence .hero-visual-card { grid-template-columns: minmax(0, 1fr); }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7197,6 +7292,36 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <nav aria-label="Hauptnavigation">
         <ul class="nav-links">
           <li class="dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="ich-will-menu">Ich will ein Tier</button>
+            <div class="dropdown-menu dropdown-menu-wide" id="ich-will-menu">
+              <div class="dropdown-columns">
+                <div class="dropdown-group">
+                  <a class="dropdown-item" data-page="selbsttest" href="../../selbsttest/index.html">Selbsttest: Bin ich bereit?</a>
+                  <a class="dropdown-item" data-page="mensch" href="../../mensch/index.html">Ist ein Tier das Richtige für mich?</a>
+                  <a class="dropdown-item" data-page="noch-nicht-bereit" href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a>
+                  <a class="dropdown-item" data-page="woher-kommt-mein-tier" href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a>
+                  <a class="dropdown-item" data-page="adoption" href="../../adoption/index.html">Adoption statt Kauf</a>
+                  <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../../zucht-und-vermehrung/index.html">Zucht und Vermehrung</a>
+                  <a class="dropdown-item" data-page="qualzucht" href="../../qualzucht/index.html">Qualzucht</a>
+                </div>
+                <div class="dropdown-group">
+                  <p class="dropdown-heading">Was kostet ein Tier wirklich?</p>
+                  <a class="dropdown-item" data-page="hunde-kosten" href="../../hunde/kosten/index.html">Was ein Hund kostet</a>
+                  <a class="dropdown-item" data-page="katzen-kosten" href="../../katzen/kosten/index.html">Was eine Katze kostet</a>
+                  <a class="dropdown-item" data-page="kleintiere-kaninchen-kosten" href="../../kleintiere/kaninchen-kosten/index.html">Was Kaninchen kosten</a>
+                  <a class="dropdown-item" data-page="kleintiere-meerschweinchen-kosten" href="../../kleintiere/meerschweinchen-kosten/index.html">Was Meerschweinchen kosten</a>
+                  <a class="dropdown-item" data-page="voegel-kosten" href="../../voegel/wellensittiche-kosten/index.html">Was Wellensittiche kosten</a>
+                  <a class="dropdown-item" data-page="pferde-kosten" href="../../pferde/kosten/index.html">Was ein Pferd kostet</a>
+                  <p class="dropdown-heading">Vor der Entscheidung</p>
+                  <a class="dropdown-item" data-page="hunde-entscheidung" href="../../hunde/entscheidung/index.html">Hund: Vor der Entscheidung</a>
+                  <a class="dropdown-item" data-page="katzen-entscheidung" href="../../katzen/entscheidung/index.html">Katze: Vor der Entscheidung</a>
+                  <a class="dropdown-item" data-page="voegel-entscheidung" href="../../voegel/entscheidung/index.html">Vögel: Vor der Entscheidung</a>
+                  <a class="dropdown-item" data-page="pferde-entscheidung" href="../../pferde/entscheidung/index.html">Pferd: Vor der Entscheidung</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
             <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="tierarten-menu" aria-current="page">Tierarten</button>
             <div class="dropdown-menu browse-menu" id="tierarten-menu">
               <div class="browse-tabs" aria-label="Tierarten">
@@ -7212,48 +7337,51 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
                   <div class="browse-panel-head"><div><strong class="browse-panel-title">Hundethemen</strong><p class="browse-panel-note">Zeit, Betreuung, Bewegung, Kosten, Gesundheit und Herkunft vor dem Einzug prüfen.</p></div></div>
                   <div class="browse-panel-grid">
                     <a class="dropdown-item dropdown-item-featured" data-page="hunde" href="../../hunde/index.html">Hunde-Übersicht</a>
-                    <a class="dropdown-item" data-page="hunde-soziale-beduerfnisse" href="../../hunde/soziale-beduerfnisse/index.html">Soziale Bedürfnisse</a>
-                    <a class="dropdown-item" data-page="hunde-garten-auslauf" href="../../hunde/garten-auslauf/index.html">Garten &amp; Auslauf</a>
-                    <a class="dropdown-item" data-page="hunde-spuren-erkennen" href="../../hunde/spuren-erkennen/index.html">Spuren unterwegs</a>
-                    <a class="dropdown-item" data-page="hunde-allein-zu-hause" href="../../hunde/allein-zu-hause/index.html">Alleinbleiben</a>
-                    <a class="dropdown-item" data-page="hunde-kosten" href="../../hunde/kosten/index.html">Kosten</a>
-                    <a class="dropdown-item" data-page="hunde-kastration" href="../../hunde/kastration/index.html">Kastration</a>
-                    <a class="dropdown-item" data-page="hunde-hofhaltung-und-zwinger" href="../../hunde/hofhaltung-und-zwinger/index.html">Hofhaltung &amp; Zwinger</a>
-                    <a class="dropdown-item" data-page="hunde-gesundheit" href="../../hunde/gesundheit/index.html">Gesundheit</a>
-                    <a class="dropdown-item" data-page="hund-im-buero" href="../../hunde/hund-im-buero/index.html">Hund im Büro</a>
-                    <a class="dropdown-item" data-page="hunde-stadtfest-rummel" href="../../hunde/stadtfest-rummel/index.html">Stadtfest &amp; Rummel</a>
-                    <a class="dropdown-item" data-page="hitzefalle-auto" href="../../hitzefalle-auto/index.html">Hitzefalle Auto</a>
                     <a class="dropdown-item" data-page="hunde-entscheidung" href="../../hunde/entscheidung/index.html">Vor der Entscheidung</a>
+                    <a class="dropdown-item" data-page="hunde-kosten" href="../../hunde/kosten/index.html">Kosten</a>
+                    <a class="dropdown-item" data-page="hunde-abgabealter" href="../../hunde/abgabealter/index.html">Abgabealter beim Welpen</a>
+                    <a class="dropdown-item" data-page="hunde-allein-zu-hause" href="../../hunde/allein-zu-hause/index.html">Alleinbleiben</a>
+                    <a class="dropdown-item" data-page="hunde-soziale-beduerfnisse" href="../../hunde/soziale-beduerfnisse/index.html">Soziale Bedürfnisse</a>
+                    <a class="dropdown-item" data-page="hunde-garten-auslauf" href="../../hunde/garten-auslauf/index.html">Garten und Auslauf</a>
+                    <a class="dropdown-item" data-page="hunde-hofhaltung-und-zwinger" href="../../hunde/hofhaltung-und-zwinger/index.html">Hofhaltung und Zwinger</a>
+                    <a class="dropdown-item" data-page="hunde-gesundheit" href="../../hunde/gesundheit/index.html">Gesundheit</a>
+                    <a class="dropdown-item" data-page="hunde-kastration" href="../../hunde/kastration/index.html">Kastration</a>
+                    <a class="dropdown-item" data-page="hund-im-buero" href="../../hunde/hund-im-buero/index.html">Hund im Büro</a>
+                    <a class="dropdown-item" data-page="hunde-stadtfest-rummel" href="../../hunde/stadtfest-rummel/index.html">Stadtfest und Rummel</a>
+                    <a class="dropdown-item" data-page="hunde-spuren-erkennen" href="../../hunde/spuren-erkennen/index.html">Spuren erkennen</a>
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="katzen" role="tabpanel">
                   <div class="browse-panel-head"><div><strong class="browse-panel-title">Katzenthemen</strong><p class="browse-panel-note">Leise Warnsignale, echte Kosten und verantwortlicher Freigang.</p></div></div>
                   <div class="browse-panel-grid">
                     <a class="dropdown-item dropdown-item-featured" data-page="katzen" href="../../katzen/index.html">Katzen-Übersicht</a>
-                    <a class="dropdown-item" data-page="katzen-sozialverhalten" href="../../katzen/sozialverhalten/index.html">Sozialverhalten</a>
-                    <a class="dropdown-item" data-page="katzen-wohnungshaltung" href="../../katzen/wohnungshaltung/index.html">Wohnungshaltung</a>
-                    <a class="dropdown-item" data-page="katzen-kastration" href="../../katzen/kastration/index.html">Kastration</a>
-                    <a class="dropdown-item active" data-page="katzen-stilles-leiden" href="../../katzen/stilles-leiden/index.html" aria-current="page">Stilles Leiden</a>
-                    <a class="dropdown-item" data-page="katzen-kosten" href="../../katzen/kosten/index.html">Kosten</a>
-                    <a class="dropdown-item" data-page="katzen-streunerkatzen" href="../../katzen/streunerkatzen/index.html">Streunerkatzen</a>
-                    <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../../katzen/wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
-                    <a class="dropdown-item" data-page="ernaehrung-taurin" href="../../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
                     <a class="dropdown-item" data-page="katzen-entscheidung" href="../../katzen/entscheidung/index.html">Vor der Entscheidung</a>
+                    <a class="dropdown-item" data-page="katzen-kosten" href="../../katzen/kosten/index.html">Kosten</a>
+                    <a class="dropdown-item" data-page="katzen-wohnungshaltung" href="../../katzen/wohnungshaltung/index.html">Wohnung oder Freigang</a>
+                    <a class="dropdown-item" data-page="katzen-sozialverhalten" href="../../katzen/sozialverhalten/index.html">Sozialverhalten</a>
+                    <a class="dropdown-item active" data-page="katzen-stilles-leiden" href="../../katzen/stilles-leiden/index.html" aria-current="page">Stilles Leiden</a>
+                    <a class="dropdown-item" data-page="katzen-kastration" href="../../katzen/kastration/index.html">Kastration</a>
+                    <a class="dropdown-item" data-page="katzen-streunerkatzen" href="../../katzen/streunerkatzen/index.html">Streunerkatzen</a>
+                    <a class="dropdown-item" data-page="katzen-kaetzchen-tierarzt" href="../../katzen/kaetzchen-tierarzt/index.html">Kätzchen: Tierarzt im ersten Jahr</a>
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="voegel" role="tabpanel">
                   <div class="browse-panel-head"><div><strong class="browse-panel-title">Vogelthemen</strong><p class="browse-panel-note">Schwarm, Licht, Flugraum und unsichtbare Gefahren in Innenräumen.</p></div></div>
                   <div class="browse-panel-grid">
                     <a class="dropdown-item dropdown-item-featured" data-page="voegel" href="../../voegel/index.html">Vögel-Übersicht</a>
+                    <a class="dropdown-item" data-page="voegel-entscheidung" href="../../voegel/entscheidung/index.html">Vor der Entscheidung</a>
+                    <a class="dropdown-item" data-page="voegel-kosten" href="../../voegel/wellensittiche-kosten/index.html">Wellensittiche: Kosten</a>
                     <a class="dropdown-item" data-page="voegel-schwarmhaltung" href="../../voegel/schwarmhaltung/index.html">Schwarmhaltung</a>
-                    <a class="dropdown-item" data-page="voegel-uv-licht" href="../../voegel/uv-licht/index.html">UV-Licht</a>
-                    <a class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" href="../../voegel/kuechenluft-teflon/index.html">Küchenluft &amp; Teflon</a>
                     <a class="dropdown-item" data-page="voegel-freiflug-ist-nicht-optional" href="../../voegel/freiflug/index.html">Freiflug</a>
                     <a class="dropdown-item" data-page="voegel-partnerersatz" href="../../voegel/partnerersatz/index.html">Partnerersatz</a>
+                    <a class="dropdown-item" data-page="voegel-uv-licht" href="../../voegel/uv-licht/index.html">UV-Licht</a>
+                    <a class="dropdown-item" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" href="../../voegel/kuechenluft-teflon/index.html">Küchenluft und Teflon</a>
+                    <a class="dropdown-item" data-page="voegel-ernaehrung" href="../../voegel/ernaehrung/index.html">Ernährung</a>
+                    <a class="dropdown-item" data-page="voegel-ruhe-und-schlaf" href="../../voegel/ruhe-schlaf/index.html">Ruhe und Schlaf</a>
+                    <a class="dropdown-item" data-page="voegel-alltag-kosten-betreuung" href="../../voegel/alltag-kosten-betreuung/index.html">Alltag, Kosten und Betreuung</a>
                     <a class="dropdown-item" data-page="voegel-krankheit-erkennen" href="../../voegel/krankheit-erkennen/index.html">Krankheit erkennen</a>
-                    <a class="dropdown-item" data-page="voegel-kosten" href="../../voegel/wellensittiche-kosten/index.html">Wellensittiche: Kosten</a>
-                    <a class="dropdown-item" data-page="voegel-qualzucht" href="../../voegel/qualzucht/index.html">Qualzucht</a>
-                    <a class="dropdown-item" data-page="voegel-entscheidung" href="../../voegel/entscheidung/index.html">Vor der Entscheidung</a>
+                    <a class="dropdown-item" data-page="voegel-zucht-und-eier" href="../../voegel/zucht-eier/index.html">Zucht und Eiablage</a>
+                    <a class="dropdown-item" data-page="voegel-qualzucht" href="../../voegel/qualzucht/index.html">Schauwellensittiche und Qualzucht</a>
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="kleintiere" role="tabpanel">
@@ -7266,19 +7394,19 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
                     <a class="dropdown-item" data-page="kleintiere-meerschweinchen-kosten" href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>
                     <a class="dropdown-item" data-page="kleintiere-hamster" href="../../kleintiere/hamster/index.html">Hamster</a>
                     <a class="dropdown-item" data-page="kleintiere-ratten" href="../../kleintiere/ratten/index.html">Ratten</a>
-                    <a class="dropdown-item" data-page="kleintiere-degus-und-chinchillas" href="../../kleintiere/degus-chinchillas/index.html">Degus &amp; Chinchillas</a>
+                    <a class="dropdown-item" data-page="kleintiere-degus-und-chinchillas" href="../../kleintiere/degus-chinchillas/index.html">Degus und Chinchillas</a>
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="pferde" role="tabpanel">
                   <div class="browse-panel-head"><div><strong class="browse-panel-title">Pferdethemen</strong><p class="browse-panel-note">Herde, Fläche, Stallform und Verantwortung über Jahrzehnte.</p></div></div>
                   <div class="browse-panel-grid">
                     <a class="dropdown-item dropdown-item-featured" data-page="pferde" href="../../pferde/index.html">Pferde-Übersicht</a>
+                    <a class="dropdown-item" data-page="pferde-entscheidung" href="../../pferde/entscheidung/index.html">Vor der Entscheidung</a>
+                    <a class="dropdown-item" data-page="pferde-kosten" href="../../pferde/kosten/index.html">Kosten</a>
                     <a class="dropdown-item" data-page="pferde-herde" href="../../pferde/herde/index.html">Herde</a>
                     <a class="dropdown-item" data-page="pferde-platzbedarf" href="../../pferde/platzbedarf/index.html">Platzbedarf</a>
                     <a class="dropdown-item" data-page="pferde-haltungsformen" href="../../pferde/haltungsformen/index.html">Haltungsformen</a>
-                    <a class="dropdown-item" data-page="pferde-kosten" href="../../pferde/kosten/index.html">Kosten</a>
                     <a class="dropdown-item" data-page="pferde-reitbeteiligung" href="../../pferde/reitbeteiligung/index.html">Reitbeteiligung</a>
-                    <a class="dropdown-item" data-page="pferde-entscheidung" href="../../pferde/entscheidung/index.html">Vor der Entscheidung</a>
                   </div>
                 </div>
                 <div class="browse-panel" data-browse-panel="exoten" role="tabpanel">
@@ -7288,32 +7416,42 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
                     <a class="dropdown-item" data-page="exoten-reptilien" href="../../exoten/reptilien/index.html">Reptilien</a>
                     <a class="dropdown-item" data-page="exoten-schildkroeten" href="../../exoten/schildkroeten/index.html">Schildkröten</a>
                     <a class="dropdown-item" data-page="exoten-fische" href="../../exoten/fische/index.html">Fische</a>
-                    <a class="dropdown-item" data-page="wildtierhaltung" href="../../wildtierhaltung/index.html">Private Wildtierhaltung</a>
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <li class="dropdown">
-            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="wissen-menu">Wissen</button>
-            <div class="dropdown-menu" id="wissen-menu">
-              <a class="dropdown-item" data-page="mensch" href="../../mensch/index.html">Mensch &amp; Tier</a>
-              <a class="dropdown-item" data-page="kastration" href="../../kastration/index.html">Kastration</a>
-              <a class="dropdown-item" data-page="qualzucht" href="../../qualzucht/index.html">Qualzucht</a>
-              <a class="dropdown-item" data-page="adoption" href="../../adoption/index.html">Adoption</a>
-              <a class="dropdown-item" data-page="woher-kommt-mein-tier" href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a>
-              <a class="dropdown-item" data-page="tiere-und-urlaub" href="../../tiere-und-urlaub/index.html">Tiere &amp; Urlaub</a>
-              <a class="dropdown-item" data-page="notfallplan-haustier" href="../../notfallplan-haustier/index.html">Notfallplan fürs Tier</a>
-              <a class="dropdown-item" data-page="zucht-und-vermehrung" href="../../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
-              <a class="dropdown-item" data-page="petitionen" href="../../petitionen/index.html">Petitionen</a>
-              <a class="dropdown-item" data-page="wissen" href="../../wissen/index.html">Mythen &amp; Homöopathie</a>
-              <a class="dropdown-item" data-page="glossar" href="../../glossar/index.html">Glossar</a>
+          <li class="dropdown dropdown-notfall">
+            <button type="button" class="nav-link nav-link-accent dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="notfall-menu">Notfall</button>
+            <div class="dropdown-menu" id="notfall-menu">
+              <a class="dropdown-item" data-page="notfall" href="../../notfall/index.html">Notfall: Was tun?</a>
+              <a class="dropdown-item" data-page="tierarzt-notdienst" href="../../notfall/tierarzt-notdienst/index.html">Tierärztlicher Notdienst</a>
+              <a class="dropdown-item" data-page="notfallplan-haustier" href="../../notfallplan-haustier/index.html">Notfallplan fürs Haustier</a>
+              <a class="dropdown-item" data-page="hitzefalle-auto" href="../../hitzefalle-auto/index.html">Hund im Auto bei Hitze</a>
+              <a class="dropdown-item" data-page="wildkatzenbaby-gefunden" href="../../katzen/wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
             </div>
           </li>
-          <li><a class="nav-link" data-page="selbsttest" href="../../selbsttest/index.html">Selbsttest</a></li>
-          <li><a class="nav-link nav-link-accent" data-page="notfall" href="../../notfall/index.html">Notfall</a></li>
+          <li class="dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nachschlagen-menu">Nachschlagen</button>
+            <div class="dropdown-menu" id="nachschlagen-menu">
+              <a class="dropdown-item" data-page="wissen" href="../../wissen/index.html">Wissen und Mythen</a>
+              <a class="dropdown-item" data-page="glossar" href="../../glossar/index.html">Glossar</a>
+              <a class="dropdown-item" data-page="realhaltung" href="../../realhaltung/index.html">Realhaltung und vertretbare Haltung</a>
+              <a class="dropdown-item" data-page="kastration" href="../../kastration/index.html">Kastration</a>
+              <a class="dropdown-item" data-page="tiere-und-urlaub" href="../../tiere-und-urlaub/index.html">Tiere und Urlaub</a>
+              <a class="dropdown-item" data-page="ernaehrung-taurin" href="../../ernaehrung-taurin/index.html">Vegane Tierernährung</a>
+              <a class="dropdown-item" data-page="wildtierhaltung" href="../../wildtierhaltung/index.html">Wildtierhaltung</a>
+            </div>
+          </li>
           <li><button type="button" class="nav-link nav-link-search" aria-controls="site-search" aria-expanded="false" onclick="toggleSiteSearch()">Suchen</button></li>
-          <li><a class="nav-link nav-meta-link" data-page="mitmachen" href="../../mitmachen/index.html">Mitmachen</a></li>
+          <li class="dropdown dropdown-end">
+            <button type="button" class="nav-link nav-meta-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mitmachen-menu">Mitmachen</button>
+            <div class="dropdown-menu" id="mitmachen-menu">
+              <a class="dropdown-item" data-page="mitmachen" href="../../mitmachen/index.html">Hinweise geben und mitmachen</a>
+              <a class="dropdown-item" data-page="petitionen" href="../../petitionen/index.html">Petitionen</a>
+              <a class="dropdown-item" data-page="kontakt" href="../../kontakt/index.html">Kontakt</a>
+            </div>
+          </li>
         </ul>
       </nav>
       <button type="button" class="hamburger" onclick="toggleMobileNav()" aria-label="Menü öffnen" aria-controls="mobile-nav" aria-expanded="false">☰</button>
@@ -7332,108 +7470,155 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert="">
     <div class="mobile-nav-view is-active" data-mobile-nav-view="root">
       <div class="mobile-nav-search">
-        <label class="sr-only" for="mobile-site-search-input">Suche</label>
+        <label class="site-search-label" for="mobile-site-search-input">Suchen</label>
         <input class="site-search-input" id="mobile-site-search-input" type="search" placeholder="Suchen: Tier, Thema, Warnsignal" autocomplete="off">
-        <ul class="mobile-nav-search-results" id="mobile-site-search-results"><li class="site-search-empty">Direkt suchen, statt durch Gruppen zu tippen.</li></ul>
+        <ul class="mobile-nav-search-results" id="mobile-site-search-results"><li class="site-search-empty">Direkt suchen, statt durch das Menü zu tippen.</li></ul>
       </div>
       <a class="mobile-nav-link" data-page="startseite" href="../../">Start</a>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Themen" onclick="openMobileNavPanel('hunde')">Hunde</button>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Themen" onclick="openMobileNavPanel('katzen')">Katzen</button>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Themen" onclick="openMobileNavPanel('voegel')">Vögel</button>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Themen" onclick="openMobileNavPanel('kleintiere')">Kleintiere</button>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Themen" onclick="openMobileNavPanel('pferde')">Pferde</button>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Themen" onclick="openMobileNavPanel('exoten')">Exoten</button>
-      <button type="button" class="mobile-nav-link mobile-nav-branch" data-branch-label="Mehr" onclick="openMobileNavPanel('wissen')">Wissen</button>
-      <a class="mobile-nav-link" data-page="selbsttest" href="../../selbsttest/index.html">Selbsttest</a>
-      <a class="mobile-nav-link mobile-nav-primary" data-page="notfall" href="../../notfall/index.html">Notfall</a>
-      <a class="mobile-nav-link" data-page="mitmachen" href="../../mitmachen/index.html">Mitmachen</a>
-      <a class="mobile-nav-link" data-page="kontakt" href="../../kontakt/index.html">Kontakt</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="hunde">
-      <div class="mobile-nav-title"><strong>Hunde</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="hunde" href="../../hunde/index.html">Übersicht</a>
-      <a class="mobile-nav-link" data-page="hunde-soziale-beduerfnisse" href="../../hunde/soziale-beduerfnisse/index.html">Soziale Bedürfnisse</a>
-      <a class="mobile-nav-link" data-page="hunde-garten-auslauf" href="../../hunde/garten-auslauf/index.html">Garten &amp; Auslauf</a>
-      <a class="mobile-nav-link" data-page="hunde-spuren-erkennen" href="../../hunde/spuren-erkennen/index.html">Spuren unterwegs</a>
-      <a class="mobile-nav-link" data-page="hunde-allein-zu-hause" href="../../hunde/allein-zu-hause/index.html">Alleinbleiben</a>
-      <a class="mobile-nav-link" data-page="hunde-kosten" href="../../hunde/kosten/index.html">Kosten</a>
-      <a class="mobile-nav-link" data-page="hunde-kastration" href="../../hunde/kastration/index.html">Kastration</a>
-      <a class="mobile-nav-link" data-page="hunde-hofhaltung-und-zwinger" href="../../hunde/hofhaltung-und-zwinger/index.html">Hofhaltung &amp; Zwinger</a>
-      <a class="mobile-nav-link" data-page="hunde-gesundheit" href="../../hunde/gesundheit/index.html">Gesundheit</a>
-      <a class="mobile-nav-link" data-page="hund-im-buero" href="../../hunde/hund-im-buero/index.html">Hund im Büro</a>
-      <a class="mobile-nav-link" data-page="hunde-stadtfest-rummel" href="../../hunde/stadtfest-rummel/index.html">Stadtfest &amp; Rummel</a>
-      <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../../hitzefalle-auto/index.html">Hitzefalle Auto</a>
-      <a class="mobile-nav-link" data-page="hunde-entscheidung" href="../../hunde/entscheidung/index.html">Vor der Entscheidung</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="katzen">
-      <div class="mobile-nav-title"><strong>Katzen</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="katzen" href="../../katzen/index.html">Übersicht</a>
-      <a class="mobile-nav-link" data-page="katzen-sozialverhalten" href="../../katzen/sozialverhalten/index.html">Sozialverhalten</a>
-      <a class="mobile-nav-link" data-page="katzen-wohnungshaltung" href="../../katzen/wohnungshaltung/index.html">Wohnungshaltung</a>
-      <a class="mobile-nav-link" data-page="katzen-kastration" href="../../katzen/kastration/index.html">Kastration</a>
-      <a class="mobile-nav-link active" data-page="katzen-stilles-leiden" href="../../katzen/stilles-leiden/index.html" aria-current="page">Stilles Leiden</a>
-      <a class="mobile-nav-link" data-page="katzen-kosten" href="../../katzen/kosten/index.html">Kosten</a>
-      <a class="mobile-nav-link" data-page="katzen-streunerkatzen" href="../../katzen/streunerkatzen/index.html">Streunerkatzen</a>
-      <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../../katzen/wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
-      <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../../ernaehrung-taurin/index.html">Ernährung &amp; Taurin</a>
-      <a class="mobile-nav-link" data-page="katzen-entscheidung" href="../../katzen/entscheidung/index.html">Vor der Entscheidung</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="voegel">
-      <div class="mobile-nav-title"><strong>Vögel</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="voegel" href="../../voegel/index.html">Übersicht</a>
-      <a class="mobile-nav-link" data-page="voegel-schwarmhaltung" href="../../voegel/schwarmhaltung/index.html">Schwarmhaltung</a>
-      <a class="mobile-nav-link" data-page="voegel-uv-licht" href="../../voegel/uv-licht/index.html">UV-Licht</a>
-      <a class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" href="../../voegel/kuechenluft-teflon/index.html">Küchenluft &amp; Teflon</a>
-      <a class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" href="../../voegel/freiflug/index.html">Freiflug</a>
-      <a class="mobile-nav-link" data-page="voegel-partnerersatz" href="../../voegel/partnerersatz/index.html">Partnerersatz</a>
-      <a class="mobile-nav-link" data-page="voegel-krankheit-erkennen" href="../../voegel/krankheit-erkennen/index.html">Krankheit erkennen</a>
-      <a class="mobile-nav-link" data-page="voegel-kosten" href="../../voegel/wellensittiche-kosten/index.html">Wellensittiche: Kosten</a>
-      <a class="mobile-nav-link" data-page="voegel-qualzucht" href="../../voegel/qualzucht/index.html">Qualzucht</a>
-      <a class="mobile-nav-link" data-page="voegel-entscheidung" href="../../voegel/entscheidung/index.html">Vor der Entscheidung</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="kleintiere">
-      <div class="mobile-nav-title"><strong>Kleintiere</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="kleintiere" href="../../kleintiere/index.html">Übersicht</a>
-      <a class="mobile-nav-link" data-page="kleintiere-kaninchen" href="../../kleintiere/kaninchen/index.html">Kaninchen</a>
-      <a class="mobile-nav-link" data-page="kleintiere-kaninchen-kosten" href="../../kleintiere/kaninchen-kosten/index.html">Kaninchen: Kosten</a>
-      <a class="mobile-nav-link" data-page="kleintiere-meerschweinchen" href="../../kleintiere/meerschweinchen/index.html">Meerschweinchen</a>
-      <a class="mobile-nav-link" data-page="kleintiere-meerschweinchen-kosten" href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>
-      <a class="mobile-nav-link" data-page="kleintiere-hamster" href="../../kleintiere/hamster/index.html">Hamster</a>
-      <a class="mobile-nav-link" data-page="kleintiere-ratten" href="../../kleintiere/ratten/index.html">Ratten</a>
-      <a class="mobile-nav-link" data-page="kleintiere-degus-und-chinchillas" href="../../kleintiere/degus-chinchillas/index.html">Degus &amp; Chinchillas</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="pferde">
-      <div class="mobile-nav-title"><strong>Pferde</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="pferde" href="../../pferde/index.html">Übersicht</a>
-      <a class="mobile-nav-link" data-page="pferde-herde" href="../../pferde/herde/index.html">Herde</a>
-      <a class="mobile-nav-link" data-page="pferde-platzbedarf" href="../../pferde/platzbedarf/index.html">Platzbedarf</a>
-      <a class="mobile-nav-link" data-page="pferde-haltungsformen" href="../../pferde/haltungsformen/index.html">Haltungsformen</a>
-      <a class="mobile-nav-link" data-page="pferde-kosten" href="../../pferde/kosten/index.html">Kosten</a>
-      <a class="mobile-nav-link" data-page="pferde-reitbeteiligung" href="../../pferde/reitbeteiligung/index.html">Reitbeteiligung</a>
-      <a class="mobile-nav-link" data-page="pferde-entscheidung" href="../../pferde/entscheidung/index.html">Vor der Entscheidung</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="exoten">
-      <div class="mobile-nav-title"><strong>Exoten</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="exoten" href="../../exoten/index.html">Übersicht</a>
-      <a class="mobile-nav-link" data-page="exoten-reptilien" href="../../exoten/reptilien/index.html">Reptilien</a>
-      <a class="mobile-nav-link" data-page="exoten-schildkroeten" href="../../exoten/schildkroeten/index.html">Schildkröten</a>
-      <a class="mobile-nav-link" data-page="exoten-fische" href="../../exoten/fische/index.html">Fische</a>
-      <a class="mobile-nav-link" data-page="wildtierhaltung" href="../../wildtierhaltung/index.html">Private Wildtierhaltung</a>
-    </div>
-    <div class="mobile-nav-view" data-mobile-nav-view="wissen">
-      <div class="mobile-nav-title"><strong>Wissen</strong><button type="button" class="mobile-nav-back" onclick="openMobileNavPanel('root')">Zurück</button></div>
-      <a class="mobile-nav-link" data-page="mensch" href="../../mensch/index.html">Mensch &amp; Tier</a>
-      <a class="mobile-nav-link" data-page="kastration" href="../../kastration/index.html">Kastration</a>
-      <a class="mobile-nav-link" data-page="qualzucht" href="../../qualzucht/index.html">Qualzucht</a>
-      <a class="mobile-nav-link" data-page="adoption" href="../../adoption/index.html">Adoption</a>
-      <a class="mobile-nav-link" data-page="woher-kommt-mein-tier" href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a>
-      <a class="mobile-nav-link" data-page="tiere-und-urlaub" href="../../tiere-und-urlaub/index.html">Tiere &amp; Urlaub</a>
-      <a class="mobile-nav-link" data-page="notfallplan-haustier" href="../../notfallplan-haustier/index.html">Notfallplan fürs Tier</a>
-      <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../../zucht-und-vermehrung/index.html">Zucht &amp; Vermehrung</a>
-      <a class="mobile-nav-link" data-page="petitionen" href="../../petitionen/index.html">Petitionen</a>
-      <a class="mobile-nav-link" data-page="realhaltung" href="../../realhaltung/index.html">Realhaltung</a>
-      <a class="mobile-nav-link" data-page="wissen" href="../../wissen/index.html">Mythen &amp; Homöopathie</a>
-      <a class="mobile-nav-link" data-page="glossar" href="../../glossar/index.html">Glossar</a>
+      <details class="mobile-group" data-mobile-group="ich-will">
+        <summary class="mobile-group-summary">Ich will ein Tier</summary>
+        <div class="mobile-group-body">
+          <a class="mobile-nav-link" data-page="selbsttest" href="../../selbsttest/index.html">Selbsttest: Bin ich bereit?</a>
+          <a class="mobile-nav-link" data-page="mensch" href="../../mensch/index.html">Ist ein Tier das Richtige für mich?</a>
+          <a class="mobile-nav-link" data-page="noch-nicht-bereit" href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a>
+          <a class="mobile-nav-link" data-page="woher-kommt-mein-tier" href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a>
+          <a class="mobile-nav-link" data-page="adoption" href="../../adoption/index.html">Adoption statt Kauf</a>
+          <a class="mobile-nav-link" data-page="zucht-und-vermehrung" href="../../zucht-und-vermehrung/index.html">Zucht und Vermehrung</a>
+          <a class="mobile-nav-link" data-page="qualzucht" href="../../qualzucht/index.html">Qualzucht</a>
+          <p class="mobile-group-label">Was kostet ein Tier wirklich?</p>
+          <a class="mobile-nav-link" data-page="hunde-kosten" href="../../hunde/kosten/index.html">Was ein Hund kostet</a>
+          <a class="mobile-nav-link" data-page="katzen-kosten" href="../../katzen/kosten/index.html">Was eine Katze kostet</a>
+          <a class="mobile-nav-link" data-page="kleintiere-kaninchen-kosten" href="../../kleintiere/kaninchen-kosten/index.html">Was Kaninchen kosten</a>
+          <a class="mobile-nav-link" data-page="kleintiere-meerschweinchen-kosten" href="../../kleintiere/meerschweinchen-kosten/index.html">Was Meerschweinchen kosten</a>
+          <a class="mobile-nav-link" data-page="voegel-kosten" href="../../voegel/wellensittiche-kosten/index.html">Was Wellensittiche kosten</a>
+          <a class="mobile-nav-link" data-page="pferde-kosten" href="../../pferde/kosten/index.html">Was ein Pferd kostet</a>
+          <p class="mobile-group-label">Vor der Entscheidung</p>
+          <a class="mobile-nav-link" data-page="hunde-entscheidung" href="../../hunde/entscheidung/index.html">Hund: Vor der Entscheidung</a>
+          <a class="mobile-nav-link" data-page="katzen-entscheidung" href="../../katzen/entscheidung/index.html">Katze: Vor der Entscheidung</a>
+          <a class="mobile-nav-link" data-page="voegel-entscheidung" href="../../voegel/entscheidung/index.html">Vögel: Vor der Entscheidung</a>
+          <a class="mobile-nav-link" data-page="pferde-entscheidung" href="../../pferde/entscheidung/index.html">Pferd: Vor der Entscheidung</a>
+        </div>
+      </details>
+      <details class="mobile-group" data-mobile-group="tierarten">
+        <summary class="mobile-group-summary">Tierarten</summary>
+        <div class="mobile-group-body">
+          <details class="mobile-subgroup" data-mobile-group="hunde">
+            <summary class="mobile-subgroup-summary">Hunde</summary>
+            <div class="mobile-group-body">
+              <a class="mobile-nav-link" data-page="hunde" href="../../hunde/index.html">Übersicht Hunde</a>
+              <a class="mobile-nav-link" data-page="hunde-entscheidung" href="../../hunde/entscheidung/index.html">Vor der Entscheidung</a>
+              <a class="mobile-nav-link" data-page="hunde-kosten" href="../../hunde/kosten/index.html">Kosten</a>
+              <a class="mobile-nav-link" data-page="hunde-abgabealter" href="../../hunde/abgabealter/index.html">Abgabealter beim Welpen</a>
+              <a class="mobile-nav-link" data-page="hunde-allein-zu-hause" href="../../hunde/allein-zu-hause/index.html">Alleinbleiben</a>
+              <a class="mobile-nav-link" data-page="hunde-soziale-beduerfnisse" href="../../hunde/soziale-beduerfnisse/index.html">Soziale Bedürfnisse</a>
+              <a class="mobile-nav-link" data-page="hunde-garten-auslauf" href="../../hunde/garten-auslauf/index.html">Garten und Auslauf</a>
+              <a class="mobile-nav-link" data-page="hunde-hofhaltung-und-zwinger" href="../../hunde/hofhaltung-und-zwinger/index.html">Hofhaltung und Zwinger</a>
+              <a class="mobile-nav-link" data-page="hunde-gesundheit" href="../../hunde/gesundheit/index.html">Gesundheit</a>
+              <a class="mobile-nav-link" data-page="hunde-kastration" href="../../hunde/kastration/index.html">Kastration</a>
+              <a class="mobile-nav-link" data-page="hund-im-buero" href="../../hunde/hund-im-buero/index.html">Hund im Büro</a>
+              <a class="mobile-nav-link" data-page="hunde-stadtfest-rummel" href="../../hunde/stadtfest-rummel/index.html">Stadtfest und Rummel</a>
+              <a class="mobile-nav-link" data-page="hunde-spuren-erkennen" href="../../hunde/spuren-erkennen/index.html">Spuren erkennen</a>
+            </div>
+          </details>
+          <details class="mobile-subgroup" data-mobile-group="katzen">
+            <summary class="mobile-subgroup-summary">Katzen</summary>
+            <div class="mobile-group-body">
+              <a class="mobile-nav-link" data-page="katzen" href="../../katzen/index.html">Übersicht Katzen</a>
+              <a class="mobile-nav-link" data-page="katzen-entscheidung" href="../../katzen/entscheidung/index.html">Vor der Entscheidung</a>
+              <a class="mobile-nav-link" data-page="katzen-kosten" href="../../katzen/kosten/index.html">Kosten</a>
+              <a class="mobile-nav-link" data-page="katzen-wohnungshaltung" href="../../katzen/wohnungshaltung/index.html">Wohnung oder Freigang</a>
+              <a class="mobile-nav-link" data-page="katzen-sozialverhalten" href="../../katzen/sozialverhalten/index.html">Sozialverhalten</a>
+              <a class="mobile-nav-link active" data-page="katzen-stilles-leiden" href="../../katzen/stilles-leiden/index.html" aria-current="page">Stilles Leiden</a>
+              <a class="mobile-nav-link" data-page="katzen-kastration" href="../../katzen/kastration/index.html">Kastration</a>
+              <a class="mobile-nav-link" data-page="katzen-streunerkatzen" href="../../katzen/streunerkatzen/index.html">Streunerkatzen</a>
+              <a class="mobile-nav-link" data-page="katzen-kaetzchen-tierarzt" href="../../katzen/kaetzchen-tierarzt/index.html">Kätzchen: Tierarzt im ersten Jahr</a>
+            </div>
+          </details>
+          <details class="mobile-subgroup" data-mobile-group="voegel">
+            <summary class="mobile-subgroup-summary">Vögel</summary>
+            <div class="mobile-group-body">
+              <a class="mobile-nav-link" data-page="voegel" href="../../voegel/index.html">Übersicht Vögel</a>
+              <a class="mobile-nav-link" data-page="voegel-entscheidung" href="../../voegel/entscheidung/index.html">Vor der Entscheidung</a>
+              <a class="mobile-nav-link" data-page="voegel-kosten" href="../../voegel/wellensittiche-kosten/index.html">Wellensittiche: Kosten</a>
+              <a class="mobile-nav-link" data-page="voegel-schwarmhaltung" href="../../voegel/schwarmhaltung/index.html">Schwarmhaltung</a>
+              <a class="mobile-nav-link" data-page="voegel-freiflug-ist-nicht-optional" href="../../voegel/freiflug/index.html">Freiflug</a>
+              <a class="mobile-nav-link" data-page="voegel-partnerersatz" href="../../voegel/partnerersatz/index.html">Partnerersatz</a>
+              <a class="mobile-nav-link" data-page="voegel-uv-licht" href="../../voegel/uv-licht/index.html">UV-Licht</a>
+              <a class="mobile-nav-link" data-page="voegel-kuechenluft-und-daempfe-sind-lebensgefahr" href="../../voegel/kuechenluft-teflon/index.html">Küchenluft und Teflon</a>
+              <a class="mobile-nav-link" data-page="voegel-ernaehrung" href="../../voegel/ernaehrung/index.html">Ernährung</a>
+              <a class="mobile-nav-link" data-page="voegel-ruhe-und-schlaf" href="../../voegel/ruhe-schlaf/index.html">Ruhe und Schlaf</a>
+              <a class="mobile-nav-link" data-page="voegel-alltag-kosten-betreuung" href="../../voegel/alltag-kosten-betreuung/index.html">Alltag, Kosten und Betreuung</a>
+              <a class="mobile-nav-link" data-page="voegel-krankheit-erkennen" href="../../voegel/krankheit-erkennen/index.html">Krankheit erkennen</a>
+              <a class="mobile-nav-link" data-page="voegel-zucht-und-eier" href="../../voegel/zucht-eier/index.html">Zucht und Eiablage</a>
+              <a class="mobile-nav-link" data-page="voegel-qualzucht" href="../../voegel/qualzucht/index.html">Schauwellensittiche und Qualzucht</a>
+            </div>
+          </details>
+          <details class="mobile-subgroup" data-mobile-group="kleintiere">
+            <summary class="mobile-subgroup-summary">Kleintiere</summary>
+            <div class="mobile-group-body">
+              <a class="mobile-nav-link" data-page="kleintiere" href="../../kleintiere/index.html">Übersicht Kleintiere</a>
+              <a class="mobile-nav-link" data-page="kleintiere-kaninchen" href="../../kleintiere/kaninchen/index.html">Kaninchen</a>
+              <a class="mobile-nav-link" data-page="kleintiere-kaninchen-kosten" href="../../kleintiere/kaninchen-kosten/index.html">Kaninchen: Kosten</a>
+              <a class="mobile-nav-link" data-page="kleintiere-meerschweinchen" href="../../kleintiere/meerschweinchen/index.html">Meerschweinchen</a>
+              <a class="mobile-nav-link" data-page="kleintiere-meerschweinchen-kosten" href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>
+              <a class="mobile-nav-link" data-page="kleintiere-hamster" href="../../kleintiere/hamster/index.html">Hamster</a>
+              <a class="mobile-nav-link" data-page="kleintiere-ratten" href="../../kleintiere/ratten/index.html">Ratten</a>
+              <a class="mobile-nav-link" data-page="kleintiere-degus-und-chinchillas" href="../../kleintiere/degus-chinchillas/index.html">Degus und Chinchillas</a>
+            </div>
+          </details>
+          <details class="mobile-subgroup" data-mobile-group="pferde">
+            <summary class="mobile-subgroup-summary">Pferde</summary>
+            <div class="mobile-group-body">
+              <a class="mobile-nav-link" data-page="pferde" href="../../pferde/index.html">Übersicht Pferde</a>
+              <a class="mobile-nav-link" data-page="pferde-entscheidung" href="../../pferde/entscheidung/index.html">Vor der Entscheidung</a>
+              <a class="mobile-nav-link" data-page="pferde-kosten" href="../../pferde/kosten/index.html">Kosten</a>
+              <a class="mobile-nav-link" data-page="pferde-herde" href="../../pferde/herde/index.html">Herde</a>
+              <a class="mobile-nav-link" data-page="pferde-platzbedarf" href="../../pferde/platzbedarf/index.html">Platzbedarf</a>
+              <a class="mobile-nav-link" data-page="pferde-haltungsformen" href="../../pferde/haltungsformen/index.html">Haltungsformen</a>
+              <a class="mobile-nav-link" data-page="pferde-reitbeteiligung" href="../../pferde/reitbeteiligung/index.html">Reitbeteiligung</a>
+            </div>
+          </details>
+          <details class="mobile-subgroup" data-mobile-group="exoten">
+            <summary class="mobile-subgroup-summary">Exoten</summary>
+            <div class="mobile-group-body">
+              <a class="mobile-nav-link" data-page="exoten" href="../../exoten/index.html">Übersicht Exoten</a>
+              <a class="mobile-nav-link" data-page="exoten-reptilien" href="../../exoten/reptilien/index.html">Reptilien</a>
+              <a class="mobile-nav-link" data-page="exoten-schildkroeten" href="../../exoten/schildkroeten/index.html">Schildkröten</a>
+              <a class="mobile-nav-link" data-page="exoten-fische" href="../../exoten/fische/index.html">Fische</a>
+            </div>
+          </details>
+        </div>
+      </details>
+      <details class="mobile-group mobile-group-alarm" data-mobile-group="notfall" open="">
+        <summary class="mobile-group-summary">Notfall</summary>
+        <div class="mobile-group-body">
+          <a class="mobile-nav-link" data-page="notfall" href="../../notfall/index.html">Notfall: Was tun?</a>
+          <a class="mobile-nav-link" data-page="tierarzt-notdienst" href="../../notfall/tierarzt-notdienst/index.html">Tierärztlicher Notdienst</a>
+          <a class="mobile-nav-link" data-page="notfallplan-haustier" href="../../notfallplan-haustier/index.html">Notfallplan fürs Haustier</a>
+          <a class="mobile-nav-link" data-page="hitzefalle-auto" href="../../hitzefalle-auto/index.html">Hund im Auto bei Hitze</a>
+          <a class="mobile-nav-link" data-page="wildkatzenbaby-gefunden" href="../../katzen/wildkatzenbaby-gefunden/index.html">Wildkatzenbaby gefunden?</a>
+        </div>
+      </details>
+      <details class="mobile-group" data-mobile-group="nachschlagen">
+        <summary class="mobile-group-summary">Nachschlagen</summary>
+        <div class="mobile-group-body">
+          <a class="mobile-nav-link" data-page="wissen" href="../../wissen/index.html">Wissen und Mythen</a>
+          <a class="mobile-nav-link" data-page="glossar" href="../../glossar/index.html">Glossar</a>
+          <a class="mobile-nav-link" data-page="realhaltung" href="../../realhaltung/index.html">Realhaltung und vertretbare Haltung</a>
+          <a class="mobile-nav-link" data-page="kastration" href="../../kastration/index.html">Kastration</a>
+          <a class="mobile-nav-link" data-page="tiere-und-urlaub" href="../../tiere-und-urlaub/index.html">Tiere und Urlaub</a>
+          <a class="mobile-nav-link" data-page="ernaehrung-taurin" href="../../ernaehrung-taurin/index.html">Vegane Tierernährung</a>
+          <a class="mobile-nav-link" data-page="wildtierhaltung" href="../../wildtierhaltung/index.html">Wildtierhaltung</a>
+        </div>
+      </details>
+      <details class="mobile-group" data-mobile-group="mitmachen">
+        <summary class="mobile-group-summary">Mitmachen</summary>
+        <div class="mobile-group-body">
+          <a class="mobile-nav-link" data-page="mitmachen" href="../../mitmachen/index.html">Hinweise geben und mitmachen</a>
+          <a class="mobile-nav-link" data-page="petitionen" href="../../petitionen/index.html">Petitionen</a>
+          <a class="mobile-nav-link" data-page="kontakt" href="../../kontakt/index.html">Kontakt</a>
+        </div>
+      </details>
     </div>
   </div>
 
