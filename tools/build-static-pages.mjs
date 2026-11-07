@@ -1058,10 +1058,10 @@ const evidenceByPage = {
   pferde: {
     facts: [
       'Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.',
-      'Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.',
-      'Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.',
+      'Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.',
+      'Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.',
       'Hauspferde stammen von Pferden der westeurasischen Steppen ab; Przewalski-Pferde sind die einzigen noch lebenden Wildpferde, Mustangs und Brumbies sind verwilderte Nachkommen entlaufener Hauspferde.',
-      'Herden ziehen in der Steppe bis zu 16 Stunden am Tag und legen etwa 20 Kilometer zurück; der Magen fasst nur etwa 8 bis 10 Liter, das Futter wandert schnell hindurch.',
+      'Herden ziehen in der Steppe bis zu 16 Stunden am Tag und legen etwa 20 Kilometer zurück; der Magen fasst nur etwa 8 bis 10 Liter, das Futter wandert schnell hindurch.',
     ],
     sources: [
       ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],
@@ -1118,15 +1118,15 @@ const evidenceByPage = {
   'exoten-reptilien': {
     facts: [
       'Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.',
-      'Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.',
-      'UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.',
-      'Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200 Euro ohne Tierarzt, das sind rund 0,78 bis 1,15 Euro pro Tag und 24 bis 35 Euro pro Monat.',
+      'Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.',
+      'UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.',
+      'Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200 Euro ohne Tierarzt, das sind rund 0,78 bis 1,15 Euro pro Tag und 24 bis 35 Euro pro Monat.',
       'Bartagamen sind in der Natur Einzelgänger und tagaktiv; sie leben in trockenen Gebieten im Osten und in der Mitte Australiens und sonnen sich auf erhöhten Plätzen.',
       'UV-B-Licht lässt die Haut Vitamin D3 bilden, das der Körper für die Kalziumaufnahme braucht; Reptilien können Salmonellen ausscheiden, auch wenn sie gesund wirken.',
     ],
     sources: [
       ['Terraristikladen: Beispielpreise für Beleuchtung, Thermostat, Bodengrund und Futter (November 2026)', 'https://www.terraristikladen.de/'],
-      ['holzterrarium.de: OSB-Terrarium 150 × 80 × 80 cm (November 2026)', 'https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/'],
+      ['holzterrarium.de: OSB-Terrarium 150 × 80 × 80 cm (November 2026)', 'https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/'],
       ['BDEW: Strompreisanalyse (Haushaltsstrompreis, Oktober 2026)', 'https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/'],
       ['Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf'],
       ['BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2'],
@@ -1144,11 +1144,11 @@ const evidenceByPage = {
   },
   'exoten-schildkroeten': {
     facts: [
-      'Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.',
-      'Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.',
-      'Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.',
-      'Grobe Schätzung nach go4vet für eine einzelne Landschildkröte: 900 bis 1.850 Euro einmalig und etwa 53 bis 73 Euro im Monat einschließlich Tierarzt-Vorsorge und Notfall-Rücklage, das sind rund 1,78 bis 2,47 Euro pro Tag und 54 bis 75 Euro pro Monat über 80 Jahre bei gleichbleibenden Preisen.',
-      'In der Natur nutzt ein erwachsenes Tier meist ein bis zwei Hektar und legt am Tag im Mittel 80 bis 85 Meter zurück; die Winterruhe dauert je nach Gebiet von Ende Oktober oder November bis Februar oder März.',
+      'Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.',
+      'Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.',
+      'Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.',
+      'Grobe Schätzung nach go4vet für eine einzelne Landschildkröte: 900 bis 1.850 Euro einmalig und etwa 53 bis 73 Euro im Monat einschließlich Tierarzt-Vorsorge und Notfall-Rücklage, das sind rund 1,78 bis 2,47 Euro pro Tag und 54 bis 75 Euro pro Monat über 80 Jahre bei gleichbleibenden Preisen.',
+      'In der Natur nutzt ein erwachsenes Tier meist ein bis zwei Hektar und legt am Tag im Mittel 80 bis 85 Meter zurück; die Winterruhe dauert je nach Gebiet von Ende Oktober oder November bis Februar oder März.',
     ],
     sources: [
       ['go4vet: Landschildkröte halten, das musst du wissen (13. März 2026)', 'https://www.go4vet.com/exoten/landschildkroete-halten-das-musst-du-wissen/'],
@@ -1163,21 +1163,21 @@ const evidenceByPage = {
     guardrails: [
       'Das TVT-Merkblatt beschreibt die Griechische Landschildkröte; Maurische Landschildkröten haben eigene Ansprüche.',
       'Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest.',
-      'Die Kosten sind eine grobe Schätzung aus der Praxis-Information von go4vet für ein einzelnes Tier, ohne Gruppe und ohne Operationen; über 80 Jahre ändern sich Preise.',
+      'Die Kosten sind eine grobe Schätzung aus der Praxis-Information von go4vet für ein einzelnes Tier, ohne Gruppe und ohne Operationen; über 80 Jahre ändern sich Preise.',
       'Die Angaben zu Revier, Wegstrecke und Tagesrhythmus stammen aus Feldstudien an wild lebenden Tieren in Frankreich, Griechenland, Italien und Spanien und gelten im Mittel; einzelne Tiere weichen ab.',
       'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
   },
   'exoten-fische': {
     facts: [
-      'Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.',
-      'Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.',
-      'Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.',
-      'Grobe Schätzung für fünf Goldfische in einem 200-Liter-Becken über 20 Jahre aus Beispielpreisen deutscher Onlineshops: etwa 3.690 bis 5.190 Euro ohne Tierarzt, das sind rund 0,51 bis 0,71 Euro pro Tag und 15 bis 22 Euro pro Monat.',
+      'Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.',
+      'Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.',
+      'Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.',
+      'Grobe Schätzung für fünf Goldfische in einem 200-Liter-Becken über 20 Jahre aus Beispielpreisen deutscher Onlineshops: etwa 3.690 bis 5.190 Euro ohne Tierarzt, das sind rund 0,51 bis 0,71 Euro pro Tag und 15 bis 22 Euro pro Monat.',
       'Goldfische stammen aus Ostasien und leben dort gesellig in flachen, bewachsenen Gewässern; welche wilde Art genau ihr Vorfahr ist, beschreiben die Quellen unterschiedlich (Giebel oder Chinesische Silberkarausche).',
     ],
     sources: [
-      ['Hornbach: Vollglas-Aquarium Marina 100 × 40 × 50 cm (November 2026)', 'https://www.hornbach.de/p/vollglas-aquarium-marina-100-x-40-x-50-cm-floatglas-glasstaerke-8-0-mm-200-l/3477416/'],
+      ['Hornbach: Vollglas-Aquarium Marina 100 × 40 × 50 cm (November 2026)', 'https://www.hornbach.de/p/vollglas-aquarium-marina-100-x-40-x-50-cm-floatglas-glasstaerke-8-0-mm-200-l/3477416/'],
       ['Interaquaristik: Eheim classic 250 Außenfilter (November 2026)', 'https://www.interaquaristik.de/Eheim-classic-250-Aussenfilter/SW10575'],
       ['BDEW: Strompreisanalyse (Haushaltsstrompreis, Oktober 2026)', 'https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/'],
       ['BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html'],
