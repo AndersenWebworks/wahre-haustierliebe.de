@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vorschau: Kaninchen – vom Tier aus gedacht – Wa(h)re Haustier(liebe)</title>
+<style>
+:root {
+  --paper: #f6f0e3; --paper-2: #eee5d1; --card: #fbf8f0;
+  --ink: #241f1a; --ink-2: #51483d; --ink-3: #62574a;
+  --rule: #d6c9ae; --rule-strong: #b7a784;
+  --red: #b3342c; --red-dark: #8c2720; --red-tint: #f3e0d9;
+  --green: #46612f; --green-dark: #314521; --green-tint: #e5ead4;
+  --ochre: #a9772a; --ochre-tint: #f0e5c8;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Charter, Georgia, serif;
+  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 1rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.0625rem; line-height: 1.65; font-feature-settings: "kern", "liga", "onum"; text-rendering: optimizeLegibility; }
+a { color: var(--red-dark); text-underline-offset: 0.15em; }
+a:hover { color: var(--red); }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; color: var(--ink); text-wrap: balance; letter-spacing: -0.005em; }
+h1 { font-size: clamp(2rem, 8vw, 3rem); line-height: 1.1; margin: 0.4rem 0 1rem; }
+h2 { font-size: clamp(1.5rem, 5.5vw, 2rem); line-height: 1.2; margin: 3rem 0 0.8rem; }
+h3 { font-size: 1.2rem; line-height: 1.3; margin: 0 0 0.5rem; }
+p { margin: 0 0 1rem; }
+sup a { font-family: var(--sans); font-size: 0.72em; font-weight: 700; text-decoration: none; padding: 0 0.1em; }
+
+/* Vorschau-Hinweis */
+.vorschau { background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 0.85rem; line-height: 1.4; padding: 0.6rem 1rem; text-align: center; border-bottom: 3px solid var(--red); }
+.vorschau strong { letter-spacing: 0.04em; }
+
+/* Kopf */
+.kopf { border-bottom: 1px solid var(--rule-strong); }
+.kopf-in, .seite { max-width: 41rem; margin: 0 auto; padding: 0 1.1rem; }
+.kopf-in { padding-top: 0.8rem; padding-bottom: 0.8rem; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.logo { font-weight: 600; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+.logo span { color: var(--red); }
+.krumen { font-family: var(--sans); font-size: 0.85rem; color: var(--ink-2); }
+.krumen a { color: var(--ink-2); }
+
+.seite { padding-bottom: 3rem; }
+.kicker { font-family: var(--sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); margin: 2rem 0 0; display: block; }
+.einstieg { font-size: 1.22rem; line-height: 1.55; }
+.einstieg-frage { font-weight: 600; }
+
+.randnotiz { font-family: var(--sans); font-size: 0.88rem; line-height: 1.5; color: var(--ink-2); margin: 1.4rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+.randnotiz strong { color: var(--ink); }
+
+/* Bedürfnisfelder: wiederverwendbares Muster */
+.muster-hinweis { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+.feld { border-top: 2px solid var(--ink); margin: 0 0 2.2rem; padding-top: 0.9rem; }
+.feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+.feld-nr { font-family: var(--sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--red-dark); white-space: nowrap; }
+.feld-kopf h3 { margin: 0; }
+.feld dl { margin: 0; }
+.feld dt { font-family: var(--sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+.feld dd { margin: 0; }
+.feld dd p { margin: 0 0 0.5rem; }
+.feld .mass { font-weight: 600; }
+.feld dd.frage { font-size: 1.12rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+.feld dt.t-frage { color: var(--green-dark); }
+.rechnung { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-3); }
+
+/* Zeitleiste */
+.beispiel-tag { font-family: var(--sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+.zeitleiste { list-style: none; margin: 0.5rem 0 1rem 0.5rem; padding: 0 0 0 0.9rem; border-left: 2px solid var(--rule-strong); }
+.zeitleiste li { position: relative; padding: 0 0 1.4rem 1.1rem; }
+.zeitleiste li:last-child { padding-bottom: 0.2rem; }
+.zeitleiste li::before { content: ""; position: absolute; left: -1.5rem; top: 0.5rem; width: 0.8rem; height: 0.8rem; background: var(--paper); border: 2px solid var(--red); border-radius: 50%; }
+.zeitleiste li.mensch::before { border-color: var(--green); background: var(--green-tint); }
+.wann { display: block; font-family: var(--sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); }
+.zeitleiste li.mensch .wann { color: var(--green-dark); }
+.was { margin: 0.1rem 0 0; }
+.legende { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-3); }
+
+/* Faktenzeile */
+.faktenzeile { display: grid; grid-template-columns: 1fr; margin: 1.5rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); }
+.faktenzeile > div { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.faktenzeile > div:last-child { border-bottom: 0; }
+.faktenzeile .zahl { display: block; font-size: 2.1rem; font-weight: 600; line-height: 1.1; color: var(--red-dark); }
+.faktenzeile .zahl-text { display: block; font-family: var(--sans); font-size: 0.88rem; line-height: 1.4; color: var(--ink-2); margin-top: 0.3rem; }
+.faktenzeile .klein .zahl { font-size: 1.5rem; color: var(--ink-2); }
+
+.posten { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 0.9rem; margin: 0.5rem 0 1rem; }
+.posten th, .posten td { text-align: left; padding: 0.5rem 0.4rem 0.5rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.posten th { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.posten td:last-child, .posten th:last-child { text-align: right; padding-right: 0; white-space: nowrap; }
+.posten tr.klein-zeile td { font-weight: 700; color: var(--red-dark); }
+.posten tr.summe td { font-weight: 700; border-top: 2px solid var(--ink); border-bottom: 0; }
+
+/* Wenn-dann-Karte */
+.karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+.karte-titel { font-family: var(--sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+.karte ul { list-style: none; margin: 0; padding: 0; }
+.karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.karte li:first-child { border-top: 0; padding-top: 0; }
+.wenn, .dann { display: block; }
+.wenn b, .dann b { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+.dann { font-weight: 600; }
+.karte-fuss { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+
+.bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.bedenkzeit strong { font-size: 1.15rem; }
+
+/* Zwei Wege */
+.wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+.weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+.weg.noch-nicht { border-top-color: var(--ochre); }
+.weg h3 { margin: 0 0 0.4rem; }
+.weg p { font-size: 1rem; margin-bottom: 0.7rem; }
+.weg .go { font-family: var(--sans); font-weight: 700; font-size: 0.95rem; }
+.weg-label { font-family: var(--sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+
+/* Quellen */
+.quellen { border-top: 3px double var(--ink); margin-top: 3rem; padding-top: 1.2rem; font-family: var(--sans); font-size: 0.9rem; }
+.quellen h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 0.6rem; }
+.quellen ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+.quellen li { margin-bottom: 0.6rem; overflow-wrap: anywhere; }
+.quellen p { color: var(--ink-2); }
+
+/* Erläuterung für die Redaktion */
+.redaktion { margin: 3rem -1.1rem 0; padding: 1.4rem 1.1rem 1.6rem; background: #e9e4d8; border-top: 6px solid var(--ink); font-family: var(--sans); font-size: 0.95rem; line-height: 1.55; }
+.redaktion .label { display: inline-block; background: var(--ink); color: var(--paper); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.25rem 0.6rem; margin-bottom: 0.8rem; }
+.redaktion h2 { font-size: 1.3rem; margin: 0 0 0.7rem; }
+.redaktion p { margin-bottom: 0.8rem; }
+
+.fuss { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-3); text-align: center; padding: 1.5rem 1rem 2rem; }
+
+@media (min-width: 640px) {
+  body { font-size: 1.125rem; }
+  .faktenzeile { grid-template-columns: repeat(3, 1fr); }
+  .faktenzeile > div { border-bottom: 0; border-right: 1px solid var(--rule); padding: 1rem 1rem 1rem 0; }
+  .faktenzeile > div + div { padding-left: 1rem; }
+  .faktenzeile > div:last-child { border-right: 0; }
+  .wege { grid-template-columns: 1fr 1fr; }
+  .redaktion { margin-left: 0; margin-right: 0; padding-left: 1.6rem; padding-right: 1.6rem; }
+}
+@media print { .vorschau { border-bottom: 1px solid #000; } .feld, .karte, .weg { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="vorschau" role="note"><strong>Vorschau zur Entscheidung – nicht die echte Seite.</strong> Die echte Seite „Kaninchen halten“ bleibt unverändert.</div>
+
+<header class="kopf">
+  <div class="kopf-in">
+    <a class="logo" href="../../index.html">Wa<span>(h)</span>re Haustier<span>(liebe)</span></a>
+    <span class="krumen"><a href="../../kleintiere/index.html">Kleintiere</a> › Kaninchen</span>
+  </div>
+</header>
+
+<main class="seite">
+
+  <span class="kicker">Kaninchen</span>
+  <h1>Zwei Kaninchen ziehen ein. Was brauchen sie von dir?</h1>
+  <p class="einstieg">Dass du Kaninchen bei dir aufnehmen möchtest, ist ein schöner Gedanke. <span class="einstieg-frage">Dreh ihn einmal um: Was bräuchten zwei Kaninchen von dir, und was davon hast du schon?</span></p>
+  <p class="randnotiz">Kaninchen gelten als einfache Einsteigertiere. Die Tierärztliche Vereinigung für Tierschutz (TVT) schreibt dagegen, ihre Haltung sei aufwendig und erfordere umfassendes Wissen.<sup><a href="#q1">1</a></sup></p>
+
+  <h2 id="beduerfnisse">Was ein Kaninchen von dir braucht</h2>
+  <p class="muster-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
+
+  <section class="feld" aria-labelledby="f1">
+    <div class="feld-kopf"><span class="feld-nr">FELD 1</span><h3 id="f1">Artgenossen</h3></div>
+    <dl>
+      <dt>Das Maß</dt>
+      <dd><p class="mass">Mindestens zwei Tiere, am besten ein Paar.<sup><a href="#q1">1</a></sup></p>
+        <p>Die TVT lehnt Einzelhaltung grundsätzlich ab. Kaninchen liegen eng beieinander und lecken sich gegenseitig, beides gehört zu ihrem Verhalten. Ein Meerschweinchen ist kein Ersatz: Die gemeinsame Haltung mit anderen Kleinsäugern nennt die TVT nicht tiergerecht.<sup><a href="#q1">1</a></sup></p></dd>
+      <dt>Zum Vorstellen</dt>
+      <dd><p>Ein Kaninchen sind zwei Kaninchen. Jede Zahl auf dieser Seite gilt deshalb für ein Paar.</p></dd>
+      <dt class="t-frage">Frage an dich</dt>
+      <dd class="frage">Hast du Platz, Zeit und Geld für zwei Tiere, nicht nur für das eine, das dir gefällt?</dd>
+    </dl>
+  </section>
+
+  <section class="feld" aria-labelledby="f2">
+    <div class="feld-kopf"><span class="feld-nr">FELD 2</span><h3 id="f2">Platz und Bewegung</h3></div>
+    <dl>
+      <dt>Das Maß</dt>
+      <dd><p class="mass">6 m² Grundfläche für zwei Tiere, mit einer Seitenlänge von mindestens 2,4 m.<sup><a href="#q1">1</a></sup></p>
+        <p>Die 2,4 m ergeben sich aus drei Hoppelschritten hintereinander, jeder etwa 80 cm lang. Für jedes weitere Tier kommen mindestens 20 Prozent Fläche dazu. Ein Käfig von mindestens 150 × 60 × 50 cm darf nur ein Rückzugsort sein und muss dauerhaft offen stehen.<sup><a href="#q1">1</a></sup> Auch der Deutsche Tierschutzbund nennt sechs Quadratmeter als Minimum für zwei Tiere.<sup><a href="#q2">2</a></sup></p></dd>
+      <dt>Zum Vorstellen</dt>
+      <dd><p>6 m² sind zum Beispiel 2 m × 3 m. Ein Käfig mit 150 × 60 cm deckt davon 0,9 m² ab, das sind 15 Prozent der Fläche.</p>
+        <p class="rechnung">Rechnung: 1,5 m × 0,6 m = 0,9 m²; 0,9 ÷ 6 = 0,15.</p></dd>
+      <dt class="t-frage">Frage an dich</dt>
+      <dd class="frage">Wo in deinem Zuhause gibt es eine Fläche, die 2,4 Meter lang ist und den Tieren dauerhaft gehören darf?</dd>
+    </dl>
+  </section>
+
+  <section class="feld" aria-labelledby="f3">
+    <div class="feld-kopf"><span class="feld-nr">FELD 3</span><h3 id="f3">Futter</h3></div>
+    <dl>
+      <dt>Das Maß</dt>
+      <dd><p class="mass">Heu oder frisches Gras ist immer verfügbar. Dazu täglich rund 200 g Frischfutter je Kilogramm Körpergewicht.<sup><a href="#q1">1</a></sup></p>
+        <p>Die TVT nennt Kaninchen „Dauerfresser“, die bis zu 80 Portionen am Tag aufnehmen. Beim Frischfutter sind es 70 Prozent Grünfutter, 20 Prozent Gemüse und höchstens 10 Prozent Obst. Wasser muss immer bereitstehen.<sup><a href="#q1">1</a></sup></p></dd>
+      <dt>Zum Vorstellen</dt>
+      <dd><p>Rechenbeispiel: Zwei Tiere mit je 2 kg Gewicht brauchen am Tag 800 g Frischfutter, davon 560 g Gräser und Kräuter. Jeden Tag, auch am Wochenende.</p>
+        <p class="rechnung">Rechnung: 2 × 2 kg × 200 g = 800 g; 70 % davon = 560 g.</p></dd>
+      <dt class="t-frage">Frage an dich</dt>
+      <dd class="frage">Wer besorgt das frisch und täglich, auch wenn du krank bist oder verreist?</dd>
+    </dl>
+  </section>
+
+  <section class="feld" aria-labelledby="f4">
+    <div class="feld-kopf"><span class="feld-nr">FELD 4</span><h3 id="f4">Ruhe und Tagesrhythmus</h3></div>
+    <dl>
+      <dt>Das Maß</dt>
+      <dd><p class="mass">Hauptaktivität in der Dämmerung, am frühen Morgen und am Abend.<sup><a href="#q1">1</a></sup></p>
+        <p>Pro Tier gehört mindestens eine Schlafhöhle ins Gehege, und eine davon muss so groß sein, dass alle Tiere gleichzeitig ausgestreckt darin ruhen können. Streicheln ist nur in Ordnung, wenn ein Kaninchen den Kontakt selbst sucht und sich jederzeit zurückziehen kann. Stillhalten mit flach angelegten Ohren ist nach der TVT kein Zeichen von Wohlbefinden, sondern von Angst.<sup><a href="#q1">1</a></sup></p></dd>
+      <dt>Zum Vorstellen</dt>
+      <dd><p>Zwei Zeitfenster am Tag, in denen die Tiere am meisten unterwegs sind: früh am Morgen und am Abend.</p></dd>
+      <dt class="t-frage">Frage an dich</dt>
+      <dd class="frage">Wo bist du am frühen Morgen und am Abend, und was geschieht dann im Gehege?</dd>
+    </dl>
+  </section>
+
+  <section class="feld" aria-labelledby="f5">
+    <div class="feld-kopf"><span class="feld-nr">FELD 5</span><h3 id="f5">Gesundheit</h3></div>
+    <dl>
+      <dt>Das Maß</dt>
+      <dd><p class="mass">Jeden Tag ansehen, mindestens einmal pro Woche kontrollieren, jedes Tier impfen.<sup><a href="#q1">1</a></sup></p>
+        <p>Wöchentlich zu prüfen sind Gewicht, Schneidezähne, Krallen, Körperöffnungen und Fell. Gegen die Hämorrhagische Kaninchenseuche (RHDV1+2) und Myxomatose gibt es Impfstoffe; die TVT rät, alle Kaninchen zu impfen. Wenn ein Kaninchen nicht frisst, ist das immer ein Notfall. Kaninchen können je nach Rasse 8 bis 12 Jahre alt werden.<sup><a href="#q1">1</a></sup></p></dd>
+      <dt>Zum Vorstellen</dt>
+      <dd><p>Eine Kontrolle pro Woche sind in zehn Jahren rund 520 Kontrollen.</p>
+        <p class="rechnung">Rechnung: 10 Jahre × 52 Wochen = 520.</p></dd>
+      <dt class="t-frage">Frage an dich</dt>
+      <dd class="frage">Kennst du eine Tierarztpraxis, die sich mit Kaninchen auskennt, und weißt du, wohin du nachts oder am Wochenende fährst?</dd>
+    </dl>
+  </section>
+
+  <h2 id="tag">Ein Tag aus Sicht eines Kaninchenpaars</h2>
+  <span class="beispiel-tag">Beispiel, kein echtes Paar</span>
+  <ol class="zeitleiste">
+    <li><span class="wann">Früher Morgen</span><p class="was">Die erste von zwei Hauptaktivitätszeiten. Die Tiere brauchen jetzt Platz zum Laufen, Strukturen zum Aufrichten und Graben und eine Fläche zum Scharren.<sup><a href="#q1">1</a></sup></p></li>
+    <li class="mensch"><span class="wann">Danach: du</span><p class="was">Kot und Urin entfernen, Wasserbehälter gründlich reinigen, Heu und nicht gefressenes Frischfutter austauschen, beide Tiere ansehen.<sup><a href="#q1">1</a></sup></p></li>
+    <li><span class="wann">Tagsüber</span><p class="was">Zwischen den beiden Aktivitätszeiten ruhen die Tiere in ihrer Schlafhöhle; auch Kontaktliegen gehört zu ihrem Verhalten. Heu steht die ganze Zeit bereit, denn die Tiere fressen über den Tag verteilt.<sup><a href="#q1">1</a></sup></p></li>
+    <li><span class="wann">Abend</span><p class="was">Die zweite Hauptaktivitätszeit. Wer morgens und abends nicht zu Hause ist, verpasst die beiden Zeiten, in denen die Tiere am aktivsten sind.<sup><a href="#q1">1</a></sup></p></li>
+    <li class="mensch"><span class="wann">Einmal pro Woche: du</span><p class="was">Gewicht, Schneidezähne, Krallen, Körperöffnungen und Fell prüfen.<sup><a href="#q1">1</a></sup></p></li>
+  </ol>
+  <p class="legende">Der Ablauf ist ein Beispiel aus den Verhaltensangaben des TVT-Merkblatts. Wie ein bestimmtes Paar seinen Tag verbringt, kann abweichen.</p>
+
+  <h2 id="kosten">Was es über die Jahre kostet</h2>
+  <div class="faktenzeile">
+    <div><span class="zahl">3 bis 5,40 €</span><span class="zahl-text">pro Tag, für zwei Kaninchen, im Durchschnitt über zehn Jahre</span></div>
+    <div><span class="zahl">10.800 bis 19.700 €</span><span class="zahl-text">in zehn Jahren, ohne Notfälle, Urlaubsbetreuung und Versicherung</span></div>
+    <div class="klein"><span class="zahl">120 bis 160 €</span><span class="zahl-text">kosten die beiden Tiere selbst – der kleinste Posten</span></div>
+  </div>
+  <table class="posten">
+    <thead><tr><th>Posten für zwei Tiere</th><th>Betrag</th></tr></thead>
+    <tbody>
+      <tr class="klein-zeile"><td>Die Tiere selbst (einmalig)</td><td>120–160 €</td></tr>
+      <tr><td>Gehege, Verstecke, Heuraufen, Näpfe, Box (einmalig)</td><td>400–850 €</td></tr>
+      <tr><td>Heu, Frischfutter, Einstreu, Gesundheitscheck mit Impfungen (jährlich)</td><td>1.025–1.865 €</td></tr>
+      <tr class="summe"><td>Gesamt über zehn Jahre</td><td>ca. 10.800–19.700 €</td></tr>
+    </tbody>
+  </table>
+  <p class="randnotiz"><strong>Woher die Zahlen kommen.</strong> Die Einzelposten und die Untergrenze von 10.770 Euro nennt der Deutsche Tierschutzbund für zwei Zwergkaninchen, ausdrücklich als Mindestkosten.<sup><a href="#q2">2</a></sup> Die obere Summe und der Betrag pro Tag sind unsere Hochrechnung aus denselben Spannen (10.800 ÷ 3.650 Tage und 19.700 ÷ 3.650 Tage). Stand der Angaben: Oktober 2026. Für einen Notfall beim Tierarzt nennt die Praxis-Information von go4vet 200 bis 500 Euro; lege vor dem Einzug mindestens 500 Euro dafür zurück.<sup><a href="#q3">3</a></sup> Die Rechnung im Einzelnen steht auf <a href="../../kleintiere/kaninchen-kosten/index.html">Was zwei Kaninchen wirklich kosten</a>.</p>
+
+  <h2 id="entscheiden">Bevor du entscheidest</h2>
+
+  <div class="bedenkzeit">
+    <p><strong>Ein Kaninchenpaar muss nicht heute einziehen.</strong></p>
+    <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite. Für Kaninchen ist nicht untersucht, ob eine Bedenkzeit die spätere Haltung verbessert. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+  </div>
+
+  <div class="karte">
+    <span class="karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+    <ul>
+      <li><span class="wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+      <li><span class="wenn"><b>Wenn</b> ich nur ein einzelnes Kaninchen mitnehmen soll,</span><span class="dann"><b>dann</b> nehme ich keins mit.</span></li>
+      <li><span class="wenn"><b>Wenn</b> ich die Tiere nicht dort sehen darf, wo sie leben,</span><span class="dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
+      <li><span class="wenn"><b>Wenn</b> mir ein Tier leidtut,</span><span class="dann"><b>dann</b> rufe ich das nächste Tierheim an und frage dort nach Kaninchen, statt zu kaufen.</span></li>
+    </ul>
+    <p class="karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+  </div>
+
+  <p>Der Deutsche Tierschutzbund rät, zuerst im Tierheim zu schauen; dort warten auch Kaninchen.<sup><a href="#q4">4</a></sup> Die Reihenfolge, die wir empfehlen: erst Tierheim und Tierschutzverein, danach alles andere.</p>
+
+  <div class="wege">
+    <div class="weg">
+      <span class="weg-label">Weg A</span>
+      <h3>Ich suche ein Paar im Tierschutz</h3>
+      <p>Kaninchen, die schon da sind und ein Zuhause suchen.</p>
+      <p class="go"><a href="../../adoption/index.html">Adoption statt Kauf</a><br><a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+    </div>
+    <div class="weg noch-nicht">
+      <span class="weg-label">Weg B, gleichwertig</span>
+      <h3>Noch nicht</h3>
+      <p>Wenn Platz, Zeit oder Geld gerade fehlen, ist Warten eine gute Entscheidung, und es gibt Wege, dem Wunsch trotzdem näher zu kommen.</p>
+      <p class="go"><a href="../../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a></p>
+    </div>
+  </div>
+
+  <section class="quellen" id="quellen" aria-labelledby="qh">
+    <h2 id="qh">Quellen</h2>
+    <ol>
+      <li id="q1">Tierärztliche Vereinigung für Tierschutz (TVT): Merkblatt Nr. 157 „Heimtiere: Kaninchen“, Stand September 2019. <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38">PDF</a>, Übersicht: <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/">tierschutz-tvt.de</a></li>
+      <li id="q2">Deutscher Tierschutzbund: <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/">Zwergkaninchen</a> (Platz, Kostenübersicht für zwei Tiere)</li>
+      <li id="q3">go4vet: <a href="https://www.go4vet.com/kleintiere/kaninchen-beim-tierarzt-was-kostet-eine-behandlung-wirklich/">Kaninchen beim Tierarzt: Was kostet eine Behandlung wirklich?</a></li>
+      <li id="q4">Deutscher Tierschutzbund, Broschüre „Tierschutz im Einkaufskorb“, wie auf der Seite <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a> wiedergegeben. Das ist die Position des Verbands, keine Messung.</li>
+    </ol>
+    <p>Maße: Quelle 1, beim Platz zusätzlich Quelle 2. Kosten: Quellen 2 und 3, sie stehen ebenso auf <a href="../../kleintiere/kaninchen-kosten/index.html">Was zwei Kaninchen wirklich kosten</a>.</p>
+  </section>
+
+  <aside class="redaktion" aria-labelledby="rh">
+    <span class="label">Erläuterung für die Redaktion – nicht Teil der Seite</span>
+    <h2 id="rh">Was sich gegenüber der heutigen Seite ändert</h2>
+    <p>Die heutige Seite beginnt mit einem Mythos und mit Wertungen („keine Kuscheltiere“, Käfige seien „Tierquälerei in Plastik“), und ihr Platzmaß („2–3 m² pro Kaninchen“) weicht vom TVT-Maß ab (6 m² für zwei Tiere). Die Vorschau geht stattdessen von dem aus, was das Tier braucht: fünf feste Felder mit belegtem Maß, nüchterner Veranschaulichung und offener Frage, die sich für jede Tierart gleich aufbauen lassen. Der Grund: Eine dänische Befragung fand, dass Halter, die das Kaninchen für ein Einsteigertier halten, es eher auf zu wenig Raum und ohne reichlich Heu halten (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10936283/">Skovlund u. a. 2023</a>, ein Zusammenhang, kein Beweis). Laborstudien zeigen außerdem, dass anschauliche Beschreibungen des Tieres Einstellungen und Hilfebereitschaft stärken (<a href="https://personal.tcu.edu/sehill/ButterfieldEtAl.pdf">Butterfield u. a. 2012</a>, Hunde, kein Haltungsverhalten), während Schuldbotschaften laut Kommunikationsforschung eher Abwehr auslösen (<a href="https://faunalytics.org/moderate-vs-radical-messaging-in-ngos/">Faunalytics</a>); deshalb gibt es hier weder Schuldsätze noch Schockbilder noch ein Einzelschicksal, das den Mitleidskauf fördern könnte. Bei den Kosten steht die Summe mit dem Betrag pro Tag vorn und der Kaufpreis als kleinster Posten; im Entscheidungsteil kommen eine Bedenkzeit-Empfehlung, eine Wenn-dann-Karte (Vorsätze der Form „Wenn …, dann …“ helfen laut einer Metaanalyse, Ziele umzusetzen: <a href="https://doi.org/10.1016/S0065-2601(06)38002-1">Gollwitzer und Sheeran 2006</a>), der Tierschutz als erste Reihenfolge und „Noch nicht“ als gleichwertiger Weg hinzu. Grenze: Keine Studie hat diese Kombination bei Kaninchen getestet; die Wirkung wäre über Rückmeldungen und Klickzahlen zu prüfen, und der Maßstabsvergleich mit einem Kinderzimmer fehlt bewusst, weil dafür keine belegte Größe vorliegt.</p>
+  </aside>
+
+</main>
+<div class="fuss">Vorschau zur Entscheidung · noindex · nichts hiervon ist veröffentlicht</div>
+</body>
+</html>
