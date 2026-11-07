@@ -187,6 +187,7 @@ const pages = [
     description: 'Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.',
     intent: 'Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden',
     priority: '0.85',
+    lastmod: '2026-11-07',
   },
   {
     id: 'adoption',
@@ -195,7 +196,7 @@ const pages = [
     description: 'Adoption aus dem Tierschutz statt Kauf: Abgabealter für Welpen, Kitten und Kleintiere, Folgen zu früher Trennung, Schutzgebühr und seriöse Vermittlung.',
     intent: 'Abgabealter prüfen und Tier aus dem Tierschutz adoptieren statt zu früh kaufen',
     priority: '0.9',
-    lastmod: '2026-10-24',
+    lastmod: '2026-11-07',
   },
   {
     id: 'woher-kommt-mein-tier',
@@ -204,7 +205,7 @@ const pages = [
     description: 'Zoofachhandel, Kleinanzeigen, Züchter, Vermehrer, Tierheim und Notstation: welche Wege es gibt, was du vor dem Kauf prüfen kannst und worauf du je Tierart achten kannst.',
     intent: 'Herkunftswege von Haustieren einordnen und vor dem Kauf oder der Übernahme prüfen',
     priority: '0.85',
-    lastmod: '2026-10-24',
+    lastmod: '2026-11-07',
   },
   {
     id: 'selbsttest',
@@ -297,6 +298,7 @@ const pages = [
     description: 'Typische Haustierhaltung gegen wirklich vertretbare Haltung: Warum normal nicht automatisch artgerecht ist und der Kaufpreis nie die echten Kosten zeigt.',
     intent: 'Realistische Haltung und Kosten vor der Anschaffung prüfen',
     priority: '0.8',
+    lastmod: '2026-11-07',
     staticOnly: true,
   },
   {
@@ -313,9 +315,10 @@ const pages = [
     id: 'wildtierhaltung',
     slug: 'wildtierhaltung',
     title: 'Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar',
-    description: 'Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.',
+    description: 'Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht zusammenspielen und warum Leinenpflicht Wildtiere schützt.',
     intent: 'Private Wildtierhaltung, Exoten und Wildschutz verstehen',
     priority: '0.8',
+    lastmod: '2026-11-07',
     staticOnly: true,
   },
   {
@@ -389,11 +392,11 @@ const topicPages = [
   ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und Gutachten des Bundesministeriums, dazu Lebensdauer.', 'Reptilienhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
   ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer.', 'Schildkrötenhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
   ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach Zierfisch-Gutachten des Bundesministeriums und Schweizer Tierschutz.', 'Fischhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
-  ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.'],
-  ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.'],
-  ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.'],
+  ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.', { lastmod: '2026-11-07' }],
+  ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.', { lastmod: '2026-11-07' }],
+  ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.', { lastmod: '2026-11-07' }],
   ['pferde-kosten', 'pferde', 'pferde/kosten', 'Was ein Pferd wirklich kostet', 'Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.', 'Pferdekosten realistisch einschätzen.', { lastmod: '2026-11-07' }],
-  ['pferde-reitbeteiligung', 'pferde', 'pferde/reitbeteiligung', 'Reitbeteiligung als ehrlicher Einstieg', 'Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.', 'Reitbeteiligung als Alternative zum eigenen Pferd prüfen.'],
+  ['pferde-reitbeteiligung', 'pferde', 'pferde/reitbeteiligung', 'Reitbeteiligung als ehrlicher Einstieg', 'Warum eine Reitbeteiligung oft der bessere erste Schritt ist als ein eigenes Pferd.', 'Reitbeteiligung als Alternative zum eigenen Pferd prüfen.', { lastmod: '2026-11-07' }],
   ['pferde-entscheidung', 'pferde', 'pferde/entscheidung', 'Bevor ein Pferd einzieht', 'Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.', 'Entscheidung vor dem eigenen Pferd prüfen.', { lastmod: '2026-11-07' }],
 ].map(([id, sourcePage, slug, title, description, intent, meta = {}]) => ({
   id,
@@ -450,17 +453,17 @@ let staticCssForInline = '';
 const faqByPage = {
   'woher-kommt-mein-tier': [
     ['Verkauft der Zoofachhandel Hunde und Katzen?', 'Nach Angabe des Branchenverbands ZZF nicht: Dort gibt es laut ZZF keine Hunde und Katzen. Der Deutsche Tierschutzbund schreibt, der ZZF habe sich entschlossen, in angeschlossenen Zoofachgeschäften keine Hunde und Katzen anzubieten. Ob jedes Geschäft in Deutschland so verfährt, sagen die Quellen nicht. In § 11 Tierschutzgesetz steht kein solches Verbot.'],
-    ['Muss mich der Zoofachhandel beraten?', 'Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis nach § 11 Tierschutzgesetz und muss bei der erstmaligen Abgabe einer Tierart schriftliche Informationen zu den wesentlichen Bedürfnissen des Tieres mitgeben (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.'],
+    ['Muss mich der Zoofachhandel beraten?', 'Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier wesentlich braucht (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.'],
     ['Warum sehen Tierschützer Kleinanzeigen und Online-Handel kritisch?', 'Der Deutsche Tierschutzbund nannte 2021 als Probleme niedrige Preise, die Spontankäufe erleichtern, fehlende Beratung und Anbieter, die oft nicht identifizierbar sind. Er fordert ein Verbot des Online-Handels mit lebenden Tieren, ausgenommen Tierheime und anerkannte Auffangstationen. Das ist der Stand dieser Quelle von 2021, nicht die aktuelle Rechtslage.'],
-    ['Woran erkenne ich einen seriösen Züchter?', 'Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt diese Seite keinen eigenen Kriterienkatalog vor; die allgemeinen Prüfpunkte gelten auch hier.'],
+    ['Woran erkenne ich einen seriösen Züchter?', 'Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt es keinen eigenen Kriterienkatalog; die allgemeinen Prüfpunkte gelten auch hier.'],
     ['Was ist ein Mitleidskauf, und warum rät der Tierschutzbund davon ab?', 'Ein Mitleidskauf ist der Kauf eines Tieres, weil es einem leidtut. Der Deutsche Tierschutzbund schreibt, ein Kauf aus Mitleid helfe nicht den Tieren, sondern denen, die ein schnelles Geschäft machen wollen, und jedes freigekaufte Tier werde sofort durch ein anderes ersetzt. Er rät, zuerst im Tierheim zu schauen. Wie stark Mitleidskäufe die Nachfrage erhöhen, ist hier nicht belegt.'],
-    ['Wie finde ich ein Tierheim oder eine Notstation?', 'Der Tierheim-Finder des Deutschen Tierschutzbundes listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.'],
+    ['Wie finde ich ein Tierheim oder eine Notstation?', 'Im Tierheim-Finder des Deutschen Tierschutzbundes standen am 24. Oktober 2026 1.243 Einrichtungen. Man kann dort nach Einrichtungsart filtern, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.'],
   ],
   'zucht-und-vermehrung': [
     ['Was ist der Unterschied zwischen Züchter und Vermehrer?', 'Nach den Kriterien von TASSO und VIER PFOTEN zeigt ein seriöser Züchter Elterntiere und Zuchtstätte, lässt Besuche zu, züchtet in der Regel nur eine Rasse, lässt die Elterntiere auf rassebedingte Erbkrankheiten untersuchen und berät auch nach dem Einzug. Vermehrer richten sich auf schnellen Absatz aus. Am Preis erkennst du Vermehrer nicht: Auch illegale Händler verlangen inzwischen hohe Preise.'],
     ['Schützt eine Ahnentafel vor kranken Tieren?', 'Nein. Nach der Zuchtordnung des VDH dokumentiert das Zuchtbuch die Abstammung der Hunde; die Ahnentafel ist ein Auszug daraus. Sie ist ein Abstammungsnachweis, kein Gesundheitszeugnis. Welche Gesundheitsuntersuchungen verlangt werden, legen die Rassezuchtvereine fest.'],
     ['Kann auch ein Züchter im Verein Qualzucht betreiben?', 'Das ist möglich, wenn der Rassestandard selbst Merkmale verlangt oder duldet, die Schmerzen, Leiden oder Schäden verursachen. Die Tierärztliche Vereinigung für Tierschutz schreibt: Rassestandards legalisieren keine Zucht von Tieren, die unter Schmerzen, Leiden oder Schäden leiden. Ob ein Verstoß gegen § 11b Tierschutzgesetz vorliegt, entscheidet die zuständige Behörde im Einzelfall.'],
-    ['Ab wann gilt Zucht als gewerbsmäßig?', 'Das Gesetz nennt keine Tierzahl. Die Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz (Fassung von 2000) nennt als Regelwerte unter anderem drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr bei Hunden und fünf oder mehr Katzen oder Würfe bei Katzen. Gewerbsmäßige Zucht von Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz. Wer darunter bleibt, ist nicht automatisch seriös, und die Regeln zum Qualzuchtverbot gelten für jede Zucht.'],
+    ['Ab wann gilt Zucht als gewerbsmäßig?', 'Das Gesetz nennt keine Tierzahl. Die Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz (Fassung von 2000) nennt als Richtwerte unter anderem drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr bei Hunden und fünf oder mehr Katzen oder Würfe bei Katzen. Gewerbsmäßige Zucht von Wirbeltieren braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Wer darunter bleibt, ist nicht automatisch seriös, und die Regeln zum Qualzuchtverbot gelten für jede Zucht.'],
     ['Woran erkenne ich getarnte Vermehrer?', 'Typische Merkmale sind eine Übergabe an Parkplätzen oder Tankstellen statt bei der Mutter, eine Mutter, die angeblich nicht verfügbar ist, ein ganzjährig geschaltetes Inserat mit „Hobbyzucht“, gleiche Anzeigen auf mehreren Plattformen, Zeitdruck und fehlende, gefälschte oder ausländische Papiere. Auch ein professioneller Auftritt beweist nichts. Bei Verdacht kannst du das Veterinäramt oder die Polizei informieren.'],
     ['Was gehört in den Kaufvertrag und in die Unterlagen?', 'Empfohlen werden ein schriftlicher Kaufvertrag mit Personalien und Chipnummer, ein ausgefüllter Impfpass oder EU-Heimtierausweis, ein registrierter Chip, bei Verbandszucht die Ahnentafel und die Befunde der Gesundheitsuntersuchungen der Elterntiere. Eine Rücknahmepflicht enthält die VDH-Zuchtordnung nicht; ob eine Rücknahme gilt, ist daher eine Vertragsfrage.'],
   ],
@@ -544,9 +547,9 @@ const faqByPage = {
   adoption: [
     ['Sollte ich ein Tier vom Züchter kaufen oder aus dem Tierheim adoptieren?', 'Solange viele Tiere in Tierheimen und auf Pflegestellen warten, ist Adoption die verantwortungsvollere Wahl. Sie gibt einem bestehenden Tier eine Chance und erzeugt keinen weiteren Nachschub.'],
     ['Warum stellen Tierheime so viele Fragen?', 'Seriöse Tierheime prüfen Alltag, Wohnsituation, Erfahrung und Absicherung, damit ein Tier nicht wieder in ein unpassendes Zuhause vermittelt wird. Die Fragen sollen das Tier schützen, nicht Bewerber bloßstellen.'],
-    ['Ab wann darf ein Welpe von seiner Mutter getrennt werden?', 'Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung kommt nur infrage, wenn sie nach tierärztlichem Urteil zum Schutz vor Schmerzen, Leiden oder Schäden erforderlich ist. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.'],
+    ['Ab wann darf ein Welpe von seiner Mutter getrennt werden?', 'Ein Welpe darf erst im Alter von über acht Wochen vom Muttertier getrennt werden (§ 2 Absatz 4 der Tierschutz-Hundeverordnung). Früher geht es nur, wenn ein Tierarzt die Trennung für nötig hält, um das Tier vor Schmerzen, Leiden oder Schäden zu schützen. Die gesetzliche Untergrenze ist kein Grund, einen Welpen möglichst früh zu übernehmen.'],
     ['Ab wann darf ein Kätzchen ausziehen?', 'Für Katzen gibt es in Deutschland kein gesetzliches Mindestabgabealter. Der Deutsche Tierschutzbund empfiehlt für menschengewöhnte Katzen mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern. Die EU-Tollwutregel ab zwölf Wochen betrifft Impfung und Transport, nicht automatisch das Abgabealter.'],
-    ['Was gilt bei Meerschweinchen und Kaninchen?', 'Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Verband beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine vorsichtigere Vermittlungsorientierung. Die 28-Tage-Regel betrifft nur das Absetzen in Zuchtkaninchenbeständen. Beide Arten brauchen Artgenossen.'],
+    ['Was gilt bei Meerschweinchen und Kaninchen?', 'Junge Meerschweinchen sollten laut Deutschem Tierschutzbund mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Verband beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine vorsichtigere Vermittlungsorientierung. Die 28-Tage-Regel gilt nur für das Absetzen in Zuchtbetrieben für Kaninchen. Beide Arten brauchen Artgenossen.'],
     ['Was kann ich tun, wenn ich ein Tier zu früh übernommen habe?', 'Lass das Tier zeitnah tierärztlich untersuchen, sichere alle Angaben zur Herkunft und kläre eine mögliche Rückkehr zu Mutter oder Geschwistern nur fachkundig. Bei Verdacht auf illegalen Handel kannst du den Verkauf dem Veterinäramt oder der Polizei melden.'],
     ['Was gilt bei Hamstern, Ratten, Degus und Chinchillas?', 'Hamster sind frühestens mit vier Wochen selbstständig. Ratten sollten mindestens sechs Wochen bei Mutter und Gruppe bleiben und immer mindestens zu zweit vermittelt werden. Bei Degus und Chinchillas ist das Ende der Säugezeit nur die Untergrenze: Entscheidend sind sichere Futteraufnahme, Gewicht, Gesundheit und eine passende soziale Gruppe.'],
     ['Was gilt bei Frettchen?', 'Für Frettchen ist in den geprüften deutschen Quellen keine allgemeine gesetzliche Abgabewoche genannt. Fachinformationen nennen eine Säugezeit von etwa sechs bis acht Wochen. Wirklich verantwortbar ist die Abgabe erst, wenn die Tiere sicher selbstständig fressen, gesund und gut sozialisiert sind und in eine passende Paar- oder Gruppenhaltung ziehen.'],
@@ -590,10 +593,10 @@ const evidenceByPage = {
   'woher-kommt-mein-tier': {
     facts: [
       'Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.',
-      'Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).',
+      'Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier braucht (§ 21 Absatz 5 Nummer 2).',
       'Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.',
       'Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).',
-      'Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.',
+      'Unabhängige Zahlen dazu, woher Kleinsäuger und Vögel im Zoofachhandel stammen, haben wir nicht gefunden.',
     ],
     sources: [
       ['ZZF: Ratgeber Zoofachhandel', 'https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/'],
@@ -624,8 +627,8 @@ const evidenceByPage = {
     guardrails: [
       'Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.',
       'Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.',
-      'Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.',
-      'Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.',
+      'Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.',
+      'Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten haben wir nicht gefunden.',
       'Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung.',
     ],
   },
@@ -1006,8 +1009,8 @@ const evidenceByPage = {
   },
   pferde: {
     facts: [
-      'Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.',
-      'Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.',
+      'Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.',
+      'Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.',
       'Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.',
     ],
     sources: [
@@ -1035,7 +1038,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.',
-      'Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal.',
+      'Die Befragung selbst konnte nicht abgerufen werden; die Angabe beruht auf der Wiedergabe durch RidersDeal.',
     ],
   },
   'pferde-entscheidung': {
@@ -1194,7 +1197,7 @@ const evidenceByPage = {
       ['Deutscher Tierschutzbund: Welches Tier passt zu mir?', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf'],
     ],
     guardrails: [
-      'Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.',
+      'Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.',
       'Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.',
       'Seriöse Adoption braucht Zeit und ehrliche Beratung.',
       'Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.',
@@ -1511,10 +1514,10 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Aussagen von TASSO, VIER PFOTEN, Tierschutzbund und TVT sind Aussagen von Vereinen und Stiftungen und als solche gekennzeichnet.',
-      'Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel gibt es keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation, auf den sich diese Seite stützt.',
-      'Die Regelwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.',
+      'Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel haben wir keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation gefunden.',
+      'Die Richtwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.',
       'Das Gutachten zu § 11b stammt von 1999 und ist nach Angabe der TVT an vielen Stellen veraltet; eine amtlich anerkannte Liste der Qualzuchtmerkmale gab es nach der TVT im Dezember 2023 nicht.',
-      'Zur Massenzucht von Kleintieren und Vögeln für den Handel liegen keine unabhängigen Zahlen vor, auf die sich diese Seite stützt.',
+      'Zur Massenzucht von Kleintieren und Vögeln für den Handel haben wir keine unabhängigen Zahlen gefunden.',
       'Wer züchtet, übernimmt Verantwortung für Gesundheit und Unterbringung jedes hervorgebrachten Tieres.',
     ],
   },
