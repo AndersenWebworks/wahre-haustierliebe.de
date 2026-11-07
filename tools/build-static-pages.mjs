@@ -581,6 +581,7 @@ const evidenceByPage = {
       ['Auffangstation für Reptilien München: Jahresbericht 2019', 'https://www.reptilienauffangstation.de/Aktuelles%20und%20Wissen/Downloads%20und%20Wissen/Jahresberichte/Jahresbericht%202019.pdf'],
       ['Bundesministerium: Überarbeitung der Haltungsgutachten für Zierfische und Reptilien', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html'],
       ['Europäisches Parlament: Erste EU-Regeln für Hunde und Katzen', 'https://www.europarl.europa.eu/news/de/press-room/20250616IPR28963/erste-eu-regeln-fur-wohlergehen-und-ruckverfolgbarkeit-von-hunden-und-katzen'],
+      ['EUR-Lex: Verordnung (EU) 2026/1818 über das Wohlergehen von Hunden und Katzen und deren Rückverfolgbarkeit', 'https://eur-lex.europa.eu/eli/reg/2026/1818/oj'],
     ],
     guardrails: [
       'Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.',
@@ -735,7 +736,7 @@ const evidenceByPage = {
     ],
     sources: [
       ['Deutscher Tierschutzbund: Wellensittiche richtig halten', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/'],
-      ['Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen', 'https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf'],
+      ['Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf'],
       ['Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58'],
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
       ['Tierschutzgesetz § 11c', 'https://www.gesetze-im-internet.de/tierschg/__11c.html'],
@@ -882,7 +883,7 @@ const evidenceByPage = {
       ['BMEL: Gutachten zur Auslegung von § 11b TierSchG', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html'],
       ['RVC VetCompass Brachycephaly', 'https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass'],
       ['OMIA - Online Mendelian Inheritance in Animals', 'https://omia.org/home/'],
-      ['UFAW Genetic Welfare Problems', 'https://www.ufaw.org.uk/genetic-welfare-problems-intro/genetic-welfare-problems-of-companion-animals-intro'],
+      ['Science for Animal Welfare (ehemals UFAW): Genetic Welfare Problems of Companion Animals', 'https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/'],
       ['UC Davis Veterinary Genetics Laboratory', 'https://vgl.ucdavis.edu/dna-tests/cat'],
       ['LSU Deafness in Dogs & Cats', 'https://www.lsu.edu/vetmed/deafness/index.php'],
     ],
@@ -1276,6 +1277,7 @@ const evidenceByPage = {
       ['Wildkatze Baden-Württemberg: Tierschutz', 'https://www.wildkatze-bw.de/massnahmen/tierschutz'],
       ['FVA Wildtierinstitut: Leitfaden Wildkätzchenfund', 'https://www.wildkatze-bw.de/fileadmin/user_upload/FVA_Leitfaden_Wildkaetzchenfund.pdf'],
       ['Bundesnaturschutzgesetz § 44', 'https://www.gesetze-im-internet.de/bnatschg_2009/__44.html'],
+      ['Bundesnaturschutzgesetz § 45 Abs. 5 (verletzte, hilflose oder kranke Tiere)', 'https://www.gesetze-im-internet.de/bnatschg_2009/__45.html'],
       ['Bundesnaturschutzgesetz § 46', 'https://www.gesetze-im-internet.de/bnatschg_2009/__46.html'],
       ['Bundesartenschutzverordnung § 7', 'https://www.gesetze-im-internet.de/bartschv_2005/__7.html'],
       ['Bürgerliches Gesetzbuch § 833', 'https://www.gesetze-im-internet.de/bgb/__833.html'],
@@ -1286,8 +1288,7 @@ const evidenceByPage = {
       'Zähmung, Gewöhnung und Domestikation sind nicht dasselbe: Ein einzelnes Tier wird durch Handaufzucht nicht zur Hauskatze und eine Fachstation ist kein privater Haushalt.',
       'Die Sicherheits- und Verhaltensrisiken sind nicht bloß eine Frage von Aufwand; eine Wildkatze bleibt ein Wildtier und kann in Bedrängnis beißen oder kratzen.',
       'Die konkreten artenschutzrechtlichen Anforderungen und Zuständigkeiten können vom Einzelfall und vom Bundesland abhängen; die Seite ersetzt keine Rechtsberatung.',
-      'Eine private Aufzucht macht aus einer Wildkatze kein Haustier; überlasse Haltung, Versorgung und mögliche Auswilderung genehmigten Fachstellen.',
-      'Überlasse Aufzucht und Versorgung von Wildkatzen Fachstellen mit entsprechender Genehmigung und Erfahrung.',
+      'Eine private Aufzucht macht aus einer Wildkatze kein Haustier; Haltung, Versorgung und mögliche Auswilderung gehören zu genehmigten Fachstellen mit entsprechender Erfahrung.',
       'Bei akuter Verletzung oder Gefahr immer Fachstellen einbeziehen.',
     ],
   },
@@ -3385,7 +3386,7 @@ ${buildIconLinks(prefix)}
       <div class="section">
         <div class="container article-rhythm">
           <span class="eyebrow">Pausiert</span>
-          <h1>Budgie Brain ist derzeit on hold.</h1>
+          <h1>Budgie Brain ist derzeit pausiert.</h1>
           <p>Das interaktive Wellensittich-Lernwerkzeug ist im Moment bewusst nicht Teil der öffentlichen Seite. Die Vogel-Informationen bleiben auf der normalen Vögel-Seite.</p>
           <p><a class="btn btn-primary" href="${prefix}voegel/index.html">Zur Vögel-Seite</a></p>
         </div>
