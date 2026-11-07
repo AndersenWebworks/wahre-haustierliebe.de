@@ -1356,3 +1356,9 @@ body.static-site .article-hero-media {
   min-height: 0;
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
+
+/* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
+#selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
+#selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
+#selbsttest .test-next-step .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+#selbsttest .test-share { margin-top: 1.25rem; }
