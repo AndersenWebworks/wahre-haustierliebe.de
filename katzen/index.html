@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale</title>
-  <meta name="description" content="Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag über das ganze Leben, Hilfe zur Entscheidung.">
+  <meta name="description" content="Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7080,7 +7104,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "WebPage",
   "name": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
   "headline": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
-  "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag über das ganze Leben, Hilfe zur Entscheidung.",
+  "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.",
   "url": "https://wahre-haustierliebe.de/katzen/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7164,7 +7188,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "Article",
   "headline": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
   "name": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
-  "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag über das ganze Leben, Hilfe zur Entscheidung.",
+  "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag, pro Monat und über das ganze Leben, Hilfe zur Entscheidung.",
   "url": "https://wahre-haustierliebe.de/katzen/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/katzen/index.html",
   "image": {
@@ -7515,7 +7539,11 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p class="kv-randnotiz">Katzen gelten oft als anspruchslos. Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> hält dagegen: „Doch diese Annahme ist falsch. Katzen haben ebenfalls vielfältige Bedürfnisse und ihre Haltungsanforderungen sind nicht zu unterschätzen.“</p>
 
         <div class="info-box">
-          <h3>Auf einen Blick</h3>
+          <h3>Auf einen Blick</h3><div class="article-rhythm metric-grid" data-enhancement="katzen-merkmasse">
+            <div class="metric-card"><strong>2 Katzen, 3 Toiletten</strong><span>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen. Bei zwei Katzen braucht man mindestens drei Toiletten.</span></div>
+            <div class="metric-card"><strong>13,2 von 24 Stunden</strong><span>schläft eine Katze im Mittel. Sie braucht mindestens zwei Ruheplätze, an denen niemand vorbeiläuft.</span></div>
+            <div class="metric-card"><strong>1-mal im Jahr</strong><span>gründliche Untersuchung in der Tierarztpraxis, im Seniorenalter ab zehn Jahren alle sechs Monate.</span></div>
+          </div>
           <ul>
             <li>Katzen sind keine Einzelgänger – viele brauchen einen passenden <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenossen</span>.</li>
             <li>Der Deutsche Tierschutzbund geht von mehreren Millionen Straßenkatzen in Deutschland aus; eine genaue Zahl gibt es nicht (Katzenschutzreport 2026).</li>
@@ -7526,11 +7554,6 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         </div>
 
         <div class="section-feedback-heading"><h2 id="katzen-bedarf">Was eine Katze von dir braucht</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-bedarf" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p class="kv-hinweis">Fünf Felder, immer gleich gebaut: das Maß mit Quelle, ein Bild zum Vorstellen, eine Frage an dich.</p><div class="article-rhythm metric-grid" data-enhancement="katzen-merkmasse">
-            <div class="metric-card"><strong>2 Katzen, 3 Toiletten</strong><span>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen. Bei zwei Katzen braucht man mindestens drei Toiletten.</span></div>
-            <div class="metric-card"><strong>13,2 von 24 Stunden</strong><span>schläft eine Katze im Mittel. Sie braucht mindestens zwei Ruheplätze, an denen niemand vorbeiläuft.</span></div>
-            <div class="metric-card"><strong>1-mal im Jahr</strong><span>gründliche Untersuchung in der Tierarztpraxis, im Seniorenalter ab zehn Jahren alle sechs Monate.</span></div>
-          </div>
 
         <section class="kv-feld" aria-labelledby="katzen-feld-1">
           <div class="kv-feld-kopf"><span class="kv-feld-nr">FELD 1</span><h3 id="katzen-feld-1">Artgenossen</h3></div>
@@ -7566,8 +7589,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <dd><p class="kv-mass">Futter über den Tag verteilt und mit einer Aufgabe verbunden, nicht nur ein voller Napf.</p>
               <p>Als Einzeljäger fängt eine Katze nach <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a> etwa 10 bis 20 kleine Beutetiere am Tag. Die Leitlinien empfehlen deshalb, dass sich die Katze ihr Futter erarbeitet, zum Beispiel mit Futterspielzeug; der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt Fummelbretter. Toilette, Futter- und Wasserstellen stehen möglichst weit auseinander. Wie viel und wie oft deine Katze fressen soll, sagt dir die Tierarztpraxis, je nach Alter und Gewicht.</p></dd>
             <dt>Zum Vorstellen</dt>
-            <dd><p>10 bis 20 Beutetiere in 24 Stunden sind rechnerisch alle 1,2 bis 2,4 Stunden eine kleine Mahlzeit. Das beschreibt das Verhalten der Art und ist kein Fütterungsplan. Was Futter im Jahr kostet, steht auf der Seite <a href="../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>: 350 bis 700 Euro.</p>
-              <p class="kv-rechnung">Rechnung: 24 ÷ 20 = 1,2; 24 ÷ 10 = 2,4.</p></dd>
+            <dd><p>10 bis 20 Beutetiere in 24 Stunden sind rechnerisch alle 1,2 bis 2,4 Stunden eine kleine Mahlzeit. Das beschreibt das Verhalten der Art und ist kein Fütterungsplan. Was Futter im Jahr kostet, steht auf der Seite <a href="../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>: 350 bis 700 Euro im Jahr, das sind rund 29 bis 58 Euro im Monat.</p>
+              <p class="kv-rechnung">Rechnung: 24 ÷ 20 = 1,2; 24 ÷ 10 = 2,4; 350 ÷ 12 = 29,2; 700 ÷ 12 = 58,3.</p></dd>
             <dt class="kv-t-frage">Frage an dich</dt>
             <dd class="kv-frage">Wie kann das Futter bei dir Beschäftigung sein, und wer füttert, wenn du nicht da bist?</dd>
           </dl>
@@ -7597,12 +7620,11 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <dd><p>Wird eine Katze 16 Jahre alt, sind das mindestens 16 Untersuchungen, in den Seniorenjahren zwei pro Jahr.</p>
               <p class="kv-rechnung">Rechnung: 16 Jahre × 1 Untersuchung pro Jahr = 16.</p></dd>
             <dt class="kv-t-frage">Frage an dich</dt>
-            <dd class="kv-frage">Kennst du eine Tierarztpraxis in deiner Nähe, und weißt du, wohin du nachts oder am Wochenende fährst? Hilfe dazu: <a href="../notfall/tierarzt-notdienst/index.html">Tierärztlichen Notdienst finden</a>.</dd>
+            <dd class="kv-frage">Kennst du eine Tierarztpraxis in deiner Nähe, und weißt du, wohin du im Notfall nachts oder am Wochenende mit deiner Katze fährst? Hilfe dazu: <a href="../notfall/tierarzt-notdienst/index.html">Tierärztlichen Notdienst finden</a>.</dd>
           </dl>
         </section>
 
         <div class="section-feedback-heading"><h2 id="katzen-tag">Ein Tag aus Sicht von zwei Katzen</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <span class="kv-beispiel-tag">Beispiel, keine echten Tiere</span>
         <ol class="zeitleiste">
           <li><span class="zeitleiste-when">Den größten Teil des Tages: Ruhe</span><p class="zeitleiste-what">Zwei Katzen schlafen im Mittel mehr als 13 Stunden. Dafür brauchen sie mindestens zwei Plätze, an die sie sich zurückziehen können, und niemanden, der sie dort herausholt.</p></li>
           <li><span class="zeitleiste-when">Zwischendurch: Jagd und Spiel</span><p class="zeitleiste-what">Katzen jagen allein und fangen in der Natur viele kleine Beutetiere. In der Wohnung ersetzen Spielzeug, das Beute nachahmt, und Futtersuche dieses Verhalten. Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt, daraus ein festes Ritual zu einer bestimmten Tageszeit zu machen.</p></li>
@@ -7611,23 +7633,23 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <li><span class="zeitleiste-when">Bei Lärm oder Besuch: Rückzug</span><p class="zeitleiste-what">Sich zu verstecken ist ein Weg, mit Stress umzugehen. Ein Platz, an dem eine Katze nicht gesehen wird, gehört deshalb zur Grundausstattung und ist keine Dekoration (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/" target="_blank" rel="noopener noreferrer">AAFP und ISFM</a>).</p></li>
           <li><span class="zeitleiste-when">Einmal im Jahr: du</span><p class="zeitleiste-what">Gründliche Untersuchung in der Tierarztpraxis, im Seniorenalter alle sechs Monate.</p></li>
         </ol>
-        <p class="text-muted">Das Beispiel beschreibt zwei Katzen in reiner Wohnungshaltung. Freigänger erleben einen anderen Tag.</p>
+        <p class="text-muted">Gemeint sind zwei Katzen in reiner Wohnungshaltung. Freigänger erleben einen anderen Tag.</p>
 
         <div class="section-feedback-heading"><h2 id="katzen-lebenszeit">Was eine Katze über ihr ganzes Leben kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-lebenszeit" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p>Zuerst die Zahl über das ganze Leben, danach erst der Preis aus der Anzeige oder die Schutzgebühr.</p>
         <div class="kv-fakten">
-          <div><span class="kv-zahl">1,70 bis 3,70 €</span><span class="kv-zahl-text">am Tag für eine gesunde Einzelkatze, ohne Notfälle, Betreuung und Urlaub</span></div>
-          <div><span class="kv-zahl">10.100 bis 21.600 €</span><span class="kv-zahl-text">über 16 Jahre, im Mittel rund 15.800 Euro</span></div>
-          <div class="kv-klein"><span class="kv-zahl">etwa 1 %</span><span class="kv-zahl-text">der Gesamtsumme macht die Schutzgebühr aus (100 bis 250 Euro)</span></div>
+          <div><span class="kv-zahl">1,70 bis 3,70&nbsp;€</span><span class="kv-zahl-text">am Tag für eine gesunde Einzelkatze, ohne Notfälle, Betreuung und Urlaub</span></div>
+          <div><span class="kv-zahl">53 bis 112&nbsp;€</span><span class="kv-zahl-text">im Monat, über 16 Jahre gerechnet und mit den einmaligen Kosten</span></div>
+          <div><span class="kv-zahl">10.100 bis 21.600&nbsp;€</span><span class="kv-zahl-text">über 16 Jahre, im Mittel rund 15.800 Euro</span></div>
+          <div class="kv-klein"><span class="kv-zahl">etwa 1&nbsp;%</span><span class="kv-zahl-text">der Gesamtsumme macht die Schutzgebühr aus (100 bis 250 Euro)</span></div>
         </div>
-        <p class="kv-rechnung">Rechnung: einmalig 480 bis 1.250 Euro (Schutzgebühr 100–250, Erstausstattung 200–500, Erstuntersuchung mit Impfungen und Chip 120–250, Kastration 60–250) plus 600 bis 1.270 Euro im Jahr (Futter 350–700, Streu 120–250, Routine-Tierarzt 80–200, Kleinkram 50–120), mal 16 Jahre: 10.080 bis 21.570 Euro. 16 Jahre sind 5.840 Tage: 10.080 ÷ 5.840 = 1,73; 21.570 ÷ 5.840 = 3,69.</p>
-        <p>Zur Gegenprobe: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze, das sind rund 2,30 Euro am Tag. Die Einzelposten und ihre Quellen stehen auf der Seite <a href="../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>.</p>
+        <p class="kv-rechnung">Rechnung: einmalig 480 bis 1.250 Euro (Schutzgebühr 100–250, Erstausstattung 200–500, Erstuntersuchung mit Impfungen und Chip 120–250, Kastration 60–250) plus 600 bis 1.270 Euro im Jahr (Futter 350–700, Streu 120–250, Routine-Tierarzt 80–200, Kleinkram 50–120), mal 16 Jahre: 10.080 bis 21.570 Euro. 16 Jahre sind 5.840 Tage: 10.080 ÷ 5.840 = 1,73; 21.570 ÷ 5.840 = 3,69. Im Monat: 16 Jahre sind 192 Monate, 10.080 ÷ 192 = 52,50 und 21.570 ÷ 192 = 112,34 Euro, gerundet 53 bis 112 Euro.</p>
+        <p>Zur Gegenprobe: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze, das sind rund 2,30 Euro am Tag und rund 69 Euro im Monat (13.300 ÷ 192 = 69,27). Die Einzelposten und ihre Quellen stehen auf der Seite <a href="../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>.</p>
         <p><strong>Plane vor dem Einzug mit dem Tagesbetrag.</strong> Richte drei Monate vorher einen Dauerauftrag ein, der monatlich 50 bis 105 Euro auf ein eigenes Konto legt. Wenn dir das schwerfällt, ist das schon die Antwort: noch warten.</p>
 
         <div class="section-feedback-heading"><h2 id="katzen-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="kv-bedenkzeit">
           <p><strong>Eine Katze muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst das Tier an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite. Ob eine Bedenkzeit die spätere Haltung verbessert, ist bei Heimtieren nicht untersucht. Wer dir keine Zeit lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst das Tier an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist bei Heimtieren nicht untersucht. Wer dir keine Zeit lässt, nimmt dir die Entscheidung ab.</p>
         </div>
         <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt, sich zuerst in Tierheimen umzusehen; dort warten auch ältere Katzen auf ein Zuhause. Die Reihenfolge, die wir empfehlen: erst Tierheim und Tierschutzverein, danach alles andere. Die Wenn-dann-Karte für den Besuch beim Anbieter und die Checkliste findest du auf der Seite <a href="../katzen/entscheidung/index.html">Kätzchen aufnehmen: was du wirklich wissen musst</a>.</p>
         <div class="kv-wege">
@@ -7681,7 +7703,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <article class="card">
             <div class="card-body">
               <h3>Was eine Katze wirklich kostet</h3>
-              <p>Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</p>
+              <p>Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</p>
               <a class="card-link" href="../katzen/kosten/index.html">Thema öffnen</a>
             </div>
           </article>
@@ -7734,7 +7756,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen, und zu einer Toilette mehr, als Katzen im Haus leben.</li><li>AAFP und ISFM nennen mindestens zwei Ruheplätze, zwei Futterstellen und zwei Toilettenorte an getrennten Stellen.</li><li>Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.</li><li>Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre.</li><li>Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.</li><li>Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.</li></ul>
+              <ul><li>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen, und zu einer Toilette mehr, als Katzen im Haus leben.</li><li>AAFP und ISFM nennen mindestens zwei Ruheplätze, zwei Futterstellen und zwei Toilettenorte an getrennten Stellen.</li><li>Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.</li><li>Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag, das sind rund 53 bis 112 Euro im Monat (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre, rund 69 Euro im Monat.</li><li>Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.</li><li>Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>

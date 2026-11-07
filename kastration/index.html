@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7548,7 +7572,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <div class="section-feedback-heading"><h2 id="kastration-die-entscheidende-frage-bei-wohnungskatzen">Die entscheidende Frage bei Wohnungskatzen</h2><button type="button" class="section-feedback-action" data-feedback-section="kastration-die-entscheidende-frage-bei-wohnungskatzen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p><strong>„Sie kann doch nicht trächtig werden“ beantwortet nur die Frage nach Nachwuchs.</strong> Der Körper einer unkastrierten Kätzin durchläuft trotzdem hormonelle Zyklen. Eierstöcke und Gebärmutter bleiben aktiv. Damit bleiben auch Erkrankungen möglich, die nichts mit Freigang oder einem Deckakt zu tun haben.</p>
         <p>Die wichtigsten gesundheitlichen Gründe betreffen nicht Gebärmuttertumore, sondern vor allem die <strong>Gebärmuttervereiterung</strong> und <strong>Gesäugetumore</strong>. In einer großen schwedischen Versicherungsstudie trat die Gebärmuttervereiterung bei Katzen mit zunehmendem Alter häufiger auf, besonders deutlich ab sieben Jahren. Von den erkrankten Katzen starben 5,7 Prozent. Das ist die Sterblichkeit unter den erkrankten Tieren, nicht der Anteil aller unkastrierten Katzen.</p>
-        <p>Bei Gesäugetumoren ist frühes Handeln wichtig. Eine Studie, die erkrankte mit gesunden Katzen vergleicht (Fall-Kontroll-Studie), fand bei Katzen, die vor dem Alter von sechs Monaten kastriert wurden, ein um 91 Prozent geringeres Risiko für Gesäugekrebs (Mammakarzinom) als bei unkastrierten Katzen. Bei einer Kastration vor zwölf Monaten lag das Risiko um 86 Prozent niedriger. Solche Zahlen zeigen einen statistischen Zusammenhang aus einer Beobachtungsstudie, keine Garantie für das einzelne Tier. Der Zusammenhang ist trotzdem wichtig, denn etwa 80 bis 90 Prozent der Gesäugetumore bei Katzen sind bösartig.</p>
+        <p>Bei Gesäugetumoren ist frühes Handeln wichtig: Katzen, die den Hormonen ihrer Eierstöcke ausgesetzt sind, erkranken laut Merck Veterinary Manual häufiger, und der Schutz durch die Kastration nimmt mit dem Alter rasch ab. Eine Studie, die erkrankte mit gesunden Katzen vergleicht (Fall-Kontroll-Studie), fand bei Katzen, die vor dem Alter von sechs Monaten kastriert wurden, ein um 91 Prozent geringeres Risiko für Gesäugekrebs (Mammakarzinom) als bei unkastrierten Katzen. Bei einer Kastration vor zwölf Monaten lag das Risiko um 86 Prozent niedriger. Solche Zahlen zeigen einen statistischen Zusammenhang aus einer Beobachtungsstudie, keine Garantie für das einzelne Tier. Der Zusammenhang ist trotzdem wichtig, denn etwa 80 bis 90 Prozent der Gesäugetumore bei Katzen sind bösartig.</p>
 
         <div class="section-feedback-heading"><h2 id="kastration-was-kastration-und-sterilisation-unterscheiden">Was Kastration und Sterilisation unterscheiden</h2><button type="button" class="section-feedback-action" data-feedback-section="kastration-was-kastration-und-sterilisation-unterscheiden" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Bei der <strong><span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Hoden oder Eierstöcke. Verhindert Nachwuchs und beendet die Hormonbildung dort weitgehend." data-glossary-href="../glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span></strong> werden die <span class="glossary-term" data-glossary-key="keimdruese" data-glossary-title="Keimdrüsen" data-glossary-text="Hoden oder Eierstöcke. Sie bilden Keimzellen und wichtige Geschlechtshormone." data-glossary-href="../glossar/index.html#keimdruese" aria-describedby="glossary-term-popover" tabindex="0" role="button">Keimdrüsen</span> entfernt: beim männlichen Tier die Hoden, beim weiblichen Tier die Eierstöcke. Abhängig von Tierart, Befund und Operationsmethode kann bei weiblichen Tieren zusätzlich die Gebärmutter entfernt werden. Ohne Erkrankung der Gebärmutter reicht bei Hündinnen und Kätzinnen häufig die Entfernung der Eierstöcke aus.</p>
@@ -7604,7 +7628,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         </ul>
 
         <h3>Woran eine Gebärmuttervereiterung auffallen kann</h3>
-        <p>Eine <span class="glossary-term" data-glossary-key="pyometra" data-glossary-title="Pyometra" data-glossary-text="Gebärmuttervereiterung. Lebensbedrohlich und bei unkastrierten Hündinnen und Katzen ein Notfall." data-glossary-href="../glossar/index.html#pyometra" aria-describedby="glossary-term-popover" tabindex="0" role="button">Pyometra</span> ist ein tierärztlicher Notfall. Mögliche Zeichen sind Mattigkeit, Fressunlust, Fieber oder Untertemperatur, Erbrechen, ein deutlich vermehrter Durst, häufigeres Urinieren, ein gespannter Bauch und übel riechender Ausfluss. Bei einer geschlossenen Pyometra kann der Ausfluss vollständig fehlen. Warte bei solchen Zeichen nicht auf den nächsten Werktag.</p>
+        <p>Eine <span class="glossary-term" data-glossary-key="pyometra" data-glossary-title="Pyometra" data-glossary-text="Gebärmuttervereiterung. Lebensbedrohlich und bei unkastrierten Hündinnen und Katzen ein Notfall." data-glossary-href="../glossar/index.html#pyometra" aria-describedby="glossary-term-popover" tabindex="0" role="button">Pyometra</span> ist ein tierärztlicher Notfall. Mögliche Zeichen sind Mattigkeit, Fressunlust, Fieber oder Untertemperatur, Erbrechen, ein deutlich vermehrter Durst, häufigeres Urinieren, ein gespannter Bauch und übel riechender Ausfluss. Bei einer geschlossenen Pyometra kann der Ausfluss vollständig fehlen. Warte bei solchen Zeichen nicht auf den nächsten Werktag, sondern nutze auch nachts und am Wochenende den tierärztlichen Notdienst.</p>
 
         <h3>Wann kastrieren?</h3>
         <p>Katzen können bereits mit vier bis sechs Monaten geschlechtsreif werden. Die American Association of Feline Practitioners unterstützt die Kastration von Katzen, die nicht zur Zucht vorgesehen sind, bis zum Alter von fünf Monaten. Die WSAVA hält bei gesunden, gut entwickelten und geimpften Katzen eine Kastration ab etwa drei bis vier Monaten für möglich. Der konkrete Termin gehört in die Tierarztpraxis: Gewicht, Gesundheitszustand, Impfstatus und Operationsverfahren müssen passen.</p>
@@ -7623,8 +7647,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
         <h3>Welche Nachteile bei Hündinnen mitbedacht werden müssen</h3>
         <ul>
-          <li><strong>Harninkontinenz:</strong> Die WSAVA nennt fünf bis 20 Prozent kastrierter Hündinnen. Das Risiko ist unter anderem bei früh kastrierten Hündinnen mit einem späteren Körpergewicht über 25 Kilogramm erhöht.</li>
-          <li><strong>Gelenke und Wachstum:</strong> Bei einigen großen Rassen ist eine Kastration vor Abschluss der körperlichen Entwicklung mit mehr Hüft- und Ellenbogenerkrankungen oder Kreuzbandrissen verbunden. Das Muster unterscheidet sich nach Rasse und Geschlecht.</li>
+          <li><strong>Harninkontinenz:</strong> Die WSAVA nennt fünf bis 20 Prozent kastrierter Hündinnen. Als Ursache gilt meist der Mangel an Geschlechtshormonen, der den Verschluss der Harnröhre schwächt (Merck Veterinary Manual). Das Risiko ist unter anderem bei früh kastrierten Hündinnen mit einem späteren Körpergewicht über 25 Kilogramm erhöht.</li>
+          <li><strong>Gelenke und Wachstum:</strong> Bei einigen großen Rassen ist eine Kastration vor Abschluss der körperlichen Entwicklung mit mehr Hüft- und Ellenbogenerkrankungen oder Kreuzbandrissen verbunden. Das Muster unterscheidet sich nach Rasse und Geschlecht. Als wahrscheinlicher Mechanismus gilt: Geschlechtshormone lassen die Wachstumsfugen der Röhrenknochen sich schließen; wird deutlich vorher kastriert, wachsen die Knochen etwas länger, und die Gelenkachsen können dadurch aus dem Lot geraten (Hart et al. 2020).</li>
           <li><strong>Bestimmte Tumorerkrankungen:</strong> Für einzelne Rassen und Kastrationszeitpunkte wurden erhöhte Risiken beschrieben. Daraus folgt keine allgemeine Aussage „Kastration verursacht Krebs“, sondern die Notwendigkeit einer rasse- und altersbezogenen Abwägung.</li>
           <li><strong>Stoffwechsel und Gewicht:</strong> Der Energiebedarf kann sinken. Fütterung und Bewegung müssen angepasst werden.</li>
           <li><strong>Verhalten:</strong> Eine Kastration behandelt keine Erziehungsfehler und keine Angststörung. Unsicherheit oder bestimmte Formen von Aggression können unverändert bleiben oder sich verschlechtern.</li>
@@ -7704,7 +7728,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
         <div class="warning-box">
           <h3>Die Grenze dieser Seite</h3>
-          <p>Die Forschung zeigt deutliche Unterschiede zwischen Tierarten, Geschlechtern, Rassen und Altersgruppen. Sie kann nicht aus der Ferne entscheiden, wann dein Tier operiert werden sollte. Nimm diese Seite als Grundlage für ein konkretes Gespräch mit einer Tierarztpraxis, die dein Tier untersucht und die Besonderheiten seiner Art kennt.</p>
+          <p>Die Forschung zeigt deutliche Unterschiede zwischen Tierarten, Geschlechtern, Rassen und Altersgruppen. Wann dein Tier operiert werden sollte, entscheidest du gemeinsam mit einer Tierarztpraxis, die dein Tier untersucht und die Besonderheiten seiner Art kennt.</p>
         </div>
 
 

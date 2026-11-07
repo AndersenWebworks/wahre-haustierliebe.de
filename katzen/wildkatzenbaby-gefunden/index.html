@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7563,7 +7587,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <li>Die Wildkatze braucht strukturreiche, möglichst störungsarme Lebensräume und sehr große Streifgebiete. Eine Wohnung, ein Garten oder ein gewöhnliches Katzengehege kann diesen Lebensraum nicht ersetzen.</li>
             <li>Menschliche Nähe, Haushaltslärm, fremde Gerüche, Berührungen und wechselnde Personen bedeuten für ein Wildtier nicht automatisch Sicherheit. Sie können dauerhaften Stress auslösen, auch wenn das Tier nicht ständig sichtbar aggressiv ist.</li>
             <li>Eine Handaufzucht nimmt der Wildkatze ihre natürlichen Bedürfnisse nicht. Sie braucht Rückzug, Jagdverhalten, Scheu und die Möglichkeit, Abstand zu Menschen zu halten.</li>
-            <li>Falsche Versorgung kann schnell gefährlich werden. Normales Katzenfutter kann bei jungen Wildkatzen massiven Durchfall auslösen. Kontakt zu Hauskatzen kann Krankheiten oder Parasiten übertragen.</li>
+            <li>Falsche Versorgung kann schnell gefährlich werden. Normales Katzenfutter kann bei jungen Wildkatzen massiven Durchfall auslösen; sehr kleine Tiere brauchen spezielle Katzenaufzuchtmilch (Wildkatze Baden-Württemberg). Kontakt zu Hauskatzen kann Krankheiten oder Parasiten übertragen.</li>
             <li>Eine private Aufzucht kann die spätere Auswilderung erschweren oder verhindern. Wenn das Tier Menschen zu stark zugeordnet ist oder wichtige Verhaltensweisen nicht unter möglichst natürlichen Bedingungen entwickeln kann, verliert es seine Chance auf ein Leben in freier Wildbahn.</li>
             <li>Was wie Fürsorge aussieht, kann deshalb genau das Gegenteil bewirken: Das Tier verliert seine Mutter, seine natürliche Aufzucht und möglicherweise die Möglichkeit, später wieder in seinem Lebensraum zu leben.</li>
           </ul>
@@ -7591,7 +7615,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <ol class="checklist">
           <li><strong>Abstand halten.</strong> Leise zurückgehen, Kinder und Hunde fernhalten, nicht locken.</li>
           <li><strong>Nicht anfassen.</strong> Nicht hochnehmen, nicht streicheln, nicht in eine Box setzen.</li>
-          <li><strong>Nicht füttern.</strong> Normales Katzenfutter kann bei Wildkatzenjungen schwere Verdauungsprobleme auslösen; außerdem erschwert Füttern die Einschätzung.</li>
+          <li><strong>Nicht füttern.</strong> Normales Katzenfutter kann bei Wildkatzenjungen schweren Durchfall auslösen, und sehr kleine Tiere brauchen spezielle Aufzuchtmilch; außerdem erschwert Füttern die Einschätzung.</li>
           <li><strong>Fundort merken.</strong> GPS-Punkt speichern, Wegbeschreibung notieren, markante Bäume, Wege oder Holzpolter merken.</li>
           <li><strong>Fotos nur aus Distanz machen.</strong> Wenn möglich mehrere Perspektiven: Gesicht, Rückenlinie, Schwanz, Hinterfüße. Kein Blitz, kein Annähern für ein besseres Bild.</li>
           <li><strong>Aus der Ferne prüfen.</strong> Wenn keine akute Gefahr besteht, nach einigen Stunden aus Abstand kontrollieren, ob das Jungtier noch dort ist. Nicht in der Nähe warten: Die Mutter kann wegen deiner Anwesenheit fernbleiben.</li>
@@ -7617,15 +7641,14 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <tr><td data-label="Merkmal">Schwanz</td><td data-label="Hinweis auf Wildkatze">Buschig, stumpf endend, dunkle Ringe, schwarzes Ende</td><td data-label="Hinweis auf Hauskatze">Oft spitzer, dünner, Ringe und Muster können bis in die Spitze laufen</td></tr>
             <tr><td data-label="Merkmal">Rückenlinie</td><td data-label="Hinweis auf Wildkatze">Dunkler Aalstrich endet meist an der Schwanzwurzel</td><td data-label="Hinweis auf Hauskatze">Rückenlinie läuft bei getigerten Hauskatzen häufig weiter über den Schwanz</td></tr>
             <tr><td data-label="Merkmal">Nase und Kopf</td><td data-label="Hinweis auf Wildkatze">Heller Nasenspiegel, breiter und wuchtiger Kopf, kräftige Tasthaare</td><td data-label="Hinweis auf Hauskatze">Sehr unterschiedlich; eine wildfarbene Hauskatze kann ähnliche Merkmale haben</td></tr>
-            <tr><td data-label="Merkmal">Gesamteindruck</td><td data-label="Hinweis auf Wildkatze">Mehrere Merkmale passen zusammen: Fundort, Schwanz, Aalstrich und Verhalten</td><td data-label="Hinweis auf Hauskatze">Kein einzelnes Merkmal beweist eine Hauskatze</td></tr>
-            <tr><td data-label="Merkmal">Sicherheit</td><td data-label="Hinweis auf Wildkatze">Mehrere Hinweise zusammen ergeben Verdacht, keine Gewissheit</td><td data-label="Hinweis auf Hauskatze">Auch eine wildfarbene Hauskatze kann wildkatzenähnlich aussehen</td></tr>
+            <tr><td data-label="Merkmal">Gesamteindruck</td><td data-label="Hinweis auf Wildkatze">Mehrere Merkmale passen zusammen: Fundort, Schwanz, Aalstrich und Verhalten. Das ergibt einen Verdacht, keine Gewissheit</td><td data-label="Hinweis auf Hauskatze">Kein einzelnes Merkmal beweist eine Hauskatze</td></tr>
           </tbody>
         </table>
 
         <div class="section-feedback-heading"><h2 id="wildkatzenbaby-gefunden-was-du-nicht-tun-solltest">Was du nicht tun solltest</h2><button type="button" class="section-feedback-action" data-feedback-section="wildkatzenbaby-gefunden-was-du-nicht-tun-solltest" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ul>
           <li><strong>Nicht „retten“, weil es allein ist.</strong> Allein gefunden heißt bei Wildtieren nicht automatisch verlassen. Die Mutter kann in der Nähe sein und nur auf Nahrungssuche gehen.</li>
-          <li><strong>Nicht in ein Tierheim bringen, wenn Wildkatzenverdacht besteht.</strong> Dort kann Kontakt zu Hauskatzenkrankheiten gefährlich werden.</li>
+          <li><strong>Nicht in ein Tierheim bringen, wenn Wildkatzenverdacht besteht.</strong> Im Tierheim besteht für Wildkatzen laut BUND Thüringen eine extreme Ansteckungsgefahr mit diversen Katzenkrankheiten, die oft tödlich enden.</li>
           <li><strong>Nicht mit Hauskatzen zusammenbringen.</strong> Auch kurze Kontakte können ein Risiko sein.</li>
           <li><strong>Nicht normales Katzenfutter oder Katzenmilch geben.</strong> Falsche Fütterung kann Jungtiere zusätzlich schwächen.</li>
           <li><strong>Nicht auf Social Media nach Laienmeinungen entscheiden.</strong> Fotos können helfen, aber die Entscheidung gehört zu fachkundigen Stellen.</li>
@@ -7663,7 +7686,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <li>Allein heißt nicht verlassen.</li>
             <li>Nicht anfassen, nicht füttern, nicht mitnehmen.</li>
             <li>Fundort und Uhrzeit notieren, Fotos aus Distanz machen.</li>
-            <li>Nach 6 bis 12 Stunden aus Abstand prüfen, wenn keine akute Gefahr besteht.</li>
+            <li>Nach 6 bis 12&nbsp;Stunden aus Abstand prüfen, wenn keine akute Gefahr besteht.</li>
             <li>Bei Sorge Fachstelle kontaktieren, nicht privat aufziehen.</li>
           </ul>
         </div>

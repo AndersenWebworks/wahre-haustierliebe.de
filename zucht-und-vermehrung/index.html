@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7668,10 +7692,10 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <tr><td data-label="Tierart und Rasse">Wellensittich: Haube, Schau</td><td data-label="Was die Quellen nennen">Mehr dazu auf der Seite <a href="../voegel/qualzucht/index.html">Schauwellensittiche und Qualzucht</a>.</td></tr>
           </tbody>
         </table>
-        <p>Die Rassekrankheiten, ihre Anzeichen und die Tierarten, die sie betreffen, beschreibt die Seite <a href="../qualzucht/index.html#qualzucht-wenn-ein-rassestandard-zur-diagnose-wird">Qualzucht: Wenn ein Rassestandard zur Diagnose wird</a>. Hier geht es nur um die Folge für die Wahl des Züchters: Die Frage „Hat der Züchter Papiere und ist er im Verein?“ reicht nicht. Die zweite Frage lautet: Welche gesundheitlichen Probleme sind in dieser Rasse bekannt, und was sagen unabhängige Fachquellen dazu?</p>
+        <p>Die Rassekrankheiten, ihre Anzeichen und die Tierarten, die sie betreffen, beschreibt die Seite <a href="../qualzucht/index.html#qualzucht-wenn-ein-rassestandard-zur-diagnose-wird">Qualzucht: Wenn ein Rassestandard zur Diagnose wird</a>. Für die Wahl des Züchters heißt das: Die Frage „Hat der Züchter Papiere und ist er im Verein?“ reicht nicht. Die zweite Frage lautet: Welche gesundheitlichen Probleme sind in dieser Rasse bekannt, und was sagen unabhängige Fachquellen dazu?</p>
         <h3>Was § 11b Tierschutzgesetz sagt</h3>
         <p>Das Tierschutzgesetz verbietet es, Wirbeltiere zu züchten, wenn nach züchterischen Erkenntnissen zu erwarten ist, dass bei der Nachzucht oder deren Nachkommen erblich bedingt Körperteile oder Organe für den artgemäßen Gebrauch fehlen, untauglich oder umgestaltet sind und dadurch Schmerzen, Leiden oder Schäden auftreten (<a href="https://www.gesetze-im-internet.de/tierschg/__11b.html" target="_blank" rel="noopener noreferrer">§ 11b Absatz 1 TierSchG</a>). Verboten ist die Zucht auch, wenn bei den Nachkommen erbliche Verhaltensstörungen mit Leiden verbunden sind, wenn der artgemäße Kontakt mit Artgenossen zu Schmerzen oder vermeidbaren Leiden führt oder wenn die Haltung nur unter Schmerzen oder vermeidbaren Leiden möglich ist. Entscheidend sind die Folgen für das Tier, nicht Papiere oder die Mitgliedschaft in einem Verband. Eine Zuchterlaubnis oder eine Vereinsmitgliedschaft nimmt dem Züchter diese Pflicht nicht ab.</p>
-        <p>Dass es im Alltag trotzdem Qualzucht gibt, hat mit der Durchsetzung zu tun. Nach der TVT gibt es in Deutschland keine amtlich anerkannte Liste der Qualzuchtmerkmale (Stand Dezember 2023); das Ministerium dürfte dazu nach § 11b Absatz 4 eine Verordnung erlassen. Der Tierschutzbund schreibt, dass das Verbot in der Umsetzung vage bleibt und bisher nur für einzelne Zuchten Verbote angeordnet und durchgesetzt wurden. Ob ein Verstoß vorliegt, entscheidet die zuständige Behörde im Einzelfall; diese Seite urteilt nicht über einzelne Züchter. Für Hunde und Katzen schreibt die <a href="https://eur-lex.europa.eu/eli/reg/2026/1818/oj/deu" target="_blank" rel="noopener noreferrer">EU-Verordnung 2026/1818</a> vor: Zuchtbetriebe dürfen keine Tiere mit „übermäßig ausgeprägten Körpermerkmalen“ zur Zucht einsetzen, wenn diese ein hohes Risiko für das Wohlergehen der Tiere oder ihrer Nachkommen mit sich bringen. Das gilt ab dem 1. Juli 2030. Welche Merkmale gemeint sind, legt die EU-Kommission bis Ende Juni 2030 fest.</p>
+        <p>Dass es im Alltag trotzdem Qualzucht gibt, hat mit der Durchsetzung zu tun. Nach der TVT gibt es in Deutschland keine amtlich anerkannte Liste der Qualzuchtmerkmale (Stand Dezember 2023); das Ministerium dürfte dazu nach § 11b Absatz 4 eine Verordnung erlassen. Der Tierschutzbund schreibt, dass das Verbot in der Umsetzung vage bleibt und bisher nur für einzelne Zuchten Verbote angeordnet und durchgesetzt wurden. Ob ein Verstoß vorliegt, entscheidet die zuständige Behörde im Einzelfall. Für Hunde und Katzen schreibt die <a href="https://eur-lex.europa.eu/eli/reg/2026/1818/oj/deu" target="_blank" rel="noopener noreferrer">EU-Verordnung 2026/1818</a> vor: Zuchtbetriebe dürfen keine Tiere mit „übermäßig ausgeprägten Körpermerkmalen“ zur Zucht einsetzen, wenn diese ein hohes Risiko für das Wohlergehen der Tiere oder ihrer Nachkommen mit sich bringen. Das gilt ab dem 1. Juli 2030. Welche Merkmale gemeint sind, legt die EU-Kommission bis Ende Juni 2030 fest.</p>
 
         <div class="section-feedback-heading"><h2 id="was-papiere-belegen">Was Papiere belegen – und was nicht</h2><button type="button" class="section-feedback-action" data-feedback-section="was-papiere-belegen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Eine <span class="glossary-term" data-glossary-key="ahnentafel" data-glossary-title="Ahnentafel" data-glossary-text="Auszug aus dem Zuchtbuch eines Zuchtvereins. Sie belegt die Abstammung, nicht die Gesundheit." data-glossary-href="../glossar/index.html#ahnentafel" aria-describedby="glossary-term-popover" tabindex="0" role="button">Ahnentafel</span> wirkt wie ein Gütesiegel. Sie ist keines. Nach der Zuchtordnung des Verbands für das Deutsche Hundewesen (VDH) dokumentiert das <a href="https://www.vdh.de/fileadmin/media/ueber/downloads/satzung/2025/VDH-Zucht-Ordnung__VDH-ZO__mit_allen_Durchfuehrungsbestimmungen.pdf" target="_blank" rel="noopener noreferrer">Zuchtbuch die Abstammung</a> der Hunde; die Ahnentafel ist ein Auszug daraus. Sie ist ein Abstammungsnachweis, kein Gesundheitszeugnis.</p>
@@ -7693,7 +7717,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <tr><td data-label="Tierart">Katze: Perser</td><td data-label="Untersuchung">Gentest auf PKD</td><td data-label="Was sie zeigt und was nicht">Laut QUEN wird PKD dominant vererbt: Schon eine geerbte Kopie des Gens (PKD-1) genügt. Ein Gentest ist verfügbar.</td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Untersuchungen senken Risiken, sie garantieren kein gesundes Tier. Die Aufzählung ist eine Auswahl nach den genannten Quellen, keine vollständige Liste für jede Rasse.</p>
+        <p class="text-muted">Untersuchungen senken Risiken, sie garantieren kein gesundes Tier.</p>
 
         <div class="section-feedback-heading"><h2 id="einmal-junge-vor-kastration">„Sie soll vorher einmal Junge bekommen“</h2><button type="button" class="section-feedback-action" data-feedback-section="einmal-junge-vor-kastration" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Auch ein einziger geplanter Wurf ist Zucht. Für einen gesundheitlichen oder seelischen Vorteil durch diesen Wurf gibt es bei Hündinnen und Kätzinnen keinen tiermedizinischen Beleg. Eine frühere Trächtigkeit schützt nicht vor einer späteren Gebärmuttervereiterung. Trächtigkeit, Geburt und Aufzucht bringen stattdessen eigene Risiken für das Muttertier und die Jungtiere mit sich.</p>
@@ -7729,7 +7753,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <li>Impfpass, Heimtierausweis oder Ahnentafel sollen „später nachgeschickt“ werden</li>
           <li>der Chip ist nicht gesetzt oder nicht registriert; Impfung und Registrierung des Chips seien angeblich „Sache des Käufers“</li>
         </ul>
-        <p>Die Landestierschutzbeauftragte von Nordrhein-Westfalen rät, die Chipnummer bei der Übergabe auszulesen und mit dem Ausweis abzugleichen. Bei Verdacht gilt: auf den Kauf verzichten und das Veterinäramt oder die Polizei informieren. Die Quellen: <a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-hund/was-man-ueber-illegale-online-welpenhaendler-wissen-muss" target="_blank" rel="noopener noreferrer">VIER PFOTEN: Taktiken illegaler Welpenverkäufer (2022)</a> und das <a href="https://www.mlv.nrw.de/wp-content/uploads/2023/08/Flyer-illegaler-Welpenhandel.pdf" target="_blank" rel="noopener noreferrer">Faltblatt der Tierschutzbeauftragten NRW</a>. Zum Alter der Welpen steht mehr auf der Seite <a href="../hunde/abgabealter/index.html">Abgabealter beim Welpen</a>.</p>
+        <p>Die Landestierschutzbeauftragte von Nordrhein-Westfalen rät, die Chipnummer bei der Übergabe auszulesen und mit dem Ausweis abzugleichen. Bei Verdacht gilt: auf den Kauf verzichten und das Veterinäramt oder die Polizei informieren. Nachlesen: <a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-hund/was-man-ueber-illegale-online-welpenhaendler-wissen-muss" target="_blank" rel="noopener noreferrer">VIER PFOTEN: Taktiken illegaler Welpenverkäufer (2022)</a> und das <a href="https://www.mlv.nrw.de/wp-content/uploads/2023/08/Flyer-illegaler-Welpenhandel.pdf" target="_blank" rel="noopener noreferrer">Faltblatt der Tierschutzbeauftragten NRW</a>. Zum Alter der Welpen steht mehr auf der Seite <a href="../hunde/abgabealter/index.html">Abgabealter beim Welpen</a>.</p>
 
         <div class="section-feedback-heading"><h2 id="kleintiere-und-voegel">Kleintiere und Vögel</h2><button type="button" class="section-feedback-action" data-feedback-section="kleintiere-und-voegel" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Auch bei Kaninchen, Meerschweinchen und Wellensittichen gibt es sorgfältige Zucht, Hobbyzucht, Ausstellungszucht und Vermehrung – und die Grenzen lassen sich schwer ziehen, weil für diese Tiere kein Kriterienkatalog vorliegt. Eine Heimtierzuchtverordnung, die auch diese Tiere erfasst, fordert die TVT; sie gibt es nach ihrer Darstellung bisher nicht.</p>
@@ -7738,7 +7762,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <li><strong>Meerschweinchen.</strong> Der Tierschutzbund zählt bestimmte Fellfarben und -strukturen zur Qualzucht: Schimmel, Dalmatiner, Rex und Satin, dazu Langhaar- und Nacktmeerschweinchen. Alles Weitere zu Alter, Geschlechtsreife und Abgabe steht auf der Seite <a href="../kleintiere/meerschweinchen/index.html">Meerschweinchen abgeben und halten</a>.</li>
           <li><strong>Wellensittiche.</strong> Der <a href="https://www.tierschutzbund.de/fileadmin/user_upload/Downloads/Broschueren/Broschuere_Haltung_von_Wellensittichen.pdf" target="_blank" rel="noopener noreferrer">Tierschutzbund</a> schreibt, Wellensittiche würden „in verschiedensten Farbvarianten“ gezüchtet, und führt Haubenwellensittiche und Schauwellensittiche als Qualzucht an: Fast die Hälfte der Nachkommen von Haubenwellensittichen kann schwere Gesundheitsprobleme haben. Er rät von der Zucht ab, auch weil die Fortpflanzungsrate hoch ist und es schwer werden kann, für alle Jungvögel ein gutes Zuhause zu finden. Siehe <a href="../voegel/zucht-eier/index.html">Zucht und Eiablage bei Wellensittichen</a> und <a href="../voegel/qualzucht/index.html">Schauwellensittiche und Qualzucht</a>.</li>
         </ul>
-        <p>Ab wann Zucht als gewerbsmäßig gilt, steht im Abschnitt zur Rechtslage unten. Wie viele Kleintiere und Vögel in Massenzucht für den Handel entstehen, ist öffentlich nicht belastbar beziffert. Greifbar ist das Ausmaß der Online-Angebote: Der Tierschutzbund zählte 2021 auf einem großen Portal jeweils mehr als 20.000 Anzeigen zu Hunden, Katzen oder Kleintieren. Weitere Wege der Anschaffung beschreibt <a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        <p>Wie viele Kleintiere und Vögel in Massenzucht für den Handel entstehen, ist öffentlich nicht belastbar beziffert. Greifbar ist das Ausmaß der Online-Angebote: Der Tierschutzbund zählte 2021 auf einem großen Portal jeweils mehr als 20.000 Anzeigen zu Hunden, Katzen oder Kleintieren. Weitere Wege der Anschaffung beschreibt <a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
 
         <div class="section-feedback-heading"><h2 id="beim-zuechter">Beim Züchter: Fragen, Vertrag und Unterlagen</h2><button type="button" class="section-feedback-action" data-feedback-section="beim-zuechter" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Wenn du nach Abwägung dennoch bei einem Züchter kaufst, hilft diese Liste. Sie ersetzt keine Adoption, aber sie schützt dich und das Tier vor den schlimmsten Fehlern.</p>

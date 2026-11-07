@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7524,7 +7548,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <p>Ein <a href="../hunde/index.html" style="color:inherit;text-decoration:underline">Hund</a>, der acht Stunden still in der Ecke liegt, hat nicht unbedingt gelernt, allein zu sein. Möglicherweise hat er aufgegeben, auf jemanden zu warten. Für uns sieht das nach einem „braven Hund“ aus. Für den Hund kann es Rückzug und Stress bedeuten, nicht Ruhe.</p>
         </div>
         <p>Dieses Missverständnis ist in der Tierhaltung weit verbreitet: Man sieht kein Leid und glaubt, dem Tier gehe es gut. Der Hund hat nicht in die Wohnung gepinkelt, also geht es ihm gut. Die Katze schläft den ganzen Tag, also ist sie zufrieden. Der Wellensittich sitzt still auf der Stange, also braucht er nichts.</p>
-        <p>Tiere – besonders <span class="glossary-term" data-glossary-key="beutetier" data-glossary-title="Beutetier" data-glossary-text="Tierart, die in der Natur gejagt wird und Schwäche von Natur aus verbirgt." data-glossary-href="../glossar/index.html#beutetier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Beutetiere</span> wie <a href="../voegel/index.html">Vögel</a> und <a href="../kleintiere/index.html">Kaninchen</a> – verbergen Schmerz und Stress von Natur aus. Ein Tier, das leidet, wirkt deshalb oft „pflegeleicht“. Wer nur darauf achtet, ob das Tier Probleme <em>macht</em>, übersieht die Frage, ob es Probleme <em>hat</em>.</p>
+        <p>Tiere – besonders <span class="glossary-term" data-glossary-key="beutetier" data-glossary-title="Beutetier" data-glossary-text="Tierart, die in der Natur gejagt wird und Schwäche von Natur aus verbirgt." data-glossary-href="../glossar/index.html#beutetier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Beutetiere</span> wie <a href="../voegel/index.html">Vögel</a> und <a href="../kleintiere/index.html">Kaninchen</a> – verbergen Schmerz und Stress von Natur aus: Kaninchen etwa haben sich darauf eingestellt, Zeichen von Krankheit und Schmerz zu verbergen (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10967183/" target="_blank" rel="noopener noreferrer">Studie zur Schmerzerkennung bei Kaninchen</a>). Ein Tier, das leidet, wirkt deshalb oft „pflegeleicht“. Wer nur darauf achtet, ob das Tier Probleme <em>macht</em>, übersieht die Frage, ob es Probleme <em>hat</em>.</p>
 
         <div class="section-feedback-heading"><h2 id="mensch-ein-tier-zu-halten-beginnt-mit-dem-eigenen-wunsch">Ein Tier zu halten, beginnt mit dem eigenen Wunsch</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-ein-tier-zu-halten-beginnt-mit-dem-eigenen-wunsch" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Das Tier hat sich nicht ausgesucht, bei dir zu leben. Du hast es ausgesucht. Es kann nicht kündigen, sich nicht beschweren und nicht ausziehen. Aus diesem Machtgefälle folgt eine Pflicht, ähnlich wie bei Kindern: Du hast dich für dieses Lebewesen entschieden, nun trägst du die Verantwortung für sein Wohl.</p>
@@ -7533,7 +7557,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <div class="section-feedback-heading"><h2 id="mensch-warum-sich-das-muster-wiederholt">Warum sich das Muster wiederholt</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-warum-sich-das-muster-wiederholt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Manche Menschen, die ein Tier abgeben, holen sich bald darauf ein neues. Woran kann das liegen?</p>
         <p>Möglicherweise daran, dass der Wunsch nach einem Tier nicht verschwunden ist. Die Einsamkeit ist noch da, die Sehnsucht nach Nähe auch. Dazu kommt, dass man die Ursache gern bei anderen sucht: „Das Tier war schwierig.“ „Die Rasse war falsch.“ „Wir hatten Pech.“ Seltener heißt es: „Ich war nicht vorbereitet.“</p>
-        <p>Das ist meist keine Boshaftigkeit, sondern ein Selbstschutz. Wer sich eingestehen müsste, einem Lebewesen geschadet zu haben, sucht die Ursache lieber außerhalb. Die Psychologie nennt diesen inneren Widerspruch <span class="glossary-term" data-glossary-key="kognitive-dissonanz" data-glossary-title="Kognitive Dissonanz" data-glossary-text="Innerer Widerspruch zwischen Selbstbild und Wirklichkeit, den Menschen oft durch Ausreden oder Umdeutung abmildern." data-glossary-href="../glossar/index.html#kognitive-dissonanz" aria-describedby="glossary-term-popover" tabindex="0" role="button">kognitive Dissonanz</span>; als Erklärung ist das hier eine Vermutung, kein Beleg. Ändert sich an der Lebenssituation nichts, kann beim nächsten Tier dasselbe passieren.</p>
+        <p>Das muss keine Boshaftigkeit sein, es kann ein Selbstschutz sein. Wer sich eingestehen müsste, einem Lebewesen geschadet zu haben, sucht die Ursache vielleicht lieber außerhalb. Die Psychologie nennt diesen inneren Widerspruch <span class="glossary-term" data-glossary-key="kognitive-dissonanz" data-glossary-title="Kognitive Dissonanz" data-glossary-text="Innerer Widerspruch zwischen Selbstbild und Wirklichkeit, den Menschen oft durch Ausreden oder Umdeutung abmildern." data-glossary-href="../glossar/index.html#kognitive-dissonanz" aria-describedby="glossary-term-popover" tabindex="0" role="button">kognitive Dissonanz</span>. Ändert sich an der Lebenssituation nichts, kann beim nächsten Tier dasselbe passieren.</p>
 
         <div class="section-feedback-heading"><h2 id="mensch-satze-die-man-oft-hort-und-was-dahintersteckt">Sätze, die man oft hört – und was dahintersteckt</h2><button type="button" class="section-feedback-action" data-feedback-section="mensch-satze-die-man-oft-hort-und-was-dahintersteckt" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm argument-grid" data-enhancement="mensch-self-lies">
             <article class="rhythm-card"><span class="eyebrow">Wunsch</span><h3>„Ich kriege das schon hin.“</h3><p>Wenn Zeit, Geld oder Platz jetzt schon eng sind, wird das Tier später die Rechnung zahlen.</p></article>
@@ -7546,7 +7570,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <button class="accordion-header" onclick="toggleAccordion(this)" id="accordion-0-button" type="button" aria-controls="accordion-0-panel" aria-expanded="false">„Mein Kater soll einmal Kater sein dürfen“</button>
             <div class="accordion-body" id="accordion-0-panel" aria-labelledby="accordion-0-button" role="region" hidden="">
               <p><strong>Was oft dahintersteht:</strong> Der Wunsch, dem Tier nichts zu nehmen. Dabei schwingen leicht menschliche Vorstellungen von „Männlichkeit“ oder „Freiheit“ mit, die ein Kater so nicht kennt.</p>
-              <p><strong>Was ein unkastrierter Kater erlebt:</strong> Er steht unter Hormonstress und will sein Revier verteidigen und Katzen suchen. Das führt zu Kämpfen mit anderen Katern und zu Bissverletzungen, damit steigt das Risiko für <span class="glossary-term" data-glossary-key="fiv" data-glossary-title="FIV" data-glossary-text="Virus, das die Abwehrkräfte der Katze schwächt und vor allem durch tiefe Bisse übertragen wird." data-glossary-href="../glossar/index.html#fiv" aria-describedby="glossary-term-popover" tabindex="0" role="button">FIV</span>. Sein Leben ist oft deutlich kürzer.</p>
+              <p><strong>Was ein unkastrierter Kater erlebt:</strong> Er steht unter Hormonstress und will sein Revier verteidigen und Katzen suchen. Das führt zu Kämpfen mit anderen Katern und zu Bissverletzungen, damit steigt das Risiko für <span class="glossary-term" data-glossary-key="fiv" data-glossary-title="FIV" data-glossary-text="Virus, das die Abwehrkräfte der Katze schwächt und vor allem durch tiefe Bisse übertragen wird." data-glossary-href="../glossar/index.html#fiv" aria-describedby="glossary-term-popover" tabindex="0" role="button">FIV</span>. Das Virus geht vor allem über Bisse von Katze zu Katze, weil dabei Speichel in die Wunde gelangt; Kater und unkastrierte Katzen sind am häufigsten infiziert (<a href="https://www.abcdcatsvets.org/guideline-for-feline-immunodeficiency/" target="_blank" rel="noopener noreferrer">ABCD-Leitlinie zu FIV</a>). Sein Leben ist oft deutlich kürzer.</p>
               <p><strong>Eine Frage an dich:</strong> Was würde dein Kater wählen, wenn er die Folgen kennen könnte?</p>
               <p>→ Mehr dazu: <a href="../kastration/index.html">Kastration</a></p>
             </div>
@@ -7621,7 +7645,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </ol>
         </div>
 
-        <p>Wenn eine Abgabe unvermeidbar ist, ist sie kein Zeichen von Gleichgültigkeit, wenn sie gut vorbereitet und im Interesse des Tieres erfolgt. Ein Tierheim oder eine seriöse Tierschutzorganisation kann den nächsten Schritt mit dir klären. <strong>Aussetzen, Zurücklassen oder eine ungesicherte Übergabe sind keine Lösungen.</strong> Das Aussetzen eines Tieres ist verboten und kann mit einer Geldbuße bis zu 25.000 Euro geahndet werden.</p>
+        <p>Wenn eine Abgabe unvermeidbar ist, ist sie kein Zeichen von Gleichgültigkeit, wenn sie gut vorbereitet und im Interesse des Tieres erfolgt. Ein Tierheim oder eine seriöse Tierschutzorganisation kann den nächsten Schritt mit dir klären. <strong>Aussetzen, Zurücklassen oder eine ungesicherte Übergabe sind keine Lösungen.</strong> Das Aussetzen eines Tieres ist verboten und kann mit einer Geldbuße bis zu 25.000&nbsp;Euro geahndet werden.</p>
         <p>Früh Hilfe zu holen schützt dein Tier.</p>
 
         <div class="mt-2 text-center">
@@ -7643,7 +7667,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die Seite ersetzt keinen psychologischen Eignungstest.</li><li>Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.</li></ul>
+              <ul><li>Die Aussagen sind Entscheidungshilfe, keine Rechtsberatung.</li></ul>
             </article>
           </div>
         </div>

@@ -908,7 +908,7 @@ export const glossaryAnnotationsByPage = {
     { from: 'Patenschaften</h3>', to: `${mark('patenschaft', 'Patenschaften')}</h3>` },
     { from: 'Pflegestelle werden</h3>', to: `${mark('pflegestelle', 'Pflegestelle')} werden</h3>` },
     { from: 'Tierschutzorganisationen suchen immer Pflegestellen', to: `Tierschutzorganisationen suchen immer ${mark('pflegestelle', 'Pflegestellen')}` },
-    { from: 'Ein Notfallfonds von 1.000 bis 2.000&nbsp;Euro', to: `Ein ${mark('notfallfonds', 'Notfallfonds')} von 1.000 bis 2.000&nbsp;Euro` },
+    { from: 'Ein Notfallfonds für unerwartete', to: `Ein ${mark('notfallfonds', 'Notfallfonds')} für unerwartete` },
     { from: 'Du schaffst keine Nachfrage bei Vermehrern.', to: `Du schaffst keine Nachfrage bei ${mark('vermehrer', 'Vermehrern')}.` },
     { from: 'Wenn die Zeit reif ist: Adoption', to: `Wenn die Zeit reif ist: ${mark('adoption', 'Adoption')}` },
   ],

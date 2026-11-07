@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.">
+  <meta name="description" content="Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Katze halten, Wohnungskatze, Freigang, Kastration, Katzenstress">
   <meta property="og:title" content="Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.">
+  <meta property="og:description" content="Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/katzen/kosten/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/katzen-kosten.png">
@@ -25,7 +25,7 @@
   <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.">
+  <meta name="twitter:description" content="Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/katzen-kosten.png">
   <meta name="twitter:image:alt" content="Katze schaut aus einer Transporttasche.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/katzen/kosten/index.html">
@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7080,7 +7104,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "WebPage",
   "name": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
   "headline": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
-  "description": "Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.",
+  "description": "Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.",
   "url": "https://wahre-haustierliebe.de/katzen/kosten/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7164,7 +7188,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "Article",
   "headline": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
   "name": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
-  "description": "Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.",
+  "description": "Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.",
   "url": "https://wahre-haustierliebe.de/katzen/kosten/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/katzen/kosten/index.html",
   "image": {
@@ -7214,7 +7238,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "citation": [
     "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/",
     "https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/",
-    "https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html"
+    "https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html",
+    "https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/"
   ]
 }
   </script>
@@ -7479,7 +7504,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <div class="container">
         <div class="article-hero-copy">
           <h1>Was eine Katze wirklich kostet</h1>
-                  <p>Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</p>
+                  <p>Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 46%;" data-image-purpose="Was eine Katze wirklich kostet: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7496,14 +7521,15 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 <h2 id="katzen-kosten-was-der-preis-verrat-was-eine-katze-wirklich-kostet">Was der Preis verrät: Was eine Katze wirklich kostet</h2>
         <p>Die Schutzgebühr oder der Kaufpreis ist nur der Anfang. Bei artgerechter Haltung können Katzen bis zu 20 Jahre alt werden (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>); wer eine Katze aufnimmt, entscheidet sich für viele Jahre Versorgung, Zeit und Verlässlichkeit. Ob ein Tier aus dem Tierschutz kommt oder gekauft wird, ändert daran nichts.</p>
 
-        <h3>Zuerst die Zahl über das ganze Leben</h3>
+        <h3>Kosten pro Tag, pro Monat und über das ganze Leben</h3>
         <div class="kv-fakten">
-          <div><span class="kv-zahl">1,70 bis 3,70 €</span><span class="kv-zahl-text">am Tag für eine gesunde Einzelkatze, ohne Notfälle, Betreuung und Urlaub</span></div>
-          <div><span class="kv-zahl">10.100 bis 21.600 €</span><span class="kv-zahl-text">über 16 Jahre, im Mittel rund 15.800 Euro</span></div>
-          <div class="kv-klein"><span class="kv-zahl">etwa 1 %</span><span class="kv-zahl-text">der Gesamtsumme macht die Schutzgebühr aus (100 bis 250 Euro)</span></div>
+          <div><span class="kv-zahl">1,70 bis 3,70&nbsp;€</span><span class="kv-zahl-text">am Tag für eine gesunde Einzelkatze, ohne Notfälle, Betreuung und Urlaub</span></div>
+          <div><span class="kv-zahl">53 bis 112&nbsp;€</span><span class="kv-zahl-text">im Monat, über 16 Jahre gerechnet und mit den einmaligen Kosten</span></div>
+          <div><span class="kv-zahl">10.100 bis 21.600&nbsp;€</span><span class="kv-zahl-text">über 16 Jahre, im Mittel rund 15.800 Euro</span></div>
+          <div class="kv-klein"><span class="kv-zahl">etwa 1&nbsp;%</span><span class="kv-zahl-text">der Gesamtsumme macht die Schutzgebühr aus (100 bis 250 Euro)</span></div>
         </div>
-        <p class="kv-rechnung">Rechnung: einmalig 480 bis 1.250 Euro (Zeilen „einmalig“ der Tabelle unten) plus 600 bis 1.270 Euro im Jahr (Zeilen „jährlich“), mal 16 Jahre: 480 + 16 × 600 = 10.080 und 1.250 + 16 × 1.270 = 21.570 Euro. 16 Jahre sind 5.840 Tage: 10.080 ÷ 5.840 = 1,73 und 21.570 ÷ 5.840 = 3,69 Euro am Tag. Der Mittelwert aus beiden Summen ist 15.825 Euro, das sind 2,71 Euro am Tag. Notfälle, Betreuung und Urlaub sind nicht enthalten.</p>
-        <p>Zur Gegenprobe: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze, das sind 13.300 ÷ 5.840 = 2,28 Euro am Tag. Er rechnet mit rund 800 Euro im Jahr; die Einzelposten unten ergeben eine Spanne von 600 bis 1.270 Euro.</p>
+        <p class="kv-rechnung">Rechnung: einmalig 480 bis 1.250 Euro (Spalte „Einmalig“ der Tabelle unten) plus 600 bis 1.270 Euro im Jahr (Spalte „Pro Jahr“), mal 16 Jahre: 480 + 16 × 600 = 10.080 und 1.250 + 16 × 1.270 = 21.570 Euro. 16 Jahre sind 5.840 Tage: 10.080 ÷ 5.840 = 1,73 und 21.570 ÷ 5.840 = 3,69 Euro am Tag. Im Monat: 16 Jahre sind 192 Monate, 10.080 ÷ 192 = 52,50 und 21.570 ÷ 192 = 112,34 Euro, gerundet 53 bis 112 Euro. Der Mittelwert aus beiden Summen ist 15.825 Euro, das sind 2,71 Euro am Tag und 15.825 ÷ 192 = 82,42 Euro im Monat. Notfälle, Betreuung und Urlaub sind nicht enthalten.</p>
+        <p>Zur Gegenprobe: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze, das sind 13.300 ÷ 5.840 = 2,28 Euro am Tag und 13.300 ÷ 192 = 69,27 Euro im Monat. Er rechnet mit rund 800 Euro im Jahr, das sind rund 67 Euro im Monat (800 ÷ 12 = 66,67); die Einzelposten unten ergeben eine Spanne von 600 bis 1.270 Euro.</p>
 
         <div class="warning-box">
           <h3>Vor dem Einzug muss mehr vorhanden sein als der Preis aus der Anzeige</h3>
@@ -7520,26 +7546,26 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         </ul>
 
         <h2 id="katzen-kosten-2-regelmassige-kosten-im-alltag">2. Regelmäßige Kosten im Alltag</h2>
-        <p>Die jährliche Belastung entsteht aus vielen wiederkehrenden Posten, die mit Alter, Gesundheit, Futterart und Wohnort steigen oder sinken können. Anders als beim Hund fällt in der Regel keine Steuer an, dafür gehört die Streu dazu. Die Tabelle zeigt nur die planbaren Grundkosten. Sie ist keine Lebenszeitrechnung und enthält weder Urlaub noch Betreuung noch einen medizinischen Ausnahmefall.</p>
+        <p>Die jährliche Belastung entsteht aus vielen wiederkehrenden Posten, die mit Alter, Gesundheit, Futterart und Wohnort steigen oder sinken können. Anders als beim Hund fällt in der Regel keine Steuer an, dafür gehört die Streu dazu. In der Tabelle stehen nur die planbaren Grundkosten, jeweils auch als Monatsbetrag (Jahreswert ÷ 12). Urlaub, Betreuung und ein medizinischer Ausnahmefall sind darin nicht enthalten.</p>
         <table class="cost-table">
-          <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
+          <thead><tr><th>Posten</th><th>Einmalig</th><th>Pro Jahr</th><th>Pro Monat</th></tr></thead>
           <tbody>
-            <tr><td data-label="Posten">Anschaffung (Tierheim: <span class="glossary-term" data-glossary-key="schutzgebuehr" data-glossary-title="Schutzgebühr" data-glossary-text="Betrag bei Adoption, der Versorgungskosten mitträgt und kein normaler Kaufpreis ist." data-glossary-href="../../glossar/index.html#schutzgebuehr" aria-describedby="glossary-term-popover" tabindex="0" role="button">Schutzgebühr</span>)</td><td data-label="Einmalig">100–250 €</td><td data-label="Jährlich">–</td></tr>
-            <tr><td data-label="Posten">Erstausstattung (Toiletten, Kratzbaum, Näpfe, Box, Spielzeug)</td><td data-label="Einmalig">200–500 €</td><td data-label="Jährlich">–</td></tr>
-            <tr><td data-label="Posten">Erstuntersuchung, Impfungen, Chip, Registrierung</td><td data-label="Einmalig">120–250 €</td><td data-label="Jährlich">–</td></tr>
-            <tr><td data-label="Posten">Kastration (Kater 60–150 €, Kätzin 100–250 €)</td><td data-label="Einmalig">60–250 €</td><td data-label="Jährlich">–</td></tr>
-            <tr><td data-label="Posten">Futter (Nass- und Trockenfutter in guter Qualität)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">350–700 €</td></tr>
-            <tr><td data-label="Posten">Streu</td><td data-label="Einmalig">–</td><td data-label="Jährlich">120–250 €</td></tr>
-            <tr><td data-label="Posten">Tierarzt-Routine (Impfauffrischung, Entwurmung, Vorsorge)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">80–200 €</td></tr>
-            <tr><td data-label="Posten">Kleine Posten (Spielzeug, Kratzbaum-Ersatz, Pflege)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">50–120 €</td></tr>
-            <tr><td data-label="Posten">Haftpflicht- oder OP-Versicherung (optional)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">je nach Tarif</td></tr>
+            <tr><td data-label="Posten">Anschaffung (Tierheim: <span class="glossary-term" data-glossary-key="schutzgebuehr" data-glossary-title="Schutzgebühr" data-glossary-text="Betrag bei Adoption, der Versorgungskosten mitträgt und kein normaler Kaufpreis ist." data-glossary-href="../../glossar/index.html#schutzgebuehr" aria-describedby="glossary-term-popover" tabindex="0" role="button">Schutzgebühr</span>)</td><td data-label="Einmalig">100–250&nbsp;€</td><td data-label="Pro Jahr">–</td><td data-label="Pro Monat">–</td></tr>
+            <tr><td data-label="Posten">Erstausstattung (Toiletten, Kratzbaum, Näpfe, Box, Spielzeug)</td><td data-label="Einmalig">200–500&nbsp;€</td><td data-label="Pro Jahr">–</td><td data-label="Pro Monat">–</td></tr>
+            <tr><td data-label="Posten">Erstuntersuchung, Impfungen, Chip, Registrierung</td><td data-label="Einmalig">120–250&nbsp;€</td><td data-label="Pro Jahr">–</td><td data-label="Pro Monat">–</td></tr>
+            <tr><td data-label="Posten">Kastration (Kater 60–150&nbsp;€, Kätzin 100–250&nbsp;€)</td><td data-label="Einmalig">60–250&nbsp;€</td><td data-label="Pro Jahr">–</td><td data-label="Pro Monat">–</td></tr>
+            <tr><td data-label="Posten">Futter (Nass- und Trockenfutter in guter Qualität)</td><td data-label="Einmalig">–</td><td data-label="Pro Jahr">350–700&nbsp;€</td><td data-label="Pro Monat">29–58&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Streu</td><td data-label="Einmalig">–</td><td data-label="Pro Jahr">120–250&nbsp;€</td><td data-label="Pro Monat">10–21&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Tierarzt-Routine (Impfauffrischung, Entwurmung, Vorsorge)</td><td data-label="Einmalig">–</td><td data-label="Pro Jahr">80–200&nbsp;€</td><td data-label="Pro Monat">7–17&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Kleine Posten (Spielzeug, Kratzbaum-Ersatz, Pflege)</td><td data-label="Einmalig">–</td><td data-label="Pro Jahr">50–120&nbsp;€</td><td data-label="Pro Monat">4–10&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Haftpflicht- oder OP-Versicherung (optional)</td><td data-label="Einmalig">–</td><td data-label="Pro Jahr">je nach Tarif</td><td data-label="Pro Monat">je nach Tarif</td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Die Tabelle ist eine Orientierung für eine gesunde Einzelkatze, kein verbindlicher Preisplan. Rechnet man ihre Spannen ohne Versicherung über 16 Jahre hoch (Rechnung oben), kommen mit Anschaffung rund 10.100–21.600 Euro zusammen, im Mittel etwa 15.800 Euro. Das entspricht laufend etwa 50–105 Euro im Monat. Die Schutzgebühr legt jede Organisation selbst fest: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt für die Adoption aus dem Tierheim Kosten ab 100 Euro, <a href="https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/" target="_blank" rel="noopener noreferrer">VETO Tierschutz</a> für Katzen 150 bis 250 Euro (Stand 2026). Sind Impfungen, Chip oder Kastration schon in der Schutzgebühr enthalten, fallen die übrigen einmaligen Posten entsprechend geringer aus. Notfälle, Betreuung und Urlaub sind darin nicht enthalten. Eine feste Planungssumme ist das nicht: Futterart, Alter, chronische Erkrankungen oder eine zweite Katze können die Kosten deutlich erhöhen, und Veränderungen im eigenen Leben lassen sich nicht vorausberechnen. Prüfe vor dem Einzug die Preise in deiner Tierarztpraxis und die Bedingungen einer möglichen Versicherung.</p>
+        <p class="text-muted">Die Spannen gelten für eine gesunde Einzelkatze. Laufend sind das etwa 50–105 Euro im Monat (600 bis 1.270 Euro im Jahr ÷ 12). Rechnet man sie ohne Versicherung über 16 Jahre hoch (Rechnung oben), kommen mit Anschaffung rund 10.100–21.600 Euro zusammen, im Mittel etwa 15.800 Euro; das sind im Durchschnitt rund 53 bis 112 Euro im Monat. Die Schutzgebühr legt jede Organisation selbst fest: Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt für die Adoption aus dem Tierheim Kosten ab 100 Euro, <a href="https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/" target="_blank" rel="noopener noreferrer">VETO Tierschutz</a> für Katzen 150 bis 250 Euro (Stand 2026). Sind Impfungen, Chip oder Kastration schon in der Schutzgebühr enthalten, fallen die übrigen einmaligen Posten entsprechend geringer aus. Eine feste Planungssumme ist das nicht: Futterart, Alter, chronische Erkrankungen oder eine zweite Katze können die Kosten deutlich erhöhen, und Veränderungen im eigenen Leben lassen sich nicht vorausberechnen. Prüfe vor dem Einzug die Preise in deiner Tierarztpraxis und die Bedingungen einer möglichen Versicherung.</p>
 
         <h2 id="katzen-kosten-3-notfalle-und-kosten-die-sich-nicht-planen-lassen">3. Notfälle und Kosten, die sich nicht planen lassen</h2>
         <p>Vorsorge ist berechenbar. Krankheit ist es nicht. Ein Harnröhrenverschluss, eine Vergiftung, ein Knochenbruch, eine Zahnbehandlung oder eine Gebärmuttervereiterung können innerhalb kurzer Zeit einen niedrigen vierstelligen Betrag kosten. Das ist kein jährlicher Standardposten, sondern ein Risiko, das jederzeit eintreten kann.</p>
-        <p>Tierärztinnen und Tierärzte rechnen nach der <a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a> ab. Sie erlaubt je nach Aufwand den einfachen bis dreifachen Satz. Im Notdienst gelten höhere Sätze, dazu kommt eine Notdienstgebühr. Dieselbe Behandlung kostet deshalb nachts oder am Wochenende deutlich mehr als tagsüber.</p>
+        <p>Tierärztinnen und Tierärzte rechnen nach der <a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a> ab. Sie erlaubt je nach Aufwand den einfachen bis dreifachen Satz. Im Notdienst gelten höhere Sätze, dazu kommt eine Notdienstgebühr. Dieselbe Behandlung kostet deshalb im Notdienst nachts oder am Wochenende deutlich mehr als tagsüber in der Sprechstunde.</p>
         <div class="info-box">
           <h3>Die Rücklage gehört vor den Einzug</h3>
           <p>Lege vor dem Einzug mindestens 500 bis 1.000 Euro für den Notfall zurück und behandle sie nicht als Reserve für normale Ausgaben. Das ist eine Empfehlung dieser Seite, keine Zahl aus einer Studie; Tierarztkosten hängen von der Praxis und vom Notdienst ab. Wie du dich darauf einstellst: Richte drei Monate vor dem Einzug einen Dauerauftrag ein, der monatlich die laufenden Kosten von 50 bis 105 Euro auf ein eigenes Konto legt. Wenn dir das schwerfällt, ist das die Antwort: noch warten. Wer in einer akuten Lage nur zwischen Behandlung, Schulden oder Abgabe wählen kann, ist nicht schlecht. Die Planung war dann nur zu knapp für ein reales Leben mit Tier.</p>
@@ -7560,7 +7586,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <ul>
           <li><strong>Anzahl der Tiere.</strong> Bei zwei Katzen verdoppeln sich die laufenden Kosten annähernd. Bei Wohnungshaltung sind zwei Katzen empfohlen.</li>
           <li><strong>Alter.</strong> Kitten brauchen mehr Termine und Ausstattung, Senioren häufiger Vorsorge, Medikamente und Spezialfutter.</li>
-          <li><strong>Gesundheit und Herkunft.</strong> <a href="../../qualzucht/index.html">Qualzuchtrassen wie Perserkatzen oder Scottish Folds</a> verursachen höhere und häufigere Tierarztkosten. Eine teure Katze ist nicht automatisch eine gesunde Katze.</li>
+          <li><strong>Gesundheit und Herkunft.</strong> <a href="../../qualzucht/index.html">Qualzuchtrassen wie Perserkatzen oder Scottish Folds</a> verursachen höhere und häufigere Tierarztkosten. Bei Perserkatzen zum Beispiel ist durch die verkürzte Nase der Atemweg verengt und der Tränennasenkanal verlegt (<a href="https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/" target="_blank" rel="noopener noreferrer">Merkblatt der QUEN-Qualzucht-Datenbank</a>). Eine teure Katze ist nicht automatisch eine gesunde Katze.</li>
           <li><strong>Lebenssituation.</strong> Umzug, Schichtdienst, Urlaub oder Krankheit im Haushalt machen Betreuung nötig. Diese Kosten gehören zur Entscheidung, nicht erst zum Problem danach.</li>
         </ul>
 
@@ -7615,11 +7641,11 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Über 16 Jahre kostet eine gesunde Katze nach den Einzelposten dieser Seite etwa 10.100 bis 21.600 Euro, das sind 1,70 bis 3,70 Euro am Tag.</li><li>Der Deutsche Tierschutzbund nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze und rund 800 Euro im Jahr.</li><li>Die Schutzgebühr legt jede Organisation selbst fest: ab 100 Euro nach dem Tierschutzbund, 150 bis 250 Euro nach VETO Tierschutz (Stand 2026).</li></ul>
+              <ul><li>Über 16 Jahre kostet eine gesunde Katze nach den Einzelposten dieser Seite etwa 10.100 bis 21.600 Euro, das sind 1,70 bis 3,70 Euro am Tag und rund 53 bis 112 Euro im Monat.</li><li>Der Deutsche Tierschutzbund nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze und rund 800 Euro im Jahr, das sind rund 67 Euro im Monat.</li><li>Die Schutzgebühr legt jede Organisation selbst fest: ab 100 Euro nach dem Tierschutzbund, 150 bis 250 Euro nach VETO Tierschutz (Stand 2026).</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenhaltung (Kosten, Lebensdauer)</a></li><li><a href="https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/" target="_blank" rel="noopener noreferrer">VETO Tierschutz: Die Schutzgebühr im Tierschutz</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a></li></ul>
+              <ul><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Katzenhaltung (Kosten, Lebensdauer)</a></li><li><a href="https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/" target="_blank" rel="noopener noreferrer">VETO Tierschutz: Die Schutzgebühr im Tierschutz</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a></li><li><a href="https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/" target="_blank" rel="noopener noreferrer">QUEN-Qualzucht-Datenbank: Merkblatt Katze, Rasse Perser</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>

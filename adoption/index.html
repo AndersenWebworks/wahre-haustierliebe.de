@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7600,8 +7624,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </div>
 
         <div class="section-feedback-heading"><h2 id="adoption-warum-nicht-aus-der-zoohandlung">Warum nicht aus der Zoohandlung?</h2><button type="button" class="section-feedback-action" data-feedback-section="adoption-warum-nicht-aus-der-zoohandlung" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p>Der Zoofachhandel verkauft nach Angabe des Branchenverbands ZZF Kleinsäuger, Vögel, Fische, Reptilien und weitere Tiere, aber keine Hunde und Katzen. Verlässliche, unabhängige Zahlen dazu, woher diese Tiere stammen, haben wir nicht gefunden. Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel und in Baumärkten aus Tierschutzsicht kritisch. Der Verkauf verleite zum Spontankauf oder appelliere an das Mitleid, und manche der angebotenen Tiere ließen sich zu Hause kaum artgerecht halten.</p>
-        <p>Bei Welpen und Kitten (jungen Katzen) liegt das Risiko dort, wo anonym verkauft wird: im Online-Handel und bei Kleinanzeigen. Der Tierschutzbund rät davon ab, Hunde und Katzen anonym im Internet zu kaufen, weil sich seriöse und unseriöse Angebote kaum unterscheiden lassen. Wie früh Jungtiere abgegeben werden dürfen, steht weiter unten im Abschnitt zum Abgabealter.</p>
+        <p>Der Zoofachhandel verkauft nach Angabe des Branchenverbands ZZF Kleinsäuger, Vögel, Fische, Reptilien und weitere Tiere, aber keine Hunde und Katzen. Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel und in Baumärkten aus Tierschutzsicht kritisch. Der Verkauf verleite zum Spontankauf oder appelliere an das Mitleid, und manche der angebotenen Tiere ließen sich zu Hause kaum artgerecht halten.</p>
+        <p>Bei Welpen und Kitten (jungen Katzen) liegt das Risiko dort, wo anonym verkauft wird: im Online-Handel und bei Kleinanzeigen. Der Tierschutzbund rät davon ab, Hunde und Katzen anonym im Internet zu kaufen, weil sich seriöse und unseriöse Angebote kaum unterscheiden lassen.</p>
         <p>Der Tierschutzbund weist außerdem auf Spontan- und Geschenkkäufe hin: Viele Tiere, die zu Feiertagen verschenkt werden, landeten danach im Tierheim. Welche Wege es je Tierart gibt und worauf du achten kannst, steht auf der Seite <a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
 
         <div class="section-feedback-heading"><h2 id="adoption-warum-auch-der-zuchter-nicht-die-antwort-ist">Warum auch der Züchter nicht die Antwort ist</h2><button type="button" class="section-feedback-action" data-feedback-section="adoption-warum-auch-der-zuchter-nicht-die-antwort-ist" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
@@ -7764,9 +7788,9 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p>Viele Welpen aus <span class="glossary-term" data-glossary-key="vermehrer" data-glossary-title="Vermehrer" data-glossary-text="Person oder Betrieb, der Tiere vor allem für schnelle Abgabe und Gewinn produziert." data-glossary-href="../glossar/index.html#vermehrer" aria-describedby="glossary-term-popover" tabindex="0" role="button">Vermehrung</span> kommen aus dem Ausland. Sie werden oft zu jung, ungeimpft und unter schlechten Bedingungen quer durch Europa gefahren und kommen krank oder verängstigt an (<a href="https://www.tierschutzbund.de/tiere-themen/illegaler-welpenhandel/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>). Solange solche Welpen gekauft werden, lohnt sich das Geschäft. Warum die Nachfrage das Angebot steuert, steht auf der Seite <a href="../qualzucht/index.html">Qualzucht</a>.</p>
 
         <div class="section-feedback-heading"><h2 id="adoption-der-preis-decoder-was-kostet-ein-welpe-wirklich">Was der Preis eines Welpen verrät</h2><button type="button" class="section-feedback-action" data-feedback-section="adoption-der-preis-decoder-was-kostet-ein-welpe-wirklich" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div><div class="article-rhythm share-callout" data-enhancement="adoption-price-share">
-            <span class="eyebrow">Teilbarer Moment</span>
+            <span class="eyebrow">Zum Weitergeben</span>
             <h3>Der billige Welpe ist oft das teuerste Tier.</h3>
-            <p>Diese Rechnung gehört vor den Kleinanzeigen-Klick, nicht erst nach dem ersten Tierarztbesuch.</p>
+            <p>Das gehört vor den Klick auf eine Kleinanzeige, nicht erst nach dem ersten Tierarztbesuch.</p>
             <div class="share-bar">
               <button class="share-btn" onclick="shareThis('whatsapp', 'Der billige Welpe ist oft das teuerste Tier. Lies das, bevor du über Kleinanzeigen kaufst:')">WhatsApp</button>
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
@@ -7866,7 +7890,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.</li><li>Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.</li><li>Seriöse Adoption braucht Zeit und ehrliche Beratung.</li><li>Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.</li><li>Für Katzen, Frettchen und Vögel dürfen Gesundheits-, Transport- und Haltungsregeln nicht als einheitliches Abgabealter ausgegeben werden.</li><li>Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung.</li></ul>
+              <ul><li>Unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden; es liegen nur Angaben des Branchenverbands ZZF und des Deutschen Tierschutzbundes vor.</li><li>Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.</li><li>Seriöse Adoption braucht Zeit und ehrliche Beratung.</li><li>Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.</li><li>Für Katzen, Frettchen und Vögel dürfen Gesundheits-, Transport- und Haltungsregeln nicht als einheitliches Abgabealter ausgegeben werden.</li><li>Bei medizinischer Notwendigkeit entscheidet die Tierarztpraxis über eine mögliche frühere Trennung.</li></ul>
             </article>
           </div>
         </div>

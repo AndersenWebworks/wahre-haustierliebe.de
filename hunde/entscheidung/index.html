@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7446,11 +7470,11 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
             </div>
           </div>
-        <p>Rechne zuerst die Summe, dann den Preis des Hundes: Ein mittelgroßer Hund kostet über zwölf Jahre rund <strong>3,20 bis 8,45 Euro pro Tag</strong>, zusammen etwa <strong>14.000 bis 37.000 Euro</strong> (Rechnung auf der Seite <a href="../../hunde/kosten/index.html">Was ein Hund wirklich kostet</a>). Kaufpreis oder Schutzgebühr sind davon nur ein Posten.</p>
+        <p>Rechne zuerst die Summe, dann den Preis des Hundes: Ein mittelgroßer Hund kostet über zwölf Jahre rund <strong>3,20 bis 8,45&nbsp;Euro pro Tag</strong>, das sind rund <strong>97 bis 257&nbsp;Euro im Monat</strong>, zusammen etwa <strong>14.000 bis 37.000 Euro</strong> (Rechnung auf der Seite <a href="../../hunde/kosten/index.html">Was ein Hund wirklich kostet</a>). Kaufpreis oder Schutzgebühr sind davon nur ein Posten.</p>
         <ul class="checklist">
           <li>Ich bin bereit, 8 bis 14 Jahre Verantwortung für diesen Hund zu tragen – so lange leben Hunde nach Angaben des Deutschen Tierschutzbundes.</li>
           <li>Ich bin an den meisten Tagen nicht länger als 4 bis 5 Stunden am Stück von zu Hause weg – oder habe eine zuverlässige Betreuung.</li>
-          <li>Ich kann die Kosten über das ganze Hundeleben tragen: rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100 bis 240 Euro im Monat.</li>
+          <li>Ich kann die Kosten über das ganze Hundeleben tragen: rund 3,20 bis 8,45&nbsp;Euro pro Tag, das sind 97 bis 257&nbsp;Euro im Monat; ohne die einmaligen Posten laufend etwa 100 bis 240&nbsp;Euro im Monat.</li>
           <li>Ich habe Rücklagen für tierärztliche Notfälle (als Untergrenze 2.000 Euro, besser mehr, oder eine OP-Versicherung).</li>
           <li>Alle Personen im Haushalt sind einverstanden.</li>
           <li>Ich habe einen Plan für Urlaub, Krankheit und Notfälle.</li>

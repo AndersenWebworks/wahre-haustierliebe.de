@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7478,7 +7502,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <div class="container">
         <div class="article-hero-copy">
           <h1>Bist du bereit für ein Tier?</h1>
-                  <p>16 Fragen: zuerst die Tierart, dann Zeit, Geld, Alltag, Wohnsituation, Betreuung und Motivation. Antworte so, wie dein Alltag wirklich ist, nicht so, wie er im besten Fall wäre.</p>
+                  <p>Prüfe ehrlich, ob ein Tier in deinen Alltag passt, bevor es einzieht.</p>
         <div class="article-kicker"><span>16 Fragen</span><span>Ehrlich antworten</span><span>Vor dem Tier</span></div></div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 46%;" data-image-purpose="Haustier-Selbsttest: Bin ich bereit für ein Tier?: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7492,7 +7516,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <div class="container selftest-container">
         <div class="article-rhythm decision-band selftest-intro" data-enhancement="selbsttest-einstieg">
           <span class="eyebrow">Kein Quiz für dein Ego</span>
-          <h3>Antworte so, wie dein Alltag wirklich ist.</h3>
+          <h3>Antworte so, wie dein Alltag wirklich ist, nicht so, wie er im besten Fall wäre.</h3>
           <p>Ein Tier braucht verlässliche Versorgung auch dann, wenn Arbeit, Krankheit, Urlaub oder unerwartete Kosten dazwischenkommen.</p>
           <p class="text-muted">Entscheidend sind vor allem <span class="glossary-term" data-glossary-key="artgerecht" data-glossary-title="Artgerecht" data-glossary-text="Haltung, die sich an den Bedürfnissen der Tierart orientiert: Platz, Sozialstruktur, Futter, Klima und Beschäftigung." data-glossary-href="../glossar/index.html#artgerecht" aria-describedby="glossary-term-popover" tabindex="0" role="button">artgerechte Haltung</span>, <span class="glossary-term" data-glossary-key="notfallfonds" data-glossary-title="Notfallfonds" data-glossary-text="Zurückgelegtes Geld für unerwartete Tierarztkosten, damit Behandlung nicht am Kontostand scheitert." data-glossary-href="../glossar/index.html#notfallfonds" aria-describedby="glossary-term-popover" tabindex="0" role="button">Notfallfonds</span> und eine ehrliche Entscheidung zur <span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Hoden oder Eierstöcke. Verhindert Nachwuchs und beendet die Hormonbildung dort weitgehend." data-glossary-href="../glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span>.</p>
         </div>
@@ -7530,16 +7554,16 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="test-question is-hidden" data-question="1">
             <h3>2. Wie viele Stunden am Tag bist du zu Hause?</h3>
             <div class="test-options">
-              <label class="test-option"><input type="radio" name="q1" value="2"> Mehr als 8 Stunden – ich arbeite von zu Hause oder bin oft da.</label>
-              <label class="test-option"><input type="radio" name="q1" value="1"> 4–8 Stunden – normaler Arbeitsalltag, aber ich komme mittags heim oder habe Teilzeit.</label>
-              <label class="test-option"><input type="radio" name="q1" value="0"> Weniger als 4 Stunden – langer Arbeitstag, Pendeln, viele Termine.</label>
+              <label class="test-option"><input type="radio" name="q1" value="2"> Mehr als 8&nbsp;Stunden – ich arbeite von zu Hause oder bin oft da.</label>
+              <label class="test-option"><input type="radio" name="q1" value="1"> 4–8&nbsp;Stunden – normaler Arbeitsalltag, aber ich komme mittags heim oder habe Teilzeit.</label>
+              <label class="test-option"><input type="radio" name="q1" value="0"> Weniger als 4&nbsp;Stunden – langer Arbeitstag, Pendeln, viele Termine.</label>
             </div>
           </div>
 
           <div class="test-question is-hidden" data-question="2">
             <h3>3. Hast du Rücklagen für tierärztliche <span class="glossary-term" data-glossary-key="notdienst" data-glossary-title="Tierärztlicher Notdienst" data-glossary-text="Tierärztliche Versorgung außerhalb normaler Sprechzeiten. Immer telefonisch bestätigen, bevor du losfährst." data-glossary-href="../glossar/index.html#notdienst" aria-describedby="glossary-term-popover" tabindex="0" role="button">Notfälle</span>?</h3>
             <div class="test-options">
-              <label class="test-option"><input type="radio" name="q2" value="2"> Ja, ich habe mindestens 1.000–2.000 Euro als Puffer (Richtwert für Hund oder Katze).</label>
+              <label class="test-option"><input type="radio" name="q2" value="2"> Ja, ich habe einen Puffer für eine Notoperation. Richtwerte der Kostenseiten: bei Kleintieren einige Hundert Euro, bei Katzen 500 bis 1.000&nbsp;Euro, bei Hunden mindestens 2.000&nbsp;Euro, bei Pferden mehrere Tausend Euro.</label>
               <label class="test-option"><input type="radio" name="q2" value="1"> Ich könnte es im Notfall irgendwie organisieren.</label>
               <label class="test-option"><input type="radio" name="q2" value="0"> Nein, unerwartete Ausgaben über 200 Euro sind ein Problem.</label>
             </div>
@@ -7564,7 +7588,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </div>
 
           <div class="test-question is-hidden" data-question="5">
-            <h3>6. Bist du bereit, dein Tier 10–20 Jahre zu versorgen?</h3>
+            <h3>6. Bist du bereit, dein Tier 10–20&nbsp;Jahre zu versorgen?</h3>
             <div class="test-options">
               <label class="test-option"><input type="radio" name="q5" value="2"> Ja, ich habe die Dauer im Blick und bin bereit.</label>
               <label class="test-option"><input type="radio" name="q5" value="1"> Im Prinzip ja, aber so weit in die Zukunft denke ich ungern.</label>
@@ -7684,7 +7708,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.</li><li>Ehrliche Antworten schützen das Tier vor späterer Überforderung.</li><li>Am Ende steht kein Punktestand, sondern ein konkreter nächster Schritt. „Noch nicht“ ist eine gleichwertige Entscheidung und kein Urteil.</li></ul>
+              <ul><li>Ob ein Tier passt, entscheidet sich an Alltag, Geld, Betreuung, Wohnsituation, Motivation und einem Puffer für tierärztliche Notfälle.</li><li>Ehrliche Antworten schützen das Tier vor späterer Überforderung.</li><li>„Noch nicht“ ist eine gleichwertige Entscheidung und kein Urteil.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
@@ -7692,7 +7716,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Der Selbsttest ist eine Entscheidungshilfe, kein psychometrisches Gutachten.</li><li>Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen.</li></ul>
+              <ul><li>Der Selbsttest ist eine Entscheidungshilfe.</li><li>Ergebnis nicht über konkrete Tierart-Bedürfnisse stellen.</li></ul>
             </article>
           </div>
         </div>

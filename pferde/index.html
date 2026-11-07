@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung</title>
-  <meta name="description" content="Was ein Pferd braucht: fünf Felder mit Maßen aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und Fragen vor der Entscheidung.">
+  <meta name="description" content="Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7080,7 +7104,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "WebPage",
   "name": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
   "headline": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
-  "description": "Was ein Pferd braucht: fünf Felder mit Maßen aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und Fragen vor der Entscheidung.",
+  "description": "Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.",
   "url": "https://wahre-haustierliebe.de/pferde/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7164,7 +7188,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "Article",
   "headline": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
   "name": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
-  "description": "Was ein Pferd braucht: fünf Felder mit Maßen aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und Fragen vor der Entscheidung.",
+  "description": "Was ein Pferd braucht: Maße aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und pro Monat und Fragen vor der Entscheidung.",
   "url": "https://wahre-haustierliebe.de/pferde/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/pferde/index.html",
   "image": {
@@ -7498,7 +7522,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <ul>
             <li>Pferde sind <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die in der Gruppe Sicherheit findet. Alleinhaltung bedeutet oft massiven Stress." data-glossary-href="../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. Nach den Leitlinien des Bundeslandwirtschaftsministeriums (BMEL) passt ein einzelnes Pferd ohne Artgenossen nicht zu seinem natürlichen Sozialverhalten.</li>
             <li>In der Natur sind Pferde in der Gruppe bis zu 16 Stunden am Tag unterwegs, meist im Schritt und beim Fressen. Eine kleine Koppel deckt das nicht ab.</li>
-            <li>Die laufenden Kosten liegen bei etwa 20 bis 31 Euro pro Tag, ohne Notfälle.</li>
+            <li>Die laufenden Kosten liegen bei etwa 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat), ohne Notfälle.</li>
             <li>Du musst mindestens einmal am Tag nachsehen, ob es dem Pferd gut geht, auch am Wochenende und an Feiertagen.</li>
             <li>Hauspferde werden durchschnittlich 25 bis 30 Jahre alt. Das ist eine Verpflichtung für Jahrzehnte.</li>
           </ul>
@@ -7511,7 +7535,6 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p>Dass du ein Pferd bei dir aufnehmen möchtest, ist ein schöner Gedanke. Dreh ihn einmal um: Was bräuchte ein Pferd von dir, und was davon hast du schon?</p>
 
         <div class="section-feedback-heading"><h2 id="pferde-braucht">Was ein Pferd von dir braucht</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-braucht" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p class="pex-felder-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
 
         <section class="pex-feld" aria-labelledby="pferde-f1">
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 1</span><h3 id="pferde-f1">Artgenossen</h3></div>
@@ -7539,7 +7562,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 3</span><h3 id="pferde-f3">Futter</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Raufutter möglichst durchgehend, mindestens 12 Stunden am Tag. Wasser steht immer bereit.</p><p>Verdauung und Verhalten des Pferdes sind darauf eingestellt, dass es fast ununterbrochen frisst. Steht nicht immer Raufutter bereit (Heu, Stroh oder Gras), soll es mindestens zwölf Stunden am Tag angeboten werden, möglichst ohne Fresspause von mehr als vier Stunden. Auch in der Gruppe braucht jedes Pferd einen eigenen Fressplatz. Größere Mengen Kraftfutter (zum Beispiel Hafer) gehören auf mindestens drei Mahlzeiten verteilt. Hält man sich nicht daran, können laut Leitlinien zum Beispiel Magengeschwüre und Koliken (Bauchschmerzen durch Darmprobleme) auftreten.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.4.</p></dd>
+            <dd><p class="pex-mass">Raufutter möglichst durchgehend, mindestens 12 Stunden am Tag. Wasser steht immer bereit.</p><p>Verdauung und Verhalten des Pferdes sind darauf eingestellt, dass es fast ununterbrochen frisst. Steht nicht immer Raufutter bereit (Heu, Stroh oder Gras), soll es mindestens zwölf Stunden am Tag angeboten werden, möglichst ohne Fresspause von mehr als vier Stunden. Auch in der Gruppe braucht jedes Pferd einen eigenen Fressplatz. Größere Mengen Kraftfutter (zum Beispiel Hafer) gehören auf mindestens drei Mahlzeiten verteilt. Weil Verdauung und Verhalten auf ständiges Fressen eingestellt sind, können laut Leitlinien zum Beispiel Magengeschwüre und Koliken (Bauchschmerzen durch Darmprobleme) auftreten, wenn Raufutter fehlt oder dem Pferd Zeit und Ruhe zum Fressen fehlen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.4.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Eine Nacht von 22 bis 6 Uhr dauert 8 Stunden und damit doppelt so lang wie die Fresspause, die die Leitlinien höchstens vorsehen.</p><p class="pex-rechnung">Rechnung: 6 Uhr − 22 Uhr = 8 Stunden; 8 ÷ 4 = 2.</p></dd>
             <dt>Frage an dich</dt>
@@ -7565,7 +7588,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <dt>Zum Vorstellen</dt>
             <dd><p>Ein Huftermin alle 6 bis 8 Wochen sind etwa 6 bis 9 Termine im Jahr, in 25 Jahren rund 160 bis 220.</p><p class="pex-rechnung">Rechnung: 52 ÷ 8 = 6,5; 52 ÷ 6 ≈ 8,7; mal 25 = 163 bis 217.</p></dd>
             <dt>Frage an dich</dt>
-            <dd class="pex-frage">Welche Tierarztpraxis versorgt Pferde in deiner Nähe, und wie kommst du nachts und am Wochenende an Hilfe?</dd>
+            <dd class="pex-frage">Welche Tierarztpraxis versorgt Pferde in deiner Nähe, und wie kommst du im Notfall nachts und am Wochenende an Hilfe?</dd>
           </dl>
         </section>
 
@@ -7579,23 +7602,24 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <li class="pex-mensch"><span class="zeitleiste-when">Einmal täglich: du</span><p class="zeitleiste-what">Nachsehen, ob es dem Pferd gut geht, prüfen, ob die Tränke sauber ist und funktioniert, und regelmäßig Zäune und Einrichtungen ansehen.</p></li>
           <li class="pex-mensch"><span class="zeitleiste-when">Alle 6 bis 8 Wochen: du</span><p class="zeitleiste-what">Hufe kontrollieren und pflegen lassen.</p></li>
         </ol>
-        <p class="pex-legende">Der Ablauf ist ein Beispiel aus den Verhaltensangaben der <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1 bis 2.2. Wie ein bestimmtes Pferd seinen Tag verbringt, kann abweichen.</p>
+        <p class="pex-legende">Nach den Verhaltensangaben der <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1 bis 2.2. Wie ein einzelnes Pferd seinen Tag verbringt, kann abweichen.</p>
 
         <div class="section-feedback-heading"><h2 id="pferde-jahre">Was es über die Jahre kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-jahre" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
         <div class="faktenzeile">
-          <div><span class="zahl">20 bis 31 €</span><span class="zahl-text">pro Tag laufende Kosten für ein Pferd bei Standardhaltung, ohne Notfälle</span></div>
-          <div><span class="zahl">180.000 bis 285.000 €</span><span class="zahl-text">in 25 Jahren, Hochrechnung aus denselben Beträgen</span></div>
-          <div><span class="zahl">9.000 bis 13.000 €</span><span class="zahl-text">einmalig für Pferd und Erstausstattung, weniger als ein Zehntel davon</span></div>
+          <div><span class="zahl">20 bis 31&nbsp;€</span><span class="zahl-text">pro Tag laufende Kosten für ein Pferd bei Standardhaltung, ohne Notfälle</span></div>
+          <div><span class="zahl">600 bis 950&nbsp;€</span><span class="zahl-text">pro Monat, der Richtwert, aus dem der Tagesbetrag errechnet ist</span></div>
+          <div><span class="zahl">180.000 bis 285.000&nbsp;€</span><span class="zahl-text">in 25 Jahren, Hochrechnung aus denselben Beträgen</span></div>
+          <div><span class="zahl">9.000 bis 13.000&nbsp;€</span><span class="zahl-text">einmalig für Pferd und Erstausstattung, weniger als ein Zehntel davon</span></div>
         </div>
 
-        <p>Die erste Zahl ist der Betrag pro Tag. Er ergibt sich aus 600 bis 950 Euro im Monat. Diesen Richtwert nennt <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> für die Standardhaltung ohne besondere Vorkommnisse (600 × 12 ÷ 365 ≈ 20, 950 × 12 ÷ 365 ≈ 31). Über 25 Jahre werden daraus 180.000 bis 285.000 Euro. Wie das im Einzelnen zusammenkommt, steht auf <a href="../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
+        <p>Grundlage sind 600 bis 950 Euro im Monat. Diesen Richtwert nennt <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> für die Standardhaltung ohne besondere Vorkommnisse (pro Tag: 600 × 12 ÷ 365 ≈ 20, 950 × 12 ÷ 365 ≈ 31). Über 25 Jahre werden daraus 180.000 bis 285.000 Euro (7.200 bis 11.400 Euro im Jahr × 25). Wie das im Einzelnen zusammenkommt, steht auf <a href="../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
 
         <div class="section-feedback-heading"><h2 id="pferde-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
         <div class="pex-bedenkzeit">
           <p><strong>Ein Pferd muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für diese Tiere nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Pferd an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Pferde nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
         </div>
         <p>Die Reihenfolge, die wir empfehlen: erst Tierschutzvereine und Auffangstellen, danach alles andere. Die Fragen für den Besuch beim Anbieter und die Checkliste stehen auf <a href="../pferde/entscheidung/index.html">Bevor ein Pferd einzieht</a>.</p>
 
@@ -7622,7 +7646,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <article class="card">
             <div class="card-body">
               <h3>Pferde brauchen Herde</h3>
-              <p>Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.</p>
+              <p>Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.</p>
               <a class="card-link" href="../pferde/herde/index.html">Thema öffnen</a>
             </div>
           </article>
@@ -7643,7 +7667,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <article class="card">
             <div class="card-body">
               <h3>Was ein Pferd wirklich kostet</h3>
-              <p>Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</p>
+              <p>Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</p>
               <a class="card-link" href="../pferde/kosten/index.html">Thema öffnen</a>
             </div>
           </article>

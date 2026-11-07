@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7640,8 +7664,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
         <h4>Jagd ist Verhalten, kein moralischer Fehler der Katze</h4>
         <p>Eine gut gefütterte Katze hört nicht automatisch auf zu jagen. Jagdverhalten wird nicht nur durch Hunger ausgelöst. In einer französischen Studie, an der Katzenhalter selbst mitgewirkt haben, wurden zwischen 2015 und 2022 bei 5.048 Katzen insgesamt 36.568 nach Hause gebrachte Beutetiere erfasst: 68 Prozent Säugetiere, 21 Prozent Vögel und 8 Prozent Schuppenkriechtiere. Erfasst wurde nur, was Menschen meldeten und was die Katzen nach Hause brachten. Wie viele Tiere eine einzelne Katze insgesamt fängt, lässt sich daraus nicht sagen, und auch keine verlässliche Hochrechnung für Deutschland.</p>
-        <p>Eine GPS-Studie in einer norwegischen Wohngegend verfolgte 92 Freigängerkatzen. Im Durchschnitt verbrachten sie 79 Prozent ihrer Zeit draußen innerhalb von 50 Metern um ihr Zuhause. Katzen jagen deshalb häufig direkt in Gärten und am Siedlungsrand. Wer sagt, die eigene Katze „geht nicht weit“, kann trotzdem eine Katze haben, die in der Nähe viel jagt.</p>
-        <p>Die Verantwortung liegt beim Menschen, nicht bei der Katze. Wer unkontrollierten Freigang erlaubt, muss die Folgen für Jungvögel, Kleinsäuger, Reptilien und Amphibien mitdenken. Glöckchen am Halsband lösen das Problem nicht zuverlässig und können zusätzliche Risiken schaffen. Ein gesicherter Außenbereich verhindert die Jagd außerhalb der Einfriedung deutlich wirksamer.</p>
+        <p>Eine GPS-Studie in einer norwegischen Wohngegend verfolgte 92 Freigängerkatzen. Im Durchschnitt verbrachten sie 79 Prozent ihrer Zeit draußen innerhalb von 50&nbsp;Metern um ihr Zuhause. Sie halten sich also vor allem in Gärten und am Siedlungsrand auf, und dort jagen sie dann auch. Wer sagt, die eigene Katze „geht nicht weit“, kann trotzdem eine Katze haben, die in der Nähe viel jagt.</p>
+        <p>Die Verantwortung liegt beim Menschen, nicht bei der Katze. Wer unkontrollierten Freigang erlaubt, muss die Folgen für Jungvögel, Kleinsäuger, Reptilien und Amphibien mitdenken. Glöckchen am Halsband lösen das Problem nicht zuverlässig und können zusätzliche Risiken schaffen, weil ein Halsband hängen bleiben kann. Ein gesicherter Außenbereich verhindert die Jagd außerhalb der Einfriedung deutlich wirksamer.</p>
 
         <h4>Fortpflanzung und örtliche Vorschriften</h4>
         <p>Eine unkastrierte Katze mit Freigang kann sich unkontrolliert fortpflanzen. Damit entstehen nicht nur ungewollte Würfe, sondern weiterer Druck auf Tierheime, Pflegestellen und bereits bestehende Streunerkatzenpopulationen. Freigang gibt es deshalb nur nach Kastration.</p>
@@ -7792,7 +7816,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
         <div class="warning-box">
           <h3>Verhaltensänderung ist zuerst ein Gesundheitssignal</h3>
-          <p>Unsauberkeit, Aggression, Rückzug oder nächtliches Rufen sind keine Trotzreaktionen. Schmerzen, Harnwegserkrankungen, Schilddrüsenprobleme, Zahnleiden, Arthrose und viele andere Erkrankungen können ähnlich aussehen wie Stress. Besonders Pressen ohne normalen Urinabsatz, Atemnot, Zusammenbruch, schwere Verletzungen oder deutliche Teilnahmslosigkeit sind Notfälle. Dann wird nicht erst die Einrichtung umgestellt, sondern sofort tierärztliche Hilfe organisiert.</p>
+          <p>Unsauberkeit, Aggression, Rückzug oder nächtliches Rufen sind keine Trotzreaktionen. Schmerzen, Harnwegserkrankungen, Schilddrüsenprobleme, Zahnleiden, Arthrose und viele andere Erkrankungen können ähnlich aussehen wie Stress. Besonders Pressen ohne normalen Urinabsatz, Atemnot, Zusammenbruch, schwere Verletzungen oder deutliche Teilnahmslosigkeit sind Notfälle. Dann wird nicht erst die Einrichtung umgestellt, sondern sofort tierärztliche Hilfe organisiert, auch nachts und am Wochenende über den tierärztlichen Notdienst.</p>
         </div>
 
         <h4>Ein einfaches Haltungsprotokoll macht Veränderungen sichtbar</h4>
@@ -7844,7 +7868,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <tr><td data-label="Frage"><strong>Kontrolle</strong></td><td data-label="Spricht eher für kontrollierte Innenhaltung">Tägliche Beobachtung, Beschäftigung und Anpassung sind zuverlässig möglich</td><td data-label="Spricht für zusätzlichen Außenraum">Gesicherter Balkon, Garten oder Gehege kann verantwortbar betrieben und regelmäßig geprüft werden</td></tr>
           </tbody>
         </table>
-        <p>Die Matrix liefert keinen Punktesieger. Sie verhindert, dass ein einzelner menschlicher Wunsch alle anderen Faktoren überstimmt. Bei widersprüchlichen Signalen werden Tierarztpraxis, vermittelnde Tierschutzstelle und qualifizierte Verhaltensberatung einbezogen, bevor die Katze einzieht oder die Haltungsform geändert wird.</p>
+        <p>Ein einzelner menschlicher Wunsch darf nicht alle anderen Faktoren überstimmen. Bei widersprüchlichen Signalen werden Tierarztpraxis, vermittelnde Tierschutzstelle und qualifizierte Verhaltensberatung einbezogen, bevor die Katze einzieht oder die Haltungsform geändert wird.</p>
 
         <div class="warning-box">
           <h3>Wenn keine Haltungsform die Bedürfnisse erfüllt</h3>
@@ -7878,7 +7902,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </a>
           <a class="topic-context-link" href="../../katzen/kosten/index.html">
             <strong>Was eine Katze wirklich kostet</strong>
-            <span>Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</span>
+            <span>Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</span>
           </a>
           <a class="topic-context-link" href="../../katzen/streunerkatzen/index.html">
             <strong>Streunerkatzen und Verantwortung</strong>
@@ -7954,7 +7978,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.</li><li>Alter, Gesundheit, Vorgeschichte, Sozialverhalten und Wohnumfeld können die passende Haltungsform verändern.</li><li>Impfung und Parasitenkontrolle werden nach individuellem Risiko tierärztlich festgelegt; die Seite ersetzt keinen Behandlungsplan.</li><li>Katzenschutzverordnungen unterscheiden sich örtlich und können sich ändern. Maßgeblich sind die aktuellen Angaben des zuständigen Ordnungs- oder Veterinäramts.</li><li>Bei Unsauberkeit, Rückzug, Aggression, Gewichtsveränderung, Schmerzen oder anderen Verhaltensänderungen ist eine tierärztliche Abklärung nötig.</li></ul>
+              <ul><li>Studien aus einzelnen Regionen liefern keine allgemeine Sterberate oder Beutezahl für jede Freigängerkatze in Deutschland.</li><li>Alter, Gesundheit, Vorgeschichte, Sozialverhalten und Wohnumfeld können die passende Haltungsform verändern.</li><li>Impfung und Parasitenkontrolle legt die Tierarztpraxis nach dem individuellen Risiko der Katze fest.</li><li>Katzenschutzverordnungen unterscheiden sich örtlich und können sich ändern. Maßgeblich sind die aktuellen Angaben des zuständigen Ordnungs- oder Veterinäramts.</li><li>Bei Unsauberkeit, Rückzug, Aggression, Gewichtsveränderung, Schmerzen oder anderen Verhaltensänderungen ist eine tierärztliche Abklärung nötig.</li></ul>
             </article>
           </div>
         </div>

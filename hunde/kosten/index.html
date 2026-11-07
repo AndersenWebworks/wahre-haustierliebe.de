@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7441,12 +7465,13 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p>Der Kaufpreis oder die Schutzgebühr ist nur der Anfang. Wer einen Hund aufnimmt, entscheidet sich für viele Jahre Versorgung, Zeit und Verlässlichkeit. Ob ein Hund aus dem Tierschutz kommt oder gekauft wird, ändert daran nichts.</p>
 
         <div class="faktenzeile">
-          <div><span class="zahl">3,20 bis 8,45 €</span><span class="zahl-text">pro Tag, für einen mittelgroßen Hund, im Durchschnitt über zwölf Jahre</span></div>
-          <div><span class="zahl">14.000 bis 37.000 €</span><span class="zahl-text">in zwölf Jahren, im Mittel etwa 26.000 €, ohne Notfälle, Betreuung und Urlaub</span></div>
-          <div class="klein"><span class="zahl">ab 3,42 €</span><span class="zahl-text">pro Tag als Mindestwert: 17.500 € in 14 Jahren nennen Tierschutzbund und TVT</span></div>
+          <div><span class="zahl">3,20 bis 8,45&nbsp;€</span><span class="zahl-text">pro Tag, für einen mittelgroßen Hund, im Durchschnitt über zwölf&nbsp;Jahre</span></div>
+          <div><span class="zahl">97 bis 257&nbsp;€</span><span class="zahl-text">pro Monat, die einmaligen Kosten auf zwölf Jahre verteilt</span></div>
+          <div><span class="zahl">14.000 bis 37.000&nbsp;€</span><span class="zahl-text">in zwölf Jahren, im Mittel etwa 26.000&nbsp;€, ohne Notfälle, Betreuung und Urlaub</span></div>
+          <div class="klein"><span class="zahl">ab 3,42&nbsp;€</span><span class="zahl-text">pro Tag (ab 104&nbsp;€ im Monat) als Mindestwert: 17.500&nbsp;€ in 14&nbsp;Jahren nennen Tierschutzbund und TVT</span></div>
         </div>
-        <p class="hunde-rechnung">Rechnung: 14.000 ÷ 4.380 Tage = 3,20; 37.000 ÷ 4.380 Tage = 8,45; 17.500 ÷ 5.110 Tage = 3,42.</p>
-        <p>Die Summe steht vor dem Preis des Hundes, weil sie das ist, was du über die Jahre trägst. Der Kaufpreis oder die Schutzgebühr ist in der Tabelle unten nur eine Zeile unter vielen.</p>
+        <p class="hunde-rechnung">Rechnung pro Tag: 14.000 ÷ 4.380&nbsp;Tage = 3,20; 37.000 ÷ 4.380&nbsp;Tage = 8,45; 17.500 ÷ 5.110&nbsp;Tage = 3,42. Pro Monat: 14.000 ÷ 144&nbsp;Monate = 97; 37.000 ÷ 144 = 257; 17.500 ÷ 168 = 104 (144 = 12&nbsp;Jahre × 12 Monate; 168 = 14&nbsp;Jahre × 12 Monate).</p>
+        <p>Über die Jahre trägst du die Summe, nicht den Preis des Hundes.</p>
 
         <div class="warning-box">
           <h3>Vor dem Einzug muss mehr vorhanden sein als der Kaufpreis</h3>
@@ -7463,28 +7488,28 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         </ul>
 
         <h2 id="hunde-kosten-2-regelmassige-kosten-im-alltag">2. Regelmäßige Kosten im Alltag</h2>
-        <p>Die monatlichen Kosten bestehen aus vielen wiederkehrenden Posten. Sie steigen oder sinken mit Größe, Alter, Gesundheit, Wohnort und Alltag des Hundes. Die Tabelle zeigt nur die planbaren Grundkosten. Sie ist keine vollständige Lebenszeitrechnung, denn Urlaub, Betreuung und ein medizinischer Ausnahmefall fehlen.</p>
+        <p>Die monatlichen Kosten bestehen aus vielen wiederkehrenden Posten. Sie steigen oder sinken mit Größe, Alter, Gesundheit, Wohnort und Alltag des Hundes. Planbar sind nur die Grundkosten; Urlaub, Betreuung und ein medizinischer Ausnahmefall fehlen.</p>
         <table class="cost-table">
-          <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
+          <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th><th>Pro Monat</th></tr></thead>
           <tbody>
-            <tr><td data-label="Posten">Anschaffung (Schutzgebühr oder Kaufpreis, Spanne dieser Seite)</td><td data-label="Einmalig">200–2.000 €</td><td data-label="Jährlich">–</td></tr>
-            <tr><td data-label="Posten">Erstausstattung (Leine, Napf, Körbchen, Box)</td><td data-label="Einmalig">200–500 €</td><td data-label="Jährlich">–</td></tr>
-            <tr><td data-label="Posten">Futter (hochwertiges Nassfutter / Trockenfutter)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">600–1.500 €</td></tr>
-            <tr><td data-label="Posten">Tierarzt (Impfungen, Entwurmung, Vorsorge)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">200–500 €</td></tr>
-            <tr><td data-label="Posten">Hundesteuer (je nach Gemeinde)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">50–200 €</td></tr>
-            <tr><td data-label="Posten">Haftpflichtversicherung</td><td data-label="Einmalig">–</td><td data-label="Jährlich">50–100 €</td></tr>
-            <tr><td data-label="Posten">Krankenversicherung (optional, empfohlen)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">250–600 €</td></tr>
+            <tr><td data-label="Posten">Anschaffung (Schutzgebühr oder Kaufpreis, Spanne dieser Seite)</td><td data-label="Einmalig">200–2.000&nbsp;€</td><td data-label="Jährlich">–</td><td data-label="Pro Monat">–</td></tr>
+            <tr><td data-label="Posten">Erstausstattung (Leine, Napf, Körbchen, Box)</td><td data-label="Einmalig">200–500&nbsp;€</td><td data-label="Jährlich">–</td><td data-label="Pro Monat">–</td></tr>
+            <tr><td data-label="Posten">Futter (hochwertiges Nassfutter / Trockenfutter)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">600–1.500&nbsp;€</td><td data-label="Pro Monat">50–125&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Tierarzt (Impfungen, Entwurmung, Vorsorge)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">200–500&nbsp;€</td><td data-label="Pro Monat">17–42&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Hundesteuer (je nach Gemeinde)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">50–200&nbsp;€</td><td data-label="Pro Monat">4–17&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Haftpflichtversicherung</td><td data-label="Einmalig">–</td><td data-label="Jährlich">50–100&nbsp;€</td><td data-label="Pro Monat">4–8&nbsp;€</td></tr>
+            <tr><td data-label="Posten">Krankenversicherung (optional, empfohlen)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">250–600&nbsp;€</td><td data-label="Pro Monat">21–50&nbsp;€</td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Die Tabelle ist eine Orientierung für mittelgroße Hunde, kein verbindlicher Preisplan. So ergibt sich die Summe:</p>
+        <p class="text-muted">Die Werte sind eine Orientierung für mittelgroße Hunde, kein verbindlicher Preisplan. Pro Monat ist der Jahresbetrag geteilt durch 12, auf volle Euro gerundet. So ergibt sich die Summe:</p>
         <ul class="text-muted">
           <li>Die jährlichen Posten ergeben 1.150 bis 2.900 Euro (600 + 200 + 50 + 50 + 250 und 1.500 + 500 + 200 + 100 + 600). Laufend sind das etwa 100 bis 240 Euro im Monat (1.150 ÷ 12 und 2.900 ÷ 12).</li>
           <li>Mal zwölf Jahre sind das 13.800 bis 34.800 Euro.</li>
           <li>Dazu kommen die einmaligen Posten von 400 bis 2.500 Euro (200 + 200 und 2.000 + 500).</li>
-          <li>Zusammen sind es 14.200 bis 37.300 Euro, gerundet 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Geteilt durch 4.380 Tage ergibt das 3,20 bis 8,45 Euro pro Tag.</li>
+          <li>Zusammen sind es 14.200 bis 37.300 Euro, gerundet 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Geteilt durch 4.380&nbsp;Tage ergibt das 3,20 bis 8,45&nbsp;Euro pro Tag, geteilt durch 144&nbsp;Monate (12&nbsp;Jahre × 12) rund 97 bis 257&nbsp;Euro im Monat, die einmaligen Posten eingerechnet.</li>
         </ul>
         <p class="text-muted">Notfälle, Betreuung und Urlaub sind darin nicht enthalten. Eine feste Planungssumme ist das nicht: Große Hunde, Spezialfutter, chronische Erkrankungen, hohe Hundesteuer oder regelmäßige Betreuung können die Kosten deutlich erhöhen. Und wie sich dein Leben verändert, lässt sich nicht vorausberechnen. Prüfe vor dem Einzug die Preise an deinem Wohnort, die Beiträge der Versicherung und die voraussichtlichen Tierarztkosten in deiner Praxis.</p>
-        <p class="text-muted">Zur Gegenprobe nennt der Deutsche Tierschutzbund für einen mittelgroßen Hund 300 bis 550 Euro Anschaffungspreis bei einer Adoption aus dem Tierheim, 230 bis 720 Euro für die Grundausstattung und 1.200 bis 1.350 Euro im Jahr für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung. Zusammen sind das mindestens 17.500 bis 20.000 Euro für einen 14-jährigen Hund. Seltene Rassen oder Hunde vom Züchter können nach seinen Angaben bis zu mehrere Tausend Euro kosten; dann liegt die Summe entsprechend höher (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Hunde richtig halten</a>). Die TVT rechnet für einen mittelgroßen Hund bis zum 14. Lebensjahr mit mindestens 17.500 Euro. Ungeplante Tierarztbesuche, chronische Erkrankungen, Hundeschule und Betreuung können deutlich mehr kosten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&amp;did=421" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 197</a>).</p>
+        <p class="text-muted">Zur Gegenprobe nennt der Deutsche Tierschutzbund für einen mittelgroßen Hund 300 bis 550&nbsp;Euro Anschaffungspreis bei einer Adoption aus dem Tierheim, 230 bis 720&nbsp;Euro für die Grundausstattung und 1.200 bis 1.350&nbsp;Euro im Jahr (100 bis 112,50&nbsp;Euro im Monat) für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung. Zusammen sind das mindestens 17.500 bis 20.000&nbsp;Euro für einen 14-jährigen Hund, also 104 bis 119&nbsp;Euro im Monat (geteilt durch 168&nbsp;Monate). Seltene Rassen oder Hunde vom Züchter können nach seinen Angaben bis zu mehrere Tausend Euro kosten; dann liegt die Summe entsprechend höher (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Hunde richtig halten</a>). Die TVT rechnet für einen mittelgroßen Hund bis zum 14. Lebensjahr mit mindestens 17.500 Euro. Ungeplante Tierarztbesuche, chronische Erkrankungen, Hundeschule und Betreuung können deutlich mehr kosten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&amp;did=421" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 197</a>).</p>
         <p class="text-muted"><strong>Haftpflicht:</strong> Ob eine Hundehaftpflichtversicherung vorgeschrieben ist, regeln die Bundesländer unterschiedlich; frag bei deiner Gemeinde nach. Unabhängig davon haftest du als Halter grundsätzlich für Schäden, die dein Hund Menschen oder Sachen zufügt (<a href="https://www.gesetze-im-internet.de/bgb/__833.html" target="_blank" rel="noopener noreferrer">§ 833 BGB</a>).</p>
 
         <h2 id="hunde-kosten-3-notfalle-und-kosten-die-sich-nicht-planen-lassen">3. Notfälle und Kosten, die sich nicht planen lassen</h2>
@@ -7520,7 +7545,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
         <h2 id="hunde-kosten-adoption-ist-nicht-kostenlos-aber-sie-schafft-eine-chance">Adoption ist nicht kostenlos, aber sie schafft eine Chance</h2>
         <p>Auch ein Hund aus dem Tierschutz braucht Ausstattung, Futter, Tierarzt und Rücklagen. Die Schutzgebühr deckt meist nur einen Teil der bisherigen Versorgung. Sie ist keine Rechnung dafür, was ein Tier wert ist. Sie hilft, Versorgung und Vermittlung zu tragen, während ein bereits vorhandenes Tier ein Zuhause bekommt. Woher Tiere kommen können und was du bei Zoofachhandel, Kleinanzeigen und Züchtern prüfen kannst, steht auf der Seite <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
-        <p class="text-muted">Die Einzelposten der Tabelle sind Spannen dieser Seite für einen mittelgroßen Hund. Belegt sind die Vergleichswerte des Deutschen Tierschutzbundes und der TVT (siehe oben) sowie die Gebührenregeln der GOT. Konkrete Angebote, Gebühren und Behandlungskosten unterscheiden sich je nach Region und können sich ändern. Stand der Angaben: November 2026.</p>
+        <p class="text-muted">Die Einzelposten der Tabelle sind Spannen dieser Seite für einen mittelgroßen Hund. Belegt sind die Vergleichswerte des Deutschen Tierschutzbundes und der TVT sowie die Gebührenregeln der GOT. Konkrete Angebote, Gebühren und Behandlungskosten unterscheiden sich je nach Region und können sich ändern. Stand der Angaben: November 2026.</p>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">

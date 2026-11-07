@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7499,7 +7523,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <img class="card-media" src="../assets/images/optimized/animal-shelter-fundraiser.jpg" alt="Tierschutzaktion als Beispiel für Patenschaften und Unterstützung" loading="lazy" width="960" height="686" decoding="async">
             <div class="card-body">
               <h3><span class="glossary-term" data-glossary-key="patenschaft" data-glossary-title="Patenschaft" data-glossary-text="Regelmäßige finanzielle oder praktische Unterstützung für ein Tier, ohne es selbst zu halten." data-glossary-href="../glossar/index.html#patenschaft" aria-describedby="glossary-term-popover" tabindex="0" role="button">Patenschaften</span></h3>
-              <p>Oft schon ab 10 bis 30 Euro im Monat, je nach Tierheim, kannst du ein Tier unterstützen, das schwer zu vermitteln ist: alt, krank oder einfach „zu gewöhnlich“. Du bekommst Neuigkeiten und kannst das Tier besuchen, trägst aber nicht die volle Verantwortung.</p>
+              <p>Oft schon ab 10 bis 30&nbsp;Euro im Monat, je nach Tierheim, kannst du ein Tier unterstützen, das schwer zu vermitteln ist: alt, krank oder einfach „zu gewöhnlich“. Du bekommst Neuigkeiten und kannst das Tier besuchen, trägst aber nicht die volle Verantwortung.</p>
               <a class="card-link" href="../adoption/index.html">Mehr über Tierheimtiere</a>
             </div>
           </div>
@@ -7515,7 +7539,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <img class="card-media image-fit-contain" src="../assets/images/optimized/rat-cage-01.jpg" alt="Strukturierter Kleintierkäfig als Beispiel für praktische Tierheimarbeit" loading="lazy" width="254" height="454" decoding="async">
             <div class="card-body">
               <h3>Ehrenamt im Tierheim</h3>
-              <p>Füttern, Reinigen, Spielen, Sozialisieren, Öffentlichkeitsarbeit, Fahrdienste – Tierheime brauchen helfende Hände. Dabei erlebst du Fütterung, Reinigung, Körpersprache, sichere Handgriffe und den tatsächlichen Zeitaufwand. Das hilft dir auch, die Anschaffung eines eigenen Tieres realistischer zu beurteilen.</p>
+              <p>Füttern, Reinigen, Spielen, Sozialisieren, Öffentlichkeitsarbeit, Fahrdienste – Tierheime brauchen helfende Hände. Dabei erlebst du Körpersprache, sichere Handgriffe und den tatsächlichen Zeitaufwand. Das hilft dir auch, die Anschaffung eines eigenen Tieres realistischer zu beurteilen.</p>
               <a class="card-link" href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Zum Deutschen Tierschutzbund</a>
             </div>
           </div>
@@ -7524,7 +7548,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <div class="section-feedback-heading"><h2 id="noch-nicht-bereit-dein-spater-plan">Dein „Später“-Plan</h2><button type="button" class="section-feedback-action" data-feedback-section="noch-nicht-bereit-dein-spater-plan" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Wenn du weißt, dass du irgendwann ein Tier möchtest – bereite dich jetzt schon vor:</p>
         <ul>
-          <li><strong>Rücklagen aufbauen.</strong> Ein <span class="glossary-term" data-glossary-key="notfallfonds" data-glossary-title="Notfallfonds" data-glossary-text="Zurückgelegtes Geld für unerwartete Tierarztkosten, damit Behandlung nicht am Kontostand scheitert." data-glossary-href="../glossar/index.html#notfallfonds" aria-describedby="glossary-term-popover" tabindex="0" role="button">Notfallfonds</span> von 1.000 bis 2.000 Euro sollte da sein, bevor das Tier einzieht (Richtwert für Hund oder Katze, bei Pferden ist es ein Mehrfaches).</li>
+          <li><strong>Rücklagen aufbauen.</strong> Ein <span class="glossary-term" data-glossary-key="notfallfonds" data-glossary-title="Notfallfonds" data-glossary-text="Zurückgelegtes Geld für unerwartete Tierarztkosten, damit Behandlung nicht am Kontostand scheitert." data-glossary-href="../glossar/index.html#notfallfonds" aria-describedby="glossary-term-popover" tabindex="0" role="button">Notfallfonds</span> für unerwartete Tierarztkosten sollte da sein, bevor das Tier einzieht. Wie hoch er je nach Tierart sein sollte, steht auf den Kostenseiten, etwa für <a href="../hunde/kosten/index.html">Hunde</a> und <a href="../katzen/kosten/index.html">Katzen</a>.</li>
           <li><strong>Wohnsituation klären.</strong> Ist dein nächster Mietvertrag tierfreundlich? Hast du genug Platz?</li>
           <li><strong>Wissen sammeln.</strong> Lies dich ein, besuche Seminare, sprich mit Haltern. Je mehr du weißt, desto besser wird der Start.</li>
           <li><strong>Tierheime kennenlernen.</strong> Viele bieten Infoabende oder Tage der offenen Tür. Du bekommst ein Gefühl dafür, welches Tier zu dir passen könnte.</li>
@@ -7535,11 +7559,11 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <h3>Die richtige Zeit erkennen</h3>
           <p>Du bist bereit, wenn:</p>
           <ul style="margin-bottom: 0;">
-            <li>Deine Wohnsituation stabil ist (mindestens 2–3 Jahre Perspektive)</li>
+            <li>Deine Wohnsituation stabil ist (mindestens 2–3&nbsp;Jahre Perspektive)</li>
             <li>Du finanzielle Puffer hast (laufende Kosten + Notfallreserve)</li>
             <li>Dein Alltag Zeit lässt (nicht 12-Stunden-Tage, nicht ständig unterwegs)</li>
             <li>Alle im Haushalt einverstanden sind</li>
-            <li>Du dich auf 10–20 Jahre Verantwortung freust, nicht sie fürchtest</li>
+            <li>Du dich auf 10–20&nbsp;Jahre Verantwortung freust, nicht sie fürchtest</li>
           </ul>
         </div><div class="article-rhythm quote-band" data-enhancement="nicht-bereit-entlastung">
             <span class="eyebrow">Entlastung</span>

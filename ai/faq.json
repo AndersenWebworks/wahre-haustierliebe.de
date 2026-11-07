@@ -78,7 +78,7 @@
     },
     {
       "question": "Was kostet ein Hund pro Tag und im ganzen Leben?",
-      "answer": "Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.",
+      "answer": "Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, das sind etwa 97 bis 257 Euro im Monat; ohne die einmaligen Posten laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.",
       "source": "https://wahre-haustierliebe.de/hunde/index.html"
     },
     {
@@ -382,11 +382,6 @@
       "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
     },
     {
-      "question": "Darf ein Welpe vor einem Alter von über acht Wochen von der Mutter getrennt werden?",
-      "answer": "Nein. Nach § 2 Abs. 4 TierSchHuV ist das nur erlaubt, wenn eine Tierärztin oder ein Tierarzt es für nötig hält, um Mutter oder Welpen vor Schmerzen, Leiden oder Schäden zu schützen.",
-      "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
-    },
-    {
       "question": "Hilft Homöopathie bei Tieren?",
       "answer": "Für Homöopathie gibt es in der Tiermedizin keinen belastbaren, anerkannten Wirksamkeitsnachweis. Das größte Risiko ist verlorene Zeit: Schmerzen, Infektionen, Atemnot, Harnprobleme oder andere Warnzeichen gehören tierärztlich abgeklärt.",
       "source": "https://wahre-haustierliebe.de/wissen/index.html"
@@ -423,17 +418,17 @@
     },
     {
       "question": "Reicht ein Fensterspalt, wenn der Hund kurz im Auto wartet?",
-      "answer": "Nein. Im ADAC-Test erreichte der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C und nach 60 Minuten rund 57 °C, auch mit geöffneten Fenstern.",
+      "answer": "Nein. Im ADAC-Test erreichte der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C und nach 60 Minuten rund 57 °C, auch mit geöffneten Fenstern.",
       "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
     },
     {
       "question": "Welche Papiere braucht mein Hund für Reisen in der EU?",
-      "answer": "In der Regel einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Die Impfung ist frühestens mit zwölf Wochen möglich, danach gilt eine Wartezeit von 21 Tagen. Seit dem 22. April 2026 gelten neue EU-Regeln; prüfe die aktuelle Seite des Bundesministeriums für Landwirtschaft, Ernährung und Heimat.",
+      "answer": "In der Regel einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Die Impfung ist frühestens mit zwölf Wochen möglich, danach gilt eine Wartezeit von 21 Tagen. Seit dem 22. April 2026 gelten neue EU-Regeln; prüfe die aktuelle Seite des Bundesministeriums für Landwirtschaft, Ernährung und Heimat.",
       "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
     },
     {
       "question": "Muss mein Hund vor der Einreise in manche Länder gegen Bandwurm behandelt werden?",
-      "answer": "Ja. Für Finnland, Irland, Malta, Norwegen und Nordirland müssen Hunde 24 bis 120 Stunden vor der Einreise gegen den Fuchsbandwurm behandelt werden. Das gilt für Hunde, nicht für Katzen. Für Großbritannien gelten eigene Regeln.",
+      "answer": "Ja. Für Finnland, Irland, Malta, Norwegen und Nordirland müssen Hunde 24 bis 120 Stunden vor der Einreise gegen den Fuchsbandwurm behandelt werden. Das gilt für Hunde, nicht für Katzen. Für Großbritannien gelten eigene Regeln.",
       "source": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html"
     },
     {

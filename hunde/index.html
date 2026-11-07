@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7247,7 +7271,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       "name": "Was kostet ein Hund pro Tag und im ganzen Leben?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre."
+        "text": "Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, das sind etwa 97 bis 257 Euro im Monat; ohne die einmaligen Posten laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre."
       }
     }
   ]
@@ -7515,7 +7539,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <div class="article-hero-copy">
           <h1>Ein Hund zieht ein. Was braucht er von dir?</h1>
                   <p>Hunde sind hochsoziale Tiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
-        <div class="article-kicker"><span>4–5 h allein</span><span>3–8 € pro Tag</span><span>Beziehung täglich</span></div></div>
+        <div class="article-kicker"><span>4–5 h allein</span><span>3–8&nbsp;€ pro Tag</span><span>Beziehung täglich</span></div></div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
           <img src="../assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Golden Retriever springt über ein Agility-Hindernis." loading="eager" width="960" height="643" decoding="async" fetchpriority="high">
@@ -7533,19 +7557,18 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <h3>Auf einen Blick</h3>
           <ul>
             <li>Ein erwachsener Hund sollte als Orientierung höchstens 4 bis 5 Stunden am Stück allein bleiben. Eine gesetzliche Zahl gibt es nicht. Die Tierschutz-Hundeverordnung verlangt aber, dass er mehrmals täglich Umgang mit seinem Menschen hat.</li>
-            <li>Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, zusammen etwa 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Laufend sind das etwa 100 bis 240 Euro im Monat. Notfälle sind nicht eingerechnet.</li>
+            <li>Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45&nbsp;Euro pro Tag, das sind rund 97 bis 257&nbsp;Euro im Monat. Insgesamt sind es etwa 14.000 bis 37.000&nbsp;Euro, im Mittel etwa 26.000&nbsp;Euro. Laufend, also ohne Anschaffung und Erstausstattung, sind das etwa 100 bis 240&nbsp;Euro im Monat. Notfälle sind nicht eingerechnet.</li>
             <li>Was eine Kastration kostet, hängt von Geschlecht, Gewicht, Narkose, Operationsmethode, Medikamenten und Nachsorge ab.</li>
             <li>Die meisten unkastrierten Rüden bekommen im Alter eine gutartig vergrößerte Prostata; nicht jede macht Beschwerden. Nach einer Literaturangabe, die <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8782267/" target="_blank" rel="noopener noreferrer">Ruetten et al. 2021</a> zitieren, sind es rund 80 % ab sechs Jahren und etwa 95 % ab neun Jahren.</li>
             <li>Ein Garten ersetzt keine Spaziergänge – Hunde brauchen Auslauf, neue Reize, Gerüche und Sozialkontakte außerhalb ihres gewohnten Territoriums.</li>
           </ul>
         </div><div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
             <div class="metric-card"><strong>4–5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
-            <div class="metric-card"><strong>3,20–8,45 € pro Tag</strong><span>über zwölf Jahre, zusammen etwa 14.000 bis 37.000 €, im Mittel 26.000 €. Notfälle sind nicht eingerechnet.</span></div>
+            <div class="metric-card"><strong>3,20–8,45&nbsp;€ pro Tag</strong><span>rund 97 bis 257&nbsp;€ im Monat, über zwölf Jahre, zusammen etwa 14.000 bis 37.000&nbsp;€, im Mittel 26.000&nbsp;€. Notfälle sind nicht eingerechnet.</span></div>
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>
 
         <div class="section-feedback-heading"><h2 id="hunde-braucht">Was ein Hund von dir braucht</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-braucht" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p class="hunde-muster-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
 
         <section class="hunde-feld" aria-labelledby="hunde-f1">
           <div class="hunde-feld-kopf"><span class="hunde-feld-nr">Feld 1</span><h3 id="hunde-f1">Artgenossen und Menschen</h3></div>
@@ -7589,12 +7612,12 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Zwei Mahlzeiten am Tag, nicht mehr als 12 Stunden Abstand, und ständig frisches Wasser.<sup><a href="#hunde-q5">5</a></sup></p>
-              <p>Laut VIER PFOTEN können erwachsene Hunde zweimal täglich Futter bekommen. Zwischen den beiden Mahlzeiten sollten höchstens 12 Stunden liegen, sonst kann sich Magensäure anstauen. Welpen bekommen bis zum Alter von drei Monaten die Tagesmenge auf vier Portionen verteilt.<sup><a href="#hunde-q5">5</a></sup> Für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung zusammen nennt der Deutsche Tierschutzbund 1.200 bis 1.350 Euro im Jahr.<sup><a href="#hunde-q4">4</a></sup></p>
+              <p>Laut VIER PFOTEN können erwachsene Hunde zweimal täglich Futter bekommen. Zwischen den beiden Mahlzeiten sollten höchstens 12 Stunden liegen, sonst kann sich Magensäure anstauen. Welpen bekommen bis zum Alter von drei Monaten die Tagesmenge auf vier Portionen verteilt.<sup><a href="#hunde-q5">5</a></sup> Für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung zusammen nennt der Deutsche Tierschutzbund 1.200 bis 1.350&nbsp;Euro im Jahr, das sind 100 bis 112,50&nbsp;Euro im Monat.<sup><a href="#hunde-q4">4</a></sup></p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
-              <p>Zum Beispiel um 7 und um 19 Uhr, 365 Tage im Jahr, auch am Wochenende. In zwölf Jahren sind das 8.760 Mahlzeiten. Für das Futter allein rechnen wir mit 600 bis 1.500 Euro im Jahr, das sind etwa 1,64 bis 4,11 Euro pro Tag.</p>
-              <p class="hunde-rechnung">Rechnung: 2 × 365 × 12 = 8.760; 600 ÷ 365 = 1,64; 1.500 ÷ 365 = 4,11.</p>
+              <p>Zum Beispiel um 7 und um 19 Uhr, 365 Tage im Jahr, auch am Wochenende. In zwölf Jahren sind das 8.760 Mahlzeiten. Für das Futter allein rechnen wir mit 600 bis 1.500&nbsp;Euro im Jahr, das sind etwa 1,64 bis 4,11&nbsp;Euro pro Tag oder 50 bis 125&nbsp;Euro im Monat.</p>
+              <p class="hunde-rechnung">Rechnung: 2 × 365 × 12 = 8.760; 600 ÷ 365 = 1,64; 1.500 ÷ 365 = 4,11; 600 ÷ 12 = 50; 1.500 ÷ 12 = 125.</p>
             </dd>
             <dt class="hunde-frage-t">Frage an dich</dt>
             <dd class="hunde-frage">Wer füttert zu festen Zeiten, auch wenn du verreist oder länger arbeiten musst?</dd>
@@ -7625,7 +7648,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Ein Hund lebt etwa 8 bis 14 Jahre. Im tierärztlichen Notdienst gilt das Zwei- bis Vierfache des Gebührensatzes plus 50 Euro.<sup><a href="#hunde-q4">4</a>,<a href="#hunde-q7">7</a></sup></p>
-              <p>Der Deutsche Tierschutzbund nennt eine Lebenserwartung von etwa 8 bis 14 Jahren. Zu den jährlichen Kosten gehören Impfungen und Entwurmung.<sup><a href="#hunde-q4">4</a></sup> Nachts, am Wochenende und an Feiertagen kostet der Tierarzt mehr: Im Notdienst erhöht die Gebührenordnung für Tierärzte (§ 4) den einfachen Satz auf das Zweifache, in begründeten Fällen bis auf das Vierfache. Dazu kommen 50 Euro Notdienstgebühr.<sup><a href="#hunde-q7">7</a></sup> Manche Rassen haben angezüchtete Gesundheitsprobleme, mehr dazu steht unter <a href="../qualzucht/index.html">Qualzucht</a>.</p>
+              <p>Der Deutsche Tierschutzbund nennt eine Lebenserwartung von etwa 8 bis 14 Jahren. Zu den jährlichen Kosten gehören Impfungen und Entwurmung.<sup><a href="#hunde-q4">4</a></sup> Im Notfall nachts, am Wochenende und an Feiertagen kostet der Tierarzt mehr: Im Notdienst erhöht die Gebührenordnung für Tierärzte (§ 4) den einfachen Satz auf das Zweifache, in begründeten Fällen bis auf das Vierfache. Dazu kommen 50 Euro Notdienstgebühr.<sup><a href="#hunde-q7">7</a></sup> Manche Rassen haben angezüchtete Gesundheitsprobleme, mehr dazu steht unter <a href="../qualzucht/index.html">Qualzucht</a>.</p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
@@ -7633,12 +7656,12 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
               <p class="hunde-rechnung">Rechnung: 2 × 250 + 50 = 550; 4 × 250 + 50 = 1.050.</p>
             </dd>
             <dt class="hunde-frage-t">Frage an dich</dt>
-            <dd class="hunde-frage">Welche Tierarztpraxis erreichst du nachts und am Wochenende, und wie trägst du eine Rechnung von 2.000 Euro?</dd>
+            <dd class="hunde-frage">Welche Tierarztpraxis erreichst du im Notfall nachts und am Wochenende, und wie trägst du eine Rechnung von 2.000&nbsp;Euro?</dd>
           </dl>
         </section>
 
         <div class="section-feedback-heading"><h2 id="hunde-tag">Ein Tag aus Sicht eines Hundes</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <span class="hunde-beispiel-tag">Beispiel, kein echter Hund</span>
+        <span class="hunde-beispiel-tag">Beispieltag</span>
         <ol class="zeitleiste hunde-tag-liste">
           <li><span class="zeitleiste-when">Früher Morgen</span><p class="zeitleiste-what">Der Hund muss raus, um sein „Geschäft“ zu erledigen. Der Tierschutzbund rät, viermal am Tag mit ihm rauszugehen.<sup><a href="#hunde-q4">4</a></sup></p></li>
           <li class="hunde-mensch"><span class="zeitleiste-when">Danach: du</span><p class="zeitleiste-what">Erste Mahlzeit und frisches Wasser. Die zweite Mahlzeit folgt nach höchstens 12 Stunden.<sup><a href="#hunde-q5">5</a></sup></p></li>
@@ -7647,21 +7670,22 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <li><span class="zeitleiste-when">Nachmittag</span><p class="zeitleiste-what">Auslauf außerhalb des Gartens, mit Gerüchen, Wegen und Begegnungen. Als Richtwert gilt insgesamt eine Stunde täglich, Kontakt zu anderen Hunden gehört regelmäßig dazu.<sup><a href="#hunde-q2">2</a>,<a href="#hunde-q3">3</a></sup></p></li>
           <li><span class="zeitleiste-when">Abend und Nacht</span><p class="zeitleiste-what">Zweite Mahlzeit, ruhige Zeit mit dir, dann Schlaf am Rückzugsort.<sup><a href="#hunde-q4">4</a>,<a href="#hunde-q5">5</a></sup></p></li>
         </ol>
-        <p class="hunde-legende">Der Ablauf ist ein Beispiel aus den genannten Angaben, kein Befund über einen bestimmten Hund. Wie ein Hund seinen Tag verbringt, hängt von Alter, Rasse und Gesundheit ab.</p>
+        <p class="hunde-legende">Wie ein Hund seinen Tag verbringt, hängt von Alter, Rasse und Gesundheit ab.</p>
 
         <div class="section-feedback-heading"><h2 id="hunde-lebenskosten">Was ein Hund über die Jahre kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-lebenskosten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="faktenzeile">
-          <div><span class="zahl">3,20 bis 8,45 €</span><span class="zahl-text">pro Tag, für einen mittelgroßen Hund, im Durchschnitt über zwölf Jahre</span></div>
-          <div><span class="zahl">14.000 bis 37.000 €</span><span class="zahl-text">in zwölf Jahren, im Mittel etwa 26.000 €, ohne Notfälle, Betreuung und Urlaub</span></div>
-          <div class="klein"><span class="zahl">ab 3,42 €</span><span class="zahl-text">pro Tag als Mindestwert: 17.500 € in 14 Jahren nennen Tierschutzbund und TVT</span></div>
+          <div><span class="zahl">3,20 bis 8,45&nbsp;€</span><span class="zahl-text">pro Tag, für einen mittelgroßen Hund, im Durchschnitt über zwölf&nbsp;Jahre</span></div>
+          <div><span class="zahl">97 bis 257&nbsp;€</span><span class="zahl-text">pro Monat, die einmaligen Kosten auf zwölf Jahre verteilt</span></div>
+          <div><span class="zahl">14.000 bis 37.000&nbsp;€</span><span class="zahl-text">in zwölf Jahren, im Mittel etwa 26.000&nbsp;€, ohne Notfälle, Betreuung und Urlaub</span></div>
+          <div class="klein"><span class="zahl">ab 3,42&nbsp;€</span><span class="zahl-text">pro Tag (ab 104&nbsp;€ im Monat) als Mindestwert: 17.500&nbsp;€ in 14&nbsp;Jahren nennen Tierschutzbund und TVT</span></div>
         </div>
-        <p class="hunde-rechnung">Rechnung: 14.000 ÷ 4.380 Tage = 3,20; 37.000 ÷ 4.380 Tage = 8,45; 17.500 ÷ 5.110 Tage = 3,42.</p>
-        <p class="randnotiz"><strong>Woher die Zahlen kommen.</strong> Die Spannen sind unsere Hochrechnung aus den einzelnen Posten auf der Seite <a href="../hunde/kosten/index.html">Was ein Hund wirklich kostet</a>. Zur Gegenprobe: Der Deutsche Tierschutzbund nennt für einen mittelgroßen Hund als Mindestkosten 17.500 bis 20.000 Euro über 14 Jahre und 1.200 bis 1.350 Euro im Jahr,<sup><a href="#hunde-q4">4</a></sup> die TVT mindestens 17.500 Euro bis zum 14. Lebensjahr.<sup><a href="#hunde-q1">1</a></sup> Beide betonen, dass die Kosten deutlich höher liegen können, etwa durch ungeplante Tierarztbesuche, chronische Erkrankungen oder Betreuung. Der Kaufpreis oder die Schutzgebühr ist darin nur ein Posten unter vielen.</p>
+        <p class="hunde-rechnung">Rechnung pro Tag: 14.000 ÷ 4.380&nbsp;Tage = 3,20; 37.000 ÷ 4.380&nbsp;Tage = 8,45; 17.500 ÷ 5.110&nbsp;Tage = 3,42. Pro Monat: 14.000 ÷ 144&nbsp;Monate = 97; 37.000 ÷ 144 = 257; 17.500 ÷ 168 = 104 (144 = 12&nbsp;Jahre × 12 Monate; 168 = 14&nbsp;Jahre × 12 Monate).</p>
+        <p class="randnotiz"><strong>Woher die Zahlen kommen.</strong> Die Spannen sind unsere Hochrechnung aus den einzelnen Posten auf der Seite <a href="../hunde/kosten/index.html">Was ein Hund wirklich kostet</a>. Zur Gegenprobe: Der Deutsche Tierschutzbund nennt für einen mittelgroßen Hund als Mindestkosten 17.500 bis 20.000&nbsp;Euro über 14&nbsp;Jahre (104 bis 119&nbsp;Euro im Monat, geteilt durch 168&nbsp;Monate) und 1.200 bis 1.350&nbsp;Euro im Jahr (100 bis 112,50&nbsp;Euro im Monat),<sup><a href="#hunde-q4">4</a></sup> die TVT mindestens 17.500&nbsp;Euro bis zum 14. Lebensjahr (104&nbsp;Euro im Monat).<sup><a href="#hunde-q1">1</a></sup> Beide betonen, dass die Kosten deutlich höher liegen können, etwa durch ungeplante Tierarztbesuche, chronische Erkrankungen oder Betreuung. Der Kaufpreis oder die Schutzgebühr ist darin nur ein Posten unter vielen.</p>
 
         <div class="section-feedback-heading"><h2 id="hunde-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="hunde-bedenkzeit">
           <p><strong>Ein Hund muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Lass zwischen dem ersten Besuch und der Zusage mindestens drei Nächte vergehen und besuche den Hund an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; für Hunde ist nicht untersucht, ob eine Bedenkzeit die spätere Haltung verbessert. Die TVT rät, keine emotionalen oder spontanen Kaufentscheidungen zu treffen, auch nicht aus Mitleid.<sup><a href="#hunde-q1">1</a></sup> Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Lass zwischen dem ersten Besuch und der Zusage mindestens drei Nächte vergehen und besuche den Hund an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Hunde nicht untersucht. Die TVT rät, keine emotionalen oder spontanen Kaufentscheidungen zu treffen, auch nicht aus Mitleid.<sup><a href="#hunde-q1">1</a></sup> Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
 
         <div class="hunde-karte">
@@ -7800,7 +7824,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </details>
             <details class="faq-item">
               <summary>Was kostet ein Hund pro Tag und im ganzen Leben?</summary>
-              <p>Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.</p>
+              <p>Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, das sind etwa 97 bis 257 Euro im Monat; ohne die einmaligen Posten laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.</p>
             </details>
           </div>
         </div>
@@ -7811,7 +7835,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.</li><li>Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.</li><li>Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.</li><li>Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag.</li></ul>
+              <ul><li>Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.</li><li>Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.</li><li>Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.</li><li>Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, etwa 97 bis 257 Euro im Monat.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>

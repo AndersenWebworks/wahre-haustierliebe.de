@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7514,25 +7538,11 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <div class="topic-page-content">
 <h2 id="kaetzchen-aufnehmen">Kätzchen aufnehmen: was du wirklich wissen musst</h2>
         <p>Ein Kätzchen ist kein Sofa-Spielzeug. Wer ein Jungtier aufnimmt, übernimmt Verantwortung für ein Katzenleben von bis zu 20 Jahren – inklusive Tierarztkosten, Kastration, Eingewöhnung, Erziehung, Urlaubsvertretung, Wohnungsanpassung und dem Alltag mit einem Tier, das nicht in Schubladen denkt.</p>
-        <p>Diese Seite ist bewusst kein Werbetext für Kätzchen. Sie ist eine ehrliche Prüfung dessen, was wirklich auf dich zukommt – damit du nach dem Lesen entweder gut vorbereitet adoptierst oder die ehrlichere Entscheidung triffst, noch zu warten.</p>
 
         <div class="highlight-box">
-          <h3>Eine Annahme vorweg – und die ehrliche Rechnung</h3>
-          <p>Auf dieser Seite gehen wir von einer einfachen Annahme aus: Du willst es richtig machen. Nicht das gesetzliche Minimum, nicht das, womit man gerade so durchkommt, sondern das, was für dieses einzelne Tier tatsächlich gut ist. Wenn wir von Alter, Kosten oder Zeit sprechen, messen wir deshalb immer am Besten für das Tier.</p>
-          <p>Damit du früh weißt, worauf du dich einlässt, zuerst die Zahl über das ganze Leben: Eine gesunde Katze kostet über 16 Jahre etwa <strong>1,70 bis 3,70 Euro am Tag</strong>, zusammen rund <strong>10.100 bis 21.600 Euro</strong>, ohne Notfälle, Betreuung und Urlaub. Die Rechnung steht auf der Seite <a href="../../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>. Der Preis aus der Anzeige oder die Schutzgebühr ist davon nur ein kleiner Teil. Die Erstausstattung kostet grob <strong>200 bis 500 Euro</strong>, dazu kommen Erstuntersuchung, Impfungen und in der Regel die Kastration. Laufend rechnest du pro Katze mit <strong>50 bis 105 Euro im Monat</strong> – und vor dem Einzug gehört eine Rücklage von mindestens <strong>500 bis 1.000 Euro</strong> aufs Konto (unsere Empfehlung). Die Einzelposten findest du weiter unten, die konkrete Tierarzt-Zeitachse fürs erste Jahr auf unserer Seite <a href="../../katzen/kaetzchen-tierarzt/index.html">Tierarzt im ersten Jahr</a>.</p>
-        </div>
-
-        <div class="info-box">
-          <h3>Was du auf dieser Seite bekommst</h3>
-          <ul>
-            <li>Das <strong>Mindestabgabealter</strong> – rechtlich, tierwohlgerecht und empfohlen.</li>
-            <li>Die häufigsten <strong>Inserate-Fallen</strong> bei „Schutzgebühr“-Anzeigen.</li>
-            <li>Warum Kitten <strong>nicht allein einziehen</strong> sollten und Geschwister zusammenbleiben können.</li>
-            <li>Eine vollständige <strong>Erstausstattung</strong> mit realistischen Kosten.</li>
-            <li>Was <strong>Eingewöhnung</strong> wirklich bedeutet – ohne Verklärung.</li>
-            <li>Die <strong>ehrlichen Folgekosten</strong> im ersten Jahr.</li>
-            <li>Eine ehrliche <strong>Checkliste</strong> vor der Aufnahme.</li>
-          </ul>
+          <h3>Der Maßstab – und die ehrliche Rechnung</h3>
+          <p>Maßstab ist nicht das gesetzliche Minimum und nicht das, womit man gerade so durchkommt, sondern das, was für dieses einzelne Tier tatsächlich gut ist. Das gilt für Alter, Kosten und Zeit.</p>
+          <p>Eine gesunde Katze kostet über 16 Jahre etwa <strong>1,70 bis 3,70&nbsp;Euro am Tag</strong>, das sind rund <strong>53 bis 112&nbsp;Euro im Monat</strong>, zusammen rund <strong>10.100 bis 21.600&nbsp;Euro</strong>, ohne Notfälle, Betreuung und Urlaub. Die Rechnung steht auf der Seite <a href="../../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>. Der Preis aus der Anzeige oder die Schutzgebühr ist davon nur ein kleiner Teil. Die Erstausstattung kostet grob <strong>200 bis 500 Euro</strong>, dazu kommen Erstuntersuchung, Impfungen und in der Regel die Kastration. Laufend rechnest du pro Katze mit <strong>50 bis 105 Euro im Monat</strong> – und vor dem Einzug gehört eine Rücklage von mindestens <strong>500 bis 1.000 Euro</strong> aufs Konto (unsere Empfehlung). Die konkrete Tierarzt-Zeitachse fürs erste Jahr steht auf unserer Seite <a href="../../katzen/kaetzchen-tierarzt/index.html">Tierarzt im ersten Jahr</a>.</p>
         </div>
 
         <div class="warning-box">
@@ -7543,7 +7553,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <h2 id="katzen-bedenkzeit">Bevor du entscheidest: Bedenkzeit und Wenn-dann-Karte</h2>
         <div class="kv-bedenkzeit">
           <p><strong>Eine Katze muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst das Tier an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite. Ob eine Bedenkzeit die spätere Haltung verbessert, ist bei Heimtieren nicht untersucht. Wer dir keine Zeit lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst das Tier an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist bei Heimtieren nicht untersucht. Wer dir keine Zeit lässt, nimmt dir die Entscheidung ab.</p>
         </div>
         <div class="kv-karte">
           <span class="kv-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
@@ -7589,7 +7599,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <h3>Ein Kitten sollte nicht allein einziehen.</h3>
           <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> rät, gerade für Wohnungskatzen direkt zwei Katzen aufzunehmen, die sich verstehen. Katzen jagen allein, aber viele leben nicht gern allein: Wer in den ersten Lebenswochen mit anderen Katzen aufgewachsen ist, schätzt ihre Nähe auch später. Mehr dazu auf unserer Seite zum <a href="../../katzen/sozialverhalten/index.html">Sozialverhalten</a>.</p>
         </div>
-        <p>Wenn du dir ein Kätzchen holst, solltest du <strong>immer zwei Kitten vom selben Wurf</strong> adoptieren. Die Begründung ist kurz und belastbar:</p>
+        <p>Wenn du dir ein Kätzchen holst, solltest du <strong>immer zwei Kitten vom selben Wurf</strong> adoptieren. Die Gründe:</p>
         <ul>
           <li>Kitten lernen Beißhemmung, Körpersprache und Spielregeln voneinander – nicht von dir, nicht von deinem Hund, nicht von einem zweiten, älteren Tier allein.</li>
           <li>Wenn du berufstätig bist, ist ein zweites Kitten kein Bonus, sondern die einzige Möglichkeit, das Tier artgerecht zu halten.</li>
@@ -7599,7 +7609,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p>Wenn du schon eine ältere, ruhige Katze hast und ein junges Kätzchen dazu holen willst, ist das eine <a href="../../katzen/sozialverhalten/index.html">anspruchsvolle Vergesellschaftung</a> – kein Schnellstart. Das funktioniert, aber nur mit Zeit, getrennten Räumen und viel Geduld.</p>
 
         <div class="section-feedback-heading"><h2 id="woher">Wo Kätzchen herkommen sollten</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-woher" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p>Die Reihenfolge der Bezugsquellen ist bewusst gesetzt. Wa(h)re Haustier(liebe) lehnt den Kauf von Tieren ab und empfiehlt zuerst den Tierschutz; die Liste ist kein Werbeversprechen, sondern eine Einschätzung aus Tierschutzsicht.</p>
+        <p>Wa(h)re Haustier(liebe) lehnt den Kauf von Tieren ab und empfiehlt zuerst den Tierschutz. Die Reihenfolge der Liste folgt dieser Haltung.</p>
         <h3>1. Tierschutz und Tierheim</h3>
         <p>Die erste Adresse. Auch Kitten landen hier – aus ungewollten Würfen, weil Muttertiere gefunden wurden, weil jemand die Anschaffung bereut hat. Du bekommst ein tierärztlich untersuchtes, gechipptes, in der Regel kastriertes Tier, eine ehrliche Beschreibung des Charakters und einen Ansprechpartner, wenn später Fragen auftauchen. Die Schutzgebühr deckt die entstandenen Tierarzt- und Versorgungskosten.</p>
         <h3>2. Private Abgabe über seriöse Organisationen</h3>
@@ -7688,18 +7698,18 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <li>Spielzeug-Ersatz, Kratzbaum-Erneuerung, kleine Posten: <strong>50–120 €</strong>.</li>
           <li>Haftpflicht- oder OP-Versicherung (optional): je nach Tarif.</li>
         </ul>
-        <p>Das sind je nach Spanne <strong>600 bis 1.270 Euro im Jahr</strong>. Über 16 Jahre mit den einmaligen Posten ergibt das etwa <strong>1,70 bis 3,70 Euro am Tag</strong> (Rechnung auf der Seite <a href="../../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>).</p>
+        <p>Das sind je nach Spanne <strong>600 bis 1.270 Euro im Jahr</strong>, also rund 50 bis 105 Euro im Monat. Über 16 Jahre mit den einmaligen Posten ergibt das etwa <strong>1,70 bis 3,70 Euro am Tag</strong> und rund 53 bis 112 Euro im Monat (Rechnung auf der Seite <a href="../../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>).</p>
 
         <h3>Rücklagen, die du haben solltest</h3>
         <p>Kitten sind in den ersten Lebensmonaten anfällig für Durchfall, Erkältungen, Verletzungen und Parasiten. Eine <strong>Tierarzt-Rücklage von mindestens 500 bis 1.000 Euro</strong> ist sinnvoll, bevor das Tier einzieht. Größere Notfälle (Knochenbruch, Vergiftung, Gebärmuttervereiterung) können je nach Praxis und Region <strong>schnell einen niedrigen vierstelligen Betrag</strong> und mehr kosten. Mehr Details und Zahlen für erwachsene Katzen auf unserer <a href="../../katzen/kosten/index.html">Kosten-Seite</a>.</p>
         <p>Wann genau welche Impfung, Entwurmung und Kastration im ersten Jahr ansteht, zeigt unsere Zeitachse: <a href="../../katzen/kaetzchen-tierarzt/index.html">Tierarzt im ersten Jahr</a>.</p>
 
         <div class="section-feedback-heading"><h2 id="checkliste">Checkliste vor der Aufnahme</h2><button type="button" class="section-feedback-action" data-feedback-section="katzen-checkliste" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p>Wenn du nach dem Lesen dieser Seite alle Punkte ehrlich mit Ja beantworten kannst, bist du wahrscheinlich gut vorbereitet. Wenn nicht, ist Warten die tierliebste Entscheidung.</p>
+        <p>Wenn du alle Punkte ehrlich mit Ja beantworten kannst, bist du wahrscheinlich gut vorbereitet. Wenn nicht, ist Warten die tierliebste Entscheidung.</p>
         <ul class="checklist">
           <li>Ich habe zuerst im Tierheim oder bei einer Pflegestelle angefragt.</li>
           <li>Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und ich habe das Tier an zwei verschiedenen Tagen besucht.</li>
-          <li>Ich bin bereit, bis zu 20 Jahre Verantwortung für diese Katze zu tragen, und weiß, dass sie mich etwa 1,70 bis 3,70 Euro am Tag kostet.</li>
+          <li>Ich bin bereit, bis zu 20 Jahre Verantwortung für diese Katze zu tragen, und weiß, dass sie mich etwa 1,70 bis 3,70&nbsp;Euro am Tag kostet, das sind rund 53 bis 112&nbsp;Euro im Monat.</li>
           <li>Ich adoptiere <strong>zwei Kitten vom selben Wurf</strong> oder ein Kitten in eine bestehende, passende Katzengruppe – möglichst kein einzelnes Kitten.</li>
           <li>Ich werde die Katze <span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Hoden oder Eierstöcke. Verhindert Nachwuchs und beendet die Hormonbildung dort weitgehend." data-glossary-href="../../glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">kastrieren</span> und <span class="glossary-term" data-glossary-key="chippen" data-glossary-title="Chippen" data-glossary-text="Einsetzen eines Mikrochips unter die Haut, damit ein Tier eindeutig identifizierbar ist." data-glossary-href="../../glossar/index.html#chippen" aria-describedby="glossary-term-popover" tabindex="0" role="button">chippen</span> lassen.</li>
           <li>Ich kann dauerhaft 50–105 € pro Monat und Katze für Futter, Streu, Routine-Tierarzt und kleine Posten aufbringen.</li>
@@ -7712,8 +7722,8 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         </ul>
 
         <div class="highlight-box">
-          <h3>Wenn du nach dem Lesen merkst: jetzt nicht</h3>
-          <p>Das ist kein Scheitern. Es ist die Entscheidung, die jedes Jahr abertausenden Tieren das Leben rettet. Wer ehrlich prüft, spart einem Tier eine zweite oder dritte Abgabe – und sich selbst viel Frust, Tierarztkosten und schlechtes Gewissen. Unser <a href="../../selbsttest/index.html">Selbsttest</a> hilft, wenn du noch unsicher bist, und auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a> steht, was in der Zwischenzeit hilft, etwa eine Pflegestelle oder Ehrenamt im Tierheim.</p>
+          <h3>Wenn du merkst: jetzt nicht</h3>
+          <p>Das ist kein Scheitern. Wer ehrlich prüft, spart einem Tier eine zweite oder dritte Abgabe – und sich selbst viel Frust, Tierarztkosten und schlechtes Gewissen. Unser <a href="../../selbsttest/index.html">Selbsttest</a> hilft, wenn du noch unsicher bist, und auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a> steht, was in der Zwischenzeit hilft, etwa eine Pflegestelle oder Ehrenamt im Tierheim.</p>
         </div>
 
         <div class="mt-2 text-center">
@@ -7774,7 +7784,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </a>
           <a class="topic-context-link" href="../../katzen/kosten/index.html">
             <strong>Was eine Katze wirklich kostet</strong>
-            <span>Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</span>
+            <span>Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</span>
           </a>
           <a class="topic-context-link" href="../../woher-kommt-mein-tier/index.html">
             <strong>Woher kommt mein Tier?</strong>

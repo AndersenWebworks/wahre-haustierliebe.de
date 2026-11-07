@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pferde brauchen Herde - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.">
+  <meta name="description" content="Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Pferde halten, Herde, Stallform, Hufschmied, Pferdekosten">
   <meta property="og:title" content="Pferde brauchen Herde - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.">
+  <meta property="og:description" content="Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/pferde/herde/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/pferde-herde.png">
@@ -25,7 +25,7 @@
   <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pferde brauchen Herde - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.">
+  <meta name="twitter:description" content="Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/pferde-herde.png">
   <meta name="twitter:image:alt" content="Mehrere Pferde stehen gemeinsam auf einer Weide.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/pferde/herde/index.html">
@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7080,7 +7104,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "WebPage",
   "name": "Pferde brauchen Herde - Wa(h)re Haustier(liebe)",
   "headline": "Pferde brauchen Herde - Wa(h)re Haustier(liebe)",
-  "description": "Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.",
+  "description": "Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.",
   "url": "https://wahre-haustierliebe.de/pferde/herde/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7419,7 +7443,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <div class="container">
         <div class="article-hero-copy">
           <h1>Pferde brauchen Herde</h1>
-                  <p>Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.</p>
+                  <p>Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Pferde brauchen Herde: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7434,7 +7458,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p class="text-muted"><a href="../../pferde/index.html">Zurück zur Übersicht: Pferde</a></p>
         <div class="topic-page-content">
 <h2>Herdentiere, keine Solisten</h2>
-        <p>Pferde sind <span class="glossary-term" data-glossary-key="fluchttier" data-glossary-title="Fluchttier" data-glossary-text="Tier, das bei Gefahr zuerst flieht und Festhalten oder Hochheben oft als Bedrohung erlebt." data-glossary-href="../../glossar/index.html#fluchttier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Fluchttiere</span> und <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die in der Gruppe Sicherheit findet. Alleinhaltung bedeutet oft massiven Stress." data-glossary-href="../../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. In der Natur leben sie in Familienverbänden, fressen zusammen, ruhen zusammen, bewegen sich zusammen. Ein Pferd allein auf einer Koppel lebt in Isolation. Dauerstress, <span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Stereotypien (Koppen, Weben, Boxenlaufen)</span> und <span class="glossary-term" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren kann sie ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit sein." data-glossary-href="../../glossar/index.html#apathie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Apathie</span> können die Folge sein.</p>
+        <p>Pferde sind <span class="glossary-term" data-glossary-key="fluchttier" data-glossary-title="Fluchttier" data-glossary-text="Tier, das bei Gefahr zuerst flieht und Festhalten oder Hochheben oft als Bedrohung erlebt." data-glossary-href="../../glossar/index.html#fluchttier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Fluchttiere</span> und <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die in der Gruppe Sicherheit findet. Alleinhaltung bedeutet oft massiven Stress." data-glossary-href="../../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. In der Natur leben sie in Familienverbänden, fressen zusammen, ruhen zusammen, bewegen sich zusammen. Ein Pferd allein auf einer Koppel lebt in Isolation. Nach den <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien</a> sind soziale Kontakte zu Artgenossen für Pferde unerlässlich. Fehlen sie, können Verhaltensstörungen auftreten, zum Beispiel <span class="glossary-term" data-glossary-key="stereotypie" data-glossary-title="Stereotypie" data-glossary-text="Zwanghaft wiederholtes Verhalten ohne sinnvollen Zweck, oft Zeichen von chronischem Stress." data-glossary-href="../../glossar/index.html#stereotypie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Stereotypien (Koppen, Weben, Boxenlaufen)</span> und <span class="glossary-term" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren kann sie ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit sein." data-glossary-href="../../glossar/index.html#apathie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Apathie</span>.</p>
         <p><strong>Mindestens ein <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenosse</span></strong> ist Pflicht. Das ist ein anderes Pferd oder Pony. Andere Tierarten wie Esel oder Ziegen ersetzen keinen Artgenossen.</p>
         </div>
 
@@ -7455,7 +7479,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </a>
           <a class="topic-context-link" href="../../pferde/kosten/index.html">
             <strong>Was ein Pferd wirklich kostet</strong>
-            <span>Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</span>
+            <span>Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</span>
           </a>
           <a class="topic-context-link" href="../../pferde/reitbeteiligung/index.html">
             <strong>Reitbeteiligung als ehrlicher Einstieg</strong>

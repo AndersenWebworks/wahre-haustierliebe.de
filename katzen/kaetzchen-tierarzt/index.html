@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7438,7 +7462,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       </div>
 
       <h2 id="zeitachse">Zeitachse für das erste Katzenjahr</h2>
-      <p>Die genauen Abstände legt deine Tierarztpraxis fest – hier ist eine grobe Orientierung, damit du weißt, was dich erwartet und welche Kosten dazugehören. Wer diese Liste vor der Adoption einmal durchgegangen ist, erlebt später keine bösen Überraschungen.</p>
+      <p>Die genauen Abstände legt deine Tierarztpraxis fest. Grob kommen diese Termine auf dich zu.</p>
 
       <ul class="timeline">
         <li>
@@ -7472,13 +7496,14 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       </ul>
 
       <h2 id="kosten">Was kostet das im ersten Jahr?</h2>
-      <p>Die Tierarzt-Kosten sind nur ein Teil der <a href="../../katzen/kosten/index.html">echten Gesamtkosten</a>. Hier eine grobe Orientierung – die tatsächlichen Preise hängen von Praxis, Region und Umfang ab.</p>
+      <p>Die Tierarzt-Kosten sind nur ein Teil der <a href="../../katzen/kosten/index.html">echten Gesamtkosten</a>. Die tatsächlichen Preise hängen von Praxis, Region und Umfang ab.</p>
       <ul>
         <li><strong>Erstvorstellung, Impfungen, Chip, Registrierung:</strong> rund 120–250 €.</li>
         <li><strong>Entwurmung (mehrere Runden):</strong> rund 60–140 € im ersten Halbjahr.</li>
         <li><strong>Kastration Kätzin:</strong> rund 100–250 € je nach Praxis.</li>
         <li><strong>Kastration Kater:</strong> rund 60–150 €.</li>
         <li><strong>Rücklage für Notfälle:</strong> mindestens 500–1.000 €, bevor das Tier einzieht.</li>
+        <li><strong>Ohne die Rücklage zusammen:</strong> rund 240 bis 640&nbsp;Euro im ersten Jahr, das sind rund 20 bis 53&nbsp;Euro im Monat. Rechnung: 120 + 60 + 60 = 240 (Kater, niedrigste Werte) und 250 + 140 + 250 = 640 (Kätzin, höchste Werte); 240 ÷ 12 = 20 und 640 ÷ 12 = 53,3.</li>
       </ul>
 
       <h2 id="notfall" data-enhancements-hydrated="true">Sofort zum Tierarzt – nicht abwarten</h2>

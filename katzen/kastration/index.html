@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7446,7 +7470,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
               <button class="share-btn" onclick="shareThis('copy')">Link kopieren</button>
             </div>
           </div>
-        <p>Unkastrierte Kater streunen häufiger, geraten eher in Paarungskämpfe und können mit stark riechendem Urin markieren. Unkastrierte Kätzinnen werden rollig. Auch ohne Freigang bleiben ihre Eierstöcke und die Gebärmutter hormonell aktiv. Damit bleiben unter anderem das Risiko einer Gebärmuttervereiterung und das erhöhte Risiko für bösartige Gesäugetumore bestehen.</p>
+        <p>Unkastrierte Kater streunen häufiger, geraten eher in Paarungskämpfe und können mit stark riechendem Urin markieren. Unkastrierte Kätzinnen werden rollig. Auch ohne Freigang bleiben ihre Eierstöcke und die Gebärmutter hormonell aktiv. Damit bleiben unter anderem das Risiko einer Gebärmuttervereiterung und das erhöhte Risiko für bösartige Gesäugetumore bestehen. Zur Gebärmuttervereiterung kommt es, weil das Hormon Progesteron nach der Rolligkeit die Drüsen der Gebärmutter anregt und ihre örtliche Abwehr schwächt, sodass aufsteigende Bakterien sich dort vermehren (<a href="https://flexikon.doccheck.com/de/Pyometra_(Katze)" target="_blank" rel="noopener noreferrer">DocCheck Flexikon</a>).</p>
         <p>Kastration verhindert diese Fortpflanzungs- und Organrisiken, kann hormonabhängiges Verhalten vermindern und schützt vor unkontrollierter Vermehrung. Der Gesamtpreis ergibt sich nicht allein aus der Operationsposition der GOT, sondern auch aus Untersuchung, Narkose, Überwachung, Medikamenten, Material und Nachsorge. Die gesundheitlichen Zahlen, Grenzen und Empfehlungen zum Zeitpunkt stehen auf der Seite <a href="../../kastration/index.html">Kastration bei Katze, Hund und Kaninchen</a>.</p>
         <p>In manchen Regionen gilt bereits eine Pflicht, Freigängerkatzen zu kastrieren und zu kennzeichnen. Im Landkreis Mecklenburgische Seenplatte gilt sie seit dem 19. März 2024 für die Amtsbereiche Röbel-Müritz und Malchow sowie die Stadt Waren (<a href="https://www.lk-mecklenburgische-seenplatte.de/Aktuelles/Landkreis-erl%C3%A4sst-Katzenschutzverordnung.php?object=tx,2761.5.1&amp;ModID=7&amp;FID=2761.34947.1&amp;NavID=2761.2&amp;La=1" target="_blank" rel="noopener noreferrer">Landkreis</a>); die Verordnung war zunächst auf drei Jahre befristet. In Schleswig-Holstein gilt seit dem 1. Juli 2026 eine Regel für das ganze Land. Wo du wohnst, erfährst du beim Ordnungs- oder Veterinäramt.</p>
         </div>
@@ -7472,7 +7496,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </a>
           <a class="topic-context-link" href="../../katzen/kosten/index.html">
             <strong>Was eine Katze wirklich kostet</strong>
-            <span>Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</span>
+            <span>Was eine Katze am Tag, im Monat und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.</span>
           </a>
           <a class="topic-context-link" href="../../katzen/streunerkatzen/index.html">
             <strong>Streunerkatzen und Verantwortung</strong>

@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7497,15 +7521,16 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p>Rechne zuerst über die Jahre, dann erst über den Kaufpreis.</p>
 
         <div class="faktenzeile">
-          <div><span class="zahl">20 bis 31 €</span><span class="zahl-text">pro Tag laufende Kosten bei Standardhaltung</span></div>
-          <div><span class="zahl">180.000 bis 285.000 €</span><span class="zahl-text">in 25 Jahren, ohne Notfälle</span></div>
-          <div><span class="zahl">9.000 bis 13.000 €</span><span class="zahl-text">einmalig für Pferd und Erstausstattung</span></div>
+          <div><span class="zahl">20 bis 31&nbsp;€</span><span class="zahl-text">pro Tag laufende Kosten bei Standardhaltung</span></div>
+          <div><span class="zahl">600 bis 950&nbsp;€</span><span class="zahl-text">pro Monat, Richtwert der Quelle</span></div>
+          <div><span class="zahl">180.000 bis 285.000&nbsp;€</span><span class="zahl-text">in 25 Jahren, ohne Notfälle</span></div>
+          <div><span class="zahl">9.000 bis 13.000&nbsp;€</span><span class="zahl-text">einmalig für Pferd und Erstausstattung</span></div>
         </div>
-        <p class="randnotiz">Herleitung und Quellen stehen auf <a href="../../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
+        <p class="randnotiz">Rechenweg und Quellen: <a href="../../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
 
         <div class="pex-bedenkzeit">
           <p><strong>Ein Pferd muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für diese Tiere nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Pferd an zwei verschiedenen Tagen. Ob eine Bedenkzeit die spätere Haltung verbessert, ist für Pferde nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
         </div>
         <h3>Checkliste</h3>
         <ul class="checklist">
@@ -7557,7 +7582,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
           <a class="topic-context-link" href="../../pferde/herde/index.html">
             <strong>Pferde brauchen Herde</strong>
-            <span>Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.</span>
+            <span>Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.</span>
           </a>
           <a class="topic-context-link" href="../../pferde/platzbedarf/index.html">
             <strong>Platzbedarf bei Pferden</strong>
@@ -7569,7 +7594,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           </a>
           <a class="topic-context-link" href="../../pferde/kosten/index.html">
             <strong>Was ein Pferd wirklich kostet</strong>
-            <span>Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</span>
+            <span>Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</span>
           </a>
           <a class="topic-context-link" href="../../pferde/reitbeteiligung/index.html">
             <strong>Reitbeteiligung als ehrlicher Einstieg</strong>
@@ -7586,7 +7611,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.</li><li>Die Bedenkzeit von mindestens drei Nächten ist eine Empfehlung dieser Seite; ihre Wirkung ist für Pferde nicht untersucht.</li></ul>
+              <ul><li>Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.</li><li>Ob eine Bedenkzeit von mindestens drei Nächten die Haltung verbessert, ist für Pferde nicht untersucht.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>

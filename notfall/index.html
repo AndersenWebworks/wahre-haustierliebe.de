@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7515,7 +7539,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <li>Verdacht auf Vergiftung (Erbrechen, Durchfall, Zittern, Speicheln oder <span class="glossary-term" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren kann sie ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit sein." data-glossary-href="../glossar/index.html#apathie" aria-describedby="glossary-term-popover" tabindex="0" role="button">Teilnahmslosigkeit</span> nach Kontakt mit einem Gift)</li>
             <li>Verschluckte Fremdkörper (würgen, Speicheln, Unruhe)</li>
             <li>Aufgeblähter, harter Bauch (bei Hunden kann eine <span class="glossary-term" data-glossary-key="magendrehung" data-glossary-title="Magendrehung" data-glossary-text="Lebensgefährlicher Notfall beim Hund: Der Magen dreht sich und bläht sich auf." data-glossary-href="../glossar/index.html#magendrehung" aria-describedby="glossary-term-popover" tabindex="0" role="button">Magendrehung</span> dahinterstecken, die lebensbedrohlich ist)</li>
-            <li>Kein Urin seit mehr als 12 Stunden (bei Katern kann die <span class="glossary-term" data-glossary-key="harnroehrenverschluss" data-glossary-title="Harnröhrenverschluss" data-glossary-text="Verstopfte Harnröhre: Das Tier kann nicht urinieren. Besonders bei Katern ein sofortiger Notfall." data-glossary-href="../glossar/index.html#harnroehrenverschluss" aria-describedby="glossary-term-popover" tabindex="0" role="button">Harnröhre</span> verstopft sein, das ist ein Notfall)</li>
+            <li>Kein Urin seit mehr als 12&nbsp;Stunden (bei Katern kann die <span class="glossary-term" data-glossary-key="harnroehrenverschluss" data-glossary-title="Harnröhrenverschluss" data-glossary-text="Verstopfte Harnröhre: Das Tier kann nicht urinieren. Besonders bei Katern ein sofortiger Notfall." data-glossary-href="../glossar/index.html#harnroehrenverschluss" aria-describedby="glossary-term-popover" tabindex="0" role="button">Harnröhre</span> verstopft sein, das ist ein Notfall)</li>
             <li>Offene Knochenbrüche</li>
             <li>Vögel: am Käfigboden sitzend, aufgeplustert, Augen geschlossen</li>
           </ul>
@@ -7551,7 +7575,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
               <li><strong>Schokolade</strong> (<span class="glossary-term" data-glossary-key="theobromin" data-glossary-title="Theobromin" data-glossary-text="Stoff aus Kakao und Schokolade, der für Hunde giftig sein kann." data-glossary-href="../glossar/index.html#theobromin" aria-describedby="glossary-term-popover" tabindex="0" role="button">Theobromin</span>) – je dunkler, desto giftiger</li>
               <li><strong>Trauben und Rosinen</strong> – Nierenversagen, schon in kleinen Mengen</li>
               <li><strong>Zwiebeln und Knoblauch</strong> – zerstören rote Blutkörperchen</li>
-              <li><strong><span class="glossary-term" data-glossary-key="xylit" data-glossary-title="Xylit" data-glossary-text="Birkenzucker. Für Hunde kann schon wenig Xylit lebensgefährlich sein." data-glossary-href="../glossar/index.html#xylit" aria-describedby="glossary-term-popover" tabindex="0" role="button">Xylit</span></strong> (Birkenzucker) – führt zu lebensbedrohlicher <span class="glossary-term" data-glossary-key="insulinschock" data-glossary-title="Unterzuckerung durch Xylit" data-glossary-text="Bei Hunden löst Xylit (Birkenzucker) eine massive Insulinausschüttung aus. Der Blutzucker fällt gefährlich ab, höhere Mengen schädigen zusätzlich die Leber." data-glossary-href="../glossar/index.html#insulinschock" aria-describedby="glossary-term-popover" tabindex="0" role="button">Unterzuckerung</span>, in höheren Mengen auch zu Leberversagen</li>
+              <li><strong><span class="glossary-term" data-glossary-key="xylit" data-glossary-title="Xylit" data-glossary-text="Birkenzucker. Für Hunde kann schon wenig Xylit lebensgefährlich sein." data-glossary-href="../glossar/index.html#xylit" aria-describedby="glossary-term-popover" tabindex="0" role="button">Xylit</span></strong> (Birkenzucker) – löst bei Hunden eine schnelle Insulinausschüttung aus und führt so zu lebensbedrohlicher <span class="glossary-term" data-glossary-key="insulinschock" data-glossary-title="Unterzuckerung durch Xylit" data-glossary-text="Bei Hunden löst Xylit (Birkenzucker) eine massive Insulinausschüttung aus. Der Blutzucker fällt gefährlich ab, höhere Mengen schädigen zusätzlich die Leber." data-glossary-href="../glossar/index.html#insulinschock" aria-describedby="glossary-term-popover" tabindex="0" role="button">Unterzuckerung</span>, in höheren Mengen auch zu Leberversagen (<a href="https://www.merckvetmanual.com/toxicology/food-hazards/xylitol-toxicosis-in-dogs" target="_blank" rel="noopener noreferrer">Merck Veterinary Manual</a>)</li>
             </ul>
           </div>
           <div>
@@ -7567,7 +7591,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <h3>Giftig für <a href="../katzen/index.html">Katzen</a></h3>
         <ul>
           <li><strong>Lilien</strong> (alle Arten) – schon der Pollenstaub kann tödliches Nierenversagen auslösen</li>
-          <li><strong>Teebaumöl und ätherische Öle</strong> – die Leber kann sie nicht abbauen</li>
+          <li><strong>Teebaumöl und ätherische Öle</strong> – Katzen fehlt ein Leberenzym, das viele Bestandteile abbaut; Teebaumöl kann die Leber zusätzlich schädigen (<a href="https://www.merckvetmanual.com/toxicology/toxicoses-from-household-hazards/toxicoses-from-essential-oils-in-animals" target="_blank" rel="noopener noreferrer">Merck Veterinary Manual</a>)</li>
           <li><strong>Paracetamol</strong> – eine einzige Tablette kann eine Katze töten</li>
           <li><strong>Zwiebeln und Knoblauch</strong> – auch in gekochter Form giftig</li>
           <li><strong><span class="glossary-term" data-glossary-key="permethrin" data-glossary-title="Permethrin" data-glossary-text="Wirkstoff in manchen Hunde-Flohmitteln. Für Katzen kann er lebensgefährlich giftig sein." data-glossary-href="../glossar/index.html#permethrin" aria-describedby="glossary-term-popover" tabindex="0" role="button">Permethrin</span></strong> (in manchen Hunde-Flohmitteln) – für Katzen tödlich</li>
@@ -7604,7 +7628,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="accordion">
             <button class="accordion-header" onclick="toggleAccordion(this)" id="accordion-3-button" type="button" aria-controls="accordion-3-panel" aria-expanded="false"><span class="glossary-term" data-glossary-key="krampfanfall" data-glossary-title="Krampfanfall" data-glossary-text="Unkontrollierte Muskelkrämpfe oder Bewusstseinsstörung. Nach einem Anfall in der Tierarztpraxis abklären lassen." data-glossary-href="../glossar/index.html#krampfanfall" aria-describedby="glossary-term-popover" tabindex="0" role="button">Krampfanfall</span></button>
             <div class="accordion-body" id="accordion-3-panel" aria-labelledby="accordion-3-button" role="region" hidden="">
-              <p>Bleib ruhig und steck dem Tier nichts ins Maul. Räum alles weg, woran es sich verletzen kann. Merk dir, wie lange der Anfall dauert. Danach sprich das Tier ruhig an und bedränge es nicht. Dauert der Anfall länger als 3 Minuten oder kommt er wieder, ist das ein Notfall: sofort in die Tierarztpraxis.</p>
+              <p>Bleib ruhig und steck dem Tier nichts ins Maul. Räum alles weg, woran es sich verletzen kann. Merk dir, wie lange der Anfall dauert. Danach sprich das Tier ruhig an und bedränge es nicht. Dauert der Anfall länger als 3&nbsp;Minuten oder kommt er wieder, ist das ein Notfall: sofort in die Tierarztpraxis.</p>
             </div>
           </div>
         </div>
@@ -7633,7 +7657,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Diese Seite ersetzt keine tierärztliche Diagnose.</li><li>Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.</li></ul>
+              <ul><li>Im Zweifel anrufen und hinfahren, nicht weiter recherchieren.</li></ul>
             </article>
           </div>
         </div>

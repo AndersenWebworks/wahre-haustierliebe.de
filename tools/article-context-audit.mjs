@@ -39,7 +39,9 @@ const articlePages = [
 // Das Glossar ist eine Nachschlageliste, die aus tools/glossary-data.mjs erzeugt wird. Es hat keinen Fließtext,
 // den ein Zusatzmodul (Merkkarten, Gegenüberstellung) verdichten könnte; die Pflicht „mindestens ein Zusatzmodul“
 // gilt dort fachlich nicht. Alle übrigen Artikelseiten brauchen weiterhin eines.
-const pagesWithoutEnhancementDuty = new Set(['glossar']);
+// hitzefalle-auto und realhaltung haben einen eigenen Kasten „Auf einen Blick“; zusätzliche Merkkarten würden ihn
+// nur wiederholen (Annemarie, 07.11.2026: nichts doppelt sagen).
+const pagesWithoutEnhancementDuty = new Set(['glossar', 'hitzefalle-auto', 'realhaltung']);
 
 const pageFiles = {
   mensch: 'mensch/index.html',

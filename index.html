@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7463,7 +7487,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
             <span class="stat-label">Mehrere Millionen Straßenkatzen leben in Deutschland, schätzt der Deutsche Tierschutzbund. Eine genaue Zahl gibt es nicht.</span>
           </div>
           <div class="stat">
-            <span class="stat-number">43 %</span>
+            <span class="stat-number">43&nbsp;%</span>
             <span class="stat-label">der Haushalte in Deutschland halten Heimtiere (Stand 2025, ZZF/IVH)</span>
           </div>
         </div>
@@ -7552,7 +7576,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
     <div class="section" id="tierarten-start">
       <div class="container">
         <div class="section-feedback-heading"><h2 class="text-center" id="hinweis-startseite-3">Tierarten-Übersicht</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-startseite-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p class="text-center text-muted">Wähle eine Tierart. Du findest dort Haltung, Kosten und häufige Fehler.</p>
+        <p class="text-center text-muted">Wähle eine Tierart.</p>
         <div class="animal-grid">
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Hunde: Training und Beschäftigung statt Hundeporträt" data-share-reason="Der Klick soll vom Wunschhund zum Zeit- und Alltagscheck führen." href="hunde/index.html"><img class="animal-card-img" src="assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Golden Retriever springt über ein Agility-Hindernis" loading="lazy" width="960" height="643" decoding="async"><span class="animal-card-caption">Training und Zeit</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></a>
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Wohnung muss Bedürfnisse sichtbar mitdenken" data-share-reason="Die Karte soll Katzenhaltung als Umfeldgestaltung rahmen, nicht als bloßes Kuscheltierbild." href="katzen/index.html"><img class="animal-card-img" src="assets/images/optimized/cat-scratching-post.jpg" alt="Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung" loading="lazy" style="object-position:center 48%;" width="700" height="934" decoding="async"><span class="animal-card-caption">Umfeld gestalten</span><span>Katzen</span><small><span class="glossary-term" data-glossary-key="einzeljaeger" data-glossary-title="Einzeljäger" data-glossary-text="Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will." data-glossary-href="glossar/index.html#einzeljaeger" aria-describedby="glossary-term-popover">Einzeljäger</span>, aber keine <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Bei Katzen wird das Wort oft fälschlich benutzt, weil sie allein jagen." data-glossary-href="glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover">Einzelgänger</span>.</small></a>

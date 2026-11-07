@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.">
+  <meta name="description" content="Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Pferde halten, Herde, Stallform, Hufschmied, Pferdekosten">
   <meta property="og:title" content="Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.">
+  <meta property="og:description" content="Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/pferde/kosten/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/pferde-kosten.png">
@@ -25,7 +25,7 @@
   <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.">
+  <meta name="twitter:description" content="Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/pferde-kosten.png">
   <meta name="twitter:image:alt" content="Pferdeherde grast auf einer weiten Weide.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/pferde/kosten/index.html">
@@ -7072,6 +7072,30 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   .nat-bremse-gross { font-size: 1.3rem; }
 }
 
+/* Feinschliff Kennzahlen: Zahl und Einheit bleiben zusammen. Große Kennzahlen brechen ausgewogen um und lassen ein einzelnes Einheitenzeichen („€“, „Jahre“, „m²“) nicht allein in der nächsten Zeile stehen. */
+.faktenzeile .zahl, .kv-zahl, .stat-number, body.static-site .metric-card strong {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .kv-zahl { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .kv-klein .kv-zahl { font-size: clamp(1.2rem, 5.8vw, 1.45rem); }
+}
+@media (min-width: 640px) {
+  /* Vier Kennzahlen (Tag, Monat, Tierleben, Kaufpreis) stehen als 2 × 2, nicht 3 + 1. */
+  .kv-fakten:has(> div:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n) { border-right: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(2n+1) { padding-left: 0; }
+  .kv-fakten:has(> div:nth-child(4)) > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 640px) {
+  /* Auf dem Handy steht jede Kennzahl in einer eigenen Zeile, damit Spannen wie „3,20 bis 8,45 €“ nicht in halben Spalten umbrechen. */
+  .faktenzeile, body.static-site .metric-grid { grid-template-columns: 1fr; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -7080,7 +7104,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "WebPage",
   "name": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
   "headline": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
-  "description": "Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.",
+  "description": "Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.",
   "url": "https://wahre-haustierliebe.de/pferde/kosten/index.html",
   "image": {
     "@type": "ImageObject",
@@ -7164,7 +7188,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
   "@type": "Article",
   "headline": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
   "name": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
-  "description": "Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.",
+  "description": "Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.",
   "url": "https://wahre-haustierliebe.de/pferde/kosten/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/pferde/kosten/index.html",
   "image": {
@@ -7479,7 +7503,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
       <div class="container">
         <div class="article-hero-copy">
           <h1>Was ein Pferd wirklich kostet</h1>
-                  <p>Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</p>
+                  <p>Rund 20 bis 31 Euro pro Tag, 600 bis 950 Euro im Monat: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Was ein Pferd wirklich kostet: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7494,32 +7518,33 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
         <p class="text-muted"><a href="../../pferde/index.html">Zurück zur Übersicht: Pferde</a></p>
         <div class="topic-page-content">
 <h2>Was ein Pferd über die Jahre kostet</h2>
-        <p>Die erste Zahl ist der Betrag pro Tag, nicht der Kaufpreis. Ein Pferd verursacht an jedem Tag seines Lebens Kosten, auch an Tagen, an denen du nicht reitest.</p>
+        <p>Ein Pferd verursacht an jedem Tag seines Lebens Kosten, auch an Tagen, an denen du nicht reitest.</p>
 
         <div class="faktenzeile">
-          <div><span class="zahl">20 bis 31 €</span><span class="zahl-text">pro Tag, laufende Kosten bei Standardhaltung, ohne Notfälle</span></div>
-          <div><span class="zahl">180.000 bis 285.000 €</span><span class="zahl-text">in 25 Jahren, Hochrechnung aus denselben Beträgen</span></div>
-          <div><span class="zahl">9.000 bis 13.000 €</span><span class="zahl-text">einmalig für Pferd und Erstausstattung, weniger als ein Zehntel der Haltungskosten über 25 Jahre</span></div>
+          <div><span class="zahl">20 bis 31&nbsp;€</span><span class="zahl-text">pro Tag, laufende Kosten bei Standardhaltung, ohne Notfälle</span></div>
+          <div><span class="zahl">600 bis 950&nbsp;€</span><span class="zahl-text">pro Monat, Richtwert der Quelle, aus dem der Tagesbetrag errechnet ist</span></div>
+          <div><span class="zahl">180.000 bis 285.000&nbsp;€</span><span class="zahl-text">in 25 Jahren, Hochrechnung aus denselben Beträgen</span></div>
+          <div><span class="zahl">9.000 bis 13.000&nbsp;€</span><span class="zahl-text">einmalig für Pferd und Erstausstattung, weniger als ein Zehntel der Haltungskosten über 25&nbsp;Jahre</span></div>
         </div>
         <table class="cost-table">
           <thead><tr><th>Schritt</th><th>Rechnung</th><th>Ergebnis</th></tr></thead>
           <tbody>
-            <tr><td data-label="Schritt">Pro Monat, Standardhaltung (Richtwert)</td><td data-label="Rechnung">laut Quelle</td><td data-label="Ergebnis">600–950 €</td></tr>
-            <tr><td data-label="Schritt">Pro Jahr</td><td data-label="Rechnung">× 12</td><td data-label="Ergebnis">7.200–11.400 €</td></tr>
-            <tr><td data-label="Schritt">Pro Tag</td><td data-label="Rechnung">Jahr ÷ 365</td><td data-label="Ergebnis">19,73–31,23 €</td></tr>
-            <tr class="total"><td data-label="Schritt"><strong>In 25 Jahren</strong></td><td data-label="Rechnung">Jahr × 25</td><td data-label="Ergebnis"><strong>180.000–285.000 €</strong></td></tr>
+            <tr><td data-label="Schritt">Pro Monat, Standardhaltung (Richtwert)</td><td data-label="Rechnung">laut Quelle</td><td data-label="Ergebnis">600–950&nbsp;€</td></tr>
+            <tr><td data-label="Schritt">Pro Jahr</td><td data-label="Rechnung">× 12</td><td data-label="Ergebnis">7.200–11.400&nbsp;€</td></tr>
+            <tr><td data-label="Schritt">Pro Tag</td><td data-label="Rechnung">Jahr ÷ 365</td><td data-label="Ergebnis">19,73–31,23&nbsp;€</td></tr>
+            <tr class="total"><td data-label="Schritt"><strong>In 25 Jahren</strong></td><td data-label="Rechnung">Jahr × 25</td><td data-label="Ergebnis"><strong>180.000–285.000&nbsp;€</strong></td></tr>
           </tbody>
         </table>
-        <p class="randnotiz"><strong>Zum Vergleich.</strong> In der CAVALLO-Leserbefragung 2025 gaben Pferdebesitzer im Schnitt 9.897 Euro pro Jahr für Stall, Futter, Tierarzt, Hufschmied und Versicherungen aus. Das sind rund 27 Euro pro Tag (9.897 ÷ 365) und rund 247.000 Euro in 25 Jahren. Die Zahl nennen wir nach <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>; die Befragung selbst konnten wir nicht abrufen.</p>
+        <p class="randnotiz"><strong>Zum Vergleich.</strong> In der CAVALLO-Leserbefragung 2025 gaben Pferdebesitzer im Schnitt 9.897 Euro pro Jahr für Stall, Futter, Tierarzt, Hufschmied und Versicherungen aus. Das sind rund 27 Euro pro Tag (9.897 ÷ 365), rund 825 Euro pro Monat (9.897 ÷ 12) und rund 247.000 Euro in 25 Jahren. Die Zahl nennen wir nach <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>; die Befragung selbst konnten wir nicht abrufen.</p>
 
         <h3>Woraus sich der Betrag zusammensetzt</h3>
         <ul>
           <li><strong>Stall:</strong> Vollpension (Stellplatz mit Futter und Versorgung) meist 300 bis 400 Euro im Monat, nahe Großstädten bis 600 Euro, einfache Ställe teils unter 300 Euro (<a href="https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/" target="_blank" rel="noopener noreferrer">Fundis Reitsport</a>).</li>
           <li><strong>Futter</strong> bei Eigenversorgung: etwa 80 bis 200 Euro im Monat (<a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
-          <li><strong><span class="glossary-term" data-glossary-key="hufschmied" data-glossary-title="Hufschmied" data-glossary-text="Fachperson für Hufpflege und Hufbeschlag. Bei Pferden gehört regelmäßige Hufversorgung zu den Grundkosten." data-glossary-href="../../glossar/index.html#hufschmied" aria-describedby="glossary-term-popover" tabindex="0" role="button">Hufschmied</span> (alle 6–8 Wochen):</strong> 50 bis 180 Euro je Termin (<a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
-          <li><strong>Tierarzt und Routinepflege:</strong> etwa 30 bis 60 Euro im Monat; im Durchschnitt der Befragten 2.104 Euro im Jahr (<a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
+          <li><strong><span class="glossary-term" data-glossary-key="hufschmied" data-glossary-title="Hufschmied" data-glossary-text="Fachperson für Hufpflege und Hufbeschlag. Bei Pferden gehört regelmäßige Hufversorgung zu den Grundkosten." data-glossary-href="../../glossar/index.html#hufschmied" aria-describedby="glossary-term-popover" tabindex="0" role="button">Hufschmied</span> (alle 6–8 Wochen):</strong> 50 bis 180 Euro je Termin, bei 6,5 bis 8,7 Terminen im Jahr rechnerisch etwa 27 bis 130 Euro im Monat (<a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
+          <li><strong>Tierarzt und Routinepflege:</strong> etwa 30 bis 60 Euro im Monat; im Durchschnitt der Befragten 2.104 Euro im Jahr, also rund 175 Euro im Monat (2.104 ÷ 12; <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
           <li><strong>Versicherungen:</strong> je nach Tarif 8 bis 75 Euro im Monat (<a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
-          <li><strong>Ausrüstung ersetzen:</strong> schnell 200 bis 500 Euro im Jahr (<a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
+          <li><strong>Ausrüstung ersetzen:</strong> schnell 200 bis 500 Euro im Jahr, also etwa 17 bis 42 Euro im Monat (200 und 500 ÷ 12; <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a>).</li>
         </ul>
         <p class="text-muted">Nicht eingerechnet: Reitunterricht (etwa 40 bis 200 Euro im Monat), Turniergebühren, Hufreheschübe (schmerzhafte Entzündungen im Huf) und chronische Erkrankungen. Für eine Notfalloperation ohne Versicherung nennt <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> bis zu 6.000 Euro, <a href="https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/" target="_blank" rel="noopener noreferrer">Fundis Reitsport</a> bei einer schweren Kolik mit viel Nachsorge bis zu 20.000 Euro. Wir empfehlen, diese Rücklage zu haben, bevor ein Pferd einzieht. Die Angaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie. Stand der Angaben: RidersDeal aktualisiert im April 2026, Fundis Reitsport ohne Datum, beide abgerufen am 7. November 2026.</p>
         <p>Wer erst ausprobieren will, ob der Alltag mit einem Pferd passt: Eine Reitbeteiligung kostet laut <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> etwa 80 bis 200 Euro im Monat. Mehr dazu unter <a href="../../pferde/reitbeteiligung/index.html">Reitbeteiligung</a>.</p>
@@ -7534,7 +7559,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
           <a class="topic-context-link" href="../../pferde/herde/index.html">
             <strong>Pferde brauchen Herde</strong>
-            <span>Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.</span>
+            <span>Warum ein Pferd allein Verhaltensstörungen entwickeln kann und Artgenossen keine Dekoration sind.</span>
           </a>
           <a class="topic-context-link" href="../../pferde/platzbedarf/index.html">
             <strong>Platzbedarf bei Pferden</strong>
@@ -7563,7 +7588,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>600 bis 950 Euro im Monat ergeben 7.200 bis 11.400 Euro im Jahr, 19,73 bis 31,23 Euro pro Tag und 180.000 bis 285.000 Euro in 25 Jahren.</li><li>Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr; die Zahl wird hier nach RidersDeal wiedergegeben.</li><li>Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).</li></ul>
+              <ul><li>600 bis 950 Euro im Monat ergeben 7.200 bis 11.400 Euro im Jahr, 19,73 bis 31,23 Euro pro Tag und 180.000 bis 285.000 Euro in 25 Jahren.</li><li>Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr (rund 825 Euro im Monat); die Zahl wird hier nach RidersDeal wiedergegeben.</li><li>Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
