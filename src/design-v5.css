@@ -1605,7 +1605,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   /* Tabellenzellen als Karten: Beschriftung und Wert auf eine gemeinsame Grundlinie setzen */
   body.static-site .cost-table td:not(:first-child):not([colspan])::before { top: 0.85rem; line-height: 1.2; }
   /* Textlinks: Trefferfläche über Innenabstand vergrößern (bei Inline-Links ohne Einfluss auf den Zeilenabstand) */
-  body.static-site main :where(li, p) > a:not([class]) { padding-block: 0.12rem; }
+  :where(body.static-site main :where(li, p) > a:not([class])) { padding-block: 0.12rem; }
   body.static-site [role="tab"], body.static-site .tab-btn { min-height: 44px; }
   body.static-site .urlaubsplan-foot button, body.static-site [data-plan-print], body.static-site [data-plan-reset] { min-height: 44px; padding-inline: 0.9rem; }
   body.static-site .section-feedback-action { min-width: 44px; min-height: 44px; justify-content: center; }
