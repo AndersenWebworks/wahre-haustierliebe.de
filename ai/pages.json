@@ -56,10 +56,10 @@
       "id": "datenschutz",
       "url": "https://wahre-haustierliebe.de/datenschutz/index.html",
       "title": "Datenschutzerklärung",
-      "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.",
-      "intent": "Datenschutzinformationen nach DSGVO für die Website",
+      "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Hosting über GitHub Pages, Speicherung im Browser bei Quiz und Urlaubsplan, Kontakt, Betroffenenrechte.",
+      "intent": "Datenschutzinformationen nach DSGVO und TDDDG für die Website",
       "keywords": [
-        "Datenschutzinformationen nach DSGVO für die Website",
+        "Datenschutzinformationen nach DSGVO und TDDDG für die Website",
         "Haustierhaltung",
         "Tierwohl"
       ],
@@ -68,7 +68,7 @@
       "sources": [],
       "social": {
         "title": "Datenschutzerklärung - Wa(h)re Haustier(liebe)",
-        "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Verantwortliche, Hosting über GitHub Pages, Server-Logfiles, Kontaktaufnahme, Cookies und Betroffenenrechte.",
+        "description": "Datenschutzerklärung für Wa(h)re Haustier(liebe): Hosting über GitHub Pages, Speicherung im Browser bei Quiz und Urlaubsplan, Kontakt, Betroffenenrechte.",
         "image": "https://wahre-haustierliebe.de/assets/social/default.png",
         "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
         "imageWidth": 1200,
@@ -243,7 +243,7 @@
         "Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.",
         "Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.",
         "Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.",
-        "Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung."
+        "Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag."
       ],
       "citationGuardrails": [
         "Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.",
@@ -253,16 +253,24 @@
       ],
       "sources": [
         {
-          "label": "TASSO e. V.",
-          "url": "https://www.tasso.net"
+          "label": "TVT: Merkblatt Nr. 197 Aufnahme eines Hundes",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&did=421"
         },
         {
-          "label": "Deutscher Tierschutzbund",
-          "url": "https://www.tierschutzbund.de"
+          "label": "Deutscher Tierschutzbund: Hunde richtig halten",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/"
         },
         {
           "label": "Tierschutz-Hundeverordnung",
           "url": "https://www.gesetze-im-internet.de/tierschhuv/"
+        },
+        {
+          "label": "Gebührenordnung für Tierärzte (GOT), § 4",
+          "url": "https://www.gesetze-im-internet.de/got_2022/__4.html"
+        },
+        {
+          "label": "TASSO e. V.",
+          "url": "https://www.tasso.net"
         },
         {
           "label": "Bundestierärztekammer",
@@ -282,7 +290,7 @@
       "id": "hunde-abgabealter",
       "url": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html",
       "title": "Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)",
-      "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze, Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
+      "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze über acht Wochen, unsere begründete Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
       "intent": "Abgabealter von Welpen rechtlich und tierschutzfachlich prüfen",
       "keywords": [
         "Welpe Abgabealter",
@@ -294,13 +302,13 @@
         "Sozialisierung Hund"
       ],
       "facts": [
-        "Nach § 2 Abs. 4 TierSchHuV darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt.",
+        "Nach § 2 Abs. 4 TierSchHuV darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Neun bis elf Wochen sind unsere begründete Empfehlung; eine amtliche Empfehlung für diesen Zeitraum gibt es nicht.",
         "Der Kontakt zu Mutter und Geschwistern gibt dem Welpen in dieser wichtigen Lernphase soziale Sicherheit und Erfahrung mit anderen Hunden.",
         "Warnzeichen des illegalen Welpenhandels sind sehr junge, kranke oder verängstigte Tiere, unplausible Dokumente, kein Zugang zum Muttertier und Übergaben an öffentlichen Orten.",
         "Für eine verantwortungsvolle Vermittlung sprechen eine sichtbare Mutterhündin, plausible Dokumente, ein Besuch in der Aufzuchtumgebung und nachvollziehbare Antworten ohne Zeitdruck."
       ],
       "citationGuardrails": [
-        "Neun bis elf Wochen sind der vom Deutschen Tierschutzbund genannte gute Aufnahmezeitpunkt. Gesundheit, Entwicklungsstand und bisherige Aufzucht müssen beim einzelnen Welpen trotzdem berücksichtigt werden.",
+        "Neun bis elf Wochen sind ein Richtwert, den wir aus der Sozialisierungsphase und aus Beobachtungsstudien ableiten, keine amtliche Vorgabe. Gesundheit, Entwicklungsstand und bisherige Aufzucht müssen beim einzelnen Welpen trotzdem berücksichtigt werden.",
         "Eine frühere Trennung kann im Einzelfall medizinisch nötig sein; die Entscheidung gehört dann in die Tierarztpraxis und nicht auf den Parkplatz.",
         "Die Sozialisierungsphase endet nicht mit der Abgabe. Wer einen Hund aufnimmt, übernimmt selbst den Rest: Eingewöhnung, Beziehung, Training, Rückzug und Geduld.",
         "Die Seite ersetzt keine individuelle tierärztliche oder verhaltenstherapeutische Einschätzung für den konkreten Welpen."
@@ -309,10 +317,6 @@
         {
           "label": "Tierschutz-Hundeverordnung § 2 Abs. 4",
           "url": "https://www.gesetze-im-internet.de/tierschhuv/__2.html"
-        },
-        {
-          "label": "Deutscher Tierschutzbund: Anschaffung und Vermittlung beim Hund",
-          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/anschaffung-und-vermittlung/"
         },
         {
           "label": "Deutscher Tierschutzbund: Illegaler Welpenhandel",
@@ -325,11 +329,31 @@
         {
           "label": "Bundestierärztekammer",
           "url": "https://www.bundestieraerztekammer.de"
+        },
+        {
+          "label": "TVT: Merkblatt Nr. 197 Aufnahme eines Hundes",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&did=421"
+        },
+        {
+          "label": "EU-Plattform für Tierschutz: Leitfaden zur Sozialisierung von Welpen",
+          "url": "https://food.ec.europa.eu/system/files/2022-07/aw_platform_plat-conc_guide_socialisation_puppy.pdf"
+        },
+        {
+          "label": "Pierantoni u. a. 2011, Veterinary Record",
+          "url": "https://doi.org/10.1136/vr.d4967"
+        },
+        {
+          "label": "Jokinen u. a. 2017, Applied Animal Behaviour Science",
+          "url": "https://doi.org/10.1016/j.applanim.2017.06.003"
+        },
+        {
+          "label": "Cocco u. a. 2025, Veterinary Sciences",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11860672/"
         }
       ],
       "social": {
         "title": "Abgabealter beim Welpen: Recht, Empfehlung und Warnzeichen - Wa(h)re Haustier(liebe)",
-        "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze, Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
+        "description": "Wann ein Welpe abgegeben werden darf: gesetzliche Untergrenze über acht Wochen, unsere begründete Empfehlung von neun bis elf Wochen und Warnzeichen des illegalen Welpenhandels.",
         "image": "https://wahre-haustierliebe.de/assets/social/default.png",
         "imageAlt": "Offizielles Logo von Wa(h)re Haustier(liebe).",
         "imageWidth": 1200,
@@ -405,7 +429,7 @@
       "id": "katzen",
       "url": "https://wahre-haustierliebe.de/katzen/index.html",
       "title": "Katzen halten: Wohnung, Freigang, Kastration und stille Warnsignale",
-      "description": "Katzenhaltung ehrlich erklärt: Wohnungsgestaltung, Sozialkontakt, Freigang, Kastration, Tierarztkosten und leise Anzeichen für Stress oder Krankheit.",
+      "description": "Was eine Katze von dir braucht: Artgenossen, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag über das ganze Leben, Hilfe zur Entscheidung.",
       "intent": "Katze anschaffen oder Katzenhaltung artgerechter machen",
       "keywords": [
         "Katze halten",
@@ -415,26 +439,48 @@
         "Katzenstress"
       ],
       "facts": [
-        "Katzen sind Einzeljäger, aber nicht automatisch Einzelgänger.",
+        "Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen, und zu einer Toilette mehr, als Katzen im Haus leben.",
+        "AAFP und ISFM nennen mindestens zwei Ruheplätze, zwei Futterstellen und zwei Toilettenorte an getrennten Stellen.",
+        "Hauskatzen schlafen im Mittel rund 13 Stunden am Tag; eine gründliche Untersuchung ist mindestens einmal im Jahr empfohlen, bei Senioren alle sechs Monate.",
+        "Über 16 Jahre kostet eine gesunde Katze etwa 1,70 bis 3,70 Euro am Tag (eigene Hochrechnung der Kostenseite); der Tierschutzbund nennt mindestens 13.300 Euro für 16 Jahre.",
         "Kastration ist bei Freigängerkatzen praktischer Tierschutz gegen unkontrollierte Vermehrung und Streunerleid.",
         "Rückzug, Unsauberkeit oder verändertes Fressverhalten sind Warnsignale, keine Trotzreaktion."
       ],
       "citationGuardrails": [
+        "Die Kosten pro Tag sind eine Hochrechnung aus Spannen für eine gesunde Einzelkatze und keine Zusage; Notfälle, Betreuung und Urlaub sind nicht enthalten.",
+        "Eine Quadratmeterzahl nennen die Quellen nicht; entscheidend ist, wie viel der Wohnung für die Katze nutzbar ist.",
+        "Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.",
         "Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.",
         "Keine Ferndiagnose bei Verhaltensänderungen."
       ],
       "sources": [
         {
-          "label": "Deutscher Tierschutzbund",
-          "url": "https://www.tierschutzbund.de"
+          "label": "Deutscher Tierschutzbund: Katzenhaltung",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/"
+        },
+        {
+          "label": "AAFP und ISFM: Leitlinien zu den Umweltbedürfnissen von Katzen",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/"
+        },
+        {
+          "label": "AAHA und AAFP: Leitlinien zu den Lebensabschnitten von Katzen 2021",
+          "url": "https://journals.sagepub.com/doi/10.1177/1098612X21993657"
+        },
+        {
+          "label": "Schlaf von Hunden und Katzen in der Tierklinik (mit Angabe zum Schlaf von Hauskatzen)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12322353/"
+        },
+        {
+          "label": "VETO Tierschutz: Die Schutzgebühr im Tierschutz",
+          "url": "https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Katzenschutzreport 2026",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/neuer-katzenschutzreport-alarmiert-strassenkatzenleid-ausser-kontrolle/"
         },
         {
           "label": "Streunerhilfe Plau e. V.",
           "url": "https://streunerhilfe-plau.de"
-        },
-        {
-          "label": "Bundestierärztekammer",
-          "url": "https://www.bundestieraerztekammer.de"
         }
       ],
       "social": {
@@ -450,7 +496,7 @@
       "id": "voegel",
       "url": "https://wahre-haustierliebe.de/voegel/index.html",
       "title": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
-      "description": "Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.",
+      "description": "Was Wellensittiche von dir brauchen: Schwarm, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag und Hilfe zur Entscheidung.",
       "intent": "Vogelhaltung und Wellensittichhaltung prüfen",
       "keywords": [
         "Vögel halten",
@@ -460,16 +506,19 @@
         "UV-Licht"
       ],
       "facts": [
-        "Wellensittiche brauchen mindestens einen passenden Artgenossen; Gruppen ab vier Vögeln ermöglichen mehr soziale Wahl.",
-        "Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.",
-        "Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.",
+        "Wellensittiche brauchen mindestens einen passenden Artgenossen; der Tierschutzbund empfiehlt Gruppen ab vier Vögeln.",
+        "Für zwei bis sechs Wellensittiche nennt der Tierschutzbund eine Voliere von mindestens 2 × 1 × 2 Metern und täglich mehrstündigen Freiflug; ohne Freiflug mindestens 4 Quadratmeter Grundfläche bei 2 Metern Höhe.",
+        "Täglich ein bis zwei Teelöffel Körnerfutter pro Vogel, dazu frische Kräuter, Gräser und Gemüse; die Nachtruhe beträgt mindestens zehn Stunden.",
+        "Zwei Wellensittiche kosten nach den Rechenwerten der Kostenseite mindestens etwa 0,90 bis 1,80 Euro am Tag (3.200 bis 6.600 Euro über zehn Jahre).",
         "Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.",
         "Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.",
         "Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung."
       ],
       "citationGuardrails": [
-        "Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform.",
-        "Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.",
+        "Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform; die Maße dieser Übersicht gelten für Wellensittiche.",
+        "Die Maße folgen dem Deutschen Tierschutzbund. Das TVT-Merkblatt nennt kleinere Mindestwerte (150 × 60 × 100 cm für ein bis drei Paare); Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.",
+        "Die Kosten pro Tag sind eine Untergrenze aus Praxisangaben von go4vet: Beleuchtung samt Strom, Notfälle, Betreuung und eine Voliere in der empfohlenen Größe sind nicht eingerechnet.",
+        "Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.",
         "Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.",
         "Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig."
       ],
@@ -483,8 +532,16 @@
           "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf"
         },
         {
-          "label": "Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche",
+          "label": "Tierärztliche Vereinigung für Tierschutz: Merkblatt 173 Wellensittiche",
           "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58"
+        },
+        {
+          "label": "go4vet: Was kostet ein Wellensittich?",
+          "url": "https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/"
+        },
+        {
+          "label": "go4vet: Wellensittich beim Tierarzt, was kostet eine Behandlung?",
+          "url": "https://www.go4vet.com/voegel/krankheiten/wellensittich-beim-tierarzt-was-kostet-eine-behandlung/"
         },
         {
           "label": "Tierschutzgesetz § 2",
@@ -1111,7 +1168,7 @@
       "id": "katzen-kosten",
       "url": "https://wahre-haustierliebe.de/katzen/kosten/index.html",
       "title": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
-      "description": "Einmalige Kosten, Futter, Streu, Tierarzt, Rücklagen und Alltag vor dem Einzug ehrlich rechnen.",
+      "description": "Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.",
       "intent": "Katzenkosten vor der Anschaffung realistisch einschätzen.",
       "keywords": [
         "Katze halten",
@@ -1120,12 +1177,33 @@
         "Kastration",
         "Katzenstress"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Über 16 Jahre kostet eine gesunde Katze nach den Einzelposten dieser Seite etwa 10.100 bis 21.600 Euro, das sind 1,70 bis 3,70 Euro am Tag.",
+        "Der Deutsche Tierschutzbund nennt Mindestkosten von 13.300 Euro für eine 16-jährige Katze und rund 800 Euro im Jahr.",
+        "Die Schutzgebühr legt jede Organisation selbst fest: ab 100 Euro nach dem Tierschutzbund, 150 bis 250 Euro nach VETO Tierschutz (Stand 2026)."
+      ],
+      "citationGuardrails": [
+        "Die Spannen der Einzelposten sind Orientierungswerte für eine gesunde Einzelkatze; die Rechnung über 16 Jahre ist eine eigene Hochrechnung.",
+        "Die Rücklage von 500 bis 1.000 Euro ist eine Empfehlung dieser Seite, keine Zahl aus einer Studie.",
+        "Tierarztkosten, Futter und Streu unterscheiden sich nach Region, Praxis, Futterart, Alter und Gesundheit."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Katzenhaltung (Kosten, Lebensdauer)",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/"
+        },
+        {
+          "label": "VETO Tierschutz: Die Schutzgebühr im Tierschutz",
+          "url": "https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/"
+        },
+        {
+          "label": "Gebührenordnung für Tierärztinnen und Tierärzte (GOT)",
+          "url": "https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html"
+        }
+      ],
       "social": {
         "title": "Was eine Katze wirklich kostet - Wa(h)re Haustier(liebe)",
-        "description": "Einmalige Kosten, Futter, Streu, Tierarzt, Rücklagen und Alltag vor dem Einzug ehrlich rechnen.",
+        "description": "Was eine Katze am Tag und über das ganze Leben kostet: einmalige Kosten, Futter, Streu, Tierarzt und Rücklagen ehrlich gerechnet.",
         "image": "https://wahre-haustierliebe.de/assets/social/katzen-kosten.png",
         "imageAlt": "Katze schaut aus einer Transporttasche.",
         "imageWidth": 1200,
@@ -1172,9 +1250,43 @@
         "Geschwisterkitten",
         "Eingewöhnung Katze"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Der Deutsche Tierschutzbund empfiehlt für Kitten mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern; für Katzen nennt das Gesetz keine Wochenzahl.",
+        "Der Tierschutzbund rät, sich zuerst in Tierheimen umzusehen und gerade für Wohnungskatzen zwei Katzen aufzunehmen, die sich verstehen.",
+        "Deutsche Tierheime nehmen jährlich rund 350.000 Tiere neu auf (Schätzung des Tierschutzbundes).",
+        "Eine Bedenkzeit von drei Nächten und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
+      ],
+      "citationGuardrails": [
+        "Wer ein Tier aus Mitleid kauft, schafft meist Nachfrage für das nächste Tier; der Weg über das Tierheim ist die Empfehlung dieser Seite.",
+        "Seriöse Zucht ist nicht dasselbe wie Vermehrung, aber sie ist nicht das Ideal dieser Seite.",
+        "Die Kostenangaben sind Richtwerte für eine gesunde Katze und können regional abweichen."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Katzenhaltung",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Pressemitteilung zu den Tierheimen, 11.11.2025",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/bundeshaushalt-droht-tierheime-im-stich-zu-lassen/"
+        },
+        {
+          "label": "AAFP und ISFM: Leitlinien zu den Umweltbedürfnissen von Katzen",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/"
+        },
+        {
+          "label": "VETO Tierschutz: Die Schutzgebühr im Tierschutz",
+          "url": "https://www.veto-tierschutz.de/magazin/tierschutz-aktiv/die-schutzgebuehr-im-tierschutz/"
+        },
+        {
+          "label": "Tierschutzgesetz § 3",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__3.html"
+        },
+        {
+          "label": "Tierschutz-Hundeverordnung § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschhuv/__2.html"
+        }
+      ],
       "social": {
         "title": "Kätzchen aufnehmen: Was du vor dem Einzug wissen musst - Wa(h)re Haustier(liebe)",
         "description": "Kätzchen aufnehmen gut überlegt: Abgabealter, Inserate-Fallen, Einzel- vs. Geschwisterkitten, Erstausstattung, Eingewöhnung und ehrliche Kosten – bevor ein Jungtier einzieht.",
@@ -1313,7 +1425,7 @@
       "id": "voegel-partnerersatz",
       "url": "https://wahre-haustierliebe.de/voegel/partnerersatz/index.html",
       "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
-      "description": "Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.",
+      "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.",
       "intent": "Falschen Partnerersatz bei Vögeln vermeiden.",
       "keywords": [
         "Vögel halten",
@@ -1327,7 +1439,7 @@
       "sources": [],
       "social": {
         "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
-        "description": "Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.",
+        "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-partnerersatz.png",
         "imageAlt": "Wellensittich sitzt auf einer hölzernen Stange.",
         "imageWidth": 1200,
@@ -1488,7 +1600,7 @@
       "id": "voegel-qualzucht",
       "url": "https://wahre-haustierliebe.de/voegel/qualzucht/index.html",
       "title": "Schauwellensittiche und Qualzucht - Wa(h)re Haustier(liebe)",
-      "description": "Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.",
+      "description": "Warum Schau- und Haubenwellensittiche als Qualzucht gelten und überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sind.",
       "intent": "Qualzucht bei Heimvögeln erkennen.",
       "keywords": [
         "Vögel halten",
@@ -1502,7 +1614,7 @@
       "sources": [],
       "social": {
         "title": "Schauwellensittiche und Qualzucht - Wa(h)re Haustier(liebe)",
-        "description": "Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.",
+        "description": "Warum Schau- und Haubenwellensittiche als Qualzucht gelten und überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-qualzucht.png",
         "imageAlt": "Wellensittich in seitlicher Nahaufnahme.",
         "imageWidth": 1200,
@@ -1513,7 +1625,7 @@
       "id": "voegel-entscheidung",
       "url": "https://wahre-haustierliebe.de/voegel/entscheidung/index.html",
       "title": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
-      "description": "Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
+      "description": "Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
       "intent": "Entscheidung vor der Vogelhaltung prüfen.",
       "keywords": [
         "Vögel halten",
@@ -1522,12 +1634,37 @@
         "Freiflug",
         "UV-Licht"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Zwei Wellensittiche kosten mindestens etwa 0,90 bis 1,80 Euro am Tag; die Vögel selbst machen weniger als 2 Prozent der Summe aus.",
+        "Der Tierschutzbund empfiehlt, zuerst beim örtlichen Tierheim nachzufragen, und rät, Paare nicht zu trennen; Einzelhaltung nennt er tierschutzwidrig.",
+        "Schau- und Haubenwellensittiche zählt der Tierschutzbund zu den Qualzuchten.",
+        "Eine Bedenkzeit von drei Nächten und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht."
+      ],
+      "citationGuardrails": [
+        "Die Kosten pro Tag sind eine Untergrenze und eine eigene Hochrechnung aus den Praxisangaben von go4vet.",
+        "Wer zögert, entscheidet sich nicht gegen Tiere, sondern für „Noch nicht“; beides steht gleichwertig nebeneinander."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Wellensittiche richtig halten",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf"
+        },
+        {
+          "label": "Tierärztliche Vereinigung für Tierschutz: Merkblatt 173 Wellensittiche",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58"
+        },
+        {
+          "label": "go4vet: Was kostet ein Wellensittich?",
+          "url": "https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/"
+        }
+      ],
       "social": {
         "title": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
-        "description": "Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
+        "description": "Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-entscheidung.png",
         "imageAlt": "Gruppe von Wellensittichen in einer großen Voliere.",
         "imageWidth": 1200,
@@ -1538,8 +1675,8 @@
       "id": "kleintiere-kaninchen",
       "url": "https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html",
       "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.",
-      "intent": "Kaninchenhaltung und Abgabealter verantwortungsvoll einordnen.",
+      "description": "Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.",
+      "intent": "Kaninchenhaltung vom Tier aus denken und vor dem Einzug verantwortungsvoll einordnen.",
       "keywords": [
         "Kleintiere halten",
         "Kaninchen",
@@ -1548,33 +1685,47 @@
         "Ratten"
       ],
       "facts": [
+        "Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6 m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20 Prozent mehr.",
+        "Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.",
         "Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.",
-        "Der Deutsche Tierschutzbund empfiehlt beim Einzug in ein neues Zuhause ein Mindestalter von zehn Wochen.",
-        "Moppel-Hoppel Tiere in Not vermittelt Jungtierpaare ab der zwölften Woche und zeigt damit eine strengere Vermittlungspraxis.",
-        "Kaninchen brauchen passende Artgenossen; ein Mensch oder ein Meerschweinchen ersetzt keinen Kaninchenpartner."
+        "Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.",
+        "Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen."
       ],
       "citationGuardrails": [
-        "Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe.",
-        "Zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine zusätzliche gesetzliche Grenze.",
-        "Gesundheit, Impfschutz, Geschlechtsbestimmung, Artgenossen und die neue Haltung müssen vor dem Umzug geklärt sein."
+        "Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.",
+        "Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.",
+        "Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.",
+        "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
       ],
       "sources": [
         {
-          "label": "Tierschutz-Nutztierhaltungsverordnung § 37",
-          "url": "https://www.gesetze-im-internet.de/tierschnutztv/__37.html"
+          "label": "TVT-Merkblatt Nr. 157: Heimtiere – Kaninchen, Stand September 2019",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&did=38"
         },
         {
           "label": "Deutscher Tierschutzbund: Zwergkaninchen",
           "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/"
         },
         {
+          "label": "go4vet: Kaninchen beim Tierarzt, was kostet eine Behandlung wirklich?",
+          "url": "https://www.go4vet.com/kleintiere/krankheiten/kaninchen-beim-tierarzt-was-kostet-eine-behandlung-wirklich/"
+        },
+        {
+          "label": "Tierschutz-Nutztierhaltungsverordnung § 37",
+          "url": "https://www.gesetze-im-internet.de/tierschnutztv/__37.html"
+        },
+        {
           "label": "Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen",
           "url": "https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
         }
       ],
       "social": {
         "title": "Kaninchen halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.",
+        "description": "Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-kaninchen.png",
         "imageAlt": "Kaninchen sitzt in einem begrünten Außengehege.",
         "imageWidth": 1200,
@@ -1609,9 +1760,9 @@
     {
       "id": "kleintiere-meerschweinchen",
       "url": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html",
-      "title": "Meerschweinchen abgeben: Mindestalter und richtige Haltung - Wa(h)re Haustier(liebe)",
-      "description": "Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.",
-      "intent": "Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.",
+      "title": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
+      "description": "Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.",
+      "intent": "Haltung, Kosten, Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.",
       "keywords": [
         "Meerschweinchen halten",
         "Meerschweinchen abgeben",
@@ -1621,12 +1772,56 @@
         "Gruppenhaltung",
         "Kleintiere"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Meerschweinchen brauchen nach dem TVT-Merkblatt Nr. 159 mindestens 2 m² Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 m² mehr.",
+        "Einzelhaltung ist grundsätzlich abzulehnen; der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren. Kaninchen sind kein Ersatz für Meerschweinchen.",
+        "Meerschweinchen werden 6 bis 8 Jahre alt, selten bis 12; Männchen sind gewöhnlich mit 3 bis 4 Wochen geschlechtsreif, Weibchen schon mit weniger als einem Monat.",
+        "Für Meerschweinchen gibt es keine eigene gesetzliche Mindestabgabealter-Regel; der Deutsche Tierschutzbund nennt mindestens acht Wochen als Orientierung für Jungtiere.",
+        "Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000 Euro in acht Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen."
+      ],
+      "citationGuardrails": [
+        "Die Maße gelten für Meerschweinchen bis etwa 1,5 kg; größere Tiere brauchen deutlich mehr Platz.",
+        "Die Acht-Wochen-Regel der Tierschutz-Hundeverordnung gilt für Welpen und darf nicht als gesetzliche Meerschweinchen-Regel missverstanden werden.",
+        "Eine Frühkastration ist eine tierärztliche Entscheidung und keine Abkürzung für eine schnelle Abgabe.",
+        "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
+      ],
+      "sources": [
+        {
+          "label": "TVT-Merkblatt Nr. 159: Meerschweinchen, Stand Oktober 2020",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_159_Meerschweinchen_1.pdf&did=40"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Meerschweinchen",
+          "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“",
+          "url": "https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/"
+        },
+        {
+          "label": "go4vet: Tierarztkosten Meerschweinchen",
+          "url": "https://www.go4vet.com/kleintiere/krankheiten/tierarztkosten-meerschweinchen-was-solltest-du-einplanen/"
+        },
+        {
+          "label": "Tierschutzgesetz § 2",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Tierschutzgesetz § 11c",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11c.html"
+        },
+        {
+          "label": "Tierschutz-Hundeverordnung",
+          "url": "https://www.gesetze-im-internet.de/tierschhuv/BJNR083800001.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        }
+      ],
       "social": {
-        "title": "Meerschweinchen abgeben: Mindestalter und richtige Haltung - Wa(h)re Haustier(liebe)",
-        "description": "Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.",
+        "title": "Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter - Wa(h)re Haustier(liebe)",
+        "description": "Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-meerschweinchen.png",
         "imageAlt": "Zwei Meerschweinchen sitzen dicht beieinander im Gras.",
         "imageWidth": 1200,
@@ -1662,7 +1857,7 @@
       "id": "kleintiere-hamster",
       "url": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html",
       "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.",
+      "description": "Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.",
       "intent": "Goldhamsterhaltung vor der Anschaffung realistisch prüfen.",
       "keywords": [
         "Kleintiere halten",
@@ -1672,16 +1867,18 @@
         "Ratten"
       ],
       "facts": [
-        "Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden.",
+        "Goldhamster sind strikte Einzelgänger und dürfen nicht als Paar oder Gruppe gehalten werden; auch mit anderen kleinen Heimtieren leben sie nicht zusammen.",
         "Für einen Goldhamster werden mindestens ein Quadratmeter Grundfläche, 70 Zentimeter Gehegehöhe und 30 Zentimeter grabfähige Einstreu empfohlen.",
-        "Goldhamster sind nachtaktiv. Wecken am Tag stört ihren Rhythmus und kann Stress und Verhaltensstörungen begünstigen.",
-        "Ein sicheres Laufrad, Mehrkammerhaus, Sandbad, Naturmaterialien und abwechslungsreiche Futtersuche gehören zur Haltung.",
-        "Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen."
+        "Goldhamster sind nachtaktiv. Häufiges Wecken am Tag kann Verhaltensstörungen begünstigen.",
+        "Ein sicheres Laufrad (25 bis 30 Zentimeter), Mehrkammerhaus, Sandbad und abwechslungsreiche Futtersuche gehören zur Haltung.",
+        "Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.",
+        "Der Deutsche Tierschutzbund nennt für ein dreijähriges Tier mindestens 3.130 Euro ohne Tierarzt; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus derselben Spanne."
       ],
       "citationGuardrails": [
         "Die Angaben dieser Seite beziehen sich auf Goldhamster. Zwerghamsterarten brauchen eine eigene Beurteilung ihrer Haltung.",
         "Mindestmaße allein machen ein Gehege nicht tiergerecht; Einstreu, Rückzug, sichere Einrichtung, Ruhe und Versorgung müssen ebenfalls passen.",
-        "Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden."
+        "Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden.",
+        "Die Kosten sind Mindestwerte ohne Tierarzt; die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
       ],
       "sources": [
         {
@@ -1703,11 +1900,15 @@
         {
           "label": "Tierschutzgesetz § 2",
           "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
         }
       ],
       "social": {
         "title": "Goldhamster halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.",
+        "description": "Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-hamster.png",
         "imageAlt": "Großes Hamstergehege mit tiefer Einstreu und Verstecken.",
         "imageWidth": 1200,
@@ -1718,8 +1919,8 @@
       "id": "kleintiere-ratten",
       "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
       "title": "Ratten halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.",
-      "intent": "Rattenhaltung verantwortungsvoll planen.",
+      "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.",
+      "intent": "Rattenhaltung vom Tier aus denken und verantwortungsvoll planen.",
       "keywords": [
         "Kleintiere halten",
         "Kaninchen",
@@ -1727,12 +1928,35 @@
         "Hamster",
         "Ratten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Ratten dürfen nach dem TVT-Merkblatt Nr. 160 nicht alleine gehalten werden; am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.",
+        "Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100 cm oder als Turm 80 × 50 × 120 cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.",
+        "Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.",
+        "Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.",
+        "Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden."
+      ],
+      "citationGuardrails": [
+        "Das Merkblatt stammt von 2014; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.",
+        "Konkrete Tierarztkosten unterscheiden sich von Praxis zu Praxis; die Seite nennt deshalb keine Summe.",
+        "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
+      ],
+      "sources": [
+        {
+          "label": "TVT-Merkblatt Nr. 160: Heimtiere – Ratten, Stand April 2014",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&did=41"
+        },
+        {
+          "label": "Gebührenordnung für Tierärztinnen und Tierärzte (GOT)",
+          "url": "https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        }
+      ],
       "social": {
         "title": "Ratten halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.",
+        "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png",
         "imageAlt": "Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.",
         "imageWidth": 1200,
@@ -1743,7 +1967,7 @@
       "id": "kleintiere-degus-und-chinchillas",
       "url": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html",
       "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.",
+      "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.",
       "intent": "Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.",
       "keywords": [
         "Kleintiere halten",
@@ -1752,12 +1976,39 @@
         "Hamster",
         "Ratten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Degus und Chinchillas dürfen nicht allein gehalten werden; Degus am besten zu dritt bis zu fünft, Chinchillas mindestens paarweise.",
+        "Für zwei bis vier Degus nennt die TVT eine nutzbare Fläche von mindestens 2, besser 3 m², für zwei Chinchillas eine Voliere von mindestens 3 m³.",
+        "Chinchillas haben keine Schweiß- und Talgdrüsen; optimal sind 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit, über 28 °C ist nicht zuträglich.",
+        "Degus werden meist 4 bis 6 Jahre alt, selten bis 10; Chinchillas können über 20 Jahre alt werden.",
+        "Degus dürfen grundsätzlich kein Obst bekommen (Diabetesneigung); Chinchillas vertragen kein frisches Grünfutter, Obst und Gemüse."
+      ],
+      "citationGuardrails": [
+        "Das Chinchilla-Merkblatt stammt von 2012; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.",
+        "Konkrete Kosten hängen von Art, Gruppengröße und Ausstattung ab; die Seite nennt deshalb keine Summe.",
+        "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
+      ],
+      "sources": [
+        {
+          "label": "TVT-Merkblatt Degu, Stand Juni 2023",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB-Degu2023.pdf&did=47"
+        },
+        {
+          "label": "TVT-Merkblatt Nr. 153: Heimtiere – Chinchillas, Stand September 2012",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&did=35"
+        },
+        {
+          "label": "Tierschutzgesetz § 11b",
+          "url": "https://www.gesetze-im-internet.de/tierschg/__11b.html"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+        }
+      ],
       "social": {
         "title": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.",
+        "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.",
         "image": "https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png",
         "imageAlt": "Kleintiergehege mit Verstecken und mehreren Bereichen.",
         "imageWidth": 1200,
@@ -2425,8 +2676,8 @@
       ],
       "facts": [
         "Der Selbsttest prüft Alltag, Geld, Betreuung, Wohnsituation, Motivation und medizinischen Notfallpuffer.",
-        "Strenge Antworten schützen das Tier vor späterer Überforderung.",
-        "Ein schlechtes Ergebnis ist kein Urteil, sondern ein Hinweis, noch zu warten."
+        "Ehrliche Antworten schützen das Tier vor späterer Überforderung.",
+        "Am Ende steht kein Punktestand, sondern ein konkreter nächster Schritt. „Noch nicht“ ist eine gleichwertige Entscheidung und kein Urteil."
       ],
       "citationGuardrails": [
         "Der Selbsttest ist eine Entscheidungshilfe, kein psychometrisches Gutachten.",

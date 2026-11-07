@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler</title>
-  <meta name="description" content="Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.">
+  <meta name="description" content="Was Wellensittiche von dir brauchen: Schwarm, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag und Hilfe zur Entscheidung.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Mehrere Wellensittiche sitzen gemeinsam in einer Voliere.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-10-24">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vögel brauchen Schwarm, Flugraum und Licht">
   <meta name="twitter:description" content="Warum Einzelhaltung im Käfig nicht reicht und was Wellensittiche und andere Vögel im Alltag wirklich brauchen.">
@@ -6706,6 +6706,196 @@ body.static-site .article-hero-media {
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
+/* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
+#selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
+#selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
+#selbsttest .test-next-step .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+#selbsttest .test-share { margin-top: 1.25rem; }
+
+/* ---------- Volltextsuche: Trefferdarstellung (Paket suche) ---------- */
+.site-search-result .site-search-where {
+  color: var(--ink-3, var(--text-muted));
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.site-search-result .site-search-snippet {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.site-search-result mark {
+  background: rgba(214, 160, 40, 0.28);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.08em;
+}
+.site-search-kind {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--rule-strong, var(--border));
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+}
+.site-search-result strong { overflow-wrap: anywhere; }
+.site-search-result { min-height: 2.75rem; }
+@media (max-width: 768px) {
+  .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
+  .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+
+/* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
+.kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
+.kv-randnotiz { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+.kv-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+.kv-feld { border-top: 2px solid var(--ink); margin: 0 0 2rem; padding-top: 0.9rem; }
+.kv-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.6rem; }
+.kv-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--red-dark); white-space: nowrap; }
+.kv-feld-kopf h3 { margin: 0; }
+.kv-feld dl { margin: 0; }
+.kv-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+.kv-feld dd { margin: 0; }
+.kv-feld dd p { margin: 0 0 0.5rem; max-width: none; }
+.kv-feld .kv-mass { font-weight: 600; }
+.kv-feld dd.kv-frage { font-size: 1.08rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+.kv-feld dt.kv-t-frage { color: var(--green-dark); }
+.kv-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+.kv-beispiel-tag { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+.kv-fakten { display: grid; grid-template-columns: 1fr; margin: 1.4rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); }
+.kv-fakten > div { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.kv-fakten > div:last-child { border-bottom: 0; }
+.kv-zahl { display: block; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--red-dark); }
+.kv-zahl-text { display: block; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.4; color: var(--ink-2); margin-top: 0.3rem; }
+.kv-klein .kv-zahl { font-size: 1.45rem; color: var(--ink-2); }
+.kv-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.kv-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+.kv-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+.kv-karte ul { list-style: none; margin: 0; padding: 0; }
+.kv-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.kv-karte li:first-child { border-top: 0; padding-top: 0; }
+.kv-wenn, .kv-dann { display: block; }
+.kv-wenn b, .kv-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+.kv-dann { font-weight: 600; }
+.kv-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+.kv-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+.kv-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+.kv-weg.kv-noch-nicht { border-top-color: var(--ochre); }
+.kv-weg h3 { margin: 0 0 0.4rem; }
+.kv-weg p { margin-bottom: 0.7rem; }
+.kv-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  .kv-fakten { grid-template-columns: repeat(3, 1fr); }
+  .kv-fakten > div { border-bottom: 0; border-right: 1px solid var(--rule); padding: 1rem 1rem 1rem 0; }
+  .kv-fakten > div + div { padding-left: 1rem; }
+  .kv-fakten > div:last-child { border-right: 0; }
+  .kv-wege { grid-template-columns: 1fr 1fr; }
+
+/* ===================================================================
+   Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
+   Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
+   ========================================================================== */
+.hunde-einstieg { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
+.hunde-einstieg-frage { display: block; margin-top: 0.4rem; font-weight: 600; color: var(--red-dark); }
+.hunde-muster-hinweis { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; }
+.hunde-feld { margin: 1.6rem 0; padding: 1rem 0 0.3rem; border-top: 2px solid var(--ink); }
+.hunde-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.9rem; margin-bottom: 0.6rem; }
+.hunde-feld-kopf h3 { margin: 0; }
+.hunde-feld-nr { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-feld dl { margin: 0; display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.8rem 1.4rem; }
+.hunde-feld dt { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); padding-top: 0.25rem; }
+.hunde-feld dd { margin: 0; min-width: 0; }
+.hunde-feld dd p { margin: 0 0 0.6rem; max-width: none; }
+.hunde-mass { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.hunde-rechnung { font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.45; color: var(--ink-2); }
+.hunde-frage-t { color: var(--red-dark) !important; }
+.hunde-frage { font-style: italic; border-left: 3px solid var(--red); padding-left: 0.8rem; }
+.hunde-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); padding: 0.15rem 0.5rem; margin-bottom: 0.4rem; }
+.hunde-tag-liste li.hunde-mensch::before { border-color: var(--ochre); background: var(--ochre-tint); }
+.hunde-tag-liste li.hunde-mensch .zeitleiste-when { color: var(--ochre); }
+.hunde-legende { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: 60ch; }
+.hunde-bedenkzeit { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: var(--green-tint); }
+.hunde-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-bedenkzeit p:last-child { margin-bottom: 0; }
+.hunde-karte { margin: 1.4rem 0; padding: 1rem 1.2rem; border: 2px solid var(--ink); background: var(--card); }
+.hunde-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.6rem; }
+.hunde-karte ul { list-style: none; margin: 0; padding: 0; }
+.hunde-karte li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem 1.2rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.hunde-karte li:first-child { border-top: 0; }
+.hunde-karte b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-karte-fuss { font-size: 0.92rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.hunde-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.hunde-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); background: var(--card); }
+.hunde-weg-noch-nicht { border-color: var(--green); background: var(--green-tint); }
+.hunde-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.3rem; }
+.hunde-weg h3 { margin: 0 0 0.4rem; }
+.hunde-weg p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-quellen-liste { font-size: 0.92rem; }
+@media (max-width: 640px) {
+  .hunde-feld dl { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .hunde-feld dt { padding-top: 0.6rem; }
+  .hunde-karte li { grid-template-columns: minmax(0, 1fr); }
+}
+=======
+/* ===== Paket Kleintiere: Muster „vom Tier aus gedacht“ (Präfix kt-) ===== */
+body.static-site .kt-einstieg { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+body.static-site .kt-einstieg strong { font-weight: 600; }
+body.static-site .kt-randnotiz { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-randnotiz strong { color: var(--ink); }
+body.static-site .kt-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+body.static-site .kt-feld { border-top: 2px solid var(--ink); margin: 0 0 2.2rem; padding-top: 0.9rem; }
+body.static-site .kt-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+body.static-site .kt-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); white-space: nowrap; }
+body.static-site .kt-feld-kopf h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+body.static-site .kt-feld dl { margin: 0; }
+body.static-site .kt-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+body.static-site .kt-feld dd { margin: 0; }
+body.static-site .kt-feld dd p { margin: 0 0 0.6rem; }
+body.static-site .kt-feld .kt-mass { font-weight: 600; }
+body.static-site .kt-feld .kt-art { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); display: block; margin: 0.8rem 0 0.1rem; }
+body.static-site .kt-feld dd.kt-frage { font-size: 1.1rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+body.static-site .kt-feld dt.kt-t-frage { color: var(--green-dark); }
+body.static-site .kt-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+body.static-site .kt-beispiel { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+body.static-site .kt-zeit { list-style: none; margin: 0.5rem 0 1rem 0.5rem; padding: 0 0 0 0.9rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-zeit li { position: relative; padding: 0 0 1.3rem 1.1rem; margin: 0; }
+body.static-site .kt-zeit li:last-child { padding-bottom: 0.2rem; }
+body.static-site .kt-zeit li::before { content: ""; position: absolute; left: -1.5rem; top: 0.5rem; width: 0.8rem; height: 0.8rem; background: var(--paper); border: 2px solid var(--red); border-radius: 50%; }
+body.static-site .kt-zeit li.kt-mensch::before { border-color: var(--green); background: var(--green-tint); }
+body.static-site .kt-wann { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); }
+body.static-site .kt-zeit li.kt-mensch .kt-wann { color: var(--green-dark); }
+body.static-site .kt-zeit p { margin: 0.1rem 0 0; }
+body.static-site .kt-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); }
+body.static-site .kt-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+body.static-site .kt-bedenkzeit strong { font-size: 1.15rem; }
+body.static-site .kt-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+body.static-site .kt-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+body.static-site .kt-karte ul { list-style: none; margin: 0; padding: 0; }
+body.static-site .kt-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); margin: 0; }
+body.static-site .kt-karte li:first-child { border-top: 0; padding-top: 0; }
+body.static-site .kt-wenn, body.static-site .kt-dann { display: block; }
+body.static-site .kt-wenn b, body.static-site .kt-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+body.static-site .kt-dann { font-weight: 600; }
+body.static-site .kt-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+body.static-site .kt-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+body.static-site .kt-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+body.static-site .kt-weg.kt-noch-nicht { border-top-color: var(--ochre); }
+body.static-site .kt-weg h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+body.static-site .kt-weg p { font-size: 1rem; margin-bottom: 0.7rem; }
+body.static-site .kt-weg .kt-go { font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; margin-bottom: 0; }
+body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
+}
+@media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+
 
   </style>
   <script type="application/ld+json">
@@ -6714,7 +6904,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   "@type": "WebPage",
   "name": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
   "headline": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
-  "description": "Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.",
+  "description": "Was Wellensittiche von dir brauchen: Schwarm, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag und Hilfe zur Entscheidung.",
   "url": "https://wahre-haustierliebe.de/voegel/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6732,7 +6922,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     "caption": "Mehrere Wellensittiche sitzen gemeinsam in einer Voliere."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Vögel halten, Wellensittiche, Schwarmhaltung, Freiflug, UV-Licht",
   "about": [
@@ -6798,7 +6988,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   "@type": "Article",
   "headline": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
   "name": "Vögel halten: Schwarm, Flugraum, UV-Licht und häufige Fehler",
-  "description": "Warum Vögel Schwarm, Raum, Freiflug, Licht und Beschäftigung brauchen und warum Einzelhaltung im Käfig keine artgerechte Haltung ist.",
+  "description": "Was Wellensittiche von dir brauchen: Schwarm, Platz, Futter, Ruhe und Gesundheit mit belegten Maßen, Kosten pro Tag und Hilfe zur Entscheidung.",
   "url": "https://wahre-haustierliebe.de/voegel/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/voegel/index.html",
   "image": {
@@ -6818,7 +7008,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Vögel halten, Wellensittiche, Schwarmhaltung, Freiflug, UV-Licht",
@@ -6849,6 +7039,8 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/",
     "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf",
     "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58",
+    "https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/",
+    "https://www.go4vet.com/voegel/krankheiten/wellensittich-beim-tierarzt-was-kostet-eine-behandlung/",
     "https://www.gesetze-im-internet.de/tierschg/__2.html",
     "https://www.gesetze-im-internet.de/tierschg/__11c.html"
   ]
@@ -7069,7 +7261,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
     </div>
-    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema oder ein Warnsignal ein.</li></ul>
+    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema, ein Warnsignal oder einen Fachbegriff ein.</li></ul>
   </aside>
 
   <!-- Mobile Nav -->
@@ -7195,10 +7387,13 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
         </figure>
       </div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#voegel-bedarf">Was Wellensittiche von dir brauchen</a></li><li><a href="#voegel-tag">Ein Tag aus Sicht eines Wellensittich-Schwarms</a></li><li><a href="#voegel-lebenszeit">Was Wellensittiche über ihr ganzes Leben kosten</a></li><li><a href="#voegel-bevor">Bevor du entscheidest</a></li><li><a href="#voegel-abgabealter-bei-wellensittichen-recht-tierwohl-und-verantwortung">Abgabealter bei Wellensittichen: Recht, Tierwohl und Verantwortung</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
+        <p class="kv-einstieg">Du denkst über Wellensittiche nach oder lebst schon mit ihnen? Dreh die Frage einmal um: <strong>Was bräuchten Wellensittiche von dir, und was davon hast du schon?</strong> Die Maße unten gelten für Wellensittiche, die mit 59 Prozent häufigste Ziervogelart in Deutschland (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>). Für andere Vogelarten gelten andere Werte.</p>
+        <p class="kv-randnotiz">Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> schreibt: „Wellensittiche sind beliebte Heimtiere. Doch viele Menschen halten sie falsch, weil sie ihre Bedürfnisse nicht kennen.“</p>
+
         <div class="info-box">
           <h3>Auf einen Blick</h3>
           <ul>
@@ -7214,8 +7409,126 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           <h3>Wenn die Vögel schon bei dir leben</h3>
           <p>Diese Seite ist kein Vorwurf und kein Aufruf, Tiere überstürzt abzugeben. Prüfe nüchtern, was fehlt, verbessere die Haltung Schritt für Schritt und hole dir bei Gesundheit, Vergesellschaftung und Lichttechnik vogelkundige Hilfe. Eine Weitergabe ist nur dann eine Lösung, wenn der neue Platz nachweislich besser passt und die Tiere dort zusammenbleiben können.</p>
         </div>
+
+        <div class="section-feedback-heading"><h2 id="voegel-bedarf">Was Wellensittiche von dir brauchen</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-bedarf" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p class="kv-hinweis">Fünf Felder, immer gleich gebaut: das Maß mit Quelle, ein Bild zum Vorstellen, eine Frage an dich.</p>
+
+        <section class="kv-feld" aria-labelledby="voegel-feld-1">
+          <div class="kv-feld-kopf"><span class="kv-feld-nr">FELD 1</span><h3 id="voegel-feld-1">Artgenossen</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kv-mass">Mindestens ein Pärchen, besser vier oder mehr Wellensittiche.</p>
+              <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt eine Gruppe aus vier oder mehr Vögeln und nennt ein Pärchen als Minimum. Einzelhaltung nennt er tierschutzwidrig. Das <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Merkblatt 173 der TVT</a> verlangt ebenfalls mindestens paarweise Haltung. Bestehende Paare werden nicht getrennt, andere Vogelarten ersetzen keinen Wellensittich.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Aus einem Pärchen werden vier Tiere: Der Tierschutzbund nennt für die Voliere eine Futter- und Wasserstelle pro Vogel, das sind vier Futterstellen und vier Wasserstellen, die du jeden Tag frisch hältst.</p>
+              <p class="kv-rechnung">Rechnung: 2 Paare × 2 Vögel = 4 Vögel.</p></dd>
+            <dt class="kv-t-frage">Frage an dich</dt>
+            <dd class="kv-frage">Hast du Platz, Zeit und Geld für vier Vögel, nicht nur für zwei?</dd>
+          </dl>
+        </section>
+
+        <section class="kv-feld" aria-labelledby="voegel-feld-2">
+          <div class="kv-feld-kopf"><span class="kv-feld-nr">FELD 2</span><h3 id="voegel-feld-2">Platz und Bewegung</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kv-mass">Voliere von mindestens 2 m Länge, 1 m Breite und 2 m Höhe für zwei bis sechs Vögel, dazu täglich mehrere Stunden Freiflug.</p>
+              <p>So nennt es der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a>. Ohne Freiflug verlangt er mindestens 4 m² Grundfläche bei 2 m Höhe. Das <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Merkblatt 173 der TVT</a> nennt als Untergrenze für ein bis drei Paare 150 × 60 × 100 cm bei mindestens einer Stunde Freiflug am Tag. Wir folgen dem Tierschutzbund, weil unser Maßstab das Ideal ist und nicht das Minimum. Mehr dazu unter <a href="../voegel/freiflug/index.html">Freiflug ist nicht optional</a>.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>2 m × 1 m sind 2 m² Grundfläche, etwas mehr als ein großer Esstisch von 1,8 × 0,9 Metern, und 2 m Höhe sind etwa die Höhe einer Zimmertür. Der Rauminhalt beträgt 4 m³.</p>
+              <p class="kv-rechnung">Rechnung: 2 m × 1 m = 2 m²; 2 m × 1 m × 2 m = 4 m³.</p></dd>
+            <dt class="kv-t-frage">Frage an dich</dt>
+            <dd class="kv-frage">Wo in deiner Wohnung steht eine Voliere von 2 mal 1 Metern, und welcher Raum lässt sich für den Freiflug vogelsicher machen?</dd>
+          </dl>
+        </section>
+
+        <section class="kv-feld" aria-labelledby="voegel-feld-3">
+          <div class="kv-feld-kopf"><span class="kv-feld-nr">FELD 3</span><h3 id="voegel-feld-3">Futter</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kv-mass">Täglich ein bis zwei Teelöffel hochwertiges Körnerfutter pro Vogel, dazu frische Kräuter, Gräser und Gemüse.</p>
+              <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt außerdem täglich frisches Wasser, Vogelgrit, eine Sepiaschale oder Kalkstein und Obst nur in sehr geringen Mengen. Übergewicht sei ein großes Problem, weil das Futter im Heim meist frei zur Verfügung steht. In der Natur suchen Wellensittiche nach seinen Angaben etwa 80 Prozent des Tages nach Futter. Sein Tipp: Futter immer als Beschäftigung anbieten, zum Beispiel im Gitterball oder zwischen Zweigen.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Bei vier Vögeln sind das vier bis acht Teelöffel Körner am Tag, nicht mehr. Dazu kommen frische Kräuter, Gräser und Gemüse.</p>
+              <p class="kv-rechnung">Rechnung: 4 Vögel × 1 Teelöffel = 4; 4 Vögel × 2 Teelöffel = 8.</p></dd>
+            <dt class="kv-t-frage">Frage an dich</dt>
+            <dd class="kv-frage">Wer erneuert täglich frisches Futter und Wasser und entfernt die Reste, auch wenn du krank bist oder verreist?</dd>
+          </dl>
+        </section>
+
+        <section class="kv-feld" aria-labelledby="voegel-feld-4">
+          <div class="kv-feld-kopf"><span class="kv-feld-nr">FELD 4</span><h3 id="voegel-feld-4">Ruhe und Tagesrhythmus</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kv-mass">Mindestens zehn Stunden Nachtruhe, dunkel und ohne Radio oder Fernseher.</p>
+              <p>Als tagaktive Vögel brauchen Wellensittiche nach der <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf" target="_blank" rel="noopener noreferrer">Broschüre des Tierschutzbundes</a> eine Nachtruhe von mindestens zehn Stunden. Bei Bedarf wird die Voliere für diesen Zeitraum abgedunkelt, und es darf kein lauter Ton von Radio oder Fernseher hereinkommen. Das <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Merkblatt 173 der TVT</a> verlangt in genutzten Räumen eine Abdunkelung zur Nachtzeit. Mehr dazu unter <a href="../voegel/ruhe-schlaf/index.html">Nachtruhe</a>.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Wer die Vögel um 20 Uhr zur Ruhe bringt, darf sie frühestens um 6 Uhr wieder in den Tag lassen. Läuft abends im selben Raum der Fernseher, ist die Ruhe verkürzt.</p>
+              <p class="kv-rechnung">Rechnung: 20 Uhr + 10 Stunden = 6 Uhr.</p></dd>
+            <dt class="kv-t-frage">Frage an dich</dt>
+            <dd class="kv-frage">In welchem Raum können die Vögel zehn Stunden ungestört schlafen, auch wenn du abends noch wach bist?</dd>
+          </dl>
+        </section>
+
+        <section class="kv-feld" aria-labelledby="voegel-feld-5">
+          <div class="kv-feld-kopf"><span class="kv-feld-nr">FELD 5</span><h3 id="voegel-feld-5">Gesundheit</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kv-mass">Jeden Tag beobachten und eine vogelkundige Tierarztpraxis kennen, bevor etwas passiert.</p>
+              <p>Nach der <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf" target="_blank" rel="noopener noreferrer">Broschüre des Tierschutzbundes</a> zeigen Vögel kaum oder erst sehr spät, dass sie krank sind, und fressen oft bis zum Todestag unverändert. Deshalb gehört der tägliche Blick auf Körperhaltung, Gefieder, Augen, Futter- und Wasseraufnahme und Kot dazu. Ihre natürliche Lebenserwartung von zehn bis 15 Jahren erreichen Nachzuchten wegen der Inzucht oft nicht; im Durchschnitt werden sie laut Broschüre fünf bis acht Jahre alt, laut <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Merkblatt 173 der TVT</a> acht bis zwölf. Mehr dazu unter <a href="../voegel/krankheit-erkennen/index.html">Krankheit verbergen</a>.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Bei zehn Jahren sind das 3.650 Tage, an denen du hinsiehst. Ein Tag ohne Blick kann der Tag sein, an dem eine Krankheit unbemerkt bleibt.</p>
+              <p class="kv-rechnung">Rechnung: 10 Jahre × 365 Tage = 3.650.</p></dd>
+            <dt class="kv-t-frage">Frage an dich</dt>
+            <dd class="kv-frage">Kennst du eine Praxis, die Vögel behandelt, und weißt du, wie du die Tiere nachts oder am Wochenende dorthin bringst? Hilfe dazu: <a href="../notfall/tierarzt-notdienst/index.html">Tierärztlichen Notdienst finden</a>.</dd>
+          </dl>
+        </section>
+
+        <div class="section-feedback-heading"><h2 id="voegel-tag">Ein Tag aus Sicht eines Wellensittich-Schwarms</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <span class="kv-beispiel-tag">Beispiel, keine echten Tiere</span>
+        <ol class="zeitleiste">
+          <li><span class="zeitleiste-when">Nach der Nachtruhe</span><p class="zeitleiste-what">Wellensittiche sind tagaktiv. Nach mindestens zehn Stunden Dunkelheit und Ruhe kommen die Tiere in Bewegung.</p></li>
+          <li><span class="zeitleiste-when">Über den Tag: Futtersuche</span><p class="zeitleiste-what">In der Natur suchen sie etwa 80 Prozent des Tages nach Futter. In der Voliere ersetzen Futter in kleinen Portionen an mehreren Stellen, zwischen Zweigen oder im Gitterball diese Suche.</p></li>
+          <li><span class="zeitleiste-when">Gemeinsam</span><p class="zeitleiste-what">Wellensittiche putzen sich gegenseitig das Gefieder, füttern einander und spielen zusammen. Das gehört zum Sozialverhalten einer Gruppe und lässt sich nicht durch einen Menschen ersetzen.</p></li>
+          <li><span class="zeitleiste-when">Freiflug</span><p class="zeitleiste-what">Wellensittiche müssen fliegen können. Der Tierschutzbund empfiehlt mehrere Stunden freien Flug am Tag in einem gesicherten Zimmer.</p></li>
+          <li><span class="zeitleiste-when">Mehrmals täglich: du</span><p class="zeitleiste-what">Futterreste entfernen, frisches Wasser und Futter hinstellen, jedes Tier ansehen: Gefieder, Augen, Haltung, Kot.</p></li>
+          <li><span class="zeitleiste-when">Abend</span><p class="zeitleiste-what">Die Voliere wird abgedunkelt, und es bleibt ruhig, auch ohne Radio oder Fernseher im Raum.</p></li>
+        </ol>
+        <p class="text-muted">Das Beispiel beschreibt vier Wellensittiche in Zimmerhaltung mit täglichem Freiflug.</p>
+
+        <div class="section-feedback-heading"><h2 id="voegel-lebenszeit">Was Wellensittiche über ihr ganzes Leben kosten</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-lebenszeit" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p>Zuerst die Zahl über das ganze Leben, danach der Preis im Laden.</p>
+        <div class="kv-fakten">
+          <div><span class="kv-zahl">0,90 bis 1,80 €</span><span class="kv-zahl-text">am Tag für zwei Wellensittiche, als Untergrenze</span></div>
+          <div><span class="kv-zahl">3.200 bis 6.600 €</span><span class="kv-zahl-text">über zehn Jahre für ein Paar, einschließlich Erstausstattung</span></div>
+          <div class="kv-klein"><span class="kv-zahl">unter 2 %</span><span class="kv-zahl-text">der Summe machen die Vögel selbst aus (30 bis 100 Euro für ein Paar)</span></div>
+        </div>
+        <p class="kv-rechnung">Rechnung: 10 Jahre × 365 Tage = 3.650 Tage; 3.200 ÷ 3.650 = 0,88 und 6.600 ÷ 3.650 = 1,81 Euro am Tag. Die Summe ist die Hochrechnung der Seite <a href="../voegel/wellensittiche-kosten/index.html">Was Wellensittiche wirklich kosten</a> (Angaben von <a href="https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/" target="_blank" rel="noopener noreferrer">go4vet</a>): Anschaffung und Erstausstattung 180 bis 550 Euro plus zehn Jahre laufende Kosten von 300 bis 600 Euro im Jahr.</p>
+        <p>Das ist eine Untergrenze. Eingerechnet ist ein Käfig für 80 bis 300 Euro, der Tierschutzbund verlangt eine Voliere von mindestens 2 × 1 × 2 Metern und empfiehlt vier oder mehr Vögel. Beleuchtung samt Strom, Notfälle und Betreuung im Urlaub fehlen ebenfalls. Bei guter Haltung können Wellensittiche bis zu 15 Jahre alt werden.</p>
+        <p><strong>Plane vor dem Einzug mit dem Tagesbetrag.</strong> Richte drei Monate vorher einen Dauerauftrag ein, der monatlich 25 bis 50 Euro auf ein eigenes Konto legt (15 bis 35 Euro laufende Kosten plus 10 bis 15 Euro Rücklage für den Tierarzt). Wenn dir das schwerfällt, ist das schon die Antwort: noch warten.</p>
+
+        <div class="section-feedback-heading"><h2 id="voegel-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="kv-bedenkzeit">
+          <p><strong>Wellensittiche müssen nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für Heimtiere nicht untersucht. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+        </div>
+        <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt, auf jeden Fall zuerst beim örtlichen Tierheim nachzufragen, ob Wellensittiche dort auf ein neues Zuhause warten. Die Wenn-dann-Karte für den Besuch beim Anbieter und die Checkliste stehen auf der Seite <a href="../voegel/entscheidung/index.html">Bevor du dich entscheidest</a>.</p>
+        <div class="kv-wege">
+          <div class="kv-weg">
+            <span class="kv-weg-label">Weg A</span>
+            <h3>Ich suche Wellensittiche im Tierschutz</h3>
+            <p>Vögel, die schon da sind und ein Zuhause suchen. Paare bleiben zusammen.</p>
+            <p><a href="../adoption/index.html">Adoption statt Kauf</a><br><a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+          </div>
+          <div class="kv-weg kv-noch-nicht">
+            <span class="kv-weg-label">Weg B, gleichwertig</span>
+            <h3>Noch nicht</h3>
+            <p>Wenn Platz, Zeit oder Geld gerade fehlen, ist Warten eine gute Entscheidung. Es gibt Wege, Tieren trotzdem zu helfen, ohne neue Tiere aufzunehmen.</p>
+            <p><a href="../noch-nicht-bereit/index.html">Noch nicht bereit: was jetzt hilft</a><br><a href="../selbsttest/index.html">Zum Selbsttest</a></p>
+          </div>
+        </div>
+
         <div class="article-rhythm" id="voegel-abgabealter">
-          <div class="section-feedback-heading"><h2>Abgabealter bei Wellensittichen: Recht, Tierwohl und Verantwortung</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-abgabealter" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+          <div class="section-feedback-heading"><h2 id="voegel-abgabealter-bei-wellensittichen-recht-tierwohl-und-verantwortung">Abgabealter bei Wellensittichen: Recht, Tierwohl und Verantwortung</h2><button type="button" class="section-feedback-action" data-feedback-section="voegel-abgabealter" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
           <p>Bei Wellensittichen gibt es in Deutschland keine ausdrücklich festgelegte gesetzliche Abgabewoche. Das ist kein Freibrief für eine frühe Trennung. Das <a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz</a> verpflichtet dazu, die Bedürfnisse des Tieres zu berücksichtigen, es angemessen zu ernähren und zu pflegen sowie verhaltensgerecht unterzubringen.</p>
           <div class="grid-3">
             <article class="card"><div class="card-body"><h3>Gesetzlich</h3><p>Eine feste Wellensittich-Woche nennt das deutsche Recht nicht. § 11c schützt außerdem Kinder und Jugendliche bis zum vollendeten 16. Lebensjahr vor einer Abgabe ohne Einwilligung der Erziehungsberechtigten. Das ist keine Altersgrenze für den Vogel.</p></div></article>
@@ -7270,7 +7583,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           <article class="card">
             <div class="card-body">
               <h3>Spiegel und Plastikvögel ersetzen keinen Partner</h3>
-              <p>Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.</p>
+              <p>Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.</p>
               <a class="card-link" href="../voegel/partnerersatz/index.html">Thema öffnen</a>
             </div>
           </article>
@@ -7326,14 +7639,14 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           <article class="card">
             <div class="card-body">
               <h3>Schauwellensittiche und Qualzucht</h3>
-              <p>Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.</p>
+              <p>Warum Schau- und Haubenwellensittiche als Qualzucht gelten und überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sind.</p>
               <a class="card-link" href="../voegel/qualzucht/index.html">Thema öffnen</a>
             </div>
           </article>
           <article class="card">
             <div class="card-body">
               <h3>Bevor Vögel einziehen</h3>
-              <p>Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.</p>
+              <p>Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.</p>
               <a class="card-link" href="../voegel/entscheidung/index.html">Thema öffnen</a>
             </div>
           </article>
@@ -7393,15 +7706,15 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Wellensittiche brauchen mindestens einen passenden Artgenossen; Gruppen ab vier Vögeln ermöglichen mehr soziale Wahl.</li><li>Auch bei täglichem Freiflug braucht eine Gruppe eine große, horizontal nutzbare Voliere mit Rückzug, Naturästen sowie mehreren Futter- und Wasserstellen.</li><li>Licht, Nachtruhe, Luftqualität, Ernährung, tägliche Beobachtung und ein sicherer Flugraum sind Grundversorgung.</li><li>Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.</li><li>Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.</li><li>Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.</li></ul>
+              <ul><li>Wellensittiche brauchen mindestens einen passenden Artgenossen; der Tierschutzbund empfiehlt Gruppen ab vier Vögeln.</li><li>Für zwei bis sechs Wellensittiche nennt der Tierschutzbund eine Voliere von mindestens 2 × 1 × 2 Metern und täglich mehrstündigen Freiflug; ohne Freiflug mindestens 4 Quadratmeter Grundfläche bei 2 Metern Höhe.</li><li>Täglich ein bis zwei Teelöffel Körnerfutter pro Vogel, dazu frische Kräuter, Gräser und Gemüse; die Nachtruhe beträgt mindestens zehn Stunden.</li><li>Zwei Wellensittiche kosten nach den Rechenwerten der Kostenseite mindestens etwa 0,90 bis 1,80 Euro am Tag (3.200 bis 6.600 Euro über zehn Jahre).</li><li>Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.</li><li>Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.</li><li>Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Wellensittiche richtig halten</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz: Merkblatt Wellensittiche</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 2</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__11c.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11c</a></li></ul>
+              <ul><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Wellensittiche richtig halten</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz: Merkblatt 173 Wellensittiche</a></li><li><a href="https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/" target="_blank" rel="noopener noreferrer">go4vet: Was kostet ein Wellensittich?</a></li><li><a href="https://www.go4vet.com/voegel/krankheiten/wellensittich-beim-tierarzt-was-kostet-eine-behandlung/" target="_blank" rel="noopener noreferrer">go4vet: Wellensittich beim Tierarzt, was kostet eine Behandlung?</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__2.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 2</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__11c.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11c</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform.</li><li>Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.</li><li>Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.</li><li>Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.</li></ul>
+              <ul><li>Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform; die Maße dieser Übersicht gelten für Wellensittiche.</li><li>Die Maße folgen dem Deutschen Tierschutzbund. Das TVT-Merkblatt nennt kleinere Mindestwerte (150 × 60 × 100 cm für ein bis drei Paare); Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.</li><li>Die Kosten pro Tag sind eine Untergrenze aus Praxisangaben von go4vet: Beleuchtung samt Strom, Notfälle, Betreuung und eine Voliere in der empfohlenen Größe sind nicht eingerechnet.</li><li>Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.</li><li>Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.</li><li>Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.</li></ul>
             </article>
           </div>
         </div>

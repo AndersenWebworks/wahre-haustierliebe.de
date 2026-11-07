@@ -73,12 +73,12 @@
     },
     {
       "question": "Wie lange darf ein Hund allein zu Hause bleiben?",
-      "answer": "Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.",
+      "answer": "Als Orientierung gelten 4 bis 5 Stunden am Stück. Eine gesetzliche Zahl gibt es nicht; die Tierschutz-Hundeverordnung verlangt mehrmals täglich Umgang mit der Betreuungsperson. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.",
       "source": "https://wahre-haustierliebe.de/hunde/index.html"
     },
     {
-      "question": "Was kostet ein Hund im Monat?",
-      "answer": "Für einen mittelgroßen Hund sind laufend etwa 100–240 Euro pro Monat realistisch. Über zwölf Jahre kommen mit Anschaffung rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet.",
+      "question": "Was kostet ein Hund pro Tag und im ganzen Leben?",
+      "answer": "Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.",
       "source": "https://wahre-haustierliebe.de/hunde/index.html"
     },
     {
@@ -227,8 +227,63 @@
       "source": "https://wahre-haustierliebe.de/kleintiere/kaninchen/index.html"
     },
     {
+      "question": "Wie viele Meerschweinchen sollten es mindestens sein?",
+      "answer": "Mindestens zwei. Der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren, weil sich Meerschweinchen selbst zu zweit schnell langweilen. Einzelhaltung lehnt die Tierärztliche Vereinigung für Tierschutz grundsätzlich ab.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html"
+    },
+    {
+      "question": "Wie viel Platz brauchen Meerschweinchen?",
+      "answer": "Nach dem TVT-Merkblatt Nr. 159 mindestens 2 Quadratmeter Grundfläche für zwei bis vier Tiere, für jedes weitere Tier 0,5 Quadratmeter mehr. Ein Käfig darf nur ein Rückzugsort sein.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html"
+    },
+    {
+      "question": "Dürfen Meerschweinchen mit Kaninchen zusammenleben?",
+      "answer": "Nein. Die Tiere haben unterschiedliche Körpersprachen, und Atemwegsinfektionen von Kaninchen können für Meerschweinchen tödlich verlaufen. Eine gemeinsame Haltung ist nicht tiergerecht.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html"
+    },
+    {
+      "question": "Ab welchem Alter dürfen Meerschweinchen abgegeben werden?",
+      "answer": "Eine feste gesetzliche Wochenzahl gibt es nicht. Der Deutsche Tierschutzbund nennt für Jungtiere mindestens acht Wochen als Orientierung. Gesundheit, sicher bestimmtes Geschlecht und ein passender sozialer Anschluss müssen zusätzlich stimmen.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/meerschweinchen/index.html"
+    },
+    {
+      "question": "Dürfen Ratten allein gehalten werden?",
+      "answer": "Nein. Die Tierärztliche Vereinigung für Tierschutz schreibt, Ratten dürften trotz der engen Bindung an den Menschen nicht alleine gehalten werden. Am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html"
+    },
+    {
+      "question": "Wie groß muss ein Rattenkäfig sein?",
+      "answer": "Nach dem TVT-Merkblatt Nr. 160 mindestens 100 × 50 × 100 Zentimeter für bis zu drei Ratten oder als Turm 80 × 50 × 120 Zentimeter, jeweils mit mehreren soliden Etagen. Dazu kommt ein kontrollierter Freilauf.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html"
+    },
+    {
+      "question": "Wie alt werden Ratten?",
+      "answer": "Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4 Jahren. Ratten bilden außerdem erblich bedingt oft Tumore.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html"
+    },
+    {
+      "question": "Wie viele Degus sollten es sein?",
+      "answer": "Mindestens zwei, besser eine Gruppe von drei bis fünf Tieren. Für zwei bis vier Degus nennt die Tierärztliche Vereinigung für Tierschutz eine nutzbare Fläche von mindestens 2, besser 3 Quadratmetern.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html"
+    },
+    {
+      "question": "Wie groß muss eine Chinchillavoliere sein?",
+      "answer": "Mindestens 3 Kubikmeter für zwei Tiere, mindestens 50 Zentimeter breit und 150 Zentimeter hoch, für jedes weitere erwachsene Tier mindestens 0,5 Kubikmeter zusätzlich.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html"
+    },
+    {
+      "question": "Wie warm darf es für Chinchillas sein?",
+      "answer": "Optimal sind nach der Tierärztlichen Vereinigung für Tierschutz 15 bis 21 Grad Celsius bei höchstens 55 Prozent Luftfeuchtigkeit. Temperaturen über 28 Grad sind den Tieren nicht zuträglich.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html"
+    },
+    {
+      "question": "Wie alt werden Degus und Chinchillas?",
+      "answer": "Degus werden meist 4 bis 6 Jahre alt, selten bis zu 10 Jahre. Chinchillas können über 20 Jahre alt werden.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html"
+    },
+    {
       "question": "Kann ich zwei Goldhamster zusammen halten?",
-      "answer": "Nein. Goldhamster sind strikte Einzelgänger. Ein zweites Tier bedeutet keinen Sozialkontakt, sondern kann Revierstress, Kämpfe und schwere Verletzungen auslösen.",
+      "answer": "Nein. Goldhamster sind strikte Einzelgänger. Ein zweites Tier bedeutet keinen Sozialkontakt, sondern Revierstress und Auseinandersetzungen. Allein zu leben ist für einen Goldhamster artgerecht.",
       "source": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html"
     },
     {
@@ -244,6 +299,11 @@
     {
       "question": "Reicht ein großes Laufrad als Bewegungsausgleich?",
       "answer": "Nein. Ein sicheres Laufrad gehört zur Einrichtung, ersetzt aber weder die große Grundfläche noch tiefe Einstreu, Verstecke und abwechslungsreiche Wege.",
+      "source": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html"
+    },
+    {
+      "question": "Was kostet ein Goldhamster über sein ganzes Leben?",
+      "answer": "Der Deutsche Tierschutzbund nennt für ein dreijähriges Tier mindestens 3.130 Euro, ohne Tierarzt. Das sind etwa 2,86 Euro pro Tag, der Kaufpreis von rund 20 Euro ist der kleinste Posten.",
       "source": "https://wahre-haustierliebe.de/kleintiere/hamster/index.html"
     },
     {
@@ -297,13 +357,13 @@
       "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
     },
     {
-      "question": "Welches Abgabealter empfehlen Tierärzte und Tierschutzbund?",
-      "answer": "Der Deutsche Tierschutzbund nennt neun bis elf Wochen als guten Aufnahmezeitpunkt. Dann ist der Welpe vollständig von der Mutter entwöhnt und hat den ersten Teil der wichtigen Prägephase bei Mutter und Geschwistern verbracht.",
+      "question": "Welches Abgabealter empfehlen wir, und gibt es eine amtliche Empfehlung?",
+      "answer": "Wir empfehlen als Richtwert neun bis elf Wochen. Eine amtliche Empfehlung für genau diesen Zeitraum gibt es nicht; gesetzlich gilt „über acht Wochen“ (§ 2 Abs. 4 TierSchHuV). Die Spanne leiten wir aus der Sozialisierungsphase ab, die der Leitfaden der EU-Plattform für Tierschutz mit der dritten bis zwölften Lebenswoche angibt, und aus Studien zur frühen Trennung vom Wurf. Die Studienlage nach der achten Woche ist nicht eindeutig; entscheidend bleibt, wie der Welpe bis dahin aufgewachsen ist.",
       "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
     },
     {
       "question": "Warum ist die achte Woche nicht das Zielalter?",
-      "answer": "Die achte Woche ist nur die gesetzliche Untergrenze. Wer in dieser Woche abgibt, nimmt dem Welpen wichtige Lernzeit bei Mutter und Geschwistern. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.",
+      "answer": "Die achte Woche ist nur die gesetzliche Untergrenze. Wer in dieser Woche abgibt, verkürzt die Zeit bei Mutter und Geschwistern, in der Welpen besonders viel lernen. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.",
       "source": "https://wahre-haustierliebe.de/hunde/abgabealter/index.html"
     },
     {

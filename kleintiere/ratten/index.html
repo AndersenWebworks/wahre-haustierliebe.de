@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ratten halten - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.">
+  <meta name="description" content="Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten">
   <meta property="og:title" content="Ratten halten - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.">
+  <meta property="og:description" content="Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/kleintiere/ratten/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png">
@@ -22,10 +22,10 @@
   <meta property="og:image:alt" content="Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ratten halten - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.">
+  <meta name="twitter:description" content="Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png">
   <meta name="twitter:image:alt" content="Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/kleintiere/ratten/index.html">
@@ -6706,6 +6706,196 @@ body.static-site .article-hero-media {
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
+/* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
+#selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
+#selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
+#selbsttest .test-next-step .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+#selbsttest .test-share { margin-top: 1.25rem; }
+
+/* ---------- Volltextsuche: Trefferdarstellung (Paket suche) ---------- */
+.site-search-result .site-search-where {
+  color: var(--ink-3, var(--text-muted));
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.site-search-result .site-search-snippet {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.site-search-result mark {
+  background: rgba(214, 160, 40, 0.28);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.08em;
+}
+.site-search-kind {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--rule-strong, var(--border));
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+}
+.site-search-result strong { overflow-wrap: anywhere; }
+.site-search-result { min-height: 2.75rem; }
+@media (max-width: 768px) {
+  .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
+  .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+
+/* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
+.kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
+.kv-randnotiz { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+.kv-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+.kv-feld { border-top: 2px solid var(--ink); margin: 0 0 2rem; padding-top: 0.9rem; }
+.kv-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.6rem; }
+.kv-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--red-dark); white-space: nowrap; }
+.kv-feld-kopf h3 { margin: 0; }
+.kv-feld dl { margin: 0; }
+.kv-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+.kv-feld dd { margin: 0; }
+.kv-feld dd p { margin: 0 0 0.5rem; max-width: none; }
+.kv-feld .kv-mass { font-weight: 600; }
+.kv-feld dd.kv-frage { font-size: 1.08rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+.kv-feld dt.kv-t-frage { color: var(--green-dark); }
+.kv-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+.kv-beispiel-tag { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+.kv-fakten { display: grid; grid-template-columns: 1fr; margin: 1.4rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); }
+.kv-fakten > div { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.kv-fakten > div:last-child { border-bottom: 0; }
+.kv-zahl { display: block; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--red-dark); }
+.kv-zahl-text { display: block; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.4; color: var(--ink-2); margin-top: 0.3rem; }
+.kv-klein .kv-zahl { font-size: 1.45rem; color: var(--ink-2); }
+.kv-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.kv-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+.kv-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+.kv-karte ul { list-style: none; margin: 0; padding: 0; }
+.kv-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.kv-karte li:first-child { border-top: 0; padding-top: 0; }
+.kv-wenn, .kv-dann { display: block; }
+.kv-wenn b, .kv-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+.kv-dann { font-weight: 600; }
+.kv-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+.kv-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+.kv-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+.kv-weg.kv-noch-nicht { border-top-color: var(--ochre); }
+.kv-weg h3 { margin: 0 0 0.4rem; }
+.kv-weg p { margin-bottom: 0.7rem; }
+.kv-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  .kv-fakten { grid-template-columns: repeat(3, 1fr); }
+  .kv-fakten > div { border-bottom: 0; border-right: 1px solid var(--rule); padding: 1rem 1rem 1rem 0; }
+  .kv-fakten > div + div { padding-left: 1rem; }
+  .kv-fakten > div:last-child { border-right: 0; }
+  .kv-wege { grid-template-columns: 1fr 1fr; }
+
+/* ===================================================================
+   Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
+   Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
+   ========================================================================== */
+.hunde-einstieg { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
+.hunde-einstieg-frage { display: block; margin-top: 0.4rem; font-weight: 600; color: var(--red-dark); }
+.hunde-muster-hinweis { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; }
+.hunde-feld { margin: 1.6rem 0; padding: 1rem 0 0.3rem; border-top: 2px solid var(--ink); }
+.hunde-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.9rem; margin-bottom: 0.6rem; }
+.hunde-feld-kopf h3 { margin: 0; }
+.hunde-feld-nr { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-feld dl { margin: 0; display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.8rem 1.4rem; }
+.hunde-feld dt { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); padding-top: 0.25rem; }
+.hunde-feld dd { margin: 0; min-width: 0; }
+.hunde-feld dd p { margin: 0 0 0.6rem; max-width: none; }
+.hunde-mass { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.hunde-rechnung { font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.45; color: var(--ink-2); }
+.hunde-frage-t { color: var(--red-dark) !important; }
+.hunde-frage { font-style: italic; border-left: 3px solid var(--red); padding-left: 0.8rem; }
+.hunde-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); padding: 0.15rem 0.5rem; margin-bottom: 0.4rem; }
+.hunde-tag-liste li.hunde-mensch::before { border-color: var(--ochre); background: var(--ochre-tint); }
+.hunde-tag-liste li.hunde-mensch .zeitleiste-when { color: var(--ochre); }
+.hunde-legende { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: 60ch; }
+.hunde-bedenkzeit { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: var(--green-tint); }
+.hunde-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-bedenkzeit p:last-child { margin-bottom: 0; }
+.hunde-karte { margin: 1.4rem 0; padding: 1rem 1.2rem; border: 2px solid var(--ink); background: var(--card); }
+.hunde-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.6rem; }
+.hunde-karte ul { list-style: none; margin: 0; padding: 0; }
+.hunde-karte li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem 1.2rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.hunde-karte li:first-child { border-top: 0; }
+.hunde-karte b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-karte-fuss { font-size: 0.92rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.hunde-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.hunde-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); background: var(--card); }
+.hunde-weg-noch-nicht { border-color: var(--green); background: var(--green-tint); }
+.hunde-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.3rem; }
+.hunde-weg h3 { margin: 0 0 0.4rem; }
+.hunde-weg p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-quellen-liste { font-size: 0.92rem; }
+@media (max-width: 640px) {
+  .hunde-feld dl { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .hunde-feld dt { padding-top: 0.6rem; }
+  .hunde-karte li { grid-template-columns: minmax(0, 1fr); }
+}
+=======
+/* ===== Paket Kleintiere: Muster „vom Tier aus gedacht“ (Präfix kt-) ===== */
+body.static-site .kt-einstieg { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+body.static-site .kt-einstieg strong { font-weight: 600; }
+body.static-site .kt-randnotiz { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-randnotiz strong { color: var(--ink); }
+body.static-site .kt-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+body.static-site .kt-feld { border-top: 2px solid var(--ink); margin: 0 0 2.2rem; padding-top: 0.9rem; }
+body.static-site .kt-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+body.static-site .kt-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); white-space: nowrap; }
+body.static-site .kt-feld-kopf h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+body.static-site .kt-feld dl { margin: 0; }
+body.static-site .kt-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+body.static-site .kt-feld dd { margin: 0; }
+body.static-site .kt-feld dd p { margin: 0 0 0.6rem; }
+body.static-site .kt-feld .kt-mass { font-weight: 600; }
+body.static-site .kt-feld .kt-art { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); display: block; margin: 0.8rem 0 0.1rem; }
+body.static-site .kt-feld dd.kt-frage { font-size: 1.1rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+body.static-site .kt-feld dt.kt-t-frage { color: var(--green-dark); }
+body.static-site .kt-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+body.static-site .kt-beispiel { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+body.static-site .kt-zeit { list-style: none; margin: 0.5rem 0 1rem 0.5rem; padding: 0 0 0 0.9rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-zeit li { position: relative; padding: 0 0 1.3rem 1.1rem; margin: 0; }
+body.static-site .kt-zeit li:last-child { padding-bottom: 0.2rem; }
+body.static-site .kt-zeit li::before { content: ""; position: absolute; left: -1.5rem; top: 0.5rem; width: 0.8rem; height: 0.8rem; background: var(--paper); border: 2px solid var(--red); border-radius: 50%; }
+body.static-site .kt-zeit li.kt-mensch::before { border-color: var(--green); background: var(--green-tint); }
+body.static-site .kt-wann { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); }
+body.static-site .kt-zeit li.kt-mensch .kt-wann { color: var(--green-dark); }
+body.static-site .kt-zeit p { margin: 0.1rem 0 0; }
+body.static-site .kt-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); }
+body.static-site .kt-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+body.static-site .kt-bedenkzeit strong { font-size: 1.15rem; }
+body.static-site .kt-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+body.static-site .kt-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+body.static-site .kt-karte ul { list-style: none; margin: 0; padding: 0; }
+body.static-site .kt-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); margin: 0; }
+body.static-site .kt-karte li:first-child { border-top: 0; padding-top: 0; }
+body.static-site .kt-wenn, body.static-site .kt-dann { display: block; }
+body.static-site .kt-wenn b, body.static-site .kt-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+body.static-site .kt-dann { font-weight: 600; }
+body.static-site .kt-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+body.static-site .kt-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+body.static-site .kt-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+body.static-site .kt-weg.kt-noch-nicht { border-top-color: var(--ochre); }
+body.static-site .kt-weg h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+body.static-site .kt-weg p { font-size: 1rem; margin-bottom: 0.7rem; }
+body.static-site .kt-weg .kt-go { font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; margin-bottom: 0; }
+body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
+}
+@media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+
 
   </style>
   <script type="application/ld+json">
@@ -6714,7 +6904,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   "@type": "WebPage",
   "name": "Ratten halten - Wa(h)re Haustier(liebe)",
   "headline": "Ratten halten - Wa(h)re Haustier(liebe)",
-  "description": "Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.",
+  "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.",
   "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6732,7 +6922,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     "caption": "Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten",
   "about": [
@@ -6788,6 +6978,98 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       "position": 2,
       "name": "Ratten halten - Wa(h)re Haustier(liebe)",
       "item": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ratten halten - Wa(h)re Haustier(liebe)",
+  "name": "Ratten halten - Wa(h)re Haustier(liebe)",
+  "description": "Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.",
+  "url": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/kleintiere/ratten/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/kleintiere-ratten.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Hoher Rattenkäfig mit Ebenen, Seilen und Häuschen."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-11-07",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten",
+  "articleSection": "Rattenhaltung vom Tier aus denken und verantwortungsvoll planen.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Kleintiere halten"
+    },
+    {
+      "@type": "Thing",
+      "name": "Kaninchen"
+    },
+    {
+      "@type": "Thing",
+      "name": "Meerschweinchen"
+    },
+    {
+      "@type": "Thing",
+      "name": "Hamster"
+    },
+    {
+      "@type": "Thing",
+      "name": "Ratten"
+    }
+  ],
+  "citation": [
+    "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&did=41",
+    "https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html",
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Dürfen Ratten allein gehalten werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die Tierärztliche Vereinigung für Tierschutz schreibt, Ratten dürften trotz der engen Bindung an den Menschen nicht alleine gehalten werden. Am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie groß muss ein Rattenkäfig sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nach dem TVT-Merkblatt Nr. 160 mindestens 100 × 50 × 100 Zentimeter für bis zu drei Ratten oder als Turm 80 × 50 × 120 Zentimeter, jeweils mit mehreren soliden Etagen. Dazu kommt ein kontrollierter Freilauf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie alt werden Ratten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4 Jahren. Ratten bilden außerdem erblich bedingt oft Tumore."
+      }
     }
   ]
 }
@@ -6935,7 +7217,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
     </div>
-    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema oder ein Warnsignal ein.</li></ul>
+    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema, ein Warnsignal oder einen Fachbegriff ein.</li></ul>
   </aside>
 
   <!-- Mobile Nav -->
@@ -7053,7 +7335,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <div class="container">
         <div class="article-hero-copy">
           <h1>Ratten halten</h1>
-                  <p>Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.</p>
+                  <p>Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Ratten halten: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7061,38 +7343,170 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
         </figure>
       </div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-ratten-zwei-ratten-ziehen-ein-was-brauchen-sie-von-dir">Zwei Ratten ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-ratten-beduerfnisse">Was eine Ratte von dir braucht</a></li><li><a href="#kleintiere-ratten-tag">Ein Tag aus Sicht einer Rattengruppe</a></li><li><a href="#kleintiere-ratten-tierleben">Was es über die Jahre bedeutet</a></li><li><a href="#kleintiere-ratten-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-ratten-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../kleintiere/index.html">Zurück zur Übersicht: Kleintiere</a></p>
         <div class="topic-page-content">
-<h2>Ratten</h2>
-        <p>Ratten sind das Gegenteil ihres Rufs: reinlich, intelligent, sozial und lernfähig. Sie erkennen ihren Namen, lernen Tricks und bauen echte Bindungen zu ihren Menschen auf.</p>
-        <p><strong>Hochsozial:</strong> Ratten dürfen niemals allein gehalten werden. Mindestens zwei, besser drei oder mehr. Einzelhaltung verursacht Depressionen und Verhaltensstörungen.</p>
-        <p><strong>Platz:</strong> Große, hohe Voliere mit mehreren Ebenen, Klettermöglichkeiten und Häuschen. Täglicher Auslauf außerhalb des Käfigs. Ein Hamsterkäfig reicht bei Weitem nicht.</p>
-        <p><strong>Lebenserwartung:</strong> 2–3 Jahre. Das ist die größte Herausforderung bei Ratten: Man baut in kurzer Zeit eine starke Bindung auf und verliert das Tier viel zu früh. Tumore sind bei Ratten extrem verbreitet – tierärztliche Behandlung (OPs) können pro Tumor 100–300 Euro kosten.</p>
-        <p><strong>Reinlich:</strong> Heimratten legen feste Toilettenecken an und putzen sich ausgiebig. Der typische „Rattengeruch“ wird durch zu kleine Käfige und seltene Reinigung stark verschärft; ein gewisser Eigengeruch gehört zu Ratten und verlangt wöchentliches, gründliches Reinigen.</p>
+<h2 id="kleintiere-ratten-zwei-ratten-ziehen-ein-was-brauchen-sie-von-dir">Zwei Ratten ziehen ein. Was brauchen sie von dir?</h2>
+        <p class="kt-einstieg">Ratten sind das Gegenteil ihres Rufs: intelligent, neugierig und sozial. <strong>Dreh deinen Wunsch einmal um: Was bräuchten zwei Ratten von dir, und was davon hast du schon?</strong></p>
+        <p class="kt-randnotiz">Die <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> beschreibt Farbratten als intelligente, neugierige Nager, die sehr schnell ein enges Verhältnis zu ihrem Halter entwickeln und ihn an Geruch und Stimme wiedererkennen. Kinder unter 10 Jahren sollen Ratten nach dem Merkblatt nur unter Aufsicht von Erwachsenen pflegen, weil der Umgang ein Feingefühl erfordert, das bei kleinen Kindern im Allgemeinen noch nicht ausgebildet ist (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p>
+
+        <h2 id="kleintiere-ratten-beduerfnisse">Was eine Ratte von dir braucht</h2>
+        <p class="kt-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 1</span><h3>Artgenossen</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Nie allein: mindestens zwei Tiere, am besten eine gleichgeschlechtliche Gruppe mit gemischter Altersstruktur.</p>
+          <p>Farbratten leben in Sozialverbänden mit deutlicher Rangordnung. Die TVT schreibt, trotz der engen Bindung an den Menschen dürften sie nicht alleine gehalten werden. Jungtiere gliedert man am besten paarweise in bestehende Gruppen ein, bei erwachsenen Tieren gelingt das nicht immer. In gemischtgeschlechtlichen Gruppen sind die Männchen zu kastrieren, denn Weibchen können 5 bis 6 Würfe pro Jahr mit bis zu 15 Jungtieren aufziehen. Eine Vergesellschaftung mit anderen Tierarten ist nicht möglich (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Ein Weibchen kann in einem Jahr rechnerisch bis zu 90 Jungtiere bekommen.</p>
+          <p class="kt-rechnung">Rechnung: 6 Würfe × 15 Jungtiere = 90.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Hast du Platz, Zeit und Geld für mindestens zwei Tiere, und weißt du, wie du ungewollten Nachwuchs sicher verhinderst?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 2</span><h3>Platz und Bewegung</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Käfig für bis zu drei Ratten: mindestens 100 × 50 × 100 cm (Länge × Breite × Höhe) oder als Turm 80 × 50 × 120 cm, jeweils mit mehreren Etagen. Dazu kontrollierter Freilauf.</p>
+          <p>Die Etagen müssen solide sein; erhöhte Ebenen aus Gittermaterial sind nicht geeignet. Zur Mindestausstattung gehören eine Tränke, ein schwerer Futternapf, mehrere Schlafhäuschen, Kletteräste, Leitern, Seile, Hängematten und Liegebretter auf verschiedenen Ebenen. Handelsübliche Laufräder sind allesamt zu klein, weil sie eine unnatürliche Körperhaltung erzwingen und die langen Schwänze verletzen können. Ein kontrollierter Freilauf ist wegen des ausgeprägten Erkundungsverhaltens notwendig; Gefahrenquellen wie Stromkabel, offene Fenster und Giftpflanzen müssen vorher ausgeschaltet werden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Ein Käfig mit 100 × 50 cm hat 0,5 m² Grundfläche und mit 100 cm Höhe 0,5 m³ Raum, das sind 500 Liter. Er ist für höchstens drei Tiere gedacht.</p>
+          <p class="kt-rechnung">Rechnung: 1 m × 0,5 m × 1 m = 0,5 m³ = 500 Liter.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Wo in deinem Zuhause steht ein Käfig, der 1 Meter breit und 1 Meter hoch ist, und wo läuft der Freilauf sicher ab?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 3</span><h3>Futter</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Ständig Nagematerial, täglich frisches Trinkwasser, Futter zum Erarbeiten.</p>
+          <p>Ratten fressen wie ihre wildlebenden Verwandten vorwiegend pflanzliche, aber auch tierische Nahrung. Handelsübliches Rattenfutter aus Getreidemischungen und Gemüseflocken wird mit frischem Gemüse und Obst oder Katzengras und wenig tierischem Eiweiß wie hartgekochten Eiern, Hartkäse oder Futterinsekten ergänzt. Das Futter bietet man vorzugsweise so an, dass sich die Tiere es erarbeiten müssen, etwa in Pappröhren versteckt. Zur Abnutzung der Zähne brauchen Ratten ständig frische, ungespritzte Zweige oder unbehandelte Holzstücke. Bei Bewegungsarmut und gleichzeitigem Futterüberangebot neigen sie zur Verfettung (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Mindestens wöchentlich frisches Nagematerial: Das sind bei drei Jahren Lebenszeit rund 156 Lieferungen.</p>
+          <p class="kt-rechnung">Rechnung: 3 Jahre × 52 Wochen = 156.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Wer tauscht täglich das Wasser aus und besorgt regelmäßig frische, ungespritzte Zweige?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 4</span><h3>Ruhe und Tagesrhythmus</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Wach-Ruhe-Rhythmus von etwa 1,5 bis 2,5 Stunden: Ratten schlafen nur stundenweise. Dazu täglich rund 2 Stunden Beschäftigung und Spiel mit dir.</p>
+          <p>Das Rattenheim gehört an einen ruhigen, zugfreien und nicht zu hellen Ort, am besten in Tischhöhe und so, dass andere Haustiere die Ratten nicht beunruhigen können. Albinoratten brauchen einen dunkleren Raum, weil ihre lichtempfindlichen Augen sonst geschädigt werden können. Ratten sind sehr anfällig für Erkältungskrankheiten und dürfen deshalb nie Zugluft ausgesetzt sein. Hochgehoben werden sie mit einer Hand sanft um den Brustkorb und der anderen unter dem Hinterteil, nie am Schwanz. Joggingbälle sind tierschutzrelevant (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>2 Stunden Beschäftigung am Tag sind 14 Stunden pro Woche, in einem Jahr rund 730 Stunden.</p>
+          <p class="kt-rechnung">Rechnung: 2 h × 7 = 14 h; 2 h × 365 = 730 h.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Wann am Tag hast du zwei Stunden für die Tiere, und zwar nicht nebenbei, sondern mit ihnen?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 5</span><h3>Gesundheit</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Lebenserwartung 2 bis 4 Jahre. Rattenheim jede Woche gründlich reinigen. Tumore sind häufig.</p>
+          <p>Ratten bilden laut TVT erblich bedingt oft Tumore, die je nach Organbefall sehr belasten können. Außerdem können Parasiten wie Läuse oder Rattenmilben auftreten; behandelt wird durch die Tierarztpraxis. Wegen des starken Eigengeruchs ist das Rattenheim jede Woche gründlich zu reinigen; etwas alte Streu wird unter die frische gemischt, weil sich Ratten auch über den Geruch orientieren. Rex-, Nackt-, Patchwork- und Tailless-Ratten sieht die TVT als Qualzuchten an (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>).</p>
+          <p>Operationen und Nachsorge rechnet die Praxis nach der <a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a> je nach Aufwand ab, mit dem einfachen bis dreifachen Satz. Konkrete Preise unterscheiden sich von Praxis zu Praxis; frage vor dem Einzug in einer Praxis nach, die Ratten behandelt, und lege eine Rücklage zurück.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Zwei bis vier Jahre sind 730 bis 1.460 Tage, an denen jemand nach den Tieren sieht.</p>
+          <p class="kt-rechnung">Rechnung: 2 × 365 = 730; 4 × 365 = 1.460.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Kennst du eine Tierarztpraxis, die Ratten behandelt, und was tust du, wenn eines deiner Tiere nach zwei Jahren einen Tumor bekommt?</dd>
+          </dl>
+        </div>
+
+        <h2 id="kleintiere-ratten-tag">Ein Tag aus Sicht einer Rattengruppe</h2>
+        <span class="kt-beispiel">Beispiel, keine echte Gruppe</span>
+        <ol class="kt-zeit">
+          <li><span class="kt-wann">Über den ganzen Tag</span><p>Ratten schlafen nur stundenweise. Sie haben einen Wach-Ruhe-Rhythmus von etwa 1,5 bis 2,5 Stunden und sind deshalb im Lauf des Tages mehrfach wach. Dafür brauchen sie Schlafhäuschen in verschiedenen Ebenen, Kletterwege und etwas zu tun.</p></li>
+          <li class="kt-mensch"><span class="kt-wann">Täglich: du</span><p>Trinkwasser erneuern, Futter anbieten, möglichst so versteckt, dass die Tiere es erarbeiten, und frisches Nagematerial bereithalten.</p></li>
+          <li><span class="kt-wann">Freilauf</span><p>Kontrollierter Freilauf in einem Raum, in dem Stromkabel, offene Fenster und Giftpflanzen ausgeschaltet sind. Die Tiere erkunden und klettern.</p></li>
+          <li class="kt-mensch"><span class="kt-wann">Mit dir</span><p>Etwa 2 Stunden pro Tag Beschäftigung und Spiel, mit Ruhe, ohne die Tiere am Schwanz zu greifen.</p></li>
+          <li class="kt-mensch"><span class="kt-wann">Einmal pro Woche: du</span><p>Das Rattenheim gründlich reinigen und etwas alte Streu in die frische mischen.</p></li>
+        </ol>
+        <p class="kt-legende">Der Ablauf ist ein Beispiel aus den Verhaltensangaben des TVT-Merkblatts. Wie eine bestimmte Gruppe ihren Tag verbringt, kann abweichen.</p>
+
+        <h2 id="kleintiere-ratten-tierleben">Was es über die Jahre bedeutet</h2>
+        <div class="metric-grid article-rhythm" aria-label="Was Ratten von dir verlangen">
+          <div class="metric-card">
+            <strong>2 Stunden pro Tag</strong>
+            <span>Beschäftigung und Spiel mit den Tieren, rund 730 Stunden im Jahr</span>
+          </div>
+          <div class="metric-card">
+            <strong>2 bis 4 Jahre</strong>
+            <span>Lebenserwartung: Du baust eine enge Bindung auf und musst früh Abschied nehmen</span>
+          </div>
+          <div class="metric-card">
+            <strong>1 × pro Woche</strong>
+            <span>das Rattenheim gründlich reinigen, jede Woche, über die ganze Zeit</span>
+          </div>
+        </div>
+        <p>Eine feste Euro-Summe nennen wir hier nicht, denn sie hängt davon ab, wie viele Tiere du hältst und wie gesund sie sind. Rechne selbst, und rechne für mindestens zwei Tiere: Käfig und Einrichtung als einmalige Kosten, Futter, Einstreu und frische Zweige als laufende Kosten, dazu eine Rücklage für die Tierarztpraxis. Wie so eine Rechnung über das ganze Tierleben aufgebaut ist, zeigen die Seiten <a href="../../kleintiere/kaninchen-kosten/index.html">Kaninchen: Kosten</a> und <a href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>.</p>
+        <p class="text-muted">Die Zeit- und Lebensdauerangaben stammen aus dem <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160</a>, Stand April 2014.</p>
+
+        <h2 id="kleintiere-ratten-entscheiden">Bevor du entscheidest</h2>
+        <div class="kt-bedenkzeit">
+          <p><strong>Ratten müssen nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite, keine Vorschrift. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+        </div>
+        <div class="kt-karte">
+          <span class="kt-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> ich nur eine einzelne Ratte mitnehmen soll,</span><span class="kt-dann"><b>dann</b> nehme ich keine mit.</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> mir Tiere unbekannten Geschlechts oder aus gemischter Haltung mit möglichem Nachwuchs angeboten werden,</span><span class="kt-dann"><b>dann</b> lasse ich das Geschlecht klären und plane die Kastration, bevor ich zusage – oder nehme keine mit.</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> ich die Tiere nicht dort sehen darf, wo sie leben,</span><span class="kt-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> mir ein Tier leidtut,</span><span class="kt-dann"><b>dann</b> rufe ich das nächste Tierheim oder eine Rattenhilfe an und frage dort nach Ratten, statt zu kaufen.</span></li>
+          </ul>
+          <p class="kt-karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf der Seite <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+        <p>Der Deutsche Tierschutzbund rät in seiner <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Tierschutz im Einkaufskorb“</a>, zuerst im nächstgelegenen Tierheim zu schauen; dort warten auch Kleinnager. Die Reihenfolge, die wir empfehlen: erst Tierheim und Tierschutzverein, danach alles andere. Wenn du Tiere aus Zucht prüfst, achte darauf, dass keine der Zuchtformen darunter ist, die die TVT als Qualzucht ansieht; mehr dazu steht auf der Seite <a href="../../qualzucht/index.html">Qualzucht</a>.</p>
+        <div class="kt-wege">
+          <div class="kt-weg">
+            <span class="kt-weg-label">Weg A</span>
+            <h3>Ich suche Ratten im Tierschutz</h3>
+            <p>Tiere, die schon da sind und ein Zuhause suchen.</p>
+            <p class="kt-go"><a href="../../adoption/index.html">Adoption statt Kauf</a><br><a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+          </div>
+          <div class="kt-weg kt-noch-nicht">
+            <span class="kt-weg-label">Weg B, gleichwertig</span>
+            <h3>Noch nicht</h3>
+            <p>Wenn Platz, Zeit oder Geld gerade fehlen, ist Warten eine gute Entscheidung, und es gibt Wege, dem Wunsch trotzdem näher zu kommen.</p>
+            <p class="kt-go"><a href="../../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a></p>
+          </div>
+        </div>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
           <div class="topic-context-head">
             <span class="eyebrow">Kleintiere</span>
-            <h2>Weitere Themen in diesem Bereich</h2>
+            <h2 id="kleintiere-ratten-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</h2>
           </div>
           <div class="topic-context-grid">
 
           <a class="topic-context-link" href="../../kleintiere/kaninchen/index.html">
             <strong>Kaninchen halten</strong>
-            <span>Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.</span>
+            <span>Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/kaninchen-kosten/index.html">
             <strong>Was zwei Kaninchen wirklich kosten</strong>
             <span>Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen/index.html">
-            <strong>Meerschweinchen abgeben: Mindestalter und richtige Haltung</strong>
-            <span>Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.</span>
+            <strong>Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter</strong>
+            <span>Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen-kosten/index.html">
             <strong>Was Meerschweinchen wirklich kosten</strong>
@@ -7100,17 +7514,55 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/hamster/index.html">
             <strong>Goldhamster halten</strong>
-            <span>Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.</span>
+            <span>Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/degus-chinchillas/index.html">
             <strong>Degus und Chinchillas halten</strong>
-            <span>Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.</span>
+            <span>Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.</span>
           </a>
           </div>
         </nav>
       </div>
     </div>
-  </section>
+
+        <div class="article-rhythm faq-block" data-faq-block="kleintiere-ratten">
+          <span class="eyebrow">Kurz beantwortet</span>
+          <h2>Häufige Fragen</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Dürfen Ratten allein gehalten werden?</summary>
+              <p>Nein. Die Tierärztliche Vereinigung für Tierschutz schreibt, Ratten dürften trotz der engen Bindung an den Menschen nicht alleine gehalten werden. Am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wie groß muss ein Rattenkäfig sein?</summary>
+              <p>Nach dem TVT-Merkblatt Nr. 160 mindestens 100 × 50 × 100 Zentimeter für bis zu drei Ratten oder als Turm 80 × 50 × 120 Zentimeter, jeweils mit mehreren soliden Etagen. Dazu kommt ein kontrollierter Freilauf.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wie alt werden Ratten?</summary>
+              <p>Die Tierärztliche Vereinigung für Tierschutz nennt eine Lebenserwartung von 2 bis 4 Jahren. Ratten bilden außerdem erblich bedingt oft Tumore.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="kleintiere-ratten">
+          <span class="eyebrow">Zum Vertiefen</span>
+          <h2>Fachquellen und wichtige Grenzen</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kurz festgehalten</h3>
+              <ul><li>Ratten dürfen nach dem TVT-Merkblatt Nr. 160 nicht alleine gehalten werden; am besten sind gleichgeschlechtliche Gruppen mit gemischter Altersstruktur.</li><li>Der Käfig für bis zu drei Ratten soll mindestens 100 × 50 × 100 cm oder als Turm 80 × 50 × 120 cm groß sein, mit soliden Etagen; dazu kommt kontrollierter Freilauf.</li><li>Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.</li><li>Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.</li><li>Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Fachquellen</h3>
+              <ul><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&amp;did=41" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 160: Heimtiere – Ratten, Stand April 2014</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT)</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Grenzen der Einordnung</h3>
+              <ul><li>Das Merkblatt stammt von 2014; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.</li><li>Konkrete Tierarztkosten unterscheiden sich von Praxis zu Praxis; die Seite nennt deshalb keine Summe.</li><li>Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.</li></ul>
+            </article>
+          </div>
+        </div>
+</section>
   </main>
 
 <!-- ===== FOOTER ===== -->

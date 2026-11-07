@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Degus und Chinchillas halten - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.">
+  <meta name="description" content="Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten">
   <meta property="og:title" content="Degus und Chinchillas halten - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.">
+  <meta property="og:description" content="Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png">
@@ -22,10 +22,10 @@
   <meta property="og:image:alt" content="Kleintiergehege mit Verstecken und mehreren Bereichen.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Degus und Chinchillas halten - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.">
+  <meta name="twitter:description" content="Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png">
   <meta name="twitter:image:alt" content="Kleintiergehege mit Verstecken und mehreren Bereichen.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html">
@@ -6706,6 +6706,196 @@ body.static-site .article-hero-media {
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
+/* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
+#selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
+#selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
+#selbsttest .test-next-step .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+#selbsttest .test-share { margin-top: 1.25rem; }
+
+/* ---------- Volltextsuche: Trefferdarstellung (Paket suche) ---------- */
+.site-search-result .site-search-where {
+  color: var(--ink-3, var(--text-muted));
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.site-search-result .site-search-snippet {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.site-search-result mark {
+  background: rgba(214, 160, 40, 0.28);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.08em;
+}
+.site-search-kind {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--rule-strong, var(--border));
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+}
+.site-search-result strong { overflow-wrap: anywhere; }
+.site-search-result { min-height: 2.75rem; }
+@media (max-width: 768px) {
+  .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
+  .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+
+/* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
+.kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
+.kv-randnotiz { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+.kv-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+.kv-feld { border-top: 2px solid var(--ink); margin: 0 0 2rem; padding-top: 0.9rem; }
+.kv-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.6rem; }
+.kv-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--red-dark); white-space: nowrap; }
+.kv-feld-kopf h3 { margin: 0; }
+.kv-feld dl { margin: 0; }
+.kv-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+.kv-feld dd { margin: 0; }
+.kv-feld dd p { margin: 0 0 0.5rem; max-width: none; }
+.kv-feld .kv-mass { font-weight: 600; }
+.kv-feld dd.kv-frage { font-size: 1.08rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+.kv-feld dt.kv-t-frage { color: var(--green-dark); }
+.kv-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+.kv-beispiel-tag { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+.kv-fakten { display: grid; grid-template-columns: 1fr; margin: 1.4rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); }
+.kv-fakten > div { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.kv-fakten > div:last-child { border-bottom: 0; }
+.kv-zahl { display: block; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--red-dark); }
+.kv-zahl-text { display: block; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.4; color: var(--ink-2); margin-top: 0.3rem; }
+.kv-klein .kv-zahl { font-size: 1.45rem; color: var(--ink-2); }
+.kv-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.kv-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+.kv-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+.kv-karte ul { list-style: none; margin: 0; padding: 0; }
+.kv-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.kv-karte li:first-child { border-top: 0; padding-top: 0; }
+.kv-wenn, .kv-dann { display: block; }
+.kv-wenn b, .kv-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+.kv-dann { font-weight: 600; }
+.kv-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+.kv-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+.kv-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+.kv-weg.kv-noch-nicht { border-top-color: var(--ochre); }
+.kv-weg h3 { margin: 0 0 0.4rem; }
+.kv-weg p { margin-bottom: 0.7rem; }
+.kv-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  .kv-fakten { grid-template-columns: repeat(3, 1fr); }
+  .kv-fakten > div { border-bottom: 0; border-right: 1px solid var(--rule); padding: 1rem 1rem 1rem 0; }
+  .kv-fakten > div + div { padding-left: 1rem; }
+  .kv-fakten > div:last-child { border-right: 0; }
+  .kv-wege { grid-template-columns: 1fr 1fr; }
+
+/* ===================================================================
+   Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
+   Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
+   ========================================================================== */
+.hunde-einstieg { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
+.hunde-einstieg-frage { display: block; margin-top: 0.4rem; font-weight: 600; color: var(--red-dark); }
+.hunde-muster-hinweis { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; }
+.hunde-feld { margin: 1.6rem 0; padding: 1rem 0 0.3rem; border-top: 2px solid var(--ink); }
+.hunde-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.9rem; margin-bottom: 0.6rem; }
+.hunde-feld-kopf h3 { margin: 0; }
+.hunde-feld-nr { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-feld dl { margin: 0; display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.8rem 1.4rem; }
+.hunde-feld dt { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); padding-top: 0.25rem; }
+.hunde-feld dd { margin: 0; min-width: 0; }
+.hunde-feld dd p { margin: 0 0 0.6rem; max-width: none; }
+.hunde-mass { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.hunde-rechnung { font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.45; color: var(--ink-2); }
+.hunde-frage-t { color: var(--red-dark) !important; }
+.hunde-frage { font-style: italic; border-left: 3px solid var(--red); padding-left: 0.8rem; }
+.hunde-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); padding: 0.15rem 0.5rem; margin-bottom: 0.4rem; }
+.hunde-tag-liste li.hunde-mensch::before { border-color: var(--ochre); background: var(--ochre-tint); }
+.hunde-tag-liste li.hunde-mensch .zeitleiste-when { color: var(--ochre); }
+.hunde-legende { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: 60ch; }
+.hunde-bedenkzeit { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: var(--green-tint); }
+.hunde-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-bedenkzeit p:last-child { margin-bottom: 0; }
+.hunde-karte { margin: 1.4rem 0; padding: 1rem 1.2rem; border: 2px solid var(--ink); background: var(--card); }
+.hunde-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.6rem; }
+.hunde-karte ul { list-style: none; margin: 0; padding: 0; }
+.hunde-karte li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem 1.2rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.hunde-karte li:first-child { border-top: 0; }
+.hunde-karte b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-karte-fuss { font-size: 0.92rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.hunde-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.hunde-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); background: var(--card); }
+.hunde-weg-noch-nicht { border-color: var(--green); background: var(--green-tint); }
+.hunde-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.3rem; }
+.hunde-weg h3 { margin: 0 0 0.4rem; }
+.hunde-weg p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-quellen-liste { font-size: 0.92rem; }
+@media (max-width: 640px) {
+  .hunde-feld dl { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .hunde-feld dt { padding-top: 0.6rem; }
+  .hunde-karte li { grid-template-columns: minmax(0, 1fr); }
+}
+=======
+/* ===== Paket Kleintiere: Muster „vom Tier aus gedacht“ (Präfix kt-) ===== */
+body.static-site .kt-einstieg { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+body.static-site .kt-einstieg strong { font-weight: 600; }
+body.static-site .kt-randnotiz { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-randnotiz strong { color: var(--ink); }
+body.static-site .kt-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+body.static-site .kt-feld { border-top: 2px solid var(--ink); margin: 0 0 2.2rem; padding-top: 0.9rem; }
+body.static-site .kt-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+body.static-site .kt-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); white-space: nowrap; }
+body.static-site .kt-feld-kopf h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+body.static-site .kt-feld dl { margin: 0; }
+body.static-site .kt-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+body.static-site .kt-feld dd { margin: 0; }
+body.static-site .kt-feld dd p { margin: 0 0 0.6rem; }
+body.static-site .kt-feld .kt-mass { font-weight: 600; }
+body.static-site .kt-feld .kt-art { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); display: block; margin: 0.8rem 0 0.1rem; }
+body.static-site .kt-feld dd.kt-frage { font-size: 1.1rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+body.static-site .kt-feld dt.kt-t-frage { color: var(--green-dark); }
+body.static-site .kt-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+body.static-site .kt-beispiel { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+body.static-site .kt-zeit { list-style: none; margin: 0.5rem 0 1rem 0.5rem; padding: 0 0 0 0.9rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-zeit li { position: relative; padding: 0 0 1.3rem 1.1rem; margin: 0; }
+body.static-site .kt-zeit li:last-child { padding-bottom: 0.2rem; }
+body.static-site .kt-zeit li::before { content: ""; position: absolute; left: -1.5rem; top: 0.5rem; width: 0.8rem; height: 0.8rem; background: var(--paper); border: 2px solid var(--red); border-radius: 50%; }
+body.static-site .kt-zeit li.kt-mensch::before { border-color: var(--green); background: var(--green-tint); }
+body.static-site .kt-wann { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); }
+body.static-site .kt-zeit li.kt-mensch .kt-wann { color: var(--green-dark); }
+body.static-site .kt-zeit p { margin: 0.1rem 0 0; }
+body.static-site .kt-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); }
+body.static-site .kt-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+body.static-site .kt-bedenkzeit strong { font-size: 1.15rem; }
+body.static-site .kt-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+body.static-site .kt-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+body.static-site .kt-karte ul { list-style: none; margin: 0; padding: 0; }
+body.static-site .kt-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); margin: 0; }
+body.static-site .kt-karte li:first-child { border-top: 0; padding-top: 0; }
+body.static-site .kt-wenn, body.static-site .kt-dann { display: block; }
+body.static-site .kt-wenn b, body.static-site .kt-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+body.static-site .kt-dann { font-weight: 600; }
+body.static-site .kt-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+body.static-site .kt-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+body.static-site .kt-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+body.static-site .kt-weg.kt-noch-nicht { border-top-color: var(--ochre); }
+body.static-site .kt-weg h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+body.static-site .kt-weg p { font-size: 1rem; margin-bottom: 0.7rem; }
+body.static-site .kt-weg .kt-go { font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; margin-bottom: 0; }
+body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
+}
+@media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+
 
   </style>
   <script type="application/ld+json">
@@ -6714,7 +6904,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   "@type": "WebPage",
   "name": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
   "headline": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
-  "description": "Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.",
+  "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.",
   "url": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6732,7 +6922,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     "caption": "Kleintiergehege mit Verstecken und mehreren Bereichen."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten",
   "about": [
@@ -6788,6 +6978,107 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       "position": 2,
       "name": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
       "item": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
+  "name": "Degus und Chinchillas halten - Wa(h)re Haustier(liebe)",
+  "description": "Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.",
+  "url": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/kleintiere-degus-und-chinchillas.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Kleintiergehege mit Verstecken und mehreren Bereichen."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-11-07",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Kleintiere halten, Kaninchen, Meerschweinchen, Hamster, Ratten",
+  "articleSection": "Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Kleintiere halten"
+    },
+    {
+      "@type": "Thing",
+      "name": "Kaninchen"
+    },
+    {
+      "@type": "Thing",
+      "name": "Meerschweinchen"
+    },
+    {
+      "@type": "Thing",
+      "name": "Hamster"
+    },
+    {
+      "@type": "Thing",
+      "name": "Ratten"
+    }
+  ],
+  "citation": [
+    "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB-Degu2023.pdf&did=47",
+    "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&did=35",
+    "https://www.gesetze-im-internet.de/tierschg/__11b.html",
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie viele Degus sollten es sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mindestens zwei, besser eine Gruppe von drei bis fünf Tieren. Für zwei bis vier Degus nennt die Tierärztliche Vereinigung für Tierschutz eine nutzbare Fläche von mindestens 2, besser 3 Quadratmetern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie groß muss eine Chinchillavoliere sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mindestens 3 Kubikmeter für zwei Tiere, mindestens 50 Zentimeter breit und 150 Zentimeter hoch, für jedes weitere erwachsene Tier mindestens 0,5 Kubikmeter zusätzlich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie warm darf es für Chinchillas sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Optimal sind nach der Tierärztlichen Vereinigung für Tierschutz 15 bis 21 Grad Celsius bei höchstens 55 Prozent Luftfeuchtigkeit. Temperaturen über 28 Grad sind den Tieren nicht zuträglich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie alt werden Degus und Chinchillas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Degus werden meist 4 bis 6 Jahre alt, selten bis zu 10 Jahre. Chinchillas können über 20 Jahre alt werden."
+      }
     }
   ]
 }
@@ -6935,7 +7226,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
     </div>
-    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema oder ein Warnsignal ein.</li></ul>
+    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema, ein Warnsignal oder einen Fachbegriff ein.</li></ul>
   </aside>
 
   <!-- Mobile Nav -->
@@ -7053,7 +7344,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <div class="container">
         <div class="article-hero-copy">
           <h1>Degus und Chinchillas halten</h1>
-                  <p>Warum Degus und Chinchillas Spezialwissen, Raum, Artgenossen und passende Temperaturen brauchen.</p>
+                  <p>Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen und Futter. Chinchillas können über 20 Jahre alt werden.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Degus und Chinchillas halten: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7061,38 +7352,179 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
         </figure>
       </div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-degus-und-chinchillas-degus-oder-chinchillas-ziehen-ein-was-brauchen-sie-von-dir">Degus oder Chinchillas ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-degus-und-chinchillas-beduerfnisse">Was Degus und Chinchillas von dir brauchen</a></li><li><a href="#kleintiere-degus-und-chinchillas-tag">Ein Tag aus Sicht einer Degugruppe und eines Chinchillapaars</a></li><li><a href="#kleintiere-degus-und-chinchillas-tierleben">Was es über die Jahre bedeutet</a></li><li><a href="#kleintiere-degus-und-chinchillas-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-degus-und-chinchillas-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../kleintiere/index.html">Zurück zur Übersicht: Kleintiere</a></p>
         <div class="topic-page-content">
-<h2>Degus und Chinchillas</h2>
-        <p>Beide Arten brauchen artgleiche Sozialpartner, viel Raum, strukturierte Gehege und passende Ernährung. Chinchillas sind dämmerungs- und nachtaktiv sowie hitzeempfindlich; Degus sind tagaktiv und brauchen dauerhaft sichere Nagemöglichkeiten.</p>
-        <p><strong>Degus</strong> sind tagaktive Kolonietiere aus Südamerika. Sie brauchen riesige Volieren, Artgenossen (mindestens 2–3) und zuckerfreies Futter – Degus neigen stark zu Diabetes. Lebenserwartung: 5–8 Jahre.</p>
-        <p><strong>Chinchillas</strong> sind nachtaktiv und extrem hitzeempfindlich – Temperaturen über 25 °C können tödlich sein. Sie brauchen Staubbäder mit speziellem Chinchilla-Sand (kein Wasser!), große, hohe Volieren und können <strong>15–20 Jahre</strong> alt werden. Das ist eine Verpflichtung, die mit der eines <a href="../../hunde/index.html">Hundes</a> vergleichbar ist.</p>
+<h2 id="kleintiere-degus-und-chinchillas-degus-oder-chinchillas-ziehen-ein-was-brauchen-sie-von-dir">Degus oder Chinchillas ziehen ein. Was brauchen sie von dir?</h2>
+        <p class="kt-einstieg">Degus und Chinchillas sehen handlich aus und werden oft als besondere Kleintiere angeboten. <strong>Dreh deinen Wunsch einmal um: Was bräuchten zwei Degus oder zwei Chinchillas von dir, und was davon hast du schon?</strong></p>
+        <p class="kt-randnotiz">Die <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> schreibt zu Degus, ihre Haltung sei wegen des großen Bewegungsdranges und des komplexen Sozialverhaltens aufwendig und erfordere umfassendes Wissen; Degus seien keine Schmusetiere (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu</a>). Chinchillas sind laut TVT sehr schreckhaft und lärmempfindlich (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153</a>). Beide Arten sind verschieden und dürfen nicht zusammen gehalten werden: Eine Vergesellschaftung mit anderen Tierarten, zum Beispiel mit Chinchillas, ist laut TVT wegen des unterschiedlichen Verhaltens und der unterschiedlichen Nahrungsansprüche nicht tiergerecht.</p>
 
-        <p>Überleg dir ehrlich, ob ein Kleintier zu deinem Alltag passt – der <a href="../../selbsttest/index.html">Selbsttest</a> hilft bei der Einschätzung. Und wenn du dich entscheidest: bitte <a href="../../adoption/index.html">aus dem Tierschutz adoptieren</a>, nicht aus der Zoohandlung.</p>
+        <h2 id="kleintiere-degus-und-chinchillas-beduerfnisse">Was Degus und Chinchillas von dir brauchen</h2>
+        <p class="kt-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich. Die Maße unterscheiden sich je nach Art und stehen deshalb getrennt.</p>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 1</span><h3>Artgenossen</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Nie allein: mindestens zu zweit, besser in einer Gruppe.</p>
+          <span class="kt-art">Degus</span>
+          <p>Die TVT lehnt Einzelhaltung grundsätzlich ab und empfiehlt eine Gruppe von 3 bis 5 Tieren, gleichgeschlechtlich oder ein kastriertes Männchen mit mehreren Weibchen. In freier Natur leben Degus in Gruppen von 1 bis 2 Männchen mit 2 bis 5 Weibchen. In Weibchen- wie in Männchengruppen kann es in der Pubertät, bis zu einem Alter von etwa 1 bis 1,5 Jahren, vermehrt zu Rangstreitigkeiten kommen, die so heftig sein können, dass die Gruppe wegen der Gefahr ernsthafter Bissverletzungen zeitweise getrennt werden muss. Am besten wählt man von Anfang an eine stabile Gruppe, im Idealfall Wurf- oder Ziehgeschwister (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu</a>).</p>
+          <span class="kt-art">Chinchillas</span>
+          <p>Einzelhaltung ist nicht vertretbar. Mindestens paarweise, besser in einer gleichgeschlechtlichen Gruppe; bei Paarhaltung werden Männchen gegebenenfalls kastriert. Die Tiere lassen sich am besten vor Erreichen der Geschlechtsreife zusammengewöhnen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Degus gehören in eine Gruppe von drei bis fünf Tieren, Chinchillas mindestens zu zweit. Jede Angabe zu Platz und Aufwand auf dieser Seite gilt für eine Gruppe, nicht für ein einzelnes Tier.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Hast du Platz, Zeit und Geld für eine ganze Gruppe, nicht nur für das eine Tier, das dir gefällt?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 2</span><h3>Platz und Bewegung</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Degus: 2 bis 3 m² nutzbare Fläche für zwei bis vier Tiere. Chinchillas: 3 m³ Volierenraum für zwei Tiere.</p>
+          <span class="kt-art">Degus</span>
+          <p>Für zwei bis vier Degus sollte eine nutzbare Fläche von mindestens 2, besser 3 m² zur Verfügung stehen, für jedes weitere Tier mindestens 0,5 m² mehr. Die Fläche kann auf mehrere Ebenen verteilt werden, die Grundfläche muss aber mindestens 100 × 50 cm und die Etagenhöhe mindestens 30 cm betragen. Eine Fallhöhe von 50 cm darf nirgends überschritten werden. Ein Laufrad aus Metall oder Holz mit mindestens 35 cm Durchmesser gehört in jede Haltung, dazu im unteren Bereich eine mindestens 20 cm tiefe, grabfähige Einstreu (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu</a>).</p>
+          <span class="kt-art">Chinchillas</span>
+          <p>Geräumige, nagesichere Volieren mit einem Mindestvolumen von 3 m³ für zwei Tiere, mindestens 50 cm breit und 150 cm hoch; für jedes weitere erwachsene Tier mindestens 0,5 m³ zusätzlich. Die Voliere ist dreidimensional zu strukturieren, mit Sitzbrettern in mindestens drei Etagen, die nur im Sprung erreichbar sind, und mit Verstecken, Schlafhäuschen und einem Sandbad (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Die Mindestgrundfläche eines Degugeheges ist 100 × 50 cm, das sind 0,5 m². Für 2 m² nutzbare Fläche wären das rechnerisch vier volle Ebenen übereinander. Für zwei Chinchillas ergeben 3 m³ zum Beispiel eine Voliere von 4 m Länge, 0,5 m Breite und 1,5 m Höhe.</p>
+          <p class="kt-rechnung">Rechnung: 2 m² ÷ 0,5 m² = 4; 4 m × 0,5 m × 1,5 m = 3 m³.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Wo in deinem Zuhause hat eine Voliere von dieser Größe Platz, und was machst du, wenn aus zwei Tieren mehr werden?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 3</span><h3>Futter</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Degus: Heu und frisches Blattgrün, zuckerfrei, kein Obst. Chinchillas: Heu immer, kein Frischfutter.</p>
+          <span class="kt-art">Degus</span>
+          <p>Degus brauchen ein rohfaserreiches Futter aus Heu beziehungsweise Wiesenschnitt, im Sommer täglich frisches Blattgrün, Kräuter und Gräser, in kleinen Mengen Gemüse. Obst dürfen Degus grundsätzlich nicht bekommen, denn sie neigen zu Diabetes. Reine Getreidemischungen können lebensgefährliche Verdauungsstörungen verursachen. Samen und Sämereien sollten täglich Bestandteil der Fütterung sein, 1 Teelöffel pro Tier und Tag. Zur Abnutzung der Zähne dienen frische Rinde und Äste mit Blättern (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu</a>).</p>
+          <span class="kt-art">Chinchillas</span>
+          <p>Chinchillas sind reine Pflanzenfresser und dürfen nur mit sehr rohfaserreichem, energiearmem und vor allem zuckerfreiem Futter ernährt werden (Diabetesgefahr). Gut strukturiertes, trockenes Heu muss stets zur freien Verfügung stehen, dazu getrocknete Kräuter und in kleinen Mengen Chinchillapellets (etwa 2 Teelöffel pro Tag). Auf frisches oder angewelktes Grünfutter reagieren Chinchillas oft mit zum Teil tödlich verlaufenden Durchfällen, ebenso vertragen sie weder Obst noch frisches Gemüse, Sonnenblumenkerne, Altbrot oder Nüsse. Gefüttert wird zweimal täglich, die Hauptmahlzeit in den frühen Abendstunden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Bei einer Degugruppe mit vier Tieren sind es 4 Teelöffel Sämereien am Tag. Bei Chinchillas dagegen gilt für die Pellets: 2 Teelöffel pro Tag, und mehr Frischfutter ist kein Plus, sondern eine Gefahr.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Wer kennt die Unterschiede zwischen Degu- und Chinchillafutter genau, und wer gibt sie täglich verlässlich weiter, auch wenn du verreist bist?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 4</span><h3>Ruhe und Tagesrhythmus</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Degus: tagaktiv mit Schwerpunkten am frühen Morgen und frühen Abend. Chinchillas: dämmerungs- und nachtaktiv.</p>
+          <span class="kt-art">Degus</span>
+          <p>Degus sind keine Schmusetiere; sie sollten nur gestreichelt werden, wenn sie freiwillig den Kontakt zum Menschen suchen und sich jederzeit zurückziehen können. Das Haltungssystem braucht Rückzugsmöglichkeiten, in denen die ganze Gruppe Platz findet; Häuschen müssen zwei Eingänge haben. Ein Sandbad, in dem mindestens zwei Degus gleichzeitig baden können, muss jederzeit zugänglich sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu</a>).</p>
+          <span class="kt-art">Chinchillas</span>
+          <p>Chinchillas springen ansatzlos bis zu einem Meter hoch. Sie sind sehr schreckhaft und lärmempfindlich. Der Standort der Voliere muss gegen Feuchtigkeit, Regen, Zugluft und direkte Sonneneinstrahlung geschützt sein; Standorte in Heizungsnähe sind nicht geeignet. Mindestens zwei aneinandergrenzende Seiten sollten zur Stressreduzierung blickdicht geschlossen sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Degus sind wach, wenn es morgens und abends im Haus lebhaft ist; Chinchillas erst in der Dämmerung und nachts, wenn du vermutlich ruhen möchtest.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Wo steht die Voliere, und wie laut oder ruhig ist es dort morgens, abends und nachts?</dd>
+          </dl>
+        </div>
+
+        <div class="kt-feld">
+          <div class="kt-feld-kopf"><span class="kt-feld-nr">Feld 5</span><h3>Gesundheit</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="kt-mass">Degus werden meist 4 bis 6 Jahre alt, selten bis 10. Chinchillas werden über 20 Jahre alt. Chinchillas: optimal 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit.</p>
+          <span class="kt-art">Chinchillas</span>
+          <p>In der Haut von Chinchillas fehlen Schweiß- und Talgdrüsen, sodass ihr Fell nicht gegen Feuchtigkeit (Erkältungsgefahr) und gegen hohe Außentemperaturen (Überhitzungsgefahr) schützt. Eine reine Außenhaltung, zum Beispiel auf einem Balkon, lehnt die TVT deshalb ab. Als optimal nennt sie 15 bis 21 °C; Temperaturen über 28 °C sind für die Tiere nicht zuträglich. Verschmutzte Einstreu und Futterreste müssen täglich entfernt werden, die gesamte Einstreu wird wöchentlich ausgewechselt (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153</a>).</p>
+          <span class="kt-art">Degus</span>
+          <p>Degus entwickeln in der Heimtierhaltung häufig im Laufe ihres Lebens Zahnfehlstellungen durch nicht artgerechte Fütterung. Nackt- und Rexzuchtformen gelten als Qualzuchten im Sinne des § 11b Tierschutzgesetz. Wer vor dem Einzug Rat sucht, lässt sich nach Empfehlung der TVT von erfahrenen Haltern oder fachkundigen Tierärzten beraten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu</a>).</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Ein Chinchilla, das du mit 30 Jahren aufnimmst, ist mit 50 Jahren immer noch auf dich angewiesen. Bei Degus rechnet die TVT mit 4 bis 6 Jahren, das sind rund 1.460 bis 2.190 Tage.</p>
+          <p class="kt-rechnung">Rechnung: 30 + 20 = 50; 4 × 365 = 1.460; 6 × 365 = 2.190.</p></dd>
+            <dt class="kt-t-frage">Frage an dich</dt>
+            <dd class="kt-frage">Kennst du eine Tierarztpraxis, die Degus oder Chinchillas behandelt, und passt die Zimmertemperatur auch im Sommer?</dd>
+          </dl>
+        </div>
+
+        <h2 id="kleintiere-degus-und-chinchillas-tag">Ein Tag aus Sicht einer Degugruppe und eines Chinchillapaars</h2>
+        <span class="kt-beispiel">Beispiel, keine echten Tiere</span>
+        <ol class="kt-zeit">
+          <li><span class="kt-wann">Früher Morgen</span><p>Degus sind aktiv, laufen und klettern. Ihre Aktivitätsschwerpunkte liegen am frühen Morgen und in den frühen Abendstunden. Sie brauchen dafür Laufwege, ein Laufrad und Rückzugsorte für die ganze Gruppe.</p></li>
+          <li class="kt-mensch"><span class="kt-wann">Täglich: du</span><p>Verschmutzte Einstreu und Futterreste entfernen, Trinkwasser- und Futtergefäße gründlich reinigen, den Kot der Chinchillas auf Geruch, Farbe und Beschaffenheit ansehen.</p></li>
+          <li><span class="kt-wann">Dämmerung und frühe Nacht</span><p>Chinchillas werden aktiv. Die Hauptmahlzeit gibt es in den frühen Abendstunden. Die Tiere springen, nutzen die Sitzbretter und baden im Sandbad.</p></li>
+          <li class="kt-mensch"><span class="kt-wann">Einmal pro Woche: du</span><p>Die gesamte Einstreu und die Einrichtung der Chinchillavoliere wechseln und gründlich reinigen; das Sandbad bei Bedarf häufiger erneuern.</p></li>
+        </ol>
+        <p class="kt-legende">Der Ablauf ist ein Beispiel aus den Verhaltensangaben der TVT-Merkblätter. Wie bestimmte Tiere ihren Tag verbringen, kann abweichen.</p>
+
+        <h2 id="kleintiere-degus-und-chinchillas-tierleben">Was es über die Jahre bedeutet</h2>
+        <div class="metric-grid article-rhythm" aria-label="Was Degus und Chinchillas von dir verlangen">
+          <div class="metric-card">
+            <strong>über 20 Jahre</strong>
+            <span>Chinchillas können so alt werden – für diese Zeit musst du da sein</span>
+          </div>
+          <div class="metric-card">
+            <strong>4 bis 6 Jahre</strong>
+            <span>werden Degus meist alt, selten bis zu 10 Jahre</span>
+          </div>
+          <div class="metric-card">
+            <strong>2 bis 3 m² / 3 m³</strong>
+            <span>nutzbare Fläche für zwei bis vier Degus beziehungsweise Volierenraum für zwei Chinchillas</span>
+          </div>
+        </div>
+        <p>Eine feste Euro-Summe nennen wir hier nicht, denn sie hängt von Art, Gruppengröße und Ausstattung ab. Rechne selbst und rechne für die ganze Gruppe: Voliere oder Gehege und Einrichtung als einmalige Kosten, Heu, Einstreu, Sand und Äste als laufende Kosten, dazu eine Rücklage für eine Tierarztpraxis, die Degus oder Chinchillas behandelt. Bei Chinchillas kommt eine Rechnung über mehr als 20 Jahre hinzu. Wie so eine Rechnung über das ganze Tierleben aufgebaut ist, zeigen die Seiten <a href="../../kleintiere/kaninchen-kosten/index.html">Kaninchen: Kosten</a> und <a href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>.</p>
+
+        <h2 id="kleintiere-degus-und-chinchillas-entscheiden">Bevor du entscheidest</h2>
+        <div class="kt-bedenkzeit">
+          <p><strong>Diese Tiere müssen nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite, keine Vorschrift. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+        </div>
+        <div class="kt-karte">
+          <span class="kt-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> ich nur ein einzelnes Tier mitnehmen soll,</span><span class="kt-dann"><b>dann</b> nehme ich keins mit.</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> mir ein Degu und ein Chinchilla zusammen empfohlen werden,</span><span class="kt-dann"><b>dann</b> sage ich Nein, denn beide Arten gehören nicht zusammen.</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> ich die Tiere nicht dort sehen darf, wo sie leben,</span><span class="kt-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> mir ein Tier leidtut,</span><span class="kt-dann"><b>dann</b> rufe ich das nächste Tierheim oder eine Notstation an und frage dort nach Degus oder Chinchillas, statt zu kaufen.</span></li>
+          </ul>
+          <p class="kt-karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf der Seite <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+        <p>Der Selbsttest hilft bei der Einschätzung, ob ein Kleintier zu deinem Alltag passt: <a href="../../selbsttest/index.html">Selbsttest</a>. Der Deutsche Tierschutzbund rät in seiner <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Tierschutz im Einkaufskorb“</a>, zuerst im nächstgelegenen Tierheim zu schauen; dort warten auch Kleinnager. Die Reihenfolge, die wir empfehlen: erst Tierheim und Tierschutzverein, danach alles andere.</p>
+        <div class="kt-wege">
+          <div class="kt-weg">
+            <span class="kt-weg-label">Weg A</span>
+            <h3>Ich suche Tiere im Tierschutz</h3>
+            <p>Tiere, die schon da sind und ein Zuhause suchen.</p>
+            <p class="kt-go"><a href="../../adoption/index.html">Adoption statt Kauf</a><br><a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+          </div>
+          <div class="kt-weg kt-noch-nicht">
+            <span class="kt-weg-label">Weg B, gleichwertig</span>
+            <h3>Noch nicht</h3>
+            <p>Wenn Platz, Zeit oder Geld gerade fehlen, ist Warten eine gute Entscheidung, und es gibt Wege, dem Wunsch trotzdem näher zu kommen.</p>
+            <p class="kt-go"><a href="../../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a></p>
+          </div>
+        </div>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
           <div class="topic-context-head">
             <span class="eyebrow">Kleintiere</span>
-            <h2>Weitere Themen in diesem Bereich</h2>
+            <h2 id="kleintiere-degus-und-chinchillas-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</h2>
           </div>
           <div class="topic-context-grid">
 
           <a class="topic-context-link" href="../../kleintiere/kaninchen/index.html">
             <strong>Kaninchen halten</strong>
-            <span>Warum Kaninchen Platz, Artgenossen, das richtige Abgabealter, Zähnekontrolle und ruhigen Umgang brauchen.</span>
+            <span>Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/kaninchen-kosten/index.html">
             <strong>Was zwei Kaninchen wirklich kosten</strong>
             <span>Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen/index.html">
-            <strong>Meerschweinchen abgeben: Mindestalter und richtige Haltung</strong>
-            <span>Meerschweinchen richtig abgeben: gesetzliche Grenze, mindestens acht Wochen als fachliche Orientierung, Geschlechtsreife, Gruppenhaltung und die Folgen zu früher Trennung.</span>
+            <strong>Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter</strong>
+            <span>Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/meerschweinchen-kosten/index.html">
             <strong>Was Meerschweinchen wirklich kosten</strong>
@@ -7100,17 +7532,59 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           </a>
           <a class="topic-context-link" href="../../kleintiere/hamster/index.html">
             <strong>Goldhamster halten</strong>
-            <span>Warum Goldhamster allein leben, mindestens einen Quadratmeter Grundfläche brauchen und keine einfachen Kindertiere sind.</span>
+            <span>Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.</span>
           </a>
           <a class="topic-context-link" href="../../kleintiere/ratten/index.html">
             <strong>Ratten halten</strong>
-            <span>Warum Ratten soziale, intelligente Tiere sind und nicht allein in kleinen Käfigen leben dürfen.</span>
+            <span>Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden Zeit am Tag, Gesundheit und Bedenkzeit vor dem Einzug.</span>
           </a>
           </div>
         </nav>
       </div>
     </div>
-  </section>
+
+        <div class="article-rhythm faq-block" data-faq-block="kleintiere-degus-und-chinchillas">
+          <span class="eyebrow">Kurz beantwortet</span>
+          <h2>Häufige Fragen</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Wie viele Degus sollten es sein?</summary>
+              <p>Mindestens zwei, besser eine Gruppe von drei bis fünf Tieren. Für zwei bis vier Degus nennt die Tierärztliche Vereinigung für Tierschutz eine nutzbare Fläche von mindestens 2, besser 3 Quadratmetern.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wie groß muss eine Chinchillavoliere sein?</summary>
+              <p>Mindestens 3 Kubikmeter für zwei Tiere, mindestens 50 Zentimeter breit und 150 Zentimeter hoch, für jedes weitere erwachsene Tier mindestens 0,5 Kubikmeter zusätzlich.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wie warm darf es für Chinchillas sein?</summary>
+              <p>Optimal sind nach der Tierärztlichen Vereinigung für Tierschutz 15 bis 21 Grad Celsius bei höchstens 55 Prozent Luftfeuchtigkeit. Temperaturen über 28 Grad sind den Tieren nicht zuträglich.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wie alt werden Degus und Chinchillas?</summary>
+              <p>Degus werden meist 4 bis 6 Jahre alt, selten bis zu 10 Jahre. Chinchillas können über 20 Jahre alt werden.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="kleintiere-degus-und-chinchillas">
+          <span class="eyebrow">Zum Vertiefen</span>
+          <h2>Fachquellen und wichtige Grenzen</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kurz festgehalten</h3>
+              <ul><li>Degus und Chinchillas dürfen nicht allein gehalten werden; Degus am besten zu dritt bis zu fünft, Chinchillas mindestens paarweise.</li><li>Für zwei bis vier Degus nennt die TVT eine nutzbare Fläche von mindestens 2, besser 3 m², für zwei Chinchillas eine Voliere von mindestens 3 m³.</li><li>Chinchillas haben keine Schweiß- und Talgdrüsen; optimal sind 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit, über 28 °C ist nicht zuträglich.</li><li>Degus werden meist 4 bis 6 Jahre alt, selten bis 10; Chinchillas können über 20 Jahre alt werden.</li><li>Degus dürfen grundsätzlich kein Obst bekommen (Diabetesneigung); Chinchillas vertragen kein frisches Grünfutter, Obst und Gemüse.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Fachquellen</h3>
+              <ul><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB-Degu2023.pdf&amp;did=47" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Degu, Stand Juni 2023</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&amp;did=35" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 153: Heimtiere – Chinchillas, Stand September 2012</a></li><li><a href="https://www.gesetze-im-internet.de/tierschg/__11b.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz § 11b</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Grenzen der Einordnung</h3>
+              <ul><li>Das Chinchilla-Merkblatt stammt von 2012; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.</li><li>Konkrete Kosten hängen von Art, Gruppengröße und Ausstattung ab; die Seite nennt deshalb keine Summe.</li><li>Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.</li></ul>
+            </article>
+          </div>
+        </div>
+</section>
   </main>
 
 <!-- ===== FOOTER ===== -->

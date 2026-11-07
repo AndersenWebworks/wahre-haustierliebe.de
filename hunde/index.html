@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Golden Retriever springt über ein Agility-Hindernis.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-10-24">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hund halten: Zeit, Kosten, Alltag - Wa(h)re Haustier(liebe)">
   <meta name="twitter:description" content="Was ein Hund wirklich braucht: Nähe, Training, Betreuung, Tierarztbudget und einen Alltag, der zum Tier passt.">
@@ -6706,6 +6706,196 @@ body.static-site .article-hero-media {
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
+/* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
+#selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
+#selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
+#selbsttest .test-next-step .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+#selbsttest .test-share { margin-top: 1.25rem; }
+
+/* ---------- Volltextsuche: Trefferdarstellung (Paket suche) ---------- */
+.site-search-result .site-search-where {
+  color: var(--ink-3, var(--text-muted));
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.site-search-result .site-search-snippet {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.site-search-result mark {
+  background: rgba(214, 160, 40, 0.28);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.08em;
+}
+.site-search-kind {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--rule-strong, var(--border));
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+}
+.site-search-result strong { overflow-wrap: anywhere; }
+.site-search-result { min-height: 2.75rem; }
+@media (max-width: 768px) {
+  .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
+  .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+
+/* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
+.kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
+.kv-randnotiz { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+.kv-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+.kv-feld { border-top: 2px solid var(--ink); margin: 0 0 2rem; padding-top: 0.9rem; }
+.kv-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.6rem; }
+.kv-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--red-dark); white-space: nowrap; }
+.kv-feld-kopf h3 { margin: 0; }
+.kv-feld dl { margin: 0; }
+.kv-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+.kv-feld dd { margin: 0; }
+.kv-feld dd p { margin: 0 0 0.5rem; max-width: none; }
+.kv-feld .kv-mass { font-weight: 600; }
+.kv-feld dd.kv-frage { font-size: 1.08rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+.kv-feld dt.kv-t-frage { color: var(--green-dark); }
+.kv-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+.kv-beispiel-tag { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+.kv-fakten { display: grid; grid-template-columns: 1fr; margin: 1.4rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); }
+.kv-fakten > div { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.kv-fakten > div:last-child { border-bottom: 0; }
+.kv-zahl { display: block; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--red-dark); }
+.kv-zahl-text { display: block; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.4; color: var(--ink-2); margin-top: 0.3rem; }
+.kv-klein .kv-zahl { font-size: 1.45rem; color: var(--ink-2); }
+.kv-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.kv-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+.kv-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+.kv-karte ul { list-style: none; margin: 0; padding: 0; }
+.kv-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.kv-karte li:first-child { border-top: 0; padding-top: 0; }
+.kv-wenn, .kv-dann { display: block; }
+.kv-wenn b, .kv-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+.kv-dann { font-weight: 600; }
+.kv-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+.kv-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+.kv-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+.kv-weg.kv-noch-nicht { border-top-color: var(--ochre); }
+.kv-weg h3 { margin: 0 0 0.4rem; }
+.kv-weg p { margin-bottom: 0.7rem; }
+.kv-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  .kv-fakten { grid-template-columns: repeat(3, 1fr); }
+  .kv-fakten > div { border-bottom: 0; border-right: 1px solid var(--rule); padding: 1rem 1rem 1rem 0; }
+  .kv-fakten > div + div { padding-left: 1rem; }
+  .kv-fakten > div:last-child { border-right: 0; }
+  .kv-wege { grid-template-columns: 1fr 1fr; }
+
+/* ===================================================================
+   Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
+   Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
+   ========================================================================== */
+.hunde-einstieg { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
+.hunde-einstieg-frage { display: block; margin-top: 0.4rem; font-weight: 600; color: var(--red-dark); }
+.hunde-muster-hinweis { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; }
+.hunde-feld { margin: 1.6rem 0; padding: 1rem 0 0.3rem; border-top: 2px solid var(--ink); }
+.hunde-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.9rem; margin-bottom: 0.6rem; }
+.hunde-feld-kopf h3 { margin: 0; }
+.hunde-feld-nr { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-feld dl { margin: 0; display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.8rem 1.4rem; }
+.hunde-feld dt { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); padding-top: 0.25rem; }
+.hunde-feld dd { margin: 0; min-width: 0; }
+.hunde-feld dd p { margin: 0 0 0.6rem; max-width: none; }
+.hunde-mass { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.hunde-rechnung { font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.45; color: var(--ink-2); }
+.hunde-frage-t { color: var(--red-dark) !important; }
+.hunde-frage { font-style: italic; border-left: 3px solid var(--red); padding-left: 0.8rem; }
+.hunde-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); padding: 0.15rem 0.5rem; margin-bottom: 0.4rem; }
+.hunde-tag-liste li.hunde-mensch::before { border-color: var(--ochre); background: var(--ochre-tint); }
+.hunde-tag-liste li.hunde-mensch .zeitleiste-when { color: var(--ochre); }
+.hunde-legende { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: 60ch; }
+.hunde-bedenkzeit { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: var(--green-tint); }
+.hunde-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-bedenkzeit p:last-child { margin-bottom: 0; }
+.hunde-karte { margin: 1.4rem 0; padding: 1rem 1.2rem; border: 2px solid var(--ink); background: var(--card); }
+.hunde-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.6rem; }
+.hunde-karte ul { list-style: none; margin: 0; padding: 0; }
+.hunde-karte li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem 1.2rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.hunde-karte li:first-child { border-top: 0; }
+.hunde-karte b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-karte-fuss { font-size: 0.92rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.hunde-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.hunde-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); background: var(--card); }
+.hunde-weg-noch-nicht { border-color: var(--green); background: var(--green-tint); }
+.hunde-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.3rem; }
+.hunde-weg h3 { margin: 0 0 0.4rem; }
+.hunde-weg p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-quellen-liste { font-size: 0.92rem; }
+@media (max-width: 640px) {
+  .hunde-feld dl { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .hunde-feld dt { padding-top: 0.6rem; }
+  .hunde-karte li { grid-template-columns: minmax(0, 1fr); }
+}
+=======
+/* ===== Paket Kleintiere: Muster „vom Tier aus gedacht“ (Präfix kt-) ===== */
+body.static-site .kt-einstieg { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+body.static-site .kt-einstieg strong { font-weight: 600; }
+body.static-site .kt-randnotiz { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-randnotiz strong { color: var(--ink); }
+body.static-site .kt-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+body.static-site .kt-feld { border-top: 2px solid var(--ink); margin: 0 0 2.2rem; padding-top: 0.9rem; }
+body.static-site .kt-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+body.static-site .kt-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); white-space: nowrap; }
+body.static-site .kt-feld-kopf h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+body.static-site .kt-feld dl { margin: 0; }
+body.static-site .kt-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+body.static-site .kt-feld dd { margin: 0; }
+body.static-site .kt-feld dd p { margin: 0 0 0.6rem; }
+body.static-site .kt-feld .kt-mass { font-weight: 600; }
+body.static-site .kt-feld .kt-art { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); display: block; margin: 0.8rem 0 0.1rem; }
+body.static-site .kt-feld dd.kt-frage { font-size: 1.1rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+body.static-site .kt-feld dt.kt-t-frage { color: var(--green-dark); }
+body.static-site .kt-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+body.static-site .kt-beispiel { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+body.static-site .kt-zeit { list-style: none; margin: 0.5rem 0 1rem 0.5rem; padding: 0 0 0 0.9rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-zeit li { position: relative; padding: 0 0 1.3rem 1.1rem; margin: 0; }
+body.static-site .kt-zeit li:last-child { padding-bottom: 0.2rem; }
+body.static-site .kt-zeit li::before { content: ""; position: absolute; left: -1.5rem; top: 0.5rem; width: 0.8rem; height: 0.8rem; background: var(--paper); border: 2px solid var(--red); border-radius: 50%; }
+body.static-site .kt-zeit li.kt-mensch::before { border-color: var(--green); background: var(--green-tint); }
+body.static-site .kt-wann { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); }
+body.static-site .kt-zeit li.kt-mensch .kt-wann { color: var(--green-dark); }
+body.static-site .kt-zeit p { margin: 0.1rem 0 0; }
+body.static-site .kt-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); }
+body.static-site .kt-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+body.static-site .kt-bedenkzeit strong { font-size: 1.15rem; }
+body.static-site .kt-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+body.static-site .kt-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+body.static-site .kt-karte ul { list-style: none; margin: 0; padding: 0; }
+body.static-site .kt-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); margin: 0; }
+body.static-site .kt-karte li:first-child { border-top: 0; padding-top: 0; }
+body.static-site .kt-wenn, body.static-site .kt-dann { display: block; }
+body.static-site .kt-wenn b, body.static-site .kt-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+body.static-site .kt-dann { font-weight: 600; }
+body.static-site .kt-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+body.static-site .kt-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+body.static-site .kt-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+body.static-site .kt-weg.kt-noch-nicht { border-top-color: var(--ochre); }
+body.static-site .kt-weg h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+body.static-site .kt-weg p { font-size: 1rem; margin-bottom: 0.7rem; }
+body.static-site .kt-weg .kt-go { font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; margin-bottom: 0; }
+body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
+}
+@media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+
 
   </style>
   <script type="application/ld+json">
@@ -6732,7 +6922,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     "caption": "Golden Retriever springt über ein Agility-Hindernis."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Hund halten, Hund anschaffen, Hundekosten, Alleinbleiben, Erziehung, Zwingerhaltung",
   "about": [
@@ -6822,7 +7012,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Hund halten, Hund anschaffen, Hundekosten, Alleinbleiben, Erziehung, Zwingerhaltung",
@@ -6854,9 +7044,11 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     }
   ],
   "citation": [
-    "https://www.tasso.net",
-    "https://www.tierschutzbund.de",
+    "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&did=421",
+    "https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/",
     "https://www.gesetze-im-internet.de/tierschhuv/",
+    "https://www.gesetze-im-internet.de/got_2022/__4.html",
+    "https://www.tasso.net",
     "https://www.bundestieraerztekammer.de"
   ]
 }
@@ -6871,15 +7063,15 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       "name": "Wie lange darf ein Hund allein zu Hause bleiben?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar."
+        "text": "Als Orientierung gelten 4 bis 5 Stunden am Stück. Eine gesetzliche Zahl gibt es nicht; die Tierschutz-Hundeverordnung verlangt mehrmals täglich Umgang mit der Betreuungsperson. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar."
       }
     },
     {
       "@type": "Question",
-      "name": "Was kostet ein Hund im Monat?",
+      "name": "Was kostet ein Hund pro Tag und im ganzen Leben?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für einen mittelgroßen Hund sind laufend etwa 100–240 Euro pro Monat realistisch. Über zwölf Jahre kommen mit Anschaffung rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet."
+        "text": "Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre."
       }
     }
   ]
@@ -7028,7 +7220,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
     </div>
-    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema oder ein Warnsignal ein.</li></ul>
+    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema, ein Warnsignal oder einen Fachbegriff ein.</li></ul>
   </aside>
 
   <!-- Mobile Nav -->
@@ -7145,33 +7337,196 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     <div class="hero" style="background: linear-gradient(135deg, #7B5C3A 0%, #5A3F25 100%);">
       <div class="container">
         <div class="article-hero-copy">
-          <h1>Hundehaltung: Zeit, Kosten und tägliche Verantwortung</h1>
-                  <p>Hunde sind Rudeltiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
-        <div class="article-kicker"><span>4–5 h allein</span><span>14–37 Tsd. €</span><span>Beziehung täglich</span></div></div>
+          <h1>Ein Hund zieht ein. Was braucht er von dir?</h1>
+                  <p>Hunde sind hochsoziale Tiere. Sie leben von Nähe, Routine und der Beziehung zu ihren Menschen. Ein Hund, der „nur“ Futter und Auslauf bekommt, hat nicht genug.</p>
+        <div class="article-kicker"><span>4–5 h allein</span><span>3–8 € pro Tag</span><span>Beziehung täglich</span></div></div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Hund halten: Zeit, Kosten und Verantwortung realistisch prüfen: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
           <img src="../assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Golden Retriever springt über ein Agility-Hindernis." loading="eager" width="960" height="643" decoding="async" fetchpriority="high">
 
         </figure>
       </div>
-    </div>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hunde-braucht">Was ein Hund von dir braucht</a></li><li><a href="#hunde-tag">Ein Tag aus Sicht eines Hundes</a></li><li><a href="#hunde-lebenskosten">Was ein Hund über die Jahre kostet</a></li><li><a href="#hunde-bevor">Bevor du entscheidest</a></li><li><a href="#hunde-quellen">Quellen</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
+        <p class="hunde-einstieg">Dass du einen Hund bei dir aufnehmen möchtest, ist ein schöner Gedanke. <span class="hunde-einstieg-frage">Dreh ihn einmal um: Was bräuchte ein Hund von dir, und was davon hast du schon?</span></p>
+        <p class="randnotiz">Die Tierärztliche Vereinigung für Tierschutz (TVT) schreibt, dass Welpen insbesondere zu Beginn sehr zeit- und arbeitsintensiv sind und einen geregelten Tagesablauf mit ausreichenden, ungestörten Ruhephasen brauchen.<sup><a href="#hunde-q1">1</a></sup></p>
+
         <div class="info-box">
           <h3>Auf einen Blick</h3>
           <ul>
-            <li>Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein sein.</li>
-            <li>Ein mittelgroßer Hund kostet laufend etwa 100–240 Euro im Monat, über zwölf Jahre mit Anschaffung rund 14.000–37.000 Euro, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet.</li>
+            <li>Als Orientierung gelten 4 bis 5 Stunden am Stück, die ein erwachsener Hund allein bleiben sollte. Eine gesetzliche Zahl gibt es nicht; die Tierschutz-Hundeverordnung verlangt mehrmals täglich Umgang mit der Betreuungsperson.</li>
+            <li>Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, zusammen etwa 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Laufend sind das etwa 100 bis 240 Euro im Monat. Notfälle sind nicht eingerechnet.</li>
             <li>Die Kosten einer Kastration hängen von Geschlecht, Gewicht, Narkose, Operationsmethode, Medikamenten und Nachsorge ab.</li>
-            <li>Rund 80 % der unkastrierten Rüden ab sechs Jahren haben eine gutartige Prostatavergrößerung, ab neun Jahren etwa 95 %. Nicht jede verursacht Beschwerden (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8782267/" target="_blank" rel="noopener noreferrer">Ruetten et al. 2021</a>).</li>
+            <li>Die meisten unkastrierten Rüden entwickeln im Alter eine gutartige Prostatavergrößerung; nicht jede verursacht Beschwerden. Nach einer Literaturangabe, zitiert bei <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8782267/" target="_blank" rel="noopener noreferrer">Ruetten et al. 2021</a>, sind es rund 80 % ab sechs Jahren und etwa 95 % ab neun Jahren.</li>
             <li>Ein Garten ersetzt keine Spaziergänge – Hunde brauchen Auslauf, neue Reize, Gerüche und Sozialkontakte außerhalb ihres gewohnten Territoriums.</li>
           </ul>
         </div><div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
             <div class="metric-card"><strong>4–5 h</strong><span>länger sollte ein erwachsener Hund nicht regelmäßig allein bleiben.</span></div>
-            <div class="metric-card"><strong>14–37 Tsd. €</strong><span>Lebenszeitkosten über zwölf Jahre, im Mittel etwa 26.000 €. Notfälle sind nicht eingerechnet.</span></div>
+            <div class="metric-card"><strong>3,20–8,45 € pro Tag</strong><span>über zwölf Jahre, zusammen etwa 14.000 bis 37.000 €, im Mittel 26.000 €. Notfälle sind nicht eingerechnet.</span></div>
             <div class="metric-card"><strong>täglich</strong><span>Beziehung, Bewegung und Beschäftigung. Nicht nur am Wochenende.</span></div>
           </div>
+
+        <div class="section-feedback-heading"><h2 id="hunde-braucht">Was ein Hund von dir braucht</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-braucht" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <p class="hunde-muster-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
+
+        <section class="hunde-feld" aria-labelledby="hunde-f1">
+          <div class="hunde-feld-kopf"><span class="hunde-feld-nr">Feld 1</span><h3 id="hunde-f1">Artgenossen und Menschen</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd>
+              <p class="hunde-mass">Mehrmals täglich Umgang mit dir und regelmäßig Kontakt zu anderen Hunden. Ein Welpe braucht bis zur 20. Lebenswoche mindestens vier Stunden Umgang pro Tag.<sup><a href="#hunde-q2">2</a></sup></p>
+              <p>So steht es in § 2 Abs. 1 der Tierschutz-Hundeverordnung. Den Kontakt zu Artgenossen darf man nur im Einzelfall verweigern, wenn Gesundheit oder Unverträglichkeit es verlangen. Ein einzeln gehaltener Hund soll täglich mehrmals länger dauernden Umgang mit Betreuungspersonen bekommen (§ 2 Abs. 3).<sup><a href="#hunde-q2">2</a></sup> Nach der Begründung der Verordnung gilt eine Stunde Umgang täglich als Minimum.<sup><a href="#hunde-q3">3</a></sup></p>
+            </dd>
+            <dt>Zum Vorstellen</dt>
+            <dd>
+              <p>Vier Stunden pro Tag sind ein halber Arbeitstag. Zieht ein Welpe in der neunten Woche ein, sind es bis zur 20. Woche 308 Stunden Umgang.</p>
+              <p class="hunde-rechnung">Rechnung: 11 Wochen × 7 Tage × 4 Stunden = 308 Stunden.</p>
+            </dd>
+            <dt class="hunde-frage-t">Frage an dich</dt>
+            <dd class="hunde-frage">Wer ist in den ersten Wochen da, wenn du arbeiten gehst, und wo trifft dein Hund andere Hunde?</dd>
+          </dl>
+        </section>
+
+        <section class="hunde-feld" aria-labelledby="hunde-f2">
+          <div class="hunde-feld-kopf"><span class="hunde-feld-nr">Feld 2</span><h3 id="hunde-f2">Platz und Bewegung</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd>
+              <p class="hunde-mass">Ausreichend Auslauf im Freien außerhalb eines Zwingers; als Richtwert gilt eine Stunde täglich.<sup><a href="#hunde-q2">2</a>,<a href="#hunde-q3">3</a></sup></p>
+              <p>Die Verordnung nennt keine feste Stundenzahl, verlangt aber Auslauf, der zu Rasse, Alter und Gesundheit des Hundes passt.<sup><a href="#hunde-q2">2</a></sup> Als Richtwert bleibt eine Stunde Auslauf täglich bestehen.<sup><a href="#hunde-q3">3</a></sup> Der Deutsche Tierschutzbund rät, den Hund viermal täglich auszuführen, damit er sein „Geschäft“ verrichten kann, und betont, dass Hunde je nach Alter und Rasse viel Bewegung brauchen.<sup><a href="#hunde-q4">4</a></sup> Warum ein Garten die Spaziergänge nicht ersetzt, steht unter <a href="../hunde/garten-auslauf/index.html">Garten &amp; Auslauf</a>.</p>
+            </dd>
+            <dt>Zum Vorstellen</dt>
+            <dd>
+              <p>Eine Stunde am Tag sind in zwölf Jahren 4.380 Stunden, das sind mehr als 182 volle Tage.</p>
+              <p class="hunde-rechnung">Rechnung: 12 Jahre × 365 Tage × 1 Stunde = 4.380 Stunden; 4.380 ÷ 24 = 182,5 Tage.</p>
+            </dd>
+            <dt class="hunde-frage-t">Frage an dich</dt>
+            <dd class="hunde-frage">Wann gehst du raus, wenn es regnet, friert oder du selbst krank bist?</dd>
+          </dl>
+        </section>
+
+        <section class="hunde-feld" aria-labelledby="hunde-f3">
+          <div class="hunde-feld-kopf"><span class="hunde-feld-nr">Feld 3</span><h3 id="hunde-f3">Futter</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd>
+              <p class="hunde-mass">Zwei Mahlzeiten am Tag, nicht mehr als 12 Stunden Abstand, und ständig frisches Wasser.<sup><a href="#hunde-q5">5</a></sup></p>
+              <p>VIER PFOTEN schreibt, erwachsene Hunde könnten zweimal täglich Futter erhalten; zwischen den beiden Mahlzeiten sollten nicht mehr als 12 Stunden liegen, sonst kann sich Magensäure anstauen. Welpen bekommen bis zum Alter von drei Monaten die Tagesmenge auf vier Portionen verteilt.<sup><a href="#hunde-q5">5</a></sup> Der Deutsche Tierschutzbund nennt für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung zusammen 1.200 bis 1.350 Euro im Jahr.<sup><a href="#hunde-q4">4</a></sup></p>
+            </dd>
+            <dt>Zum Vorstellen</dt>
+            <dd>
+              <p>Zum Beispiel um 7 und um 19 Uhr, 365 Tage im Jahr, auch am Wochenende. In zwölf Jahren sind das 8.760 Mahlzeiten. Für das Futter allein rechnen wir mit 600 bis 1.500 Euro im Jahr, das sind etwa 1,64 bis 4,11 Euro pro Tag.</p>
+              <p class="hunde-rechnung">Rechnung: 2 × 365 × 12 = 8.760; 600 ÷ 365 = 1,64; 1.500 ÷ 365 = 4,11.</p>
+            </dd>
+            <dt class="hunde-frage-t">Frage an dich</dt>
+            <dd class="hunde-frage">Wer füttert zu festen Zeiten, auch wenn du verreist oder länger arbeiten musst?</dd>
+          </dl>
+        </section>
+
+        <section class="hunde-feld" aria-labelledby="hunde-f4">
+          <div class="hunde-feld-kopf"><span class="hunde-feld-nr">Feld 4</span><h3 id="hunde-f4">Ruhe und Tagesrhythmus</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd>
+              <p class="hunde-mass">Rund 11 Stunden Schlaf in 24 Stunden, ein fester Rückzugsort und ein geregelter Tagesablauf.<sup><a href="#hunde-q6">6</a>,<a href="#hunde-q4">4</a>,<a href="#hunde-q1">1</a></sup></p>
+              <p>In einer Studie gaben Halter für 16 Wochen alte Welpen im Mittel 11,2 Stunden Schlaf pro Tag an und für einjährige Hunde 10,8 Stunden, davon rund sieben Stunden in der Nacht.<sup><a href="#hunde-q6">6</a></sup> Der Tierschutzbund rät zu einem festen Rückzugsort und Schlafplatz, an dem sich der Hund ungestört fühlt; er muss zugluftfrei und stets zugänglich sein.<sup><a href="#hunde-q4">4</a></sup> Die TVT verlangt für Welpen einen geregelten Tagesablauf mit ausreichenden, ungestörten Ruhephasen.<sup><a href="#hunde-q1">1</a></sup> Alleinbleiben muss ein Hund in kleinen Schritten lernen; zwei Wochen reichen dafür nicht.<sup><a href="#hunde-q1">1</a></sup></p>
+            </dd>
+            <dt>Zum Vorstellen</dt>
+            <dd>
+              <p>11 von 24 Stunden sind fast die Hälfte des Tages. Das ist die Zeit, in der niemand am Hund ziehen, ihn wecken oder streicheln soll.</p>
+              <p class="hunde-rechnung">Rechnung: 11 ÷ 24 = 0,46.</p>
+            </dd>
+            <dt class="hunde-frage-t">Frage an dich</dt>
+            <dd class="hunde-frage">Wo in deiner Wohnung liegt ein Platz, an dem dein Hund nicht gestört wird, auch nicht von Besuch oder Kindern?</dd>
+          </dl>
+        </section>
+
+        <section class="hunde-feld" aria-labelledby="hunde-f5">
+          <div class="hunde-feld-kopf"><span class="hunde-feld-nr">Feld 5</span><h3 id="hunde-f5">Gesundheit</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd>
+              <p class="hunde-mass">Ein Hund lebt etwa 8 bis 14 Jahre. Im tierärztlichen Notdienst gilt das Zwei- bis Vierfache des Gebührensatzes plus 50 Euro.<sup><a href="#hunde-q4">4</a>,<a href="#hunde-q7">7</a></sup></p>
+              <p>Die Lebenserwartung nennt der Deutsche Tierschutzbund mit etwa 8 bis 14 Jahren; zu den jährlichen Kosten gehören Impfungen und Entwurmung.<sup><a href="#hunde-q4">4</a></sup> Für Leistungen im Notdienst bei Nacht, am Wochenende oder an einem Feiertag erhöhen sich nach § 4 der Gebührenordnung für Tierärzte die einfachen Gebührensätze auf das Zweifache, in begründeten Fällen bis auf das Vierfache; dazu kommt eine Notdienstgebühr von 50 Euro.<sup><a href="#hunde-q7">7</a></sup> Manche Rassen haben angezüchtete Gesundheitsprobleme, mehr dazu steht unter <a href="../qualzucht/index.html">Qualzucht</a>.</p>
+            </dd>
+            <dt>Zum Vorstellen</dt>
+            <dd>
+              <p>Rechenbeispiel mit einem angenommenen einfachen Gebührensatz von 250 Euro: Im Notdienst sind das zwischen 550 und 1.050 Euro.</p>
+              <p class="hunde-rechnung">Rechnung: 2 × 250 + 50 = 550; 4 × 250 + 50 = 1.050.</p>
+            </dd>
+            <dt class="hunde-frage-t">Frage an dich</dt>
+            <dd class="hunde-frage">Welche Tierarztpraxis erreichst du nachts und am Wochenende, und wie trägst du eine Rechnung von 2.000 Euro?</dd>
+          </dl>
+        </section>
+
+        <div class="section-feedback-heading"><h2 id="hunde-tag">Ein Tag aus Sicht eines Hundes</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <span class="hunde-beispiel-tag">Beispiel, kein echter Hund</span>
+        <ol class="zeitleiste hunde-tag-liste">
+          <li><span class="zeitleiste-when">Früher Morgen</span><p class="zeitleiste-what">Der Hund muss raus, um sein „Geschäft“ zu verrichten. Der Tierschutzbund rät dazu, ihn viermal am Tag auszuführen.<sup><a href="#hunde-q4">4</a></sup></p></li>
+          <li class="hunde-mensch"><span class="zeitleiste-when">Danach: du</span><p class="zeitleiste-what">Erste Mahlzeit und frisches Wasser. Die zweite Mahlzeit folgt nach höchstens 12 Stunden.<sup><a href="#hunde-q5">5</a></sup></p></li>
+          <li><span class="zeitleiste-when">Vormittag</span><p class="zeitleiste-what">Ruhen am festen Platz. Rund 11 Stunden Schlaf gehören zum Tag, ungefähr sieben davon in der Nacht, der Rest verteilt sich auf den Tag.<sup><a href="#hunde-q6">6</a></sup></p></li>
+          <li class="hunde-mensch"><span class="zeitleiste-when">Tagsüber: du</span><p class="zeitleiste-what">Umgang mit dir, mehrmals am Tag. Allein bleibt der Hund nur so lange, wie er es in kleinen Schritten gelernt hat; als Orientierung gelten höchstens 4 bis 5 Stunden am Stück.<sup><a href="#hunde-q1">1</a>,<a href="#hunde-q2">2</a></sup></p></li>
+          <li><span class="zeitleiste-when">Nachmittag</span><p class="zeitleiste-what">Auslauf außerhalb des Gartens, mit Gerüchen, Wegen und Begegnungen. Als Richtwert gilt insgesamt eine Stunde täglich, Kontakt zu anderen Hunden gehört regelmäßig dazu.<sup><a href="#hunde-q2">2</a>,<a href="#hunde-q3">3</a></sup></p></li>
+          <li><span class="zeitleiste-when">Abend und Nacht</span><p class="zeitleiste-what">Zweite Mahlzeit, ruhige Zeit mit dir, dann Schlaf am Rückzugsort.<sup><a href="#hunde-q4">4</a>,<a href="#hunde-q5">5</a></sup></p></li>
+        </ol>
+        <p class="hunde-legende">Der Ablauf ist ein Beispiel aus den genannten Angaben, kein Befund über einen bestimmten Hund. Wie ein Hund seinen Tag verbringt, hängt von Alter, Rasse und Gesundheit ab.</p>
+
+        <div class="section-feedback-heading"><h2 id="hunde-lebenskosten">Was ein Hund über die Jahre kostet</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-lebenskosten" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="faktenzeile">
+          <div><span class="zahl">3,20 bis 8,45 €</span><span class="zahl-text">pro Tag, für einen mittelgroßen Hund, im Durchschnitt über zwölf Jahre</span></div>
+          <div><span class="zahl">14.000 bis 37.000 €</span><span class="zahl-text">in zwölf Jahren, im Mittel etwa 26.000 €, ohne Notfälle, Betreuung und Urlaub</span></div>
+          <div class="klein"><span class="zahl">ab 3,42 €</span><span class="zahl-text">pro Tag als Mindestwert: 17.500 € in 14 Jahren nennen Tierschutzbund und TVT</span></div>
+        </div>
+        <p class="hunde-rechnung">Rechnung: 14.000 ÷ 4.380 Tage = 3,20; 37.000 ÷ 4.380 Tage = 8,45; 17.500 ÷ 5.110 Tage = 3,42.</p>
+        <p class="randnotiz"><strong>Woher die Zahlen kommen.</strong> Die Spannen sind unsere Hochrechnung aus den einzelnen Posten auf der Seite <a href="../hunde/kosten/index.html">Was ein Hund wirklich kostet</a>. Zur Gegenprobe: Der Deutsche Tierschutzbund nennt für einen mittelgroßen Hund als Mindestkosten 17.500 bis 20.000 Euro über 14 Jahre und 1.200 bis 1.350 Euro im Jahr,<sup><a href="#hunde-q4">4</a></sup> die TVT mindestens 17.500 Euro bis zum 14. Lebensjahr.<sup><a href="#hunde-q1">1</a></sup> Beide betonen, dass die Kosten deutlich höher liegen können, etwa durch ungeplante Tierarztbesuche, chronische Erkrankungen oder Betreuung. Der Kaufpreis oder die Schutzgebühr ist darin nur ein Posten unter vielen.</p>
+
+        <div class="section-feedback-heading"><h2 id="hunde-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <div class="hunde-bedenkzeit">
+          <p><strong>Ein Hund muss nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst den Hund an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; für Hunde ist nicht untersucht, ob eine Bedenkzeit die spätere Haltung verbessert. Die TVT rät, keine emotionalen oder spontanen Kaufentscheidungen zu treffen, auch nicht aus Mitleid.<sup><a href="#hunde-q1">1</a></sup> Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+        </div>
+
+        <div class="hunde-karte">
+          <span class="hunde-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span class="hunde-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="hunde-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="hunde-wenn"><b>Wenn</b> ich die Mutterhündin nicht sehen darf,</span><span class="hunde-dann"><b>dann</b> fahre ich ohne Welpen wieder heim.<sup><a href="#hunde-q1">1</a></sup></span></li>
+            <li><span class="hunde-wenn"><b>Wenn</b> der Welpe nicht über acht Wochen alt ist,</span><span class="hunde-dann"><b>dann</b> nehme ich ihn nicht mit.<sup><a href="#hunde-q2">2</a></sup> Warum wir neun bis elf Wochen empfehlen, steht auf der Seite <a href="../hunde/abgabealter/index.html">Abgabealter beim Welpen</a>.</span></li>
+            <li><span class="hunde-wenn"><b>Wenn</b> die Übergabe auf einem Parkplatz oder an einer Raststätte stattfinden soll,</span><span class="hunde-dann"><b>dann</b> sage ich ab und melde den Verdacht dem Veterinäramt.<sup><a href="#hunde-q1">1</a></sup></span></li>
+            <li><span class="hunde-wenn"><b>Wenn</b> mir ein Hund leidtut,</span><span class="hunde-dann"><b>dann</b> rufe ich das nächste Tierheim an und frage dort nach Hunden, statt zu kaufen.<sup><a href="#hunde-q1">1</a></sup></span></li>
+          </ul>
+          <p class="hunde-karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf <a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+
+        <p>Die TVT rät, sich zuerst über örtliche Tierheime und verantwortungsvolle Züchter zu informieren, und empfiehlt, Tierheimhunde mehrmals zu besuchen und nach Möglichkeit Gassi zu führen.<sup><a href="#hunde-q1">1</a></sup> Die Reihenfolge, die wir empfehlen: erst Tierheim und Tierschutzverein, danach alles andere.</p>
+
+        <div class="hunde-wege">
+          <div class="hunde-weg">
+            <span class="hunde-weg-label">Weg A</span>
+            <h3>Ich suche einen Hund im Tierschutz</h3>
+            <p>Hunde, die schon da sind und ein Zuhause suchen.</p>
+            <p class="hunde-go"><a href="../adoption/index.html">Adoption statt Kauf</a><br><a href="../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+          </div>
+          <div class="hunde-weg hunde-weg-noch-nicht">
+            <span class="hunde-weg-label">Weg B, gleichwertig</span>
+            <h3>Noch nicht</h3>
+            <p>Wenn Zeit, Geld oder Platz gerade fehlen, ist Warten eine gute Entscheidung, und es gibt Wege, dem Wunsch trotzdem näher zu kommen.</p>
+            <p class="hunde-go"><a href="../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a></p>
+          </div>
+        </div>
+
+        <div class="section-feedback-heading"><h2 id="hunde-quellen">Quellen</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-quellen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
+        <ol class="source-list hunde-quellen-liste" aria-label="Quellen zur Hunde-Übersicht">
+          <li id="hunde-q1">Tierärztliche Vereinigung für Tierschutz (TVT): <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&amp;did=421" target="_blank" rel="noopener noreferrer">Merkblatt Nr. 197 „Aufnahme eines Hundes“</a>, Stand Oktober 2025</li>
+          <li id="hunde-q2"><a href="https://www.gesetze-im-internet.de/tierschhuv/__2.html" target="_blank" rel="noopener noreferrer">Tierschutz-Hundeverordnung, § 2</a> (Allgemeine Anforderungen an das Halten)</li>
+          <li id="hunde-q3">Schwarzer, A., Erhard, M.: <a href="https://bundestieraerztekammer.de/btk/dtbl/archiv/2023/artikel/DTBl_01_2023_TierSchHuV.pdf" target="_blank" rel="noopener noreferrer">Änderungen in der Tierschutz-Hundeverordnung</a>, Deutsches Tierärzteblatt 71 (1), 2023</li>
+          <li id="hunde-q4">Deutscher Tierschutzbund: <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/" target="_blank" rel="noopener noreferrer">Hunde richtig halten</a> (Kostenübersicht, Auslauf, Rückzugsort)</li>
+          <li id="hunde-q5">VIER PFOTEN: <a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-haustiere/hunde-richtig-fuettern-1" target="_blank" rel="noopener noreferrer">Hunde richtig füttern</a></li>
+          <li id="hunde-q6">Kinsman, R. u. a. (2020): <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7401528/" target="_blank" rel="noopener noreferrer">Sleep Duration and Behaviours: A Descriptive Analysis of a Cohort of Dogs up to 12 Months of Age</a>. Animals 10 (7): 1172</li>
+          <li id="hunde-q7"><a href="https://www.gesetze-im-internet.de/got_2022/__4.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärztinnen und Tierärzte (GOT), § 4</a> (Gebühren für den tierärztlichen Notdienst)</li>
+        </ol>
         <div class="info-box">
           <h3>Wähle den Punkt, an dem deine Entscheidung gerade hängt</h3>
           <p>Prüfe Sozialkontakt, Platz, Bewegung, Futter, Gesundheit, Kosten und Betreuung für die gewählte Tierart.</p>
@@ -7265,11 +7620,11 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           <div class="faq-list">
             <details class="faq-item">
               <summary>Wie lange darf ein Hund allein zu Hause bleiben?</summary>
-              <p>Erwachsene Hunde sollten nicht länger als 4–5 Stunden am Stück allein bleiben. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.</p>
+              <p>Als Orientierung gelten 4 bis 5 Stunden am Stück. Eine gesetzliche Zahl gibt es nicht; die Tierschutz-Hundeverordnung verlangt mehrmals täglich Umgang mit der Betreuungsperson. Regelmäßige 8 Stunden oder mehr sind aus Tierschutzsicht nicht vertretbar.</p>
             </details>
             <details class="faq-item">
-              <summary>Was kostet ein Hund im Monat?</summary>
-              <p>Für einen mittelgroßen Hund sind laufend etwa 100–240 Euro pro Monat realistisch. Über zwölf Jahre kommen mit Anschaffung rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet.</p>
+              <summary>Was kostet ein Hund pro Tag und im ganzen Leben?</summary>
+              <p>Für einen mittelgroßen Hund sind es über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, laufend etwa 100–240 Euro im Monat. Zusammen mit der Anschaffung kommen rund 14.000–37.000 Euro zusammen, im Mittel etwa 26.000 Euro. Notfälle sind nicht eingerechnet. Der Deutsche Tierschutzbund nennt als Mindestkosten 17.500 bis 20.000 Euro für 14 Jahre.</p>
             </details>
           </div>
         </div>
@@ -7280,11 +7635,11 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.</li><li>Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.</li><li>Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.</li><li>Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung.</li></ul>
+              <ul><li>Regelmäßiges Alleinbleiben über einen normalen Arbeitstag ist für Hunde nicht vertretbar, wenn keine Betreuung da ist.</li><li>Ein Garten ersetzt keine Spaziergänge, keine Beziehung und keine neuen Umweltreize außerhalb des gewohnten Territoriums.</li><li>Zwingerhaltung ist nicht pauschal verboten, aber sie ersetzt weder Auslauf außerhalb des Zwingers noch Sozialkontakt, Umgang und Beschäftigung.</li><li>Laufende Kosten, Hundesteuer, Versicherung und Tierarztpuffer gehören vor dem Einzug in die Entscheidung. Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a></li><li><a href="https://www.tierschutzbund.de" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a></li><li><a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer">Tierschutz-Hundeverordnung</a></li><li><a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a></li></ul>
+              <ul><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&amp;did=421" target="_blank" rel="noopener noreferrer">TVT: Merkblatt Nr. 197 Aufnahme eines Hundes</a></li><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Hunde richtig halten</a></li><li><a href="https://www.gesetze-im-internet.de/tierschhuv/" target="_blank" rel="noopener noreferrer">Tierschutz-Hundeverordnung</a></li><li><a href="https://www.gesetze-im-internet.de/got_2022/__4.html" target="_blank" rel="noopener noreferrer">Gebührenordnung für Tierärzte (GOT), § 4</a></li><li><a href="https://www.tasso.net" target="_blank" rel="noopener noreferrer">TASSO e. V.</a></li><li><a href="https://www.bundestieraerztekammer.de" target="_blank" rel="noopener noreferrer">Bundestierärztekammer</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>

@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bevor Vögel einziehen - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.">
+  <meta name="description" content="Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Vögel halten, Wellensittiche, Schwarmhaltung, Freiflug, UV-Licht">
   <meta property="og:title" content="Bevor Vögel einziehen - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.">
+  <meta property="og:description" content="Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/voegel/entscheidung/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/voegel-entscheidung.png">
@@ -22,10 +22,10 @@
   <meta property="og:image:alt" content="Gruppe von Wellensittichen in einer großen Voliere.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bevor Vögel einziehen - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.">
+  <meta name="twitter:description" content="Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/voegel-entscheidung.png">
   <meta name="twitter:image:alt" content="Gruppe von Wellensittichen in einer großen Voliere.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/voegel/entscheidung/index.html">
@@ -6706,6 +6706,196 @@ body.static-site .article-hero-media {
 }
 body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 
+/* ===== Paket selbsttest: Endbildschirm mit nächstem Schritt ===== */
+#selbsttest .test-next-step { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--primary-light); }
+#selbsttest .test-next-step p { margin: 0.4rem 0 0.9rem; }
+#selbsttest .test-next-step .btn { display: inline-block; max-width: 100%; white-space: normal; text-align: center; }
+#selbsttest .test-share { margin-top: 1.25rem; }
+
+/* ---------- Volltextsuche: Trefferdarstellung (Paket suche) ---------- */
+.site-search-result .site-search-where {
+  color: var(--ink-3, var(--text-muted));
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.site-search-result .site-search-snippet {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.site-search-result mark {
+  background: rgba(214, 160, 40, 0.28);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.08em;
+}
+.site-search-kind {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--rule-strong, var(--border));
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+}
+.site-search-result strong { overflow-wrap: anywhere; }
+.site-search-result { min-height: 2.75rem; }
+@media (max-width: 768px) {
+  .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
+  .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+
+/* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
+.kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
+.kv-randnotiz { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+.kv-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+.kv-feld { border-top: 2px solid var(--ink); margin: 0 0 2rem; padding-top: 0.9rem; }
+.kv-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.6rem; }
+.kv-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--red-dark); white-space: nowrap; }
+.kv-feld-kopf h3 { margin: 0; }
+.kv-feld dl { margin: 0; }
+.kv-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+.kv-feld dd { margin: 0; }
+.kv-feld dd p { margin: 0 0 0.5rem; max-width: none; }
+.kv-feld .kv-mass { font-weight: 600; }
+.kv-feld dd.kv-frage { font-size: 1.08rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+.kv-feld dt.kv-t-frage { color: var(--green-dark); }
+.kv-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+.kv-beispiel-tag { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+.kv-fakten { display: grid; grid-template-columns: 1fr; margin: 1.4rem 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); }
+.kv-fakten > div { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.kv-fakten > div:last-child { border-bottom: 0; }
+.kv-zahl { display: block; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--red-dark); }
+.kv-zahl-text { display: block; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.4; color: var(--ink-2); margin-top: 0.3rem; }
+.kv-klein .kv-zahl { font-size: 1.45rem; color: var(--ink-2); }
+.kv-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.kv-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+.kv-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+.kv-karte ul { list-style: none; margin: 0; padding: 0; }
+.kv-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.kv-karte li:first-child { border-top: 0; padding-top: 0; }
+.kv-wenn, .kv-dann { display: block; }
+.kv-wenn b, .kv-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+.kv-dann { font-weight: 600; }
+.kv-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+.kv-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+.kv-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+.kv-weg.kv-noch-nicht { border-top-color: var(--ochre); }
+.kv-weg h3 { margin: 0 0 0.4rem; }
+.kv-weg p { margin-bottom: 0.7rem; }
+.kv-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  .kv-fakten { grid-template-columns: repeat(3, 1fr); }
+  .kv-fakten > div { border-bottom: 0; border-right: 1px solid var(--rule); padding: 1rem 1rem 1rem 0; }
+  .kv-fakten > div + div { padding-left: 1rem; }
+  .kv-fakten > div:last-child { border-right: 0; }
+  .kv-wege { grid-template-columns: 1fr 1fr; }
+
+/* ===================================================================
+   Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
+   Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
+   ========================================================================== */
+.hunde-einstieg { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
+.hunde-einstieg-frage { display: block; margin-top: 0.4rem; font-weight: 600; color: var(--red-dark); }
+.hunde-muster-hinweis { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; }
+.hunde-feld { margin: 1.6rem 0; padding: 1rem 0 0.3rem; border-top: 2px solid var(--ink); }
+.hunde-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.9rem; margin-bottom: 0.6rem; }
+.hunde-feld-kopf h3 { margin: 0; }
+.hunde-feld-nr { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-feld dl { margin: 0; display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.8rem 1.4rem; }
+.hunde-feld dt { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); padding-top: 0.25rem; }
+.hunde-feld dd { margin: 0; min-width: 0; }
+.hunde-feld dd p { margin: 0 0 0.6rem; max-width: none; }
+.hunde-mass { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.hunde-rechnung { font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.45; color: var(--ink-2); }
+.hunde-frage-t { color: var(--red-dark) !important; }
+.hunde-frage { font-style: italic; border-left: 3px solid var(--red); padding-left: 0.8rem; }
+.hunde-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); padding: 0.15rem 0.5rem; margin-bottom: 0.4rem; }
+.hunde-tag-liste li.hunde-mensch::before { border-color: var(--ochre); background: var(--ochre-tint); }
+.hunde-tag-liste li.hunde-mensch .zeitleiste-when { color: var(--ochre); }
+.hunde-legende { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: 60ch; }
+.hunde-bedenkzeit { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: var(--green-tint); }
+.hunde-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-bedenkzeit p:last-child { margin-bottom: 0; }
+.hunde-karte { margin: 1.4rem 0; padding: 1rem 1.2rem; border: 2px solid var(--ink); background: var(--card); }
+.hunde-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.6rem; }
+.hunde-karte ul { list-style: none; margin: 0; padding: 0; }
+.hunde-karte li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem 1.2rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.hunde-karte li:first-child { border-top: 0; }
+.hunde-karte b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
+.hunde-karte-fuss { font-size: 0.92rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.hunde-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.hunde-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); background: var(--card); }
+.hunde-weg-noch-nicht { border-color: var(--green); background: var(--green-tint); }
+.hunde-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.3rem; }
+.hunde-weg h3 { margin: 0 0 0.4rem; }
+.hunde-weg p { margin: 0 0 0.5rem; max-width: none; }
+.hunde-quellen-liste { font-size: 0.92rem; }
+@media (max-width: 640px) {
+  .hunde-feld dl { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .hunde-feld dt { padding-top: 0.6rem; }
+  .hunde-karte li { grid-template-columns: minmax(0, 1fr); }
+}
+=======
+/* ===== Paket Kleintiere: Muster „vom Tier aus gedacht“ (Präfix kt-) ===== */
+body.static-site .kt-einstieg { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
+body.static-site .kt-einstieg strong { font-weight: 600; }
+body.static-site .kt-randnotiz { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; color: var(--ink-2); margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-randnotiz strong { color: var(--ink); }
+body.static-site .kt-hinweis { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0 0 1.2rem; }
+body.static-site .kt-feld { border-top: 2px solid var(--ink); margin: 0 0 2.2rem; padding-top: 0.9rem; }
+body.static-site .kt-feld-kopf { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.7rem; }
+body.static-site .kt-feld-nr { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); white-space: nowrap; }
+body.static-site .kt-feld-kopf h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+body.static-site .kt-feld dl { margin: 0; }
+body.static-site .kt-feld dt { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0.9rem 0 0.2rem; }
+body.static-site .kt-feld dd { margin: 0; }
+body.static-site .kt-feld dd p { margin: 0 0 0.6rem; }
+body.static-site .kt-feld .kt-mass { font-weight: 600; }
+body.static-site .kt-feld .kt-art { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); display: block; margin: 0.8rem 0 0.1rem; }
+body.static-site .kt-feld dd.kt-frage { font-size: 1.1rem; font-weight: 600; line-height: 1.4; padding: 0.7rem 0.9rem; background: var(--card); border-left: 4px solid var(--green); }
+body.static-site .kt-feld dt.kt-t-frage { color: var(--green-dark); }
+body.static-site .kt-rechnung { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-3); }
+body.static-site .kt-beispiel { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--ochre-tint); color: #5f4210; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.9rem; }
+body.static-site .kt-zeit { list-style: none; margin: 0.5rem 0 1rem 0.5rem; padding: 0 0 0 0.9rem; border-left: 2px solid var(--rule-strong); }
+body.static-site .kt-zeit li { position: relative; padding: 0 0 1.3rem 1.1rem; margin: 0; }
+body.static-site .kt-zeit li:last-child { padding-bottom: 0.2rem; }
+body.static-site .kt-zeit li::before { content: ""; position: absolute; left: -1.5rem; top: 0.5rem; width: 0.8rem; height: 0.8rem; background: var(--paper); border: 2px solid var(--red); border-radius: 50%; }
+body.static-site .kt-zeit li.kt-mensch::before { border-color: var(--green); background: var(--green-tint); }
+body.static-site .kt-wann { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-dark); }
+body.static-site .kt-zeit li.kt-mensch .kt-wann { color: var(--green-dark); }
+body.static-site .kt-zeit p { margin: 0.1rem 0 0; }
+body.static-site .kt-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); }
+body.static-site .kt-bedenkzeit { border-left: 4px solid var(--ochre); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+body.static-site .kt-bedenkzeit strong { font-size: 1.15rem; }
+body.static-site .kt-karte { background: var(--card); border: 2px solid var(--ink); padding: 1.1rem 1.1rem 0.7rem; margin: 1.2rem 0; }
+body.static-site .kt-karte-titel { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); display: block; margin-bottom: 0.7rem; }
+body.static-site .kt-karte ul { list-style: none; margin: 0; padding: 0; }
+body.static-site .kt-karte li { padding: 0.7rem 0; border-top: 1px solid var(--rule); margin: 0; }
+body.static-site .kt-karte li:first-child { border-top: 0; padding-top: 0; }
+body.static-site .kt-wenn, body.static-site .kt-dann { display: block; }
+body.static-site .kt-wenn b, body.static-site .kt-dann b { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.3rem; }
+body.static-site .kt-dann { font-weight: 600; }
+body.static-site .kt-karte-fuss { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-3); margin: 0.3rem 0 0.4rem; }
+body.static-site .kt-wege { display: grid; gap: 0.9rem; margin: 1.2rem 0; }
+body.static-site .kt-weg { background: var(--card); border: 1px solid var(--rule-strong); border-top: 4px solid var(--green); padding: 1rem 1.1rem; }
+body.static-site .kt-weg.kt-noch-nicht { border-top-color: var(--ochre); }
+body.static-site .kt-weg h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+body.static-site .kt-weg p { font-size: 1rem; margin-bottom: 0.7rem; }
+body.static-site .kt-weg .kt-go { font-family: var(--font-sans); font-weight: 700; font-size: 0.95rem; margin-bottom: 0; }
+body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 0.3rem; }
+@media (min-width: 640px) {
+  body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
+}
+@media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+
 
   </style>
   <script type="application/ld+json">
@@ -6714,7 +6904,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   "@type": "WebPage",
   "name": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
   "headline": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
-  "description": "Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
+  "description": "Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
   "url": "https://wahre-haustierliebe.de/voegel/entscheidung/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6732,7 +6922,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
     "caption": "Gruppe von Wellensittichen in einer großen Voliere."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Vögel halten, Wellensittiche, Schwarmhaltung, Freiflug, UV-Licht",
   "about": [
@@ -6789,6 +6979,67 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       "name": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
       "item": "https://wahre-haustierliebe.de/voegel/entscheidung/index.html"
     }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
+  "name": "Bevor Vögel einziehen - Wa(h)re Haustier(liebe)",
+  "description": "Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.",
+  "url": "https://wahre-haustierliebe.de/voegel/entscheidung/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/voegel/entscheidung/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/voegel-entscheidung.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Gruppe von Wellensittichen in einer großen Voliere."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-11-07",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Vögel halten, Wellensittiche, Schwarmhaltung, Freiflug, UV-Licht",
+  "articleSection": "Entscheidung vor der Vogelhaltung prüfen.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Vögel halten"
+    },
+    {
+      "@type": "Thing",
+      "name": "Wellensittiche"
+    },
+    {
+      "@type": "Thing",
+      "name": "Schwarmhaltung"
+    },
+    {
+      "@type": "Thing",
+      "name": "Freiflug"
+    },
+    {
+      "@type": "Thing",
+      "name": "UV-Licht"
+    }
+  ],
+  "citation": [
+    "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/",
+    "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf",
+    "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58",
+    "https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/"
   ]
 }
   </script>
@@ -6935,7 +7186,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <label class="site-search-label" for="site-search-input">Suchen</label>
       <input class="site-search-input" id="site-search-input" type="search" placeholder="Tier, Thema oder Warnsignal" autocomplete="off">
     </div>
-    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema oder ein Warnsignal ein.</li></ul>
+    <ul class="site-search-results" id="site-search-results"><li class="site-search-empty">Gib ein Tier, ein Thema, ein Warnsignal oder einen Fachbegriff ein.</li></ul>
   </aside>
 
   <!-- Mobile Nav -->
@@ -7053,7 +7304,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
       <div class="container">
         <div class="article-hero-copy">
           <h1>Bevor Vögel einziehen</h1>
-                  <p>Die wichtigsten Fragen zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.</p>
+                  <p>Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 44%;" data-image-purpose="Bevor Vögel einziehen: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7068,21 +7319,50 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
         <p class="text-muted"><a href="../../voegel/index.html">Zurück zur Übersicht: Vögel</a></p>
         <div class="topic-page-content">
 <h2>Bevor du dich entscheidest</h2>
-        <p>Die entscheidende Frage ist nicht, ob du Vögel schön findest. Sie lautet: Kannst und willst du deinen Wohnraum und deinen Alltag über Jahre an fliegende, soziale, laute und empfindliche Tiere anpassen?</p>
+        <p>Die entscheidende Frage ist nicht, ob du Vögel schön findest. Sie lautet: Kannst und willst du deinen Wohnraum und deinen Alltag über Jahre an fliegende, soziale, laute und empfindliche Tiere anpassen? Die Maße zu Gruppe, Platz, Futter, Ruhe und Gesundheit stehen auf der <a href="../../voegel/index.html">Vögel-Übersicht</a>; hier geht es um die Entscheidung selbst.</p>
+
+        <h3>Zuerst die Zahl über das ganze Leben</h3>
+        <div class="kv-fakten">
+          <div><span class="kv-zahl">0,90 bis 1,80 €</span><span class="kv-zahl-text">am Tag für zwei Wellensittiche, als Untergrenze</span></div>
+          <div><span class="kv-zahl">3.200 bis 6.600 €</span><span class="kv-zahl-text">über zehn Jahre für ein Paar, einschließlich Erstausstattung</span></div>
+          <div class="kv-klein"><span class="kv-zahl">unter 2 %</span><span class="kv-zahl-text">der Summe machen die Vögel selbst aus (30 bis 100 Euro für ein Paar)</span></div>
+        </div>
+        <p class="kv-rechnung">Rechnung: 3.200 ÷ 3.650 Tage = 0,88 und 6.600 ÷ 3.650 Tage = 1,81 Euro am Tag. Die Einzelposten stehen auf der Seite <a href="../../voegel/wellensittiche-kosten/index.html">Was Wellensittiche wirklich kosten</a>; Notfälle, Beleuchtung und Betreuung sind nicht eingerechnet.</p>
+
+        <h3>Bedenkzeit</h3>
+        <div class="kv-bedenkzeit">
+          <p><strong>Wellensittiche müssen nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für Heimtiere nicht untersucht. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+        </div>
+        <div class="kv-karte">
+          <span class="kv-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span class="kv-wenn"><b>Wenn</b> es heißt „nur noch heute“ oder „andere Interessenten warten“,</span><span class="kv-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kv-wenn"><b>Wenn</b> ich nur einen einzelnen Vogel mitnehmen soll oder ein Paar getrennt werden soll,</span><span class="kv-dann"><b>dann</b> nehme ich keinen mit. Der Tierschutzbund nennt Einzelhaltung tierschutzwidrig und rät, Paare nicht zu trennen.</span></li>
+            <li><span class="kv-wenn"><b>Wenn</b> ich die Vögel nicht dort sehen darf, wo sie leben, oder sie einzeln in sehr kleinen Käfigen sitzen,</span><span class="kv-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
+            <li><span class="kv-wenn"><b>Wenn</b> mir ein Vogel leidtut,</span><span class="kv-dann"><b>dann</b> rufe ich das nächste Tierheim an und frage dort nach Wellensittichen, statt zu kaufen.</span></li>
+          </ul>
+          <p class="kv-karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+
+        <h3>Checkliste</h3>
         <ul class="checklist">
-          <li>Ich nehme mindestens zwei passende Tiere auf und trenne keine bestehenden Paare.</li>
-          <li>Ich habe dauerhaft Platz für eine große, horizontal nutzbare Voliere und täglich mehrere Stunden sicheren Freiflug.</li>
+          <li>Ich habe zuerst im Tierheim oder bei einer Tierschutzorganisation angefragt, ob dort Wellensittiche ein Zuhause suchen (<a href="../../adoption/index.html">Adoption</a>).</li>
+          <li>Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte.</li>
+          <li>Ich nehme mindestens zwei passende Tiere auf, am besten vier oder mehr, und trenne keine bestehenden Paare.</li>
+          <li>Ich habe dauerhaft Platz für eine große, horizontal nutzbare Voliere (für zwei bis sechs Vögel mindestens 2 × 1 × 2 Meter, Tierschutzbund) und täglich mehrere Stunden sicheren Freiflug.</li>
           <li>Ich kann einen ganzen Raum vogelsicher machen und Küche, Dämpfe, Rauch, Duftstoffe, Giftpflanzen, offene Fenster und andere Haustiere zuverlässig fernhalten.</li>
-          <li>Ich kann Tageslicht, geeignete Zusatzbeleuchtung und mindestens zehn Stunden ungestörte Nachtruhe sicherstellen.</li>
+          <li>Ich kann Tageslicht, geeignete Zusatzbeleuchtung und mindestens zehn Stunden ungestörte Nachtruhe sicherstellen (Nachtruhe nach Tierschutzbund).</li>
           <li>Ich übernehme tägliche Reinigung, Frischfutter, Futtersuche, Beobachtung, Lärm, Staub, Kot und Schäden an der Einrichtung.</li>
           <li>Ich kenne eine vogelkundige Praxis, habe eine Transportmöglichkeit und eine ausreichende Rücklage für Diagnostik und Notfälle.</li>
           <li>Ich habe verlässliche Betreuung für Urlaub, Krankheit und andere Ausfälle.</li>
-          <li>Ich bin bereit, zehn bis fünfzehn Jahre für Wellensittiche und bei größeren Papageien mehrere Jahrzehnte Verantwortung zu tragen.</li>
-          <li>Ich werde nicht züchten, keine Qualzucht kaufen und keinen neuen Markt für weitere Vögel schaffen.</li>
+          <li>Ich bin bereit, viele Jahre Verantwortung zu tragen: Wellensittiche können bis zu 15 Jahre alt werden, im Durchschnitt werden sie in Menschenhand fünf bis acht (Tierschutzbund) beziehungsweise acht bis zwölf Jahre alt (TVT). Bei anderen Arten informiere ich mich vorher über ihre Lebenserwartung.</li>
+          <li>Ich werde nicht züchten, keine Qualzucht kaufen (der Tierschutzbund zählt Schau- und Haubenwellensittiche dazu, mehr unter <a href="../../voegel/qualzucht/index.html">Schauwellensittiche – Qualzucht mit Federn</a>) und keinen neuen Markt für weitere Vögel schaffen.</li>
+          <li>Ich habe den Tagesbetrag gelesen und kann ihn dauerhaft aufbringen, und ich habe eine Rücklage für den Tierarzt.</li>
         </ul>
         <div class="warning-box">
           <h3>Wenn du bei mehreren Punkten zögerst</h3>
-          <p>Dann nimm keine Vögel auf. Verzicht ist keine Lieblosigkeit, sondern eine verantwortliche Entscheidung. Du kannst Tierheime, Auffangstationen und Lebenshöfe unterstützen, ohne neue Tiere in Gefangenschaft nachzufragen.</p>
+          <p>Dann nimm keine Vögel auf. Verzicht ist keine Lieblosigkeit, sondern eine verantwortliche Entscheidung, und „Noch nicht“ steht gleichwertig neben „Ja“. Was dir jetzt weiterhilft, steht auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a>. Du kannst Tierheime, Auffangstationen und Lebenshöfe unterstützen, ohne neue Tiere in Gefangenschaft nachzufragen.</p>
         </div>
         </div>
 
@@ -7111,7 +7391,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           </a>
           <a class="topic-context-link" href="../../voegel/partnerersatz/index.html">
             <strong>Spiegel und Plastikvögel ersetzen keinen Partner</strong>
-            <span>Warum falscher Partnerersatz Heimvögel fehlprägt und echtes Sozialverhalten verhindert.</span>
+            <span>Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.</span>
           </a>
           <a class="topic-context-link" href="../../voegel/ruhe-schlaf/index.html">
             <strong>Ruhe und Schlaf bei Vögeln</strong>
@@ -7143,13 +7423,32 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
           </a>
           <a class="topic-context-link" href="../../voegel/qualzucht/index.html">
             <strong>Schauwellensittiche und Qualzucht</strong>
-            <span>Warum überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sein können.</span>
+            <span>Warum Schau- und Haubenwellensittiche als Qualzucht gelten und überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sind.</span>
           </a>
           </div>
         </nav>
       </div>
     </div>
-  </section>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="voegel-entscheidung">
+          <span class="eyebrow">Zum Vertiefen</span>
+          <h2>Fachquellen und wichtige Grenzen</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kurz festgehalten</h3>
+              <ul><li>Zwei Wellensittiche kosten mindestens etwa 0,90 bis 1,80 Euro am Tag; die Vögel selbst machen weniger als 2 Prozent der Summe aus.</li><li>Der Tierschutzbund empfiehlt, zuerst beim örtlichen Tierheim nachzufragen, und rät, Paare nicht zu trennen; Einzelhaltung nennt er tierschutzwidrig.</li><li>Schau- und Haubenwellensittiche zählt der Tierschutzbund zu den Qualzuchten.</li><li>Eine Bedenkzeit von drei Nächten und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Fachquellen</h3>
+              <ul><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Wellensittiche richtig halten</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Wellensittiche_Haltung_web.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre zur Haltung von Wellensittichen</a></li><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&amp;did=58" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz: Merkblatt 173 Wellensittiche</a></li><li><a href="https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/" target="_blank" rel="noopener noreferrer">go4vet: Was kostet ein Wellensittich?</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Grenzen der Einordnung</h3>
+              <ul><li>Die Kosten pro Tag sind eine Untergrenze und eine eigene Hochrechnung aus den Praxisangaben von go4vet.</li><li>Wer zögert, entscheidet sich nicht gegen Tiere, sondern für „Noch nicht“; beides steht gleichwertig nebeneinander.</li></ul>
+            </article>
+          </div>
+        </div>
+</section>
   </main>
 
 <!-- ===== FOOTER ===== -->
