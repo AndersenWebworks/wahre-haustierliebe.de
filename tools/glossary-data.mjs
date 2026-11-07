@@ -863,8 +863,8 @@ export const glossaryAnnotationsByPage = {
     { from: 'Schutzgebühr und Vertrag.', to: `${mark('schutzgebuehr', 'Schutzgebühr')} und ${mark('schutzvertrag', 'Vertrag')}.` },
     { from: 'Welpen aus osteuropäischen Vermehrerstationen', to: `Welpen aus osteuropäischen ${mark('vermehrer', 'Vermehrerstationen')}` },
     { from: '<strong>Parvovirose</strong>', to: `<strong>${mark('parvovirose', 'Parvovirose')}</strong>` },
-    { from: '<strong>Hüftdysplasie</strong>', to: `<strong>${mark('hueftdysplasie', 'Hüftdysplasie')}</strong>` },
-    { from: '<strong>Verhaltenstherapie</strong> (weil keine Sozialisierung)', to: `<strong>Verhaltenstherapie</strong> (weil keine ${mark('sozialisation', 'Sozialisierung')})` },
+    { from: '<strong>Hüftgelenksdysplasie</strong>', to: `<strong>${mark('hueftdysplasie', 'Hüftgelenksdysplasie')}</strong>` },
+    { from: 'nach fehlender Sozialisierung: Training', to: `nach fehlender ${mark('sozialisation', 'Sozialisierung')}: Training` },
     { from: 'auf einer Pflegestelle', to: `auf einer ${mark('pflegestelle', 'Pflegestelle')}` },
   ],
   selbsttest: [
