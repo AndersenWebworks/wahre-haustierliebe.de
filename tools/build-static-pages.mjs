@@ -119,6 +119,7 @@ const pages = [
     description: 'Bürohund ehrlich prüfen: Rückzugsort, Ruhe, Regeln, Pausen, Zustimmung im Team und Warnzeichen, dass der Arbeitsplatz für den Hund zu viel ist.',
     intent: 'Bürohund und Hund am Arbeitsplatz tierschutzgerecht prüfen',
     priority: '0.8',
+    lastmod: '2026-11-07',
   },
   {
     id: 'katzen',
@@ -266,6 +267,7 @@ const pages = [
     description: 'Warum Autos für Hunde schon bei milden Temperaturen zur Hitzefalle werden, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.',
     intent: 'Sommerhitze und Hund im Auto einschätzen',
     priority: '0.8',
+    lastmod: '2026-11-07',
     staticOnly: true,
   },
   {
@@ -335,14 +337,14 @@ const pages = [
 
 const topicPages = [
   ['hunde-soziale-beduerfnisse', 'hunde', 'hunde/soziale-beduerfnisse', 'Soziale Bedürfnisse beim Hund', 'Warum Hunde mehr brauchen als Futter, Garten, kurze Gassirunden und gelegentliche Aufmerksamkeit.', 'Soziale Bedürfnisse, Bindung und Beschäftigung beim Hund verstehen.'],
-  ['hunde-stadtfest-rummel', 'hunde', 'hunde/stadtfest-rummel', 'Hund auf Stadtfest, Rummel oder Weihnachtsmarkt', 'Warum große Veranstaltungen für Hunde oft Lärm, Enge, Stress und Fluchtgefahr bedeuten und welche Warnzeichen du ernst nehmen solltest.', 'Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen.', { priority: '0.78', lastmod: '2026-07-03' }],
-  ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.'],
-  ['hunde-spuren-erkennen', 'hunde', 'hunde/spuren-erkennen', 'Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund?', 'Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.', 'Spuren von Hund, Fuchs, Marderhund und Wolf auf dem Spaziergang einordnen.'],
-  ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.'],
-  ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-10-24' }],
-  ['hunde-kastration', 'hunde', 'hunde/kastration', 'Kastration beim Hund', 'Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.', 'Kastration beim Hund als Einzelfallentscheidung verstehen.'],
-  ['hunde-hofhaltung-und-zwinger', 'hunde', 'hunde/hofhaltung-und-zwinger', 'Hofhaltung und Zwinger', 'Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.', 'Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.'],
-  ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.'],
+  ['hunde-stadtfest-rummel', 'hunde', 'hunde/stadtfest-rummel', 'Hund auf Stadtfest, Rummel oder Weihnachtsmarkt', 'Warum große Veranstaltungen für Hunde oft Lärm, Enge, Stress und Fluchtgefahr bedeuten und welche Warnzeichen du ernst nehmen solltest.', 'Hund auf Stadtfest, Rummel, Weihnachtsmarkt oder Großveranstaltung tierschutzgerecht einschätzen.', { priority: '0.78', lastmod: '2026-11-07' }],
+  ['hunde-garten-auslauf', 'hunde', 'hunde/garten-auslauf', 'Garten ist kein Ersatz für Auslauf', 'Warum ein Garten hilfreich sein kann, aber Spaziergänge, Umweltreize und Beziehung nicht ersetzt.', 'Garten, Auslauf und Umweltreize für Hunde realistisch prüfen.', { lastmod: '2026-11-07' }],
+  ['hunde-spuren-erkennen', 'hunde', 'hunde/spuren-erkennen', 'Spuren auf dem Spaziergang: Hund, Fuchs, Wolf oder Marderhund?', 'Pfotenabdrücke von Hund, Fuchs, Marderhund und Wolf unterscheiden, bei Wolfsverdacht richtig melden und in der Brut- und Setzzeit Rücksicht nehmen.', 'Spuren von Hund, Fuchs, Marderhund und Wolf auf dem Spaziergang einordnen.', { lastmod: '2026-11-07' }],
+  ['hunde-allein-zu-hause', 'hunde', 'hunde/allein-zu-hause', 'Hund allein zu Hause', 'Wie viel Alleinbleiben ein Hund verkraftet und warum ein normaler Arbeitstag ohne Betreuung nicht fair ist.', 'Alleinbleiben und Betreuung für Hunde planen.', { lastmod: '2026-11-07' }],
+  ['hunde-kosten', 'hunde', 'hunde/kosten', 'Was ein Hund wirklich kostet', 'Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.', 'Hundekosten vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-11-07' }],
+  ['hunde-kastration', 'hunde', 'hunde/kastration', 'Kastration beim Hund', 'Warum Kastration bei Hunden keine Standardantwort ist, sondern tierärztlich abgewogen werden muss.', 'Kastration beim Hund als Einzelfallentscheidung verstehen.', { lastmod: '2026-11-07' }],
+  ['hunde-hofhaltung-und-zwinger', 'hunde', 'hunde/hofhaltung-und-zwinger', 'Hofhaltung und Zwinger', 'Warum Hof, Grundstück und Zwinger keinen Sozialkontakt, keine Bewegung und keine echte Beschäftigung ersetzen.', 'Hofhaltung, Zwinger und Mindestanforderungen für Hunde einordnen.', { lastmod: '2026-11-07' }],
+  ['hunde-gesundheit', 'hunde', 'hunde/gesundheit', 'Häufige Gesundheitsprobleme beim Hund', 'Typische Risiken wie Übergewicht, Zahnerkrankungen, Gelenkleiden und Allergien früh ernst nehmen.', 'Gesundheitsrisiken bei Hunden erkennen und vorbeugen.', { lastmod: '2026-11-07' }],
   ['hunde-entscheidung', 'hunde', 'hunde/entscheidung', 'Bevor ein Hund einzieht', 'Die wichtigsten Fragen, bevor aus dem Wunsch nach einem Hund echte Verantwortung wird.', 'Entscheidung vor der Hundeadoption oder Anschaffung prüfen.'],
   ['katzen-sozialverhalten', 'katzen', 'katzen/sozialverhalten', 'Katzen sind keine einfachen Einzelgänger', 'Warum Katzen zwar allein jagen, aber trotzdem Sozialkontakt, Struktur und ein passendes Revier brauchen.', 'Sozialverhalten von Katzen verstehen.'],
   ['katzen-wohnungshaltung', 'katzen', 'katzen/wohnungshaltung', 'Wohnung oder Freigang bei Katzen', 'Wohnung, gesicherter Außenbereich oder Freigang: Risiken, vollständiges Wohnungsrevier, Umstellungen, Warnzeichen und Entscheidungshilfen.', 'Wohnungshaltung, gesicherten Außenbereich und Freigang bei Katzen verantwortungsvoll abwägen.', { priority: '0.82', lastmod: '2026-08-06' }],
@@ -538,11 +540,11 @@ const faqByPage = {
     ['Was gilt bei Ziervögeln?', 'Für Ziervögel gibt es keine einheitliche Abgabewoche für alle Arten. Ein Jungvogel sollte vollständig selbstständig fressen, sicher fliegen und orientieren können, gesund sein und mit passenden Artgenossen vermittelt werden. Bei Wellensittichen betont der Deutsche Tierschutzbund die soziale Haltung; eine pauschale Zahl wäre für alle Vogelarten unseriös.'],
   ],
   'hunde-abgabealter': [
-    ['Ab wann darf ein Welpe in Deutschland von der Mutter getrennt werden?', 'Nach § 2 Absatz 4 der Tierschutz-Hundeverordnung darf ein Welpe erst im Alter von über acht Wochen vom Muttertier getrennt werden. Eine frühere Trennung ist nur zulässig, wenn sie nach tierärztlichem Urteil zum Schutz des Muttertieres oder des Welpen vor Schmerzen, Leiden oder Schäden erforderlich ist.'],
+    ['Ab wann darf ein Welpe in Deutschland von der Mutter getrennt werden?', 'Ein Welpe darf erst im Alter von über acht Wochen von der Mutter getrennt werden (§ 2 Abs. 4 Tierschutz-Hundeverordnung). Früher ist es nur erlaubt, wenn eine Tierärztin oder ein Tierarzt es für nötig hält, um Mutter oder Welpen vor Schmerzen, Leiden oder Schäden zu schützen.'],
     ['Welches Abgabealter empfehlen wir, und gibt es eine amtliche Empfehlung?', 'Wir empfehlen als Richtwert neun bis elf Wochen. Eine amtliche Empfehlung für genau diesen Zeitraum gibt es nicht; gesetzlich gilt „über acht Wochen“ (§ 2 Abs. 4 TierSchHuV). Die Spanne leiten wir aus der Sozialisierungsphase ab, die der Leitfaden der EU-Plattform für Tierschutz mit der dritten bis zwölften Lebenswoche angibt, und aus Studien zur frühen Trennung vom Wurf. Die Studienlage nach der achten Woche ist nicht eindeutig; entscheidend bleibt, wie der Welpe bis dahin aufgewachsen ist.'],
     ['Warum ist die achte Woche nicht das Zielalter?', 'Die achte Woche ist nur die gesetzliche Untergrenze. Wer in dieser Woche abgibt, verkürzt die Zeit bei Mutter und Geschwistern, in der Welpen besonders viel lernen. Bei Unsicherheit, Krankheit oder schlechter Sozialisierung wartet man besser länger.'],
     ['Woran erkenne ich illegalen Welpenhandel?', 'Warnzeichen sind ein sehr junger, kranker oder verängstigter Welpe, eine Übergabe an einem öffentlichen Ort, fehlende oder unplausible Impf- und Herkunftsnachweise sowie kein Zugang zum Muttertier. Verdachtsfälle gehören zum Veterinäramt oder zur Polizei.'],
-    ['Darf ein Welpe vor einem Alter von über acht Wochen von der Mutter getrennt werden?', 'Nein. § 2 Abs. 4 TierSchHuV erlaubt eine frühere Trennung nur, wenn sie nach tierärztlichem Urteil zum Schutz des Muttertieres oder des Welpen vor Schmerzen, Leiden oder Schäden erforderlich ist.'],
+    ['Darf ein Welpe vor einem Alter von über acht Wochen von der Mutter getrennt werden?', 'Nein. Nach § 2 Abs. 4 TierSchHuV ist das nur erlaubt, wenn eine Tierärztin oder ein Tierarzt es für nötig hält, um Mutter oder Welpen vor Schmerzen, Leiden oder Schäden zu schützen.'],
   ],
   wissen: [
     ['Hilft Homöopathie bei Tieren?', 'Für Homöopathie gibt es in der Tiermedizin keinen belastbaren, anerkannten Wirksamkeitsnachweis. Das größte Risiko ist verlorene Zeit: Schmerzen, Infektionen, Atemnot, Harnprobleme oder andere Warnzeichen gehören tierärztlich abgeklärt.'],
