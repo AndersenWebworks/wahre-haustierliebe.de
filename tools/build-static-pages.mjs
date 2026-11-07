@@ -2999,6 +2999,44 @@ ${siblingLinks}
         </nav>`;
 }
 
+// „Weitere Themen“ für Seiten, die nicht aus der Themenliste entstehen: Übersichten der Tierarten und einzelne Einzelseiten.
+const moreTopicsConfig = {
+  hunde: { eyebrow: 'Hunde', ids: ['hund-im-buero', 'hitzefalle-auto', 'tiere-und-urlaub', 'adoption', 'noch-nicht-bereit', 'notfall'] },
+  katzen: { eyebrow: 'Katzen', ids: ['wildkatzenbaby-gefunden', 'ernaehrung-taurin', 'kastration', 'tiere-und-urlaub', 'adoption', 'notfall'] },
+  voegel: { eyebrow: 'Vögel', ids: ['tiere-und-urlaub', 'realhaltung', 'adoption', 'notfall', 'tierarzt-notdienst', 'noch-nicht-bereit'] },
+  kleintiere: { eyebrow: 'Kleintiere', ids: ['tiere-und-urlaub', 'realhaltung', 'adoption', 'kastration', 'notfall', 'noch-nicht-bereit'] },
+  pferde: { eyebrow: 'Pferde', ids: ['tiere-und-urlaub', 'realhaltung', 'adoption', 'notfallplan-haustier', 'notfall', 'noch-nicht-bereit'] },
+  exoten: { eyebrow: 'Exoten', ids: ['wildtierhaltung', 'realhaltung', 'tiere-und-urlaub', 'adoption', 'notfall', 'noch-nicht-bereit'] },
+  'hund-im-buero': { eyebrow: 'Hunde', ids: ['hunde-allein-zu-hause', 'hunde-kosten', 'hunde-entscheidung', 'hunde-soziale-beduerfnisse', 'hunde-gesundheit', 'hunde-stadtfest-rummel'] },
+  'katzen-kaetzchen-tierarzt': { eyebrow: 'Katzen', ids: ['katzen-kosten', 'katzen-kastration', 'katzen-entscheidung', 'katzen-wohnungshaltung', 'katzen-stilles-leiden', 'notfall'] },
+  'wildkatzenbaby-gefunden': { eyebrow: 'Notfall', ids: ['katzen-streunerkatzen', 'katzen-kastration', 'tierarzt-notdienst', 'notfallplan-haustier', 'notfall', 'katzen-kaetzchen-tierarzt'] },
+  'tierarzt-notdienst': { eyebrow: 'Notfall', ids: ['notfall', 'notfallplan-haustier', 'hitzefalle-auto', 'wildkatzenbaby-gefunden', 'hunde-gesundheit', 'voegel-krankheit-erkennen'] },
+};
+
+function buildMoreTopicsNav(page) {
+  const config = moreTopicsConfig[page.id];
+  if (!config) return '';
+  const links = config.ids.map((targetId) => {
+    const target = pageById.get(targetId);
+    if (!target) throw new Error(`Weitere Themen: unbekannte Seite ${targetId} für ${page.id}`);
+    return `
+          <a class="topic-context-link" href="#${targetId}" onclick="navigateTo('${targetId}');return false">
+            <strong>${escapeHtml(target.title.replace(` - ${siteName}`, ''))}</strong>
+            <span>${escapeHtml(target.description)}</span>
+          </a>`;
+  }).join('');
+  return `
+        <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen">
+          <div class="topic-context-head">
+            <span class="eyebrow">${escapeHtml(config.eyebrow)}</span>
+            <h2>Weitere Themen</h2>
+          </div>
+          <div class="topic-context-grid">
+${links}
+          </div>
+        </nav>`;
+}
+
 function buildAnimalHubSection(source, page) {
   const children = topicChildrenFor(page.id);
   const cards = withExtraLinks(children, page.id, (child, extra) => {
@@ -3029,6 +3067,7 @@ function buildAnimalHubSection(source, page) {
         <div class="grid-3 animal-topic-grid">
 ${cards}
         </div>
+${buildMoreTopicsNav(page)}
       </div>
     </div>
   </section>`;
@@ -3682,6 +3721,7 @@ function buildHtmlPage({ page, header, section, commonAfterSections }) {
   const prefix = assetPrefixFor(page);
   const routePrefix = prefixForSlug(page.slug);
   let body = `${header}\n\n  <main id="main-content" tabindex="-1">\n${section}\n  </main>\n\n${commonAfterSections}`;
+  if (!hubPageIds.has(page.id) && !page.topicPage) body = injectBeforeClosingContent(body, buildMoreTopicsNav(page));
   body = injectGeoBlocks(body, page);
   body = injectArticleHeroMedia(body, page);
   body = normalizePublicCopy(body);
@@ -4403,6 +4443,13 @@ ${content}
       standaloneSource = standaloneSource.replace(
         /<style data-static-css[^>]*>[\s\S]*?<\/style>/,
         () => buildStylesheetLinks(''),
+      );
+      // Der Entwurf trägt eine eingefrorene Kopie von Kopf und Menü; sie wird bei jedem Build durch den aktuellen Kopf ersetzt.
+      const liveHeader = ensureInertHiddenRegions(prefixAssets(transformLinks(header, page), assetPrefixFor(page)));
+      standaloneSource = standaloneSource.replace(
+        /<!-- ===== HEADER ===== -->[\s\S]*?(?=\s*<main id="main-content")/,
+        () => `${liveHeader.trim()}
+`,
       );
       await writeFileEnsured(outputPathFor(page), standaloneSource);
       continue;
