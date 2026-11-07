@@ -381,7 +381,7 @@ const topicPages = [
   ['voegel-zucht-und-eier', 'voegel', 'voegel/zucht-eier', 'Zucht und Eiablage bei Wellensittichen', 'Warum Nistplätze, Eiablage und Nachwuchs Folgen für Gesundheit und Tierschutz haben und Zucht kein harmloses Hobby ist.', 'Zucht und Eiablage bei Wellensittichen verstehen.', { lastmod: '2026-11-07' }],
   ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.', { lastmod: '2026-11-07' }],
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum Schau- und Haubenwellensittiche als Qualzucht gelten und überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sind.', 'Qualzucht bei Heimvögeln erkennen.', { lastmod: '2026-11-07' }],
-  ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Kosten pro Tag, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.', { lastmod: '2026-11-07' }],
+  ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Kosten pro Tag und Monat, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.', { lastmod: '2026-11-07' }],
   ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Monat sowie Bedenkzeit vor dem Einzug.', 'Kaninchenhaltung vom Tier aus denken und vor dem Einzug verantwortungsvoll einordnen.', { lastmod: '2026-11-07' }],
   ['kleintiere-kaninchen-kosten', 'kleintiere', 'kleintiere/kaninchen-kosten', 'Was zwei Kaninchen wirklich kosten', 'Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.', 'Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-11-07' }],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter', 'Was Meerschweinchen brauchen, was sie über die Jahre kosten und warum mindestens acht Wochen die fachliche Orientierung für die Abgabe sind.', 'Haltung, Kosten, Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.', { lastmod: '2026-11-07' }],
@@ -389,9 +389,9 @@ const topicPages = [
   ['kleintiere-hamster', 'kleintiere', 'kleintiere/hamster', 'Goldhamster halten', 'Was ein Goldhamster braucht: allein leben, 1 m² Grundfläche, Ruhe am Tag, Futter, Gesundheit, Kosten pro Tag und Bedenkzeit vor dem Einzug.', 'Goldhamsterhaltung vor der Anschaffung realistisch prüfen.', { priority: '0.72', lastmod: '2026-11-07' }],
   ['kleintiere-ratten', 'kleintiere', 'kleintiere/ratten', 'Ratten halten', 'Was Ratten brauchen: Artgenossen, ein Käfig ab 100 × 50 × 100 cm, Freilauf, zwei Stunden am Tag, grob geschätzte Kosten pro Tag, Gesundheit, Bedenkzeit.', 'Rattenhaltung vom Tier aus denken und verantwortungsvoll planen.', { lastmod: '2026-11-07' }],
   ['kleintiere-degus-und-chinchillas', 'kleintiere', 'kleintiere/degus-chinchillas', 'Degus und Chinchillas halten', 'Was Degus und Chinchillas brauchen: Gruppen, große Volieren, passende Temperaturen, Futter und grob geschätzte Kosten pro Tag. Chinchillas werden über 20 Jahre alt.', 'Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.', { lastmod: '2026-11-07' }],
-  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und Gutachten des Bundesministeriums, dazu Lebensdauer.', 'Reptilienhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
-  ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer.', 'Schildkrötenhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
-  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach Zierfisch-Gutachten des Bundesministeriums und Schweizer Tierschutz.', 'Fischhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
+  ['exoten-reptilien', 'exoten', 'exoten/reptilien', 'Reptilien halten', 'Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer und Kosten pro Tag und Monat.', 'Reptilienhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
+  ['exoten-schildkroeten', 'exoten', 'exoten/schildkroeten', 'Schildkröten halten', 'Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer und eine grobe Kostenschätzung pro Tag und Monat.', 'Schildkrötenhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
+  ['exoten-fische', 'exoten', 'exoten/fische', 'Fische halten', 'Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Gutachten und Schweizer Tierschutz, dazu Kosten pro Tag und Monat.', 'Fischhaltung vom Tier aus prüfen.', { lastmod: '2026-11-07' }],
   ['pferde-herde', 'pferde', 'pferde/herde', 'Pferde brauchen Herde', 'Warum ein Pferd allein chronisch unter Stress steht und Artgenossen keine Dekoration sind.', 'Sozialkontakt und Herdenhaltung bei Pferden verstehen.', { lastmod: '2026-11-07' }],
   ['pferde-platzbedarf', 'pferde', 'pferde/platzbedarf', 'Platzbedarf bei Pferden', 'Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.', 'Fläche und Bewegung bei Pferdehaltung prüfen.', { lastmod: '2026-11-07' }],
   ['pferde-haltungsformen', 'pferde', 'pferde/haltungsformen', 'Haltungsformen bei Pferden', 'Offenstall, Aktivstall, Box und Anbindehaltung aus Sicht des Pferdes einordnen.', 'Pferdehaltungsformen vergleichen.', { lastmod: '2026-11-07' }],
@@ -823,7 +823,7 @@ const evidenceByPage = {
       'Wellensittiche brauchen mindestens einen passenden Artgenossen; der Tierschutzbund empfiehlt Gruppen ab vier Vögeln.',
       'Für zwei bis sechs Wellensittiche nennt der Tierschutzbund eine Voliere von mindestens 2 × 1 × 2 Metern und täglich mehrstündigen Freiflug; ohne Freiflug mindestens 4 Quadratmeter Grundfläche bei 2 Metern Höhe.',
       'Täglich ein bis zwei Teelöffel Körnerfutter pro Vogel, dazu frische Kräuter, Gräser und Gemüse; die Nachtruhe beträgt mindestens zehn Stunden.',
-      'Zwei Wellensittiche kosten nach den Rechenwerten der Kostenseite mindestens etwa 0,90 bis 1,80 Euro am Tag (3.200 bis 6.600 Euro über zehn Jahre).',
+      'Zwei Wellensittiche kosten nach den Rechenwerten der Kostenseite mindestens etwa 0,90 bis 1,80 Euro am Tag und 27 bis 55 Euro im Monat (3.200 bis 6.600 Euro über zehn Jahre).',
       'Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.',
       'Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.',
       'Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.',
@@ -850,18 +850,16 @@ const evidenceByPage = {
       'Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform; die Maße dieser Übersicht gelten für Wellensittiche.',
       'Die Maße folgen dem Deutschen Tierschutzbund. Das TVT-Merkblatt nennt kleinere Mindestwerte (150 × 60 × 100 cm für ein bis drei Paare); Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.',
       'Die Kosten pro Tag sind eine Untergrenze aus Praxisangaben von go4vet: Beleuchtung samt Strom, Notfälle, Betreuung und eine Voliere in der empfohlenen Größe sind nicht eingerechnet.',
-      'Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.',
-      'Die Sätze aus dem Handel und die Ich-Beispiele zum Tagesablauf sind Beispiele; belegt ist das Verhalten, nicht ein bestimmter Käfig. Die Außenvoliere auf dem Foto wurde für Katharinasittiche gebaut.',
+      'Die Außenvoliere auf dem Foto wurde für Katharinasittiche gebaut.',
       'Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.',
       'Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.',
     ],
   },
   'voegel-entscheidung': {
     facts: [
-      'Zwei Wellensittiche kosten mindestens etwa 0,90 bis 1,80 Euro am Tag; die Vögel selbst machen weniger als 2 Prozent der Summe aus.',
+      'Zwei Wellensittiche kosten mindestens etwa 0,90 bis 1,80 Euro am Tag und 27 bis 55 Euro im Monat; die Vögel selbst machen weniger als 2 Prozent der Summe aus.',
       'Der Tierschutzbund empfiehlt, zuerst beim örtlichen Tierheim nachzufragen, und rät, Paare nicht zu trennen; Einzelhaltung nennt er tierschutzwidrig.',
       'Schau- und Haubenwellensittiche zählt der Tierschutzbund zu den Qualzuchten.',
-      'Eine Bedenkzeit von drei Nächten und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Wellensittiche richtig halten', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/wellensittiche/'],
@@ -926,9 +924,11 @@ const evidenceByPage = {
       'Einzelhaltung ist grundsätzlich abzulehnen; der Deutsche Tierschutzbund rät bei einer Adoption zu mindestens drei Tieren. Kaninchen sind kein Ersatz für Meerschweinchen.',
       'Meerschweinchen werden 6 bis 8 Jahre alt, selten bis 12; Männchen sind gewöhnlich mit 3 bis 4 Wochen geschlechtsreif, Weibchen schon mit weniger als einem Monat.',
       'Für Meerschweinchen gibt es keine eigene gesetzliche Mindestabgabealter-Regel; der Deutsche Tierschutzbund nennt mindestens acht Wochen als Orientierung für Jungtiere.',
-      'Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000 Euro in acht Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen.',
+      'Der Deutsche Tierschutzbund nennt für zwei Meerschweinchen mindestens 7.000 Euro in acht Jahren; die Beträge pro Tag und pro Monat (rund 74 bis 136 Euro) sind eine Hochrechnung aus denselben Spannen.',
+      'Haarlose Meerschweinchen, Tiere mit gekräuselten Tasthaaren und extreme Langhaarformen sieht die TVT als Qualzucht; Gründe sind gestörte Wärmeregulation, fehlende Tasthaare als Sinnesorgan und Verfilzung.',
     ],
     sources: [
+      ['Tierärztin Viola Schillinger: Qualzuchten bei Meerschweinchen (Meerschweinchenwiese)', 'https://meerschweinchenwiese.de/nachwuchs/qualzuchten'],
       ['TVT-Merkblatt Nr. 159: Meerschweinchen, Stand Oktober 2020', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_159_Meerschweinchen_1.pdf&did=40'],
       ['Deutscher Tierschutzbund: Meerschweinchen', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/meerschweinchen/'],
       ['Deutscher Tierschutzbund: Broschüre „Haltung von Meerschweinchen“', 'https://www.tierschutzbund.de/ueber-uns/material/broschuere-haltung-von-meerschweinchen/'],
@@ -942,7 +942,6 @@ const evidenceByPage = {
       'Die Maße gelten für Meerschweinchen bis etwa 1,5 kg; größere Tiere brauchen deutlich mehr Platz.',
       'Die Acht-Wochen-Regel der Tierschutz-Hundeverordnung gilt für Welpen und darf nicht als gesetzliche Meerschweinchen-Regel missverstanden werden.',
       'Eine Frühkastration ist eine tierärztliche Entscheidung und keine Abkürzung für eine schnelle Abgabe.',
-      'Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.',
     ],
   },
   'kleintiere-hamster': {
@@ -952,7 +951,7 @@ const evidenceByPage = {
       'Goldhamster sind nachtaktiv. Häufiges Wecken am Tag kann Verhaltensstörungen begünstigen.',
       'Ein sicheres Laufrad (25 bis 30 Zentimeter), Mehrkammerhaus, Sandbad und abwechslungsreiche Futtersuche gehören zur Haltung.',
       'Hamsterkugeln, Hamsterautos, Gitterlaufräder, Hamsterwatte aus Kunstfaser und ungeeignete Kunststoffröhren können Leiden oder Verletzungen verursachen.',
-      'Der Deutsche Tierschutzbund nennt für ein dreijähriges Tier mindestens 3.130 Euro ohne Tierarzt; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus derselben Spanne.',
+      'Der Deutsche Tierschutzbund nennt für ein dreijähriges Tier mindestens 3.130 Euro ohne Tierarzt; die Beträge pro Tag und pro Monat (rund 87 bis 105 Euro) sind eine Hochrechnung aus derselben Spanne.',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Alles rund um Goldhamster', 'https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/'],
@@ -966,7 +965,7 @@ const evidenceByPage = {
       'Die Angaben dieser Seite beziehen sich auf Goldhamster. Zwerghamsterarten brauchen eine eigene Beurteilung ihrer Haltung.',
       'Mindestmaße allein machen ein Gehege nicht tiergerecht; Einstreu, Rückzug, sichere Einrichtung, Ruhe und Versorgung müssen ebenfalls passen.',
       'Veränderungen bei Gewicht, Aktivität, Appetit, Fell, Augen, Bewegung oder Ausscheidungen müssen tierärztlich beurteilt werden.',
-      'Die Kosten sind Mindestwerte ohne Tierarzt; die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.',
+      'Die Kosten sind Mindestwerte ohne Tierarzt.',
     ],
   },
   'kleintiere-ratten': {
@@ -976,9 +975,11 @@ const evidenceByPage = {
       'Die Lebenserwartung liegt bei 2 bis 4 Jahren; erblich bedingt bilden Ratten oft Tumore.',
       'Rex-, Nackt-, Patchwork- und Tailless-Ratten sind nach der TVT als Qualzuchten anzusehen.',
       'Ratten sollten von Kindern unter 10 Jahren nur unter Aufsicht von Erwachsenen gepflegt werden.',
-      'Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250 Euro ohne Tierarzt, das sind rund 0,49 bis 1,14 Euro pro Tag.',
+      'Grobe Schätzung für zwei Ratten über drei Jahre: etwa 540 bis 1.250 Euro ohne Tierarzt, das sind rund 0,49 bis 1,14 Euro pro Tag und rund 15 bis 35 Euro im Monat.',
+      'Bei Nacktratten fehlt das Fell; ohne Fell kann ein Tier seine Körperwärme schlecht regeln, und es können Immundefekte auftreten (Gutachten zu Qualzüchtungen).',
     ],
     sources: [
+      ['Gutachten zur Auslegung von § 11b Tierschutzgesetz (Verbot von Qualzüchtungen)', 'https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf'],
       ['TVT-Merkblatt Nr. 160: Heimtiere – Ratten, Stand April 2014', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_160_Heimtiere_Ratten__Apr._2014__01.pdf&did=41'],
       ['Gebührenordnung für Tierärztinnen und Tierärzte (GOT)', 'https://www.gesetze-im-internet.de/got_2022/BJNR140100022.html'],
       ['GOT, Anlage: Gebührenverzeichnis (Nr. 17, 338, 379, 412, 413)', 'https://www.gesetze-im-internet.de/got_2022/anlage.html'],
@@ -995,7 +996,6 @@ const evidenceByPage = {
     guardrails: [
       'Das Merkblatt stammt von 2014; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.',
       'Die Kosten sind eine eigene grobe Schätzung aus Beispielpreisen (Onlineshops, Tierheime, Haltererfahrungen) ohne Tierarzt; die Tierarztbeispiele folgen der GOT und sind Orientierung, keine Preisliste einer Praxis.',
-      'Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.',
     ],
   },
   'kleintiere-degus-und-chinchillas': {
@@ -1005,9 +1005,10 @@ const evidenceByPage = {
       'Chinchillas haben keine Schweiß- und Talgdrüsen; optimal sind 15 bis 21 °C bei höchstens 55 % Luftfeuchtigkeit, über 28 °C ist nicht zuträglich.',
       'Degus werden meist 4 bis 6 Jahre alt, selten bis 10; Chinchillas können über 20 Jahre alt werden.',
       'Degus dürfen grundsätzlich kein Obst bekommen (Diabetesneigung); Chinchillas vertragen kein frisches Grünfutter, Obst und Gemüse.',
-      'Grobe Schätzung ohne Tierarzt: drei Degus über fünf Jahre etwa 2.310 bis 4.590 Euro (1,26 bis 2,51 Euro pro Tag), zwei Chinchillas über 20 Jahre etwa 9.300 bis 13.540 Euro (1,27 bis 1,85 Euro pro Tag).',
+      'Grobe Schätzung ohne Tierarzt: drei Degus über fünf Jahre etwa 2.310 bis 4.590 Euro (1,26 bis 2,51 Euro pro Tag, etwa 38 bis 76 Euro im Monat), zwei Chinchillas über 20 Jahre etwa 9.300 bis 13.540 Euro (1,27 bis 1,85 Euro pro Tag, etwa 39 bis 56 Euro im Monat).',
     ],
     sources: [
+      ['Gutachten zur Auslegung von § 11b Tierschutzgesetz (Verbot von Qualzüchtungen)', 'https://www.bundestieraerztekammer.de/tieraerzte/qualzuchten/Qualzuchtgutachten.pdf'],
       ['TVT-Merkblatt Degu, Stand Juni 2023', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB-Degu2023.pdf&did=47'],
       ['TVT-Merkblatt Nr. 153: Heimtiere – Chinchillas, Stand September 2012', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&did=35'],
       ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
@@ -1034,7 +1035,6 @@ const evidenceByPage = {
     guardrails: [
       'Das Chinchilla-Merkblatt stammt von 2012; Tierarztpraxen und Haltungsverbände können strengere Empfehlungen haben.',
       'Die Kosten sind eine eigene grobe Schätzung aus Beispielpreisen (Onlineshops, Tierheime, Haltererfahrungen) ohne Tierarzt; die 3-m³-Voliere für Chinchillas ist aus Fertigvolieren hochgerechnet, die Tierarztbeispiele folgen der GOT.',
-      'Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.',
     ],
   },
   exoten: {
@@ -1109,8 +1109,12 @@ const evidenceByPage = {
       'Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.',
       'Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.',
       'UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.',
+      'Grobe Schätzung für eine Bartagame über zehn Jahre aus Beispielpreisen deutscher Onlineshops: etwa 2.840 bis 4.200 Euro ohne Tierarzt, das sind rund 0,78 bis 1,15 Euro pro Tag und 24 bis 35 Euro pro Monat.',
     ],
     sources: [
+      ['Terraristikladen: Beispielpreise für Beleuchtung, Thermostat, Bodengrund und Futter (November 2026)', 'https://www.terraristikladen.de/'],
+      ['holzterrarium.de: OSB-Terrarium 150 × 80 × 80 cm (November 2026)', 'https://www.holzterrarium.de/terrarien/osb-terrarien/osb-terrarium-holzterrarium-150x80x80-cm-mit-seitenbelueftung_153_1084/'],
+      ['BDEW: Strompreisanalyse (Haushaltsstrompreis, Oktober 2026)', 'https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/'],
       ['Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf'],
       ['BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2'],
       ['Tierarztpraxis Dr. Renate Lorenz: Metabolic Bone Disease bei Reptilien', 'https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/'],
@@ -1118,7 +1122,7 @@ const evidenceByPage = {
     ],
     guardrails: [
       'Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.',
-      'Stromkosten und Preise hängen von Gerät und Tarif ab; hier steht nur der Rechenweg, kein Pauschalbetrag.',
+      'Die Kosten sind eine grobe Schätzung für ein einzelnes Tier aus Beispielpreisen vom November 2026, ohne Tierarzt und Notfälle; Preise und Strombedarf hängen von Gerät und Tarif ab.',
     ],
   },
   'exoten-schildkroeten': {
@@ -1126,8 +1130,10 @@ const evidenceByPage = {
       'Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.',
       'Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.',
       'Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.',
+      'Grobe Schätzung nach go4vet für eine einzelne Landschildkröte: 900 bis 1.850 Euro einmalig und etwa 53 bis 73 Euro im Monat einschließlich Tierarzt-Vorsorge und Notfall-Rücklage, das sind rund 1,78 bis 2,47 Euro pro Tag und 54 bis 75 Euro pro Monat über 80 Jahre bei gleichbleibenden Preisen.',
     ],
     sources: [
+      ['go4vet: Landschildkröte halten, das musst du wissen (13. März 2026)', 'https://www.go4vet.com/exoten/landschildkroete-halten-das-musst-du-wissen/'],
       ['TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017)', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65'],
       ['Bundesartenschutzverordnung § 7', 'https://www.gesetze-im-internet.de/bartschv_2005/__7.html'],
       ['Landkreis Kronach: Merkblatt zum Artenschutz', 'https://www.landkreis-kronach.de/media/6955/merkblatt-zum-artenschutz.pdf'],
@@ -1136,6 +1142,7 @@ const evidenceByPage = {
     guardrails: [
       'Das TVT-Merkblatt beschreibt die Griechische Landschildkröte; Maurische Landschildkröten haben eigene Ansprüche.',
       'Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest.',
+      'Die Kosten sind eine grobe Schätzung aus der Praxis-Information von go4vet für ein einzelnes Tier, ohne Gruppe und ohne Operationen; über 80 Jahre ändern sich Preise.',
     ],
   },
   'exoten-fische': {
@@ -1143,8 +1150,12 @@ const evidenceByPage = {
       'Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.',
       'Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.',
       'Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.',
+      'Grobe Schätzung für fünf Goldfische in einem 200-Liter-Becken über 20 Jahre aus Beispielpreisen deutscher Onlineshops: etwa 3.690 bis 5.190 Euro ohne Tierarzt, das sind rund 0,51 bis 0,71 Euro pro Tag und 15 bis 22 Euro pro Monat.',
     ],
     sources: [
+      ['Hornbach: Vollglas-Aquarium Marina 100 × 40 × 50 cm (November 2026)', 'https://www.hornbach.de/p/vollglas-aquarium-marina-100-x-40-x-50-cm-floatglas-glasstaerke-8-0-mm-200-l/3477416/'],
+      ['Interaquaristik: Eheim classic 250 Außenfilter (November 2026)', 'https://www.interaquaristik.de/Eheim-classic-250-Aussenfilter/SW10575'],
+      ['BDEW: Strompreisanalyse (Haushaltsstrompreis, Oktober 2026)', 'https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/'],
       ['BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html'],
       ['BMEL: Artentabelle des Zierfisch-Gutachtens', 'https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html'],
       ['Schweizer Tierschutz STS: Merkblatt Goldfische (2011)', 'https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true'],
@@ -1153,6 +1164,7 @@ const evidenceByPage = {
     guardrails: [
       'Das Zierfisch-Gutachten von 1998 wird überarbeitet; die Maße können sich ändern.',
       'Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler.',
+      'Die Kosten sind eine grobe Schätzung aus Beispielpreisen vom November 2026; Mengen für Bodengrund, Futter und Wasseraufbereiter sind Annahmen, Tierarzt, Unterschrank und Beleuchtung sind nicht eingerechnet.',
     ],
   },
   kastration: {
