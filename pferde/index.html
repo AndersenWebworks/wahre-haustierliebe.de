@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6949,6 +6951,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 @media (max-width: 640px) {
   .pex-feld { padding: 1rem 1rem 1.1rem; }
   .pex-karte li { grid-template-columns: 1fr; }
+}
+
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
 }
 
 
@@ -7360,7 +7440,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       <div class="container">
         <div class="article-hero-copy">
           <h1>Pferde – eine Koppel allein reicht nicht</h1>
-                  <p>Pferdehaltung auf dem eigenen Grundstück braucht geeignete Flächen, tägliche Bewegung, Sozialkontakt, Witterungsschutz, Futtermanagement und eine dauerhaft gesicherte Versorgung. Ein vorhandenes Grundstück allein erfüllt diese Anforderungen nicht.</p>
+                  <p>Ein Pferd auf dem eigenen Grundstück braucht passende Flächen, jeden Tag Bewegung, Gesellschaft von Artgenossen, Schutz vor dem Wetter, richtig eingeteiltes Futter und jemanden, der es dauerhaft versorgt. Ein vorhandenes Grundstück allein reicht dafür nicht.</p>
         <div class="article-kicker"><span>Herde</span><span>Bewegung</span><span>Kosten über Jahre</span></div></div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7375,14 +7455,14 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="info-box">
           <h3>Auf einen Blick</h3>
           <ul>
-            <li>Pferde sind <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die soziale Sicherheit aus einer Gruppe zieht. Alleinhaltung erzeugt oft massiven Stress." data-glossary-href="../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.</li>
-            <li>In der Natur bewegen sich Pferde im Sozialverband bis zu 16 Stunden täglich, meist im Schritt und beim Fressen. Eine kleine Koppel deckt das nicht ab.</li>
+            <li>Pferde sind <span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die in der Gruppe Sicherheit findet. Alleinhaltung bedeutet oft massiven Stress." data-glossary-href="../glossar/index.html#herdentier" aria-describedby="glossary-term-popover" tabindex="0" role="button">Herdentiere</span>. Nach den Leitlinien des Bundeslandwirtschaftsministeriums (BMEL) passt ein einzelnes Pferd ohne Artgenossen nicht zu seinem natürlichen Sozialverhalten.</li>
+            <li>In der Natur sind Pferde in der Gruppe bis zu 16 Stunden am Tag unterwegs, meist im Schritt und beim Fressen. Eine kleine Koppel deckt das nicht ab.</li>
             <li>Die laufenden Kosten liegen bei etwa 20 bis 31 Euro pro Tag, ohne Notfälle.</li>
-            <li>Das Wohlbefinden muss mindestens einmal täglich überprüft werden, ohne Wochenende und ohne Feiertag.</li>
+            <li>Du musst mindestens einmal am Tag nachsehen, ob es dem Pferd gut geht, auch am Wochenende und an Feiertagen.</li>
             <li>Hauspferde werden durchschnittlich 25 bis 30 Jahre alt. Das ist eine Verpflichtung für Jahrzehnte.</li>
           </ul>
         </div><div class="article-rhythm metric-grid" data-enhancement="pferde-stats">
-            <div class="metric-card"><strong>bis 16 Std.</strong><span>Bewegung am Tag im Sozialverband, meist im Schritt und beim Fressen (BMEL-Leitlinien).</span></div>
+            <div class="metric-card"><strong>bis 16 Std.</strong><span>Bewegung am Tag in der Gruppe, meist im Schritt und beim Fressen (BMEL-Leitlinien).</span></div>
             <div class="metric-card"><strong>25–30 Jahre</strong><span>werden Hauspferde im Durchschnitt alt: Verpflichtung, Kosten und Alltag ändern sich über Jahrzehnte.</span></div>
             <div class="metric-card"><strong>Herde</strong><span>Ein Pferd ist kein Solist. Sozialkontakt ist Grundbedürfnis.</span></div>
           </div>
@@ -7396,7 +7476,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 1</span><h3 id="pferde-f1">Artgenossen</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Mindestens ein <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenosse</span>, in jedem Fall Sicht-, Hör- und Geruchskontakt.</p><p>Die Leitlinien nennen soziale Kontakte zu Artgenossen für Pferde unerlässlich. Ein einzelnes Pferd ohne Artgenossen zu halten, widerspricht danach dem natürlichen Sozialverhalten. Fohlen und Jungpferde dürfen nicht einzeln gehalten werden.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.1.</p></dd>
+            <dd><p class="pex-mass">Mindestens ein <span class="glossary-term" data-glossary-key="artgenosse" data-glossary-title="Artgenosse" data-glossary-text="Tier derselben Art. Bei sozialen Tieren können andere Arten echte Artgenossen nicht ersetzen." data-glossary-href="../glossar/index.html#artgenosse" aria-describedby="glossary-term-popover" tabindex="0" role="button">Artgenosse</span>, in jedem Fall Sicht-, Hör- und Geruchskontakt.</p><p>Die Leitlinien nennen soziale Kontakte zu Artgenossen für Pferde unerlässlich. Ein einzelnes Pferd ohne Artgenossen zu halten, passt danach nicht zu seinem natürlichen Sozialverhalten. Fohlen und Jungpferde dürfen nicht einzeln gehalten werden.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.1.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Eine Herde beginnt bei zwei Tieren. Wer ein Pferd aufnimmt, plant deshalb ein zweites Pferd ein oder einen Stall, in dem es Artgenossen hat.</p></dd>
             <dt>Frage an dich</dt>
@@ -7407,7 +7487,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 2</span><h3 id="pferde-f2">Platz und Bewegung</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Bewegung an jedem Tag über mehrere Stunden. Auslauf: 150 m² für bis zu zwei Pferde, 40 m² für jedes weitere.</p><p>In der Natur bewegen sich Pferde im Sozialverband bis zu 16 Stunden täglich, meist langsam im Schritt und beim Fressen. Kontrollierte Bewegung wie Arbeit oder Training kann freie Bewegung nach den Leitlinien nicht vollständig ersetzen; Weidegang oder Auslauf soll so oft wie möglich angeboten werden. Eine Einzelbox misst mindestens (2 × Widerristhöhe)².</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.2, 4.3.1, 4.7 und Tabelle 5.</p></dd>
+            <dd><p class="pex-mass">Bewegung an jedem Tag über mehrere Stunden. Auslauf: 150 m² für bis zu zwei Pferde, 40 m² für jedes weitere.</p><p>In der Natur sind Pferde in der Gruppe bis zu 16 Stunden am Tag unterwegs, meist langsam im Schritt und beim Fressen. Arbeit oder Training können diese freie Bewegung nach den Leitlinien nicht vollständig ersetzen. Weidegang oder Auslauf soll den Pferden so oft wie möglich angeboten werden. Eine Einzelbox muss mindestens (2 × Widerristhöhe)² groß sein; die Widerristhöhe ist die Schulterhöhe des Pferdes.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.2, 4.3.1, 4.7 und Tabelle 5.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>150 m² sind zum Beispiel 10 m × 15 m, für zwei Pferde. Bei 1,48 m Widerristhöhe misst die Box mindestens 8,76 m², ein Quadrat von 2,96 m × 2,96 m. Und 16 Stunden sind zwei Drittel eines Tages.</p><p class="pex-rechnung">Rechnung: 10 × 15 = 150; (2 × 1,48)² = 2,96² = 8,76; 16 ÷ 24 ≈ 0,67.</p></dd>
             <dt>Frage an dich</dt>
@@ -7418,7 +7498,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 3</span><h3 id="pferde-f3">Futter</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Raufutter möglichst durchgehend, mindestens 12 Stunden am Tag. Wasser steht immer bereit.</p><p>Verdauung und Verhalten des Pferdes sind auf kontinuierliche Nahrungsaufnahme eingestellt. Steht nicht dauernd rohfaserreiches Futter bereit, soll es mindestens zwölf Stunden täglich angeboten werden, mit möglichst keiner Fresspause über vier Stunden. Jedes Pferd braucht auch in der Gruppe einen Fressplatz. Größere Kraftfuttergaben gehören auf mindestens drei Rationen verteilt. Werden diese Vorgaben missachtet, können laut Leitlinien zum Beispiel Magengeschwüre und Koliken auftreten.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.4.</p></dd>
+            <dd><p class="pex-mass">Raufutter möglichst durchgehend, mindestens 12 Stunden am Tag. Wasser steht immer bereit.</p><p>Verdauung und Verhalten des Pferdes sind darauf eingestellt, dass es fast ununterbrochen frisst. Steht nicht immer Raufutter bereit (Heu, Stroh oder Gras), soll es mindestens zwölf Stunden am Tag angeboten werden, möglichst ohne Fresspause von mehr als vier Stunden. Auch in der Gruppe braucht jedes Pferd einen eigenen Fressplatz. Größere Mengen Kraftfutter (zum Beispiel Hafer) gehören auf mindestens drei Mahlzeiten verteilt. Hält man sich nicht daran, können laut Leitlinien zum Beispiel Magengeschwüre und Koliken (Bauchschmerzen durch Darmprobleme) auftreten.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitt 2.1.4.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Eine Nacht von 22 bis 6 Uhr dauert 8 Stunden und damit doppelt so lang wie die Fresspause, die die Leitlinien höchstens vorsehen.</p><p class="pex-rechnung">Rechnung: 6 Uhr − 22 Uhr = 8 Stunden; 8 ÷ 4 = 2.</p></dd>
             <dt>Frage an dich</dt>
@@ -7429,7 +7509,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 4</span><h3 id="pferde-f4">Ruhe und Tagesrhythmus</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Rund 7 Stunden Ruhe am Tag, auf mehrere Phasen verteilt, mit trockener, weicher Liegefläche für alle Pferde gleichzeitig.</p><p>Ausgewachsene Pferde ruhen etwa 7 Stunden am Tag, rund 80 Prozent davon dösend im Stehen. Für die Schlafphase mit schnellen Augenbewegungen müssen sie sich ablegen, und dafür muss der Ruheplatz trocken und verformbar sein. In der Gruppe muss die Liegefläche so groß sein, dass alle gleichzeitig in Seitenlage liegen können, auch rangniedere Tiere. Bei anhaltendem Regen, Kälte mit Wind, starker Sonne oder vielen Stechinsekten suchen Pferde Witterungsschutz; er muss alle Tiere zugleich schützen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.3 und 3.1.1.</p></dd>
+            <dd><p class="pex-mass">Rund 7 Stunden Ruhe am Tag, auf mehrere Phasen verteilt, mit trockener, weicher Liegefläche für alle Pferde gleichzeitig.</p><p>Ausgewachsene Pferde ruhen etwa 7 Stunden am Tag, rund 80 Prozent davon dösend im Stehen. Für den Tiefschlaf (die Schlafphase mit schnellen Augenbewegungen) müssen sie sich hinlegen. Dafür muss der Ruheplatz trocken und weich sein. In der Gruppe muss die Liegefläche so groß sein, dass alle gleichzeitig ausgestreckt auf der Seite liegen können, auch die Tiere, die in der Rangordnung weiter unten stehen. Bei anhaltendem Regen, Kälte mit Wind, starker Sonne oder vielen Stechinsekten suchen Pferde Schutz vor dem Wetter. Dieser Schutz muss für alle Tiere gleichzeitig reichen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1.3 und 3.1.1.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Von 7 Stunden Ruhe verbringt ein Pferd rund 5,6 Stunden dösend im Stehen. Für andere Ruhehaltungen bleiben etwa 1,4 Stunden.</p><p class="pex-rechnung">Rechnung: 7 × 0,8 = 5,6; 7 − 5,6 = 1,4.</p></dd>
             <dt>Frage an dich</dt>
@@ -7440,7 +7520,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 5</span><h3 id="pferde-f5">Gesundheit</h3></div>
           <dl>
             <dt>Das Maß</dt>
-            <dd><p class="pex-mass">Jeden Tag ansehen. Hufe alle 6 bis 8 Wochen, Zähne mindestens einmal im Jahr.</p><p>Das Wohlbefinden jedes Pferdes muss mindestens einmal täglich überprüft werden. Unbeschlagene Pferde sind in der Regel alle 6 bis 8 Wochen auf Stellung und Abnutzung der Hufe zu kontrollieren. Die Zähne gehören einmal jährlich kontrolliert, bei alten Pferden zweimal. Wurmkuren nur in Absprache mit der Tierarztpraxis; die Impfung gegen Tetanus ist aus Tierschutzsicht geboten. Hauspferde werden heute durchschnittlich 25 bis 30 Jahre alt, Ponys und Kleinpferde oft 30 bis 40 Jahre.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.2 bis 2.2.3; Lebenserwartung: <a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet</a>.</p></dd>
+            <dd><p class="pex-mass">Jeden Tag ansehen. Hufe alle 6 bis 8 Wochen, Zähne mindestens einmal im Jahr.</p><p>Du musst mindestens einmal am Tag nachsehen, ob es jedem Pferd gut geht. Bei Pferden ohne Hufeisen sollte man in der Regel alle 6 bis 8 Wochen prüfen, ob die Hufe richtig stehen und wie stark sie abgenutzt sind. Die Zähne sollten einmal im Jahr kontrolliert werden, bei alten Pferden zweimal. Wurmkuren gibt es nur nach Absprache mit der Tierarztpraxis. Die Impfung gegen Tetanus (Wundstarrkrampf) ist aus Tierschutzsicht geboten. Hauspferde werden heute durchschnittlich 25 bis 30 Jahre alt, Ponys und Kleinpferde oft 30 bis 40 Jahre.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.2 bis 2.2.3; Lebenserwartung: <a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet</a>.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Ein Huftermin alle 6 bis 8 Wochen sind etwa 6 bis 9 Termine im Jahr, in 25 Jahren rund 160 bis 220.</p><p class="pex-rechnung">Rechnung: 52 ÷ 8 = 6,5; 52 ÷ 6 ≈ 8,7; mal 25 = 163 bis 217.</p></dd>
             <dt>Frage an dich</dt>
@@ -7452,10 +7532,10 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         <span class="pex-beispiel-tag">Beispiel, kein bestimmtes Tier</span>
         <ol class="zeitleiste">
-          <li><span class="zeitleiste-when">Den ganzen Tag</span><p class="zeitleiste-what">Das Pferd bewegt sich überwiegend langsam im Schritt und frisst dabei, in der Natur bis zu 16 Stunden. Raufutter steht durchgehend bereit oder wird in kurzen Abständen angeboten, denn die Verdauung ist auf kontinuierliche Futteraufnahme eingestellt.</p></li>
+          <li><span class="zeitleiste-when">Den ganzen Tag</span><p class="zeitleiste-what">Das Pferd bewegt sich überwiegend langsam im Schritt und frisst dabei, in der Natur bis zu 16 Stunden. Raufutter steht durchgehend bereit oder wird in kurzen Abständen angeboten, denn die Verdauung ist auf ständiges Fressen eingestellt.</p></li>
           <li><span class="zeitleiste-when">Verteilt über 24 Stunden</span><p class="zeitleiste-what">Mehrere Ruhephasen, zusammen etwa 7 Stunden, meist dösend im Stehen. Für den tiefen Schlaf legt sich das Pferd hin, wenn der Platz trocken, weich und sicher ist.</p></li>
           <li><span class="zeitleiste-when">Bei Regen, Wind, Hitze oder vielen Insekten</span><p class="zeitleiste-what">Das Pferd sucht Schutz auf. Ein Unterstand oder Baumgruppen müssen allen Tieren der Gruppe gleichzeitig Platz bieten.</p></li>
-          <li class="pex-mensch"><span class="zeitleiste-when">Einmal täglich: du</span><p class="zeitleiste-what">Wohlbefinden und Gesundheit des Pferdes prüfen, Tränke auf Sauberkeit und Funktion kontrollieren, Zäune und Einrichtungen in regelmäßigen Abständen ansehen.</p></li>
+          <li class="pex-mensch"><span class="zeitleiste-when">Einmal täglich: du</span><p class="zeitleiste-what">Nachsehen, ob es dem Pferd gut geht, prüfen, ob die Tränke sauber ist und funktioniert, und regelmäßig Zäune und Einrichtungen ansehen.</p></li>
           <li class="pex-mensch"><span class="zeitleiste-when">Alle 6 bis 8 Wochen: du</span><p class="zeitleiste-what">Hufe kontrollieren und pflegen lassen.</p></li>
         </ol>
         <p class="pex-legende">Der Ablauf ist ein Beispiel aus den Verhaltensangaben der <a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL-Leitlinien Pferdehaltung</a>, Abschnitte 2.1 bis 2.2. Wie ein bestimmtes Pferd seinen Tag verbringt, kann abweichen.</p>
@@ -7468,13 +7548,13 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div><span class="zahl">9.000 bis 13.000 €</span><span class="zahl-text">einmalig für Pferd und Erstausstattung, weniger als ein Zehntel davon</span></div>
         </div>
 
-        <p>Die erste Zahl ist der Betrag pro Tag. Er ergibt sich aus 600 bis 950 Euro im Monat, die <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> als Richtwert für die Standardhaltung ohne besondere Vorkommnisse nennt (600 × 12 ÷ 365 ≈ 20, 950 × 12 ÷ 365 ≈ 31). Über 25 Jahre werden daraus 180.000 bis 285.000 Euro. Wie das im Einzelnen zusammenkommt, steht auf <a href="../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
+        <p>Die erste Zahl ist der Betrag pro Tag. Er ergibt sich aus 600 bis 950 Euro im Monat. Diesen Richtwert nennt <a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal</a> für die Standardhaltung ohne besondere Vorkommnisse (600 × 12 ÷ 365 ≈ 20, 950 × 12 ÷ 365 ≈ 31). Über 25 Jahre werden daraus 180.000 bis 285.000 Euro. Wie das im Einzelnen zusammenkommt, steht auf <a href="../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
 
         <div class="section-feedback-heading"><h2 id="pferde-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="pferde-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
         <div class="pex-bedenkzeit">
           <p><strong>Ein Pferd muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für diese Tiere nicht untersucht. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für diese Tiere nicht untersucht. Lässt dir ein Anbieter diese Zeit nicht, ist das ein guter Grund abzusagen. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
         </div>
         <p>Die Reihenfolge, die wir empfehlen: erst Tierschutzvereine und Auffangstellen, danach alles andere. Die Fragen für den Besuch beim Anbieter und die Checkliste stehen auf <a href="../pferde/entscheidung/index.html">Bevor ein Pferd einzieht</a>.</p>
 
@@ -7550,7 +7630,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.</li><li>Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.</li><li>Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.</li></ul>
+              <ul><li>Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.</li><li>Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.</li><li>Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>

@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar</title>
-  <meta name="description" content="Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.">
+  <meta name="description" content="Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht zusammenspielen und warum Leinenpflicht Wildtiere schützt.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Private Wildtierhaltung: legal heißt nicht vertretbar">
   <meta name="twitter:description" content="Bundesrecht, Landesrecht, Exoten, Gefahrtierhaltung und Wildschutz für Deutschland verständlich eingeordnet.">
@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6951,6 +6953,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -6959,7 +7039,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   "@type": "WebPage",
   "name": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
   "headline": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
-  "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.",
+  "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht zusammenspielen und warum Leinenpflicht Wildtiere schützt.",
   "url": "https://wahre-haustierliebe.de/wildtierhaltung/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6977,7 +7057,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Wildtierhaltung, Exoten, Gefahrtier, Wildschutz, Deutschland",
   "about": [
@@ -7043,7 +7123,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   "@type": "Article",
   "headline": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
   "name": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
-  "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.",
+  "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht zusammenspielen und warum Leinenpflicht Wildtiere schützt.",
   "url": "https://wahre-haustierliebe.de/wildtierhaltung/index.html",
   "mainEntityOfPage": "https://wahre-haustierliebe.de/wildtierhaltung/index.html",
   "image": {
@@ -7063,7 +7143,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Wildtierhaltung, Exoten, Gefahrtier, Wildschutz, Deutschland",
@@ -7353,18 +7433,18 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
   <main id="main-content" tabindex="-1">
 <section id="wildtierhaltung" class="page active">
-    <div class="hero" style="background: linear-gradient(135deg, #394E36 0%, #18251B 100%);"><div class="container"><div class="article-hero-copy"><h1>Ein Wildtier wird nicht privat, nur weil es hinter einem Zaun sitzt.</h1><p>Tiger, Luchse, Krokodile und andere gefährliche oder anspruchsvolle Tiere gehören nicht in Privatgärten. Wenn Recht das zulässt oder uneinheitlich regelt, ist das auch ein staatliches Problem.</p><div class="article-kicker"><span>Bundesrecht</span><span>Landesrecht</span><span>Wildschutz</span></div></div><figure class="article-hero-media image-context-card" style="--image-position:center 45%;"><img src="../assets/images/optimized/exot-bartagame.jpg" alt="Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung" loading="eager" decoding="async" width="330" height="212" fetchpriority="high"><figcaption class="context-caption">Faszination ersetzt keine <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="sachkunde" data-glossary-title="Sachkunde" data-glossary-text="Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere." data-glossary-href="../glossar/index.html#sachkunde">Sachkunde</span>, kein Gehege und keine politische Verantwortung.</figcaption></figure></div></div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hinweis-wildtierhaltung-1">Warum das rechtlich so schief wirkt</a></li><li><a href="#hinweis-wildtierhaltung-2">Die moralische Frage ist einfacher als die juristische</a></li><li><a href="#hinweis-wildtierhaltung-3">Leinenpflicht, Brut- und Setzzeit und „Der macht nichts“</a></li><li><a href="#hinweis-wildtierhaltung-4">Naturgefahren: Auch der Hund ist gefährdet</a></li><li><a href="#hinweis-wildtierhaltung-5">Fachquellen und wichtige Grenzen</a></li></ol></details></nav>
+    <div class="hero" style="background: linear-gradient(135deg, #394E36 0%, #18251B 100%);"><div class="container"><div class="article-hero-copy"><h1>Ein Wildtier wird nicht privat, nur weil es hinter einem Zaun sitzt.</h1><p>Tiger, Luchse, Krokodile und andere gefährliche oder anspruchsvolle Tiere gehören nicht in Privatgärten. Wenn das Gesetz das erlaubt oder in jedem Bundesland anders regelt, ist das auch ein Problem des Staates.</p><div class="article-kicker"><span>Bundesrecht</span><span>Landesrecht</span><span>Wildschutz</span></div></div><figure class="article-hero-media image-context-card" style="--image-position:center 45%;"><img src="../assets/images/optimized/exot-bartagame.jpg" alt="Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung" loading="eager" decoding="async" width="330" height="212" fetchpriority="high"><figcaption class="context-caption">Faszination ersetzt keine <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="sachkunde" data-glossary-title="Sachkunde" data-glossary-text="Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere." data-glossary-href="../glossar/index.html#sachkunde">Sachkunde</span>, kein Gehege und keine politische Verantwortung.</figcaption></figure></div></div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hinweis-wildtierhaltung-1">Warum das rechtlich so schief wirkt</a></li><li><a href="#hinweis-wildtierhaltung-2">Die moralische Frage ist einfacher als die juristische</a></li><li><a href="#hinweis-wildtierhaltung-3">Leinenpflicht, Brut- und Setzzeit und „Der macht nichts“</a></li><li><a href="#hinweis-wildtierhaltung-4">Naturgefahren: Auch der Hund ist gefährdet</a></li><li><a href="#hinweis-wildtierhaltung-5">Fachquellen und wichtige Grenzen</a></li></ol></details></nav>
     <div class="section"><div class="container">
       <div class="warning-box"><h3>Auf einen Blick</h3><ul><li>In Deutschland gibt es kein einheitliches bundesweites Gefahrtiergesetz für private Haltung.</li><li>Tierschutz-, Arten- und Naturschutzrecht gelten bundesweit, <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="gefahrtier" data-glossary-title="Gefahrtier" data-glossary-text="Tier, das wegen Größe, Gift, Kraft oder Verhalten besondere Sicherheitsanforderungen stellt." data-glossary-href="../glossar/index.html#gefahrtier">Gefahrtierregeln</span> aber je nach Bundesland unterschiedlich.</li><li>„Legal möglich“ heißt nicht „praktisch, moralisch oder tierschutzfachlich vertretbar“.</li><li>Wildschutz betrifft auch normale Haustierhaltung: Ein unangeleinter Hund kann Wildtiere verletzen oder töten.</li></ul></div>
       <div class="section-feedback-heading"><h2 id="hinweis-wildtierhaltung-1">Warum das rechtlich so schief wirkt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildtierhaltung-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
       <p>Deutschland regelt Tierhaltung an mehreren Stellen. Das Tierschutzgesetz verlangt, dass Tiere ihrer Art und ihren Bedürfnissen entsprechend ernährt, gepflegt und verhaltensgerecht untergebracht werden. <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="artenschutz" data-glossary-title="Artenschutz" data-glossary-text="Regeln zum Schutz gefährdeter Arten, etwa zu Herkunft, Handel, Nachweisen und Meldepflichten." data-glossary-href="../glossar/index.html#artenschutz">Artenschutzrecht</span> kann Herkunft, <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="herkunftsnachweis" data-glossary-title="Herkunftsnachweis" data-glossary-text="Nachweis der legalen Herkunft eines Tieres, besonders wichtig bei geschützten Arten und Exoten." data-glossary-href="../glossar/index.html#herkunftsnachweis">Nachweise</span> und <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="meldepflicht" data-glossary-title="Meldepflicht" data-glossary-text="Pflicht, bestimmte Tiere oder Haltungen bei einer Behörde anzumelden, etwa aus Artenschutzgründen." data-glossary-href="../glossar/index.html#meldepflicht">Meldepflichten</span> betreffen. Gefährliche Tiere werden aber nicht bundesweit einheitlich über eine einzige klare Liste geregelt. Viele konkrete Verbote, Erlaubnispflichten oder Anforderungen hängen vom Bundesland ab.</p>
-      <p>Genau daraus entsteht der absurde Eindruck: Ein Tier kann in einem Bundesland verboten oder erlaubnispflichtig sein und in einem anderen anders behandelt werden. Für Halter, Behörden und Tiere ist das kein sauberer Zustand. Für gefährliche Wildtiere ist diese Uneinheitlichkeit kein Detail, sondern eine Sicherheits- und Tierschutzlücke.</p>
-      <table class="cost-table"><thead><tr><th>Ebene</th><th>Worum es geht</th><th>Problem</th></tr></thead><tbody><tr><td data-label="Ebene">Bundesrecht</td><td data-label="Worum es geht">Tierschutz, Artenschutz, Nachweise, Handel</td><td data-label="Problem">setzt Grundpflichten, beantwortet aber nicht jede Gefahrtierfrage einheitlich</td></tr><tr><td data-label="Ebene">Landesrecht</td><td data-label="Worum es geht"><span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="gefahrtierliste" data-glossary-title="Gefahrtierliste" data-glossary-text="Landes- oder kommunal geregelte Liste von Tierarten, deren Haltung besondere Auflagen haben kann." data-glossary-href="../glossar/index.html#gefahrtierliste">Gefahrtierlisten</span>, Verbote, Erlaubnisse, Sicherheitsauflagen</td><td data-label="Problem">unterschiedlich streng, unterschiedlich übersichtlich</td></tr><tr><td data-label="Ebene">Vollzug</td><td data-label="Worum es geht">Kontrolle durch Behörden</td><td data-label="Problem">Dunkelziffer und illegale Haltung sind schwer verlässlich zu beziffern</td></tr></tbody></table>
+      <p>Genau daraus entsteht der absurde Eindruck: Ein Tier kann in einem Bundesland verboten oder erlaubnispflichtig sein und in einem anderen Bundesland anders behandelt werden. Für Halter, Behörden und Tiere ist das kein guter Zustand. Für gefährliche Wildtiere ist diese Uneinheitlichkeit kein Detail, sondern eine Sicherheits- und Tierschutzlücke.</p>
+      <table class="cost-table"><thead><tr><th>Ebene</th><th>Worum es geht</th><th>Problem</th></tr></thead><tbody><tr><td data-label="Ebene">Bundesrecht</td><td data-label="Worum es geht">Tierschutz, Artenschutz, Nachweise, Handel</td><td data-label="Problem">setzt Grundpflichten, beantwortet aber nicht jede Gefahrtierfrage einheitlich</td></tr><tr><td data-label="Ebene">Landesrecht</td><td data-label="Worum es geht"><span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="gefahrtierliste" data-glossary-title="Gefahrtierliste" data-glossary-text="Landes- oder kommunal geregelte Liste von Tierarten, deren Haltung besondere Auflagen haben kann." data-glossary-href="../glossar/index.html#gefahrtierliste">Gefahrtierlisten</span>, Verbote, Erlaubnisse, Sicherheitsauflagen</td><td data-label="Problem">unterschiedlich streng, unterschiedlich übersichtlich</td></tr><tr><td data-label="Ebene">Kontrolle (Vollzug)</td><td data-label="Worum es geht">Überprüfung durch Behörden</td><td data-label="Problem">Wie viele Tiere illegal gehalten werden, lässt sich kaum verlässlich sagen</td></tr></tbody></table>
       <div class="section-feedback-heading"><h2 id="hinweis-wildtierhaltung-2">Die moralische Frage ist einfacher als die juristische</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildtierhaltung-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
       <p>Ein Tiger ist kein Statussymbol. Ein Krokodil ist kein Gartenprojekt. Ein Luchs ist kein größerer Hauskater. Solche Tiere brauchen Raum, Klima, Sicherheit, Fachversorgung, Beschäftigung, Rückzug, Tierarztzugang, Notfallpläne und eine Haltung, die private Haushalte praktisch nicht leisten können. Wer hier nur fragt „Darf ich das?“, stellt die falsche Frage.</p>
       <div class="article-rhythm myth-truth"><div class="myth"><span class="eyebrow">Mythos</span><h3>„Ich habe Platz.“</h3><p>Platz ist nur ein Baustein. Wildtiere brauchen komplexe Lebensbedingungen, Sicherheit und Fachversorgung.</p></div><div class="truth"><span class="eyebrow">Fakt</span><h3>Privathaltung ist kein Naturschutz.</h3><p>Ein exotisches Tier im Garten rettet keine Art. Es bindet ein Tier an menschliche Faszination.</p></div></div>
       <div class="section-feedback-heading"><h2 id="hinweis-wildtierhaltung-3"><span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="leinenpflicht" data-glossary-title="Leinenpflicht" data-glossary-text="Pflicht, Hunde in bestimmten Gebieten oder Zeiten angeleint zu führen. Regeln sind regional verschieden." data-glossary-href="../glossar/index.html#leinenpflicht">Leinenpflicht</span>, Brut- und Setzzeit und „Der macht nichts“</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildtierhaltung-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-      <p>Wildtierliebe endet nicht bei Exoten. Sie beginnt beim normalen Spaziergang. In Wäldern, Parks und Schutzgebieten gibt es nicht ohne Grund Hinweise auf <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="brut-und-setzzeit" data-glossary-title="Brut- und Setzzeit" data-glossary-text="Zeit, in der Wildtiere brüten oder Jungtiere setzen. Hunde sollten dann besonders kontrolliert und oft angeleint werden." data-glossary-href="../glossar/index.html#brut-und-setzzeit">Brut- und Setzzeiten</span>. Bodenbrüter, junge Hasen, Rehkitze und andere Wildtiere brauchen Ruhe. Ein Hund muss nicht „böse“ sein, um Schaden anzurichten. Er muss nur einmal schneller sein als der Mensch.</p>
+      <p>Wildtierliebe endet nicht bei Exoten. Sie beginnt beim normalen Spaziergang. In Wäldern, Parks und Schutzgebieten gibt es nicht ohne Grund Hinweise auf <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="brut-und-setzzeit" data-glossary-title="Brut- und Setzzeit" data-glossary-text="Zeit, in der Wildtiere brüten oder Junge aufziehen. Hunde sollten dann besonders gut kontrolliert und oft angeleint werden." data-glossary-href="../glossar/index.html#brut-und-setzzeit">Brut- und Setzzeiten</span>. Bodenbrüter, junge Hasen, Rehkitze und andere Wildtiere brauchen Ruhe. Ein Hund muss nicht „böse“ sein, um Schaden anzurichten. Er muss nur einmal schneller sein als der Mensch.</p>
       <p>„Das hat er noch nie gemacht“ ist kein Argument. Es beschreibt nur die Vergangenheit. Wildschutz heißt: Hund anleinen, Rückruf nicht überschätzen, Regeln vor Ort respektieren und nicht so tun, als sei das eigene Tier von Instinkten befreit.</p>
       <div class="section-feedback-heading"><h2 id="hinweis-wildtierhaltung-4">Naturgefahren: Auch der Hund ist gefährdet</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildtierhaltung-4" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
       <p>In Nationalparks und Schutzgebieten sind Regeln nicht nur für Wildtiere da. Sie schützen auch Hunde. Heiße Quellen, steile Kanten, Wildtierkontakt, giftige Pflanzen oder instabile Untergründe können für Hunde tödlich sein. Das bekannte Yellowstone-Beispiel mit Thermalquellen zeigt nur besonders drastisch, was auch im Kleinen gilt: „Mein Hund weiß schon, was er tut“ ist keine Sicherheitsstrategie.</p>

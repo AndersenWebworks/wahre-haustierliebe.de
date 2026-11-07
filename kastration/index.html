@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kastration bei Katze, Hund und Kaninchen">
   <meta name="twitter:description" content="Gesundheitsnutzen, Risiken, Zeitpunkt, Wohnungskatzen, Pyometra, Gesäugetumore und Unterschiede zwischen den Tierarten.">
@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6951,6 +6953,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -6977,7 +7057,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Streunerkatze mit gekennzeichnetem Ohr nach einer TNR-Kastration."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Kastration, Kastrationspflicht, Tierschutz, Katzen, Kaninchen",
   "about": [
@@ -7063,7 +7143,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Kastration, Kastrationspflicht, Tierschutz, Katzen, Kaninchen",
@@ -7427,10 +7507,10 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="section-feedback-heading"><h2 id="kastration-die-entscheidende-frage-bei-wohnungskatzen">Die entscheidende Frage bei Wohnungskatzen</h2><button type="button" class="section-feedback-action" data-feedback-section="kastration-die-entscheidende-frage-bei-wohnungskatzen" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p><strong>„Sie kann doch nicht trächtig werden“ beantwortet nur die Frage nach Nachwuchs.</strong> Der Körper einer unkastrierten Kätzin durchläuft trotzdem hormonelle Zyklen. Eierstöcke und Gebärmutter bleiben aktiv. Damit bleiben auch Erkrankungen möglich, die nichts mit Freigang oder einem Deckakt zu tun haben.</p>
         <p>Die wichtigsten gesundheitlichen Gründe betreffen nicht Gebärmuttertumore, sondern vor allem die <strong>Gebärmuttervereiterung</strong> und <strong>Gesäugetumore</strong>. In einer großen schwedischen Versicherungsstudie trat die Gebärmuttervereiterung bei Katzen mit zunehmendem Alter häufiger auf, besonders deutlich ab sieben Jahren. Von den erkrankten Katzen starben 5,7 Prozent. Das ist die Sterblichkeit unter den erkrankten Tieren, nicht der Anteil aller unkastrierten Katzen.</p>
-        <p>Bei Gesäugetumoren ist frühes Handeln wichtig. Eine Fall-Kontroll-Studie fand bei Katzen, die vor dem Alter von sechs Monaten kastriert wurden, ein um 91 Prozent geringeres Risiko für ein Mammakarzinom als bei unkastrierten Katzen; bei einer Kastration vor zwölf Monaten lag die Risikoreduktion bei 86 Prozent. Solche Zahlen beschreiben eine statistische Verbindung aus einer Beobachtungsstudie, keine Garantie für das einzelne Tier. Der Zusammenhang ist dennoch bedeutsam, weil etwa 80 bis 90 Prozent der Gesäugetumore bei Katzen bösartig sind.</p>
+        <p>Bei Gesäugetumoren ist frühes Handeln wichtig. Eine Studie, die erkrankte mit gesunden Katzen vergleicht (Fall-Kontroll-Studie), fand bei Katzen, die vor dem Alter von sechs Monaten kastriert wurden, ein um 91 Prozent geringeres Risiko für Gesäugekrebs (Mammakarzinom) als bei unkastrierten Katzen. Bei einer Kastration vor zwölf Monaten lag das Risiko um 86 Prozent niedriger. Solche Zahlen zeigen einen statistischen Zusammenhang aus einer Beobachtungsstudie, keine Garantie für das einzelne Tier. Der Zusammenhang ist trotzdem wichtig, denn etwa 80 bis 90 Prozent der Gesäugetumore bei Katzen sind bösartig.</p>
 
         <div class="section-feedback-heading"><h2 id="kastration-was-kastration-und-sterilisation-unterscheiden">Was Kastration und Sterilisation unterscheiden</h2><button type="button" class="section-feedback-action" data-feedback-section="kastration-was-kastration-und-sterilisation-unterscheiden" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p>Bei der <strong><span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Keimdrüsen. Verhindert Fortpflanzung und beendet die Hormonproduktion weitgehend." data-glossary-href="../glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span></strong> werden die <span class="glossary-term" data-glossary-key="keimdruese" data-glossary-title="Keimdrüsen" data-glossary-text="Hoden oder Eierstöcke. Sie bilden Keimzellen und wichtige Geschlechtshormone." data-glossary-href="../glossar/index.html#keimdruese" aria-describedby="glossary-term-popover" tabindex="0" role="button">Keimdrüsen</span> entfernt: beim männlichen Tier die Hoden, beim weiblichen Tier die Eierstöcke. Abhängig von Tierart, Befund und Operationsmethode kann bei weiblichen Tieren zusätzlich die Gebärmutter entfernt werden. Ohne Erkrankung der Gebärmutter reicht bei Hündinnen und Kätzinnen häufig die Entfernung der Eierstöcke aus.</p>
+        <p>Bei der <strong><span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Hoden oder Eierstöcke. Verhindert Nachwuchs und beendet die Hormonbildung dort weitgehend." data-glossary-href="../glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span></strong> werden die <span class="glossary-term" data-glossary-key="keimdruese" data-glossary-title="Keimdrüsen" data-glossary-text="Hoden oder Eierstöcke. Sie bilden Keimzellen und wichtige Geschlechtshormone." data-glossary-href="../glossar/index.html#keimdruese" aria-describedby="glossary-term-popover" tabindex="0" role="button">Keimdrüsen</span> entfernt: beim männlichen Tier die Hoden, beim weiblichen Tier die Eierstöcke. Abhängig von Tierart, Befund und Operationsmethode kann bei weiblichen Tieren zusätzlich die Gebärmutter entfernt werden. Ohne Erkrankung der Gebärmutter reicht bei Hündinnen und Kätzinnen häufig die Entfernung der Eierstöcke aus.</p>
         <p>Bei der <strong><span class="glossary-term" data-glossary-key="sterilisation" data-glossary-title="Sterilisation" data-glossary-text="Durchtrennung von Ei- oder Samenleitern. Das Tier wird unfruchtbar, Hormone bleiben aktiv." data-glossary-href="../glossar/index.html#sterilisation" aria-describedby="glossary-term-popover" tabindex="0" role="button">Sterilisation</span></strong> werden nur Samenleiter oder Eileiter unterbrochen. Das Tier kann keinen Nachwuchs mehr zeugen oder bekommen, produziert aber weiterhin Geschlechtshormone. Rolligkeit oder Läufigkeit, hormonabhängiges Markieren, Paarungsverhalten und die meisten hormonabhängigen Erkrankungsrisiken bleiben deshalb bestehen.</p>
 
         <div class="section-feedback-heading"><h2 id="einmal-junge-vor-kastration">Mythos: „Sie sollte vor der Kastration einmal Junge bekommen“</h2><button type="button" class="section-feedback-action" data-feedback-section="einmal-junge-vor-kastration" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
@@ -7478,7 +7558,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <ul>
           <li><strong>Keine Erkrankungen der entfernten Eierstöcke:</strong> Zysten und Eierstocktumore können dort nicht mehr entstehen.</li>
           <li><strong>Keine Gebärmuttervereiterung durch weitere hormonelle Zyklen:</strong> Nach vollständiger Entfernung des Eierstockgewebes fehlt der hormonelle Antrieb. Bleibt versehentlich Eierstockgewebe zurück, kann ein sogenanntes Ovarian-Remnant-Syndrom Beschwerden verursachen.</li>
-          <li><strong>Deutlich geringeres Risiko für <span class="glossary-term" data-glossary-key="mammatumor" data-glossary-title="Mammatumor" data-glossary-text="Tumor der Milchleiste. Bei Katzen und Hündinnen kann Kastration das Risiko je nach Zeitpunkt senken." data-glossary-href="../glossar/index.html#mammatumor" aria-describedby="glossary-term-popover" tabindex="0" role="button">Gesäugekrebs</span> bei früher Kastration:</strong> Der Schutzeffekt ist vor der ersten Rolligkeit am größten und nimmt mit dem Alter ab.</li>
+          <li><strong>Deutlich geringeres Risiko für <span class="glossary-term" data-glossary-key="mammatumor" data-glossary-title="Mammatumor" data-glossary-text="Tumor der Milchleiste (Gesäuge). Bei Katzen und Hündinnen kann Kastration das Risiko je nach Zeitpunkt senken." data-glossary-href="../glossar/index.html#mammatumor" aria-describedby="glossary-term-popover" tabindex="0" role="button">Gesäugekrebs</span> bei früher Kastration:</strong> Der Schutzeffekt ist vor der ersten Rolligkeit am größten und nimmt mit dem Alter ab.</li>
           <li><strong>Keine <span class="glossary-term" data-glossary-key="rolligkeit" data-glossary-title="Rolligkeit" data-glossary-text="Paarungsbereite Zyklusphase bei Katzen, oft mit Stress, Rufen und Unruhe." data-glossary-href="../glossar/index.html#rolligkeit" aria-describedby="glossary-term-popover" tabindex="0" role="button">Rolligkeit</span> und keine Trächtigkeit:</strong> Damit entfallen auch Risiken von Geburt, Kaiserschnitt, Scheinträchtigkeit und hormonabhängiger Gesäugevergrößerung.</li>
         </ul>
 
@@ -7527,8 +7607,8 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         </ul>
 
         <div class="section-feedback-heading"><h2 id="kastration-kaninchen-und-andere-kleine-heimtiere">Kaninchen und andere kleine Heimtiere</h2><button type="button" class="section-feedback-action" data-feedback-section="kastration-kaninchen-und-andere-kleine-heimtiere" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p><strong>Rammler:</strong> Die Kastration verhindert Nachwuchs und ermöglicht eine stabile Haltung mit Artgenossen beider Geschlechter. Nach einer normalen Kastration kann ein geschlechtsreifer Rammler noch bis zu sechs Wochen zeugungsfähig sein und muss in dieser Zeit von unkastrierten Weibchen getrennt bleiben. Bei einer fachgerecht durchgeführten <span class="glossary-term" data-glossary-key="fruehkastration" data-glossary-title="Frühkastration" data-glossary-text="Kastration vor der Geschlechtsreife, bei Katzen oft vor der ersten Rolligkeit." data-glossary-href="../glossar/index.html#fruehkastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Frühkastration</span> vor Eintritt der Geschlechtsreife entfällt diese Wartezeit in der Regel.</p>
-        <p><strong>Weibliche Kaninchen:</strong> Gebärmutterveränderungen sind bei unkastrierten Häsinnen häufig und das Risiko für Gebärmuttertumore steigt besonders nach dem dritten Lebensjahr. Eine prospektive Untersuchung von 116 Hauskaninchen fand Gebärmuttererkrankungen auch bei Tieren, bei denen vorher kein entsprechender Verdacht bestand. Die oft wiederholte Behauptung, 80 Prozent aller älteren Häsinnen bekämen Gebärmutterkrebs, lässt sich aus heutiger Forschung nicht als allgemeingültige Zahl ableiten.</p>
+        <p><strong>Rammler (männliche Kaninchen):</strong> Die Kastration verhindert Nachwuchs und ermöglicht eine stabile Haltung mit Artgenossen beider Geschlechter. Nach einer normalen Kastration kann ein geschlechtsreifer Rammler noch bis zu sechs Wochen zeugungsfähig sein. In dieser Zeit muss er von unkastrierten Weibchen getrennt bleiben. Bei einer fachgerecht durchgeführten <span class="glossary-term" data-glossary-key="fruehkastration" data-glossary-title="Frühkastration" data-glossary-text="Kastration vor der Geschlechtsreife, bei Katzen oft vor der ersten Rolligkeit." data-glossary-href="../glossar/index.html#fruehkastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Frühkastration</span> vor Eintritt der Geschlechtsreife entfällt diese Wartezeit in der Regel.</p>
+        <p><strong>Weibliche Kaninchen (Häsinnen):</strong> Gebärmutterveränderungen sind bei unkastrierten Häsinnen häufig, und das Risiko für Gebärmuttertumore steigt besonders nach dem dritten Lebensjahr. Eine prospektive Untersuchung von 116 Hauskaninchen fand Gebärmuttererkrankungen auch bei Tieren, bei denen vorher kein entsprechender Verdacht bestand. Die oft wiederholte Behauptung, 80 Prozent aller älteren Häsinnen bekämen Gebärmutterkrebs, lässt sich aus heutiger Forschung nicht als allgemeingültige Zahl ableiten.</p>
         <p>Der Eingriff bei einer Häsin ist größer als beim Rammler. Besprich Nutzen, Alter, Allgemeinzustand, Narkoseverfahren, Schmerztherapie und Erfahrung der Praxis mit Heimtieren, bevor eine Erkrankung den Eingriff zum Notfall macht.</p>
         <p><strong>Meerschweinchen und Ratten:</strong> Männliche Tiere werden vor allem kastriert, wenn dadurch eine passende soziale Gruppe ohne Nachwuchs möglich wird oder eine medizinische Indikation besteht. Weibliche Tiere werden wegen des größeren Operationsrisikos nicht allein nach einer allgemeinen Routineformel kastriert. Entscheidend sind Tierart, Gruppenkonstellation und konkreter Befund.</p>
 
@@ -7577,8 +7657,8 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         </div>
 
         <div class="section-feedback-heading"><h2 id="kastration-recht-keine-einzige-regel-fur-ganz-deutschland">Recht: keine einzige Regel für ganz Deutschland</h2><button type="button" class="section-feedback-action" data-feedback-section="kastration-recht-keine-einzige-regel-fur-ganz-deutschland" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p>Das <a href="https://www.gesetze-im-internet.de/tierschg/__6.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz in § 6</a> erlaubt die Unfruchtbarmachung unter anderem zur Verhinderung unkontrollierter Fortpflanzung sowie, soweit keine tierärztlichen Bedenken entgegenstehen, zur weiteren Nutzung oder Haltung des Tieres. Für freilaufende Katzen können Länder und Kommunen auf Grundlage von <a href="https://www.gesetze-im-internet.de/tierschg/__13b.html" target="_blank" rel="noopener noreferrer">§ 13b TierSchG</a> örtliche Vorgaben zu <span class="glossary-term" data-glossary-key="kastrationspflicht" data-glossary-title="Kastrationspflicht" data-glossary-text="Rechtliche Pflicht, bestimmte Katzen kastrieren zu lassen. In Deutschland meist kommunal geregelt." data-glossary-href="../glossar/index.html#kastrationspflicht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span>, <span class="glossary-term" data-glossary-key="kennzeichnungspflicht" data-glossary-title="Kennzeichnungspflicht" data-glossary-text="Pflicht, ein Tier eindeutig zu kennzeichnen, meist per Mikrochip oder Tätowierung." data-glossary-href="../glossar/index.html#kennzeichnungspflicht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kennzeichnung</span> und <span class="glossary-term" data-glossary-key="registrierungspflicht" data-glossary-title="Registrierungspflicht" data-glossary-text="Pflicht, ein gekennzeichnetes Tier in einem Register einzutragen, damit es zugeordnet werden kann." data-glossary-href="../glossar/index.html#registrierungspflicht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Registrierung</span> erlassen.</p>
-        <p>Ob an deinem Wohnort eine Katzenschutzverordnung gilt, musst du bei Gemeinde, Stadt oder Landkreis prüfen. Eine örtliche Pflicht ersetzt die tierärztliche Beratung nicht; umgekehrt bedeutet das Fehlen einer Pflicht nicht, dass eine unkastrierte Freigängerkatze verantwortbar ist.</p>
+        <p>Das <a href="https://www.gesetze-im-internet.de/tierschg/__6.html" target="_blank" rel="noopener noreferrer">Tierschutzgesetz</a> (§ 6) erlaubt es, ein Tier unfruchtbar zu machen, um unkontrollierte Fortpflanzung zu verhindern. Das gilt auch, wenn es für die weitere Nutzung oder Haltung des Tieres nötig ist und keine tierärztlichen Bedenken dagegen sprechen. Für freilaufende Katzen können Länder und Kommunen nach <a href="https://www.gesetze-im-internet.de/tierschg/__13b.html" target="_blank" rel="noopener noreferrer">§ 13b</a> örtliche Vorgaben zu <span class="glossary-term" data-glossary-key="kastrationspflicht" data-glossary-title="Kastrationspflicht" data-glossary-text="Vorschrift, bestimmte Katzen kastrieren zu lassen. In Deutschland meist von Städten und Landkreisen geregelt." data-glossary-href="../glossar/index.html#kastrationspflicht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span>, <span class="glossary-term" data-glossary-key="kennzeichnungspflicht" data-glossary-title="Kennzeichnungspflicht" data-glossary-text="Vorschrift, ein Tier eindeutig zu kennzeichnen, meist per Mikrochip oder Tätowierung." data-glossary-href="../glossar/index.html#kennzeichnungspflicht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kennzeichnung</span> und <span class="glossary-term" data-glossary-key="registrierungspflicht" data-glossary-title="Registrierungspflicht" data-glossary-text="Pflicht, ein gekennzeichnetes Tier in einem Register einzutragen, damit es zugeordnet werden kann." data-glossary-href="../glossar/index.html#registrierungspflicht" aria-describedby="glossary-term-popover" tabindex="0" role="button">Registrierung</span> erlassen.</p>
+        <p>Ob an deinem Wohnort eine Katzenschutzverordnung gilt, erfährst du bei Gemeinde, Stadt oder Landkreis. Eine örtliche Pflicht ersetzt die tierärztliche Beratung nicht. Und wo es keine Pflicht gibt, ist eine unkastrierte Freigängerkatze deshalb nicht automatisch vertretbar.</p>
 
 
         <div class="warning-box">

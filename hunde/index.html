@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6949,6 +6951,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 @media (max-width: 640px) {
   .pex-feld { padding: 1rem 1rem 1.1rem; }
   .pex-karte li { grid-template-columns: 1fr; }
+}
+
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
 }
 
 
@@ -7411,10 +7491,10 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="info-box">
           <h3>Auf einen Blick</h3>
           <ul>
-            <li>Als Orientierung gelten 4 bis 5 Stunden am Stück, die ein erwachsener Hund allein bleiben sollte. Eine gesetzliche Zahl gibt es nicht; die Tierschutz-Hundeverordnung verlangt mehrmals täglich Umgang mit der Betreuungsperson.</li>
+            <li>Ein erwachsener Hund sollte als Orientierung höchstens 4 bis 5 Stunden am Stück allein bleiben. Eine gesetzliche Zahl gibt es nicht. Die Tierschutz-Hundeverordnung verlangt aber, dass er mehrmals täglich Umgang mit seinem Menschen hat.</li>
             <li>Ein mittelgroßer Hund kostet über zwölf Jahre rund 3,20 bis 8,45 Euro pro Tag, zusammen etwa 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Laufend sind das etwa 100 bis 240 Euro im Monat. Notfälle sind nicht eingerechnet.</li>
-            <li>Die Kosten einer Kastration hängen von Geschlecht, Gewicht, Narkose, Operationsmethode, Medikamenten und Nachsorge ab.</li>
-            <li>Die meisten unkastrierten Rüden entwickeln im Alter eine gutartige Prostatavergrößerung; nicht jede verursacht Beschwerden. Nach einer Literaturangabe, zitiert bei <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8782267/" target="_blank" rel="noopener noreferrer">Ruetten et al. 2021</a>, sind es rund 80 % ab sechs Jahren und etwa 95 % ab neun Jahren.</li>
+            <li>Was eine Kastration kostet, hängt von Geschlecht, Gewicht, Narkose, Operationsmethode, Medikamenten und Nachsorge ab.</li>
+            <li>Die meisten unkastrierten Rüden bekommen im Alter eine gutartig vergrößerte Prostata; nicht jede macht Beschwerden. Nach einer Literaturangabe, die <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8782267/" target="_blank" rel="noopener noreferrer">Ruetten et al. 2021</a> zitieren, sind es rund 80 % ab sechs Jahren und etwa 95 % ab neun Jahren.</li>
             <li>Ein Garten ersetzt keine Spaziergänge – Hunde brauchen Auslauf, neue Reize, Gerüche und Sozialkontakte außerhalb ihres gewohnten Territoriums.</li>
           </ul>
         </div><div class="article-rhythm metric-grid" data-enhancement="hunde-stats">
@@ -7432,7 +7512,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Mehrmals täglich Umgang mit dir und regelmäßig Kontakt zu anderen Hunden. Ein Welpe braucht bis zur 20. Lebenswoche mindestens vier Stunden Umgang pro Tag.<sup><a href="#hunde-q2">2</a></sup></p>
-              <p>So steht es in § 2 Abs. 1 der Tierschutz-Hundeverordnung. Den Kontakt zu Artgenossen darf man nur im Einzelfall verweigern, wenn Gesundheit oder Unverträglichkeit es verlangen. Ein einzeln gehaltener Hund soll täglich mehrmals länger dauernden Umgang mit Betreuungspersonen bekommen (§ 2 Abs. 3).<sup><a href="#hunde-q2">2</a></sup> Nach der Begründung der Verordnung gilt eine Stunde Umgang täglich als Minimum.<sup><a href="#hunde-q3">3</a></sup></p>
+              <p>So steht es in der Tierschutz-Hundeverordnung (§ 2 Abs. 1). Kontakt zu anderen Hunden darf man nur im Einzelfall verweigern, etwa aus gesundheitlichen Gründen oder bei Unverträglichkeit. Ein Hund, der allein gehalten wird, soll täglich mehrmals längere Zeit mit seinen Menschen verbringen (§ 2 Abs. 3).<sup><a href="#hunde-q2">2</a></sup> In der Begründung der Verordnung gilt eine Stunde Umgang täglich als Minimum.<sup><a href="#hunde-q3">3</a></sup></p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
@@ -7450,7 +7530,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Ausreichend Auslauf im Freien außerhalb eines Zwingers; als Richtwert gilt eine Stunde täglich.<sup><a href="#hunde-q2">2</a>,<a href="#hunde-q3">3</a></sup></p>
-              <p>Die Verordnung nennt keine feste Stundenzahl, verlangt aber Auslauf, der zu Rasse, Alter und Gesundheit des Hundes passt.<sup><a href="#hunde-q2">2</a></sup> Als Richtwert bleibt eine Stunde Auslauf täglich bestehen.<sup><a href="#hunde-q3">3</a></sup> Der Deutsche Tierschutzbund rät, den Hund viermal täglich auszuführen, damit er sein „Geschäft“ verrichten kann, und betont, dass Hunde je nach Alter und Rasse viel Bewegung brauchen.<sup><a href="#hunde-q4">4</a></sup> Warum ein Garten die Spaziergänge nicht ersetzt, steht unter <a href="../hunde/garten-auslauf/index.html">Garten &amp; Auslauf</a>.</p>
+              <p>Die Verordnung nennt keine feste Stundenzahl. Sie verlangt aber Auslauf, der zu Rasse, Alter und Gesundheit des Hundes passt.<sup><a href="#hunde-q2">2</a></sup> Als Richtwert gilt weiterhin eine Stunde Auslauf täglich.<sup><a href="#hunde-q3">3</a></sup> Der Deutsche Tierschutzbund rät, mit dem Hund viermal täglich rauszugehen, damit er sein „Geschäft“ erledigen kann. Außerdem brauchen Hunde je nach Alter und Rasse viel Bewegung.<sup><a href="#hunde-q4">4</a></sup> Warum ein Garten die Spaziergänge nicht ersetzt, steht unter <a href="../hunde/garten-auslauf/index.html">Garten &amp; Auslauf</a>.</p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
@@ -7468,7 +7548,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Zwei Mahlzeiten am Tag, nicht mehr als 12 Stunden Abstand, und ständig frisches Wasser.<sup><a href="#hunde-q5">5</a></sup></p>
-              <p>VIER PFOTEN schreibt, erwachsene Hunde könnten zweimal täglich Futter erhalten; zwischen den beiden Mahlzeiten sollten nicht mehr als 12 Stunden liegen, sonst kann sich Magensäure anstauen. Welpen bekommen bis zum Alter von drei Monaten die Tagesmenge auf vier Portionen verteilt.<sup><a href="#hunde-q5">5</a></sup> Der Deutsche Tierschutzbund nennt für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung zusammen 1.200 bis 1.350 Euro im Jahr.<sup><a href="#hunde-q4">4</a></sup></p>
+              <p>Laut VIER PFOTEN können erwachsene Hunde zweimal täglich Futter bekommen. Zwischen den beiden Mahlzeiten sollten höchstens 12 Stunden liegen, sonst kann sich Magensäure anstauen. Welpen bekommen bis zum Alter von drei Monaten die Tagesmenge auf vier Portionen verteilt.<sup><a href="#hunde-q5">5</a></sup> Für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung zusammen nennt der Deutsche Tierschutzbund 1.200 bis 1.350 Euro im Jahr.<sup><a href="#hunde-q4">4</a></sup></p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
@@ -7486,7 +7566,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Rund 11 Stunden Schlaf in 24 Stunden, ein fester Rückzugsort und ein geregelter Tagesablauf.<sup><a href="#hunde-q6">6</a>,<a href="#hunde-q4">4</a>,<a href="#hunde-q1">1</a></sup></p>
-              <p>In einer Studie gaben Halter für 16 Wochen alte Welpen im Mittel 11,2 Stunden Schlaf pro Tag an und für einjährige Hunde 10,8 Stunden, davon rund sieben Stunden in der Nacht.<sup><a href="#hunde-q6">6</a></sup> Der Tierschutzbund rät zu einem festen Rückzugsort und Schlafplatz, an dem sich der Hund ungestört fühlt; er muss zugluftfrei und stets zugänglich sein.<sup><a href="#hunde-q4">4</a></sup> Die TVT verlangt für Welpen einen geregelten Tagesablauf mit ausreichenden, ungestörten Ruhephasen.<sup><a href="#hunde-q1">1</a></sup> Alleinbleiben muss ein Hund in kleinen Schritten lernen; zwei Wochen reichen dafür nicht.<sup><a href="#hunde-q1">1</a></sup></p>
+              <p>In einer Studie gaben Halter an, dass 16 Wochen alte Welpen im Mittel 11,2 Stunden pro Tag schlafen und einjährige Hunde 10,8 Stunden. Rund sieben Stunden davon liegen in der Nacht.<sup><a href="#hunde-q6">6</a></sup> Der Tierschutzbund rät zu einem festen Rückzugsort und Schlafplatz, an dem der Hund ungestört sein kann. Er muss zugluftfrei und immer zugänglich sein.<sup><a href="#hunde-q4">4</a></sup> Für Welpen verlangt die TVT einen geregelten Tagesablauf mit ausreichend ungestörten Ruhephasen.<sup><a href="#hunde-q1">1</a></sup> Alleinbleiben muss ein Hund in kleinen Schritten lernen; zwei Wochen reichen dafür nicht.<sup><a href="#hunde-q1">1</a></sup></p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
@@ -7504,11 +7584,11 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <dt>Das Maß</dt>
             <dd>
               <p class="hunde-mass">Ein Hund lebt etwa 8 bis 14 Jahre. Im tierärztlichen Notdienst gilt das Zwei- bis Vierfache des Gebührensatzes plus 50 Euro.<sup><a href="#hunde-q4">4</a>,<a href="#hunde-q7">7</a></sup></p>
-              <p>Die Lebenserwartung nennt der Deutsche Tierschutzbund mit etwa 8 bis 14 Jahren; zu den jährlichen Kosten gehören Impfungen und Entwurmung.<sup><a href="#hunde-q4">4</a></sup> Für Leistungen im Notdienst bei Nacht, am Wochenende oder an einem Feiertag erhöhen sich nach § 4 der Gebührenordnung für Tierärzte die einfachen Gebührensätze auf das Zweifache, in begründeten Fällen bis auf das Vierfache; dazu kommt eine Notdienstgebühr von 50 Euro.<sup><a href="#hunde-q7">7</a></sup> Manche Rassen haben angezüchtete Gesundheitsprobleme, mehr dazu steht unter <a href="../qualzucht/index.html">Qualzucht</a>.</p>
+              <p>Der Deutsche Tierschutzbund nennt eine Lebenserwartung von etwa 8 bis 14 Jahren. Zu den jährlichen Kosten gehören Impfungen und Entwurmung.<sup><a href="#hunde-q4">4</a></sup> Nachts, am Wochenende und an Feiertagen kostet der Tierarzt mehr: Im Notdienst erhöht die Gebührenordnung für Tierärzte (§ 4) den einfachen Satz auf das Zweifache, in begründeten Fällen bis auf das Vierfache. Dazu kommen 50 Euro Notdienstgebühr.<sup><a href="#hunde-q7">7</a></sup> Manche Rassen haben angezüchtete Gesundheitsprobleme, mehr dazu steht unter <a href="../qualzucht/index.html">Qualzucht</a>.</p>
             </dd>
             <dt>Zum Vorstellen</dt>
             <dd>
-              <p>Rechenbeispiel mit einem angenommenen einfachen Gebührensatz von 250 Euro: Im Notdienst sind das zwischen 550 und 1.050 Euro.</p>
+              <p>Ein Rechenbeispiel: Bei einem angenommenen einfachen Satz von 250 Euro zahlst du im Notdienst zwischen 550 und 1.050 Euro.</p>
               <p class="hunde-rechnung">Rechnung: 2 × 250 + 50 = 550; 4 × 250 + 50 = 1.050.</p>
             </dd>
             <dt class="hunde-frage-t">Frage an dich</dt>
@@ -7519,7 +7599,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="section-feedback-heading"><h2 id="hunde-tag">Ein Tag aus Sicht eines Hundes</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-tag" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <span class="hunde-beispiel-tag">Beispiel, kein echter Hund</span>
         <ol class="zeitleiste hunde-tag-liste">
-          <li><span class="zeitleiste-when">Früher Morgen</span><p class="zeitleiste-what">Der Hund muss raus, um sein „Geschäft“ zu verrichten. Der Tierschutzbund rät dazu, ihn viermal am Tag auszuführen.<sup><a href="#hunde-q4">4</a></sup></p></li>
+          <li><span class="zeitleiste-when">Früher Morgen</span><p class="zeitleiste-what">Der Hund muss raus, um sein „Geschäft“ zu erledigen. Der Tierschutzbund rät, viermal am Tag mit ihm rauszugehen.<sup><a href="#hunde-q4">4</a></sup></p></li>
           <li class="hunde-mensch"><span class="zeitleiste-when">Danach: du</span><p class="zeitleiste-what">Erste Mahlzeit und frisches Wasser. Die zweite Mahlzeit folgt nach höchstens 12 Stunden.<sup><a href="#hunde-q5">5</a></sup></p></li>
           <li><span class="zeitleiste-when">Vormittag</span><p class="zeitleiste-what">Ruhen am festen Platz. Rund 11 Stunden Schlaf gehören zum Tag, ungefähr sieben davon in der Nacht, der Rest verteilt sich auf den Tag.<sup><a href="#hunde-q6">6</a></sup></p></li>
           <li class="hunde-mensch"><span class="zeitleiste-when">Tagsüber: du</span><p class="zeitleiste-what">Umgang mit dir, mehrmals am Tag. Allein bleibt der Hund nur so lange, wie er es in kleinen Schritten gelernt hat; als Orientierung gelten höchstens 4 bis 5 Stunden am Stück.<sup><a href="#hunde-q1">1</a>,<a href="#hunde-q2">2</a></sup></p></li>
@@ -7540,7 +7620,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="section-feedback-heading"><h2 id="hunde-bevor">Bevor du entscheidest</h2><button type="button" class="section-feedback-action" data-feedback-section="hunde-bevor" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <div class="hunde-bedenkzeit">
           <p><strong>Ein Hund muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du besuchst den Hund an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; für Hunde ist nicht untersucht, ob eine Bedenkzeit die spätere Haltung verbessert. Die TVT rät, keine emotionalen oder spontanen Kaufentscheidungen zu treffen, auch nicht aus Mitleid.<sup><a href="#hunde-q1">1</a></sup> Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Lass zwischen dem ersten Besuch und der Zusage mindestens drei Nächte vergehen und besuche den Hund an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; für Hunde ist nicht untersucht, ob eine Bedenkzeit die spätere Haltung verbessert. Die TVT rät, keine emotionalen oder spontanen Kaufentscheidungen zu treffen, auch nicht aus Mitleid.<sup><a href="#hunde-q1">1</a></sup> Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
 
         <div class="hunde-karte">

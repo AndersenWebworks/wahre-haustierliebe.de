@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Offizielles Logo von Wa(h)re Haustier(liebe).">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-10-24">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Woher kommt mein Tier? - Wa(h)re Haustier(liebe)">
   <meta name="twitter:description" content="Zoofachhandel, Kleinanzeigen, Züchter und Tierheim: Wege im Überblick und was du vor dem Kauf prüfen kannst.">
@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6951,6 +6953,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -6977,7 +7057,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Offizielles Logo von Wa(h)re Haustier(liebe)."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Herkunft Haustier, Zoofachhandel, Kleinanzeigen, Züchter, Tierheim, Mitleidskauf",
   "about": [
@@ -7067,7 +7147,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Herkunft Haustier, Zoofachhandel, Kleinanzeigen, Züchter, Tierheim, Mitleidskauf",
@@ -7144,7 +7224,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Muss mich der Zoofachhandel beraten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis nach § 11 Tierschutzgesetz und muss bei der erstmaligen Abgabe einer Tierart schriftliche Informationen zu den wesentlichen Bedürfnissen des Tieres mitgeben (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab."
+        "text": "Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier wesentlich braucht (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab."
       }
     },
     {
@@ -7160,7 +7240,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Woran erkenne ich einen seriösen Züchter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt diese Seite keinen eigenen Kriterienkatalog vor; die allgemeinen Prüfpunkte gelten auch hier."
+        "text": "Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt es keinen eigenen Kriterienkatalog; die allgemeinen Prüfpunkte gelten auch hier."
       }
     },
     {
@@ -7176,7 +7256,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Wie finde ich ein Tierheim oder eine Notstation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Der Tierheim-Finder des Deutschen Tierschutzbundes listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt."
+        "text": "Im Tierheim-Finder des Deutschen Tierschutzbundes standen am 24. Oktober 2026 1.243 Einrichtungen. Man kann dort nach Einrichtungsart filtern, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt."
       }
     }
   ]
@@ -7451,9 +7531,9 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="info-box">
           <h3>Auf einen Blick</h3>
           <ul>
-            <li>Hunde und Katzen gibt es nach Angabe des Branchenverbands ZZF im Zoofachhandel nicht. Für sie ist der Online-Handel mit seinen Kleinanzeigen der Problemort.</li>
-            <li>Kleinsäuger, Vögel, Fische und Reptilien kommen über Zoofachhandel, Online-Handel, Züchter und Tierschutz zu den Menschen. Unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.</li>
-            <li>Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis und muss bei der ersten Abgabe einer Tierart schriftliche Informationen zu den Bedürfnissen des Tieres mitgeben. Das ist ein Mindeststandard, kein Qualitätsurteil.</li>
+            <li>Hunde und Katzen gibt es nach Angabe des Branchenverbands ZZF (Zentralverband Zoologischer Fachbetriebe) im Zoofachhandel nicht. Für sie ist der Online-Handel mit seinen Kleinanzeigen der Problemort.</li>
+            <li>Kleinsäuger, Vögel, Fische und Reptilien kommen über Zoofachhandel, Online-Handel, Züchter und Tierschutz zu den Menschen. Unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.</li>
+            <li>Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis. Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier braucht. Das ist ein Mindeststandard, kein Qualitätsurteil.</li>
             <li>Der Deutsche Tierschutzbund rät, Tiere nicht aus Mitleid zu kaufen und zuerst im Tierheim zu schauen.</li>
             <li>Prüfen kannst du bei jedem Weg dasselbe: Wer gibt das Tier ab, wo leben die Tiere, welche Nachweise gibt es, und wirst du nach dem Einzug weiter beraten?</li>
           </ul>
@@ -7462,38 +7542,38 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="section-feedback-heading"><h2 id="kurzantwort">Kurzantwort</h2><button type="button" class="section-feedback-action" data-feedback-section="kurzantwort" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ein Tier kann aus dem <span class="glossary-term" data-glossary-key="zoohandel" data-glossary-title="Zoohandel" data-glossary-text="Geschäft, das lebende Tiere und Zubehör verkauft. Hunde und Katzen führt der Zoofachhandel nach Angabe des ZZF nicht." data-glossary-href="../glossar/index.html#zoohandel" aria-describedby="glossary-term-popover" tabindex="0" role="button">Zoofachhandel</span>, aus einer Anzeige im Internet, von einem Züchter oder Vermehrer, aus einem Tierheim oder von einer Notstation kommen. Welche Wege es für welche Tierart gibt, steht weiter unten. Ob ein Weg vertretbar ist, hängt davon ab, was du über den Anbieter prüfen kannst: Siehst du die Tiere dort, wo sie leben? Bekommst du Nachweise? Bleibt der Anbieter erreichbar?</p>
         <p>Wa(h)re Haustier(liebe) lehnt Kauf und Verkauf von Tieren ab, auch bei sorgfältiger Zucht, und empfiehlt, einem Tier aus dem Tierschutz den Vorzug zu geben. Wer trotzdem kauft, sollte nie bei <span class="glossary-term" data-glossary-key="vermehrer" data-glossary-title="Vermehrer" data-glossary-text="Person oder Betrieb, der Tiere vor allem für schnelle Abgabe und Gewinn produziert." data-glossary-href="../glossar/index.html#vermehrer" aria-describedby="glossary-term-popover" tabindex="0" role="button">Vermehrern</span> und nie aus Mitleid kaufen. Die Begründung steht auf den Seiten <a href="../adoption/index.html">Adoption statt Kauf</a> und <a href="../zucht-und-vermehrung/index.html">Zucht und Vermehrung</a>. Diese Seite sortiert die Wege und nennt zu jedem, was du prüfen kannst.</p>
-        <p class="text-muted">Stand der Angaben: 24. Oktober 2026. Aussagen von Verbänden sind als solche gekennzeichnet: Der ZZF vertritt die Heimtierbranche, der Deutsche Tierschutzbund und die TVT vertreten Tierschutzinteressen.</p>
+        <p class="text-muted">Stand der Angaben: 24. Oktober 2026. Aussagen von Verbänden sind als solche gekennzeichnet: Der ZZF vertritt die Heimtierbranche; der Deutsche Tierschutzbund und die TVT (Tierärztliche Vereinigung für Tierschutz) vertreten Tierschutzinteressen.</p>
 
         <div class="section-feedback-heading"><h2 id="fuenf-wege">Die fünf Wege</h2><button type="button" class="section-feedback-action" data-feedback-section="fuenf-wege" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
         <h3>1. Zoofachhandel</h3>
         <ul>
           <li><strong>Was das ist.</strong> Geschäfte, die lebende Tiere und Zubehör verkaufen. Nach dem <a href="https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/" target="_blank" rel="noopener noreferrer">Ratgeber des ZZF</a> gibt es dort Kleinsäuger wie Meerschweinchen, Kaninchen, Mäuse und Ratten, dazu Vögel, Fische, Reptilien, Amphibien und Insekten. Hunde und Katzen gibt es dort laut ZZF nicht. Der Deutsche Tierschutzbund schreibt in einer <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Sonstiges/Tierschutzbund_Stellungnahme_Companion_2024.pdf" target="_blank" rel="noopener noreferrer">Stellungnahme von 2024</a>, der ZZF habe sich in Deutschland schon vor langer Zeit entschlossen, keine Hunde und Katzen in angeschlossenen Zoofachgeschäften anzubieten.</li>
-          <li><strong>Was belegt ist.</strong> Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine <a href="https://www.gesetze-im-internet.de/tierschg/__11.html" target="_blank" rel="noopener noreferrer">Erlaubnis der zuständigen Behörde (§ 11 Abs. 1 Satz 1 Nr. 8 Buchst. b TierSchG)</a>. Außerdem muss er nach einer <a href="https://www.gesetze-im-internet.de/tierschg/__21.html" target="_blank" rel="noopener noreferrer">Übergangsvorschrift (§ 21 Abs. 5 Nr. 2 TierSchG)</a> bei der erstmaligen Abgabe einer Tierart an den künftigen Halter schriftliche Informationen zu Ernährung, Pflege, Unterbringung und Bewegung mitgeben. Nach Darstellung von <a href="https://www.zzf.de/bildung/sachkunde/erlaeuterungen-zum-11-tierschutzgesetz" target="_blank" rel="noopener noreferrer">ZZF</a> und <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer">TVT</a> darf im Verkauf nur <span class="glossary-term" data-glossary-key="sachkunde" data-glossary-title="Sachkunde" data-glossary-text="Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere." data-glossary-href="../glossar/index.html#sachkunde" aria-describedby="glossary-term-popover" tabindex="0" role="button">sachkundiges</span> Personal arbeiten. Der ZZF gibt an, jeder Laden habe eine fachlich geprüfte Beratungsperson und Amtstierärzte kontrollierten die Unterbringung; das ist eine Selbstbeschreibung der Branche. Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel und in Baumärkten dagegen <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf" target="_blank" rel="noopener noreferrer">aus Tierschutzsicht kritisch</a>: Er verleite zum Spontankauf oder appelliere an das Mitleid. Zoohandel und Internetverkäufer böten außerdem noch immer Tiere an, etwa Frettchen, Rosenkopfpapageien und Aras, für die zu Hause kein artgerechtes Umfeld möglich sei.</li>
-          <li><strong>Das kannst du prüfen.</strong> Wie sind die Tiere untergebracht? Wird nach deinem Platz, deinem Alltag und der Gruppengröße gefragt, und rät der Laden auch ab? Bekommst du die schriftlichen Informationen? Woher stammen die Tiere? Der Tierschutzbund empfiehlt, genau das zu hinterfragen und darauf zu achten, ob der Händler bei Problemen Unterstützung anbietet. Bei geschützten Arten gibt der Handel nach Angabe des ZZF je nach Schutzstatus eine CITES-Bescheinigung oder einen Herkunftsnachweis heraus; lass dir den Nachweis zeigen.</li>
-          <li><strong>Grenzen.</strong> Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte. Pauschale Aussagen über die Herkunft aller Tiere im Handel lassen sich deshalb weder in die eine noch in die andere Richtung belegen. Dass der Zoofachhandel keine Hunde und Katzen verkauft, beruht nach den genannten Verbandsangaben auf einer Entscheidung des ZZF; in § 11 TierSchG steht dazu kein Verbot. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Abs. 5; ZZF und TVT leiten die Beratung aus der Sachkunde ab. Wie gut die Beratung ist, zeigt sich im einzelnen Laden.</li>
+          <li><strong>Was belegt ist.</strong> Wer gewerblich mit Wirbeltieren handelt, braucht eine <a href="https://www.gesetze-im-internet.de/tierschg/__11.html" target="_blank" rel="noopener noreferrer">Erlaubnis der zuständigen Behörde</a> (§ 11 Abs. 1 Satz 1 Nr. 8 Buchst. b TierSchG). Eine <a href="https://www.gesetze-im-internet.de/tierschg/__21.html" target="_blank" rel="noopener noreferrer">Übergangsvorschrift</a> verlangt außerdem: Gibt der Händler einem künftigen Halter erstmals eine Tierart ab, muss er schriftlich mitgeben, wie das Tier ernährt, gepflegt, untergebracht und bewegt werden soll (§ 21 Abs. 5 Nr. 2 TierSchG). Nach Darstellung von <a href="https://www.zzf.de/bildung/sachkunde/erlaeuterungen-zum-11-tierschutzgesetz" target="_blank" rel="noopener noreferrer">ZZF</a> und <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer">TVT</a> darf im Verkauf nur <span class="glossary-term" data-glossary-key="sachkunde" data-glossary-title="Sachkunde" data-glossary-text="Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere." data-glossary-href="../glossar/index.html#sachkunde" aria-describedby="glossary-term-popover" tabindex="0" role="button">sachkundiges</span> Personal arbeiten. Der ZZF gibt an, jeder Laden habe eine fachlich geprüfte Beratungsperson und Amtstierärzte kontrollierten die Unterbringung; das ist eine Selbstbeschreibung der Branche. Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel und in Baumärkten dagegen <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Welches_Tier_passt_zu_mir.pdf" target="_blank" rel="noopener noreferrer">aus Tierschutzsicht kritisch</a>. Der Verkauf verleite zum Spontankauf oder appelliere an das Mitleid. Zoohandel und Internetverkäufer böten außerdem noch immer Tiere an, etwa Frettchen, Rosenkopfpapageien und Aras, für die zu Hause kein artgerechtes Umfeld möglich sei.</li>
+          <li><strong>Das kannst du prüfen.</strong> Wie sind die Tiere untergebracht? Wird nach deinem Platz, deinem Alltag und der Gruppengröße gefragt, und rät der Laden auch ab? Bekommst du die schriftlichen Informationen? Woher stammen die Tiere? Der Tierschutzbund empfiehlt, genau das zu hinterfragen und darauf zu achten, ob der Händler bei Problemen Unterstützung anbietet. Bei geschützten Arten gibt der Handel nach Angabe des ZZF je nach Schutzstatus eine CITES-Bescheinigung (ein Papier nach dem Washingtoner Artenschutzübereinkommen) oder einen Herkunftsnachweis heraus; lass dir den Nachweis zeigen.</li>
+          <li><strong>Grenzen.</strong> Unabhängige Zahlen dazu, woher Kleinsäuger und Vögel im Zoofachhandel stammen, haben wir nicht gefunden. Pauschale Aussagen über die Herkunft aller Tiere im Handel lassen sich deshalb weder in die eine noch in die andere Richtung belegen. Dass der Zoofachhandel keine Hunde und Katzen verkauft, beruht nach den genannten Verbandsangaben auf einer Entscheidung des ZZF; im Gesetz (§ 11 TierSchG) steht dazu kein Verbot. Eine allgemeine Pflicht zur Beratung steht weder in § 11 noch in § 21 Abs. 5 TierSchG; ZZF und TVT leiten die Beratung aus der vorgeschriebenen Sachkunde ab. Wie gut die Beratung ist, zeigt sich im einzelnen Laden.</li>
         </ul>
 
         <h3>2. Kleinanzeigen und Online-Handel</h3>
         <ul>
           <li><strong>Was das ist.</strong> Anzeigenportale, soziale Netzwerke und Online-Shops, auf denen Privatleute und gewerbliche Händler Tiere anbieten.</li>
-          <li><strong>Was belegt ist (Stand der Quellen: 2021, für Hunde und Katzen 2023).</strong> Nach dem <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Internethandel.pdf" target="_blank" rel="noopener noreferrer">Positionspapier des Deutschen Tierschutzbundes von Januar 2021</a> wurden über Portale unter anderem viele Hunde, Katzen, Kaninchen, Meerschweinchen und Wellensittiche angeboten, von Privatleuten und von gewerblichen Händlern. Als Beispiele nennt das Papier Anzeigen mit Preisen wie 5 Euro für ein Meerschweinchen und 20 Euro für zwei Wellensittiche samt Käfig; solche Preise senkten die Hemmschwelle zum Spontankauf. Die Tiere könnten vor dem Kauf oft nicht angesehen werden. Der Tierschutzbund fordert ein Verbot des Handels mit lebenden Tieren im Internet, ausgenommen die Vermittlung durch Tierheime und anerkannte Auffangstationen mit Beratung vor Ort. Die TVT stellte im <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer">Februar 2021</a> fest, allen Plattformen sei die Anonymität der Anbieter gemeinsam, und forderte verifizierte Verkäuferdaten und die Kennzeichnung gewerblicher Anbieter. In einem <a href="https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2023/artikel/DTBl_12_2023_Heimtierhandel-2022.pdf" target="_blank" rel="noopener noreferrer">Beitrag im Deutschen Tierärzteblatt 12/2023</a> (Autorinnen aus dem Tierschutzbund) gehen die Autorinnen davon aus, dass ein Großteil der illegal aus dem Ausland gehandelten Tiere, überwiegend Hunde und Katzen, über das Internet angeboten wurde; in der Auswertung war das nur in Einzelfällen belegbar. Bei Reptilien, Amphibien und exotischen Säugetieren fehlten laut einer <a href="https://www.bfn.de/publikationen/bfn-schriften/bfn-schriften-545-strategien-zur-reduktion-der-nachfrage-nach-als" target="_blank" rel="noopener noreferrer">Studie im Auftrag des Bundesamts für Naturschutz</a> bei 62,36 Prozent der online angebotenen Tiere die Herkunftsangaben.</li>
-          <li><strong>Das kannst du prüfen.</strong> Ist der Anbieter mit Namen und Adresse erreichbar? Kannst du die Tiere dort besuchen, wo sie leben, und bei Jungtieren die Mutter sehen? Der Tierschutzbund schreibt, dass sich seriöse und unseriöse Angebote im Internet kaum unterscheiden lassen. Als Warnzeichen nennt der Verein <a href="https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/vor-dem-einzug-eines-tieres/serioese-zuechter-erkennen?lang=de-DE" target="_blank" rel="noopener noreferrer">TASSO</a> unter anderem, wenn ein Besuch verweigert wird oder Mitleidsgeschichten erzählt werden. Weitere Warnsignale stehen unter <a href="../adoption/index.html">Unseriöse Quellen erkennen</a>.</li>
-          <li><strong>Grenzen.</strong> Die Positionen stammen von 2021; lies sie als Stand der Quelle, nicht als aktuelle Rechtslage zum Online-Tierhandel. Zahlen zu Online-Angeboten einzelner Arten fehlen; das Positionspapier nennt für 2021 mehr als 20.000 Anzeigen zu Hunden, Katzen oder Kleintieren zusammen auf einem großen Portal. Eine laufende Petition dazu steht auf der Seite <a href="../petitionen/index.html">Laufende Petitionen</a>.</li>
+          <li><strong>Was belegt ist (Stand der Quellen: 2021, für Hunde und Katzen 2023).</strong> Laut dem <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Internethandel.pdf" target="_blank" rel="noopener noreferrer">Positionspapier des Deutschen Tierschutzbundes von Januar 2021</a> wurden über Portale unter anderem viele Hunde, Katzen, Kaninchen, Meerschweinchen und Wellensittiche angeboten, von Privatleuten und von gewerblichen Händlern. Als Beispiele nennt das Papier Anzeigen mit Preisen wie 5 Euro für ein Meerschweinchen und 20 Euro für zwei Wellensittiche samt Käfig; solche Preise senkten die Hemmschwelle zum Spontankauf. Die Tiere könnten vor dem Kauf oft nicht angesehen werden. Der Tierschutzbund fordert ein Verbot des Handels mit lebenden Tieren im Internet, ausgenommen die Vermittlung durch Tierheime und anerkannte Auffangstationen mit Beratung vor Ort. Die TVT stellte im <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer">Februar 2021</a> fest, allen Plattformen sei die Anonymität der Anbieter gemeinsam, und forderte verifizierte Verkäuferdaten und die Kennzeichnung gewerblicher Anbieter. In einem <a href="https://www.bundestieraerztekammer.de/btk/dtbl/archiv/2023/artikel/DTBl_12_2023_Heimtierhandel-2022.pdf" target="_blank" rel="noopener noreferrer">Beitrag im Deutschen Tierärzteblatt 12/2023</a> (Autorinnen aus dem Tierschutzbund) gehen die Autorinnen davon aus, dass ein Großteil der illegal aus dem Ausland gehandelten Tiere, überwiegend Hunde und Katzen, über das Internet angeboten wurde. In der Auswertung war das aber nur in Einzelfällen belegbar. Bei Reptilien, Amphibien und exotischen Säugetieren fehlten laut einer <a href="https://www.bfn.de/publikationen/bfn-schriften/bfn-schriften-545-strategien-zur-reduktion-der-nachfrage-nach-als" target="_blank" rel="noopener noreferrer">Studie im Auftrag des Bundesamts für Naturschutz</a> bei 62,36 Prozent der online angebotenen Tiere die Herkunftsangaben.</li>
+          <li><strong>Das kannst du prüfen.</strong> Ist der Anbieter mit Namen und Adresse erreichbar? Kannst du die Tiere dort besuchen, wo sie leben, und bei Jungtieren die Mutter sehen? Der Tierschutzbund schreibt, dass sich seriöse und unseriöse Angebote im Internet kaum unterscheiden lassen. Warnzeichen sind laut dem Verein <a href="https://www.tasso.net/Tierschutz/verantwortungsvolle-tierhaltung/vor-dem-einzug-eines-tieres/serioese-zuechter-erkennen?lang=de-DE" target="_blank" rel="noopener noreferrer">TASSO</a> unter anderem ein verweigerter Besuch und Mitleidsgeschichten. Weitere Warnsignale stehen unter <a href="../adoption/index.html">Unseriöse Quellen erkennen</a>.</li>
+          <li><strong>Grenzen.</strong> Die Positionen stammen von 2021; lies sie als Stand der Quelle, nicht als aktuelle Rechtslage zum Online-Tierhandel. Zahlen zu Online-Angeboten einzelner Arten fehlen; das Positionspapier nennt für 2021 auf einem großen Portal jeweils mehr als 20.000 Anzeigen zu Hunden, Katzen oder Kleintieren. Eine laufende Petition dazu steht auf der Seite <a href="../petitionen/index.html">Laufende Petitionen</a>.</li>
         </ul>
 
         <h3>3. Züchter und Vermehrer</h3>
         <ul>
-          <li><strong>Was das ist.</strong> Wer Tiere gezielt verpaart und den Nachwuchs abgibt, züchtet. Ab einem gewissen Umfang gilt das als gewerbsmäßig und braucht eine Erlaubnis nach § 11 TierSchG. Die <a href="https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_09022000_32135220006.htm" target="_blank" rel="noopener noreferrer">Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz</a> nennt dafür Regelwerte in der Fassung von 2000: bei Hunden drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr, bei Katzen fünf oder mehr, bei Kaninchen und Meerschweinchen mehr als 100 Jungtiere im Jahr, bei Mäusen, Hamstern, Ratten und Gerbils mehr als 300, bei Vögeln ein regelmäßiger Verkauf von Jungtieren bei mehr als 25 Zuchtpaaren bis Nymphensittichgröße. Das sind Orientierungswerte für die Erlaubnispflicht und kein Maßstab für Qualität: Wer darunter bleibt, ist deshalb nicht seriös.</li>
-          <li><strong>Was belegt ist.</strong> Der Deutsche Tierschutzbund empfiehlt, wenn man kauft, einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen als Kennzeichen seriöser Züchter, dass Besuche erwünscht sind, die Elterntiere zu sehen sind, die Übergabe in der Zuchtstätte stattfindet und nach dem Kauf Beratung bleibt. Für Meerschweinchen nennt das private Ratgeberprojekt <a href="https://meerschweinchenwiese.de/nachwuchs/serioese-zucht" target="_blank" rel="noopener noreferrer">Meerschweinchenwiese</a> unter anderem ausreichend Platz, Abstammungsnachweise, Quarantäne neuer Tiere und keine Abgabe an Zoogeschäfte; es gebe keine Qualitätssiegel.</li>
+          <li><strong>Was das ist.</strong> Wer Tiere gezielt verpaart und den Nachwuchs abgibt, züchtet. Ab einem gewissen Umfang gilt das als gewerbsmäßig und braucht eine Erlaubnis (§ 11 TierSchG). Als Richtwerte nennt die <a href="https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_09022000_32135220006.htm" target="_blank" rel="noopener noreferrer">Allgemeine Verwaltungsvorschrift zum Tierschutzgesetz</a> in der Fassung von 2000: bei Hunden drei oder mehr fortpflanzungsfähige Hündinnen oder drei oder mehr Würfe im Jahr, bei Katzen fünf oder mehr, bei Kaninchen und Meerschweinchen mehr als 100 Jungtiere im Jahr, bei Mäusen, Hamstern, Ratten und Gerbils mehr als 300. Bei Vögeln gilt der regelmäßige Verkauf von Jungtieren als Zeichen, wenn mehr als 25 Zuchtpaare bis Nymphensittichgröße gehalten werden. Das sind Orientierungswerte dafür, wann eine Erlaubnis nötig ist, kein Maßstab für Qualität: Wer darunter bleibt, ist deshalb noch nicht seriös.</li>
+          <li><strong>Was belegt ist.</strong> Wer kauft, sollte nach Empfehlung des Deutschen Tierschutzbundes einen verantwortungsbewussten Züchter wählen, der nicht aus rein kommerziellen Gründen züchtet, und sich die Haltungsanlagen vor Ort ansehen. Der Verein TASSO nennt für Hunde und Katzen als Kennzeichen seriöser Züchter, dass Besuche erwünscht sind, die Elterntiere zu sehen sind, die Übergabe in der Zuchtstätte stattfindet und nach dem Kauf Beratung bleibt. Für Meerschweinchen nennt das private Ratgeberprojekt <a href="https://meerschweinchenwiese.de/nachwuchs/serioese-zucht" target="_blank" rel="noopener noreferrer">Meerschweinchenwiese</a> unter anderem ausreichend Platz, Abstammungsnachweise, Quarantäne neuer Tiere und keine Abgabe an Zoogeschäfte; es gebe keine Qualitätssiegel.</li>
           <li><strong>Das kannst du prüfen.</strong> Besuche die Zuchtstätte, bevor du zusagst. Sieh dir alle Tiere und ihre Unterbringung an, nicht nur das angebotene. Lass dich nicht drängen. Ein Anbieter, der den Besuch verweigert, scheidet aus.</li>
-          <li><strong>Grenzen.</strong> Für Wellensittiche und andere Vögel stützt sich diese Seite auf keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation; die allgemeinen Prüfpunkte oben bleiben dieselben. Ein Siegel oder Register für seriöse Kleintierzucht gibt es laut dem genannten Ratgeber nicht. Warum auch sorgfältige Zucht neue Verantwortung erzeugt, steht auf der Seite <a href="../zucht-und-vermehrung/index.html">Zucht und Vermehrung</a>.</li>
+          <li><strong>Grenzen.</strong> Für Wellensittiche und andere Vögel haben wir keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation gefunden; die allgemeinen Prüfpunkte oben bleiben dieselben. Ein Siegel oder Register für seriöse Kleintierzucht gibt es laut dem genannten Ratgeber nicht. Warum auch sorgfältige Zucht neue Verantwortung erzeugt, steht auf der Seite <a href="../zucht-und-vermehrung/index.html">Zucht und Vermehrung</a>.</li>
         </ul>
 
         <h3>4. Tierheim</h3>
         <ul>
           <li><strong>Was das ist.</strong> Eine Einrichtung, die gefundene, abgegebene oder beschlagnahmte Tiere versorgt und vermittelt. Wer ein <span class="glossary-term" data-glossary-key="tierheim" data-glossary-title="Tierheim" data-glossary-text="Einrichtung, die abgegebene, gefundene oder beschlagnahmte Tiere versorgt und vermittelt." data-glossary-href="../glossar/index.html#tierheim" aria-describedby="glossary-term-popover" tabindex="0" role="button">Tierheim</span> oder eine ähnliche Einrichtung betreibt, braucht ebenfalls eine Erlaubnis (§ 11 Abs. 1 Satz 1 Nr. 3 TierSchG).</li>
-          <li><strong>Was belegt ist.</strong> Nach der Broschüre „Welches Tier passt zu mir?“ des Tierschutzbundes warten im Tierheim Hunde, Katzen, Meerschweinchen, Hamster, Kaninchen, Ratten, Vögel und weitere Tiere, auch Schlangen und andere Reptilien. Der <a href="https://www.tierschutzbund.de/tierheim-finder/" target="_blank" rel="noopener noreferrer">Tierheim-Finder des Tierschutzbundes</a> listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart (Auffangstation, Landesverband, Lebenshof, Tierheim, Tierschutzverein), nicht nach Tierart. In einer <a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/" target="_blank" rel="noopener noreferrer">Umfrage des Tierschutzbundes mit Fressnapf vom Mai 2024</a> unter 218 Tierheimen waren 49 Prozent voll oder übervoll, und nur 18 Prozent hatten noch freie Kapazitäten. Nach einer Umfrage des Tierschutzbundes von 2016, zitiert in der <a href="https://www.zzf.de/fileadmin/ZZF/Dokumente/Heimtiermarkt/Heimtierstudie_2025_Ohr_final.pdf" target="_blank" rel="noopener noreferrer">Heimtierstudie 2025</a>, machten Katzen 42,5 Prozent, Hunde 22,8 Prozent und Kleinsäuger 15,2 Prozent der Tierheimtiere aus. Zu Feiertagen verschenkte Tiere landeten nach Angabe des Tierschutzbundes danach häufig im Tierheim.</li>
+          <li><strong>Was belegt ist.</strong> Nach der Broschüre „Welches Tier passt zu mir?“ des Tierschutzbundes warten im Tierheim Hunde, Katzen, Meerschweinchen, Hamster, Kaninchen, Ratten, Vögel und weitere Tiere, auch Schlangen und andere Reptilien. Im <a href="https://www.tierschutzbund.de/tierheim-finder/" target="_blank" rel="noopener noreferrer">Tierheim-Finder des Tierschutzbundes</a> standen am 24. Oktober 2026 1.243 Einrichtungen. Man kann dort nach Einrichtungsart filtern (Auffangstation, Landesverband, Lebenshof, Tierheim, Tierschutzverein), nicht nach Tierart. In einer <a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierheime-sind-ueberfuellt-nur-18-prozent-haben-noch-kapazitaeten/" target="_blank" rel="noopener noreferrer">Umfrage des Tierschutzbundes mit Fressnapf vom Mai 2024</a> unter 218 Tierheimen waren 49 Prozent voll oder übervoll, und nur 18 Prozent hatten noch freie Kapazitäten. Laut einer Umfrage des Tierschutzbundes von 2016 (zitiert in der <a href="https://www.zzf.de/fileadmin/ZZF/Dokumente/Heimtiermarkt/Heimtierstudie_2025_Ohr_final.pdf" target="_blank" rel="noopener noreferrer">Heimtierstudie 2025</a>) waren 42,5 Prozent der Tierheimtiere Katzen, 22,8 Prozent Hunde und 15,2 Prozent Kleinsäuger. Zu Feiertagen verschenkte Tiere landeten nach Angabe des Tierschutzbundes danach häufig im Tierheim.</li>
           <li><strong>Das kannst du prüfen.</strong> Frag, wie die Vermittlung abläuft, ob du das Tier mehrfach besuchen kannst und was im Vertrag steht. Ablauf und Vorbereitung stehen auf der Seite <a href="../adoption/index.html">Adoption statt Kauf</a>. Tierheime nimmt der Tierschutzbund von seiner Forderung nach einem Verbot des Online-Handels aus, wenn Beratung und Vermittlung vor Ort stattfinden.</li>
           <li><strong>Grenzen.</strong> Die Umfragewerte sind Angaben des Tierschutzbundes; sie betreffen vor allem Katzen, Kleintiere werden dort nicht gesondert genannt. Für Kleintiere, Vögel und Exoten kann diese Seite keine aktuellen bundesweiten Zahlen zu Fundtieren und Abgaben nennen.</li>
         </ul>
@@ -7501,7 +7581,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <h3>5. Notfallstation und Pflegestelle</h3>
         <ul>
           <li><strong>Was das ist.</strong> Neben Tierheimen führt der Tierheim-Finder Auffangstationen, Lebenshöfe und Tierschutzvereine auf. Manche sind auf bestimmte Tiergruppen spezialisiert. Wie Pflegestellen organisiert sind, unterscheidet sich von Verein zu Verein.</li>
-          <li><strong>Was belegt ist.</strong> Als Beispiel einer spezialisierten Station berichtet die Auffangstation für Reptilien München e. V. in ihrem <a href="https://www.reptilienauffangstation.de/Aktuelles%20und%20Wissen/Downloads%20und%20Wissen/Jahresberichte/Jahresbericht%202019.pdf" target="_blank" rel="noopener noreferrer">Jahresbericht 2019</a> von 1.695 aufgenommenen Tieren, darunter 831 Reptilien, 122 Amphibien und 518 Fische. 54 Prozent waren private Abgaben, 42 Prozent Fund-, ausgesetzte, zurückgelassene und beschlagnahmte Tiere. Die hohe Zahl sei auch durch einen Fall von Animal Hoarding verursacht.</li>
+          <li><strong>Was belegt ist.</strong> Als Beispiel einer spezialisierten Station berichtet die Auffangstation für Reptilien München e. V. in ihrem <a href="https://www.reptilienauffangstation.de/Aktuelles%20und%20Wissen/Downloads%20und%20Wissen/Jahresberichte/Jahresbericht%202019.pdf" target="_blank" rel="noopener noreferrer">Jahresbericht 2019</a> von 1.695 aufgenommenen Tieren, darunter 831 Reptilien, 122 Amphibien und 518 Fische. 54 Prozent waren private Abgaben, 42 Prozent Fund-, ausgesetzte, zurückgelassene und beschlagnahmte Tiere. Die hohe Zahl sei auch durch einen Fall von Animal Hoarding (zwanghaftem Horten von Tieren) verursacht.</li>
           <li><strong>Das kannst du prüfen.</strong> Wie läuft die Vermittlung, gibt es ein Gespräch vorab, einen Vertrag und Nachbetreuung? Ein Eintrag im Tierheim-Finder ist ein Anhaltspunkt, kein Gütesiegel.</li>
           <li><strong>Grenzen.</strong> Der Tierheim-Finder hat keinen Filter nach Tierart; wie viele Notstationen es bundesweit für Kleintiere gibt, ist hier nicht beziffert. Der Jahresbericht stammt von 2019 und ist ein Beispiel, kein Bundesdurchschnitt.</li>
         </ul>
@@ -7511,7 +7591,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         <h3>Hund</h3>
         <ul>
-          <li><strong>Übliche Wege.</strong> Zoofachhandel nach Angabe des ZZF nicht. Der Tierschutzbund rät, einen Hund niemals in einer Zoohandlung, auf einem Tiermarkt, anonym über das Internet oder auf der Straße zu kaufen. Nach dem Beitrag im Deutschen Tierärzteblatt gehen illegal gehandelte Welpen auch an Zoofachgeschäfte im Ausland, die Welpen verkaufen dürfen; Frankreich hat den Verkauf von Welpen im Zoofachhandel ab 2024 verboten. Das EU-Parlament hatte 2025 ein Verbot von Haltung und Verkauf von Hunden und Katzen in Tierhandlungen gefordert. Die am 10. August 2026 veröffentlichte <a href="https://eur-lex.europa.eu/eli/reg/2026/1818/oj" target="_blank" rel="noopener noreferrer">Verordnung (EU) 2026/1818</a> über das Wohlergehen von Hunden und Katzen und deren Rückverfolgbarkeit enthält nach ihrem Wortlaut kein allgemeines Verkaufsverbot, sondern regelt die Haltung in Verkaufsbetrieben einschließlich Heimtierläden (unter anderem Verbot der Haltung in Boxen, Freilauf für Hunde, Höchstbesatzdichte). Sie gilt im Wesentlichen ab dem 31. August 2028.</li>
+          <li><strong>Übliche Wege.</strong> Im Zoofachhandel gibt es Hunde nach Angabe des ZZF nicht. Der Tierschutzbund rät, einen Hund niemals in einer Zoohandlung, auf einem Tiermarkt, anonym über das Internet oder auf der Straße zu kaufen. Nach dem Beitrag im Deutschen Tierärzteblatt gehen illegal gehandelte Welpen auch an Zoofachgeschäfte im Ausland, die Welpen verkaufen dürfen; Frankreich hat den Verkauf von Welpen im Zoofachhandel ab 2024 verboten. Das EU-Parlament hatte 2025 ein Verbot von Haltung und Verkauf von Hunden und Katzen in Tierhandlungen gefordert. Die <a href="https://eur-lex.europa.eu/eli/reg/2026/1818/oj" target="_blank" rel="noopener noreferrer">EU-Verordnung 2026/1818</a> zum Wohlergehen von Hunden und Katzen und dazu, woher sie stammen und wo sie sich befinden (Rückverfolgbarkeit), wurde am 10. August 2026 veröffentlicht. Nach ihrem Wortlaut enthält sie kein allgemeines Verkaufsverbot. Sie regelt aber, wie Hunde und Katzen in Verkaufsbetrieben einschließlich Heimtierläden gehalten werden: Boxenhaltung ist verboten, Hunde brauchen Freilauf, und es gilt eine Höchstbesatzdichte. Im Wesentlichen gilt die Verordnung ab dem 31. August 2028.</li>
           <li><strong>Gruppe.</strong> Näheres steht auf den Hunde-Seiten.</li>
           <li><strong>Worauf achten.</strong> Besuch beim Züchter oder Verein, Elterntiere sehen, Übergabe dort, wo die Tiere leben, Beratung nach dem Kauf (TASSO). Zum Alter bei der Abgabe: <a href="../hunde/abgabealter/index.html">Abgabealter beim Welpen</a>.</li>
           <li><strong>Weiterlesen.</strong> <a href="../hunde/index.html">Hund halten</a>, <a href="../hunde/kosten/index.html">Was ein Hund wirklich kostet</a>.</li>
@@ -7519,7 +7599,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         <h3>Katze</h3>
         <ul>
-          <li><strong>Übliche Wege.</strong> Zoofachhandel nach Angabe des ZZF nicht; der Tierschutzbund rät, Katzen nie in einer Zoohandlung, auf dem Tiermarkt, anonym im Internet oder auf der Straße zu kaufen. Das Positionspapier von 2021 nennt Katzenwelpen für 10 Euro als Beispiel für Online-Preise. Katzen machten nach der Umfrage von 2016 den größten Anteil der Tierheimtiere aus.</li>
+          <li><strong>Übliche Wege.</strong> Im Zoofachhandel gibt es Katzen nach Angabe des ZZF nicht; der Tierschutzbund rät, Katzen nie in einer Zoohandlung, auf dem Tiermarkt, anonym im Internet oder auf der Straße zu kaufen. Das Positionspapier von 2021 nennt Katzenwelpen für 10 Euro als Beispiel für Online-Preise. Katzen machten nach der Umfrage von 2016 den größten Anteil der Tierheimtiere aus.</li>
           <li><strong>Gruppe.</strong> Näheres steht auf den Katzen-Seiten.</li>
           <li><strong>Worauf achten.</strong> Dieselben Prüfpunkte wie beim Hund: Besuch, Muttertier und Wurf sehen, Beratung nach der Abgabe. Wie ein Kätzchen aufgenommen wird, steht unter <a href="../katzen/entscheidung/index.html">Kätzchen aufnehmen</a>.</li>
           <li><strong>Weiterlesen.</strong> <a href="../katzen/index.html">Katzen halten</a>, <a href="../katzen/kosten/index.html">Was eine Katze wirklich kostet</a>.</li>
@@ -7559,8 +7639,8 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         <h3>Fische</h3>
         <ul>
-          <li><strong>Übliche Wege.</strong> Zoofachhandel (der ZZF nennt Fische), Online-Handel. Zwischen Herkunftsland und Becken stehen nach der TVT häufig Großhandel und Importeure; viele Zierfischarten würden als Wildfang oder Nachzucht aus tropischen Ländern eingeführt.</li>
-          <li><strong>Gruppe.</strong> Die nötige Gruppengröße hängt von der Art ab. Je nach Art unterschiedlich.</li>
+          <li><strong>Übliche Wege.</strong> Zoofachhandel (der ZZF nennt Fische), Online-Handel. Zwischen Herkunftsland und Becken stehen nach der TVT häufig Großhandel und Importeure; viele Zierfischarten würden als Wildfang (in der Natur gefangene Tiere) oder als Nachzucht aus tropischen Ländern eingeführt.</li>
+          <li><strong>Gruppe.</strong> Die nötige Gruppengröße hängt von der Art ab.</li>
           <li><strong>Worauf achten.</strong> Meerwasserfische lassen sich nach der <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Aquarienfische_Haltung.pdf" target="_blank" rel="noopener noreferrer">Aquarienfisch-Broschüre des Tierschutzbundes</a> meist nicht vermehren, im Handel würden deshalb fast immer Wildfänge angeboten. Auch bei Süßwasserfischen, die sich vielfach züchten ließen, biete der Handel Wildfänge an; bei Fang, Transport und Handel gebe es hohe Verluste. Der Tierschutzbund rät, keine Wildfänge zu kaufen und regional nachgezüchtete Arten zu bevorzugen. Die TVT erwartet in ihrer Checkliste für den Zoofachhandel, dass die Herkunft (Land, Großhändler, Züchter, Wildfang, Nachzucht) am Becken gekennzeichnet ist. Vor dem ersten Besatz sollten die Wasserwerte stabil sein; der Industrieverband Heimtierbedarf nennt als Kriterium Wasserwerte, die langfristig stabil sind.</li>
           <li><strong>Grenzen.</strong> Zahlen zum Anteil von Wildfang und Nachzucht bei Zierfischen in Deutschland liegen nicht vor. Das amtliche Haltungsgutachten für Zierfische stammt von 1998 und wird laut Bundesministerium überarbeitet.</li>
           <li><strong>Weiterlesen.</strong> <a href="../exoten/fische/index.html">Fische halten</a>.</li>
@@ -7616,7 +7696,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             </details>
             <details class="faq-item">
               <summary>Muss mich der Zoofachhandel beraten?</summary>
-              <p>Wer gewerbsmäßig mit Wirbeltieren handelt, braucht eine Erlaubnis nach § 11 Tierschutzgesetz und muss bei der erstmaligen Abgabe einer Tierart schriftliche Informationen zu den wesentlichen Bedürfnissen des Tieres mitgeben (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.</p>
+              <p>Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier wesentlich braucht (§ 21 Absatz 5 Nummer 2, Übergangsvorschrift). Nach Darstellung von ZZF und TVT darf im Verkauf nur sachkundiges Personal arbeiten. Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut dieser Vorschriften; ZZF und TVT leiten die Beratung aus der Sachkunde ab.</p>
             </details>
             <details class="faq-item">
               <summary>Warum sehen Tierschützer Kleinanzeigen und Online-Handel kritisch?</summary>
@@ -7624,7 +7704,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             </details>
             <details class="faq-item">
               <summary>Woran erkenne ich einen seriösen Züchter?</summary>
-              <p>Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt diese Seite keinen eigenen Kriterienkatalog vor; die allgemeinen Prüfpunkte gelten auch hier.</p>
+              <p>Der Deutsche Tierschutzbund empfiehlt einen verantwortungsbewussten Züchter, der nicht aus rein kommerziellen Gründen züchtet, und rät, die Haltungsanlagen vor Ort anzusehen. Der Verein TASSO nennt für Hunde und Katzen unter anderem erwünschte Besuche, sichtbare Elterntiere und Beratung nach dem Kauf. Für Wellensittiche und andere Vögel gibt es keinen eigenen Kriterienkatalog; die allgemeinen Prüfpunkte gelten auch hier.</p>
             </details>
             <details class="faq-item">
               <summary>Was ist ein Mitleidskauf, und warum rät der Tierschutzbund davon ab?</summary>
@@ -7632,7 +7712,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             </details>
             <details class="faq-item">
               <summary>Wie finde ich ein Tierheim oder eine Notstation?</summary>
-              <p>Der Tierheim-Finder des Deutschen Tierschutzbundes listete beim Abruf am 24. Oktober 2026 1.243 Einrichtungen und filtert nach Einrichtungsart, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.</p>
+              <p>Im Tierheim-Finder des Deutschen Tierschutzbundes standen am 24. Oktober 2026 1.243 Einrichtungen. Man kann dort nach Einrichtungsart filtern, etwa Tierheim, Auffangstation, Lebenshof oder Tierschutzverein, nicht nach Tierart. Frag deshalb bei der Einrichtung nach, ob sie die gesuchte Tierart vermittelt.</p>
             </details>
           </div>
         </div>
@@ -7643,7 +7723,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.</li><li>Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).</li><li>Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.</li><li>Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).</li><li>Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.</li></ul>
+              <ul><li>Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.</li><li>Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier braucht (§ 21 Absatz 5 Nummer 2).</li><li>Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.</li><li>Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).</li><li>Unabhängige Zahlen dazu, woher Kleinsäuger und Vögel im Zoofachhandel stammen, haben wir nicht gefunden.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
@@ -7651,7 +7731,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.</li><li>Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.</li><li>Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.</li><li>Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.</li><li>Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung.</li></ul>
+              <ul><li>Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.</li><li>Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.</li><li>Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.</li><li>Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten haben wir nicht gefunden.</li><li>Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung.</li></ul>
             </article>
           </div>
         </div>

@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Logo von Wa(h)re Haustier(liebe) auf einer Social-Card zur verantwortungsvollen Haustierhaltung.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wa(h)re Haustier(liebe) - Tierschutz-Wiki">
   <meta name="twitter:description" content="Ehrliche Aufklärung, bevor ein Tier einzieht: Alltag, Kosten, Tierwohl, Notfall, Adoption und Qualzucht verständlich erklärt.">
@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6951,6 +6953,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -6977,7 +7057,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Logo von Wa(h)re Haustier(liebe) auf einer Social-Card zur verantwortungsvollen Haustierhaltung."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Haustierhaltung, Tierwohl, Tierschutz, Adoption, Qualzucht, Tiernotfall",
   "about": [
@@ -7298,7 +7378,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <img class="hero-brand-logo" src="assets/images/optimized/wahre-haustierliebe-logo.png" alt="Wa(h)re Haustier(liebe)" width="360" height="240" decoding="async">
           <span class="eyebrow"><span class="dot"></span> Das Handbuch aus Liebe zum Tier</span>
           <h1>Tierhaltung vor der Entscheidung prüfen</h1>
-          <p>Informationen zu Zeit, Kosten, Platz, Sozialverhalten, Gesundheit, Adoption und Notfällen vor und während der Tierhaltung.</p>
+          <p>Was ein Tier an Zeit, Geld, Platz und Gesellschaft braucht, wie du es gesund hältst und was im Notfall zu tun ist: vor dem Einzug und im Alltag.</p>
           <div class="hero-actions">
             <a class="btn btn-white" href="selbsttest/index.html">Bin ich bereit?</a>
             <a class="btn btn-outline" href="notfall/index.html">Etwas stimmt nicht</a>
@@ -7318,8 +7398,8 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="hero-evidence-grid">
             <div class="hero-card-foot">
               <span class="num">~350.000</span>
-              <strong>Rund 350.000 Tiere werden jährlich neu in deutschen Tierheimen aufgenommen.</strong>
-              <span>Wissen vor der Anschaffung ist Prävention, bevor aus Wunsch und Überforderung ein Tierheimfall wird.</span>
+              <strong>Schätzungsweise 350.000 Tiere kommen jedes Jahr neu in deutsche Tierheime (Deutscher Tierschutzbund).</strong>
+              <span>Wer vorher Bescheid weiß, verhindert oft, dass aus einem Wunsch und einer Überforderung ein Tierheimfall wird.</span>
             </div>
             <div class="hero-side-note">
               <span>Teilen hilft hier wirklich</span>
@@ -7335,11 +7415,11 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="stats-bar">
           <div class="stat">
             <span class="stat-number">~350.000</span>
-            <span class="stat-label">Rund 350.000 Neuaufnahmen in deutschen Tierheimen pro Jahr</span>
+            <span class="stat-label">Schätzungsweise 350.000 Neuaufnahmen pro Jahr in deutschen Tierheimen (Deutscher Tierschutzbund)</span>
           </div>
           <div class="stat">
-            <span class="stat-number">~2 Mio.</span>
-            <span class="stat-label">Streunerkatzen leben in Deutschland</span>
+            <span class="stat-number">Mehrere Mio.</span>
+            <span class="stat-label">Mehrere Millionen Straßenkatzen leben in Deutschland, schätzt der Deutsche Tierschutzbund. Eine genaue Zahl gibt es nicht.</span>
           </div>
           <div class="stat">
             <span class="stat-number">43 %</span>
@@ -7356,13 +7436,13 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <a class="door-card" href="mensch/index.html">
             <span class="door-mark">01</span>
             <h3>Ich überlege, mir ein Tier zu holen.</h3>
-            <p>Erst Alltag, Geld, Zeit und Verantwortung prüfen, bevor aus einem Wunsch ein Lebewesen wird.</p>
+            <p>Prüfe zuerst Alltag, Geld und Zeit. Ein Wunsch wird sonst schnell zu einem Lebewesen, für das du jahrelang sorgst.</p>
             <span class="more">Ehrlich anfangen →</span>
           </a>
           <a class="door-card" href="#tierarten-start">
             <span class="door-mark">02</span>
             <h3>Ich habe ein Tier und will es besser machen.</h3>
-            <p>Prüfe je nach Tierart Sozialkontakt, Platz, Bewegung, Futter, Gesundheit, Kosten und Betreuung.</p>
+            <p>Je nach Tierart prüfst du Gesellschaft, Platz, Bewegung, Futter, Gesundheit, Kosten und Betreuung.</p>
             <span class="more">Tierart wählen →</span>
           </a>
           <a class="door-card" href="notfall/index.html">
@@ -7431,14 +7511,14 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     <div class="section" id="tierarten-start">
       <div class="container">
         <div class="section-feedback-heading"><h2 class="text-center" id="hinweis-startseite-3">Tierarten-Übersicht</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-startseite-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <p class="text-center text-muted">Wähle eine Tierart für ausführliche Infos zu Haltung, Kosten und häufigen Fehlern.</p>
+        <p class="text-center text-muted">Wähle eine Tierart. Du findest dort Haltung, Kosten und häufige Fehler.</p>
         <div class="animal-grid">
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Hunde: Training und Beschäftigung statt Hundeporträt" data-share-reason="Der Klick soll vom Wunschhund zum Zeit- und Alltagscheck führen." href="hunde/index.html"><img class="animal-card-img" src="assets/images/optimized/golden-retriever-agility-jump.jpg" alt="Golden Retriever springt über ein Agility-Hindernis" loading="lazy" width="960" height="643" decoding="async"><span class="animal-card-caption">Training und Zeit</span><span>Hunde</span><small>Sozial, teuer, zeitintensiv.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Wohnung muss Bedürfnisse sichtbar mitdenken" data-share-reason="Die Karte soll Katzenhaltung als Umfeldgestaltung rahmen, nicht als bloßes Kuscheltierbild." href="katzen/index.html"><img class="animal-card-img" src="assets/images/optimized/cat-scratching-post.jpg" alt="Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung" loading="lazy" style="object-position:center 48%;" width="700" height="934" decoding="async"><span class="animal-card-caption">Umfeld gestalten</span><span>Katzen</span><small><span class="glossary-term" data-glossary-key="einzeljaeger" data-glossary-title="Einzeljäger" data-glossary-text="Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will." data-glossary-href="glossar/index.html#einzeljaeger" aria-describedby="glossary-term-popover">Einzeljäger</span>, aber keine <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Der Begriff wird bei Katzen oft fälschlich aus Einzeljagd abgeleitet." data-glossary-href="glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover">Einzelgänger</span>.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Katzen: Wohnung muss Bedürfnisse sichtbar mitdenken" data-share-reason="Die Karte soll Katzenhaltung als Umfeldgestaltung rahmen, nicht als bloßes Kuscheltierbild." href="katzen/index.html"><img class="animal-card-img" src="assets/images/optimized/cat-scratching-post.jpg" alt="Katze auf einem Kratzbaum als Beispiel für strukturierte Wohnungshaltung" loading="lazy" style="object-position:center 48%;" width="700" height="934" decoding="async"><span class="animal-card-caption">Umfeld gestalten</span><span>Katzen</span><small><span class="glossary-term" data-glossary-key="einzeljaeger" data-glossary-title="Einzeljäger" data-glossary-text="Tier, das allein jagt. Das heißt nicht automatisch, dass es allein leben will." data-glossary-href="glossar/index.html#einzeljaeger" aria-describedby="glossary-term-popover">Einzeljäger</span>, aber keine <span class="glossary-term" data-glossary-key="einzelgaenger" data-glossary-title="Einzelgänger" data-glossary-text="Tier, das überwiegend allein lebt. Bei Katzen wird das Wort oft fälschlich benutzt, weil sie allein jagen." data-glossary-href="glossar/index.html#einzelgaenger" aria-describedby="glossary-term-popover">Einzelgänger</span>.</small></a>
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Vögel: Schwarm und Raum sichtbar machen" data-share-reason="Das Bild widerspricht dem Einzelvogel-im-Käfig-Reflex." href="voegel/index.html"><img class="animal-card-img" src="assets/images/optimized/voegel-voliere.jpg" alt="Mehrere Wellensittiche in einer Voliere" loading="lazy" width="960" height="704" decoding="async"><span class="animal-card-caption">Schwarm und Raum</span><span>Vögel</span><small><span class="glossary-term" data-glossary-key="schwarmvogel" data-glossary-title="Schwarmvogel" data-glossary-text="Vogelart, die in Gruppen lebt und Artgenossen braucht." data-glossary-href="glossar/index.html#schwarmvogel" aria-describedby="glossary-term-popover">Schwarmtiere</span>, keine Dekoration.</small></a>
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Kleintiere: Sozialkontakt statt Spielzeughaltung" data-share-reason="Das Bild zeigt Kleintiere als empfindsame Tiere, nicht als Kinderzimmerobjekt." href="kleintiere/index.html"><img class="animal-card-img" src="assets/images/optimized/kleintiere-zwei-meerschweinchen.jpg" alt="Zwei Meerschweinchen zusammen im Gras" loading="lazy" width="709" height="474" decoding="async"><span class="animal-card-caption">Nicht allein denken</span><span>Kleintiere</span><small>Kein Einstiegstier, kein Spielzeug.</small></a>
           <a class="animal-card image-context-card" data-image-purpose="Tierkarte Exoten: Technik und Klima statt Faszination allein" data-share-reason="Der Klick soll von Faszination zu Temperatur, Licht und Fachwissen führen." href="exoten/index.html"><img class="animal-card-img" src="assets/images/optimized/exot-bartagame.jpg" alt="Bartagame als Beispiel für anspruchsvolle Exotenhaltung" loading="lazy" width="330" height="212" decoding="async"><span class="animal-card-caption">Klima und Technik</span><span>Exoten</span><small>Technisch anspruchsvoll.</small></a>
-          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Pferde: Herde als Mindestbild" data-share-reason="Das Bild macht klar: Pferde sind keine Solisten." href="pferde/index.html"><img class="animal-card-img" src="assets/images/optimized/horse-herd-pasture.jpg" alt="Pferdeherde auf einer Weide" loading="lazy" width="960" height="640" decoding="async"><span class="animal-card-caption">Herde, Raum, Kosten</span><span>Pferde</span><small><span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die soziale Sicherheit aus einer Gruppe zieht. Alleinhaltung erzeugt oft massiven Stress." data-glossary-href="glossar/index.html#herdentier" aria-describedby="glossary-term-popover">Herdentiere</span>, nie Solisten.</small></a>
+          <a class="animal-card image-context-card" data-image-purpose="Tierkarte Pferde: Herde als Mindestbild" data-share-reason="Das Bild macht klar: Pferde sind keine Solisten." href="pferde/index.html"><img class="animal-card-img" src="assets/images/optimized/horse-herd-pasture.jpg" alt="Pferdeherde auf einer Weide" loading="lazy" width="960" height="640" decoding="async"><span class="animal-card-caption">Herde, Raum, Kosten</span><span>Pferde</span><small><span class="glossary-term" data-glossary-key="herdentier" data-glossary-title="Herdentier" data-glossary-text="Tierart, die in der Gruppe Sicherheit findet. Alleinhaltung bedeutet oft massiven Stress." data-glossary-href="glossar/index.html#herdentier" aria-describedby="glossary-term-popover">Herdentiere</span>, nie Solisten.</small></a>
         </div>
       </div>
     </div>
@@ -7453,10 +7533,10 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div>
             <div class="eyebrow">Wissen weitergeben</div>
             <h3>Teile Informationen, bevor ein Tier einzieht.</h3>
-            <p>Prüfe vor einer Aufnahme Zeit, Kosten, Platz, Betreuung und Herkunft. Wer Krankheitszeichen früh tierärztlich abklären lässt und eine notwendige <span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Keimdrüsen. Verhindert Fortpflanzung und beendet die Hormonproduktion weitgehend." data-glossary-href="glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span> nicht mehr aufschiebt, verhindert vermeidbares Leid.</p>
+            <p>Prüfe vor einer Aufnahme Zeit, Kosten, Platz, Betreuung und Herkunft. Wer Krankheitszeichen früh in der Tierarztpraxis abklären lässt und eine notwendige <span class="glossary-term" data-glossary-key="kastration" data-glossary-title="Kastration" data-glossary-text="Entfernung der Hoden oder Eierstöcke. Verhindert Nachwuchs und beendet die Hormonbildung dort weitgehend." data-glossary-href="glossar/index.html#kastration" aria-describedby="glossary-term-popover" tabindex="0" role="button">Kastration</span> nicht länger aufschiebt, erspart dem Tier vermeidbares Leid.</p>
             <div class="share-points">
               <div class="share-point">Für Menschen, die gerade „nur mal schauen“.</div>
-              <div class="share-point">Für Halter, die ein Problem lange kleinreden.</div>
+              <div class="share-point">Für Halter, die ein Problem schon lange vor sich herschieben.</div>
               <div class="share-point">Für Familien, bevor aus Wunsch ein Tierheimfall wird.</div>
             </div>
             <div class="share-bar">

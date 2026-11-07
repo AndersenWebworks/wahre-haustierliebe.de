@@ -79,7 +79,7 @@
       "id": "kontakt",
       "url": "https://wahre-haustierliebe.de/kontakt/index.html",
       "title": "Kontakt - Wa(h)re Haustier(liebe)",
-      "description": "Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktmöglichkeiten für Fragen, Anregungen oder Unterstützungsbedarf.",
+      "description": "Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.",
       "intent": "Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe",
       "keywords": [
         "Kontakt",
@@ -104,7 +104,7 @@
       "id": "mitmachen",
       "url": "https://wahre-haustierliebe.de/mitmachen/index.html",
       "title": "Mitmachen! - Wa(h)re Haustier(liebe)",
-      "description": "Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.",
+      "description": "Du hast einen Fehler, einen veralteten Stand oder eine bessere Quelle gefunden? So meldest du uns eine Textstelle oder einen ganzen Abschnitt.",
       "intent": "Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen",
       "keywords": [
         "Mitmachen",
@@ -512,13 +512,17 @@
         "Zwei Wellensittiche kosten nach den Rechenwerten der Kostenseite mindestens etwa 0,90 bis 1,80 Euro am Tag (3.200 bis 6.600 Euro über zehn Jahre).",
         "Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.",
         "Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.",
-        "Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung."
+        "Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.",
+        "Wellensittiche stammen aus dem trockenen Landesinneren Australiens, leben dort in Schwärmen, ziehen als Nomaden dem Regen nach und suchen nach Angabe des Tierschutzbundes etwa 80 Prozent des Tages nach Futter, meist Samen vom Boden.",
+        "Wellensittiche haben vier Zapfentypen in der Netzhaut und sehen UV-Licht; Fensterglas filtert nach der Vereinigung der Vogeltierärzte (AAV) UVB und UVA weitgehend heraus.",
+        "Einzeln gehaltene Wellensittiche lassen sich nach der TVT in der Regel ohne Probleme mit Artgenossen zusammenführen."
       ],
       "citationGuardrails": [
         "Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform; die Maße dieser Übersicht gelten für Wellensittiche.",
         "Die Maße folgen dem Deutschen Tierschutzbund. Das TVT-Merkblatt nennt kleinere Mindestwerte (150 × 60 × 100 cm für ein bis drei Paare); Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.",
         "Die Kosten pro Tag sind eine Untergrenze aus Praxisangaben von go4vet: Beleuchtung samt Strom, Notfälle, Betreuung und eine Voliere in der empfohlenen Größe sind nicht eingerechnet.",
-        "Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.",
+        "Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.",
+        "Die Sätze aus dem Handel und die Ich-Beispiele zum Tagesablauf sind Beispiele; belegt ist das Verhalten, nicht ein bestimmter Käfig. Die Außenvoliere auf dem Foto wurde für Katharinasittiche gebaut.",
         "Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.",
         "Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig."
       ],
@@ -542,6 +546,30 @@
         {
           "label": "go4vet: Wellensittich beim Tierarzt, was kostet eine Behandlung?",
           "url": "https://www.go4vet.com/voegel/krankheiten/wellensittich-beim-tierarzt-was-kostet-eine-behandlung/"
+        },
+        {
+          "label": "BirdLife Australia: Budgerigar",
+          "url": "https://birdlife.org.au/bird-profiles/budgerigar/"
+        },
+        {
+          "label": "Bush Heritage Australia: Wild Budgerigars",
+          "url": "https://www.bushheritage.org.au/species/budgerigars"
+        },
+        {
+          "label": "Association of Avian Veterinarians: Ultraviolet Light as a Critical Component of Companion Bird Husbandry (2024)",
+          "url": "https://cdn.ymaws.com/www.aav.org/resource/resmgr/pdf_2024/240326-2_UVL.pdf"
+        },
+        {
+          "label": "Goldsmith, Butler (2005): Color vision of the budgerigar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16086150/"
+        },
+        {
+          "label": "Pearn, Bennett, Cuthill (2001): Ultraviolet vision, fluorescence and mate choice in a parrot, the budgerigar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11674876/"
+        },
+        {
+          "label": "MSD Veterinary Manual: Disorders Affecting Multiple Body Systems of Pet Birds",
+          "url": "https://www.merckvetmanual.com/bird-owners/disorders-and-diseases-of-birds/disorders-affecting-multiple-body-systems-of-pet-birds"
         },
         {
           "label": "Tierschutzgesetz § 2",
@@ -673,8 +701,8 @@
         "Pferdekosten"
       ],
       "facts": [
-        "Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.",
-        "Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.",
+        "Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.",
+        "Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.",
         "Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle."
       ],
       "citationGuardrails": [
@@ -1370,8 +1398,8 @@
       "id": "voegel-uv-licht",
       "url": "https://wahre-haustierliebe.de/voegel/uv-licht/index.html",
       "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
-      "description": "Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
-      "intent": "UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen.",
+      "description": "Warum Fensterglas einen Teil des Sonnenlichts abhält und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
+      "intent": "Verstehen, was Vögel an UV-Licht sehen, was Fensterglas abhält und wo eine Lampe an Grenzen stößt.",
       "keywords": [
         "Vögel halten",
         "Wellensittiche",
@@ -1384,7 +1412,7 @@
       "sources": [],
       "social": {
         "title": "UV-Licht für Vögel - Wa(h)re Haustier(liebe)",
-        "description": "Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
+        "description": "Warum Fensterglas einen Teil des Sonnenlichts abhält und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-uv-licht.png",
         "imageAlt": "Wellensittich sitzt im hellen Licht auf einer Stange.",
         "imageWidth": 1200,
@@ -1445,7 +1473,7 @@
       "id": "voegel-partnerersatz",
       "url": "https://wahre-haustierliebe.de/voegel/partnerersatz/index.html",
       "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
-      "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.",
+      "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echten Kontakt zu Artgenossen nicht möglich machen.",
       "intent": "Falschen Partnerersatz bei Vögeln vermeiden.",
       "keywords": [
         "Vögel halten",
@@ -1459,7 +1487,7 @@
       "sources": [],
       "social": {
         "title": "Spiegel und Plastikvögel ersetzen keinen Partner - Wa(h)re Haustier(liebe)",
-        "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.",
+        "description": "Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echten Kontakt zu Artgenossen nicht möglich machen.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-partnerersatz.png",
         "imageAlt": "Wellensittich sitzt auf einer hölzernen Stange.",
         "imageWidth": 1200,
@@ -1570,8 +1598,8 @@
       "id": "voegel-zucht-und-eier",
       "url": "https://wahre-haustierliebe.de/voegel/zucht-eier/index.html",
       "title": "Zucht und Eiablage bei Wellensittichen - Wa(h)re Haustier(liebe)",
-      "description": "Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.",
-      "intent": "Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.",
+      "description": "Warum Nistplätze, Eiablage und Nachwuchs Folgen für Gesundheit und Tierschutz haben und Zucht kein harmloses Hobby ist.",
+      "intent": "Zucht und Eiablage bei Wellensittichen verstehen.",
       "keywords": [
         "Vögel halten",
         "Wellensittiche",
@@ -1584,7 +1612,7 @@
       "sources": [],
       "social": {
         "title": "Zucht und Eiablage bei Wellensittichen - Wa(h)re Haustier(liebe)",
-        "description": "Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.",
+        "description": "Warum Nistplätze, Eiablage und Nachwuchs Folgen für Gesundheit und Tierschutz haben und Zucht kein harmloses Hobby ist.",
         "image": "https://wahre-haustierliebe.de/assets/social/voegel-zucht-und-eier.png",
         "imageAlt": "Mehrere Wellensittiche sitzen gemeinsam in einer Voliere.",
         "imageWidth": 1200,
@@ -1709,13 +1737,17 @@
         "Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.",
         "Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.",
         "Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.",
+        "Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.",
+        "Das Streifgebiet eines Wildkaninchens umfasst oft etwa 4.000 bis 8.000 Quadratmeter; die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.",
+        "Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.",
         "Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen."
       ],
       "citationGuardrails": [
         "Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.",
         "Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.",
         "Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.",
-        "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
+        "Die Bedenkzeit von einer Woche und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.",
+        "Die Ich-Beispiele zum Tagesablauf und die beiden Haltungsbeispiele sind aus den Maßen der Merkblätter zusammengesetzt; es sind keine echten Tiere und keine Fotos von Gehegen."
       ],
       "sources": [
         {
@@ -1725,6 +1757,22 @@
         {
           "label": "Deutscher Tierschutzbund: Zwergkaninchen",
           "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/"
+        },
+        {
+          "label": "Schweizer Tierschutz STS: Merkblatt Heimtierkaninchen",
+          "url": "https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Oryctolagus cuniculus",
+          "url": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Pressemeldung zur artgemäßen Haltung von Zwergkaninchen (21.03.2023)",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/"
+        },
+        {
+          "label": "Vier Pfoten: Das Kaninchen als Heimtier",
+          "url": "https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier"
         },
         {
           "label": "go4vet: Kaninchen beim Tierarzt, was kostet eine Behandlung wirklich?",
@@ -2039,7 +2087,7 @@
       "id": "exoten-reptilien",
       "url": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
       "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-      "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.",
+      "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und Gutachten des Bundesministeriums, dazu Lebensdauer.",
       "intent": "Reptilienhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2077,7 +2125,7 @@
       ],
       "social": {
         "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-        "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.",
+        "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und Gutachten des Bundesministeriums, dazu Lebensdauer.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png",
         "imageAlt": "Bartagame ruht auf einem Ast im beleuchteten Terrarium.",
         "imageWidth": 1200,
@@ -2137,7 +2185,7 @@
       "id": "exoten-fische",
       "url": "https://wahre-haustierliebe.de/exoten/fische/index.html",
       "title": "Fische halten - Wa(h)re Haustier(liebe)",
-      "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
+      "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach Zierfisch-Gutachten des Bundesministeriums und Schweizer Tierschutz.",
       "intent": "Fischhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
@@ -2175,7 +2223,7 @@
       ],
       "social": {
         "title": "Fische halten - Wa(h)re Haustier(liebe)",
-        "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
+        "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach Zierfisch-Gutachten des Bundesministeriums und Schweizer Tierschutz.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-fische.png",
         "imageAlt": "Goldfische schwimmen zwischen Pflanzen in einem Aquarium.",
         "imageWidth": 1200,
@@ -2277,7 +2325,7 @@
       ],
       "citationGuardrails": [
         "Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.",
-        "Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal."
+        "Die Befragung selbst konnte nicht abgerufen werden; die Angabe beruht auf der Wiedergabe durch RidersDeal."
       ],
       "sources": [
         {
@@ -2570,7 +2618,7 @@
         "Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu."
       ],
       "citationGuardrails": [
-        "Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.",
+        "Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.",
         "Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.",
         "Seriöse Adoption braucht Zeit und ehrliche Beratung.",
         "Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.",
@@ -2672,16 +2720,16 @@
       ],
       "facts": [
         "Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.",
-        "Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).",
+        "Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier braucht (§ 21 Absatz 5 Nummer 2).",
         "Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.",
         "Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).",
-        "Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte."
+        "Unabhängige Zahlen dazu, woher Kleinsäuger und Vögel im Zoofachhandel stammen, haben wir nicht gefunden."
       ],
       "citationGuardrails": [
         "Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.",
         "Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.",
-        "Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.",
-        "Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.",
+        "Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.",
+        "Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten haben wir nicht gefunden.",
         "Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung."
       ],
       "sources": [
@@ -3093,7 +3141,7 @@
       "id": "tiere-und-urlaub",
       "url": "https://wahre-haustierliebe.de/tiere-und-urlaub/index.html",
       "title": "Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?",
-      "description": "Urlaub mit Haustieren tierschutzgerecht planen: Mitnehmen, Betreuung, Tierpension, Reiseformalitäten, Hitze, Flugreisen und Aussetzen richtig einordnen.",
+      "description": "Urlaub mit Haustier planen: Mitnehmen, Betreuung oder Tierpension, Reiseregeln, Hitze, Flugreisen und die Frage, was Aussetzen bedeutet.",
       "intent": "Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen",
       "keywords": [
         "Haustiere Urlaub",
@@ -3483,10 +3531,10 @@
       ],
       "citationGuardrails": [
         "Aussagen von TASSO, VIER PFOTEN, Tierschutzbund und TVT sind Aussagen von Vereinen und Stiftungen und als solche gekennzeichnet.",
-        "Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel gibt es keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation, auf den sich diese Seite stützt.",
-        "Die Regelwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.",
+        "Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel haben wir keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation gefunden.",
+        "Die Richtwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.",
         "Das Gutachten zu § 11b stammt von 1999 und ist nach Angabe der TVT an vielen Stellen veraltet; eine amtlich anerkannte Liste der Qualzuchtmerkmale gab es nach der TVT im Dezember 2023 nicht.",
-        "Zur Massenzucht von Kleintieren und Vögeln für den Handel liegen keine unabhängigen Zahlen vor, auf die sich diese Seite stützt.",
+        "Zur Massenzucht von Kleintieren und Vögeln für den Handel haben wir keine unabhängigen Zahlen gefunden.",
         "Wer züchtet, übernimmt Verantwortung für Gesundheit und Unterbringung jedes hervorgebrachten Tieres."
       ],
       "sources": [
@@ -3612,7 +3660,7 @@
       "id": "wildtierhaltung",
       "url": "https://wahre-haustierliebe.de/wildtierhaltung/index.html",
       "title": "Private Wildtierhaltung in Deutschland: Legal heißt nicht vertretbar",
-      "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht ineinandergreifen und warum Leinenpflicht Wildtiere schützt.",
+      "description": "Warum gefährliche Wildtiere und Exoten keine Haustiere sind, wie Bundesrecht und Landesrecht zusammenspielen und warum Leinenpflicht Wildtiere schützt.",
       "intent": "Private Wildtierhaltung, Exoten und Wildschutz verstehen",
       "keywords": [
         "Wildtierhaltung",

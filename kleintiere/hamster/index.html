@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6949,6 +6951,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 @media (max-width: 640px) {
   .pex-feld { padding: 1rem 1rem 1.1rem; }
   .pex-karte li { grid-template-columns: 1fr; }
+}
+
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
 }
 
 
@@ -7425,7 +7505,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="topic-page-content">
 <h2 id="kleintiere-hamster-ein-goldhamster-zieht-ein-was-braucht-er-von-dir">Ein Goldhamster zieht ein. Was braucht er von dir?</h2>
         <p class="kt-einstieg"><strong>Bei Goldhamstern heißt Tierliebe nicht Gesellschaft, sondern ein ungestörtes Revier.</strong> Dass du einen Goldhamster aufnehmen möchtest, ist ein freundlicher Gedanke. Dreh ihn einmal um: Was bräuchte ein Goldhamster von dir, und was davon hast du schon?</p>
-        <p class="kt-randnotiz">Goldhamster haben den Ruf, pflegeleicht und damit ein Einstiegstier zu sein. Der Deutsche Tierschutzbund schreibt dagegen, ihre artgerechte Haltung sei nicht ganz so anspruchslos, wie viele vermuten, und in ein Kinderzimmer passten sie wegen ihrer Nachtaktivität nicht (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbunds</a>). Das gilt ausdrücklich für Goldhamster und ihre langhaarige Zuchtform, den Teddyhamster. Andere Hamsterarten haben eigene Bedürfnisse und dürfen nicht einfach nach denselben Regeln gehalten werden.</p>
+        <p class="kt-randnotiz">Goldhamster haben den Ruf, pflegeleicht und damit ein Einstiegstier zu sein. Der Deutsche Tierschutzbund schreibt dagegen, ihre artgerechte Haltung sei nicht ganz so anspruchslos, wie viele vermuten, und in ein Kinderzimmer passten sie wegen ihrer Nachtaktivität nicht (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>). Das gilt ausdrücklich für Goldhamster und ihre langhaarige Zuchtform, den Teddyhamster. Andere Hamsterarten haben eigene Bedürfnisse und dürfen nicht einfach nach denselben Regeln gehalten werden.</p>
 
         <h2 id="kleintiere-hamster-beduerfnisse">Was ein Goldhamster von dir braucht</h2>
         <p class="kt-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
@@ -7448,14 +7528,14 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Mindestens 1 m² Grundfläche, mindestens 70 cm Höhe, mindestens 30 cm grabfähige Einstreu.</p>
-          <p>Der Deutsche Tierschutzbund empfiehlt dieses Gehege mit mehreren verbundenen Ebenen, auch wenn der Hamster täglich Auslauf bekommt. Dazu gehören ein Mehrkammerhaus mit abnehmbarem Dach, ein Sandbad zur Fellpflege (Chinchillasand, scharfkantiger Vogelsand ist ungeeignet) und ein Laufrad mit 25 bis 30 cm Durchmesser, geschlossener Lauffläche, geschlossener Seitenfläche und möglichst nicht aus Plastik. Goldhamster legen in ihren Rädern nachts mehr als 18 Kilometer zurück (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbunds</a>). Ein Laufrad ergänzt das Gehege; es ersetzt weder die zusammenhängende Grundfläche noch tiefe Einstreu und abwechslungsreiche Wege. Täglicher Auslauf in einem gesicherten Bereich gehört in die Abendstunden (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>).</p>
+          <p>Der Deutsche Tierschutzbund empfiehlt dieses Gehege mit mehreren verbundenen Ebenen, auch wenn der Hamster täglich Auslauf bekommt. Dazu gehören ein Mehrkammerhaus mit abnehmbarem Dach, ein Sandbad zur Fellpflege (Chinchillasand, scharfkantiger Vogelsand ist ungeeignet) und ein Laufrad mit 25 bis 30 cm Durchmesser, geschlossener Lauffläche, geschlossener Seitenfläche und möglichst nicht aus Plastik. Goldhamster legen in ihren Rädern nachts mehr als 18 Kilometer zurück (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>). Ein Laufrad ergänzt das Gehege; es ersetzt weder die zusammenhängende Grundfläche noch tiefe Einstreu und abwechslungsreiche Wege. Täglicher Auslauf in einem gesicherten Bereich gehört in die Abendstunden (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>).</p>
           <div class="warning-box">
           <h3>Was dem Hamster schadet</h3><div class="article-rhythm signal-grid" data-enhancement="kleintiere-signale">
             <article class="signal-card" data-nr="01"><strong>Verstecken</strong><span>Dauerhaftes Verstecken ist oft Stress, nicht „schüchtern und niedlich“.</span></article>
             <article class="signal-card" data-nr="02"><strong>Nachtaktiv</strong><span>Wecken am Tag stört den Rhythmus und erzeugt Stress, auch wenn der Hamster ruhig bleibt.</span></article>
             <article class="signal-card" data-nr="03"><strong>Fläche</strong><span>Ein Käfig ersetzt kein Gehege. Bewegung und Struktur sind Grundbedürfnisse.</span></article>
           </div>
-          <p>Hamsterkugeln und sogenannte Hamsterautos nehmen dem Tier Rückzug, Orientierung und Kontrolle über seine Bewegung. Sie können Stress, Stürze und Verletzungen verursachen. Gitterlaufräder, offene Sprossen, Hamsterwatte aus Kunstfaser und lange Kunststoffröhren bergen ebenfalls Verletzungs-, Strangulations- oder Gesundheitsrisiken (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Tierschutzwidriges_Zubehoer.pdf" target="_blank" rel="noopener noreferrer">Positionspapier zu tierschutzwidrigem Zubehör</a>).</p>
+          <p>Hamsterkugeln und sogenannte Hamsterautos nehmen dem Tier Rückzug, Orientierung und Kontrolle über seine Bewegung. Sie können Stress, Stürze und Verletzungen verursachen. Gitterlaufräder, offene Sprossen, Hamsterwatte aus Kunstfaser und lange Kunststoffröhren bergen ebenfalls Risiken: Verletzungen, Strangulation oder Gesundheitsschäden (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Berichte/Positionspapier_DTSchB_Tierschutzwidriges_Zubehoer.pdf" target="_blank" rel="noopener noreferrer">Positionspapier zu tierschutzwidrigem Zubehör</a>).</p>
         </div></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>1 m² ist ein Quadrat von 1 m × 1 m. Von den 70 cm Höhe sollen 30 cm mit Einstreu gefüllt sein, das sind knapp 43 Prozent der Höhe, in der das Tier graben, wühlen und Gänge anlegen kann.</p>
@@ -7470,7 +7550,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Zuckerfreie Körnermischung, täglich Frischfutter, dreimal pro Woche tierisches Eiweiß.</p>
-          <p>Ein ausgewachsenes Tier frisst täglich etwa 10 bis 15 Gramm Mischfutter, das sind etwa zwei Teelöffel. Der Proteingehalt liegt idealerweise bei 15 bis 20 Prozent, der Fettgehalt bei höchstens 5 Prozent. Dazu kommen täglich Grünfutter, Gemüse und ein wenig Obst, dreimal wöchentlich tierisches Eiweiß wie Hüttenkäse, hartgekochtes Eiweiß oder Magerquark, hochwertiges Heu und frisches Trinkwasser. Ein Teil des Futters kann im Gehege verteilt werden; die Futtersuche beschäftigt den Hamster. Gehamstertes Frischfutter muss entfernt werden, bevor es verdirbt. Gefüttert wird am späten Nachmittag oder Abend (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbunds</a>, <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>).</p></dd>
+          <p>Ein ausgewachsenes Tier frisst täglich etwa 10 bis 15 Gramm Mischfutter, das sind etwa zwei Teelöffel. Der Proteingehalt liegt idealerweise bei 15 bis 20 Prozent, der Fettgehalt bei höchstens 5 Prozent. Dazu kommen täglich Grünfutter, Gemüse und ein wenig Obst, dreimal wöchentlich tierisches Eiweiß wie Hüttenkäse, hartgekochtes Eiweiß oder Magerquark, hochwertiges Heu und frisches Trinkwasser. Ein Teil des Futters kann im Gehege verteilt werden; die Futtersuche beschäftigt den Hamster. Gehamstertes Frischfutter muss entfernt werden, bevor es verdirbt. Gefüttert wird am späten Nachmittag oder Abend (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Bei 10 bis 15 Gramm am Tag sind das im Jahr rund 3,7 bis 5,5 Kilogramm Körnermischung.</p>
           <p class="kt-rechnung">Rechnung: 10 g × 365 = 3,65 kg; 15 g × 365 ≈ 5,5 kg.</p></dd>
@@ -7484,7 +7564,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Nachtaktiv: tagsüber schlafen, abends aktiv werden. Die Umgebung muss tagsüber möglichst ruhig sein.</p>
-          <p>Hamster, die häufiger geweckt werden, können Verhaltensstörungen entwickeln. Das Gehege gehört an einen ruhigen, trockenen und zugluftfreien Platz in Tischhöhe, nicht an die Heizung und nicht in direkte Sonne. Die Wohlfühltemperatur liegt bei 20 bis 26 Grad Celsius; Temperaturen ab 34 Grad sind lebensgefährlich. Hochgehoben wird das Tier nur, wenn es nötig ist, etwa zum Tierarztbesuch (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>). Goldhamster legen keinen Wert auf menschliche Nähe und wollen nicht angefasst oder herumgetragen werden (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbunds</a>).</p></dd>
+          <p>Hamster, die häufiger geweckt werden, können Verhaltensstörungen entwickeln. Das Gehege gehört an einen ruhigen, trockenen und zugluftfreien Platz in Tischhöhe, nicht an die Heizung und nicht in direkte Sonne. Die Wohlfühltemperatur liegt bei 20 bis 26 Grad Celsius; Temperaturen ab 34 Grad sind lebensgefährlich. Hochgehoben wird das Tier nur, wenn es nötig ist, etwa zum Tierarztbesuch (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>). Goldhamster legen keinen Wert auf menschliche Nähe und wollen nicht angefasst oder herumgetragen werden (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Er wird abends munter, also dann, wenn viele Familien den Tag beenden, und schläft, während Kinder tagsüber spielen möchten. Für Kinder, die tagsüber mit einem Tier spielen oder kuscheln wollen, passt das nicht. Die Verantwortung liegt bei Erwachsenen; Kinder können ihn abends ruhig beobachten und bei der Versorgung helfen, dürfen aber weder bestimmen, wann er wach sein soll, noch ihn aus dem Nest holen.</p></dd>
             <dt class="kt-t-frage">Frage an dich</dt>
@@ -7497,7 +7577,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Lebenserwartung 2 bis 3 Jahre. Regelmäßig wiegen, täglich Aktivität, Appetit, Fell, Augen, Nase und After ansehen.</p>
-          <p>Goldhamster zeigen Beschwerden oft erst über kleine Veränderungen. Gewichtsverlust, verklebte Augen, Durchfall, kahle oder schuppige Stellen, auffällig wenig Aktivität in der Nacht oder sichtbare Schmerzen gehören tierärztlich abgeklärt. Die Schneidezähne wachsen lebenslang; werden sie zu lang, muss die Tierarztpraxis sie kürzen. Schon mit etwa eindreiviertel Jahren sind die Tiere Senioren und werden merklich ruhiger (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbunds</a>, <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>).</p></dd>
+          <p>Goldhamster zeigen Beschwerden oft erst über kleine Veränderungen. Gewichtsverlust, verklebte Augen, Durchfall, kahle oder schuppige Stellen, auffällig wenig Aktivität in der Nacht oder sichtbare Schmerzen sollte eine Tierarztpraxis abklären. Die Schneidezähne wachsen lebenslang; werden sie zu lang, muss die Tierarztpraxis sie kürzen. Schon mit etwa eindreiviertel Jahren sind die Tiere Senioren und werden merklich ruhiger (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund</a>, <a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Haltung_von_Goldhamstern.pdf" target="_blank" rel="noopener noreferrer">Broschüre „Haltung von Goldhamstern“</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Zwei bis drei Jahre sind 730 bis 1.095 Tage. Ein einzelnes Jahr ist ein Drittel bis die Hälfte seines ganzen Lebens.</p>
           <p class="kt-rechnung">Rechnung: 2 × 365 = 730; 3 × 365 = 1.095.</p></dd>
@@ -7540,7 +7620,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <tr class="total"><td data-label="Posten"><strong>Gesamt über drei Jahre</strong></td><td colspan="2" data-label="Einmalig / Jährlich"><strong>ca. 3.130–3.775 €</strong></td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Alle Einzelposten und die Untergrenze von 3.130 Euro für ein dreijähriges Tier nennt der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbunds</a> als Mindestkosten und grobe Schätzung. Tierarztkosten rechnet er ausdrücklich nicht ein, weil sie individuell extrem schwanken. Die obere Summe und der Betrag pro Tag sind unsere Hochrechnung aus derselben Spanne (3.130 ÷ 1.095 Tage ≈ 2,86 Euro und 3.775 ÷ 1.095 Tage ≈ 3,45 Euro). Stand der Angaben: Oktober 2026. Lege vor dem Einzug eine Rücklage für Behandlungen zurück und frage vorher bei einer Praxis nach, die Hamster behandelt. Die ausführliche Rechnung gibt es für Kaninchen und Meerschweinchen auf den Seiten <a href="../../kleintiere/kaninchen-kosten/index.html">Kaninchen: Kosten</a> und <a href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>.</p>
+        <p class="text-muted">Alle Einzelposten und die Untergrenze von 3.130 Euro für ein dreijähriges Tier nennt der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/goldhamster/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> als Mindestkosten und grobe Schätzung. Tierarztkosten rechnet er ausdrücklich nicht ein, weil sie individuell extrem schwanken. Die obere Summe und der Betrag pro Tag sind unsere Hochrechnung aus derselben Spanne (3.130 ÷ 1.095 Tage ≈ 2,86 Euro und 3.775 ÷ 1.095 Tage ≈ 3,45 Euro). Stand der Angaben: Oktober 2026. Lege vor dem Einzug eine Rücklage für Behandlungen zurück und frage vorher bei einer Praxis nach, die Hamster behandelt. Die ausführliche Rechnung gibt es für Kaninchen und Meerschweinchen auf den Seiten <a href="../../kleintiere/kaninchen-kosten/index.html">Kaninchen: Kosten</a> und <a href="../../kleintiere/meerschweinchen-kosten/index.html">Meerschweinchen: Kosten</a>.</p>
 
         <h2 id="kleintiere-hamster-entscheiden">Bevor du entscheidest</h2>
         <div class="kt-bedenkzeit">
@@ -7561,7 +7641,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         <div class="highlight-box">
           <h3>Du hast schon einen Goldhamster?</h3>
-          <p>Dann ist das keine Schuldfrage, sondern eine Bestandsaufnahme. Prüfe heute, ob dein Hamster mindestens einen Quadratmeter Grundfläche, 30 Zentimeter grabfähige Einstreu, sichere Rückzugsorte und ein passendes Laufrad hat. Schütze seinen Schlaf, wecke ihn nicht für Kinder und lass Warnzeichen tierärztlich abklären.</p>
+          <p>Dann ist das keine Schuldfrage, sondern eine Bestandsaufnahme. Prüfe heute, ob dein Hamster mindestens einen Quadratmeter Grundfläche, 30 Zentimeter grabfähige Einstreu, sichere Rückzugsorte und ein passendes Laufrad hat. Schütze seinen Schlaf, wecke ihn nicht für Kinder und lass Warnzeichen in der Tierarztpraxis abklären.</p>
           <p>Beginne mit den entscheidenden Punkten: Schaffe zuerst ausreichend Fläche und tiefe Einstreu, entferne gefährliches Zubehör und sichere ruhige Rückzugsorte. Danach prüfst du Laufrad, Futter und Gesundheitszeichen.</p>
         </div>
 

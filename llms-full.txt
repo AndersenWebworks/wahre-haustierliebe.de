@@ -132,7 +132,7 @@
 - https://wahre-haustierliebe.de/katzen/entscheidung/index.html - Vor der Aufnahme eines Kätzchens Abgabealter, Herkunft, Geschwister, Ausstattung, Eingewöhnung und Kosten prüfen.
 - https://wahre-haustierliebe.de/katzen/kaetzchen-tierarzt/index.html - Tierarzt-Termine und Kosten im ersten Katzenjahr planen.
 - https://wahre-haustierliebe.de/voegel/schwarmhaltung/index.html - Schwarmhaltung bei Vögeln verstehen.
-- https://wahre-haustierliebe.de/voegel/uv-licht/index.html - UV-Wahrnehmung, Fensterglas und die Grenzen künstlicher Lichtversorgung bei Vögeln einordnen.
+- https://wahre-haustierliebe.de/voegel/uv-licht/index.html - Verstehen, was Vögel an UV-Licht sehen, was Fensterglas abhält und wo eine Lampe an Grenzen stößt.
 - https://wahre-haustierliebe.de/voegel/kuechenluft-teflon/index.html - Küchenluft, Teflon und Dämpfe als Gefahr für Vögel verstehen.
 - https://wahre-haustierliebe.de/voegel/freiflug/index.html - Freiflug und Flugraum für Vögel planen.
 - https://wahre-haustierliebe.de/voegel/partnerersatz/index.html - Falschen Partnerersatz bei Vögeln vermeiden.
@@ -140,7 +140,7 @@
 - https://wahre-haustierliebe.de/voegel/ernaehrung/index.html - Ernährung, Wasser und Futtersuche bei Wellensittichen einordnen.
 - https://wahre-haustierliebe.de/voegel/alltag-kosten-betreuung/index.html - Zeit, Kosten, Reinigung, Urlaub und Notfallvorsorge vor der Vogelhaltung prüfen.
 - https://wahre-haustierliebe.de/voegel/wellensittiche-kosten/index.html - Kosten für Wellensittiche vor der Anschaffung realistisch einschätzen.
-- https://wahre-haustierliebe.de/voegel/zucht-eier/index.html - Zucht, Brutreize und Eiablage bei Wellensittichen einordnen.
+- https://wahre-haustierliebe.de/voegel/zucht-eier/index.html - Zucht und Eiablage bei Wellensittichen verstehen.
 - https://wahre-haustierliebe.de/voegel/krankheit-erkennen/index.html - Krankheitszeichen bei Vögeln ernst nehmen.
 - https://wahre-haustierliebe.de/voegel/qualzucht/index.html - Qualzucht bei Heimvögeln erkennen.
 - https://wahre-haustierliebe.de/voegel/entscheidung/index.html - Entscheidung vor der Vogelhaltung prüfen.
@@ -313,11 +313,15 @@ Facts:
 - Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.
 - Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.
 - Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.
+- Wellensittiche stammen aus dem trockenen Landesinneren Australiens, leben dort in Schwärmen, ziehen als Nomaden dem Regen nach und suchen nach Angabe des Tierschutzbundes etwa 80 Prozent des Tages nach Futter, meist Samen vom Boden.
+- Wellensittiche haben vier Zapfentypen in der Netzhaut und sehen UV-Licht; Fensterglas filtert nach der Vereinigung der Vogeltierärzte (AAV) UVB und UVA weitgehend heraus.
+- Einzeln gehaltene Wellensittiche lassen sich nach der TVT in der Regel ohne Probleme mit Artgenossen zusammenführen.
 Important boundaries:
 - Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform; die Maße dieser Übersicht gelten für Wellensittiche.
 - Die Maße folgen dem Deutschen Tierschutzbund. Das TVT-Merkblatt nennt kleinere Mindestwerte (150 × 60 × 100 cm für ein bis drei Paare); Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.
 - Die Kosten pro Tag sind eine Untergrenze aus Praxisangaben von go4vet: Beleuchtung samt Strom, Notfälle, Betreuung und eine Voliere in der empfohlenen Größe sind nicht eingerechnet.
-- Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.
+- Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.
+- Die Sätze aus dem Handel und die Ich-Beispiele zum Tagesablauf sind Beispiele; belegt ist das Verhalten, nicht ein bestimmter Käfig. Die Außenvoliere auf dem Foto wurde für Katharinasittiche gebaut.
 - Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.
 - Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig.
 Sources:
@@ -326,6 +330,12 @@ Sources:
 - Tierärztliche Vereinigung für Tierschutz: Merkblatt 173 Wellensittiche: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&download=TVT-MB_173_Heimtiere_Wellensittiche__2013_.pdf&did=58
 - go4vet: Was kostet ein Wellensittich?: https://www.go4vet.com/voegel/haltung/was-kostet-ein-wellensittich/
 - go4vet: Wellensittich beim Tierarzt, was kostet eine Behandlung?: https://www.go4vet.com/voegel/krankheiten/wellensittich-beim-tierarzt-was-kostet-eine-behandlung/
+- BirdLife Australia: Budgerigar: https://birdlife.org.au/bird-profiles/budgerigar/
+- Bush Heritage Australia: Wild Budgerigars: https://www.bushheritage.org.au/species/budgerigars
+- Association of Avian Veterinarians: Ultraviolet Light as a Critical Component of Companion Bird Husbandry (2024): https://cdn.ymaws.com/www.aav.org/resource/resmgr/pdf_2024/240326-2_UVL.pdf
+- Goldsmith, Butler (2005): Color vision of the budgerigar: https://pubmed.ncbi.nlm.nih.gov/16086150/
+- Pearn, Bennett, Cuthill (2001): Ultraviolet vision, fluorescence and mate choice in a parrot, the budgerigar: https://pubmed.ncbi.nlm.nih.gov/11674876/
+- MSD Veterinary Manual: Disorders Affecting Multiple Body Systems of Pet Birds: https://www.merckvetmanual.com/bird-owners/disorders-and-diseases-of-birds/disorders-affecting-multiple-body-systems-of-pet-birds
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 - Tierschutzgesetz § 11c: https://www.gesetze-im-internet.de/tierschg/__11c.html
 
@@ -362,8 +372,8 @@ Sources:
 ### Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung
 URL: https://wahre-haustierliebe.de/pferde/index.html
 Facts:
-- Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.
-- Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.
+- Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.
+- Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.
 - Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.
 Important boundaries:
 - Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.
@@ -487,15 +497,23 @@ Facts:
 - Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.
 - Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.
 - Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.
+- Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.
+- Das Streifgebiet eines Wildkaninchens umfasst oft etwa 4.000 bis 8.000 Quadratmeter; die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.
+- Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.
 - Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen.
 Important boundaries:
 - Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.
 - Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.
 - Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.
-- Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.
+- Die Bedenkzeit von einer Woche und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.
+- Die Ich-Beispiele zum Tagesablauf und die beiden Haltungsbeispiele sind aus den Maßen der Merkblätter zusammengesetzt; es sind keine echten Tiere und keine Fotos von Gehegen.
 Sources:
 - TVT-Merkblatt Nr. 157: Heimtiere – Kaninchen, Stand September 2019: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&did=38
 - Deutscher Tierschutzbund: Zwergkaninchen: https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/
+- Schweizer Tierschutz STS: Merkblatt Heimtierkaninchen: https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf
+- Animal Diversity Web: Oryctolagus cuniculus: https://animaldiversity.org/accounts/Oryctolagus_cuniculus/
+- Deutscher Tierschutzbund: Pressemeldung zur artgemäßen Haltung von Zwergkaninchen (21.03.2023): https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/
+- Vier Pfoten: Das Kaninchen als Heimtier: https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier
 - go4vet: Kaninchen beim Tierarzt, was kostet eine Behandlung wirklich?: https://www.go4vet.com/kleintiere/krankheiten/kaninchen-beim-tierarzt-was-kostet-eine-behandlung-wirklich/
 - Tierschutz-Nutztierhaltungsverordnung § 37: https://www.gesetze-im-internet.de/tierschnutztv/__37.html
 - Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen: https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm
@@ -634,7 +652,7 @@ Facts:
 - Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).
 Important boundaries:
 - Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.
-- Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal.
+- Die Befragung selbst konnte nicht abgerufen werden; die Angabe beruht auf der Wiedergabe durch RidersDeal.
 Sources:
 - RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026): https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd
 - Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum): https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/
@@ -720,7 +738,7 @@ Facts:
 - Junge Meerschweinchen sollten mindestens acht Wochen alt sein. Für Zwergkaninchen empfiehlt der Deutsche Tierschutzbund beim Einzug mindestens zehn Wochen; zwölf Wochen sind eine strengere Vermittlungsorientierung.
 - Zu frühe Trennung kann Entwicklungs-, Gesundheits- und Verhaltensprobleme begünstigen; bei fragwürdiger Herkunft kommen Infektions- und Transportgefahren hinzu.
 Important boundaries:
-- Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen zur Herkunft der Tiere im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.
+- Aussagen zum Zoofachhandel stammen von ZZF (Branche) und Deutschem Tierschutzbund; unabhängige Zahlen dazu, woher die Tiere im Zoofachhandel stammen, haben wir nicht gefunden.
 - Adoption ist keine beliebige Einkaufsoption neben Zucht, sondern die konsequentere Entscheidung für ein bereits vorhandenes Tier.
 - Seriöse Adoption braucht Zeit und ehrliche Beratung.
 - Gesetzliche Mindestgrenzen sind keine pauschale Empfehlung für den frühestmöglichen Umzug.
@@ -749,15 +767,15 @@ Sources:
 URL: https://wahre-haustierliebe.de/woher-kommt-mein-tier/index.html
 Facts:
 - Nach Angabe des ZZF verkauft der Zoofachhandel Kleinsäuger, Vögel, Fische, Reptilien, Amphibien und Insekten, aber keine Hunde und Katzen.
-- Gewerbsmäßiger Handel mit Wirbeltieren braucht eine Erlaubnis nach § 11 Tierschutzgesetz; bei der erstmaligen Abgabe einer Tierart sind schriftliche Informationen zu den Bedürfnissen des Tieres mitzugeben (§ 21 Absatz 5 Nummer 2).
+- Wer gewerblich mit Wirbeltieren handelt, braucht eine Erlaubnis (§ 11 Tierschutzgesetz). Gibt er einem Käufer erstmals eine Tierart ab, muss er schriftlich mitgeben, was das Tier braucht (§ 21 Absatz 5 Nummer 2).
 - Der Deutsche Tierschutzbund sieht den Verkauf lebender Tiere im Zoofachhandel kritisch und rät, Tiere nicht aus Mitleid zu kaufen.
 - Für Hunde und Katzen liegt das Risiko im Online-Handel und bei Kleinanzeigen, wo Anbieter oft anonym sind (Stand der Quellen: 2021 und 2023).
-- Unabhängige Zahlen zur Herkunft von Kleinsäugern und Vögeln im Zoofachhandel liegen nicht vor, auf die sich diese Seite stützen könnte.
+- Unabhängige Zahlen dazu, woher Kleinsäuger und Vögel im Zoofachhandel stammen, haben wir nicht gefunden.
 Important boundaries:
 - Aussagen von ZZF, Tierschutzbund und TVT sind Verbandsaussagen und als solche gekennzeichnet.
 - Die Quellen zum Online-Handel stammen von 2021 und 2023 und geben nicht die heutige Rechtslage wieder.
-- Eine allgemeine gesetzliche Beratungspflicht steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.
-- Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten ist nicht Grundlage dieser Seite.
+- Eine allgemeine gesetzliche Pflicht zur Beratung steht nicht im Wortlaut von § 11 und § 21 Absatz 5 des Tierschutzgesetzes; ein Verkaufsverbot für Hunde und Katzen im Zoofachhandel steht nicht in § 11.
+- Zahlen zu Tierheimen stammen aus Umfragen des Tierschutzbundes; eine amtliche Statistik zu Abgaben bei Kleintieren, Vögeln und Exoten haben wir nicht gefunden.
 - Die Haltungsgutachten für Zierfische (1998) und Reptilien (1997) werden laut Bundesministerium überarbeitet; die Angaben zu Reptilienhändlern beruhen auf Händlerangaben mit geringer Beteiligung.
 Sources:
 - ZZF: Ratgeber Zoofachhandel: https://wirfuerstier.de/ratgeber/woher-bekommst-du-ein-heimtier/zoofachhandel/
@@ -998,10 +1016,10 @@ Facts:
 - Auch seriöse Zucht erzeugt neue Tiere, während Tierheime nach Umfragen des Tierschutzbundes stark ausgelastet sind.
 Important boundaries:
 - Aussagen von TASSO, VIER PFOTEN, Tierschutzbund und TVT sind Aussagen von Vereinen und Stiftungen und als solche gekennzeichnet.
-- Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel gibt es keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation, auf den sich diese Seite stützt.
-- Die Regelwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.
+- Die Kriterien für seriöse Züchter beziehen sich auf Hunde und Katzen; für Kleintiere und Vögel haben wir keinen Kriterienkatalog eines Verbands oder einer Tierschutzorganisation gefunden.
+- Die Richtwerte zur Gewerbsmäßigkeit stammen aus der Verwaltungsvorschrift in der Fassung von 2000; sie sind Orientierung für Behörden, kein Gesetzestext, und sagen nichts über die Qualität einer Zucht.
 - Das Gutachten zu § 11b stammt von 1999 und ist nach Angabe der TVT an vielen Stellen veraltet; eine amtlich anerkannte Liste der Qualzuchtmerkmale gab es nach der TVT im Dezember 2023 nicht.
-- Zur Massenzucht von Kleintieren und Vögeln für den Handel liegen keine unabhängigen Zahlen vor, auf die sich diese Seite stützt.
+- Zur Massenzucht von Kleintieren und Vögeln für den Handel haben wir keine unabhängigen Zahlen gefunden.
 - Wer züchtet, übernimmt Verantwortung für Gesundheit und Unterbringung jedes hervorgebrachten Tieres.
 Sources:
 - Tierschutzgesetz § 11: https://www.gesetze-im-internet.de/tierschg/__11.html

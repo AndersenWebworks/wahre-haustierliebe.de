@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Golden Retriever springt über eine Agility-Hürde.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-10-24">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Was ein Hund wirklich kostet - Wa(h)re Haustier(liebe)">
   <meta name="twitter:description" content="Laufende Kosten, Rücklagen, Steuer, Versicherung und Tierarztkosten vor dem Einzug ehrlich rechnen.">
@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6951,6 +6953,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -6977,7 +7057,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Golden Retriever springt über eine Agility-Hürde."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Hund halten, Hund anschaffen, Hundekosten, Alleinbleiben, Erziehung, Zwingerhaltung",
   "about": [
@@ -7310,13 +7390,13 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         </figure>
       </div>
-    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hunde-kosten-der-preis-decoder-was-ein-hund-wirklich-kostet">Der Preis-Decoder: Was ein Hund wirklich kostet</a></li><li><a href="#hunde-kosten-1-einmalige-kosten-vor-dem-einzug">1. Einmalige Kosten vor dem Einzug</a></li><li><a href="#hunde-kosten-2-regelmassige-kosten-im-alltag">2. Regelmäßige Kosten im Alltag</a></li><li><a href="#hunde-kosten-3-notfalle-und-kosten-die-sich-nicht-planen-lassen">3. Notfälle und Kosten, die sich nicht planen lassen</a></li><li><a href="#hunde-kosten-4-was-bei-einem-welpen-zusatzlich-anfallt">4. Was bei einem Welpen zusätzlich anfällt</a></li><li><a href="#hunde-kosten-5-nicht-jeder-hund-kostet-gleich-viel">5. Nicht jeder Hund kostet gleich viel</a></li><li><a href="#hunde-kosten-6-die-kosten-der-entscheidung">6. Die Kosten der Entscheidung</a></li><li><a href="#hunde-kosten-adoption-ist-nicht-kostenlos-aber-sie-schafft-eine-chance">Adoption ist nicht kostenlos, aber sie schafft eine Chance</a></li><li><a href="#hunde-kosten-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hunde-kosten-was-der-preis-verrat-was-ein-hund-wirklich-kostet">Was der Preis verrät: Was ein Hund wirklich kostet</a></li><li><a href="#hunde-kosten-1-einmalige-kosten-vor-dem-einzug">1. Einmalige Kosten vor dem Einzug</a></li><li><a href="#hunde-kosten-2-regelmassige-kosten-im-alltag">2. Regelmäßige Kosten im Alltag</a></li><li><a href="#hunde-kosten-3-notfalle-und-kosten-die-sich-nicht-planen-lassen">3. Notfälle und Kosten, die sich nicht planen lassen</a></li><li><a href="#hunde-kosten-4-was-bei-einem-welpen-zusatzlich-anfallt">4. Was bei einem Welpen zusätzlich anfällt</a></li><li><a href="#hunde-kosten-5-nicht-jeder-hund-kostet-gleich-viel">5. Nicht jeder Hund kostet gleich viel</a></li><li><a href="#hunde-kosten-6-die-kosten-der-entscheidung">6. Die Kosten der Entscheidung</a></li><li><a href="#hunde-kosten-adoption-ist-nicht-kostenlos-aber-sie-schafft-eine-chance">Adoption ist nicht kostenlos, aber sie schafft eine Chance</a></li><li><a href="#hunde-kosten-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
         <p class="text-muted"><a href="../../hunde/index.html">Zurück zur Übersicht: Hund</a></p>
         <div class="topic-page-content">
-<h2 id="hunde-kosten-der-preis-decoder-was-ein-hund-wirklich-kostet">Der Preis-Decoder: Was ein Hund wirklich kostet</h2>
+<h2 id="hunde-kosten-was-der-preis-verrat-was-ein-hund-wirklich-kostet">Was der Preis verrät: Was ein Hund wirklich kostet</h2>
         <p>Der Kaufpreis oder die Schutzgebühr ist nur der Anfang. Wer einen Hund aufnimmt, entscheidet sich für viele Jahre Versorgung, Zeit und Verlässlichkeit. Ob ein Hund aus dem Tierschutz kommt oder gekauft wird, ändert daran nichts.</p>
 
         <div class="faktenzeile">
@@ -7333,7 +7413,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         </div>
 
         <h2 id="hunde-kosten-1-einmalige-kosten-vor-dem-einzug">1. Einmalige Kosten vor dem Einzug</h2>
-        <p>Zu Beginn fallen nicht nur Schutzgebühr oder Kaufpreis an. Ein Hund braucht vom ersten Tag an sichere Ausstattung und gegebenenfalls eine tierärztliche Untersuchung, Kennzeichnung, Impfungen oder Unterstützung in der Hundeschule.</p>
+        <p>Zu Beginn fallen nicht nur Schutzgebühr oder Kaufpreis an. Ein Hund braucht vom ersten Tag an sichere Ausstattung. Oft kommen eine tierärztliche Untersuchung, Kennzeichnung, Impfungen oder Unterstützung in der Hundeschule dazu.</p>
         <ul>
           <li><strong>Herkunft und Übernahme.</strong> Schutzgebühr im Tierschutz oder Kaufpreis sind keine Aussage darüber, was der Hund später kostet. Ein niedriger Preis kann ebenso wenig beruhigen wie ein hoher Preis Sicherheit garantiert.</li>
           <li><strong>Erstausstattung.</strong> Leine, Geschirr, Halsband, Näpfe, Schlafplatz, Transportmöglichkeit, Sicherung im Auto und passende Beschäftigung gehören vor dem Einzug bereit.</li>
@@ -7342,7 +7422,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         </ul>
 
         <h2 id="hunde-kosten-2-regelmassige-kosten-im-alltag">2. Regelmäßige Kosten im Alltag</h2>
-        <p>Die monatliche Belastung entsteht nicht an einer einzigen Stelle. Sie setzt sich aus vielen wiederkehrenden Posten zusammen, die mit Größe, Alter, Gesundheit, Wohnort und Alltag des Hundes steigen oder sinken können. Die Tabelle zeigt nur die planbaren Grundkosten. Sie ist keine Lebenszeitrechnung und enthält weder Urlaub noch Betreuung noch einen medizinischen Ausnahmefall.</p>
+        <p>Die monatlichen Kosten bestehen aus vielen wiederkehrenden Posten. Sie steigen oder sinken mit Größe, Alter, Gesundheit, Wohnort und Alltag des Hundes. Die Tabelle zeigt nur die planbaren Grundkosten. Sie ist keine vollständige Lebenszeitrechnung, denn Urlaub, Betreuung und ein medizinischer Ausnahmefall fehlen.</p>
         <table class="cost-table">
           <thead><tr><th>Posten</th><th>Einmalig</th><th>Jährlich</th></tr></thead>
           <tbody>
@@ -7355,8 +7435,15 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
             <tr><td data-label="Posten">Krankenversicherung (optional, empfohlen)</td><td data-label="Einmalig">–</td><td data-label="Jährlich">250–600 €</td></tr>
           </tbody>
         </table>
-        <p class="text-muted">Die Tabelle ist eine Orientierung für mittelgroße Hunde, kein verbindlicher Preisplan. So ergibt sich die Summe: Die jährlichen Posten ergeben 1.150 bis 2.900 Euro (600 + 200 + 50 + 50 + 250 und 1.500 + 500 + 200 + 100 + 600). Mal zwölf Jahre sind das 13.800 bis 34.800 Euro. Dazu kommen die einmaligen Posten von 400 bis 2.500 Euro (200 + 200 und 2.000 + 500). Zusammen sind es 14.200 bis 37.300 Euro, gerundet 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Geteilt durch 4.380 Tage ergibt das 3,20 bis 8,45 Euro pro Tag; laufend entspricht es etwa 100 bis 240 Euro im Monat (1.150 ÷ 12 und 2.900 ÷ 12). Notfälle, Betreuung und Urlaub sind darin nicht enthalten. Eine feste Planungssumme ist das nicht: Große Hunde, Spezialfutter, chronische Erkrankungen, hohe Hundesteuer oder regelmäßige Betreuung können die Kosten deutlich erhöhen, und Veränderungen im eigenen Leben lassen sich nicht vorausberechnen. Prüfe vor dem Einzug die Preise an deinem Wohnort, die Beiträge der Versicherung und die voraussichtlichen Tierarztkosten in deiner Praxis.</p>
-        <p class="text-muted">Zur Gegenprobe: Der Deutsche Tierschutzbund nennt für einen mittelgroßen Hund 300 bis 550 Euro Anschaffungspreis bei einer Adoption aus dem Tierheim, 230 bis 720 Euro für die Grundausstattung und 1.200 bis 1.350 Euro im Jahr für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung, zusammen mindestens 17.500 bis 20.000 Euro für einen 14-jährigen Hund. Seltene Rassen oder Hunde vom Züchter können nach seinen Angaben bis zu mehrere Tausend Euro kosten; dann liegt die Summe entsprechend höher (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Hunde richtig halten</a>). Die TVT rechnet für einen mittelgroßen Hund bis zum 14. Lebensjahr mit mindestens 17.500 Euro und nennt ungeplante Tierarztbesuche, chronische Erkrankungen, Hundeschule und Betreuung als Posten, die deutlich mehr kosten können (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&amp;did=421" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 197</a>).</p>
+        <p class="text-muted">Die Tabelle ist eine Orientierung für mittelgroße Hunde, kein verbindlicher Preisplan. So ergibt sich die Summe:</p>
+        <ul class="text-muted">
+          <li>Die jährlichen Posten ergeben 1.150 bis 2.900 Euro (600 + 200 + 50 + 50 + 250 und 1.500 + 500 + 200 + 100 + 600). Laufend sind das etwa 100 bis 240 Euro im Monat (1.150 ÷ 12 und 2.900 ÷ 12).</li>
+          <li>Mal zwölf Jahre sind das 13.800 bis 34.800 Euro.</li>
+          <li>Dazu kommen die einmaligen Posten von 400 bis 2.500 Euro (200 + 200 und 2.000 + 500).</li>
+          <li>Zusammen sind es 14.200 bis 37.300 Euro, gerundet 14.000 bis 37.000 Euro, im Mittel etwa 26.000 Euro. Geteilt durch 4.380 Tage ergibt das 3,20 bis 8,45 Euro pro Tag.</li>
+        </ul>
+        <p class="text-muted">Notfälle, Betreuung und Urlaub sind darin nicht enthalten. Eine feste Planungssumme ist das nicht: Große Hunde, Spezialfutter, chronische Erkrankungen, hohe Hundesteuer oder regelmäßige Betreuung können die Kosten deutlich erhöhen. Und wie sich dein Leben verändert, lässt sich nicht vorausberechnen. Prüfe vor dem Einzug die Preise an deinem Wohnort, die Beiträge der Versicherung und die voraussichtlichen Tierarztkosten in deiner Praxis.</p>
+        <p class="text-muted">Zur Gegenprobe nennt der Deutsche Tierschutzbund für einen mittelgroßen Hund 300 bis 550 Euro Anschaffungspreis bei einer Adoption aus dem Tierheim, 230 bis 720 Euro für die Grundausstattung und 1.200 bis 1.350 Euro im Jahr für Hundesteuer, Haftpflichtversicherung, Futter, Impfungen und Entwurmung. Zusammen sind das mindestens 17.500 bis 20.000 Euro für einen 14-jährigen Hund. Seltene Rassen oder Hunde vom Züchter können nach seinen Angaben bis zu mehrere Tausend Euro kosten; dann liegt die Summe entsprechend höher (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/hunde/hundehaltung/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Hunde richtig halten</a>). Die TVT rechnet für einen mittelgroßen Hund bis zum 14. Lebensjahr mit mindestens 17.500 Euro. Ungeplante Tierarztbesuche, chronische Erkrankungen, Hundeschule und Betreuung können deutlich mehr kosten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT_MB_197_Aufnahme_eines_Hundes_final_06.03.26.pdf&amp;did=421" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 197</a>).</p>
         <p class="text-muted"><strong>Haftpflicht:</strong> Ob eine Hundehaftpflichtversicherung vorgeschrieben ist, regeln die Bundesländer unterschiedlich; frag bei deiner Gemeinde nach. Unabhängig davon haftest du als Halter grundsätzlich für Schäden, die dein Hund Menschen oder Sachen zufügt (<a href="https://www.gesetze-im-internet.de/bgb/__833.html" target="_blank" rel="noopener noreferrer">§ 833 BGB</a>).</p>
 
         <h2 id="hunde-kosten-3-notfalle-und-kosten-die-sich-nicht-planen-lassen">3. Notfälle und Kosten, die sich nicht planen lassen</h2>
@@ -7364,7 +7451,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <div class="info-box">
           <h3>Die Rücklage gehört vor den Einzug</h3>
           <p>Lege Geld für den Notfall zurück, bevor der Hund einzieht, und behandle es nicht als Reserve für normale Ausgaben. Wer in einer akuten Lage nur zwischen Behandlung, Schulden oder Abgabe wählen kann, ist nicht schlecht. Die Planung war dann nur zu knapp für ein reales Leben mit Tier.</p>
-          <p>Wie viel Rücklage nötig ist, hängt vom Hund ab, und eine amtliche Mindestsumme gibt es nicht. Als Orientierung dieser Seite gelten 2.000 Euro als Untergrenze; besser ist mehr oder eine OP-Versicherung. Im tierärztlichen Notdienst, also nachts, am Wochenende und an Feiertagen, erhöhen sich die einfachen Gebührensätze nach <a href="https://www.gesetze-im-internet.de/got_2022/__4.html" target="_blank" rel="noopener noreferrer">§ 4 der Gebührenordnung für Tierärzte (GOT)</a> auf das Zwei- bis Vierfache, dazu kommen 50 Euro Notdienstgebühr. Die GOT wird 2026 vom Bundesministerium evaluiert, Ergebnisse werden für Ende 2026 erwartet; Preise können sich danach ändern (<a href="https://www.bmleh.de/DE/themen/tiere/got.html" target="_blank" rel="noopener noreferrer">BMLEH: Gebührenordnung für Tierärzte</a>).</p>
+          <p>Eine amtliche Mindestsumme für die Rücklage gibt es nicht; wie viel du brauchst, hängt vom Hund ab. Als Orientierung dieser Seite gelten 2.000 Euro als Untergrenze; besser ist mehr oder eine OP-Versicherung. Im tierärztlichen Notdienst (nachts, am Wochenende und an Feiertagen) zahlst du das Zwei- bis Vierfache des einfachen Gebührensatzes, dazu kommen 50 Euro Notdienstgebühr (<a href="https://www.gesetze-im-internet.de/got_2022/__4.html" target="_blank" rel="noopener noreferrer">§ 4 der Gebührenordnung für Tierärzte, GOT</a>). Das Bundesministerium überprüft die GOT 2026, Ergebnisse werden für Ende 2026 erwartet; danach können sich die Preise ändern (<a href="https://www.bmleh.de/DE/themen/tiere/got.html" target="_blank" rel="noopener noreferrer">BMLEH: Gebührenordnung für Tierärzte</a>).</p>
         </div>
         <p>Auch weniger dramatische Situationen summieren sich: Medikamente über Monate, Spezialfutter, Physio- oder Verhaltenstherapie, eine Betreuung im Krankenhausfall oder die Unterbringung im Urlaub. Ein Hund bleibt nicht günstig, nur weil er gerade gesund ist.</p>
 
@@ -7392,7 +7479,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         <h2 id="hunde-kosten-adoption-ist-nicht-kostenlos-aber-sie-schafft-eine-chance">Adoption ist nicht kostenlos, aber sie schafft eine Chance</h2>
         <p>Auch ein Hund aus dem Tierschutz braucht Ausstattung, Futter, Tierarzt und Rücklagen. Die Schutzgebühr deckt meist nur einen Teil der bisherigen Versorgung. Sie ist keine Rechnung dafür, was ein Tier wert ist. Sie hilft, Versorgung und Vermittlung zu tragen, während ein bereits vorhandenes Tier ein Zuhause bekommt. Woher Tiere kommen können und was du bei Zoofachhandel, Kleinanzeigen und Züchtern prüfen kannst, steht auf der Seite <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
-        <p class="text-muted">Die Einzelposten der Tabelle sind Spannen dieser Seite für einen mittelgroßen Hund; belegt sind die Gegenwerte des Deutschen Tierschutzbundes und der TVT (siehe oben) sowie die Gebührenregeln der GOT. Konkrete Angebote, Gebühren und Behandlungskosten unterscheiden sich regional und können sich ändern. Stand der Angaben: November 2026.</p>
+        <p class="text-muted">Die Einzelposten der Tabelle sind Spannen dieser Seite für einen mittelgroßen Hund. Belegt sind die Vergleichswerte des Deutschen Tierschutzbundes und der TVT (siehe oben) sowie die Gebührenregeln der GOT. Konkrete Angebote, Gebühren und Behandlungskosten unterscheiden sich je nach Region und können sich ändern. Stand der Angaben: November 2026.</p>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">

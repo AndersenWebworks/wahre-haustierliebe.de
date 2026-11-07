@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Hund sitzt in einer Tierarztpraxis neben einem Behandlungstisch.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Zehn Minuten können lebensgefährlich sein">
   <meta name="twitter:description" content="Warum Autos sich schnell aufheizen, welche Warnzeichen zählen und was Passanten in Deutschland tun sollten.">
@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6951,6 +6953,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
+}
+
 
   </style>
   <script type="application/ld+json">
@@ -6977,7 +7057,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Hund sitzt in einer Tierarztpraxis neben einem Behandlungstisch."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Hund im Auto, Hitze, Hitzschlag, Sommer, Notfall",
   "about": [
@@ -7063,7 +7143,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Hund im Auto, Hitze, Hitzschlag, Sommer, Notfall",
@@ -7360,22 +7440,22 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <h1>Ein Hund im Auto stirbt nicht „plötzlich“. Er wird überhitzt.</h1>
           <p>Zehn Minuten wirken harmlos, wenn man nur den Einkauf im Kopf hat. Für den Hund ist das parkende Auto ein geschlossener Hitzeraum.</p>
           <div class="article-kicker"><span>Sommerwarnung</span><span>Fensterspalt reicht nicht</span><span>Polizei/Feuerwehr statt Diskussion</span></div>
-        </div><figure class="article-hero-media image-context-card" style="--image-position:center 50%;"><img src="../assets/images/optimized/vet-office-with-dog.jpg" alt="Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress" loading="eager" decoding="async" width="1200" height="900" fetchpriority="high"><figcaption class="context-caption">Bei <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="hitzschlag" data-glossary-title="Hitzschlag" data-glossary-text="Lebensgefährliche Überhitzung des Körpers. Bei Tieren zählt schnelles, kontrolliertes Kühlen und tierärztliche Hilfe." data-glossary-href="../glossar/index.html#hitzschlag">Hitzestress</span> zählt Handeln, nicht Abwarten.</figcaption></figure></div>
+        </div><figure class="article-hero-media image-context-card" style="--image-position:center 50%;"><img src="../assets/images/optimized/vet-office-with-dog.jpg" alt="Hund in einer Tierarztpraxis als Bild für rechtzeitige Hilfe bei Hitzestress" loading="eager" decoding="async" width="1200" height="900" fetchpriority="high"><figcaption class="context-caption">Bei <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="hitzschlag" data-glossary-title="Hitzschlag" data-glossary-text="Lebensgefährliche Überhitzung des Körpers. Bei Tieren zählen schnelles, vorsichtiges Kühlen und tierärztliche Hilfe." data-glossary-href="../glossar/index.html#hitzschlag">Hitzestress</span> zählt Handeln, nicht Abwarten.</figcaption></figure></div>
       </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hinweis-hitzefalle-auto-1">Warum das Auto so gefährlich ist</a></li><li><a href="#hinweis-hitzefalle-auto-2">Warnzeichen beim Hund</a></li><li><a href="#hinweis-hitzefalle-auto-checkliste">Hund im heißen Auto gesehen? Deine Checkliste</a></li><li><a href="#hinweis-hitzefalle-auto-3">Was nach der Rettung wichtig ist</a></li><li><a href="#hinweis-hitzefalle-auto-4">Fachquellen und wichtige Grenzen</a></li></ol></details></nav>
       <div class="section"><div class="container">
-        <div class="warning-box"><h3>Auf einen Blick</h3><ul><li>Ein Auto kann sich auch bei moderaten Außentemperaturen schnell aufheizen.</li><li>Hunde kühlen sich vor allem über Hecheln. In einem heißen Auto kippt dieses System.</li><li>Schatten, ein Fensterspalt oder „nur kurz“ sind keine verlässlichen Schutzmaßnahmen.</li><li>Bei deutlichen Hitzestresszeichen: Besitzer suchen, Polizei oder Feuerwehr rufen, Beweise sichern.</li></ul></div>
+        <div class="warning-box"><h3>Auf einen Blick</h3><ul><li>Ein Auto kann sich auch bei moderaten Außentemperaturen schnell aufheizen.</li><li>Hunde kühlen sich vor allem über Hecheln. In einem heißen Auto kippt dieses System.</li><li>Schatten, ein Fensterspalt oder „nur kurz“ sind keine verlässlichen Schutzmaßnahmen.</li><li>Bei deutlichen Hitzestresszeichen: Besitzer suchen, Polizei oder Feuerwehr rufen, Fotos machen.</li></ul></div>
         <div class="section-feedback-heading"><h2 id="hinweis-hitzefalle-auto-1">Warum das Auto so gefährlich ist</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hitzefalle-auto-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Der Fehler beginnt im menschlichen Gefühl: Draußen sind vielleicht „nur“ 22 oder 25 Grad, der Einkauf dauert wirklich nicht lange, das Fenster steht einen Spalt offen. Aber ein parkendes Auto ist kein normaler Schattenplatz. Innenraum, Sitze, Armaturenbrett und Luft heizen sich auf. Der Hund sitzt in dieser Wärme und produziert selbst zusätzliche Körperwärme.</p>
-        <p>Hunde schwitzen nicht wie Menschen über die ganze Haut. Sie kühlen sich vor allem durch <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="hecheln" data-glossary-title="Hecheln" data-glossary-text="Schnelle Atmung über Maul und Zunge. Bei Hunden wichtig zur Kühlung, bei Stress oder Hitze aber ein Warnsignal." data-glossary-href="../glossar/index.html#hecheln">Hecheln</span>: Feuchtigkeit verdunstet an Zunge, Maul und Atemwegen. Dafür brauchen sie kühlere Luft, Wasser und einen Körper, der noch gegenregulieren kann. Im Auto wird die Luft warm, der Stress steigt, die Atmung wird schneller, Wasser geht verloren. Dann wird Hecheln nicht zur Lösung, sondern Teil der Erschöpfung.</p>
+        <p>Hunde schwitzen nicht wie Menschen über die ganze Haut. Sie kühlen sich vor allem durch <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="hecheln" data-glossary-title="Hecheln" data-glossary-text="Schnelles Atmen mit offenem Maul. Bei Hunden dient es der Kühlung, bei Stress oder Hitze ist es aber ein Warnsignal." data-glossary-href="../glossar/index.html#hecheln">Hecheln</span>: Feuchtigkeit verdunstet an Zunge, Maul und Atemwegen. Dafür brauchen sie kühlere Luft, Wasser und einen Körper, der noch gegenregulieren kann. Im Auto wird die Luft warm, der Stress steigt, die Atmung wird schneller, Wasser geht verloren. Dann wird Hecheln nicht zur Lösung, sondern Teil der Erschöpfung.</p>
         <div class="article-rhythm myth-truth"><div class="myth"><span class="eyebrow">Mythos</span><h3>„Ich bin in zehn Minuten zurück.“</h3><p>Das ist eine Hoffnung über deinen Zeitplan. Es ist keine Sicherheit für den Hund.</p></div><div class="truth"><span class="eyebrow">Fakt</span><h3>Das Auto wartet nicht.</h3><p>Der Innenraum heizt weiter, auch wenn du im Laden nur schnell etwas holen wolltest.</p></div></div>
         <div class="section-feedback-heading"><h2 id="hinweis-hitzefalle-auto-2">Warnzeichen beim Hund</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hitzefalle-auto-2" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
-        <ul class="checklist"><li>starkes, hektisches Hecheln</li><li>Speicheln, Unruhe, Panik oder <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren oft ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit." data-glossary-href="../glossar/index.html#apathie">Apathie</span></li><li>taumelnder Gang, Schwäche, Erbrechen oder Durchfall</li><li>dunkelrote oder bläuliche Schleimhäute</li><li>Kollaps, Krämpfe oder Bewusstseinsverlust</li></ul>
-        <p>Wenn ein Hund solche Zeichen zeigt, ist das kein „dem ist warm“. Das ist ein medizinischer <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="hitzschlag" data-glossary-title="Hitzschlag" data-glossary-text="Lebensgefährliche Überhitzung des Körpers. Bei Tieren zählt schnelles, kontrolliertes Kühlen und tierärztliche Hilfe." data-glossary-href="../glossar/index.html#hitzschlag">Notfall</span>. Kühlere Umgebung, Wasser und sofortiger tierärztlicher Kontakt sind nötig.</p>
+        <ul class="checklist"><li>starkes, hektisches Hecheln</li><li>Speicheln, Unruhe, Panik oder <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="apathie" data-glossary-title="Apathie" data-glossary-text="Auffällige Teilnahmslosigkeit. Bei Tieren kann sie ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit sein." data-glossary-href="../glossar/index.html#apathie">Apathie</span></li><li>taumelnder Gang, Schwäche, Erbrechen oder Durchfall</li><li>dunkelrote oder bläuliche Schleimhäute</li><li>Kollaps, Krämpfe oder Bewusstseinsverlust</li></ul>
+        <p>Wenn ein Hund solche Zeichen zeigt, ist das kein „dem ist warm“. Das ist ein medizinischer <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="hitzschlag" data-glossary-title="Hitzschlag" data-glossary-text="Lebensgefährliche Überhitzung des Körpers. Bei Tieren zählen schnelles, vorsichtiges Kühlen und tierärztliche Hilfe." data-glossary-href="../glossar/index.html#hitzschlag">Notfall</span>. Kühlere Umgebung, Wasser und sofortiger tierärztlicher Kontakt sind nötig.</p>
         <div class="section-feedback-heading"><h2 id="hinweis-hitzefalle-auto-checkliste">Hund im heißen Auto gesehen? Deine Checkliste</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hitzefalle-auto-checkliste" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <ol class="checklist"><li><strong>Bleib am Auto und prüfe den Zustand.</strong> Reagiert der Hund noch? Hechelt er stark, taumelt er, wirkt er apathisch oder kollabiert er?</li><li><strong>Lass den Halter sofort suchen.</strong> Im Geschäft, Restaurant, Kino oder auf dem Parkplatz ausrufen lassen. Kennzeichen, Ort und Uhrzeit notieren.</li><li><strong>Ruf Polizei oder Feuerwehr.</strong> Nenne Standort, Kennzeichen, Zustand des Hundes und sichtbare Warnzeichen. Bleib erreichbar und folge den Anweisungen.</li><li><strong>Nimm Zeugen dazu.</strong> Sprich andere Personen an und dokumentiere kurz mit Fotos oder Video: Auto, Hund, Kennzeichen, Uhrzeit und Umgebung.</li><li><strong>Beobachte, ob es kippt.</strong> Wird der Hund teilnahmslos, krampft, kollabiert oder reagiert kaum noch, sag das sofort am Telefon. Jetzt zählt jede Minute.</li><li><strong>Schlage keine Scheibe aus Wut ein.</strong> Das kann nur in akuter Lebensgefahr die letzte Möglichkeit sein, wenn Hilfe nicht rechtzeitig kommt. Kläre das möglichst mit Polizei oder Feuerwehr und mit Zeugen.</li></ol>
         <div class="section-feedback-heading"><h2 id="hinweis-hitzefalle-auto-3">Was nach der Rettung wichtig ist</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-hitzefalle-auto-3" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
         <p>Ein überhitzter Hund gehört in den Schatten und braucht kontrollierte Kühlung: kühles, nicht eiskaltes Wasser, Luftzug und Wasser zum Trinken, wenn er wach und schluckfähig ist. Wasser nicht einflößen. Auch wenn der Hund sich scheinbar erholt, sollte er tierärztlich abgeklärt werden, weil ein Hitzschlag Organe, Kreislauf und Nervensystem schädigen kann.</p>
-        <div class="highlight-box"><h3>Im Zweifel</h3><p>Wenn du nicht sicher bist, ob es zu heiß ist, ist es zu heiß, den Hund im Auto zu lassen.</p></div>
+        <div class="highlight-box"><h3>Im Zweifel</h3><p>Bist du unsicher, ob es zu heiß ist, lass den Hund nicht im Auto.</p></div>
       </div></div>
 
         <div class="article-rhythm evidence-block" data-evidence-block="hitzefalle-auto">
@@ -7387,7 +7467,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
               <ul><li>Autos heizen sich auch bei milden Außentemperaturen schnell gefährlich auf.</li><li>Hunde können Hitzestress nicht zuverlässig durch Schwitzen ausgleichen.</li><li>Bei akuter Gefahr zählt schnelles Handeln und tierärztliche Hilfe.</li></ul>
             </article>
             <article class="evidence-card">
-              <h3>Primäre Quellen</h3>
+              <h3>Quellen</h3>
               <ul><li><a href="https://www.tiho-hannover.de/universitaet/aktuelles-veroeffentlichungen/pressemitteilungen/detail/hitzefalle-auto-lebensgefahr-fuer-hunde-bereits-nach-minuten" target="_blank" rel="noopener noreferrer">TiHo Hannover: Hitzefalle Auto</a></li><li><a href="https://mleuv.brandenburg.de/mleuv/de/ueber-uns/landestierschutzbeauftragte/themen/hitzestress-bei-hunden/" target="_blank" rel="noopener noreferrer">Landestierschutzbeauftragte Brandenburg: Hitzestress bei Hunden</a></li><li><a href="https://presse.adac.de/meldungen/adac-ev/recht/hitze-im-auto-fuehrt-zu-lebensbedrohlichen-situationen.html" target="_blank" rel="noopener noreferrer">ADAC: Hitze im Auto und rechtliches Vorgehen</a></li><li><a href="https://tiermedizin.thieme.de/hund-katze-co/sommer-spezial/detail/hitzschlag-beim-hund-therapie-und-aufklaerung-921" target="_blank" rel="noopener noreferrer">Thieme Tiermedizin: Hitzschlag beim Hund</a></li></ul>
             </article>
             <article class="evidence-card">

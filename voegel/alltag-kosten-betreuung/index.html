@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6949,6 +6951,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 @media (max-width: 640px) {
   .pex-feld { padding: 1rem 1rem 1.1rem; }
   .pex-karte li { grid-template-columns: 1fr; }
+}
+
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
 }
 
 
@@ -7312,13 +7392,11 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       <div class="container">
         <p class="text-muted"><a href="../../voegel/index.html">Zurück zur Übersicht: Vögel</a></p>
         <div class="topic-page-content">
-<h2>
-
-        </h2><h2 id="voegel-alltag-kosten-betreuung">Die Haltung verändert Wohnung, Tagesablauf und Urlaubsplanung</h2>
-        <p>Jeden Tag fallen Füttern, Wasserwechsel, Reinigung der Näpfe, Gesundheitsbeobachtung, Freiflug, Sicherung des Zimmers und das Entfernen von Kot und Futterresten an. Vögel nagen an Holz, Tapeten und Einrichtung, verteilen Hülsen und Federn und erzeugen feinen Staub. Die TVT nennt tägliche gründliche Reinigung von Futter- und Trinkgefäßen und das tägliche Entfernen von Frischfutterresten, der Tierschutzbund eine gründliche Reinigung der Voliere mindestens einmal pro Woche. Federstaub und getrockneter Kot können nach einem Leitfaden der Tierschutzombudsstelle Wien Vögel wie Menschen gesundheitlich belasten; das Schlafzimmer ist als Standort ungeeignet. Wer saubere, stille oder jederzeit frei nutzbare Wohnräume erwartet, wird den Alltag mit Vögeln wahrscheinlich als Belastung erleben.</p>
-        <p>Zu den Kosten gehören nicht nur Tiere und Körnerfutter: große Voliere oder Vogelzimmer, sichere Gitter und Fensterschutz, Naturäste und Ersatzmaterial, geeignete Beleuchtung samt Strom und regelmäßigem Lampentausch, Frischfutter, Transportboxen, Reinigung, vogelkundige Untersuchungen, Medikamente und Notfälle. Schon ein einzelner akuter Tierarztfall kann die laufenden Monatskosten deutlich übersteigen. Eine Rücklage ist kein Extra. Die konkreten Zahlen für zwei Wellensittiche stehen im <a href="../../voegel/wellensittiche-kosten/index.html">Preis-Decoder: Was Wellensittiche wirklich kosten</a>.</p>
-        <p>Urlaub, Krankheit, Krankenhaus und Familiennotfälle brauchen eine eingewiesene Betreuung, die täglich kommt, Veränderungen erkennt und im Ernstfall zur vogelkundigen Tierarztpraxis fährt. Der Tierschutzbund fragt dazu: Wer versorgt die Vögel, während du im Urlaub bist? Ein voller Futterautomat ersetzt keine Versorgung. Vermieter, Nachbarn, Allergien, Staubempfindlichkeit und die Lautstärke am Morgen gehören vor einer Aufnahme ebenfalls auf den Tisch. Größere Papageien können laut werden; der Schweizer Tierschutz rät, vor dem Erwerb eines Graupapageis das Einverständnis der Nachbarn einzuholen.</p>
-        <p>Wellensittiche können bei guter Haltung zehn bis fünfzehn Jahre alt werden; im Durchschnitt liegt die Lebenserwartung nach der TVT bei acht bis zwölf und nach dem Tierschutzbund bei fünf bis acht Jahren. Größere Papageien leben viel länger: Das MSD Veterinary Manual nennt für Heimvögel je nach Größe 20 bis 80 Jahre, der Schweizer Tierschutz für Graupapageien etwa 40 bis 50 Jahre. Damit reichen Wohnungswechsel, Trennung, Beruf, Kinder, Pflegeverantwortung und das eigene Alter in die Entscheidung hinein.</p>
+<h2>Die Haltung verändert Wohnung, Tagesablauf und Urlaubsplanung</h2>
+        <p>Jeden Tag fallen Füttern, Wasserwechsel, Reinigung der Näpfe, Gesundheitsbeobachtung, Freiflug, Sicherung des Zimmers und das Entfernen von Kot und Futterresten an. Vögel nagen an Holz, Tapeten und Einrichtung, verteilen Hülsen und Federn und erzeugen feinen Staub. Nach der Tierärztlichen Vereinigung für Tierschutz (TVT) werden Futter- und Trinkgefäße täglich gründlich gereinigt und Frischfutterreste täglich entfernt. Der Tierschutzbund nennt eine gründliche Reinigung der Voliere mindestens einmal pro Woche. Federstaub und getrockneter Kot können nach einem Leitfaden der Tierschutzombudsstelle Wien Vögel wie Menschen gesundheitlich belasten. Das Schlafzimmer ist als Standort ungeeignet. Wer saubere, stille oder jederzeit frei nutzbare Wohnräume erwartet, wird den Alltag mit Vögeln wahrscheinlich als Belastung erleben.</p>
+        <p>Zu den Kosten gehören nicht nur Tiere und Körnerfutter: große Voliere oder Vogelzimmer, sichere Gitter und Fensterschutz, Naturäste und Ersatzmaterial, geeignete Beleuchtung samt Strom und regelmäßigem Lampentausch, Frischfutter, Transportboxen, Reinigung, vogelkundige Untersuchungen, Medikamente und Notfälle. Schon ein einzelner akuter Tierarztfall kann die laufenden Monatskosten deutlich übersteigen. Eine Rücklage ist kein Extra. Die konkreten Zahlen für zwei Wellensittiche stehen auf der Seite <a href="../../voegel/wellensittiche-kosten/index.html">Was Wellensittiche wirklich kosten</a>.</p>
+        <p>Bei Urlaub, Krankheit, Krankenhaus und Notfällen in der Familie brauchst du eine eingewiesene Betreuung. Sie kommt täglich, erkennt Veränderungen und fährt im Ernstfall zur vogelkundigen Tierarztpraxis. Der Tierschutzbund fragt dazu: Wer versorgt die Vögel, während du im Urlaub bist? Ein voller Futterautomat ersetzt keine Versorgung. Vermieter, Nachbarn, Allergien, Staubempfindlichkeit und die Lautstärke am Morgen gehören vor einer Aufnahme ebenfalls auf den Tisch. Größere Papageien können laut werden; der Schweizer Tierschutz rät, vor der Anschaffung eines Graupapageis das Einverständnis der Nachbarn einzuholen.</p>
+        <p>Wellensittiche können bei guter Haltung zehn bis fünfzehn Jahre alt werden; im Durchschnitt liegt die Lebenserwartung nach der TVT bei acht bis zwölf und nach dem Tierschutzbund bei fünf bis acht Jahren. Größere Papageien leben viel länger: Das MSD Veterinary Manual nennt für Heimvögel je nach Größe 20 bis 80 Jahre, der Schweizer Tierschutz für Graupapageien etwa 40 bis 50 Jahre. In so vielen Jahren kann sich viel ändern: Wohnung, Partnerschaft, Beruf, Kinder, Pflegeaufgaben und dein eigenes Alter. Das gehört in die Entscheidung.</p>
 
         <h3>Quellen</h3>
         <ul class="source-list" aria-label="Quellen zu: Alltag, Kosten und Betreuung bei Vögeln">
@@ -7345,7 +7423,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           </a>
           <a class="topic-context-link" href="../../voegel/uv-licht/index.html">
             <strong>UV-Licht für Vögel</strong>
-            <span>Warum Fensterglas das natürliche Lichtspektrum verändert und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.</span>
+            <span>Warum Fensterglas einen Teil des Sonnenlichts abhält und eine Lampe weder Sonnenlicht noch freien Himmel ersetzt.</span>
           </a>
           <a class="topic-context-link" href="../../voegel/kuechenluft-teflon/index.html">
             <strong>Küchenluft und Teflon sind Lebensgefahr</strong>
@@ -7357,7 +7435,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           </a>
           <a class="topic-context-link" href="../../voegel/partnerersatz/index.html">
             <strong>Spiegel und Plastikvögel ersetzen keinen Partner</strong>
-            <span>Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echtes Sozialverhalten nicht möglich machen.</span>
+            <span>Warum Spiegel und Plastikvögel keinen Partner ersetzen, Frustration und Verhaltensstörungen auslösen können und echten Kontakt zu Artgenossen nicht möglich machen.</span>
           </a>
           <a class="topic-context-link" href="../../voegel/ruhe-schlaf/index.html">
             <strong>Ruhe und Schlaf bei Vögeln</strong>
@@ -7373,7 +7451,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           </a>
           <a class="topic-context-link" href="../../voegel/zucht-eier/index.html">
             <strong>Zucht und Eiablage bei Wellensittichen</strong>
-            <span>Warum Nistgelegenheiten, Eiablage und Nachwuchs medizinische und tierschützerische Folgen haben und Zucht keine harmlose Erweiterung der Haltung ist.</span>
+            <span>Warum Nistplätze, Eiablage und Nachwuchs Folgen für Gesundheit und Tierschutz haben und Zucht kein harmloses Hobby ist.</span>
           </a>
           <a class="topic-context-link" href="../../voegel/krankheit-erkennen/index.html">
             <strong>Krankheit bei Vögeln erkennen</strong>
