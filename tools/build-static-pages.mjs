@@ -3560,6 +3560,26 @@ function articleHeroCaption(image) {
   return caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : '';
 }
 
+// Bildzweck und Teilungsgrund für Kopfbilder von Seiten, deren HTML selbst die Quelle ist.
+const heroImageMetaFallback = {
+  'hitzefalle-auto': {
+    purpose: 'Hitzefalle Auto: Kopfbild zeigt, dass bei Hitzestress rechtzeitige tierärztliche Hilfe zählt.',
+    shareReason: 'Das Bild erinnert daran, dass bei Hitzestress jede Minute zählt und der Weg in die Tierarztpraxis nicht zu spät beginnen darf.',
+  },
+  'ernaehrung-taurin': {
+    purpose: 'Ernährung und Taurin: Kopfbild macht sichtbar, dass Katzen eigene Ernährungsbedürfnisse haben.',
+    shareReason: 'Das Bild soll vermitteln, dass Katzen keine kleinen Hunde sind und ihr Futter eigene Nährstoffe liefern muss.',
+  },
+  realhaltung: {
+    purpose: 'Realhaltung: Kopfbild setzt ein großzügiges Gehege als Gegenbild zur typischen Käfighaltung.',
+    shareReason: 'Das Bild soll zeigen, dass ein Tier Lebensraum braucht und nicht nur einen Platz im Zimmer.',
+  },
+  wildtierhaltung: {
+    purpose: 'Private Wildtierhaltung: Kopfbild zeigt ein Reptil als Beispiel für sehr anspruchsvolle Haltung.',
+    shareReason: 'Das Bild soll daran erinnern, dass Faszination für ein Wildtier keine artgerechte Haltung im Wohnzimmer ersetzt.',
+  },
+};
+
 function injectArticleHeroMedia(body, page) {
   const image = articleHeroImage(page);
   if (!image) return body;
@@ -3586,7 +3606,13 @@ function injectArticleHeroMedia(body, page) {
     return body.replace(/<div class="hero"[\s\S]*?<nav class="article-toc"/, `${hero}<nav class="article-toc"`);
   }
 
-  if (body.includes('<figure class="article-hero-media')) return body;
+  if (body.includes('<figure class="article-hero-media')) {
+    // Seiten ohne Quellabschnitt (staticOnly) tragen ihr Kopfbild im Seiten-HTML; Bildzweck und Teilungsgrund kommen hier dazu.
+    const meta = heroImageMetaFallback[page.id];
+    if (!meta) return body;
+    return body.replace(/<figure class="article-hero-media image-context-card"(?![^>]*data-image-purpose)([^>]*)>/, (_all, rest) =>
+      `<figure class="article-hero-media image-context-card"${rest} data-image-purpose="${escapeAttr(meta.purpose)}" data-share-reason="${escapeAttr(meta.shareReason)}">`);
+  }
 
   const heroContainerPattern = new RegExp(`(<section id="${page.id}" class="page(?: active)?">[\\s\\S]*?<div class="hero"[^>]*>\\s*<div class="container">)([\\s\\S]*?)(\\s*</div>\\s*</div>)`);
   const match = heroContainerPattern.exec(body);
