@@ -151,9 +151,9 @@
 - https://wahre-haustierliebe.de/kleintiere/hamster/index.html - Goldhamsterhaltung vor der Anschaffung realistisch prüfen.
 - https://wahre-haustierliebe.de/kleintiere/ratten/index.html - Rattenhaltung vom Tier aus denken und verantwortungsvoll planen.
 - https://wahre-haustierliebe.de/kleintiere/degus-chinchillas/index.html - Degus und Chinchillas als anspruchsvolle Kleintiere einordnen.
-- https://wahre-haustierliebe.de/exoten/reptilien/index.html - Reptilienhaltung realistisch prüfen.
-- https://wahre-haustierliebe.de/exoten/schildkroeten/index.html - Schildkrötenhaltung realistisch prüfen.
-- https://wahre-haustierliebe.de/exoten/fische/index.html - Fischhaltung und Aquarium realistisch prüfen.
+- https://wahre-haustierliebe.de/exoten/reptilien/index.html - Reptilienhaltung vom Tier aus prüfen.
+- https://wahre-haustierliebe.de/exoten/schildkroeten/index.html - Schildkrötenhaltung vom Tier aus prüfen.
+- https://wahre-haustierliebe.de/exoten/fische/index.html - Fischhaltung vom Tier aus prüfen.
 - https://wahre-haustierliebe.de/pferde/herde/index.html - Sozialkontakt und Herdenhaltung bei Pferden verstehen.
 - https://wahre-haustierliebe.de/pferde/platzbedarf/index.html - Fläche und Bewegung bei Pferdehaltung prüfen.
 - https://wahre-haustierliebe.de/pferde/haltungsformen/index.html - Pferdehaltungsformen vergleichen.
@@ -345,29 +345,34 @@ Sources:
 ### Exoten halten: Terrarium, Technik, UV-B und Verantwortung
 URL: https://wahre-haustierliebe.de/exoten/index.html
 Facts:
-- Exotenhaltung steht und fällt mit Temperatur, UV-B, Luftfeuchtigkeit, Futter und tierärztlicher Fachkunde.
-- Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.
-- Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden.
+- Exoten sind keine Tierart: Maße, Licht, Wärme und Futter hängen von Art und Größe ab.
+- Bartagame bis zu 10, manchmal über 15 Jahre; Goldfisch 20 bis 30 Jahre; Griechische Landschildkröte über 80 Jahre.
+- Die BMEL-Gutachten für Reptilien (1997) und Zierfische (1998) nennen Mindestanforderungen; beide werden derzeit überarbeitet.
 Important boundaries:
+- Mindestmaße allein machen eine Haltung nicht tiergerecht; sie sind die Untergrenze.
 - Auch eine rechtlich erlaubte Haltung kann die Bedürfnisse eines Tieres verfehlen.
-- Platz, Klima, Futter, Sozialkontakt und medizinische Versorgung müssen für die konkrete Art geprüft werden.
 Sources:
-- CITES Species+ Checklist: https://checklist.cites.org/
-- Tierärztliche Vereinigung für Tierschutz: https://www.tierschutz-tvt.de
-- Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
+- Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023): https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf
+- BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997): https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2
+- BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998): https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html
+- TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017): https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65
+- Schweizer Tierschutz STS: Merkblatt Goldfische (2011): https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true
+- BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025): https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html
 
 ### Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung
 URL: https://wahre-haustierliebe.de/pferde/index.html
 Facts:
-- Pferde brauchen Herde, Bewegung, Raufutter, Witterungsschutz und langfristig tragbare Kosten.
-- Reiten ersetzt keine pferdegerechte Haltung.
-- Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen.
+- Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.
+- Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.
+- Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.
 Important boundaries:
-- Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.
-- Ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.
+- Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.
+- Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.
 Sources:
-- FN: Tierschutz im Pferdesport: https://www.pferdesport-deutschland.de/ausbildung/pferdehaltung/tierschutz
-- Deutscher Tierschutzbund: https://www.tierschutzbund.de
+- BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009): https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile
+- go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023): https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/
+- RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026): https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd
+- Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum): https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/
 - Tierschutzgesetz § 2: https://www.gesetze-im-internet.de/tierschg/__2.html
 
 ### Hund auf Stadtfest, Rummel oder Weihnachtsmarkt - Wa(h)re Haustier(liebe)
@@ -575,6 +580,77 @@ Sources:
 - TVT-Merkblatt Nr. 153: Heimtiere – Chinchillas, Stand September 2012: https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_153_Heimtiere_Chinchillas__Sept._2012_.pdf&did=35
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
 - Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“: https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf
+
+### Reptilien halten - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/exoten/reptilien/index.html
+Facts:
+- Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.
+- Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.
+- UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht.
+Important boundaries:
+- Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.
+- Stromkosten und Preise hängen von Gerät und Tarif ab; hier steht nur der Rechenweg, kein Pauschalbetrag.
+Sources:
+- Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023): https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf
+- BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997): https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2
+- Tierarztpraxis Dr. Renate Lorenz: Metabolic Bone Disease bei Reptilien: https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/
+- BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025): https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html
+
+### Schildkröten halten - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/exoten/schildkroeten/index.html
+Facts:
+- Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.
+- Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.
+- Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts.
+Important boundaries:
+- Das TVT-Merkblatt beschreibt die Griechische Landschildkröte; Maurische Landschildkröten haben eigene Ansprüche.
+- Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest.
+Sources:
+- TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017): https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65
+- Bundesartenschutzverordnung § 7: https://www.gesetze-im-internet.de/bartschv_2005/__7.html
+- Landkreis Kronach: Merkblatt zum Artenschutz: https://www.landkreis-kronach.de/media/6955/merkblatt-zum-artenschutz.pdf
+- Auffangstation für Reptilien München e. V.: https://www.reptilienauffangstation.de
+
+### Fische halten - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/exoten/fische/index.html
+Facts:
+- Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.
+- Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.
+- Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.
+Important boundaries:
+- Das Zierfisch-Gutachten von 1998 wird überarbeitet; die Maße können sich ändern.
+- Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler.
+Sources:
+- BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998): https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html
+- BMEL: Artentabelle des Zierfisch-Gutachtens: https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html
+- Schweizer Tierschutz STS: Merkblatt Goldfische (2011): https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true
+- BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025): https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html
+
+### Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/pferde/kosten/index.html
+Facts:
+- 600 bis 950 Euro im Monat ergeben 7.200 bis 11.400 Euro im Jahr, 19,73 bis 31,23 Euro pro Tag und 180.000 bis 285.000 Euro in 25 Jahren.
+- Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr; die Zahl wird hier nach RidersDeal wiedergegeben.
+- Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten).
+Important boundaries:
+- Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.
+- Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal.
+Sources:
+- RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026): https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd
+- Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum): https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/
+- go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023): https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/
+
+### Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)
+URL: https://wahre-haustierliebe.de/pferde/entscheidung/index.html
+Facts:
+- Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.
+- Die Bedenkzeit von mindestens drei Nächten ist eine Empfehlung dieser Seite; ihre Wirkung ist für Pferde nicht untersucht.
+Important boundaries:
+- Eine Checkliste ersetzt keine Beratung durch eine Tierarztpraxis und keinen Stallbesuch.
+Sources:
+- BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009): https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile
+- go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023): https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/
+- RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026): https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd
 
 ### Kastration bei Haustieren: Tierschutz, Kosten und Mythen
 URL: https://wahre-haustierliebe.de/kastration/index.html

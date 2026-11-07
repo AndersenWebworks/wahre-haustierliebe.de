@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fische halten - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.">
+  <meta name="description" content="Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Exoten halten, Terrarium, UV-B, Reptilien, Meldepflicht">
   <meta property="og:title" content="Fische halten - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.">
+  <meta property="og:description" content="Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/exoten/fische/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/exoten-fische.png">
@@ -22,10 +22,10 @@
   <meta property="og:image:alt" content="Goldfische schwimmen zwischen Pflanzen in einem Aquarium.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-10-24">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fische halten - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.">
+  <meta name="twitter:description" content="Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/exoten-fische.png">
   <meta name="twitter:image:alt" content="Goldfische schwimmen zwischen Pflanzen in einem Aquarium.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/exoten/fische/index.html">
@@ -6813,7 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
 
-/* ===================================================================
+/* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
    Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
    ========================================================================== */
@@ -6910,6 +6910,46 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
 }
 @media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+=======
+/* ===== Paket pferde-exoten: Fünf Felder „vom Tier aus gedacht“, Wenn-dann-Karte, Wege ===== */
+.pex-felder-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0.4rem 0 1.4rem; }
+.pex-feld { margin: 0 0 1.6rem; padding: 1.1rem 1.3rem 1.2rem; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--ink); border-radius: 3px; }
+.pex-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.9rem; margin-bottom: 0.7rem; }
+.pex-feld-nr { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); }
+.pex-feld-kopf h3 { margin: 0 !important; }
+.pex-feld dl { margin: 0; }
+.pex-feld dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin: 0.9rem 0 0.25rem; }
+.pex-feld dt:first-child { margin-top: 0; }
+.pex-feld dd { margin: 0; }
+.pex-feld dd p { max-width: none; margin: 0 0 0.5rem; }
+.pex-mass { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 600; color: var(--ink); }
+.pex-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); }
+.pex-quelle { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); }
+.pex-feld .pex-frage { font-style: italic; color: var(--red-dark); }
+.pex-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); border-radius: 2px; padding: 0.1rem 0.5rem; margin: 0 0 0.6rem; }
+.pex-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-2); margin: -0.6rem 0 1.5rem; }
+.pex-mensch .zeitleiste-when { color: var(--green-dark); }
+.pex-bedenkzeit { margin: 1.2rem 0; padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.pex-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.pex-bedenkzeit p:last-child { margin-bottom: 0; }
+.pex-karte { margin: 1.4rem 0; padding: 1.1rem 1.3rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.pex-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.7rem; }
+.pex-karte ul { list-style: none; margin: 0; padding: 0; }
+.pex-karte li { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.55rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.pex-karte li:first-child { border-top: 0; }
+.pex-karte b { color: var(--red-dark); }
+.pex-karte-fuss { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.8rem 0 0; max-width: none; }
+.pex-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.pex-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.pex-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.3rem; }
+.pex-weg h3 { margin: 0 0 0.4rem !important; }
+.pex-weg p { margin: 0 0 0.5rem; max-width: none; }
+.pex-weg-noch-nicht { border-color: var(--ochre); }
+.pex-weg-noch-nicht .pex-weg-label { color: var(--ochre); }
+@media (max-width: 640px) {
+  .pex-feld { padding: 1rem 1rem 1.1rem; }
+  .pex-karte li { grid-template-columns: 1fr; }
+}
 
 
   </style>
@@ -6919,7 +6959,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   "@type": "WebPage",
   "name": "Fische halten - Wa(h)re Haustier(liebe)",
   "headline": "Fische halten - Wa(h)re Haustier(liebe)",
-  "description": "Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.",
+  "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
   "url": "https://wahre-haustierliebe.de/exoten/fische/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6937,7 +6977,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Goldfische schwimmen zwischen Pflanzen in einem Aquarium."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Exoten halten, Terrarium, UV-B, Reptilien, Meldepflicht",
   "about": [
@@ -6994,6 +7034,67 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Fische halten - Wa(h)re Haustier(liebe)",
       "item": "https://wahre-haustierliebe.de/exoten/fische/index.html"
     }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fische halten - Wa(h)re Haustier(liebe)",
+  "name": "Fische halten - Wa(h)re Haustier(liebe)",
+  "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
+  "url": "https://wahre-haustierliebe.de/exoten/fische/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/exoten/fische/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/exoten-fische.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Goldfische schwimmen zwischen Pflanzen in einem Aquarium."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-11-07",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Exoten halten, Terrarium, UV-B, Reptilien, Meldepflicht",
+  "articleSection": "Fischhaltung vom Tier aus prüfen.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Exoten halten"
+    },
+    {
+      "@type": "Thing",
+      "name": "Terrarium"
+    },
+    {
+      "@type": "Thing",
+      "name": "UV-B"
+    },
+    {
+      "@type": "Thing",
+      "name": "Reptilien"
+    },
+    {
+      "@type": "Thing",
+      "name": "Meldepflicht"
+    }
+  ],
+  "citation": [
+    "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html",
+    "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html",
+    "https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true",
+    "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
   ]
 }
   </script>
@@ -7258,7 +7359,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       <div class="container">
         <div class="article-hero-copy">
           <h1>Fische halten</h1>
-                  <p>Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.</p>
+                  <p>Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 48%;" data-image-purpose="Fische halten: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7272,17 +7373,129 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       <div class="container">
         <p class="text-muted"><a href="../../exoten/index.html">Zurück zur Übersicht: Exoten</a></p>
         <div class="topic-page-content">
-<h2>Fische</h2><div class="article-rhythm myth-truth" data-enhancement="exoten-goldfisch">
-            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas.“</h3><p>Das Glas ist ein Symbol für falsche Haustierbilder, nicht für einfache Haltung.</p></div>
-            <div class="truth"><span class="eyebrow">Fakt</span><h3>Filter, Volumen, Wasserwerte.</h3><p>Fische sind nicht pflegeleicht, nur weil sie leise sterben. Aquariumhaltung ist Biologie plus Technik.</p></div>
-          </div>
-        <p>Das Goldfischglas ist seit Jahren als tierschutzwidrig eingestuft. Trotzdem hält sich das Bild hartnäckig.</p>
-        <p><strong>Goldfische</strong> werden 20–30 cm groß und können 15 Jahre und älter werden. Sie brauchen mindestens 200 Liter (besser: Teichhaltung), einen leistungsstarken Filter und regelmäßige Wasserpflege. Ein Goldfisch im 10-Liter-Glas ist kein Haustier – es ist langsames Vergiften durch die eigenen Ausscheidungen.</p>
-        <p><strong>Tropische Süßwasserfische</strong> brauchen beheizte Aquarien mit stabiler Wasserchemie (pH, Härte, Temperatur). Die Einlaufphase eines Aquariums dauert 4–6 Wochen, bevor die ersten Fische eingesetzt werden dürfen. Wer am gleichen Tag Aquarium und Fische kauft, riskiert Massensterben.</p>
-        <p><strong>Kosten:</strong> Ein vollständig eingerichtetes 200-Liter-Aquarium (Becken, Filter, Heizung, Beleuchtung, Einrichtung) kostet 300–800 Euro. Laufende Kosten: 20–50 Euro/Monat (Strom, Futter, Wasseraufbereitung, Ersatzteile).</p>
-        <p><strong>Herkunft:</strong> Wildfang oder Nachzucht, Zoofachhandel oder Online-Angebot: Worauf du beim Kauf achten kannst, steht auf der Seite <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+<h2>Fische: Was Goldfische von dir brauchen</h2>
+        <p>Das Goldfischglas erfüllt die Mindestanforderungen des BMEL-Gutachtens nicht, und trotzdem hält sich das Bild hartnäckig. Die Felder unten zeigen als Beispiel den Goldfisch; für andere Arten nennt das <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a> Beckenmaße je Art in der <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html" target="_blank" rel="noopener noreferrer">Artentabelle des Zierfisch-Gutachtens</a>. Das Bundesministerium überarbeitet das Gutachten derzeit zusammen mit unabhängigen Experten (Meldung vom 15. Oktober 2025, <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html" target="_blank" rel="noopener noreferrer">BMLEH</a>); die Maße können sich ändern.</p>
+        <h3 id="fische-braucht">Was Goldfische von dir brauchen</h3>
+        <p class="pex-felder-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
 
-        <p>Exoten sind faszinierend, aber nichts für Impulskäufe. Bevor du dich entscheidest, lies auch die Seiten zu <a href="../../qualzucht/index.html">Qualzucht</a> (Albino-Zuchtformen, Qualzucht-Goldfische) und <a href="../../notfall/index.html">Notfällen</a>. Und bedenke: Bei Reptilien und Fischen heißt <a href="../../wissen/index.html">„anspruchslos“ meistens nur „stirbt leise“</a>.</p>
+        <section class="pex-feld" aria-labelledby="fische-f1">
+          <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 1</span><h3 id="fische-f1">Artgenossen</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="pex-mass">Im Allgemeinen mindestens fünf Fische einer geselligen Art, bei Schwarmfischen mindestens zehn. Goldfische nie allein.</p><p>Das Zierfisch-Gutachten ordnet jede Art einer Sozialform zu und nennt dafür Richtzahlen: Schwarmfische im Allgemeinen mindestens zehn Tiere, gesellige Arten mindestens fünf. Goldfische gelten in der Artentabelle als gesellig. Der Schweizer Tierschutz schreibt, Goldfische sollten als Schwarmfische nie allein gehalten werden.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a>, Abschnitt Sozialverhalten; <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html" target="_blank" rel="noopener noreferrer">Artentabelle des Zierfisch-Gutachtens</a>; <a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS, Merkblatt Goldfische (2011)</a>.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Fünf Fische sind fünfmal so viele Tiere wie ein einzelner. Das gilt für Platz, Wasserbelastung und Futter.</p></dd>
+            <dt>Frage an dich</dt>
+            <dd class="pex-frage">Hast du Platz und Wasservolumen für eine Gruppe, nicht nur für den einen Fisch, der dir gefällt?</dd>
+          </dl>
+        </section>
+        <section class="pex-feld" aria-labelledby="fische-f2">
+          <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 2</span><h3 id="fische-f2">Platz und Bewegung</h3><div class="article-rhythm myth-truth" data-enhancement="exoten-goldfisch">
+            <div class="myth"><span class="eyebrow">Mythos</span><h3>„Goldfische passen ins Glas.“</h3><p>Das Zierfisch-Gutachten des BMEL nennt für Goldfische mindestens 100 × 40 × 50 cm, also 200 Liter.</p></div>
+            <div class="truth"><span class="eyebrow">Fakt</span><h3>Filter, Volumen, Wasserwerte.</h3><p>Fische sind nicht pflegeleicht, nur weil sie leise sind. Aquariumhaltung ist Biologie plus Technik.</p></div>
+          </div></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="pex-mass">Für Goldfische mindestens 100 × 40 × 50 cm, das sind 200 Liter. Der Schweizer Tierschutz nennt mindestens 120 × 50 cm Grundfläche.</p><p>Das Gutachten nennt Mindestmaße für ausgewachsene Tiere und erklärt Haltungsbedingungen jenseits seiner Grenzen für nicht akzeptabel. Für die dauerhafte Haltung aller Zierfische gelten mindestens 60 Liter, 54 Liter sind die absolute Untergrenze. Goldfische werden bis 40 cm groß; sie leben am besten im Gartenteich, der so tief ist, dass er im Winter nicht ganz zufriert (etwa 100 cm). Das Goldfischglas, in dem sie keine Rückzugsmöglichkeit haben und Sauerstoff sowie Filterung mangelhaft sind, nennt der Schweizer Tierschutz tierschutzwidrig.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a>, Abschnitt Aquariengröße; <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html" target="_blank" rel="noopener noreferrer">Artentabelle des Zierfisch-Gutachtens</a>; <a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS, Merkblatt Goldfische (2011)</a>.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>200 Liter sind 20 Eimer zu je 10 Litern und wiegen als Wasser rund 200 kg. Ein 10-Liter-Glas fasst davon nur ein Zwanzigstel.</p><p class="pex-rechnung">Rechnung: 100 × 40 × 50 cm = 200.000 cm³ = 200 l; 200 ÷ 10 = 20; 10 ÷ 200 = 0,05.</p></dd>
+            <dt>Frage an dich</dt>
+            <dd class="pex-frage">Wo steht das Becken, und trägt der Untergrund 200 Kilogramm Wasser plus Becken und Einrichtung?</dd>
+          </dl>
+        </section>
+        <section class="pex-feld" aria-labelledby="fische-f3">
+          <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 3</span><h3 id="fische-f3">Futter</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="pex-mass">Mehrere kleine Portionen täglich, nur so viel, wie gefressen wird, bevor es zu Boden sinkt.</p><p>Goldfische sind Allesfresser und sehr gefräßig; der Schweizer Tierschutz rät, sie nicht zu überfüttern. Das Gutachten verlangt abwechslungsreiches Futter aus verschiedenen Sorten und stellt fest, dass Fische im Aquarium erfahrungsgemäß eher übermäßig gefüttert werden. In einem gut gepflegten Aquarium können Fische gelegentlich wenige Tage ohne Futter auskommen.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a>, Abschnitt Gesundheitsvorsorge und Ernährung; <a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS, Merkblatt Goldfische (2011)</a>, Abschnitt Nahrung.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Gut gepflegte Fische kommen gelegentlich wenige Tage ohne Futter aus. Zu viel Futter ist laut Gutachten der häufigere Fehler.</p></dd>
+            <dt>Frage an dich</dt>
+            <dd class="pex-frage">Wer füttert in kleinen Portionen, auch wenn du länger weg bist, ohne dass zu viel Futter ins Becken kommt?</dd>
+          </dl>
+        </section>
+        <section class="pex-feld" aria-labelledby="fische-f4">
+          <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 4</span><h3 id="fische-f4">Ruhe und Tagesrhythmus</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="pex-mass">Verstecke und Deckung, Beleuchtung mit Schaltuhr, eine Abdeckung gegen das Herausspringen.</p><p>Versteck- und Deckungsmöglichkeiten gehören laut Gutachten zur Mindestausstattung. Der Schweizer Tierschutz nennt für Goldfische Bodengrund, Verstecke, nicht zu dichte Bepflanzung, Beleuchtung mit Schaltuhr und Filter mit Pumpe; das Becken sollte mit einer Glasscheibe abgedeckt sein. Goldfische sind Kaltwasserfische; bei Raumtemperatur ist eine Heizung nicht nötig, solange das Becken keinen großen Temperaturschwankungen ausgesetzt ist.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a>, Abschnitt Aquarieneinrichtung; <a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS, Merkblatt Goldfische (2011)</a>, Abschnitt Lebensweise.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Eine Schaltuhr sorgt dafür, dass das Licht jeden Tag zur selben Zeit an- und ausgeht, auch wenn du nicht zu Hause bist.</p></dd>
+            <dt>Frage an dich</dt>
+            <dd class="pex-frage">Wo können sich die Fische zurückziehen, wenn im Raum Betrieb ist?</dd>
+          </dl>
+        </section>
+        <section class="pex-feld" aria-labelledby="fische-f5">
+          <div class="pex-feld-kopf"><span class="pex-feld-nr">Feld 5</span><h3 id="fische-f5">Gesundheit</h3></div>
+          <dl>
+            <dt>Das Maß</dt>
+            <dd><p class="pex-mass">Wohlbefinden möglichst täglich kontrollieren, Wasser mindestens alle 14 Tage messen, regelmäßig Teilwasserwechsel.</p><p>Nitrit, Nitrat und pH-Wert sollten mindestens alle 14 Tage kontrolliert werden. In einem gut gepflegten Aquarium überschreitet Nitrat normalerweise 100 Milligramm je Liter nicht; Nitrit ist in der Regel nicht nachweisbar und darf 1,0 Milligramm je Liter nur kurzfristig erreichen. Goldfische können 20 bis 30 Jahre alt werden. Der Schweizer Tierschutz rät, normale Goldfischformen zu bevorzugen und extreme Zuchtformen zu meiden; Näheres steht auf der Seite zur Qualzucht.</p><p class="pex-quelle">Quelle: <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a>, Abschnitte Schadstoffe sowie Gesundheitsvorsorge; <a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS, Merkblatt Goldfische (2011)</a>, Abschnitte Lebenserwartung und Wahl der richtigen Goldfische.</p></dd>
+            <dt>Zum Vorstellen</dt>
+            <dd><p>Alle 14 Tage messen sind 26 Messungen im Jahr, in 20 Jahren 520.</p><p class="pex-rechnung">Rechnung: 52 ÷ 2 = 26; 26 × 20 = 520.</p></dd>
+            <dt>Frage an dich</dt>
+            <dd class="pex-frage">Besitzt du Messmittel für Nitrit, Nitrat und pH-Wert, und planst du den Termin alle zwei Wochen fest ein?</dd>
+          </dl>
+        </section>
+
+        <p><strong>Tropische Süßwasserfische</strong> brauchen beheizte Aquarien mit stabiler Wasserchemie. Das Gutachten nennt für jede Art Bereiche für Temperatur, Härte und pH-Wert, die dauerhaft nicht über- oder unterschritten werden dürfen, und verlangt, dass Fische nicht plötzlichen Veränderungen der Wasserwerte ausgesetzt werden. Ein neues Becken braucht Zeit, bis sich die Werte eingependelt haben: Nitrit ist in einem gut gepflegten Aquarium in der Regel nicht nachweisbar, also miss, bevor die ersten Fische einziehen.</p>
+
+        <h3 id="fische-tag">Ein Tag aus Sicht einer Goldfischgruppe</h3>
+
+        <span class="pex-beispiel-tag">Beispiel, kein bestimmtes Tier</span>
+        <ol class="zeitleiste">
+          <li><span class="zeitleiste-when">Den ganzen Tag</span><p class="zeitleiste-what">Goldfische sind aktive, große Fische, die im Boden gründeln und dafür feinkörnigen Bodengrund brauchen. Goldfische sind sehr lernfähig und schneiden beim Lernen besser ab, wenn ein Artgenosse dabei ist.</p></li>
+          <li><span class="zeitleiste-when">Zwischendurch</span><p class="zeitleiste-what">Verstecke und Pflanzen bieten Rückzug. Im Goldfischglas fehlt er.</p></li>
+          <li class="pex-mensch"><span class="zeitleiste-when">Täglich: du</span><p class="zeitleiste-what">Wohlbefinden der Fische ansehen und in mehreren kleinen Portionen füttern.</p></li>
+          <li class="pex-mensch"><span class="zeitleiste-when">Alle 14 Tage: du</span><p class="zeitleiste-what">Nitrit, Nitrat und pH-Wert messen.</p></li>
+          <li class="pex-mensch"><span class="zeitleiste-when">Regelmäßig: du</span><p class="zeitleiste-what">Einen Teil des Wassers wechseln, weil Goldfische das Wasser stark verschmutzen.</p></li>
+        </ol>
+        <p class="pex-legende">Der Ablauf ist ein Beispiel aus dem <a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS, Merkblatt Goldfische (2011)</a> und dem <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL-Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a>. Wie eine bestimmte Gruppe ihren Tag verbringt, kann abweichen.</p>
+
+        <h3 id="fische-jahre">Wie lange, und was es kostet</h3>
+
+        <div class="faktenzeile">
+          <div><span class="zahl">20 bis 30 Jahre</span><span class="zahl-text">kann ein Goldfisch alt werden, bei guter Haltung</span></div>
+          <div><span class="zahl">7.300 bis 10.950 Tage</span><span class="zahl-text">Versorgung über diese Zeit (20 × 365 bis 30 × 365)</span></div>
+          <div><span class="zahl">26 Messungen</span><span class="zahl-text">der Wasserwerte pro Jahr bei einer Kontrolle alle 14 Tage</span></div>
+        </div>
+
+        <p>Einen pauschalen Betrag für Becken, Technik und laufende Kosten nennen wir nicht: Er hängt von Größe, Ausstattung und Strompreis ab, und eine belegte Zahl liegt uns nicht vor. Du kannst den Stromverbrauch selbst ausrechnen.</p>
+        <p>Stromverbrauch pro Monat in Kilowattstunden = Leistung in Watt × Stunden pro Tag × 30 ÷ 1.000. Beispiel mit einer angenommenen Beleuchtung von 20 Watt bei 10 Stunden am Tag: 20 × 10 × 30 ÷ 1.000 = 6 Kilowattstunden. Den Preis je Kilowattstunde setzt du aus deiner Rechnung ein. Dazu kommen Filter, bei tropischen Fischen die Heizung, Wasseraufbereitung, Messmittel und Futter.</p>
+
+        <h3 id="fische-bevor">Bevor du entscheidest</h3>
+
+
+        <div class="pex-bedenkzeit">
+          <p><strong>Eine Gruppe Goldfische muss nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für diese Tiere nicht untersucht. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+        </div>
+
+        <div class="pex-karte">
+          <span class="pex-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span><b>Wenn</b> es heißt „Ein Goldfisch passt auch ins kleine Glas“,</span><span><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“ Und ich rechne nach: mindestens 200 Liter.</span></li>
+            <li><span><b>Wenn</b> nur ein einzelner Fisch verkauft werden soll,</span><span><b>dann</b> nehme ich keinen mit. Goldfische dürfen nicht allein gehalten werden.</span></li>
+            <li><span><b>Wenn</b> Aquarium und Fische am selben Tag gekauft werden sollen,</span><span><b>dann</b> fahre ich ohne Fische heim und lasse das Becken zuerst laufen und messen.</span></li>
+            <li><span><b>Wenn</b> mir ein Tier leidtut,</span><span><b>dann</b> frage ich zuerst im Tierheim und bei Tierschutzvereinen nach, statt zu kaufen.</span></li>
+          </ul>
+          <p class="pex-karte-fuss">Schreib die Sätze vor dem Besuch ab. Worauf du beim Kauf achten kannst, steht auf <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+
+        <div class="pex-wege">
+          <div class="pex-weg">
+            <span class="pex-weg-label">Weg A</span>
+            <h3>Ich suche im Tierschutz</h3>
+            <p>Fische, die schon da sind und ein Zuhause suchen. Frag zuerst bei Tierheimen und Tierschutzvereinen vor Ort.</p>
+            <p><a href="../../adoption/index.html">Adoption statt Kauf</a><br><a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+          </div>
+          <div class="pex-weg pex-weg-noch-nicht">
+            <span class="pex-weg-label">Weg B, gleichwertig</span>
+            <h3>Noch nicht</h3>
+            <p>Wenn Platz, Wasservolumen oder Zeit für die Messungen fehlen, ist Warten eine gute Entscheidung.</p>
+            <p><a href="../../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a></p>
+          </div>
+        </div>
+        <p>Bevor du dich entscheidest, lies auch die Seiten zu <a href="../../qualzucht/index.html">Qualzucht</a> (Albino-Zuchtformen, Qualzucht-Goldfische) und zu <a href="../../notfall/index.html">Notfällen</a>.</p>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
@@ -7294,7 +7507,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
           <a class="topic-context-link" href="../../exoten/reptilien/index.html">
             <strong>Reptilien halten</strong>
-            <span>Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.</span>
+            <span>Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.</span>
           </a>
           <a class="topic-context-link" href="../../woher-kommt-mein-tier/index.html">
             <strong>Woher kommt mein Tier?</strong>
@@ -7302,13 +7515,32 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           </a>
           <a class="topic-context-link" href="../../exoten/schildkroeten/index.html">
             <strong>Schildkröten halten</strong>
-            <span>Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.</span>
+            <span>Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer.</span>
           </a>
           </div>
         </nav>
       </div>
     </div>
-  </section>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="exoten-fische">
+          <span class="eyebrow">Zum Vertiefen</span>
+          <h2>Fachquellen und wichtige Grenzen</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kurz festgehalten</h3>
+              <ul><li>Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.</li><li>Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.</li><li>Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Fachquellen</h3>
+              <ul><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html" target="_blank" rel="noopener noreferrer">BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html" target="_blank" rel="noopener noreferrer">BMEL: Artentabelle des Zierfisch-Gutachtens</a></li><li><a href="https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS: Merkblatt Goldfische (2011)</a></li><li><a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html" target="_blank" rel="noopener noreferrer">BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Grenzen der Einordnung</h3>
+              <ul><li>Das Zierfisch-Gutachten von 1998 wird überarbeitet; die Maße können sich ändern.</li><li>Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler.</li></ul>
+            </article>
+          </div>
+        </div>
+</section>
   </main>
 
 <!-- ===== FOOTER ===== -->

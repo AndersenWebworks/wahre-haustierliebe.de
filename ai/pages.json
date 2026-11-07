@@ -606,7 +606,7 @@
       "id": "exoten",
       "url": "https://wahre-haustierliebe.de/exoten/index.html",
       "title": "Exoten halten: Terrarium, Technik, UV-B und Verantwortung",
-      "description": "Exotenhaltung ehrlich erklärt: Licht, Temperatur, Feuchtigkeit, Futter, Meldepflichten, Tierarztzugang und warum Faszination nicht reicht.",
+      "description": "Exoten vom Tier aus gedacht: Wie lange Bartagame, Goldfisch und Landschildkröte leben, was sie brauchen und warum Faszination allein nicht reicht.",
       "intent": "Exotische Haustiere und Terrarientiere prüfen",
       "keywords": [
         "Exoten halten",
@@ -616,26 +616,38 @@
         "Meldepflicht"
       ],
       "facts": [
-        "Exotenhaltung steht und fällt mit Temperatur, UV-B, Luftfeuchtigkeit, Futter und tierärztlicher Fachkunde.",
-        "Leise Tiere zeigen Fehler oft spät; scheinbare Anspruchslosigkeit ist kein Wohlbefinden.",
-        "Artenschutz, Meldepflichten und Herkunftsnachweise müssen vor dem Kauf geprüft werden."
+        "Exoten sind keine Tierart: Maße, Licht, Wärme und Futter hängen von Art und Größe ab.",
+        "Bartagame bis zu 10, manchmal über 15 Jahre; Goldfisch 20 bis 30 Jahre; Griechische Landschildkröte über 80 Jahre.",
+        "Die BMEL-Gutachten für Reptilien (1997) und Zierfische (1998) nennen Mindestanforderungen; beide werden derzeit überarbeitet."
       ],
       "citationGuardrails": [
-        "Auch eine rechtlich erlaubte Haltung kann die Bedürfnisse eines Tieres verfehlen.",
-        "Platz, Klima, Futter, Sozialkontakt und medizinische Versorgung müssen für die konkrete Art geprüft werden."
+        "Mindestmaße allein machen eine Haltung nicht tiergerecht; sie sind die Untergrenze.",
+        "Auch eine rechtlich erlaubte Haltung kann die Bedürfnisse eines Tieres verfehlen."
       ],
       "sources": [
         {
-          "label": "CITES Species+ Checklist",
-          "url": "https://checklist.cites.org/"
+          "label": "Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf"
         },
         {
-          "label": "Tierärztliche Vereinigung für Tierschutz",
-          "url": "https://www.tierschutz-tvt.de"
+          "label": "BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)",
+          "url": "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2"
         },
         {
-          "label": "Tierschutzgesetz § 2",
-          "url": "https://www.gesetze-im-internet.de/tierschg/__2.html"
+          "label": "BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html"
+        },
+        {
+          "label": "TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017)",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65"
+        },
+        {
+          "label": "Schweizer Tierschutz STS: Merkblatt Goldfische (2011)",
+          "url": "https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true"
+        },
+        {
+          "label": "BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
         }
       ],
       "social": {
@@ -651,7 +663,7 @@
       "id": "pferde",
       "url": "https://wahre-haustierliebe.de/pferde/index.html",
       "title": "Pferde halten: Herde, Bewegung, Kosten und langfristige Verantwortung",
-      "description": "Pferdehaltung realistisch prüfen: Herdenkontakt, tägliche Bewegung, Stallformen, Kosten, Tierarzt, Hufschmied und jahrzehntelange Verantwortung.",
+      "description": "Was ein Pferd braucht: fünf Felder mit Maßen aus den BMEL-Leitlinien, ein Tag aus Sicht des Pferdes, Kosten pro Tag und Fragen vor der Entscheidung.",
       "intent": "Pferdehaltung und Pferdekauf realistisch prüfen",
       "keywords": [
         "Pferde halten",
@@ -661,22 +673,30 @@
         "Pferdekosten"
       ],
       "facts": [
-        "Pferde brauchen Herde, Bewegung, Raufutter, Witterungsschutz und langfristig tragbare Kosten.",
-        "Reiten ersetzt keine pferdegerechte Haltung.",
-        "Anbindehaltung und isolierte Einzelhaltung widersprechen den sozialen Grundbedürfnissen."
+        "Ein einzelnes Pferd ohne Artgenossen widerspricht nach den BMEL-Leitlinien dem natürlichen Sozialverhalten.",
+        "Pferde bewegen sich unter natürlichen Bedingungen im Sozialverband bis zu 16 Stunden täglich; kontrollierte Bewegung ersetzt freie Bewegung nicht vollständig.",
+        "Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle."
       ],
       "citationGuardrails": [
-        "Der Kaufpreis ist nur der kleinste Teil; entscheidend sind laufende Kosten und Notfallrücklagen.",
-        "Ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht."
+        "Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.",
+        "Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht."
       ],
       "sources": [
         {
-          "label": "FN: Tierschutz im Pferdesport",
-          "url": "https://www.pferdesport-deutschland.de/ausbildung/pferdehaltung/tierschutz"
+          "label": "BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)",
+          "url": "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile"
         },
         {
-          "label": "Deutscher Tierschutzbund",
-          "url": "https://www.tierschutzbund.de"
+          "label": "go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)",
+          "url": "https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/"
+        },
+        {
+          "label": "RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)",
+          "url": "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd"
+        },
+        {
+          "label": "Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)",
+          "url": "https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/"
         },
         {
           "label": "Tierschutzgesetz § 2",
@@ -2019,8 +2039,8 @@
       "id": "exoten-reptilien",
       "url": "https://wahre-haustierliebe.de/exoten/reptilien/index.html",
       "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.",
-      "intent": "Reptilienhaltung realistisch prüfen.",
+      "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.",
+      "intent": "Reptilienhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
         "Terrarium",
@@ -2028,12 +2048,36 @@
         "Reptilien",
         "Meldepflicht"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Die Maße und Werte gelten für die Streifenköpfige Bartagame, die am häufigsten gehaltene Echse; andere Arten brauchen andere Werte.",
+        "Grundfläche 4 × 5 Kopf-Rumpf-Längen, Höhe mindestens 3 Kopf-Rumpf-Längen; die TVT nennt mindestens 150 × 80 × 80 cm.",
+        "UV-A und UV-B sind obligatorisch; UV-B-Leuchtmittel werden nach etwa 6 Monaten getauscht."
+      ],
+      "citationGuardrails": [
+        "Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.",
+        "Stromkosten und Preise hängen von Gerät und Tarif ab; hier steht nur der Rechenweg, kein Pauschalbetrag."
+      ],
+      "sources": [
+        {
+          "label": "Deutscher Tierschutzbund: Steckbrief Bartagame (Stand 07/2023)",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Steckbriefe_Infos/Steckbrief_Bartagame_DTSchB.pdf"
+        },
+        {
+          "label": "BMEL: Gutachten Mindestanforderungen an die Haltung von Reptilien (1997)",
+          "url": "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungReptilien.pdf?__blob=publicationFile&v=2"
+        },
+        {
+          "label": "Tierarztpraxis Dr. Renate Lorenz: Metabolic Bone Disease bei Reptilien",
+          "url": "https://tierarzt-lichterfelde.webnode.page/wissenswertes/reptilien/metabolic-bone-disease/"
+        },
+        {
+          "label": "BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
+        }
+      ],
       "social": {
         "title": "Reptilien halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Reptilien präzise Technik, UV-B, Temperaturzonen und Fachwissen brauchen.",
+        "description": "Was eine Bartagame braucht: Maße, UV-B, Futter, Ruhe und Gesundheit nach Tierschutzbund und BMEL-Gutachten, dazu Lebensdauer.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-reptilien.png",
         "imageAlt": "Bartagame ruht auf einem Ast im beleuchteten Terrarium.",
         "imageWidth": 1200,
@@ -2044,8 +2088,8 @@
       "id": "exoten-schildkroeten",
       "url": "https://wahre-haustierliebe.de/exoten/schildkroeten/index.html",
       "title": "Schildkröten halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.",
-      "intent": "Schildkrötenhaltung realistisch prüfen.",
+      "description": "Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer.",
+      "intent": "Schildkrötenhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
         "Terrarium",
@@ -2053,12 +2097,36 @@
         "Reptilien",
         "Meldepflicht"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Erwachsene Griechische Landschildkröten können zwischen 20 und 30 cm groß und über 80 Jahre alt werden.",
+        "Freianlage von etwa 25 × 10 Panzerlängen (20 cm Panzer: etwa 10 m²); Wohnungshaltung mit oder ohne Terrarium ist nicht tiergerecht.",
+        "Winterruhe bei 2 bis höchstens 6 °C; Gewichtsverlust höchstens 5 Prozent des Körpergewichts."
+      ],
+      "citationGuardrails": [
+        "Das TVT-Merkblatt beschreibt die Griechische Landschildkröte; Maurische Landschildkröten haben eigene Ansprüche.",
+        "Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest."
+      ],
+      "sources": [
+        {
+          "label": "TVT-Merkblatt Nr. 177: Heimtiere, Griechische Landschildkröten (Stand Januar 2017)",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_177_Heimtiere_Griechische_Landschildkr%C3%B6ten__2017_.pdf&did=65"
+        },
+        {
+          "label": "Bundesartenschutzverordnung § 7",
+          "url": "https://www.gesetze-im-internet.de/bartschv_2005/__7.html"
+        },
+        {
+          "label": "Landkreis Kronach: Merkblatt zum Artenschutz",
+          "url": "https://www.landkreis-kronach.de/media/6955/merkblatt-zum-artenschutz.pdf"
+        },
+        {
+          "label": "Auffangstation für Reptilien München e. V.",
+          "url": "https://www.reptilienauffangstation.de"
+        }
+      ],
       "social": {
         "title": "Schildkröten halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Landschildkröten keine Wohnungstiere sind und eine Verantwortung über Jahrzehnte bedeuten.",
+        "description": "Was eine Landschildkröte braucht: Freianlage, Winterruhe, Futter und Gesundheit nach TVT-Merkblatt, dazu über 80 Jahre Lebensdauer.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-schildkroeten.png",
         "imageAlt": "Reptil sitzt auf einem Stein in seinem Gehege.",
         "imageWidth": 1200,
@@ -2069,8 +2137,8 @@
       "id": "exoten-fische",
       "url": "https://wahre-haustierliebe.de/exoten/fische/index.html",
       "title": "Fische halten - Wa(h)re Haustier(liebe)",
-      "description": "Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.",
-      "intent": "Fischhaltung und Aquarium realistisch prüfen.",
+      "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
+      "intent": "Fischhaltung vom Tier aus prüfen.",
       "keywords": [
         "Exoten halten",
         "Terrarium",
@@ -2078,12 +2146,36 @@
         "Reptilien",
         "Meldepflicht"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Für Goldfische nennt die Artentabelle des Zierfisch-Gutachtens eine Beckenlänge von 100 cm (100 × 40 × 50 cm, 200 Liter) und die Sozialform „gesellig“.",
+        "Die Regelwerte des Gutachtens: mindestens 60 Liter für die dauerhafte Haltung, Nitrit, Nitrat und pH-Wert mindestens alle 14 Tage messen.",
+        "Goldfische können 20 bis 30 Jahre alt werden und bis 40 cm groß."
+      ],
+      "citationGuardrails": [
+        "Das Zierfisch-Gutachten von 1998 wird überarbeitet; die Maße können sich ändern.",
+        "Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler."
+      ],
+      "sources": [
+        {
+          "label": "BMEL: Gutachten Mindestanforderungen an die Haltung von Zierfischen, Süßwasser (1998)",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische.html"
+        },
+        {
+          "label": "BMEL: Artentabelle des Zierfisch-Gutachtens",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltung-zierfische-tabelle.html"
+        },
+        {
+          "label": "Schweizer Tierschutz STS: Merkblatt Goldfische (2011)",
+          "url": "https://www.fischeundreptilien.ch/_files/ugd/4b21fb_2913266aa1d34d62b6a9c7501213f852.pdf?index=true"
+        },
+        {
+          "label": "BMLEH: Gutachten für Zierfische und Reptilien werden überarbeitet (15. Oktober 2025)",
+          "url": "https://www.bmleh.de/DE/themen/tiere/tierschutz/haltungsgutachten-ueberarbeitung.html"
+        }
+      ],
       "social": {
         "title": "Fische halten - Wa(h)re Haustier(liebe)",
-        "description": "Warum Aquarien stabile Wasserwerte, Einlaufzeit, Technik und echte Pflege brauchen.",
+        "description": "Was Goldfische brauchen: Beckenmaß, Gruppe, Futter, Wasserwerte und Lebensdauer nach BMEL-Zierfischgutachten und Schweizer Tierschutz.",
         "image": "https://wahre-haustierliebe.de/assets/social/exoten-fische.png",
         "imageAlt": "Goldfische schwimmen zwischen Pflanzen in einem Aquarium.",
         "imageWidth": 1200,
@@ -2169,7 +2261,7 @@
       "id": "pferde-kosten",
       "url": "https://wahre-haustierliebe.de/pferde/kosten/index.html",
       "title": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
-      "description": "Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.",
+      "description": "Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.",
       "intent": "Pferdekosten realistisch einschätzen.",
       "keywords": [
         "Pferde halten",
@@ -2178,12 +2270,32 @@
         "Hufschmied",
         "Pferdekosten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "600 bis 950 Euro im Monat ergeben 7.200 bis 11.400 Euro im Jahr, 19,73 bis 31,23 Euro pro Tag und 180.000 bis 285.000 Euro in 25 Jahren.",
+        "Die CAVALLO-Leserbefragung 2025 nennt im Schnitt 9.897 Euro pro Jahr; die Zahl wird hier nach RidersDeal wiedergegeben.",
+        "Notfalloperation ohne Versicherung: bis zu 6.000 Euro, bei schwerer Kolik mit Nachsorge bis zu 20.000 Euro (zwei Ratgeberseiten)."
+      ],
+      "citationGuardrails": [
+        "Hochrechnung: Die 25 Jahre sind ein Rechenbeispiel auf Grundlage der durchschnittlichen Lebenserwartung, kein Versprechen.",
+        "Die Befragung selbst konnte nicht abgerufen werden; die Angabe stützt sich auf die Wiedergabe durch RidersDeal."
+      ],
+      "sources": [
+        {
+          "label": "RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)",
+          "url": "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd"
+        },
+        {
+          "label": "Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)",
+          "url": "https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/"
+        },
+        {
+          "label": "go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)",
+          "url": "https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/"
+        }
+      ],
       "social": {
         "title": "Was ein Pferd wirklich kostet - Wa(h)re Haustier(liebe)",
-        "description": "Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.",
+        "description": "Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-kosten.png",
         "imageAlt": "Pferdeherde grast auf einer weiten Weide.",
         "imageWidth": 1200,
@@ -2219,7 +2331,7 @@
       "id": "pferde-entscheidung",
       "url": "https://wahre-haustierliebe.de/pferde/entscheidung/index.html",
       "title": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
-      "description": "Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.",
+      "description": "Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.",
       "intent": "Entscheidung vor dem eigenen Pferd prüfen.",
       "keywords": [
         "Pferde halten",
@@ -2228,12 +2340,30 @@
         "Hufschmied",
         "Pferdekosten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.",
+        "Die Bedenkzeit von mindestens drei Nächten ist eine Empfehlung dieser Seite; ihre Wirkung ist für Pferde nicht untersucht."
+      ],
+      "citationGuardrails": [
+        "Eine Checkliste ersetzt keine Beratung durch eine Tierarztpraxis und keinen Stallbesuch."
+      ],
+      "sources": [
+        {
+          "label": "BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)",
+          "url": "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile"
+        },
+        {
+          "label": "go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)",
+          "url": "https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/"
+        },
+        {
+          "label": "RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)",
+          "url": "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd"
+        }
+      ],
       "social": {
         "title": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
-        "description": "Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.",
+        "description": "Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.",
         "image": "https://wahre-haustierliebe.de/assets/social/pferde-entscheidung.png",
         "imageAlt": "Pferde stehen als Gruppe auf einer großen Weide.",
         "imageWidth": 1200,

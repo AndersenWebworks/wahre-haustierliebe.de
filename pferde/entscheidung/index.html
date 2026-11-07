@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)</title>
-  <meta name="description" content="Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.">
+  <meta name="description" content="Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.">
   <meta name="author" content="Jan-Erik Andersen und Annemarie Andersen">
   <meta name="application-name" content="Wa(h)re Haustier(liebe)">
   <meta name="theme-color" content="#f7efe3">
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="keywords" content="Pferde halten, Herde, Stallform, Hufschmied, Pferdekosten">
   <meta property="og:title" content="Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)">
-  <meta property="og:description" content="Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.">
+  <meta property="og:description" content="Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://wahre-haustierliebe.de/pferde/entscheidung/index.html">
   <meta property="og:image" content="https://wahre-haustierliebe.de/assets/social/pferde-entscheidung.png">
@@ -22,10 +22,10 @@
   <meta property="og:image:alt" content="Pferde stehen als Gruppe auf einer großen Weide.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-08-25">
+  <meta property="og:updated_time" content="2026-11-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)">
-  <meta name="twitter:description" content="Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.">
+  <meta name="twitter:description" content="Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.">
   <meta name="twitter:image" content="https://wahre-haustierliebe.de/assets/social/pferde-entscheidung.png">
   <meta name="twitter:image:alt" content="Pferde stehen als Gruppe auf einer großen Weide.">
   <link rel="canonical" href="https://wahre-haustierliebe.de/pferde/entscheidung/index.html">
@@ -6813,7 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
 
-/* ===================================================================
+/* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
    Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
    ========================================================================== */
@@ -6910,6 +6910,46 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
 }
 @media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+=======
+/* ===== Paket pferde-exoten: Fünf Felder „vom Tier aus gedacht“, Wenn-dann-Karte, Wege ===== */
+.pex-felder-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0.4rem 0 1.4rem; }
+.pex-feld { margin: 0 0 1.6rem; padding: 1.1rem 1.3rem 1.2rem; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--ink); border-radius: 3px; }
+.pex-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.9rem; margin-bottom: 0.7rem; }
+.pex-feld-nr { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); }
+.pex-feld-kopf h3 { margin: 0 !important; }
+.pex-feld dl { margin: 0; }
+.pex-feld dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin: 0.9rem 0 0.25rem; }
+.pex-feld dt:first-child { margin-top: 0; }
+.pex-feld dd { margin: 0; }
+.pex-feld dd p { max-width: none; margin: 0 0 0.5rem; }
+.pex-mass { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 600; color: var(--ink); }
+.pex-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); }
+.pex-quelle { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); }
+.pex-feld .pex-frage { font-style: italic; color: var(--red-dark); }
+.pex-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); border-radius: 2px; padding: 0.1rem 0.5rem; margin: 0 0 0.6rem; }
+.pex-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-2); margin: -0.6rem 0 1.5rem; }
+.pex-mensch .zeitleiste-when { color: var(--green-dark); }
+.pex-bedenkzeit { margin: 1.2rem 0; padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.pex-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.pex-bedenkzeit p:last-child { margin-bottom: 0; }
+.pex-karte { margin: 1.4rem 0; padding: 1.1rem 1.3rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.pex-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.7rem; }
+.pex-karte ul { list-style: none; margin: 0; padding: 0; }
+.pex-karte li { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.55rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.pex-karte li:first-child { border-top: 0; }
+.pex-karte b { color: var(--red-dark); }
+.pex-karte-fuss { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.8rem 0 0; max-width: none; }
+.pex-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.pex-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.pex-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.3rem; }
+.pex-weg h3 { margin: 0 0 0.4rem !important; }
+.pex-weg p { margin: 0 0 0.5rem; max-width: none; }
+.pex-weg-noch-nicht { border-color: var(--ochre); }
+.pex-weg-noch-nicht .pex-weg-label { color: var(--ochre); }
+@media (max-width: 640px) {
+  .pex-feld { padding: 1rem 1rem 1.1rem; }
+  .pex-karte li { grid-template-columns: 1fr; }
+}
 
 
   </style>
@@ -6919,7 +6959,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   "@type": "WebPage",
   "name": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
   "headline": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
-  "description": "Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.",
+  "description": "Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.",
   "url": "https://wahre-haustierliebe.de/pferde/entscheidung/index.html",
   "image": {
     "@type": "ImageObject",
@@ -6937,7 +6977,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
     "caption": "Pferde stehen als Gruppe auf einer großen Weide."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-07",
   "isAccessibleForFree": true,
   "keywords": "Pferde halten, Herde, Stallform, Hufschmied, Pferdekosten",
   "about": [
@@ -6994,6 +7034,66 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       "name": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
       "item": "https://wahre-haustierliebe.de/pferde/entscheidung/index.html"
     }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
+  "name": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
+  "description": "Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.",
+  "url": "https://wahre-haustierliebe.de/pferde/entscheidung/index.html",
+  "mainEntityOfPage": "https://wahre-haustierliebe.de/pferde/entscheidung/index.html",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://wahre-haustierliebe.de/assets/social/pferde-entscheidung.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "Pferde stehen als Gruppe auf einer großen Weide."
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Annemarie Andersen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan-Erik Andersen"
+    }
+  ],
+  "dateModified": "2026-11-07",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "keywords": "Pferde halten, Herde, Stallform, Hufschmied, Pferdekosten",
+  "articleSection": "Entscheidung vor dem eigenen Pferd prüfen.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Pferde halten"
+    },
+    {
+      "@type": "Thing",
+      "name": "Herde"
+    },
+    {
+      "@type": "Thing",
+      "name": "Stallform"
+    },
+    {
+      "@type": "Thing",
+      "name": "Hufschmied"
+    },
+    {
+      "@type": "Thing",
+      "name": "Pferdekosten"
+    }
+  ],
+  "citation": [
+    "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile",
+    "https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/",
+    "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd"
   ]
 }
   </script>
@@ -7258,7 +7358,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
       <div class="container">
         <div class="article-hero-copy">
           <h1>Bevor ein Pferd einzieht</h1>
-                  <p>Die wichtigsten Fragen zu Jahrzehnten Verantwortung, Budget, Stall, Alltag und Versorgung.</p>
+                  <p>Kosten über 25 Jahre, Bedenkzeit, Checkliste und Wenn-dann-Karte vor dem eigenen Pferd.</p>
         </div>
 
         <figure class="article-hero-media image-context-card" style="--image-position:center 50%;" data-image-purpose="Bevor ein Pferd einzieht: Headerbild zur sichtbaren Einordnung des Seitenthemas." data-share-reason="Das Bild macht das Thema greifbar, ohne die fachliche Aussage durch Dekoration zu ersetzen.">
@@ -7273,14 +7373,58 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <p class="text-muted"><a href="../../pferde/index.html">Zurück zur Übersicht: Pferde</a></p>
         <div class="topic-page-content">
 <h2>Bevor du dich entscheidest</h2>
+        <p>Rechne zuerst über die Jahre, dann erst über den Kaufpreis.</p>
+
+        <div class="faktenzeile">
+          <div><span class="zahl">20 bis 31 €</span><span class="zahl-text">pro Tag laufende Kosten bei Standardhaltung</span></div>
+          <div><span class="zahl">180.000 bis 285.000 €</span><span class="zahl-text">in 25 Jahren, ohne Notfälle</span></div>
+          <div><span class="zahl">9.000 bis 13.000 €</span><span class="zahl-text">einmalig für Pferd und Erstausstattung</span></div>
+        </div>
+        <p class="randnotiz">Herleitung und Quellen stehen auf <a href="../../pferde/kosten/index.html">Was ein Pferd über die Jahre kostet</a>.</p>
+
+        <div class="pex-bedenkzeit">
+          <p><strong>Ein Pferd muss nicht heute einziehen.</strong></p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst das Tier oder die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite; ob eine Bedenkzeit die spätere Haltung verbessert, ist für diese Tiere nicht untersucht. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab. Eine Reitbeteiligung über mehrere Monate ist der gründlichste Test, den du machen kannst.</p>
+        </div>
+        <h3>Checkliste</h3>
         <ul class="checklist">
-          <li>Ich bin bereit, 25 Jahre und länger Verantwortung zu tragen.</li>
-          <li>Ich kann die laufenden Kosten von etwa 340–920 Euro pro Monat tragen und habe Rücklagen für Notfälle.</li>
-          <li>Mein Pferd hat mindestens einen Artgenossen.</li>
-          <li>Ich kann das Pferd täglich versorgen – 365 Tage im Jahr, auch bei Krankheit, Urlaub und schlechtem Wetter.</li>
-          <li>Der Stall oder die Koppel bietet genug Platz für artgerechte Haltung.</li>
-          <li>Ich habe einen Hufschmied und einen Tierarzt in erreichbarer Nähe.</li>
+          <li>Ich bin bereit, 25 Jahre und länger Verantwortung zu tragen. Hauspferde werden durchschnittlich 25 bis 30 Jahre alt.</li>
+          <li>Ich kann etwa 20 bis 31 Euro pro Tag tragen (600 bis 950 Euro im Monat) und habe eine Rücklage für Notfälle, mindestens in Höhe einer Operation (bis zu 6.000 Euro).</li>
+          <li>Mein Pferd hat mindestens einen Artgenossen und in jedem Fall Sicht-, Hör- und Geruchskontakt zu ihm.</li>
+          <li>Ich kann das Pferd täglich versorgen und prüfen – 365 Tage im Jahr, auch bei Krankheit, Urlaub und schlechtem Wetter.</li>
+          <li>Der Stall oder die Koppel bietet Auslauf (150 m² für bis zu zwei Pferde, 40 m² für jedes weitere), Witterungsschutz für alle Tiere zugleich und eine trockene Liegefläche, auf der alle gleichzeitig liegen können.</li>
+          <li>Ich habe einen Hufschmied (alle 6 bis 8 Wochen) und eine Tierarztpraxis in erreichbarer Nähe.</li>
+          <li>Ich habe vorher mehrere Monate als <a href="../../pferde/reitbeteiligung/index.html">Reitbeteiligung</a> erlebt, wie der Alltag mit einem Pferd aussieht.</li>
         </ul>
+        <p>Kannst du einen Punkt nicht abhaken, ist das kein Verbot, sondern ein Grund, zu warten oder zuerst zu klären. Nicht abhaken heißt: noch nicht. Dafür gibt es einen eigenen Weg unter <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a>.</p>
+
+        <div class="pex-karte">
+          <span class="pex-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
+          <ul>
+            <li><span><b>Wenn</b> es heißt „Das Pferd ist morgen weg, es gibt andere Interessenten“,</span><span><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span><b>Wenn</b> ich das Pferd nicht dort sehen darf, wo es lebt,</span><span><b>dann</b> fahre ich ohne Pferd wieder heim.</span></li>
+            <li><span><b>Wenn</b> das Pferd allein ohne Artgenossen stehen soll,</span><span><b>dann</b> nehme ich keins mit.</span></li>
+            <li><span><b>Wenn</b> es keine tierärztliche Ankaufsuntersuchung geben soll,</span><span><b>dann</b> bestehe ich darauf oder sage ab (sie kostet laut RidersDeal etwa 300 bis 1.200 Euro).</span></li>
+            <li><span><b>Wenn</b> mir ein Pferd leidtut,</span><span><b>dann</b> rufe ich zuerst einen Tierschutzverein an und frage dort, statt zu kaufen.</span></li>
+          </ul>
+          <p class="pex-karte-fuss">Schreib die Sätze vor dem Besuch ab oder mach einen Screenshot. So musst du im Moment selbst nicht überlegen. Warum ein Kauf aus Mitleid selten hilft, steht auf <a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+        </div>
+        <p>Die Reihenfolge, die wir empfehlen: erst Tierschutzvereine und Auffangstellen, danach alles andere.</p>
+
+        <div class="pex-wege">
+          <div class="pex-weg">
+            <span class="pex-weg-label">Weg A</span>
+            <h3>Ich suche im Tierschutz</h3>
+            <p>Zuerst bei Tierschutzvereinen und Auffangstellen fragen, ob Pferde ein Zuhause suchen. Danach erst alles andere.</p>
+            <p><a href="../../adoption/index.html">Adoption statt Kauf</a><br><a href="../../woher-kommt-mein-tier/index.html">Woher kommt mein Tier?</a></p>
+          </div>
+          <div class="pex-weg pex-weg-noch-nicht">
+            <span class="pex-weg-label">Weg B, gleichwertig</span>
+            <h3>Noch nicht</h3>
+            <p>Wenn Zeit, Geld oder Stall gerade fehlen, ist Warten eine gute Entscheidung. Eine Reitbeteiligung bringt dich dem Pferdealltag näher, ohne dass du dich festlegst.</p>
+            <p><a href="../../noch-nicht-bereit/index.html">Noch nicht bereit für ein Tier</a><br><a href="../../pferde/reitbeteiligung/index.html">Reitbeteiligung als Einstieg</a></p>
+          </div>
+        </div>
         </div>
 
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen in diesem Bereich">
@@ -7304,7 +7448,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           </a>
           <a class="topic-context-link" href="../../pferde/kosten/index.html">
             <strong>Was ein Pferd wirklich kostet</strong>
-            <span>Warum Pferdehaltung monatlich und langfristig gerechnet werden muss, nicht nur beim Kauf.</span>
+            <span>Rund 20 bis 31 Euro pro Tag: Was ein Pferd über die Jahre kostet, mit Rechenweg, Quellen und Stand.</span>
           </a>
           <a class="topic-context-link" href="../../pferde/reitbeteiligung/index.html">
             <strong>Reitbeteiligung als ehrlicher Einstieg</strong>
@@ -7314,7 +7458,26 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         </nav>
       </div>
     </div>
-  </section>
+
+        <div class="article-rhythm evidence-block" data-evidence-block="pferde-entscheidung">
+          <span class="eyebrow">Zum Vertiefen</span>
+          <h2>Fachquellen und wichtige Grenzen</h2>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Kurz festgehalten</h3>
+              <ul><li>Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.</li><li>Die Bedenkzeit von mindestens drei Nächten ist eine Empfehlung dieser Seite; ihre Wirkung ist für Pferde nicht untersucht.</li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Fachquellen</h3>
+              <ul><li><a href="https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)</a></li><li><a href="https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/" target="_blank" rel="noopener noreferrer">go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)</a></li><li><a href="https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd" target="_blank" rel="noopener noreferrer">RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)</a></li></ul>
+            </article>
+            <article class="evidence-card">
+              <h3>Grenzen der Einordnung</h3>
+              <ul><li>Eine Checkliste ersetzt keine Beratung durch eine Tierarztpraxis und keinen Stallbesuch.</li></ul>
+            </article>
+          </div>
+        </div>
+</section>
   </main>
 
 <!-- ===== FOOTER ===== -->
