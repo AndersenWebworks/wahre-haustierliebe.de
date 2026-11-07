@@ -1449,7 +1449,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
 
-/* ===================================================================
+/* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
    Bedenkzeit, Wenn-dann-Karte und Wege. Alle Klassen beginnen mit "hunde-".
    ========================================================================== */
@@ -1546,3 +1546,43 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
 }
 @media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
+=======
+/* ===== Paket pferde-exoten: Fünf Felder „vom Tier aus gedacht“, Wenn-dann-Karte, Wege ===== */
+.pex-felder-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0.4rem 0 1.4rem; }
+.pex-feld { margin: 0 0 1.6rem; padding: 1.1rem 1.3rem 1.2rem; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--ink); border-radius: 3px; }
+.pex-feld-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.9rem; margin-bottom: 0.7rem; }
+.pex-feld-nr { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-dark); }
+.pex-feld-kopf h3 { margin: 0 !important; }
+.pex-feld dl { margin: 0; }
+.pex-feld dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin: 0.9rem 0 0.25rem; }
+.pex-feld dt:first-child { margin-top: 0; }
+.pex-feld dd { margin: 0; }
+.pex-feld dd p { max-width: none; margin: 0 0 0.5rem; }
+.pex-mass { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 600; color: var(--ink); }
+.pex-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); }
+.pex-quelle { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); }
+.pex-feld .pex-frage { font-style: italic; color: var(--red-dark); }
+.pex-beispiel-tag { display: inline-block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); border: 1px solid var(--ochre); border-radius: 2px; padding: 0.1rem 0.5rem; margin: 0 0 0.6rem; }
+.pex-legende { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-2); margin: -0.6rem 0 1.5rem; }
+.pex-mensch .zeitleiste-when { color: var(--green-dark); }
+.pex-bedenkzeit { margin: 1.2rem 0; padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.pex-bedenkzeit p { margin: 0 0 0.5rem; max-width: none; }
+.pex-bedenkzeit p:last-child { margin-bottom: 0; }
+.pex-karte { margin: 1.4rem 0; padding: 1.1rem 1.3rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.pex-karte-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.7rem; }
+.pex-karte ul { list-style: none; margin: 0; padding: 0; }
+.pex-karte li { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.55rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.pex-karte li:first-child { border-top: 0; }
+.pex-karte b { color: var(--red-dark); }
+.pex-karte-fuss { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.8rem 0 0; max-width: none; }
+.pex-wege { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.4rem 0; }
+.pex-weg { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); }
+.pex-weg-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.3rem; }
+.pex-weg h3 { margin: 0 0 0.4rem !important; }
+.pex-weg p { margin: 0 0 0.5rem; max-width: none; }
+.pex-weg-noch-nicht { border-color: var(--ochre); }
+.pex-weg-noch-nicht .pex-weg-label { color: var(--ochre); }
+@media (max-width: 640px) {
+  .pex-feld { padding: 1rem 1rem 1.1rem; }
+  .pex-karte li { grid-template-columns: 1fr; }
+}
