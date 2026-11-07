@@ -1,0 +1,35 @@
+# Bildnachweis Züchter-Karussell (11.11.)
+
+Quelle jeweils Wikimedia Commons; Lizenz, Urheber und Maße per API (imageinfo/extmetadata) am 7. November 2026 geprüft, SHA-1 der heruntergeladenen Dateien stimmt mit der Commons-Angabe überein. Originaldateien unverändert als folie-N.jpg; Zuschnitte (1080 x 1080 px, PNG) unter final/folie-N.png.
+
+| Folie | Datei | Dateiseite | Urheber | Lizenz | Maße (px) |
+|---|---|---|---|---|---|
+| 1 | Dalmatian puppy, three weeks-3.JPG | https://commons.wikimedia.org/wiki/File:Dalmatian_puppy,_three_weeks-3.JPG | Carlos Estrada | CC BY-SA 3.0 | 2480 x 1653 |
+| 2 | Pedigree (FCI) anverso 060509 REFON.jpg | https://commons.wikimedia.org/wiki/File:Pedigree_(FCI)_anverso_060509_REFON.jpg | José Reynaldo da Fonseca | CC BY 2.5 | 2522 x 3290 (Hochformat) |
+| 3 | Doberman Pinscher dogs in the " Judging Ring" at Bombay Presidency Kennel Club Dog Show.jpg | https://commons.wikimedia.org/wiki/File:Doberman_Pinscher_dogs_in_the_%22_Judging_Ring%22_at_Bombay_Presidency_Kennel_Club_Dog_Show.jpg | Rudolph.A.Furtado | CC BY 4.0 | 4080 x 2296 |
+| 4 | DSC5844 - Copy.jpg | https://commons.wikimedia.org/wiki/File:DSC5844_-_Copy.jpg | Tususpect | CC BY-SA 4.0 | 4928 x 3264 |
+| 5 | Miniature Lop - UK NL.jpg | https://commons.wikimedia.org/wiki/File:Miniature_Lop_-_UK_NL.jpg | Peter Jung | CC0 | 1920 x 1280 |
+| 6 | MurphyPuppy.jpg | https://commons.wikimedia.org/wiki/File:MurphyPuppy.jpg | Jmcewin | CC BY 3.0 | 1933 x 1450 |
+| 7 | Stethoscope examination of a white dog in Newark, New Jersey.jpg | https://commons.wikimedia.org/wiki/File:Stethoscope_examination_of_a_white_dog_in_Newark,_New_Jersey.jpg | Veterinarian Pet Alliance | CC BY 4.0 | 4284 x 5712 (Hochformat) |
+| 8 | Dog in animal shelter in Washington, Iowa.jpg | https://commons.wikimedia.org/wiki/File:Dog_in_animal_shelter_in_Washington,_Iowa.jpg | Nhandler | CC BY 2.5 | 2148 x 1745 |
+
+## Bildinhalt und Ort je Folie
+
+1. Mehrere junge Dalmatinerwelpen (laut Dateiseite drei Wochen alt, Wurf von zehn Welpen) liegen eng beieinander in einer Pappkiste auf einem orangefarben gestreiften Kissen, einige mit roten Halsbändchen. Ort laut Dateiseite nicht genannt (aufgenommen 16.12.2013). Die Dateiseite sagt nichts über Züchter oder Verkauf; das Bild belegt nur "Wurf junger Rassewelpen". Keine Menschen.
+2. Foto einer Hunde-Ahnentafel (Registrierzertifikat, Vorderseite) der Confederação Brasileira de Cinofilia (CBKC, Mitglied der FCI), Rasse Deutscher Spitz Zwerg, mit Ahnenreihe und Registriernummern. Achtung: Es ist laut rotem Aufdruck "MODELO (sem valor)" ein Musterdokument ohne Gültigkeit, Züchter- und Besitzerfeld stehen auf "NONON NONON NONON"; Ausstellungsdatum auf dem Dokument 01.03.1999, Commons-Datei von 2009 (Kategorie Avaré, Brasilien). Als Bild für "Papiere zeigen Abstammung" tauglich, aber keine deutsche/VDH-Ahnentafel und kein echtes Dokument einer Person. Im Zuschnitt oberes Dokumentdrittel bis Dreiviertel, die unteren Zeilen und die Logos sind abgeschnitten.
+3. Dobermänner werden im Richterring ("Judging Ring") von ihren Vorführern aufgestellt, Richter und Ringpersonal stehen dabei, am Tisch im Hintergrund sitzen weitere Personen. Ort laut Dateiseite: Bombay Presidency Kennel Club Dog Show, Schulgelände St Stanislaus, Bandra, Mumbai (Indien), aufgenommen 25.01.2026. Personen sind im Zuschnitt klein (Gesichter etwa 25 bis 35 px groß, nicht identifizierbar), keine Personen als Bildmotiv. Ob konkret ein Richter gerade bewertet, ist aus dem Bild nicht sicher abzulesen, die Dateiseite sagt "paraded by their handlers and examined by the Judges".
+4. Mops, Kopfporträt von vorn leicht schräg: flaches Gesicht, kurze Nase mit Nasenwulst, große Augen, beide Ohren sichtbar. Laut Dateiseite weiblicher beiger (fawn) Mops, Nahaufnahme; Kategorien der Dateiseite "Pug heads" und "Brachycephalic dogs with prominent nasal roll". Ort nicht genannt (aufgenommen 25.04.2020). Keine Menschen.
+5. Zwergwidder-Kaninchen (laut Dateiseite "Miniature Lop") sitzt auf einer Wiese, beide Hängeohren deutlich sichtbar, neben einem Stück Möhre. Ort nicht genannt (aufgenommen 12.02.2018). Quelle laut Dateiseite publicdomainpictures.net, dort CC0 ausgewiesen. Keine Menschen. Das Bild ist nicht aus der Quellenliste früherer Karussells (dort nur andere Lop-Fotos).
+6. Junger Labrador-Welpe (laut Dateiseite "Fox Red Labrador Puppy", wenige Wochen alt) wird von einer Person in dunkler Jacke mit beiden Händen gehalten. Von der Person sind nur Hände, Oberkörper und im oberen Bildrand ein schmaler Streifen Kinn/Hals sichtbar, kein Gesicht. Ort, Datum und Kontext nicht genannt: Die Dateiseite sagt nichts über Händler, Verkauf, Züchter oder Tierheim, das Bild wird nur als neutraler "Welpe auf dem Arm" verwendet.
+7. Ein weißer Hund steht auf einem Untersuchungstisch, eine Tierarzthelferin hört ihn mit dem Stethoskop ab, eine zweite Person hält Kopf und Brust. Laut Dateiseite: "A white dog is examined with a stethoscope on an examination table at a veterinary clinic in Newark, New Jersey" (aufgenommen 03.06.2026). Die Rasse nennt die Dateiseite nicht; der Hund sieht nach einer Französischen Bulldogge (kurzköpfige Rasse) aus, das ist eine Einschätzung und im Nachweis nicht zu behaupten. Im Zuschnitt nur Hände, Arme und Kleidung der Personen, keine Gesichter (die Originalaufnahme zeigt das Gesicht der Tierärztin links oben, es ist abgeschnitten).
+8. Ein cremefarbener Hund (laut Kategorie Mischling) schaut durch einen Maschendrahtzaun, im Anschnitt der Zaunpfosten des Zwingers. Tierheim belegt: ja, laut Dateiseite "Paws and More No Kill Animal Shelter in Washington, Iowa" (USA), Kategorie "Shelter dogs". Aufnahmedatum nicht genannt. Keine Menschen.
+
+## Zuschnitt
+
+Alle Zuschnitte quadratisch aus dem unveränderten Original (Lanczos-Verkleinerung auf 1080 x 1080 px, PNG). Zuschnittfenster in Originalpixeln (links, oben, rechts, unten): 1) 414, 0, 2067, 1653; 2) 0, 6, 2522, 2528; 3) 974, 0, 3270, 2296; 4) 931, 0, 4195, 3264; 5) 224, 0, 1504, 1280; 6) 380, 130, 1700, 1450; 7) 1962, 2008, 4104, 4150; 8) 0, 0, 1745, 1745. Keine weitere Bearbeitung (Farbe, Retusche, Text).
+
+## Ausschlüsse
+
+Keine Datei steht in docs/social/** (Suche nach Dateinamen und Stichwörtern in allen Ordnern unter docs/social/ geprüft, keine Treffer). Nicht verwendet: die Ooty-Hundeausstellungsfotos von Tagooty (Commons-Warnhinweis "Personality rights warning"). Alle Dateien: keine NC/ND-Lizenz, echte Fotos (Folie 2 ist die Fotografie eines Dokuments), keine KI-Bilder, keine Illustrationen.
+
+Bilder: Dalmatian puppy, three weeks-3 / Carlos Estrada, CC BY-SA 3.0; Pedigree (FCI) anverso 060509 REFON / José Reynaldo da Fonseca, CC BY 2.5; Doberman Pinscher dogs in the Judging Ring at Bombay Presidency Kennel Club Dog Show / Rudolph.A.Furtado, CC BY 4.0; DSC5844 - Copy / Tususpect, CC BY-SA 4.0; Miniature Lop - UK NL / Peter Jung, CC0; MurphyPuppy / Jmcewin, CC BY 3.0; Stethoscope examination of a white dog in Newark, New Jersey / Veterinarian Pet Alliance, CC BY 4.0; Dog in animal shelter in Washington, Iowa / Nhandler, CC BY 2.5
