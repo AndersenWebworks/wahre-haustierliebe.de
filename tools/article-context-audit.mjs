@@ -36,6 +36,11 @@ const articlePages = [
   'noch-nicht-bereit',
 ];
 
+// Das Glossar ist eine Nachschlageliste, die aus tools/glossary-data.mjs erzeugt wird. Es hat keinen Fließtext,
+// den ein Zusatzmodul (Merkkarten, Gegenüberstellung) verdichten könnte; die Pflicht „mindestens ein Zusatzmodul“
+// gilt dort fachlich nicht. Alle übrigen Artikelseiten brauchen weiterhin eines.
+const pagesWithoutEnhancementDuty = new Set(['glossar']);
+
 const pageFiles = {
   mensch: 'mensch/index.html',
   hunde: 'hunde/index.html',
@@ -84,10 +89,10 @@ for (const viewport of viewports) {
       const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
       const max = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
       for (let y = 0; y <= max; y += 720) {
-        window.scrollTo(0, y);
+        window.scrollTo({ top: y, behavior: 'instant' }); // sofort, nicht weich: die Seite hat scroll-behavior: smooth, sonst laden träge Bilder nicht
         await delay(55);
       }
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'instant' });
       await delay(120);
     });
 
@@ -181,7 +186,7 @@ await fs.writeFile(path.join(outDir, 'report.json'), JSON.stringify(report, null
 const failures = report.filter((entry) =>
   !entry.heroHasImage ||
   !entry.heroHasPurpose ||
-  entry.enhancementCount < 1 ||
+  (entry.enhancementCount < 1 && !pagesWithoutEnhancementDuty.has(entry.page)) ||
   entry.visibleImageCount < 1 ||
   entry.duplicateVisibleImages.length > 0 ||
   entry.horizontalOverflow ||

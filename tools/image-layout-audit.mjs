@@ -89,10 +89,10 @@ for (const viewport of viewports) {
       const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
       const max = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
       for (let y = 0; y <= max; y += 650) {
-        window.scrollTo(0, y);
+        window.scrollTo({ top: y, behavior: 'instant' }); // sofort, nicht weich: die Seite hat scroll-behavior: smooth, sonst laden träge Bilder nicht
         await delay(60);
       }
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'instant' });
       await delay(120);
     });
 
@@ -185,13 +185,26 @@ const sourceImageRefs = Array.from(
   htmlSource.matchAll(/(?:src:\s*'|src=\")([^'\"]*assets\/images\/[^'\"]+)/g),
   (match) => match[1]
 );
-const sourceImageCounts = sourceImageRefs.reduce((acc, src) => {
-  acc[src] = (acc[src] || 0) + 1;
-  return acc;
-}, {});
-const duplicateSourceImages = Object.entries(sourceImageCounts)
-  .filter(([src, count]) => count > 1 && !allowedRepeatedImages.has(src))
-  .map(([src, count]) => ({ src, count }));
+// Bildregel (Annemarie, 12.10.2026, siehe docs/wiki/entscheidungen.html und bilder-und-nachweise.html#mehrfach):
+// Ein Bild darf auf der Website an mehreren Stellen und auf verschiedenen Seiten stehen. Nur doppelte Bilder
+// innerhalb EINER Seite bleiben eine Meldung. Deshalb wird je Seitenabschnitt gezählt, nicht über die ganze Quelle.
+const sourcePageAt = (index) => {
+  const before = htmlSource.slice(0, index);
+  const sections = [...before.matchAll(/<section id="([^"]+)" class="page/g)];
+  return sections.length ? sections[sections.length - 1][1] : '_global';
+};
+const heroPageByIndex = new Map(
+  Array.from(htmlSource.matchAll(/'([\w-]+)':\s*\{\s*src:\s*'(assets\/images\/[^']+)'/g), (match) => [match.index + match[0].indexOf("src:"), match[1]])
+);
+const perPageCounts = {};
+for (const match of htmlSource.matchAll(/(?:src:\s*'|src=\")([^'\"]*assets\/images\/[^'\"]+)/g)) {
+  const page = heroPageByIndex.get(match.index) ?? sourcePageAt(match.index);
+  const key = `${page}\u0000${match[1]}`;
+  perPageCounts[key] = (perPageCounts[key] || 0) + 1;
+}
+const duplicateSourceImages = Object.entries(perPageCounts)
+  .map(([key, count]) => ({ page: key.split('\u0000')[0], src: key.split('\u0000')[1], count }))
+  .filter(({ src, count }) => count > 1 && !allowedRepeatedImages.has(src));
 
 const uniqueSourceImages = [...new Set(sourceImageRefs)];
 const missingImageFiles = [];

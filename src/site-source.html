@@ -13229,8 +13229,127 @@
       ]
     };
 
+    var articleEnhancementMerkkarten = {
+      // Merkkarten für Seiten, die bisher kein Zusatzmodul hatten. Sie fassen nur Aussagen zusammen, die weiter unten auf derselben Seite belegt stehen.
+      katzen: [
+        {
+          afterSelector: '.kv-hinweis',
+          html: `<div class="article-rhythm metric-grid" data-enhancement="katzen-merkmasse">
+            <div class="metric-card"><strong>2 Katzen, 3 Toiletten</strong><span>Für reine Wohnungskatzen rät der Deutsche Tierschutzbund zu zwei Katzen, die sich verstehen. Bei zwei Katzen braucht man mindestens drei Toiletten.</span></div>
+            <div class="metric-card"><strong>13,2 von 24 Stunden</strong><span>schläft eine Katze im Mittel. Sie braucht mindestens zwei Ruheplätze, an denen niemand vorbeiläuft.</span></div>
+            <div class="metric-card"><strong>1-mal im Jahr</strong><span>gründliche Untersuchung in der Tierarztpraxis, im Seniorenalter ab zehn Jahren alle sechs Monate.</span></div>
+          </div>`
+        }
+      ],
+      voegel: [
+        {
+          afterSelector: '.kv-hinweis',
+          html: `<div class="article-rhythm metric-grid" data-enhancement="voegel-merkmasse">
+            <div class="metric-card"><strong>mindestens zwei, besser vier</strong><span>Wellensittiche sind Schwarmvögel: mindestens ein Pärchen, besser vier oder mehr.</span></div>
+            <div class="metric-card"><strong>2 × 1 × 2 m</strong><span>Voliere für zwei bis sechs Vögel, dazu täglich mehrere Stunden Freiflug.</span></div>
+            <div class="metric-card"><strong>10 Stunden</strong><span>Nachtruhe, dunkel und ohne Radio oder Fernseher.</span></div>
+          </div>`
+        }
+      ],
+      'tiere-und-urlaub': [
+        {
+          afterSelector: '.warning-box',
+          html: `<div class="article-rhythm" data-enhancement="urlaub-merkkarten">
+            <span class="eyebrow">Drei Merkkarten für die Planung</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Zeitpunkt</span><h3>Das Tier vor der Buchung mitdenken</h3><p>Der Deutsche Tierschutzbund rät, nach einer Pension im Idealfall mehrere Monate im Voraus zu suchen.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Auto</span><h3>Auch mit Fensterspalt kein Schutz</h3><p>Im ADAC-Test war der Innenraum bei etwa 28 °C Außentemperatur nach 30 Minuten rund 50 °C heiß.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Katze, Vögel, Kleintiere</span><h3>Zu Hause ist oft stressärmer</h3><p>Betreuung im vertrauten Zuhause ist für sie oft die ruhigere Lösung.</p></article>
+            </div>
+          </div>`
+        }
+      ],
+      'hitzefalle-auto': [
+        {
+          afterSelector: '.warning-box',
+          html: `<div class="article-rhythm" data-enhancement="hitzefalle-merkkarten">
+            <span class="eyebrow">Drei Dinge zum Merken</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Nur kurz</span><h3>Keine Sicherheit</h3><p>Schatten, ein Fensterspalt oder „nur kurz“ sind keine verlässlichen Schutzmaßnahmen.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Hecheln</span><h3>Reicht im heißen Auto nicht</h3><p>Hunde kühlen sich vor allem über Hecheln. In einem heißen Auto kippt dieses System.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Handeln</span><h3>Nicht abwarten</h3><p>Bei deutlichen Hitzestresszeichen: Besitzer suchen, Polizei oder Feuerwehr rufen, Fotos machen.</p></article>
+            </div>
+          </div>`
+        }
+      ],
+      'ernaehrung-taurin': [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm" data-enhancement="taurin-merkkarten">
+            <span class="eyebrow">Drei Merkkarten zur Ernährung</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Katze</span><h3>Taurin muss im Futter sein</h3><p>Taurin ist für Katzen essenziell und muss zuverlässig im Futter vorhanden sein.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Hund</span><h3>Vegan nur mit Fachplanung</h3><p>Eine vegane Ernährung braucht Fachplanung und Kontrolle, zum Beispiel ein vollständiges Alleinfutter oder tierärztliche Ernährungsberatung.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Napf</span><h3>Nicht tauschen</h3><p>Hundefutter ist kein Katzenfutter. Katzenfutter ist auch kein sinnvoller Dauerersatz für Hunde.</p></article>
+            </div>
+          </div>`
+        }
+      ],
+      realhaltung: [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm" data-enhancement="realhaltung-merkkarten">
+            <span class="eyebrow">Drei Sätze zum Merken</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Mindestmaß</span><h3>Reicht nicht als Maßstab</h3><p>Gesetzliche Mindestanforderungen sind nicht automatisch gute Haltung.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Kaufpreis</span><h3>Nicht der echte Preis</h3><p>Der Anschaffungspreis ist fast nie der echte Preis der Haltung.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Kinder</span><h3>Erwachsene verantworten</h3><p>Kinder dürfen helfen, aber Erwachsene tragen immer die Verantwortung.</p></article>
+            </div>
+          </div>`
+        }
+      ],
+      'zucht-und-vermehrung': [
+        {
+          afterSelector: '.info-box',
+          html: `<div class="article-rhythm" data-enhancement="zucht-merkkarten">
+            <span class="eyebrow">Drei Merkkarten zur Herkunft</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Seriös</span><h3>Zeigt, prüft, berät</h3><p>Seriöse Züchter zeigen Elterntiere und Zuchtstätte, lassen die Elterntiere untersuchen und beraten auch nach dem Einzug.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Preis und Papiere</span><h3>Verraten Vermehrer nicht</h3><p>Viele Vermehrer verlangen heute ähnlich viel wie seriöse Züchter. Papiere belegen die Abstammung, nicht die Gesundheit.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Tierheime</span><h3>Schon sehr voll</h3><p>In einer Umfrage des Deutschen Tierschutzbundes unter 218 Tierheimen (Mai 2024) waren 69 Prozent mindestens sehr stark ausgelastet.</p></article>
+            </div>
+          </div>`
+        }
+      ],
+      wildtierhaltung: [
+        {
+          afterSelector: '.warning-box',
+          html: `<div class="article-rhythm" data-enhancement="wildtier-merkkarten">
+            <span class="eyebrow">Drei Merkkarten zu Wildtieren</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Erlaubt</span><h3>Heißt nicht vertretbar</h3><p>„Legal möglich“ heißt nicht „praktisch, moralisch oder tierschutzfachlich vertretbar“.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Landesrecht</span><h3>Je Bundesland verschieden</h3><p>Tierschutz-, Arten- und Naturschutzrecht gelten bundesweit, Gefahrtierregeln aber je nach Bundesland unterschiedlich.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Hund</span><h3>Anleinen, Regeln beachten</h3><p>Ein unangeleinter Hund kann Wildtiere verletzen oder töten. Hund anleinen, Rückruf nicht überschätzen, Regeln vor Ort respektieren.</p></article>
+            </div>
+          </div>`
+        }
+      ],
+      'wildkatzenbaby-gefunden': [
+        {
+          afterSelector: '.warning-box',
+          html: `<div class="article-rhythm" data-enhancement="wildkatze-merkkarten">
+            <span class="eyebrow">Drei Schritte zum Merken</span>
+            <div class="argument-grid">
+              <article class="rhythm-card"><span class="eyebrow">Erstens</span><h3>Abstand halten</h3><p>Nicht anfassen, nicht füttern und nicht mit nach Hause nehmen. Allein gefunden heißt bei Wildtieren nicht automatisch verlassen.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Zweitens</span><h3>Fundort festhalten</h3><p>GPS-Punkt speichern und Fotos nur aus Distanz machen, ohne Blitz.</p></article>
+              <article class="rhythm-card"><span class="eyebrow">Drittens</span><h3>Fachstelle rufen</h3><p>Zum Beispiel den BUND-Wildkatzenkontakt, Wildtierbeauftragte, die Untere Naturschutzbehörde, den Forst oder eine Wildtierauffangstation.</p></article>
+            </div>
+          </div>`
+        }
+      ]
+    };
+
     Object.keys(articleEnhancementAddons).forEach(function(pageId) {
       articleEnhancements[pageId] = (articleEnhancements[pageId] || []).concat(articleEnhancementAddons[pageId]);
+    });
+
+    Object.keys(articleEnhancementMerkkarten).forEach(function(pageId) {
+      articleEnhancements[pageId] = (articleEnhancements[pageId] || []).concat(articleEnhancementMerkkarten[pageId]);
     });
 
     var enhancementTopicTargets = {

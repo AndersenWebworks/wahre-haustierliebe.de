@@ -67,10 +67,10 @@ for (const viewport of viewports) {
       const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
       const max = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
       for (let y = 0; y <= max; y += Math.max(500, Math.round(window.innerHeight * 0.75))) {
-        window.scrollTo(0, y);
+        window.scrollTo({ top: y, behavior: 'instant' }); // sofort, nicht weich: die Seite hat scroll-behavior: smooth, sonst laden träge Bilder nicht
         await delay(35);
       }
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'instant' });
       await delay(100);
     });
     await page.waitForFunction(
