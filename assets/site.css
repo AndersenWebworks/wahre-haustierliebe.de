@@ -5189,6 +5189,21 @@
         display: none;
       }
 
+      /* Zellinhalt als Fließtext halten: Im Raster würden Glossarbegriffe und Links zu eigenen Spalten. */
+      .cost-table td:not(:first-child):not([colspan]) {
+        display: block;
+        position: relative;
+        padding-left: 6.35rem;
+        overflow-wrap: break-word;
+      }
+
+      .cost-table td:not(:first-child):not([colspan])::before {
+        position: absolute;
+        left: 0;
+        top: 0.36rem;
+        width: 5.8rem;
+      }
+
       .care-guide-table {
         border: 0;
         box-shadow: none;
