@@ -39,6 +39,7 @@ const pages = [
     priority: '1.0',
     changefreq: 'weekly',
     type: 'WebSite',
+    lastmod: '2026-11-07',
   },
   {
     id: 'impressum',
@@ -48,6 +49,7 @@ const pages = [
     intent: 'Anbieterkennzeichnung und rechtliche Kontaktangaben',
     priority: '0.35',
     staticOnly: true,
+    lastmod: '2026-11-07',
   },
   {
     id: 'datenschutz',
@@ -63,18 +65,20 @@ const pages = [
     id: 'kontakt',
     slug: 'kontakt',
     title: 'Kontakt - Wa(h)re Haustier(liebe)',
-    description: 'Über Wa(h)re Haustier(liebe), Hilfe bei Haltungsfragen, persönliche Ansprache und Kontaktmöglichkeiten für Fragen, Anregungen oder Unterstützungsbedarf.',
+    description: 'Wer hinter Wa(h)re Haustier(liebe) steckt und wie du uns bei Fragen zu Haltung, Adoption oder einer Entscheidung für oder gegen ein Tier erreichst.',
     intent: 'Kontakt und Informationen zum privaten Projekt Wa(h)re Haustierliebe',
     priority: '0.45',
     staticOnly: true,
+    lastmod: '2026-11-07',
   },
   {
     id: 'mitmachen',
     slug: 'mitmachen',
     title: 'Mitmachen! - Wa(h)re Haustier(liebe)',
-    description: 'Warum Hinweise, Korrekturen und gute Quellen Wa(h)re Haustier(liebe) besser machen und wie Besucher Textstellen oder ganze Abschnitte melden können.',
+    description: 'Du hast einen Fehler, einen veralteten Stand oder eine bessere Quelle gefunden? So meldest du uns eine Textstelle oder einen ganzen Abschnitt.',
     intent: 'Mitwirkung, Korrekturen und Quellenhinweise redaktionell einreichen',
     priority: '0.55',
+    lastmod: '2026-11-07',
   },
   {
     id: 'petitionen',
@@ -83,7 +87,7 @@ const pages = [
     description: 'Laufende Petitionen zum Schutz von Tieren: Anliegen, Initiator und Adressat auf einen Blick sowie der direkte Link zur Unterschrift.',
     intent: 'Laufende Tierschutz-Petitionen prüfen und bei der initiierenden Organisation unterschreiben',
     priority: '0.65',
-    lastmod: '2026-09-01',
+    lastmod: '2026-11-07',
   },
   {
     id: 'mensch',
@@ -92,6 +96,7 @@ const pages = [
     description: 'Ehrlicher Realitätscheck vor dem Haustierkauf: Zeit, Geld, Wohnsituation, Motivation, Wunschbilder und Verantwortung prüfen, bevor ein Tier einzieht.',
     intent: 'Vor dem Haustierkauf Entscheidung, Motivation, Wunschbilder und Alltag prüfen',
     priority: '0.9',
+    lastmod: '2026-11-07',
   },
   {
     id: 'hunde',
@@ -217,6 +222,7 @@ const pages = [
     description: 'Atemnot, Krämpfe, Vergiftung, Harnstopp, Schmerzen oder Unfall: Warnsignale erkennen und wissen, wann ein Tier sofort tierärztliche Hilfe braucht.',
     intent: 'Tiermedizinische Warnsignale und Notfallentscheidung',
     priority: '0.9',
+    lastmod: '2026-11-07',
   },
   {
     id: 'tierarzt-notdienst',
@@ -226,6 +232,7 @@ const pages = [
     intent: 'Tierärztlichen Notdienst nach Bundesland finden',
     priority: '0.85',
     staticOnly: true,
+    lastmod: '2026-11-07',
   },
   {
     id: 'wissen',
@@ -234,7 +241,7 @@ const pages = [
     description: 'Häufige Tierhaltungsmythen und Homöopathie bei Tieren kritisch, quellenbasiert und ohne Werbeinteresse eingeordnet.',
     intent: 'Tierhaltungsmythen und Homöopathie bei Tieren prüfen',
     priority: '0.8',
-    lastmod: '2026-07-04',
+    lastmod: '2026-11-07',
   },
   {
     id: 'glossar',
@@ -243,14 +250,16 @@ const pages = [
     description: 'Wichtige Begriffe rund um artgerechte Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz und verständlich erklärt.',
     intent: 'Fachbegriffe aus Tierhaltung und Tierschutz nachschlagen',
     priority: '0.8',
+    lastmod: '2026-11-07',
   },
   {
     id: 'tiere-und-urlaub',
     slug: 'tiere-und-urlaub',
     title: 'Haustiere und Urlaub: Mitnehmen, Betreuung oder Tierpension?',
-    description: 'Urlaub mit Haustieren tierschutzgerecht planen: Mitnehmen, Betreuung, Tierpension, Reiseformalitäten, Hitze, Flugreisen und Aussetzen richtig einordnen.',
+    description: 'Urlaub mit Haustier planen: Mitnehmen, Betreuung oder Tierpension, Reiseregeln, Hitze, Flugreisen und die Frage, was Aussetzen bedeutet.',
     intent: 'Urlaub mit Haustieren und Tierbetreuung tierschutzgerecht planen',
     priority: '0.8',
+    lastmod: '2026-11-07',
   },
   {
     id: 'notfallplan-haustier',
@@ -259,7 +268,7 @@ const pages = [
     description: 'Haustier-Notfallplan für Krankheit, Unfall oder Krankenhaus: Betreuung, Schlüssel, Futter, Medikamente, Tierarzt, Vollmacht, Kosten und Unterlagen vorbereiten.',
     intent: 'Versorgung eines Haustiers bei plötzlichem Ausfall der Halterperson vorbereiten',
     priority: '0.85',
-    lastmod: '2026-08-09',
+    lastmod: '2026-11-07',
   },
   {
     id: 'hitzefalle-auto',
@@ -325,6 +334,7 @@ const pages = [
     description: 'Warum kein Tier zu nehmen manchmal die verantwortungsvollste Entscheidung ist und wie du trotzdem Tierschutz unterstützen kannst.',
     intent: 'Verantwortlich warten statt vorschnell ein Tier anschaffen',
     priority: '0.75',
+    lastmod: '2026-11-07',
   },
   {
     id: 'budgie-brain',
