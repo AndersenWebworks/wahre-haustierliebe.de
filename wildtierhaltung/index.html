@@ -6860,7 +6860,6 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .hunde-feld dt { padding-top: 0.6rem; }
   .hunde-karte li { grid-template-columns: minmax(0, 1fr); }
 }
-=======
 /* ===== Paket Kleintiere: Muster „vom Tier aus gedacht“ (Präfix kt-) ===== */
 body.static-site .kt-einstieg { font-size: 1.2rem; line-height: 1.55; margin: 0 0 1rem; }
 body.static-site .kt-einstieg strong { font-weight: 600; }
@@ -6912,7 +6911,6 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   body.static-site .kt-wege { grid-template-columns: 1fr 1fr; }
 }
 @media print { body.static-site .kt-feld, body.static-site .kt-karte, body.static-site .kt-weg { break-inside: avoid; } }
-=======
 /* ===== Paket pferde-exoten: Fünf Felder „vom Tier aus gedacht“, Wenn-dann-Karte, Wege ===== */
 .pex-felder-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0.4rem 0 1.4rem; }
 .pex-feld { margin: 0 0 1.6rem; padding: 1.1rem 1.3rem 1.2rem; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--ink); border-radius: 3px; }
@@ -6953,6 +6951,49 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   .pex-karte li { grid-template-columns: 1fr; }
 }
 
+/* ===== Paket mobil: Bedienelemente mit mindestens 44 px Trefferfläche, Handyansicht ===== */
+@media (max-width: 760px) {
+  body.static-site .hamburger { min-width: 44px; min-height: 44px; padding: 0.5rem 0.65rem; }
+  body.static-site .site-logo { min-height: 44px; }
+  body.static-site .site-footer .footer-grid p > a { display: inline-block; padding: 0.7rem 0.15rem; margin: -0.35rem 0; min-width: 44px; box-sizing: border-box; }
+  body.static-site .evidence-card li > a, body.static-site .source-list li > a { display: inline-block; padding: 0.6rem 0; }
+  body.static-site .site-footer summary { padding: 0.7rem 0; min-height: 44px; box-sizing: border-box; }
+  body.static-site .article-toc summary { padding: 0.7rem 0; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; }
+  body.static-site .article-toc-list a { display: block; padding: 0.6rem 0; min-height: 44px; box-sizing: border-box; }
+  body.static-site a.card-link { display: inline-flex; align-items: center; min-height: 44px; }
+  body.static-site .notdienst-link { min-height: 44px; }
+  body.static-site .article-kicker a { display: inline-flex; align-items: center; min-height: 44px; }
+  body.static-site p.text-muted > a:only-child, body.static-site .hunde-go a, body.static-site .kt-go a, body.static-site .pex-go a { display: inline-block; padding: 0.7rem 0; }
+  body.static-site .kv-weg p a, body.static-site .pex-weg p a, body.static-site .hunde-weg p a, body.static-site .kt-weg p a { display: inline-block; padding: 0.6rem 0; }
+  body.static-site .breed-source-list a { display: inline-flex; align-items: center; min-height: 44px; }
+  /* Tabellenzellen als Karten: Beschriftung und Wert auf eine gemeinsame Grundlinie setzen */
+  body.static-site .cost-table td:not(:first-child):not([colspan])::before { top: 0.85rem; line-height: 1.2; }
+  /* Textlinks: Trefferfläche über Innenabstand vergrößern (bei Inline-Links ohne Einfluss auf den Zeilenabstand) */
+  :where(body.static-site main :where(li, p) > a:not([class])) { padding-block: 0.12rem; }
+  body.static-site [role="tab"], body.static-site .tab-btn { min-height: 44px; }
+  body.static-site .urlaubsplan-foot button, body.static-site [data-plan-print], body.static-site [data-plan-reset] { min-height: 44px; padding-inline: 0.9rem; }
+  body.static-site .section-feedback-action { min-width: 44px; min-height: 44px; justify-content: center; }
+  /* Fußnotenzeichen: große unsichtbare Trefferfläche, ohne den Textfluss zu verändern */
+  body.static-site sup > a { position: relative; }
+  body.static-site sup > a::after { content: ""; position: absolute; inset: -14px -12px; }
+  body.static-site label:has(> input[type="checkbox"]), body.static-site label:has(> input[type="radio"]) { min-height: 44px; align-items: center; }
+  body.static-site input[type="checkbox"], body.static-site input[type="radio"] { width: 1.4rem; height: 1.4rem; }
+}
+
+/* Paket mobil: Das vom Build gesetzte height-Attribut darf das Seitenverhältnis der Kartenbilder nicht überschreiben (sonst werden sie so hoch wie das Original). */
+body.static-site img.card-media { height: auto; }
+@media (max-width: 480px) {
+  /* Lange Beträge wie „180.000 bis 285.000 €“ sollen nicht mit einem einzelnen Zeichen in die zweite Zeile rutschen. */
+  .faktenzeile .zahl { font-size: clamp(1.55rem, 7.2vw, 2.1rem); overflow-wrap: normal; }
+}
+
+/* Paket mobil: Der Knopf „nach oben“ darf beim Lesen keinen Text verdecken */
+@media (max-width: 760px) {
+  body.static-site .scroll-top { width: 40px; height: 40px; right: 0.3rem; bottom: 0.8rem; font-size: 1.1rem; box-shadow: none; }
+  body.static-site .scroll-top.visible { opacity: 0.42; }
+}
+
+  body.static-site .scroll-top.visible:hover, body.static-site .scroll-top.visible:focus-visible, body.static-site .scroll-top.visible:active { opacity: 1; }
 /* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
 body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
 .nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
@@ -7433,7 +7474,7 @@ body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .na
 
   <main id="main-content" tabindex="-1">
 <section id="wildtierhaltung" class="page active">
-    <div class="hero" style="background: linear-gradient(135deg, #394E36 0%, #18251B 100%);"><div class="container"><div class="article-hero-copy"><h1>Ein Wildtier wird nicht privat, nur weil es hinter einem Zaun sitzt.</h1><p>Tiger, Luchse, Krokodile und andere gefährliche oder anspruchsvolle Tiere gehören nicht in Privatgärten. Wenn das Gesetz das erlaubt oder in jedem Bundesland anders regelt, ist das auch ein Problem des Staates.</p><div class="article-kicker"><span>Bundesrecht</span><span>Landesrecht</span><span>Wildschutz</span></div></div><figure class="article-hero-media image-context-card" style="--image-position:center 45%;"><img src="../assets/images/optimized/exot-bartagame.jpg" alt="Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung" loading="eager" decoding="async" width="330" height="212" fetchpriority="high"><figcaption class="context-caption">Faszination ersetzt keine <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="sachkunde" data-glossary-title="Sachkunde" data-glossary-text="Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere." data-glossary-href="../glossar/index.html#sachkunde">Sachkunde</span>, kein Gehege und keine politische Verantwortung.</figcaption></figure></div></div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hinweis-wildtierhaltung-1">Warum das rechtlich so schief wirkt</a></li><li><a href="#hinweis-wildtierhaltung-2">Die moralische Frage ist einfacher als die juristische</a></li><li><a href="#hinweis-wildtierhaltung-3">Leinenpflicht, Brut- und Setzzeit und „Der macht nichts“</a></li><li><a href="#hinweis-wildtierhaltung-4">Naturgefahren: Auch der Hund ist gefährdet</a></li><li><a href="#hinweis-wildtierhaltung-5">Fachquellen und wichtige Grenzen</a></li></ol></details></nav>
+    <div class="hero" style="background: linear-gradient(135deg, #394E36 0%, #18251B 100%);"><div class="container"><div class="article-hero-copy"><h1>Ein Wildtier wird nicht privat, nur weil es hinter einem Zaun sitzt.</h1><p>Tiger, Luchse, Krokodile und andere gefährliche oder anspruchsvolle Tiere gehören nicht in Privatgärten. Wenn das Gesetz das erlaubt oder in jedem Bundesland anders regelt, ist das auch ein Problem des Staates.</p><div class="article-kicker"><span>Bundesrecht</span><span>Landesrecht</span><span>Wildschutz</span></div></div><figure class="article-hero-media image-context-card" style="--image-position:center 45%;" data-image-purpose="Private Wildtierhaltung: Kopfbild zeigt ein Reptil als Beispiel für sehr anspruchsvolle Haltung." data-share-reason="Das Bild soll daran erinnern, dass Faszination für ein Wildtier keine artgerechte Haltung im Wohnzimmer ersetzt."><img src="../assets/images/optimized/exot-bartagame.jpg" alt="Exotisches Reptil als Symbol für anspruchsvolle Wildtierhaltung" loading="eager" decoding="async" width="330" height="212" fetchpriority="high"><figcaption class="context-caption">Faszination ersetzt keine <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="sachkunde" data-glossary-title="Sachkunde" data-glossary-text="Nachweisbares Fachwissen zur Haltung, Versorgung und Sicherheit bestimmter Tiere." data-glossary-href="../glossar/index.html#sachkunde">Sachkunde</span>, kein Gehege und keine politische Verantwortung.</figcaption></figure></div></div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#hinweis-wildtierhaltung-1">Warum das rechtlich so schief wirkt</a></li><li><a href="#hinweis-wildtierhaltung-2">Die moralische Frage ist einfacher als die juristische</a></li><li><a href="#hinweis-wildtierhaltung-3">Leinenpflicht, Brut- und Setzzeit und „Der macht nichts“</a></li><li><a href="#hinweis-wildtierhaltung-4">Naturgefahren: Auch der Hund ist gefährdet</a></li><li><a href="#hinweis-wildtierhaltung-5">Fachquellen und wichtige Grenzen</a></li></ol></details></nav>
     <div class="section"><div class="container">
       <div class="warning-box"><h3>Auf einen Blick</h3><ul><li>In Deutschland gibt es kein einheitliches bundesweites Gefahrtiergesetz für private Haltung.</li><li>Tierschutz-, Arten- und Naturschutzrecht gelten bundesweit, <span class="glossary-term" aria-describedby="glossary-term-popover" tabindex="0" role="button" data-glossary-key="gefahrtier" data-glossary-title="Gefahrtier" data-glossary-text="Tier, das wegen Größe, Gift, Kraft oder Verhalten besondere Sicherheitsanforderungen stellt." data-glossary-href="../glossar/index.html#gefahrtier">Gefahrtierregeln</span> aber je nach Bundesland unterschiedlich.</li><li>„Legal möglich“ heißt nicht „praktisch, moralisch oder tierschutzfachlich vertretbar“.</li><li>Wildschutz betrifft auch normale Haustierhaltung: Ein unangeleinter Hund kann Wildtiere verletzen oder töten.</li></ul></div>
       <div class="section-feedback-heading"><h2 id="hinweis-wildtierhaltung-1">Warum das rechtlich so schief wirkt</h2><button type="button" class="section-feedback-action" data-feedback-section="hinweis-wildtierhaltung-1" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
