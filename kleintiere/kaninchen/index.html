@@ -6766,6 +6766,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
 @media (max-width: 768px) {
   .mobile-nav-search-results .site-search-result { padding: 0.7rem 0.65rem; }
   .mobile-nav-search-results .site-search-snippet { -webkit-line-clamp: 3; }
+}
 
 /* ===== Paket katzen-voegel: Bedürfnisfelder, Tageszahl, Wenn-dann-Karte (vom Tier aus gedacht) ===== */
 .kv-einstieg { font-size: 1.15rem; line-height: 1.55; }
@@ -6812,6 +6813,7 @@ body.static-site .article-hero-media img { height: auto; aspect-ratio: auto; }
   .kv-fakten > div + div { padding-left: 1rem; }
   .kv-fakten > div:last-child { border-right: 0; }
   .kv-wege { grid-template-columns: 1fr 1fr; }
+}
 
 /* ============================================================
    Paket Hunde: Felder "Was ein Hund von dir braucht", Tag aus Sicht des Hundes,
@@ -6949,6 +6951,84 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 @media (max-width: 640px) {
   .pex-feld { padding: 1rem 1rem 1.1rem; }
   .pex-karte li { grid-template-columns: 1fr; }
+}
+
+/* ===== Paket natur: Wie das Tier in der Natur lebt, Ausweg für bisherige Halter, Verkaufssätze, Selbsttest, Karte (Präfix nat-) ===== */
+body.static-site .nat-ich, body.static-site .nat-vergleich, body.static-site .nat-schritte, body.static-site .nat-test-inhalt ul { margin-left: 0; padding-left: 0; }
+.nat-hinweis { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-2); margin: 0 0 1.2rem; max-width: none; }
+.nat-liste { margin: 0 0 1.4rem; padding: 0; }
+.nat-eintrag { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.nat-eintrag:first-child { border-top: 2px solid var(--ink); }
+.nat-liste dt { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); margin: 0; padding-top: 0.15rem; }
+.nat-liste dd { margin: 0; max-width: none; }
+.nat-haltung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1.2rem 0 1.8rem; }
+.nat-haltung { padding: 1rem 1.15rem 1.1rem; border: 1px solid var(--rule-strong); border-top: 3px solid var(--green); border-radius: 3px; background: var(--card); min-width: 0; }
+.nat-haltung h4 { margin: 0 0 0.6rem; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-dark); }
+.nat-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-haltung li { margin: 0 0 0.55rem; max-width: none; font-size: 0.95rem; }
+.nat-haltung li:last-child { margin-bottom: 0; }
+.nat-vergleich { list-style: none; margin: 1rem 0; padding: 0; border-top: 2px solid var(--ink); }
+.nat-vergleich > li { display: grid; grid-template-columns: 8rem 1fr 1fr; gap: 0.4rem 1.2rem; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); max-width: none; align-items: start; }
+.nat-thema { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding-top: 0.2rem; }
+.nat-natur, .nat-haushalt { min-width: 0; }
+.nat-natur p, .nat-haushalt p { margin: 0; max-width: none; font-size: 0.95rem; }
+.nat-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.nat-natur .nat-label { color: var(--green-dark); }
+.nat-haushalt .nat-label { color: var(--ochre); }
+.nat-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); max-width: none; }
+.nat-rechnung { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink-2); margin: 0.2rem 0 0; max-width: none; }
+.nat-vergleiche-koerper { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0 1.6rem; }
+.nat-koerper { padding: 1rem 1.15rem; border-left: 4px solid var(--green); background: var(--green-tint); border-radius: 2px; min-width: 0; }
+.nat-koerper p { margin: 0 0 0.5rem; max-width: none; }
+.nat-koerper p:last-child { margin-bottom: 0; }
+.nat-koerper strong { color: var(--ink); }
+.nat-schritte { list-style: none; counter-reset: nat-schritt; margin: 1rem 0 1.4rem; padding: 0; }
+.nat-schritte > li { counter-increment: nat-schritt; position: relative; padding: 0.7rem 0 0.7rem 2.6rem; border-top: 1px solid var(--rule); max-width: none; }
+.nat-schritte > li:first-child { border-top: 2px solid var(--ink); }
+.nat-schritte > li::before { content: counter(nat-schritt); position: absolute; left: 0; top: 0.65rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.nat-schritte strong { display: block; margin-bottom: 0.15rem; }
+.nat-ausweg-fuss { padding: 0.9rem 1.2rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; margin: 1rem 0 1.6rem; }
+.nat-ausweg-fuss p { margin: 0 0 0.5rem; max-width: none; }
+.nat-ausweg-fuss p:last-child { margin-bottom: 0; }
+.nat-bild { margin: 1.2rem 0 1.6rem; }
+.nat-bild img { display: block; width: 100%; max-width: 38rem; height: auto; border-radius: 3px; }
+.nat-bild figcaption { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-2); margin-top: 0.4rem; max-width: 38rem; }
+.nat-beispiel-haltung { padding: 1rem 1.2rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--card); margin: 1rem 0; }
+.nat-beispiel-haltung h3 { margin: 0 0 0.5rem; }
+.nat-beispiel-haltung ul { margin: 0; padding-left: 1.1rem; }
+.nat-beispiel-haltung li { margin: 0 0 0.45rem; max-width: none; }
+.nat-ich { list-style: none; margin: 1rem 0; padding: 0; }
+.nat-ich > li { padding: 0.7rem 0; border-top: 1px solid var(--rule); max-width: none; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 1.2rem; }
+.nat-ich > li:first-child { border-top: 2px solid var(--ink); }
+.nat-ich .nat-wann { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); padding-top: 0.15rem; }
+.nat-ich p { margin: 0; max-width: none; }
+.nat-ich-gut .nat-wann { color: var(--green-dark); }
+.nat-ich-gut > li:first-child { border-top-color: var(--green-dark); }
+.nat-test { margin: 1rem 0 1.6rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--card); }
+.nat-test > summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-sans); font-weight: 700; list-style-position: inside; }
+.nat-test-inhalt { padding: 0 1.2rem 1.1rem; }
+.nat-test-inhalt ul { list-style: none; margin: 0 0 0.8rem; padding: 0; }
+.nat-test-inhalt li { margin: 0; padding: 0.6rem 0; border-top: 1px solid var(--rule); max-width: none; }
+.nat-test-inhalt label { display: flex; gap: 0.7rem; align-items: flex-start; cursor: pointer; }
+.nat-test-inhalt input[type="checkbox"] { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; accent-color: var(--green-dark); }
+.nat-test-inhalt label span { display: block; min-width: 0; }
+.nat-test-schluss { padding: 0.8rem 1rem; background: var(--green-tint); border-left: 4px solid var(--green); border-radius: 2px; }
+.nat-test-schluss p { margin: 0 0 0.4rem; max-width: none; }
+.nat-test-schluss p:last-child { margin-bottom: 0; }
+.nat-bremse { margin: 1.4rem 0; padding: 1.2rem 1.3rem; border: 3px solid var(--ink); border-radius: 4px; background: #fff; max-width: 34rem; }
+.nat-bremse-titel { display: block; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red-dark); margin-bottom: 0.5rem; }
+.nat-bremse-gross { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 700; margin: 0 0 0.8rem; max-width: none; }
+.nat-bremse ol { margin: 0 0 0.8rem; padding-left: 1.3rem; }
+.nat-bremse li { margin: 0 0 0.45rem; max-width: none; }
+.nat-bremse-fuss { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-2); margin: 0.6rem 0 0; max-width: none; }
+.nat-bremse-aktion { margin: 0.6rem 0 1.6rem; }
+@media (max-width: 640px) {
+  .nat-eintrag, .nat-ich > li { grid-template-columns: 1fr; }
+  .nat-vergleich > li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .nat-haltung-grid, .nat-vergleiche-koerper { grid-template-columns: 1fr; }
+  .nat-haltung { padding: 0.9rem 1rem 1rem; }
+  .nat-bremse { padding: 1rem; }
+  .nat-bremse-gross { font-size: 1.3rem; }
 }
 
 
@@ -7093,6 +7173,10 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
   "citation": [
     "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&did=38",
     "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/",
+    "https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf",
+    "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/",
+    "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/",
+    "https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier",
     "https://www.go4vet.com/kleintiere/krankheiten/kaninchen-beim-tierarzt-was-kostet-eine-behandlung-wirklich/",
     "https://www.gesetze-im-internet.de/tierschnutztv/__37.html",
     "https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm",
@@ -7393,7 +7477,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
 
         </figure>
       </div>
-    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-kaninchen-zwei-kaninchen-ziehen-ein-was-brauchen-sie-von-dir">Zwei Kaninchen ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-kaninchen-beduerfnisse">Was ein Kaninchen von dir braucht</a></li><li><a href="#kleintiere-kaninchen-tag">Ein Tag aus Sicht eines Kaninchenpaars</a></li><li><a href="#kleintiere-kaninchen-tierleben">Was es über die Jahre kostet</a></li><li><a href="#kleintiere-kaninchen-abgabe">Abgabealter und Kastration</a></li><li><a href="#kleintiere-kaninchen-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-kaninchen-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
+    </div><nav class="article-toc" aria-label="Inhalt dieser Seite"><details open=""><summary>Auf dieser Seite</summary><ol class="article-toc-list"><li><a href="#kleintiere-kaninchen-zwei-kaninchen-ziehen-ein-was-brauchen-sie-von-dir">Zwei Kaninchen ziehen ein. Was brauchen sie von dir?</a></li><li><a href="#kleintiere-kaninchen-ausweg">Du hast schon ein einzelnes Kaninchen? So kommst du Schritt für Schritt weiter</a></li><li><a href="#kleintiere-kaninchen-natur">So lebt das Kaninchen in der Natur – und was das für die Haltung heißt</a></li><li><a href="#kleintiere-kaninchen-beduerfnisse">Was ein Kaninchen von dir braucht</a></li><li><a href="#kleintiere-kaninchen-gute-haltung">So kann ein gutes Zuhause aussehen</a></li><li><a href="#kleintiere-kaninchen-tag">Ein Tag aus Sicht eines Kaninchens: allein und zu zweit</a></li><li><a href="#kleintiere-kaninchen-verkaufssaetze">Sätze, die man oft hört – und was Kaninchen dazu brauchen</a></li><li><a href="#kleintiere-kaninchen-tierleben">Was es über die Jahre kostet</a></li><li><a href="#kleintiere-kaninchen-abgabe">Abgabealter und Kastration</a></li><li><a href="#kleintiere-kaninchen-selbsttest">Passt ein Kaninchenpaar gerade in dein Leben?</a></li><li><a href="#kleintiere-kaninchen-entscheiden">Bevor du entscheidest</a></li><li><a href="#kleintiere-kaninchen-weitere-themen-in-diesem-bereich">Weitere Themen in diesem Bereich</a></li></ol></details></nav>
 
     <div class="section">
       <div class="container">
@@ -7406,6 +7490,122 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
         <p class="kt-einstieg">Dass du Kaninchen bei dir aufnehmen möchtest, ist ein schöner Gedanke. <strong>Dreh ihn einmal um: Was bräuchten zwei Kaninchen von dir, und was davon hast du schon?</strong></p>
         <p class="kt-randnotiz">Kaninchen gelten als einfache Einsteigertiere. Die <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/" target="_blank" rel="noopener noreferrer"><span class="glossary-term" data-glossary-key="tvt" data-glossary-title="TVT" data-glossary-text="Tierärztliche Vereinigung für Tierschutz. Sie veröffentlicht fachliche Merkblätter zur Tierhaltung." data-glossary-href="../../glossar/index.html#tvt" aria-describedby="glossary-term-popover">Tierärztliche Vereinigung für Tierschutz (TVT)</span></a> schreibt dagegen, ihre Haltung sei aufwendig und erfordere umfassendes Wissen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>). Sie sind Fluchttiere und keine Schmusetiere.</p>
 
+        <h2 id="kleintiere-kaninchen-ausweg">Du hast schon ein einzelnes Kaninchen? So kommst du Schritt für Schritt weiter</h2>
+        <p>Viele Kaninchen leben allein, weil niemand es ihren Menschen erklärt hat. Der Tierschutzbund schreibt, dass viele Kaninchen aus Unwissenheit falsch gehalten werden (<a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Das ist kein Vorwurf. Du kannst es ändern, und du bestimmst das Tempo. Dein Kaninchen muss dafür nirgendwohin.</p>
+        <ol class="nat-schritte">
+          <li><strong>Lass dein Kaninchen untersuchen.</strong> Eine Tierarztpraxis, die sich mit Kaninchen auskennt, prüft Gesundheit, Zähne und Gewicht. Sie impft gegen die Hämorrhagische Kaninchenseuche (RHD) und gegen Myxomatose und bespricht mit dir die Kastration. Männliche Tiere lässt du am besten kastrieren. Vor dem Verpaaren rät die TVT zu einer Blutuntersuchung auf Enzephalitozoonose, eine Infektionskrankheit (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          <li><strong>Mach Platz.</strong> Für zwei Kaninchen brauchst du mindestens 6 m² mit einer Seitenlänge von 2,4 Metern (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Dazu gehört für jedes Tier eine Schlafhöhle. Die Maße stehen unten bei „Platz und Bewegung“.</li>
+          <li><strong>Suche einen Partner im Tierschutz.</strong> Der Tierschutzbund rät, zuerst im nächsten Tierheim nachzufragen. Am besten vertragen sich kastrierte Männchen mit Weibchen (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Frag, wie sich das Tier bisher mit anderen Kaninchen verstanden hat. Auch bei Kaninchen gibt es Sympathien und Antipathien (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+          <li><strong>Führt sie behutsam zusammen.</strong> Bei erwachsenen Tieren geht das nach der TVT am besten vorsichtig, unter ständiger Aufsicht und auf neutralem Boden, also in einem Raum, den keiner der beiden als sein Revier kennt. Streit entsteht oft, wenn Platz und Rückzugsorte fehlen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Plane deshalb für jedes Tier ein eigenes Versteck ein.</li>
+          <li><strong>Hol dir Hilfe, wenn es hakt.</strong> Eine kaninchenkundige Tierarztpraxis oder ein Tierschutzverein in deiner Nähe kann dich beraten.</li>
+        </ol>
+        <div class="nat-ausweg-fuss">
+          <p>Fehlt dir gerade Platz oder Geld für ein zweites Tier? Dann ist „Noch nicht“ eine gute Entscheidung. Hilfe dabei findest du auf der Seite <a href="../../noch-nicht-bereit/index.html">Noch nicht bereit</a>. Tiere aus dem Tierschutz vermittelt die Seite <a href="../../adoption/index.html">Adoption statt Kauf</a>.</p>
+        </div>
+
+        <h2 id="kleintiere-kaninchen-natur">So lebt das Kaninchen in der Natur – und was das für die Haltung heißt</h2>
+        <p class="nat-hinweis">Hauskaninchen stammen vom Europäischen Wildkaninchen ab. Ihr Aussehen hat sich stark verändert, ihr Verhalten weniger (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Wer die Wildform kennt, versteht die fünf Felder unten besser.</p>
+
+        <h3>Woher sie kommen</h3>
+        <p>Das Wildkaninchen stammt aus dem Südwesten Europas, vor allem von der Iberischen Halbinsel (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Es mag trockene, tiefliegende Gebiete mit weichem, sandigem Boden, den es leicht graben kann. Büsche geben ihm Deckung. Mit anderen Kaninchen legt es einen Bau an, ein großes, verzweigtes Röhrensystem (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p>
+
+        <h3>So leben Wildkaninchen</h3>
+        <dl class="nat-liste">
+          <div class="nat-eintrag"><dt>Gruppe</dt><dd>Sie leben in Familienverbänden mit klarer Rangordnung. Mehrere Verbände bilden große Gruppen. Sie liegen dicht beieinander und lecken sich gegenseitig (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Bau und Flucht</dt><dd>Kaninchen sind typische Fluchttiere. Bei Gefahr und zum Ruhen ziehen sie sich in den Bau zurück. Dort ziehen sie auch ihre Jungen auf (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Tagesrhythmus</dt><dd>Wildkaninchen sind vor allem nachts und in der Dämmerung unterwegs. Den Tag verbringen sie größtenteils unter der Erde (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>). Hauskaninchen sind vor allem früh am Morgen und am Abend aktiv (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Streifgebiet</dt><dd>Das Gebiet, in dem ein Wildkaninchen unterwegs ist, umfasst oft nur ein bis zwei Acres. Das sind etwa 4.000 bis 8.000 Quadratmeter (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Nahrung</dt><dd>Kaninchen fressen Gräser, Blätter, Knospen, Rinde und Wurzeln (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). In der Natur verbringen sie einen großen Teil des Tages mit Fressen und Nagen (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>). Die TVT nennt sie „Dauerfresser“, die bis zu 80 Portionen am Tag aufnehmen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Sinne</dt><dd>Die großen Augen sitzen seitlich am Kopf und geben eine Rundumsicht von 360 Grad. Sie reagieren sehr empfindlich auf Bewegung, räumlich sehen Kaninchen aber schlecht. Die großen Ohren wirken wie Schalltrichter, und der Geruchssinn ist sehr fein. Tasthaare am Kopf helfen im Bau und in der Dämmerung bei der Orientierung (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</dd></div>
+          <div class="nat-eintrag"><dt>Körperbau</dt><dd>Die Zähne wachsen ein Leben lang. Sie nutzen sich ab, wenn das Kaninchen Gras, Heu und Zweige kaut (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>). Die Knochen sind leicht: Bei falschem Hochheben kann ein Knochen brechen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</dd></div>
+        </dl>
+
+        <h3>Was das für die Haltung heißt</h3>
+        <p>Maßstab ist, was ein Kaninchen braucht. Das Mindestmaß ist nur die Untergrenze. Je nach Haltungsform liegen die Schwerpunkte anders.</p>
+        <div class="nat-haltung-grid">
+          <section class="nat-haltung" aria-labelledby="kaninchen-natur-innen">
+            <h4 id="kaninchen-natur-innen">Innenhaltung</h4>
+            <ul>
+              <li>Ein eigenes, kaninchensicheres Zimmer oder eine große, strukturierte Fläche. Ein Käfig darf nur ein Rückzugsort sein, mit dauerhaft offener Tür (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Grabfähiges Material in ausreichender Menge (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Der Schweizer Tierschutz sieht die Wohnung kritisch, weil sich der Grabtrieb nur im Freien richtig ausleben lässt (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+              <li>Verstecke und erhöhte Plätze, von denen die Tiere den Überblick behalten (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+              <li>Heu immer verfügbar und Platz zum Laufen früh am Morgen und am Abend, wenn die Tiere am aktivsten sind (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="kaninchen-natur-aussen">
+            <h4 id="kaninchen-natur-aussen">Außenhaltung</h4>
+            <ul>
+              <li>Eine ganzjährige Außenhaltung entspricht nach der TVT am ehesten den natürlichen Bedürfnissen, wenn die Voraussetzungen stimmen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Dazu gehören mindestens 6 m² Auslauf für zwei Tiere, ein wettergeschützter Schutzraum und Schutz vor Ausbuddeln sowie vor Fuchs, Marder, Greifvögeln und Katzen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Die Hälfte der Fläche liegt ständig im Schatten, denn Kaninchen sind hitzeempfindlich (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Im Winter ist eine Haltung im Freien nach dem Schweizer Tierschutz nur mit mindestens vier Kaninchen möglich. Wird das Gehege abends geschlossen, sind die Tiere in ihrer Hauptaktivitätszeit eingesperrt (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+              <li>Die Impfung gegen RHD und Myxomatose gehört unabhängig von der Haltungsform dazu (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            </ul>
+          </section>
+          <section class="nat-haltung" aria-labelledby="kaninchen-natur-auslauf">
+            <h4 id="kaninchen-natur-auslauf">Freigang und Auslauf</h4>
+            <ul>
+              <li>Auslauf ersetzt keine Fläche, die den Tieren dauerhaft gehört. Kombinierst du Käfig und Freilauf, lässt du den Käfig ständig offen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Bei Innenhaltung brauchen Kaninchen nach dem Tierschutzbund täglich ausreichend Auslauf (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+              <li>Leinen und Geschirre sind für Kaninchen ungeeignet und kein Ersatz für Freilauf (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+              <li>Vom Freilauf in der ganzen Wohnung ohne Aufsicht rät der Schweizer Tierschutz ab, schon wegen der Kabel (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+            </ul>
+          </section>
+        </div>
+
+        <h3>In der Natur – in vielen Haushalten</h3>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Gesellschaft</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Familienverband und große Gruppe aus Artgenossen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Ein Mensch oder ein Meerschweinchen ersetzt den Familienverband nicht. Die TVT lehnt Einzelhaltung grundsätzlich ab (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Platz und Graben</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Ein Streifgebiet von mehreren tausend Quadratmetern mit selbstgegrabenem Bau (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Herkömmliche Kaninchenställe sind laut TVT zu klein für die dauerhafte Haltung (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). In der Wohnung lässt sich der Grabtrieb nur eingeschränkt ausleben (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Futter</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Pflanzen, vor allem Gräser, in vielen kleinen Portionen über den Tag (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>; <a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Viele Pellet-, Getreide- und Luzernemischungen hält die TVT für ungeeignet, weil sie zu zucker- und energiereich sind (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Tagesrhythmus</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Aktiv in der Dämmerung, tagsüber Ruhe im Bau (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Wird das Gehege abends geschlossen, sind die Tiere in ihrer Hauptaktivitätszeit eingesperrt (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Sicherheit</b>
+            <div class="nat-natur"><span class="nat-label">In der Natur</span><p>Bei Gefahr zieht sich das Kaninchen in den Bau zurück (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></div>
+            <div class="nat-haushalt"><span class="nat-label">In vielen Haushalten</span><p>Festhalten ist für untrainierte Kaninchen mit Stress verbunden. Stillhalten mit flach angelegten Ohren ist ein Zeichen von Angst, nicht von Wohlbefinden (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Unter „In vielen Haushalten“ steht, was Fachverbände an üblicher Haltung ansprechen. Wie es bei dir aussieht, weißt nur du. Warum Haltung am Ideal statt am Üblichen gemessen wird, steht auf der Seite <a href="../../realhaltung/index.html">Realhaltung</a>. Kaninchen sind keine Wildtiere, ihre Bedürfnisse stammen aber aus dem Leben der Wildform. Wo bei Wildtieren die Grenze verläuft, steht auf der Seite <a href="../../wildtierhaltung/index.html">Private Wildtierhaltung</a>.</p>
+
+        <h3>Auf deine Größe umgerechnet</h3>
+        <div class="nat-vergleiche-koerper">
+          <div class="nat-koerper">
+            <p><strong>Revier und Mindestfläche.</strong> Ein Wildkaninchen bewegt sich oft auf 4.000 bis 8.000 Quadratmetern (<a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web</a>). Das ist bis zu etwa so viel wie ein Fußballfeld. Die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Das sind etwa 0,1 Prozent davon.</p>
+            <p class="nat-rechnung">Rechnung: 6 ÷ 4.047 = 0,0015 und 6 ÷ 8.094 = 0,0007, also 0,07 bis 0,15 Prozent. Ein Acre sind 4.047 m².</p>
+          </div>
+          <div class="nat-koerper">
+            <p><strong>Käfig und Wohnung.</strong> Ein Käfig von 150 × 60 Zentimetern misst 0,9 Quadratmeter. Er darf nach der TVT nur ein Rückzugsort sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Wäre er das ganze Zuhause, bliebe 15 Prozent der Mindestfläche. Bei einer Wohnung mit 60 Quadratmetern wäre das ein Raum von 3 × 3 Metern, dauerhaft und für alles.</p>
+            <p class="nat-rechnung">Rechnung: 1,5 m × 0,6 m = 0,9 m²; 0,9 ÷ 6 = 0,15; 15 Prozent von 60 m² = 9 m².</p>
+          </div>
+        </div>
+
+        <h3>Quellen</h3>
+        <ul class="source-list" aria-label="Quellen zu: So lebt das Kaninchen in der Natur">
+          <li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">Tierärztliche Vereinigung für Tierschutz (TVT): Merkblatt Nr. 157 „Heimtiere – Kaninchen“ (Stand September 2019)</a> – Abstammung, Familienverbände, Rangordnung, Erdhöhlen, Aktivität, Dauerfresser, lebenslang wachsende Zähne, Knochen, Innen- und Außenhaltung, Auslauf, Impfung, Futter.</li>
+          <li><a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS: Merkblatt „Heimtierkaninchen“</a> – Wildkaninchen aus Südeuropa (Spanien), Bausystem, Dämmerungsaktivität, 360-Grad-Rundumsicht, Sinne, Nagen und Fressen, Grabbedürfnis, Wohnungs- und Freilandhaltung.</li>
+          <li><a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web (Universität Michigan): Oryctolagus cuniculus, European rabbit</a> – Verbreitung nach der Eiszeit (Iberische Halbinsel, Teile Frankreichs und Nordwestafrikas), Lebensraum mit sandigem Boden, Bau, überwiegend nachtaktiv, Streifgebiet, Nahrung.</li>
+          <li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Zwergkaninchen</a> – Wildkaninchen im Südwesten Europas, Zähne wachsen ein Leben lang, täglicher Auslauf bei Innenhaltung.</li>
+          <li><a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Pressemeldung „Tierschutzbund gibt Tipps zur artgemäßen Haltung von Zwergkaninchen“ (21. März 2023)</a> – Kaninchen aus Unwissenheit falsch gehalten, keine Einzelgänger, Stress durch Hochheben, kleiner Käfig und Muskulatur, eher für ältere Kinder.</li>
+          <li><a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten: Das Kaninchen als Heimtier</a> – Annahme „anspruchslos und pflegeleicht, ideal für Kinder“ ist falsch, nicht für Kinder unter zehn Jahren, handelsübliche Käfige zu klein.</li>
+        </ul>
+        <p class="text-muted">Alle Quellen wurden im November 2026 abgerufen.</p>
+
         <h2 id="kleintiere-kaninchen-beduerfnisse">Was ein Kaninchen von dir braucht</h2>
         <p class="kt-hinweis">Fünf Felder, immer gleich gebaut: das Maß, zum Vorstellen, eine Frage an dich.</p>
 
@@ -7414,7 +7614,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Mindestens zwei Tiere, am besten ein Paar.</p>
-          <p>Die TVT lehnt Einzelhaltung grundsätzlich ab. Kaninchen liegen eng beieinander und lecken sich gegenseitig, beides gehört zu ihrem Verhalten. Männliche Tiere sollten kastriert werden, weil geschlechtsreife Männchen untereinander unverträglich sind und sonst ungewollter Nachwuchs entsteht. Ein Meerschweinchen ist kein Ersatz: Mit anderen Kleintieren zusammen zu halten, nennt die TVT nicht tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>).</p></dd>
+          <p>Die TVT lehnt Einzelhaltung grundsätzlich ab. Kaninchen liegen eng beieinander und lecken sich gegenseitig, beides gehört zu ihrem Verhalten. Männliche Tiere lässt du am besten kastrieren, weil geschlechtsreife Männchen untereinander unverträglich sind und sonst ungewollter Nachwuchs entsteht. Ein Meerschweinchen ist kein Ersatz: Mit anderen Kleintieren zusammen zu halten, nennt die TVT nicht tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Ein Kaninchen sind zwei Kaninchen. Jede Zahl auf dieser Seite gilt deshalb für ein Paar.</p></dd>
             <dt class="kt-t-frage">Frage an dich</dt>
@@ -7427,7 +7627,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">6 m² Grundfläche für zwei Tiere, mit einer Seitenlänge von mindestens 2,4 m.</p>
-          <p>Die 2,4 m ergeben sich aus drei Hoppelschritten hintereinander, jeder etwa 80 cm lang. Für jedes weitere Tier kommen mindestens 20 Prozent Fläche dazu. Ein Käfig von mindestens 150 × 60 × 50 cm darf nur ein Rückzugsort sein und muss dauerhaft offen stehen. Bei Außenhaltung muss die Hälfte der Fläche, mindestens 3 m², ständig im Schatten liegen, denn Kaninchen sind hitzeempfindlich (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>). Auch der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt sechs Quadratmeter als Minimum für zwei Tiere.</p></dd>
+          <p>Die 2,4 m ergeben sich aus drei Hoppelschritten hintereinander, jeder etwa 80 cm lang. Für jedes weitere Tier kommen mindestens 20 Prozent Fläche dazu. Ein Käfig von mindestens 150 × 60 × 50 cm ist nur als Rückzugsort gedacht. Lass seine Tür dauerhaft offen. Bei Außenhaltung gehört die Hälfte der Fläche, mindestens 3 m², ständig in den Schatten, denn Kaninchen sind hitzeempfindlich (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>). Auch der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> nennt sechs Quadratmeter als Minimum für zwei Tiere.</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>6 m² sind zum Beispiel 2 m × 3 m. Ein Käfig mit 150 × 60 cm deckt davon 0,9 m² ab, das sind 15 Prozent der Fläche.</p>
           <p class="kt-rechnung">Rechnung: 1,5 m × 0,6 m = 0,9 m²; 0,9 ÷ 6 = 0,15.</p></dd>
@@ -7441,7 +7641,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Heu oder frisches Gras ist immer verfügbar. Dazu täglich rund 200 g Frischfutter je Kilogramm Körpergewicht.</p>
-          <p>Die TVT nennt Kaninchen „Dauerfresser“, die bis zu 80 Portionen am Tag aufnehmen. Beim Frischfutter sind es 70 Prozent Grünfutter, 20 Prozent Gemüse und höchstens 10 Prozent Obst. Wasser muss immer bereitstehen. Grundfutter sind Heu und frische Pflanzen, nicht Trockenfutter aus der Zoohandlung; Trockenfutter ist nur ausnahmsweise sinnvoll, wenn die Tiere mehr Energie brauchen, und nur nach Rücksprache mit einer kaninchenkundigen Tierarztpraxis. Stelle das Futter langsam um, denn Fütterungsfehler können tödlich sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>).</p></dd>
+          <p>Die TVT nennt Kaninchen „Dauerfresser“, die bis zu 80 Portionen am Tag aufnehmen. Beim Frischfutter sind es 70 Prozent Grünfutter, 20 Prozent Gemüse und höchstens 10 Prozent Obst. Frisches Wasser gehört immer dazu. Grundfutter sind Heu und frische Pflanzen, nicht Trockenfutter aus der Zoohandlung; Trockenfutter ist nur ausnahmsweise sinnvoll, wenn die Tiere mehr Energie brauchen, und nur nach Rücksprache mit einer kaninchenkundigen Tierarztpraxis. Stelle das Futter langsam um, denn Fütterungsfehler können tödlich sein (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Rechenbeispiel: Zwei Tiere mit je 2 kg Gewicht brauchen am Tag 800 g Frischfutter, davon 560 g Gräser und Kräuter. Jeden Tag, auch am Wochenende.</p>
           <p class="kt-rechnung">Rechnung: 2 × 2 kg × 200 g = 800 g; 70 % davon = 560 g.</p></dd>
@@ -7455,7 +7655,7 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <dl>
             <dt>Das Maß</dt>
             <dd><p class="kt-mass">Hauptaktivität in der Dämmerung, am frühen Morgen und am Abend.</p>
-          <p>Pro Tier gehört mindestens eine Schlafhöhle ins Gehege, und eine davon muss so groß sein, dass alle Tiere gleichzeitig ausgestreckt darin ruhen können. Streicheln ist nur in Ordnung, wenn ein Kaninchen den Kontakt selbst sucht und sich jederzeit zurückziehen kann. Stillhalten mit flach angelegten Ohren ist nach der TVT kein Zeichen von Wohlbefinden, sondern von Angst (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>).</p></dd>
+          <p>Pro Tier gehört mindestens eine Schlafhöhle ins Gehege, und mindestens eine ist so groß, dass alle Tiere gleichzeitig ausgestreckt darin ruhen können. Streicheln ist nur in Ordnung, wenn ein Kaninchen den Kontakt selbst sucht und sich jederzeit zurückziehen kann. Stillhalten mit flach angelegten Ohren ist nach der TVT kein Zeichen von Wohlbefinden, sondern von Angst (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157</a>).</p></dd>
             <dt>Zum Vorstellen</dt>
             <dd><p>Zwei Zeitfenster am Tag, in denen die Tiere am meisten unterwegs sind: früh am Morgen und am Abend.</p></dd>
             <dt class="kt-t-frage">Frage an dich</dt>
@@ -7478,16 +7678,81 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           </dl>
         </div>
 
-        <h2 id="kleintiere-kaninchen-tag">Ein Tag aus Sicht eines Kaninchenpaars</h2>
-        <span class="kt-beispiel">Beispiel, kein echtes Paar</span>
-        <ol class="kt-zeit">
-          <li><span class="kt-wann">Früher Morgen</span><p>Die erste von zwei Hauptaktivitätszeiten. Die Tiere brauchen jetzt Platz zum Laufen, Strukturen zum Aufrichten und Graben und eine Fläche zum Scharren.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Danach: du</span><p>Kot und Urin entfernen, Wasserbehälter gründlich reinigen, Heu und nicht gefressenes Frischfutter austauschen, beide Tiere ansehen.</p></li>
-          <li><span class="kt-wann">Tagsüber</span><p>Zwischen den beiden Aktivitätszeiten ruhen die Tiere in ihrer Schlafhöhle; auch Kontaktliegen gehört zu ihrem Verhalten. Heu steht die ganze Zeit bereit, denn die Tiere fressen über den Tag verteilt.</p></li>
-          <li><span class="kt-wann">Abend</span><p>Die zweite Hauptaktivitätszeit. Wer morgens und abends nicht zu Hause ist, verpasst die beiden Zeiten, in denen die Tiere am aktivsten sind.</p></li>
-          <li class="kt-mensch"><span class="kt-wann">Einmal pro Woche: du</span><p>Gewicht, Schneidezähne, Krallen, Körperöffnungen und Fell prüfen.</p></li>
+        <h2 id="kleintiere-kaninchen-gute-haltung">So kann ein gutes Zuhause aussehen</h2>
+        <p>Gute Haltung braucht keinen Garten wie aus dem Katalog. Sie braucht die richtigen Maße und Dinge, die zum Verhalten der Tiere passen. Zwei Beispiele, gerechnet für ein Paar bis 3 Kilogramm (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>):</p>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 1: Ein Zimmer für zwei, mit wenig Platz</h3>
+          <ul>
+            <li>Ein Raum von 2,4 × 2,5 Metern ergibt 6 m². Die lange Seite erlaubt drei Hoppelschritte hintereinander.</li>
+            <li>Eine Schlafhöhle pro Tier, und eine so groß, dass beide ausgestreckt darin liegen können.</li>
+            <li>Ein Haus mit Flachdach als erhöhte Liegefläche, von der aus die Tiere den Raum überblicken (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+            <li>Eine Kiste oder Wanne mit grabfähigem Material, damit sie scharren und graben können (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Kabel, Möbel und Tapeten sind geschützt oder gar nicht im Raum (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+            <li>Ein Käfig steht nur als Rückzugsort im Raum, seine Tür bleibt dauerhaft offen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+          </ul>
+        </div>
+        <div class="nat-beispiel-haltung">
+          <h3>Beispiel 2: Ein Außengehege mit Schutzraum</h3>
+          <ul>
+            <li>Mindestens 6 m² Auslauf mit Strukturen wie Baumwurzeln, Röhren und Ästen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Ein wettergeschützter Schutzraum, in dem alle Tiere ausgestreckt liegen und sich aufrichten können (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Mindestens die Hälfte der Fläche, also 3 m², liegt dauernd im Schatten (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Gesichert gegen Ausbuddeln und gegen Fuchs, Marder, Greifvögel und Katzen (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</li>
+            <li>Im Winter mindestens vier Kaninchen, damit sie sich warm halten (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</li>
+          </ul>
+        </div>
+        <p class="nat-fuss">Beide Beispiele sind aus den Maßen der TVT und des Schweizer Tierschutzes zusammengesetzt, es sind keine Fotos von Gehegen. Die Maße dazu stehen oben bei den fünf Feldern.</p>
+
+        <h2 id="kleintiere-kaninchen-tag">Ein Tag aus Sicht eines Kaninchens: allein und zu zweit</h2>
+        <span class="kt-beispiel">Beispiel, kein echtes Tier</span>
+        <h3>Allein im Stall</h3>
+        <ol class="nat-ich">
+          <li><span class="nat-wann">Früher Morgen</span><p>Es dämmert. Jetzt bin ich aktiv. Mein Körper ist darauf gebaut, zu rennen, Haken zu schlagen und mich aufzurichten. Mein Stall ist einen Meter lang. Für drei Hoppelschritte hintereinander bräuchte ich 2,40 Meter (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
+          <li><span class="nat-wann">Vormittag</span><p>Ich liege allein. In der Natur liege ich dicht bei anderen Kaninchen, und wir lecken uns gegenseitig (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Hier ist niemand.</p></li>
+          <li><span class="nat-wann">Mittag</span><p>Zu meinem natürlichen Verhalten gehört das Graben. Dafür gibt es hier nur eine Ecke mit Einstreu (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>; <a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></li>
+          <li><span class="nat-wann">Abend</span><p>Die zweite Aktivzeit beginnt. Wird mein Stall jetzt geschlossen, bin ich in meiner Hauptaktivitätszeit eingesperrt (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></li>
+          <li><span class="nat-wann">Später</span><p>Jemand hebt mich hoch. Ich bleibe starr, die Ohren liegen flach am Körper. Das ist kein Zeichen von Wohlbefinden. Es ist Schreckstarre (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
         </ol>
-        <p class="kt-legende">Der Ablauf ist ein Beispiel aus den Verhaltensangaben des TVT-Merkblatts. Wie ein bestimmtes Paar seinen Tag verbringt, kann abweichen.</p>
+        <h3>Ein guter Tag zu zweit</h3>
+        <ol class="nat-ich nat-ich-gut">
+          <li><span class="nat-wann">Früher Morgen</span><p>Mein Partner und ich laufen los. Wir haben Platz zum Rennen, Strukturen zum Aufrichten und eine Fläche zum Scharren (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
+          <li><span class="nat-wann">Danach: du</span><p>Du entfernst Kot und Urin, reinigst den Wassernapf gründlich und tauschst Heu und nicht gefressenes Frischfutter aus. Du siehst dir uns beide an (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
+          <li><span class="nat-wann">Tagsüber</span><p>Wir ruhen in unserer Schlafhöhle, dicht nebeneinander. Heu steht die ganze Zeit bereit, denn wir fressen über den Tag verteilt (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
+          <li><span class="nat-wann">Abend</span><p>Die zweite Aktivzeit. Wenn du da bist und uns Auslauf lässt, nutzen wir sie (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
+          <li><span class="nat-wann">Einmal pro Woche: du</span><p>Du prüfst Gewicht, Schneidezähne, Krallen, Körperöffnungen und Fell (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></li>
+        </ol>
+        <p class="kt-legende">Beide Abläufe sind Beispiele. Sie stützen sich auf Verhaltensangaben aus dem TVT-Merkblatt und dem Merkblatt des Schweizer Tierschutzes. Das Maß des Stalls ist eine Annahme für das Beispiel. Wie ein bestimmtes Tier seinen Tag verbringt, kann abweichen.</p>
+
+        <h2 id="kleintiere-kaninchen-verkaufssaetze">Sätze, die man oft hört – und was Kaninchen dazu brauchen</h2>
+        <p>Beim Kauf und in Ratgebern kehren dieselben Sätze wieder. Tierschutzorganisationen greifen sie ausdrücklich auf. Hier steht, was die Fachleute dazu sagen. Was du daraus machst, entscheidest du.</p>
+        <ul class="nat-vergleich">
+          <li>
+            <b class="nat-thema">Kinder und Pflege</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Kaninchen sind anspruchslos und pflegeleicht, also ideal als erstes Haustier für Kinder.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Vier Pfoten nennt das eine falsche Annahme: Die Haltung braucht viel Zeit und Fachwissen, und Kaninchen sind nicht für Kinder unter zehn Jahren geeignet (<a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten</a>). Die TVT nennt die Haltung aufwendig (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Käfig</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Käfig reicht.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Die TVT hält die reine Käfighaltung nicht für tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Nach dem Tierschutzbund verkümmert die Muskulatur im handelsüblichen kleinen Käfig (<a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Ein Tier</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Kaninchen allein reicht.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Kaninchen sind keine Einzelgänger und fühlen sich nur in Gesellschaft wohl (<a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Die TVT lehnt Einzelhaltung grundsätzlich ab (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Kuscheln</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Ein Kaninchen zum Kuscheln und Streicheln.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Hochgehoben und gekuschelt zu werden, bedeutet für die meisten Kaninchen Stress (<a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>). Streicheln ist nur in Ordnung, wenn das Tier selbst den Kontakt sucht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</p></div>
+          </li>
+          <li>
+            <b class="nat-thema">Meerschweinchen</b>
+            <div class="nat-natur"><span class="nat-label">Man hört</span><p>„Kaninchen und Meerschweinchen sind ein schönes Paar.“</p></div>
+            <div class="nat-haushalt"><span class="nat-label">Das sagen die Fachleute</span><p>Die TVT hält die gemeinsame Haltung mit anderen Kleinsäugern wegen des unterschiedlichen Verhaltens nicht für tiergerecht (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>). Auch der Schweizer Tierschutz sieht darin keinen artgerechten Ersatz (<a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz</a>).</p></div>
+          </li>
+        </ul>
+        <p class="nat-fuss">Die Sätze stammen aus den Ratgebern von Tierschutzorganisationen, die sie als verbreitete Annahmen nennen. Ob dir jemand so etwas gesagt hat, weißt nur du. Wer dich gut berät, nennt dir auch die Dinge, die gegen einen schnellen Kauf sprechen.</p>
 
         <h2 id="kleintiere-kaninchen-tierleben">Was es über die Jahre kostet</h2>
         <div class="metric-grid article-rhythm" aria-label="Kosten für zwei Kaninchen auf einen Blick">
@@ -7523,17 +7788,53 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <p>Der <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutsche Tierschutzbund</a> empfiehlt, dass Jungtiere beim Einzug mindestens zehn Wochen alt sind. Die spezialisierte Tierhilfe <a href="https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm" target="_blank" rel="noopener noreferrer">Moppel-Hoppel Tiere in Not</a> vermittelt Jungtierpaare erst ab der zwölften Woche. Das ist eine strengere Praxis, keine zusätzliche gesetzliche Grenze.</p>
         </div>
         <p><strong>Für die Entscheidung gilt:</strong> nicht vor zehn Wochen, besser mit zwölf Wochen und niemals allein. Ein passender Artgenosse, Gesundheit, Impfschutz und eine kaninchengerechte Haltung gehören immer dazu.</p>
-        <p><strong>Kastration:</strong> Rammler (männliche Kaninchen) sollten kastriert werden, damit Männchen und Weibchen friedlich zusammenleben und kein Nachwuchs entsteht. Bei Häsinnen, die nicht kastriert sind, kommen Gebärmuttererkrankungen häufig vor, und das Risiko für Tumore steigt mit dem Alter. Es gibt keinen einzelnen Prozentwert, der für jede Häsin zuverlässig vorhersagt, ob sie erkrankt. Besprich Nutzen und Operationsrisiko früh mit einer kaninchenerfahrenen Tierarztpraxis. Mehr dazu steht auf der Seite <a href="../../kastration/index.html">Kastration</a>.</p>
+        <p><strong>Kastration:</strong> Rammler (männliche Kaninchen) lässt du am besten kastrieren, damit Männchen und Weibchen friedlich zusammenleben und kein Nachwuchs entsteht. Bei Häsinnen, die nicht kastriert sind, kommen Gebärmuttererkrankungen häufig vor, und das Risiko für Tumore steigt mit dem Alter. Es gibt keinen einzelnen Prozentwert, der für jede Häsin zuverlässig vorhersagt, ob sie erkrankt. Besprich Nutzen und Operationsrisiko früh mit einer kaninchenerfahrenen Tierarztpraxis. Mehr dazu steht auf der Seite <a href="../../kastration/index.html">Kastration</a>.</p>
+
+        <h2 id="kleintiere-kaninchen-selbsttest">Passt ein Kaninchenpaar gerade in dein Leben?</h2>
+        <p>Ein kurzer, ehrlicher Test nur für dich. Hake ab, was heute schon stimmt. Deine Kreuze werden nicht gespeichert und nirgendwohin gesendet.</p>
+        <details class="nat-test">
+          <summary>Sieben Fragen öffnen</summary>
+          <div class="nat-test-inhalt">
+            <ul>
+              <li><label><input type="checkbox"><span><strong>Partnertier:</strong> Ich nehme zwei Kaninchen auf, oder ich habe schon eins und suche ihm einen Partner im Tierschutz.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Platz:</strong> Ich kann zwei Tieren dauerhaft mindestens 6 m² mit einer Seitenlänge von 2,4 Metern überlassen, auch nach einem Umzug.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Zeit:</strong> Ich bin früh am Morgen und am Abend da, wenn die Tiere aktiv sind. Täglich sorge ich für Heu, Frischfutter und Reinigung.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Urlaub und Krankheit:</strong> Ich habe jemanden, der Kaninchen kennt und einspringt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tierarzt:</strong> Ich kenne eine Praxis, die Kaninchen behandelt, und habe Geld für Impfung, Kastration, Zähne und Notfälle.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Tagesbetrag:</strong> Ich kann rund 3 bis 5,40 Euro am Tag für beide Tiere aufbringen, ohne dass es mir schwerfällt.</span></label></li>
+              <li><label><input type="checkbox"><span><strong>Lebensdauer:</strong> Ich kann mich 8 bis 12 Jahre kümmern (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>).</span></label></li>
+            </ul>
+            <div class="nat-test-schluss">
+              <p><strong>Wenn du nicht alles abhaken konntest:</strong> Das ist ein ehrliches Ergebnis. „Noch nicht“ ist eine gute Entscheidung für dich und für die Tiere.</p>
+              <p><a href="../../noch-nicht-bereit/index.html">Was jetzt hilft: Noch nicht bereit</a></p>
+            </div>
+          </div>
+        </details>
 
         <h2 id="kleintiere-kaninchen-entscheiden">Bevor du entscheidest</h2>
         <div class="kt-bedenkzeit">
           <p><strong>Ein Kaninchenpaar muss nicht heute einziehen.</strong></p>
-          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegen mindestens drei Nächte, und du siehst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite, keine Vorschrift. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
+          <p>Wir empfehlen: Zwischen dem ersten Besuch und der Zusage liegt eine Woche, und du siehst die Tiere an zwei verschiedenen Tagen. Das ist eine Empfehlung dieser Seite, keine Vorschrift. Wer dir die Zeit nicht lässt, nimmt dir die Entscheidung ab.</p>
         </div>
+        <div class="nat-bremse" id="kaninchen-karte">
+          <span class="nat-bremse-titel">Bevor du ein Kaninchen holst</span>
+          <p class="nat-bremse-gross">Schlaf eine Woche darüber.</p>
+          <p>Fünf Fragen an den Anbieter:</p>
+          <ol>
+            <li>Wie alt sind die Tiere? Beim Einzug sollten Jungtiere mindestens zehn Wochen alt sein (<a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Tierschutzbund</a>).</li>
+            <li>Sind sie gesund und gegen RHD und Myxomatose geimpft (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>)?</li>
+            <li>Leben die Tiere schon als Paar zusammen, und sind die Männchen kastriert (<a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT</a>)?</li>
+            <li>Kann ich sehen, wo und wie die Tiere leben?</li>
+            <li>Kann ich ein Tier zurückgeben, wenn es nicht passt?</li>
+          </ol>
+          <p class="nat-bremse-fuss">Du darfst auch „Noch nicht“ sagen. Fragen kostet nichts, und wer dir Zeit lässt, ist ein guter Gesprächspartner.</p>
+        </div>
+        <p class="nat-bremse-aktion"><a class="btn btn-outline" href="../../assets/karten/karte-bevor-du-ein-kaninchen-holst.png" download="karte-bevor-du-ein-kaninchen-holst.png">Karte als Bild speichern</a></p>
+
         <div class="kt-karte">
           <span class="kt-karte-titel">Wenn-dann-Karte für den Besuch beim Anbieter</span>
           <ul>
-            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in drei Tagen.“</span></li>
+            <li><span class="kt-wenn"><b>Wenn</b> es heißt „heute noch, sonst nehmen es andere Interessenten“,</span><span class="kt-dann"><b>dann</b> sage ich: „Ich melde mich in einer Woche.“</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> ich nur ein einzelnes Kaninchen mitnehmen soll,</span><span class="kt-dann"><b>dann</b> nehme ich keins mit.</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> ich die Tiere nicht dort sehen darf, wo sie leben,</span><span class="kt-dann"><b>dann</b> fahre ich ohne Tier wieder heim.</span></li>
             <li><span class="kt-wenn"><b>Wenn</b> mir ein Tier leidtut,</span><span class="kt-dann"><b>dann</b> rufe ich das nächste Tierheim an und frage dort nach Kaninchen, statt zu kaufen.</span></li>
@@ -7618,15 +7919,15 @@ body.static-site .kt-weg-label { font-family: var(--font-sans); font-size: 0.75r
           <div class="evidence-grid">
             <article class="evidence-card">
               <h3>Kurz festgehalten</h3>
-              <ul><li>Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6 m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20 Prozent mehr.</li><li>Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.</li><li>Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.</li><li>Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.</li><li>Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen.</li></ul>
+              <ul><li>Zwei Kaninchen brauchen nach dem TVT-Merkblatt Nr. 157 mindestens 6 m² Grundfläche mit einer Seitenlänge von mindestens 2,4 m, für jedes weitere Tier mindestens 20 Prozent mehr.</li><li>Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.</li><li>Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.</li><li>Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.</li><li>Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.</li><li>Das Streifgebiet eines Wildkaninchens ist oft nur ein bis zwei Acres groß (etwa 4.000 bis 8.000 Quadratmeter); die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.</li><li>Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.</li><li>Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen.</li></ul>
             </article>
             <article class="evidence-card">
               <h3>Fachquellen</h3>
-              <ul><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157: Heimtiere – Kaninchen, Stand September 2019</a></li><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Zwergkaninchen</a></li><li><a href="https://www.go4vet.com/kleintiere/krankheiten/kaninchen-beim-tierarzt-was-kostet-eine-behandlung-wirklich/" target="_blank" rel="noopener noreferrer">go4vet: Kaninchen beim Tierarzt, was kostet eine Behandlung wirklich?</a></li><li><a href="https://www.gesetze-im-internet.de/tierschnutztv/__37.html" target="_blank" rel="noopener noreferrer">Tierschutz-Nutztierhaltungsverordnung § 37</a></li><li><a href="https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm" target="_blank" rel="noopener noreferrer">Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li></ul>
+              <ul><li><a href="https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&amp;L=0&amp;download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&amp;did=38" target="_blank" rel="noopener noreferrer">TVT-Merkblatt Nr. 157: Heimtiere – Kaninchen, Stand September 2019</a></li><li><a href="https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Zwergkaninchen</a></li><li><a href="https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf" target="_blank" rel="noopener noreferrer">Schweizer Tierschutz STS: Merkblatt Heimtierkaninchen</a></li><li><a href="https://animaldiversity.org/accounts/Oryctolagus_cuniculus/" target="_blank" rel="noopener noreferrer">Animal Diversity Web: Oryctolagus cuniculus</a></li><li><a href="https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Pressemeldung zur artgemäßen Haltung von Zwergkaninchen (21.03.2023)</a></li><li><a href="https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier" target="_blank" rel="noopener noreferrer">Vier Pfoten: Das Kaninchen als Heimtier</a></li><li><a href="https://www.go4vet.com/kleintiere/krankheiten/kaninchen-beim-tierarzt-was-kostet-eine-behandlung-wirklich/" target="_blank" rel="noopener noreferrer">go4vet: Kaninchen beim Tierarzt, was kostet eine Behandlung wirklich?</a></li><li><a href="https://www.gesetze-im-internet.de/tierschnutztv/__37.html" target="_blank" rel="noopener noreferrer">Tierschutz-Nutztierhaltungsverordnung § 37</a></li><li><a href="https://www.moppel-hoppel.de/Vermittlung--von-Kaninchen.htm" target="_blank" rel="noopener noreferrer">Moppel-Hoppel Tiere in Not: Vermittlung von Kaninchen</a></li><li><a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Tierschutz_beim_Einkauf.pdf" target="_blank" rel="noopener noreferrer">Deutscher Tierschutzbund: Broschüre „Tierschutz im Einkaufskorb“</a></li></ul>
             </article>
             <article class="evidence-card">
               <h3>Grenzen der Einordnung</h3>
-              <ul><li>Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.</li><li>Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.</li><li>Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.</li><li>Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.</li></ul>
+              <ul><li>Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.</li><li>Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.</li><li>Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.</li><li>Die Bedenkzeit von einer Woche und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.</li><li>Die Ich-Beispiele zum Tagesablauf und die beiden Haltungsbeispiele sind aus den Maßen der Merkblätter zusammengesetzt; es sind keine echten Tiere und keine Fotos von Gehegen.</li></ul>
             </article>
           </div>
         </div>

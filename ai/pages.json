@@ -512,13 +512,17 @@
         "Zwei Wellensittiche kosten nach den Rechenwerten der Kostenseite mindestens etwa 0,90 bis 1,80 Euro am Tag (3.200 bis 6.600 Euro über zehn Jahre).",
         "Ein Mensch, ein Spiegel oder ein Vogel einer anderen Art ersetzt keinen Wellensittich.",
         "Eine gesetzliche Abgabewoche gibt es nicht; unser ethischer Maßstab für geplante Abgabe liegt bei zwölf Wochen und setzt zusätzlich Reife, Gesundheit und passende Sozialhaltung voraus.",
-        "Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung."
+        "Zucht vermehrt nicht nur Vögel, sondern auch Gesundheitsrisiken, Unterbringungsbedarf und Verantwortung.",
+        "Wellensittiche stammen aus dem trockenen Landesinneren Australiens, leben dort in Schwärmen, ziehen als Nomaden dem Regen nach und suchen nach Angabe des Tierschutzbundes etwa 80 Prozent des Tages nach Futter, meist Samen vom Boden.",
+        "Wellensittiche haben vier Zapfentypen in der Netzhaut und sehen UV-Licht; Fensterglas filtert nach der Vereinigung der Vogeltierärzte (AAV) UVB und UVA weitgehend heraus.",
+        "Einzeln gehaltene Wellensittiche lassen sich nach der TVT in der Regel ohne Probleme mit Artgenossen zusammenführen."
       ],
       "citationGuardrails": [
         "Die konkreten Anforderungen unterscheiden sich nach Vogelart, Alter, Gesundheit, Gruppenzusammensetzung und Haltungsform; die Maße dieser Übersicht gelten für Wellensittiche.",
         "Die Maße folgen dem Deutschen Tierschutzbund. Das TVT-Merkblatt nennt kleinere Mindestwerte (150 × 60 × 100 cm für ein bis drei Paare); Mindestmaße sind keine Zusage, dass Haltung damit automatisch tiergerecht ist.",
         "Die Kosten pro Tag sind eine Untergrenze aus Praxisangaben von go4vet: Beleuchtung samt Strom, Notfälle, Betreuung und eine Voliere in der empfohlenen Größe sind nicht eingerechnet.",
-        "Die Bedenkzeit von drei Nächten ist eine Empfehlung dieser Seite und nicht untersucht.",
+        "Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.",
+        "Die Sätze aus dem Handel und die Ich-Beispiele zum Tagesablauf sind Beispiele; belegt ist das Verhalten, nicht ein bestimmter Käfig. Die Außenvoliere auf dem Foto wurde für Katharinasittiche gebaut.",
         "Lampenabstand, UV-Anteil und Nutzungsdauer müssen zum Leuchtmittel und zur Vogelart passen; Herstellerangaben und vogelkundige Beratung sind verbindlicher als pauschale Internetwerte.",
         "Bei Atemnot, Apathie, Futterverweigerung, Gleichgewichtsstörungen, Blutungen oder Aufenthalt am Käfigboden ist schnelle vogelkundige Hilfe nötig."
       ],
@@ -542,6 +546,30 @@
         {
           "label": "go4vet: Wellensittich beim Tierarzt, was kostet eine Behandlung?",
           "url": "https://www.go4vet.com/voegel/krankheiten/wellensittich-beim-tierarzt-was-kostet-eine-behandlung/"
+        },
+        {
+          "label": "BirdLife Australia: Budgerigar",
+          "url": "https://birdlife.org.au/bird-profiles/budgerigar/"
+        },
+        {
+          "label": "Bush Heritage Australia: Wild Budgerigars",
+          "url": "https://www.bushheritage.org.au/species/budgerigars"
+        },
+        {
+          "label": "Association of Avian Veterinarians: Ultraviolet Light as a Critical Component of Companion Bird Husbandry (2024)",
+          "url": "https://cdn.ymaws.com/www.aav.org/resource/resmgr/pdf_2024/240326-2_UVL.pdf"
+        },
+        {
+          "label": "Goldsmith, Butler (2005): Color vision of the budgerigar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16086150/"
+        },
+        {
+          "label": "Pearn, Bennett, Cuthill (2001): Ultraviolet vision, fluorescence and mate choice in a parrot, the budgerigar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11674876/"
+        },
+        {
+          "label": "MSD Veterinary Manual: Disorders Affecting Multiple Body Systems of Pet Birds",
+          "url": "https://www.merckvetmanual.com/bird-owners/disorders-and-diseases-of-birds/disorders-affecting-multiple-body-systems-of-pet-birds"
         },
         {
           "label": "Tierschutzgesetz § 2",
@@ -1709,13 +1737,17 @@
         "Kaninchen werden paarweise gehalten; Einzelhaltung lehnt die TVT grundsätzlich ab, und ein Meerschweinchen ersetzt keinen Kaninchenpartner.",
         "Die Regel von über 28 Tagen in § 37 TierSchNutztV betrifft das Absetzen von Jungtieren in Zuchtkaninchenbeständen, nicht den verantwortbaren Umzug eines Heimtierkaninchens.",
         "Der Deutsche Tierschutzbund empfiehlt beim Einzug ein Mindestalter von zehn Wochen; die Tierhilfe Moppel-Hoppel vermittelt Jungtierpaare ab der zwölften Woche.",
+        "Wildkaninchen stammen aus dem Südwesten Europas (Iberische Halbinsel), leben in Familienverbänden in selbstgegrabenen Bauten und sind vor allem nachts und in der Dämmerung aktiv; ihre Zähne wachsen ein Leben lang.",
+        "Das Streifgebiet eines Wildkaninchens ist oft nur ein bis zwei Acres groß (etwa 4.000 bis 8.000 Quadratmeter); die Mindestfläche für zwei Heimkaninchen beträgt 6 Quadratmeter.",
+        "Vier Pfoten, Tierschutzbund und TVT widersprechen den Sätzen „pflegeleicht“, „ideal für Kinder“, „ein Käfig reicht“ und „ein Kaninchen allein reicht“.",
         "Der Deutsche Tierschutzbund nennt für zwei Zwergkaninchen mindestens 10.770 Euro in zehn Jahren; die Betrag-pro-Tag-Rechnung ist eine Hochrechnung aus denselben Spannen."
       ],
       "citationGuardrails": [
         "Die Maße gelten für Kaninchen bis 3 kg; schwerere Tiere brauchen deutlich mehr Platz.",
         "Zehn Wochen sind die fachliche Mindestempfehlung, nicht das Ziel für eine möglichst frühe Abgabe; zwölf Wochen sind eine strengere Orientierung aus der Vermittlungspraxis, keine gesetzliche Grenze.",
         "Die Kosten sind Mindestwerte ohne Notfälle, Urlaubsbetreuung und Versicherung und gelten für zwei Zwergkaninchen.",
-        "Die Bedenkzeit von drei Nächten und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften."
+        "Die Bedenkzeit von einer Woche und die Wenn-dann-Karte sind Empfehlungen dieser Seite, keine Vorschriften.",
+        "Die Ich-Beispiele zum Tagesablauf und die beiden Haltungsbeispiele sind aus den Maßen der Merkblätter zusammengesetzt; es sind keine echten Tiere und keine Fotos von Gehegen."
       ],
       "sources": [
         {
@@ -1725,6 +1757,22 @@
         {
           "label": "Deutscher Tierschutzbund: Zwergkaninchen",
           "url": "https://www.tierschutzbund.de/tiere-themen/haustiere/andere-haustiere/zwergkaninchen/"
+        },
+        {
+          "label": "Schweizer Tierschutz STS: Merkblatt Heimtierkaninchen",
+          "url": "https://tierschutz.com/app/uploads/2023/11/kaninchen.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Oryctolagus cuniculus",
+          "url": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Pressemeldung zur artgemäßen Haltung von Zwergkaninchen (21.03.2023)",
+          "url": "https://www.tierschutzbund.de/ueber-uns/aktuelles/presse/meldung/tierschutzbund-gibt-tipps-zur-artgemaessen-haltung-von-zwergkaninchen/"
+        },
+        {
+          "label": "Vier Pfoten: Das Kaninchen als Heimtier",
+          "url": "https://www.vier-pfoten.de/unseregeschichten/ratgeber-heimtiere/kaninchen-als-heimtier"
         },
         {
           "label": "go4vet: Kaninchen beim Tierarzt, was kostet eine Behandlung wirklich?",
