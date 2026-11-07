@@ -13,7 +13,7 @@ Aufbau: Einstieg bei dem, was viele denken („Dann eben vom Züchter“), dann 
 „Dann eben vom Züchter. Da ist man auf der sicheren Seite.“
 So denken viele, die keinem Vermehrer Geld geben wollen. Der Gedanke ist gut gemeint.
 Nur: Papiere und Sorgfalt schützen nicht davor, dass ein Tier unter seinem Körperbau leidet.
-Wisch durch: Was ein Züchter garantieren kann und was nicht.
+Wisch durch: was ein Züchter garantieren kann und was nicht.
 
 **Folie 2** (Bild: folie-2)
 Papiere zeigen, woher ein Tier stammt.
@@ -48,7 +48,7 @@ Quelle: Deutscher Tierschutzbund; TASSO; VIER PFOTEN
 
 **Folie 7** (Bild: folie-7)
 Dein Tier ist schon vom Züchter?
-Dann bekommst du hier keinen Vorwurf. Du hast einem Tier ein Zuhause gegeben. Das kannst du jetzt für es tun:
+Dann bekommst du hier keinen Vorwurf. Du hast einem Tier ein Zuhause gegeben. Das kannst du jetzt für dein Tier tun:
 Rasse kennen: Lies nach, welche gesundheitlichen Probleme in seiner Rasse bekannt sind und woran du sie erkennst.
 Kein Wurf „für die Gesundheit“: Bei Hündinnen und Kätzinnen gibt es für einen Nutzen keinen tiermedizinischen Beleg. Ob und wann eine Kastration passt, klärst du in der Tierarztpraxis.
 Chip prüfen: Ist er registriert und der Halterwechsel gemeldet?
