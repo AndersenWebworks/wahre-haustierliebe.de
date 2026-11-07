@@ -136,7 +136,52 @@
     });
   }
 
+  /* Paket menue: Tastaturbedienung der Auswahlmenüs im Kopf (Pfeiltasten, Pos1/Ende, Fokus verlässt das Menü). */
+  function initMenuKeyboard() {
+    var dropdowns = Array.prototype.slice.call(document.querySelectorAll('.nav-links .dropdown'));
+    function items(menu) {
+      return Array.prototype.slice.call(menu.querySelectorAll('a[href], button')).filter(function (el) {
+        return el.offsetParent !== null || el === document.activeElement;
+      });
+    }
+    function setOpen(dd, open) {
+      dd.classList.toggle('open', open);
+      var t = dd.querySelector('.dropdown-toggle');
+      if (t) t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    dropdowns.forEach(function (dd) {
+      var toggle = dd.querySelector('.dropdown-toggle');
+      var menu = dd.querySelector('.dropdown-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowDown') return;
+        e.preventDefault();
+        setOpen(dd, true);
+        var list = items(menu);
+        var target = menu.querySelector('.browse-tab.is-active') || list[0];
+        if (target) target.focus();
+      });
+      menu.addEventListener('keydown', function (e) {
+        var keys = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
+        if (keys.indexOf(e.key) === -1) return;
+        var list = items(menu);
+        var i = list.indexOf(document.activeElement);
+        if (!list.length) return;
+        e.preventDefault();
+        if (e.key === 'ArrowDown') i = i + 1 >= list.length ? 0 : i + 1;
+        else if (e.key === 'ArrowUp') i = i <= 0 ? list.length - 1 : i - 1;
+        else if (e.key === 'Home') i = 0;
+        else i = list.length - 1;
+        list[i].focus();
+      });
+      dd.addEventListener('focusout', function (e) {
+        if (e.relatedTarget && !dd.contains(e.relatedTarget)) setOpen(dd, false);
+      });
+    });
+  }
+
   ready(function () {
+    initMenuKeyboard();
     initSavedFields();
     initTocSpy();
     initTierweiche();

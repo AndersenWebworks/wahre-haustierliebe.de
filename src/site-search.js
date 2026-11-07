@@ -359,6 +359,7 @@
       function start() {
         track('site-search-input', 'site-search-results', undefined);
         track('mobile-site-search-input', 'mobile-site-search-results', { limit: 6 });
+        track('start-site-search-input', 'start-site-search-results', { limit: 6 });
         loadSiteSearchIndex();
       }
       document.addEventListener('pointerdown', function(event) {
