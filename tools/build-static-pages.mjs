@@ -680,7 +680,6 @@ const evidenceByPage = {
     guardrails: [
       'Die Forschung zum Wolf erklärt, woher Bedürfnisse kommen, und ist keine Erziehungsanleitung; der Hund ist kein Wolf.',
       'Wann und wo der Hund domestiziert wurde, ist unter Fachleuten umstritten.',
-      'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
       'Rasse, Alter, Gesundheit und Alltag verändern, was ein Hund konkret braucht.',
       'Die TierSchHuV nennt keine starre Minutenformel; Auslauf und Sozialkontakte müssen individuell passend sein.',
       'Zwingerhaltung ist rechtlich nur unter Mindestanforderungen möglich; grundsätzlich verboten ist die Anbindehaltung.',
@@ -762,7 +761,6 @@ const evidenceByPage = {
     guardrails: [
       'Die Kosten pro Tag sind eine Hochrechnung aus Spannen für eine gesunde Einzelkatze und keine Zusage; Notfälle, Betreuung und Urlaub sind nicht enthalten.',
       'Eine Quadratmeterzahl nennen die Quellen nicht; entscheidend ist, wie viel der Wohnung für die Katze nutzbar ist.',
-      'Die Bedenkzeit von einer Woche ist eine Empfehlung dieser Seite und nicht untersucht.',
       'Die Falbkatze als Stammform erklärt, woher Bedürfnisse kommen; sie ist kein Haltungsvorbild, und ein einzelner erfasster Wert für ein Streifgebiet gilt nicht für alle Wildkatzen.',
       'Die Streifgebietsgröße von 2,6 Hektar stammt aus einer Studie mit 92 Katzen mit Auslauf in Norwegen und gilt nicht für alle Freigängerkatzen.',
       'Wohnungshaltung bleibt ein Kompromiss, der nur mit Sozialkontakt, Struktur und Beschäftigung tragfähig wird.',
@@ -792,7 +790,6 @@ const evidenceByPage = {
       'Der Deutsche Tierschutzbund empfiehlt für Kitten mindestens zehn, besser zwölf Wochen bei Mutter und Geschwistern; für Katzen nennt das Gesetz keine Wochenzahl.',
       'Der Tierschutzbund rät, sich zuerst in Tierheimen umzusehen und gerade für Wohnungskatzen zwei Katzen aufzunehmen, die sich verstehen.',
       'Deutsche Tierheime nehmen jährlich rund 350.000 Tiere neu auf (Schätzung des Tierschutzbundes).',
-      'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
     sources: [
       ['Deutscher Tierschutzbund: Katzenhaltung', 'https://www.tierschutzbund.de/tiere-themen/haustiere/katzen/katzenhaltung/'],
@@ -1138,7 +1135,6 @@ const evidenceByPage = {
       'Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.',
       'Die Leitlinien von 2009 beschreiben Mindestanforderungen, nicht das Ideal; ein Haltungssystem ist nur vertretbar, wenn es Sozialkontakt, Bewegung, Futteraufnahme und Schutz ermöglicht.',
       'Wie nah das Przewalski-Pferd mit dem Hauspferd verwandt ist, ist unter Fachleuten noch umstritten.',
-      'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
   },
   'pferde-kosten': {
@@ -1160,7 +1156,6 @@ const evidenceByPage = {
   'pferde-entscheidung': {
     facts: [
       'Tägliches Prüfen des Wohlbefindens, Auslauf von 150 m² für bis zu zwei Pferde plus 40 m² je weiteres Pferd, Hufkontrolle alle 6 bis 8 Wochen.',
-      'Ob eine Bedenkzeit von einer Woche die Haltung verbessert, ist für Pferde nicht untersucht.',
     ],
     sources: [
       ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],
@@ -1195,7 +1190,6 @@ const evidenceByPage = {
     guardrails: [
       'Das BMEL-Gutachten von 1997 wird überarbeitet; die Maße können sich ändern.',
       'Die Kosten sind eine grobe Schätzung für ein einzelnes Tier aus Beispielpreisen vom November 2026, ohne Tierarzt und Notfälle; Preise und Strombedarf hängen von Gerät und Tarif ab.',
-      'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
   },
   'exoten-schildkroeten': {
@@ -1221,7 +1215,6 @@ const evidenceByPage = {
       'Fristen und Verfahren der Bestandsanzeige legt die zuständige Behörde des Landes fest.',
       'Die Kosten sind eine grobe Schätzung aus der Praxis-Information von go4vet für ein einzelnes Tier, ohne Gruppe und ohne Operationen; über 80 Jahre ändern sich Preise.',
       'Die Angaben zu Revier, Wegstrecke und Tagesrhythmus stammen aus Feldstudien an wild lebenden Tieren in Frankreich, Griechenland, Italien und Spanien und gelten im Mittel; einzelne Tiere weichen ab.',
-      'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
   },
   'exoten-fische': {
@@ -1248,7 +1241,6 @@ const evidenceByPage = {
       'Das Gutachten nennt keine Besatzdichte; mehr Wasservolumen macht die Wasserqualität stabiler.',
       'Die Kosten sind eine grobe Schätzung aus Beispielpreisen vom November 2026; Mengen für Bodengrund, Futter und Wasseraufbereiter sind Annahmen, Tierarzt, Unterschrank und Beleuchtung sind nicht eingerechnet.',
       'Die Quellen nennen unterschiedliche Tagesrhythmen (tagaktiv oder dämmerungsaktiv) und unterschiedliche Vorfahren des Goldfischs; die Seite gibt beides wieder.',
-      'Eine Bedenkzeit von einer Woche und zwei Besuchen ist eine Empfehlung dieser Seite und nicht untersucht.',
     ],
   },
   kastration: {
@@ -3107,7 +3099,7 @@ function buildMoreTopicsNav(page) {
         <nav class="topic-context-nav article-rhythm" aria-label="Weitere Themen">
           <div class="topic-context-head">
             <span class="eyebrow">${escapeHtml(config.eyebrow)}</span>
-            <h2>Weitere Themen</h2>
+            <h2${page.staticOnly ? ` id="${page.id}-weitere-themen"` : ''}>Weitere Themen</h2>
           </div>
           <div class="topic-context-grid">
 ${links}
@@ -3850,7 +3842,12 @@ async function extractStaticOnlySection(page) {
   const mainEnd = html.indexOf('</main>', contentStart);
   if (mainEnd === -1) throw new Error(`Missing main close for static page: ${page.id}`);
 
-  return ensureStaticSectionIdentity(html.slice(contentStart, mainEnd).trim(), page);
+  // Die Ausgabedatei ist hier zugleich Quelle: vom Build eingefügte Kästen vorher entfernen, damit der Bau idempotent bleibt.
+  const content = html.slice(contentStart, mainEnd).trim()
+    .replace(/\n?[ \t]*<nav class="topic-context-nav[^"]*"[\s\S]*?<\/nav>/g, '')
+    // Das Inhaltsverzeichnis baut die Seite zur Laufzeit selbst (buildArticleToc); eine mitgespeicherte Fassung veraltet und doppelt Einträge.
+    .replace(/<nav class="article-toc"[\s\S]*?<\/nav>/g, '');
+  return ensureStaticSectionIdentity(content, page);
 }
 
 function buildOnHoldStandalonePage(page) {
