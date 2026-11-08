@@ -187,7 +187,7 @@ const pages = [
     description: 'Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.',
     intent: 'Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden',
     priority: '0.85',
-    lastmod: '2026-11-07',
+    lastmod: '2026-11-08',
   },
   {
     id: 'adoption',
