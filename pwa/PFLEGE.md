@@ -10,10 +10,11 @@ pwa/
 ├── quiz.html           Session, eine Frage pro Bildschirm
 ├── ergebnis.html       Score, Highscore, Wiki-Brücke, Teilen
 ├── manifest.json        Web-App-Manifest (App-Name, Farben, Icons)
-├── sw.js               Service Worker, network-first mit Offline-Cache (whl-pwa-v3)
+├── sw.js               Service Worker, network-first mit Offline-Cache (whl-pwa-v6)
 ├── css/
 │   └── whl-pwa.css     WHL-Designtokens, Mobile-Layout, Modus-Akzente, Animationen
 ├── js/
+│   ├── datenloeschen.js  Knopf „Gespeicherte Daten löschen“ mit Rückfrage
 │   ├── whl.js          Datenladen, Storage, Helfer, Modi-Akzente
 │   ├── app.js          Start-Screen, Modus- und Kategorie-Auswahl, bester Run
 │   ├── quiz.js         Session, Timer, Tap-Moment, Fall-Szene, Schwierigkeit
@@ -130,7 +131,7 @@ Beispiel-Eintrag (Fall-Entscheidung, mit Sticker):
 }
 ```
 
-Nach jeder Änderung: die `version`-Konstante oben in `data/questions.js` auf YYYY-MM-DD.N setzen, zum Beispiel `2026-09-30.1`. Beim nächsten Start zeigt die Startseite kurz „Neue Fragen sind da. Viel Spaß beim Spielen!“.
+Nach jeder Änderung: die `version`-Konstante oben in `data/questions.js` auf YYYY-MM-DD.N setzen, zum Beispiel `2026-09-30.1`. Die Version wird nicht mehr im Browser gespeichert; einen Hinweis „Neue Fragen“ gibt es nicht mehr. Online lädt der Service Worker ohnehin immer den aktuellen Stand.
 
 Damit eine Frage eine Herausforderung bleibt, darf die richtige Antwort nicht an der Länge oder an ihrer Ausführlichkeit erkennbar sein. Falschantworten sind plausible Irrtümer, keine offensichtlichen Unsinnsantworten.
 
@@ -228,3 +229,19 @@ Jede Frage hat einen `wikiPath` auf eine bestehende Seite und einen `sourceRef` 
 ## Updates und Cache
 
 Der Service Worker holt online immer zuerst den aktuellen Stand vom Server und fällt nur offline auf den Cache zurück. Nach einem Deploy sieht man die neue Fassung deshalb beim nächsten Laden, ohne Cache-Buster und ohne App-Neustart.
+
+## Gespeicherte Daten
+
+Das Quiz legt nur diese Einträge im Gerät an (keine Cookies, keine Übertragung):
+
+| Schlüssel | Ort | Inhalt | Dauer |
+| --- | --- | --- | --- |
+| `whl_quiz_highscore_v2` | localStorage | Highscores je Modus und Kategorie, bester Run | bis zum Löschen |
+| `whl_quiz_seen_v1` | localStorage | IDs gesehener Fragen (höchstens 400), damit neue Fragen zuerst kommen | bis zum Löschen |
+| `whl_quiz_daily_v1` | localStorage | Tagesfrage: Datum, Antwort, Serie, Summen | bis zum Löschen |
+| `whl_quiz_session_v2` | sessionStorage | laufende Runde | bis der Tab geschlossen wird |
+| Cache `whl-pwa-v*` | Cache des Service Workers | App-Dateien für den Offline-Betrieb | bis zum Löschen oder zur nächsten Cache-Version |
+
+Der frühere Schlüssel `whl_quiz_version_seen` entfällt; vorhandene Reste werden beim Start entfernt.
+
+Der Knopf „Gespeicherte Daten löschen“ (Startseite und Ergebnisseite, `js/datenloeschen.js`, Logik `clearAllQuizData()` in `js/whl.js`) fragt nach und entfernt dann diese Schlüssel, meldet den Service Worker ab und löscht alle Caches mit Präfix `whl-pwa-`. Fremde Schlüssel der Hauptseite (gleiche Domain) bleiben unberührt. Danach lädt die Startseite mit `?geloescht=1` neu; das registriert den Service Worker nicht sofort wieder. Wer einen neuen Schlüssel einführt, trägt ihn in `STORAGE_KEYS` ein, sonst wird er nicht mitgelöscht.

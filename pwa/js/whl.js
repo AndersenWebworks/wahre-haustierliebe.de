@@ -5,9 +5,38 @@ const STORAGE_KEYS = {
   HIGHSCORE: "whl_quiz_highscore_v2",
   SEEN: "whl_quiz_seen_v1",
   SESSION: "whl_quiz_session_v2",
-  VERSION: "whl_quiz_version_seen",
   DAILY: "whl_quiz_daily_v1"
 };
+
+// Früher gespeicherte, heute nicht mehr genutzte Schlüssel. Sie werden beim
+// Start einmal entfernt und beim Löschen mit aufgeräumt.
+const LEGACY_KEYS = ["whl_quiz_version_seen"];
+const CACHE_PREFIX = "whl-pwa-";
+
+try { LEGACY_KEYS.forEach(k => localStorage.removeItem(k)); } catch (e) { /* ignoriert */ }
+
+// Löscht alles, was dieses Quiz auf dem Gerät anlegt: localStorage, sessionStorage
+// und die Caches des Service Workers (nur whl-pwa-*). Keine Netzwerkanfrage.
+// Fremde Schlüssel der Hauptseite (gleiche Domain) bleiben unberührt.
+export async function clearAllQuizData() {
+  const keys = Object.values(STORAGE_KEYS).concat(LEGACY_KEYS);
+  keys.forEach(k => {
+    try { localStorage.removeItem(k); } catch (e) { /* ignoriert */ }
+    try { sessionStorage.removeItem(k); } catch (e) { /* ignoriert */ }
+  });
+  try {
+    if ("serviceWorker" in navigator) {
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r => r.unregister()));
+    }
+  } catch (e) { /* ignoriert */ }
+  try {
+    if ("caches" in window) {
+      const names = await caches.keys();
+      await Promise.all(names.filter(n => n.startsWith(CACHE_PREFIX)).map(n => caches.delete(n)));
+    }
+  } catch (e) { /* ignoriert */ }
+}
 
 export const QUIZ_SIZE = 10;
 const SEEN_LIMIT = 400;
@@ -234,21 +263,11 @@ export function saveDaily(key, questionId, correct) {
 export function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol === "file:") return;
+  // Direkt nach dem Löschen nicht sofort wieder anlegen.
+  if (new URLSearchParams(location.search).has("geloescht")) return;
   const register = () => navigator.serviceWorker.register("sw.js").catch(() => { /* still ok */ });
   if (document.readyState === "complete") register();
   else window.addEventListener("load", register);
-}
-
-// true, wenn seit dem letzten Besuch eine neue Fragenversion angekommen ist.
-export function checkQuestionUpdate(data) {
-  try {
-    const seen = localStorage.getItem(STORAGE_KEYS.VERSION);
-    if (seen && seen === data.version) return false;
-    localStorage.setItem(STORAGE_KEYS.VERSION, data.version);
-    return seen !== null;
-  } catch (e) {
-    return false;
-  }
 }
 
 export function formatNumber(n) {
