@@ -1121,6 +1121,8 @@ const evidenceByPage = {
       ['go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)', 'https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/'],
       ['RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)', 'https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd'],
       ['Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)', 'https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/'],
+      ['futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)', 'https://www.futter.de/ratgeber/anschaffung/pferd-kosten'],
+      ['Österreichischer Tierschutzverein: Ein Tierschutz-Pferd aus der Pferdeklappe adoptieren', 'https://tierschutzverein.at/pferdeklappe-reutte/adoptionsprozess/'],
       ['Tierschutzgesetz § 2', 'https://www.gesetze-im-internet.de/tierschg/__2.html'],
       ['Deutscher Tierschutzbund: Reitstall-Check', 'https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf'],
       ['WWF Deutschland: Wildpferde', 'https://www.wwf.de/themen-projekte/bedrohte-tier-und-pflanzenarten/wildpferde'],
@@ -1146,6 +1148,8 @@ const evidenceByPage = {
     sources: [
       ['RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)', 'https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd'],
       ['Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)', 'https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/'],
+      ['futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)', 'https://www.futter.de/ratgeber/anschaffung/pferd-kosten'],
+      ['Österreichischer Tierschutzverein: Ein Tierschutz-Pferd aus der Pferdeklappe adoptieren', 'https://tierschutzverein.at/pferdeklappe-reutte/adoptionsprozess/'],
       ['go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)', 'https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/'],
     ],
     guardrails: [
@@ -1161,6 +1165,7 @@ const evidenceByPage = {
       ['BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)', 'https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile'],
       ['go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)', 'https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/'],
       ['RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)', 'https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd'],
+      ['futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)', 'https://www.futter.de/ratgeber/anschaffung/pferd-kosten'],
     ],
     guardrails: [
       'Eine Checkliste ersetzt keine Beratung durch eine Tierarztpraxis und keinen Stallbesuch.',
