@@ -7699,7 +7699,7 @@ html { scroll-behavior: smooth; }
           <li>Highscore: Ihre beste Punktzahl je Spielmodus und Kategorie.</li>
           <li>Bereits gespielte Fragen: die Kennungen der zuletzt gespielten Fragen (höchstens 400), damit Fragen nicht gleich wiederkehren.</li>
           <li>Frage des Tages: Datum, Ihre Antwort, Serie der Tage in Folge, beste Serie sowie Zahl der beantworteten und der richtig beantworteten Tagesfragen.</li>
-          <li>Zuletzt gesehene Version des Fragensatzes, damit das Quiz Sie auf neue Fragen hinweisen kann.</li>
+
           <li>Laufende Runde (Fragen, Antworten, Punktestand) im sessionStorage. Sie gilt nur für den geöffneten Tab und verfällt, sobald Sie ihn schließen.</li>
           <li>Das Quiz registriert einen Service Worker. Er legt Programmdateien, Fragen und Grafiken des Quiz im Cache Ihres Browsers ab, damit das Quiz auch ohne Netzverbindung läuft. Bei bestehender Verbindung lädt er stets den aktuellen Stand vom Server.</li>
         </ul>
@@ -7710,6 +7710,7 @@ html { scroll-behavior: smooth; }
         <p>Urlaubsplan und Quiz-Stände bleiben gespeichert, bis Sie sie löschen. Ein automatisches Ablaufdatum gibt es nicht. Die laufende Runde verfällt mit dem Tab. Der Quiz-Cache wird bei einer neuen Programmversion ersetzt.</p>
         <p>So löschen Sie die Angaben:</p>
         <ul>
+          <li>Im Lern-Quiz entfernt der Knopf „Gespeicherte Daten löschen“ auf der Startseite und auf der Ergebnisseite nach einer Rückfrage alle Spielstände, die gesehenen Fragen, die Tagesfrage und den Quiz-Cache auf diesem Gerät.</li>
           <li>Im Urlaubsplan entfernt „Zurücksetzen“ alle Haken; das Textfeld leeren Sie selbst.</li>
           <li>Vollständig löschen Sie alles in den Einstellungen Ihres Browsers: Dort entfernen Sie unter „Cookies und Websitedaten“ (je nach Browser auch „Website-Daten“) die Daten zu wahre-haustierliebe.de. Das schließt den Quiz-Cache ein.</li>
           <li>In einem privaten Fenster verfällt alles, sobald Sie es schließen.</li>
