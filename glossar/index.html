@@ -951,6 +951,38 @@
       color: var(--text-muted);
       font-size: 0.92rem;
     }
+    .breed-group { margin-top: 1.4rem; }
+    .breed-group.is-hidden { display: none; }
+    .breed-group h3 {
+      margin: 0 0 0.4rem;
+      color: var(--primary-dark);
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+    .breed-group-intro {
+      margin: 0 0 0.85rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .breed-disease-card h4 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+    .breed-card-said {
+      display: grid;
+      gap: 0.42rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid rgba(31, 58, 47, 0.12);
+    }
+    .breed-card-said p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .breed-card-said strong { color: var(--primary-dark); }
     .breed-lexicon-note {
       margin-top: 1.1rem;
       color: var(--text-muted);
@@ -7720,7 +7752,7 @@ html { scroll-behavior: smooth; }
       <div class="container">
         <div class="section-feedback-heading"><h2 id="begriffe" class="mt-2">Glossar</h2><button type="button" class="section-feedback-action" data-feedback-section="begriffe" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
-        <input type="text" class="glossary-search" id="glossary-search" placeholder="Suchbegriff eingeben ..." oninput="filterGlossary()" aria-describedby="glossary-filter-status"><p id="glossary-filter-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">123 Glossar-Einträge sichtbar.</p>
+        <input type="text" class="glossary-search" id="glossary-search" placeholder="Suchbegriff eingeben ..." oninput="filterGlossary()" aria-describedby="glossary-filter-status"><p id="glossary-filter-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">124 Glossar-Einträge sichtbar.</p>
 
                 <dl id="glossary-list">
           <div class="glossary-item" id="adoption" data-glossary-key="adoption" data-enhancements-hydrated="true"><dt>Adoption</dt><dd>Ein Tier aus dem Tierheim, von einer Tierschutzorganisation oder aus einer Pflegestelle bei sich aufnehmen. Dafür wird kein neu gezüchtetes Tier gekauft.</dd></div>
@@ -7804,8 +7836,9 @@ html { scroll-behavior: smooth; }
           <div class="glossary-item" id="potenzierung" data-glossary-key="potenzierung"><dt>Potenzierung</dt><dd>Verfahren der Homöopathie: Ein Stoff wird schrittweise verdünnt und verschüttelt. Bei hohen Potenzen ist vom Ausgangsstoff rechnerisch kein Molekül mehr enthalten.</dd></div>
           <div class="glossary-item" id="ptfe" data-glossary-key="ptfe"><dt>PTFE</dt><dd>Kunststoff in Antihaftbeschichtungen (Polytetrafluorethylen, bekannt als Teflon). Wird er überhitzt, entstehen Dämpfe, die für Vögel sehr schnell tödlich sein können.</dd></div>
           <div class="glossary-item" id="pyometra" data-glossary-key="pyometra"><dt>Pyometra</dt><dd>Gebärmuttervereiterung. Sie tritt vor allem bei unkastrierten Hündinnen und Katzen auf und ist lebensbedrohlich, wenn sie nicht schnell behandelt wird.</dd></div>
-          <div class="glossary-item" id="qualzucht" data-glossary-key="qualzucht" data-enhancements-hydrated="true"><dt>Qualzucht</dt><dd>Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken. Qualzucht ist nach § 11b Tierschutzgesetz verboten, lässt sich aber schwer durchsetzen.</dd></div>
+          <div class="glossary-item" id="qualzucht" data-glossary-key="qualzucht" data-enhancements-hydrated="true"><dt>Qualzucht</dt><dd>Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken. Das angezüchtete Merkmal selbst macht krank, etwa die platte Nase. Qualzucht ist nach § 11b Tierschutzgesetz verboten, lässt sich aber schwer durchsetzen.</dd></div>
           <div class="glossary-item" id="rassemerkmal" data-glossary-key="rassemerkmal"><dt>Rassemerkmal</dt><dd>Eigenschaft, die bei einer Rasse gezielt gewünscht wird. Ein Merkmal kann beliebt aussehen und trotzdem Gesundheit, Bewegung, Atmung oder Sinne belasten.</dd></div>
+          <div class="glossary-item" id="rassetypische-erkrankung" data-glossary-key="rassetypische-erkrankung"><dt>Rassetypische Erkrankung</dt><dd>Erblich mitbedingte Krankheit, die in einer Rasse oder bei großen und schweren Hunden gehäuft vorkommt, etwa Hüftdysplasie. Anders als bei Qualzucht ist nicht ein angezüchtetes Merkmal wie die platte Nase die Ursache. Die Grenze zur Qualzucht ist nicht immer scharf.</dd></div>
           <div class="glossary-item" id="raufutter" data-glossary-key="raufutter"><dt>Raufutter</dt><dd>Faserreiches Futter wie Heu, Gras oder Stroh. Für Pferde und viele andere Pflanzenfresser ist es wichtig für die Verdauung, die Beschäftigung und lange Fresszeiten.</dd></div>
           <div class="glossary-item" id="registrierungspflicht" data-glossary-key="registrierungspflicht"><dt>Registrierungspflicht</dt><dd>Vorschrift, ein gekennzeichnetes Tier mit den Daten des Halters in einem Haustierregister einzutragen. Erst dann nützt der Chip oder die Tätowierung, wenn ein Tier gefunden wird.</dd></div>
           <div class="glossary-item" id="rolligkeit" data-glossary-key="rolligkeit"><dt>Rolligkeit</dt><dd>Paarungsbereite Phase bei unkastrierten Katzen. Sie kann alle zwei bis drei Wochen auftreten und mit Stress, Rufen, Unruhe und Gesundheitsrisiken verbunden sein.</dd></div>

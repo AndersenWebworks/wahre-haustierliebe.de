@@ -579,7 +579,7 @@
       "key": "qualzucht",
       "title": "Qualzucht",
       "summary": "Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken.",
-      "description": "Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken. Qualzucht ist nach § 11b Tierschutzgesetz verboten, lässt sich aber schwer durchsetzen.",
+      "description": "Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken. Das angezüchtete Merkmal selbst macht krank, etwa die platte Nase. Qualzucht ist nach § 11b Tierschutzgesetz verboten, lässt sich aber schwer durchsetzen.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#qualzucht"
     },
     {
@@ -588,6 +588,13 @@
       "summary": "Züchterisch gewünschtes Merkmal einer Rasse. Nicht jedes Rassemerkmal ist gesund oder harmlos.",
       "description": "Eigenschaft, die bei einer Rasse gezielt gewünscht wird. Ein Merkmal kann beliebt aussehen und trotzdem Gesundheit, Bewegung, Atmung oder Sinne belasten.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#rassemerkmal"
+    },
+    {
+      "key": "rassetypische-erkrankung",
+      "title": "Rassetypische Erkrankung",
+      "summary": "Erblich mitbedingte Krankheit, die sich in einer Rasse oder bei großen und schweren Hunden häuft. Das Aussehen selbst ist nicht die Ursache.",
+      "description": "Erblich mitbedingte Krankheit, die in einer Rasse oder bei großen und schweren Hunden gehäuft vorkommt, etwa Hüftdysplasie. Anders als bei Qualzucht ist nicht ein angezüchtetes Merkmal wie die platte Nase die Ursache. Die Grenze zur Qualzucht ist nicht immer scharf.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#rassetypische-erkrankung"
     },
     {
       "key": "raufutter",

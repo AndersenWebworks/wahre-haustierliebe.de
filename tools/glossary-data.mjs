@@ -463,7 +463,13 @@ export const glossaryTerms = [
     key: 'qualzucht',
     title: 'Qualzucht',
     summary: 'Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken.',
-    description: 'Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken. Qualzucht ist nach § 11b Tierschutzgesetz verboten, lässt sich aber schwer durchsetzen.',
+    description: 'Zucht auf Merkmale, die Schmerzen, Leiden oder Schäden verursachen oder normale Körperfunktionen einschränken. Das angezüchtete Merkmal selbst macht krank, etwa die platte Nase. Qualzucht ist nach § 11b Tierschutzgesetz verboten, lässt sich aber schwer durchsetzen.',
+  },
+  {
+    key: 'rassetypische-erkrankung',
+    title: 'Rassetypische Erkrankung',
+    summary: 'Erblich mitbedingte Krankheit, die sich in einer Rasse oder bei großen und schweren Hunden häuft. Das Aussehen selbst ist nicht die Ursache.',
+    description: 'Erblich mitbedingte Krankheit, die in einer Rasse oder bei großen und schweren Hunden gehäuft vorkommt, etwa Hüftdysplasie. Anders als bei Qualzucht ist nicht ein angezüchtetes Merkmal wie die platte Nase die Ursache. Die Grenze zur Qualzucht ist nicht immer scharf.',
   },
   {
     key: 'rassemerkmal',
@@ -864,6 +870,7 @@ export const glossaryAnnotationsByPage = {
   qualzucht: [
     { from: 'Qualzucht bedeutet: Tiere werden auf äußere Merkmale gezüchtet', to: `${mark('qualzucht', 'Qualzucht')} bedeutet: Tiere werden auf äußere ${mark('rassemerkmal', 'Merkmale')} gezüchtet` },
     { from: '§ 11b TierSchG', to: `§ 11b ${mark('tierschg', 'TierSchG')}` },
+    { from: 'Rassetypische Erkrankungen haben eine andere Ursache', to: `${mark('rassetypische-erkrankung', 'Rassetypische Erkrankungen')} haben eine andere Ursache` },
     { from: '(<a href="#glossar" onclick="navigateTo(\'glossar\');return false">Brachyzephalie</a>)', to: `(${mark('brachyzephalie', 'Brachyzephalie')})` },
     { from: 'chronischer Atemnot (Brachyzephales Atemwegssyndrom)', to: `chronischer Atemnot (${mark('brachyzephales-atemwegssyndrom', 'Brachyzephales Atemwegssyndrom')})` },
     { from: 'eines Gendefekts', to: `eines ${mark('gendefekt', 'Gendefekts')}` },

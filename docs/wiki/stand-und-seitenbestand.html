@@ -37,7 +37,7 @@
     <main class="content">
       <article class="page">
         <h1>Stand und Seitenbestand</h1>
-        <p class="status">Stand 9. Oktober 2026, am Repo und an der Live-Seite geprüft; Seitenzahl, Glossar und Herkunftsseite am 24. Oktober 2026, Zuchtseite am 7. November 2026 lokal ergänzt</p>
+        <p class="status">Stand 9. Oktober 2026, am Repo und an der Live-Seite geprüft; Seitenzahl, Glossar und Herkunftsseite am 24. Oktober 2026, Zuchtseite am 7. November 2026 lokal ergänzt, Lexikon-Trennung am 8. November 2026</p>
 
         <p>Wa(h)re Haustier(liebe) ist eine private, werbefreie Aufklärungsseite über Haustierhaltung. Sie ist als wachsendes Lexikon gebaut: wenige Übersichtsseiten (Hubs) für Tierarten und Grundsatzthemen, darunter echte Unterseiten zu einzelnen Fragen. Diese Seite hält fest, welche Seiten es gibt, welche Sonderbausteine wo stecken und was bewusst nicht öffentlich auffindbar ist.</p>
 
@@ -50,7 +50,7 @@
             <tr><td>Letzte Auslieferung laut GitHub Pages</td><td><code>Last-Modified: Wed, 07 Oct 2026 15:20:09 GMT</code></td></tr>
             <tr><td>Lokaler Stand gegen GitHub</td><td><code>main</code> ist 2 Commits voraus (Instagram-Entwurf Kaninchen-Preis-Decoder, Wiki-Grundstock); beide betreffen nur <code>docs/</code></td></tr>
             <tr><td>Glossarbegriffe</td><td>123 am 8. November 2026 (am 24. Oktober: 119, am 7. November: 121; neu am 8. November: Auslauf, Paddock) (<code>tools/glossary-data.mjs</code>, <code>glossar/index.html</code>)</td></tr>
-            <tr><td>Rassekrankheiten-Lexikon</td><td>20 Einträge, 44 Quellenlinks</td></tr>
+            <tr><td>Rassekrankheiten-Lexikon</td><td>20 Einträge (10 Qualzucht, 10 rassetypisch), 51 Quellenlinks in den Karten (Stand 8. November 2026)</td></tr>
             <tr><td>Laufende Petitionen auf der Seite</td><td>4</td></tr>
             <tr><td>Quizfragen in der PWA</td><td>280, siehe <a href="pwa-und-quiz.html">PWA und Quiz</a></td></tr>
           </tbody>
@@ -100,7 +100,7 @@
         <p class="source">Quelle: Commits <code>49a9cd8</code> (14.09.), <code>c85aa05</code>, <code>84ebe23</code>, <code>d1b4e3c</code> (30.09.), <code>e4d104e</code>, <code>2cf0bfd</code> (07.10.); <code>docs/quiz-handoff.md</code> (Abschnitt „Was in der Session vom 30.09. passiert ist“)</p>
 
         <h2 id="rassekrankheiten">Rassekrankheiten-Lexikon</h2>
-        <p>Auf <code>qualzucht/</code> steht ein such- und filterbares Lexikon zu Zucht- und Erbkrankheiten bei Hunden und Katzen. Jeder Eintrag ist eine Karte mit Auftreten, Schwere, Häufigkeit und eigener Quellenliste. Es gibt Filter nach Tierart und Körperbereich und eine Freitextsuche; die Statuszeile zeigt „20 von 20 Einträgen sichtbar“.</p>
+        <p>Auf <code>qualzucht/</code> steht ein such- und filterbares Lexikon zu Zucht- und Erbkrankheiten bei Hunden und Katzen. Seit 8. November 2026 ist es in zwei Gruppen geteilt: Qualzucht (zehn Karten) und rassetypische Erkrankungen (zehn Karten, jede mit „Gilt als“ und „Dahinter steckt“). Jeder Eintrag ist eine Karte mit Auftreten, Schwere, Häufigkeit und eigener Quellenliste. Es gibt Filter nach Tierart, Einordnung und Körperbereich und eine Freitextsuche; die Statuszeile zeigt „20 von 20 Einträgen sichtbar“.</p>
         <p>Einträge am 9. Oktober 2026: Brachyzephales Atemwegssyndrom, Augenprobleme durch flache Gesichter, Bandscheibenerkrankungen und Lähmungen, Chiari-like Malformation und Syringomyelie, Mitralklappenerkrankung, Hüftdysplasie, Ellbogendysplasie, Patellaluxation, Dilatative Kardiomyopathie, Degenerative Myelopathie, Faltenhaut und eingerollte Lider, Angeborene Taubheit, Scottish-Fold-Osteochondrodysplasie, Brachyzephalie bei Katzen, Polyzystische Nierenerkrankung, Hypertrophe Kardiomyopathie, Haarlosigkeit und fehlende Tasthaare, Manx-Syndrom, Progressive Retinaatrophie, Kongenitales Myasthenie-Syndrom.</p>
         <p>Das Lexikon ist ausdrücklich als wachsend und quellenpflichtig formuliert, nicht als vollständig. Seit der Einführung am 18. Juni 2026 ist kein Eintrag dazugekommen.</p>
         <p class="source">Quelle: <code>qualzucht/index.html</code> (Klassen <code>breed-lexicon</code>, <code>breed-disease-card</code>, <code>breed-source-list</code>), ausgezählt am 9. Oktober 2026; erster Commit mit <code>breed-lexicon</code>: <code>9fc0ca9</code> vom 18.06.2026</p>

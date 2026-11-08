@@ -885,17 +885,22 @@ URL: https://wahre-haustierliebe.de/qualzucht/index.html
 Facts:
 - Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.
 - Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.
+- Rassetypische Erkrankungen wie Hüftdysplasie, Degenerative Myelopathie oder Herzmuskelerkrankungen sind keine Folge eines angezüchteten Aussehens, sondern häufen sich erblich in einer Rasse oder bei großen und schweren Hunden. Die Grenze zur Qualzucht ist nicht immer scharf.
+- Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.
 - Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.
 - Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.
 Important boundaries:
 - Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.
-- Kaufe und bewirb keine Tiere, deren rassetypische Merkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.
+- Kaufe und bewirb keine Tiere, deren Rassemerkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.
 Sources:
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
 - BMEL: Gutachten zur Auslegung von § 11b TierSchG: https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html
 - RVC VetCompass Brachycephaly: https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass
 - OMIA - Online Mendelian Inheritance in Animals: https://omia.org/home/
 - Science for Animal Welfare (ehemals UFAW): Genetic Welfare Problems of Companion Animals: https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/
+- Mills et al. 2020: Pain and Problem Behavior in Cats and Dogs (Animals 10(2):318): https://pmc.ncbi.nlm.nih.gov/articles/PMC7071134/
+- Cornell University: Canine hip dysplasia (CHD): https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/canine-hip-dysplasia-chd
+- Oberbauer et al. 2017: Long-term genetic selection reduced prevalence of hip and elbow dysplasia in 60 dog breeds (PLoS One): https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/
 - UC Davis Veterinary Genetics Laboratory: https://vgl.ucdavis.edu/dna-tests/cat
 - LSU Deafness in Dogs & Cats: https://www.lsu.edu/vetmed/deafness/index.php
 

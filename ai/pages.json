@@ -3067,7 +3067,7 @@
       "id": "qualzucht",
       "url": "https://wahre-haustierliebe.de/qualzucht/index.html",
       "title": "Qualzucht und Rassekrankheiten erkennen",
-      "description": "Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
+      "description": "Qualzucht und rassetypische Erkrankungen bei Hunden und Katzen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
       "intent": "Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden",
       "keywords": [
         "Qualzucht",
@@ -3080,12 +3080,14 @@
       "facts": [
         "Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.",
         "Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.",
+        "Rassetypische Erkrankungen wie Hüftdysplasie, Degenerative Myelopathie oder Herzmuskelerkrankungen sind keine Folge eines angezüchteten Aussehens, sondern häufen sich erblich in einer Rasse oder bei großen und schweren Hunden. Die Grenze zur Qualzucht ist nicht immer scharf.",
+        "Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.",
         "Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.",
         "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien."
       ],
       "citationGuardrails": [
         "Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.",
-        "Kaufe und bewirb keine Tiere, deren rassetypische Merkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen."
+        "Kaufe und bewirb keine Tiere, deren Rassemerkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen."
       ],
       "sources": [
         {
@@ -3109,6 +3111,18 @@
           "url": "https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/"
         },
         {
+          "label": "Mills et al. 2020: Pain and Problem Behavior in Cats and Dogs (Animals 10(2):318)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7071134/"
+        },
+        {
+          "label": "Cornell University: Canine hip dysplasia (CHD)",
+          "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/canine-hip-dysplasia-chd"
+        },
+        {
+          "label": "Oberbauer et al. 2017: Long-term genetic selection reduced prevalence of hip and elbow dysplasia in 60 dog breeds (PLoS One)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/"
+        },
+        {
           "label": "UC Davis Veterinary Genetics Laboratory",
           "url": "https://vgl.ucdavis.edu/dna-tests/cat"
         },
@@ -3119,7 +3133,7 @@
       ],
       "social": {
         "title": "Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert",
-        "description": "Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.",
+        "description": "Suchbares Lexikon zu Qualzucht und rassetypischen Erkrankungen bei Hunden und Katzen, mit Quellen und klarer Einordnung.",
         "image": "https://wahre-haustierliebe.de/assets/social/qualzucht.png",
         "imageAlt": "Mops als Beispiel für problematische Zuchtmerkmale.",
         "imageWidth": 1200,

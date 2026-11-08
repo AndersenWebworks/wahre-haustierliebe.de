@@ -184,7 +184,7 @@ const pages = [
     id: 'qualzucht',
     slug: 'qualzucht',
     title: 'Qualzucht und Rassekrankheiten erkennen',
-    description: 'Qualzucht und Rassekrankheiten bei Hunden und Katzen erkennen: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.',
+    description: 'Qualzucht und rassetypische Erkrankungen bei Hunden und Katzen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.',
     intent: 'Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden',
     priority: '0.85',
     lastmod: '2026-11-08',
@@ -1344,6 +1344,8 @@ const evidenceByPage = {
     facts: [
       'Qualzucht liegt vor, wenn Zuchtmerkmale Schmerzen, Leiden, Schäden oder eingeschränkte normale Lebensfunktionen verursachen.',
       'Atemnot, extreme Körperformen, Augen-, Ohren-, Fell- und Bewegungsprobleme sind keine niedlichen Eigenheiten.',
+      'Rassetypische Erkrankungen wie Hüftdysplasie, Degenerative Myelopathie oder Herzmuskelerkrankungen sind keine Folge eines angezüchteten Aussehens, sondern häufen sich erblich in einer Rasse oder bei großen und schweren Hunden. Die Grenze zur Qualzucht ist nicht immer scharf.',
+      'Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.',
       'Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.',
       'Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.',
     ],
@@ -1353,12 +1355,15 @@ const evidenceByPage = {
       ['RVC VetCompass Brachycephaly', 'https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass'],
       ['OMIA - Online Mendelian Inheritance in Animals', 'https://omia.org/home/'],
       ['Science for Animal Welfare (ehemals UFAW): Genetic Welfare Problems of Companion Animals', 'https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/'],
+      ['Mills et al. 2020: Pain and Problem Behavior in Cats and Dogs (Animals 10(2):318)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7071134/'],
+      ['Cornell University: Canine hip dysplasia (CHD)', 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/canine-hip-dysplasia-chd'],
+      ['Oberbauer et al. 2017: Long-term genetic selection reduced prevalence of hip and elbow dysplasia in 60 dog breeds (PLoS One)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/'],
       ['UC Davis Veterinary Genetics Laboratory', 'https://vgl.ucdavis.edu/dna-tests/cat'],
       ['LSU Deafness in Dogs & Cats', 'https://www.lsu.edu/vetmed/deafness/index.php'],
     ],
     guardrails: [
       'Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.',
-      'Kaufe und bewirb keine Tiere, deren rassetypische Merkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.',
+      'Kaufe und bewirb keine Tiere, deren Rassemerkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.',
     ],
   },
   adoption: {
@@ -2376,7 +2381,7 @@ const socialCopyByPage = {
   qualzucht: {
     eyebrow: 'Zuchtmerkmale kritisch sehen',
     title: 'Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert',
-    description: 'Suchbares Lexikon zu belegten Zucht- und Erbkrankheiten bei Hunden und Katzen, plus klare Qualzucht-Einordnung.',
+    description: 'Suchbares Lexikon zu Qualzucht und rassetypischen Erkrankungen bei Hunden und Katzen, mit Quellen und klarer Einordnung.',
   },
   'woher-kommt-mein-tier': {
     eyebrow: 'Herkunft prüfen',
