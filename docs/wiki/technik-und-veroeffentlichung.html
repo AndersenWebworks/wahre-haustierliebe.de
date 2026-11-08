@@ -68,6 +68,17 @@
         <p>Es gibt keine <code>package.json</code> im Repo. Im GitHub-Workflow wird nicht gebaut: Die generierten Dateien müssen gebaut und committet sein, bevor gepusht wird.</p>
         <p class="source">Quelle: <code>README.md</code>, <code>tools/playwright-module.mjs</code>, <code>.github/workflows/pages.yml</code></p>
 
+        <h2 id="neue-unterseite">Neue Unterseite anlegen</h2>
+        <p>Eine neue Themenseite braucht Einträge an mehreren Stellen; fehlt einer, bricht der Build oder die Seite fehlt im Menü. Am Beispiel <code>pferde/umgang-erziehung/</code> (8. November 2026):</p>
+        <ul>
+          <li><code>src/site-source.html</code>: Abschnitt mit <code>&lt;h2 id="pferde-umgang"&gt;</code> im Pferde-Bereich. Weitere Überschriften desselben Themas tragen <code>data-topic-continue</code>, sonst endet die Seite an ihnen. Dazu Menüeinträge (Tierart-Reiter und mobile Gruppe) und die Routenzuordnung am Ende der Quelle.</li>
+          <li><code>tools/build-static-pages.mjs</code>: Zeile in <code>topicPages</code> (Id, Tierbereich, Pfad, Titel, Beschreibung, <code>lastmod</code>), Titelbild in der Bildzuordnung, Eintrag in <code>evidenceByPage</code> (er erzeugt den Block „Fachquellen und wichtige Grenzen“).</li>
+          <li><code>tools/static-pages-audit.mjs</code>: Seite in die Prüfliste; <code>assets/image-credits.json</code>: <code>usedFor</code> des Titelbilds ergänzen.</li>
+          <li>Sitemap, <code>ai/*.json</code>, <code>llms*</code>, Suchindex und Social-Bild kommen aus dem Build. Wegen des Menüs ändert sich danach jede Seite.</li>
+        </ul>
+        <p>Im Arbeitsbaum haben <code>src/site-source.html</code> und die Werkzeugdateien Windows-Zeilenenden (<code>core.autocrlf</code>). Skripte, die diese Dateien ändern, müssen Zeilenenden erhalten (in Python mit <code>newline=''</code> lesen und schreiben). Der Build läuft auch im Worktree unter <code>.claude/worktrees/</code>, weil <code>tools/playwright-module.mjs</code> aufwärts nach <code>ClautzGPT</code> sucht.</p>
+        <p class="source">Quelle: Anlage der Seite am 8. November 2026; <code>tools/build-static-pages.mjs</code>, <code>tools/playwright-module.mjs</code></p>
+
         <h2 id="pages">GitHub Pages</h2>
         <p>Workflow <code>.github/workflows/pages.yml</code> („Deploy GitHub Pages“) läuft bei jedem Push auf <code>main</code> und manuell (<code>workflow_dispatch</code>). Schritte:</p>
         <ol>

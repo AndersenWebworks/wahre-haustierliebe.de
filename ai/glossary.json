@@ -82,6 +82,14 @@
       "url": "https://wahre-haustierliebe.de/glossar/index.html#atemnot"
     },
     {
+      "key": "auslauf",
+      "title": "Auslauf",
+      "summary": "Eingezäunte Bewegungsfläche im Freien, weder Stall noch Weide. Für bis zu zwei Pferde nennen die BMEL-Leitlinien mindestens 150 m², etwa 10 × 15 m.",
+      "description": "Eine eingezäunte Fläche im Freien, meist ohne oder mit wenig Bewuchs, die mehrere Pferde gleichzeitig nutzen und auf der sie sich weitgehend frei bewegen können. Sie ist weder Stall noch Weide. Für bis zu zwei Pferde nennen die BMEL-Leitlinien mindestens 150 m², das sind etwa 10 × 15 m, für jedes weitere Pferd 40 m² mehr. Das ist ein Mindestwert; die Tierärztliche Vereinigung für Tierschutz verlangt mindestens 200 m² für zwei Großpferde. Wo Pferde länger im Auslauf stehen, dürfen die Flächen nicht morastig sein.",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#auslauf",
+      "relatedUrl": "https://wahre-haustierliebe.de/pferde/platzbedarf/index.html"
+    },
+    {
       "key": "beutetier",
       "title": "Beutetier",
       "summary": "Tierart, die in der Natur gejagt wird und Schwäche von Natur aus verbirgt.",
@@ -488,6 +496,14 @@
       "summary": "Erbliche Knorpel- und Knochenerkrankung, bekannt bei Scottish-Fold-Katzen.",
       "description": "Erbliche Erkrankung von Knorpel und Knochen. Bei Scottish-Fold-Katzen ist das Faltohr selbst Teil des Knorpeldefekts. Die Erkrankung kann lebenslange Schmerzen verursachen.",
       "url": "https://wahre-haustierliebe.de/glossar/index.html#osteochondrodysplasie"
+    },
+    {
+      "key": "paddock",
+      "title": "Paddock",
+      "summary": "Kleiner Auslauf direkt an der Box, unter 150 m². Er bietet Außenklima und Kontakt über den Zaun, aber keine freie Bewegung.",
+      "description": "Ein kleiner Auslauf direkt an der Box, mit weniger als 150 m². Er bietet frische Luft, Außenklima und Kontakt über den Zaun zu Nachbarn, ermöglicht aber keine freie Bewegung. Für ein einzeln gehaltenes Pferd nennen die BMEL-Leitlinien mindestens (2 × Widerristhöhe)², bei 1,48 m Widerristhöhe also 8,76 m².",
+      "url": "https://wahre-haustierliebe.de/glossar/index.html#paddock",
+      "relatedUrl": "https://wahre-haustierliebe.de/pferde/platzbedarf/index.html"
     },
     {
       "key": "parvovirose",

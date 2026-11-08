@@ -69,6 +69,7 @@ const pages = [
   { id: 'pferde-haltungsformen', file: 'pferde/haltungsformen/index.html', canonical: `${baseUrl}/pferde/haltungsformen/index.html` },
   { id: 'pferde-kosten', file: 'pferde/kosten/index.html', canonical: `${baseUrl}/pferde/kosten/index.html` },
   { id: 'pferde-reitbeteiligung', file: 'pferde/reitbeteiligung/index.html', canonical: `${baseUrl}/pferde/reitbeteiligung/index.html` },
+  { id: 'pferde-umgang', file: 'pferde/umgang-erziehung/index.html', canonical: `${baseUrl}/pferde/umgang-erziehung/index.html` },
   { id: 'pferde-entscheidung', file: 'pferde/entscheidung/index.html', canonical: `${baseUrl}/pferde/entscheidung/index.html` },
   { id: 'kastration', file: 'kastration/index.html', canonical: `${baseUrl}/kastration/index.html` },
   { id: 'qualzucht', file: 'qualzucht/index.html', canonical: `${baseUrl}/qualzucht/index.html` },

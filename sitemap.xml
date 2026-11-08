@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://wahre-haustierliebe.de/pferde/index.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -344,7 +344,7 @@
   </url>
   <url>
     <loc>https://wahre-haustierliebe.de/pferde/platzbedarf/index.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -367,8 +367,14 @@
     <priority>0.72</priority>
   </url>
   <url>
+    <loc>https://wahre-haustierliebe.de/pferde/umgang-erziehung/index.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
     <loc>https://wahre-haustierliebe.de/pferde/entscheidung/index.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
