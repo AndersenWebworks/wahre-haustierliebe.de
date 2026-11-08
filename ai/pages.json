@@ -777,11 +777,9 @@
         "Pferdekosten"
       ],
       "facts": [
-        "Ein einzelnes Pferd ohne Artgenossen passt nach den BMEL-Leitlinien nicht zu seinem natürlichen Sozialverhalten.",
-        "Pferde sind unter natürlichen Bedingungen in der Gruppe bis zu 16 Stunden am Tag unterwegs; Arbeit oder Training ersetzen freie Bewegung nicht vollständig.",
-        "Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.",
+        "Laufende Kosten: rund 20 bis 31 Euro pro Tag (600 bis 950 Euro im Monat) bei Standardhaltung, ohne Notfälle.",
         "Hauspferde stammen von Pferden der westeurasischen Steppen ab; Przewalski-Pferde sind die einzigen noch lebenden Wildpferde, Mustangs und Brumbies sind verwilderte Nachkommen entlaufener Hauspferde.",
-        "Herden ziehen in der Steppe bis zu 16 Stunden am Tag und legen etwa 20 Kilometer zurück; der Magen fasst nur etwa 8 bis 10 Liter, das Futter wandert schnell hindurch."
+        "Der Magen fasst nur etwa 8 bis 10 Liter, das Futter wandert schnell hindurch; Herden ziehen in der Steppe bis zu 16 Stunden am Tag."
       ],
       "citationGuardrails": [
         "Die Kostenangaben stammen von Ratgeberseiten, nicht aus einer amtlichen Statistik; Region, Stall und Haltungsform verschieben sie.",
@@ -804,6 +802,14 @@
         {
           "label": "Fundis Reitsport: Was kostet ein Pferd im Monat? (Ratgeber ohne Datum)",
           "url": "https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/"
+        },
+        {
+          "label": "futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)",
+          "url": "https://www.futter.de/ratgeber/anschaffung/pferd-kosten"
+        },
+        {
+          "label": "Österreichischer Tierschutzverein: Ein Tierschutz-Pferd aus der Pferdeklappe adoptieren",
+          "url": "https://tierschutzverein.at/pferdeklappe-reutte/adoptionsprozess/"
         },
         {
           "label": "Tierschutzgesetz § 2",
@@ -840,6 +846,26 @@
         {
           "label": "Tierschutzverein Dresden: Artgerechte Pferdehaltung",
           "url": "https://tierschutzdresden.de/artgerechte-pferde-haltung/"
+        },
+        {
+          "label": "DLG-Merkblatt 499: Planungsempfehlungen zur Gestaltung von Pferdeausläufen (Stand November 2024)",
+          "url": "https://www.dlg.org/mediacenter/dlg-merkblaetter/dlg-merkblatt-499-pferdeauslaeufe"
+        },
+        {
+          "label": "LfL Bayern: Pferdeweiden – Nutzung, Pflege und Düngung (3. Auflage, Januar 2013)",
+          "url": "https://www.lfl.bayern.de/mam/cms07/publikationen/daten/informationen/p_36811.pdf"
+        },
+        {
+          "label": "Tierschutzdienst Niedersachsen: Empfehlungen zur Freilandhaltung von Pferden (1999)",
+          "url": "https://www.laves.niedersachsen.de/download/41795/Empfehlungen_zur_Freilandhaltung_von_Pferden.pdf"
+        },
+        {
+          "label": "Landwirtschaftskammer Nordrhein-Westfalen: Weidehaltung von Pferden im Winter, Begriffe Paddock und Auslauf",
+          "url": "https://www.landwirtschaftskammer.de/riswick/pdf/weidehaltung_von_pferden_im_winter.pdf"
+        },
+        {
+          "label": "Vetline: Positionspapier der TVT zu den Leitlinien Pferdehaltung (Schwarzer u. a. 2024)",
+          "url": "https://vetline.de/pferdehaltung-auf-dem-neuesten-wissenschaftlichen-stand-positionspapier-der-tvt-zu-den-leitlinien"
         }
       ],
       "social": {
@@ -2639,9 +2665,41 @@
         "Hufschmied",
         "Pferdekosten"
       ],
-      "facts": [],
-      "citationGuardrails": [],
-      "sources": [],
+      "facts": [
+        "Auslauf für bis zu zwei Pferde: mindestens 150 m², für jedes weitere Pferd 40 m² mehr (BMEL-Leitlinien 2009). Die TVT nennt mindestens 200 m² und 80 m² je weiteres Pferd, die FN 10 mal 30 m.",
+        "Weide, die ein Pferd in der Vegetationsperiode hauptsächlich ernährt: 0,5 Hektar je Pferd mit 500 kg (Niedersachsen, 1999), 0,6 bis 1,2 Hektar je Pferd auf der Standweide (LfL Bayern)."
+      ],
+      "citationGuardrails": [
+        "Für Weide, die nur Bewegung und einen Teil des Futters liefert, nennen die Quellen keine feste Fläche.",
+        "Besatzdichten hängen von Boden, Klima und Pflege ab. Die Niedersachsen-Empfehlung stammt von 1999, die LfL-Information von 2013.",
+        "Die Angaben von FN und TVT zum Auslauf stammen aus dem DLG-Merkblatt 499."
+      ],
+      "sources": [
+        {
+          "label": "BMEL: Leitlinien zur Beurteilung von Pferdehaltungen unter Tierschutzgesichtspunkten (2009)",
+          "url": "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/HaltungPferde.pdf?__blob=publicationFile"
+        },
+        {
+          "label": "DLG-Merkblatt 499: Planungsempfehlungen zur Gestaltung von Pferdeausläufen (Stand November 2024)",
+          "url": "https://www.dlg.org/mediacenter/dlg-merkblaetter/dlg-merkblatt-499-pferdeauslaeufe"
+        },
+        {
+          "label": "LfL Bayern: Pferdeweiden – Nutzung, Pflege und Düngung (3. Auflage, Januar 2013)",
+          "url": "https://www.lfl.bayern.de/mam/cms07/publikationen/daten/informationen/p_36811.pdf"
+        },
+        {
+          "label": "Tierschutzdienst Niedersachsen: Empfehlungen zur Freilandhaltung von Pferden (1999)",
+          "url": "https://www.laves.niedersachsen.de/download/41795/Empfehlungen_zur_Freilandhaltung_von_Pferden.pdf"
+        },
+        {
+          "label": "Landwirtschaftskammer Nordrhein-Westfalen: Weidehaltung von Pferden im Winter, Begriffe Paddock und Auslauf",
+          "url": "https://www.landwirtschaftskammer.de/riswick/pdf/weidehaltung_von_pferden_im_winter.pdf"
+        },
+        {
+          "label": "Vetline: Positionspapier der TVT zu den Leitlinien Pferdehaltung (Schwarzer u. a. 2024)",
+          "url": "https://vetline.de/pferdehaltung-auf-dem-neuesten-wissenschaftlichen-stand-positionspapier-der-tvt-zu-den-leitlinien"
+        }
+      ],
       "social": {
         "title": "Platzbedarf bei Pferden - Wa(h)re Haustier(liebe)",
         "description": "Warum Koppel, Auslauf und tägliche Bewegung zusammen gedacht werden müssen.",
@@ -2708,6 +2766,14 @@
           "url": "https://www.fundis-reitsport.de/blog/haltung/kosten-pferd/"
         },
         {
+          "label": "futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)",
+          "url": "https://www.futter.de/ratgeber/anschaffung/pferd-kosten"
+        },
+        {
+          "label": "Österreichischer Tierschutzverein: Ein Tierschutz-Pferd aus der Pferdeklappe adoptieren",
+          "url": "https://tierschutzverein.at/pferdeklappe-reutte/adoptionsprozess/"
+        },
+        {
           "label": "go4vet: Die Lebenserwartung eines Pferdes (tierärztlich geprüft, 2023)",
           "url": "https://www.go4vet.com/pferd/pflege/die-lebenserwartung-eines-pferdes/"
         }
@@ -2747,6 +2813,99 @@
       }
     },
     {
+      "id": "pferde-umgang",
+      "url": "https://wahre-haustierliebe.de/pferde/umgang-erziehung/index.html",
+      "title": "Umgang, Erziehung und Ausbildung beim Pferd - Wa(h)re Haustier(liebe)",
+      "description": "Wie Pferde lernen, warum Erziehung vom ersten Tag an zählt, wie du ein „schwieriges“ Pferd einordnest und woran du gutes Training erkennst.",
+      "intent": "Umgang, Erziehung und Ausbildung von Pferden einschätzen.",
+      "keywords": [
+        "Pferde halten",
+        "Herde",
+        "Stallform",
+        "Hufschmied",
+        "Pferdekosten"
+      ],
+      "facts": [
+        "Im Durchschnitt der Jahre 2021 bis 2025 geschahen 59 Prozent der meldepflichtigen Unfälle mit Pferden im Umgang mit den Tieren und 32 Prozent beim Reiten, Voltigieren und Longieren (SVLFG).",
+        "Pferde lernen nach den BMEL-Leitlinien Pferdesport leichter durch positive Verstärkung. Strafe ist nur in Ausnahmefällen zulässig, Zwang und Gewalt führen zu Angst, Enttäuschung oder Frustration.",
+        "Rollkur (Hyperflexion) und häufige oder anhaltende Zügelspannung sind nach den BMEL-Leitlinien Pferdesport tierschutzwidrig.",
+        "Anreiten junger Pferde kostet beim Landesverband Bayerischer Pferdezüchter 1.000 bis 1.300 Euro im Monat, höchstens drei Monate, Box, Futter und Pflege eingeschlossen (Preisliste ab 1. Januar 2026)."
+      ],
+      "citationGuardrails": [
+        "Die Unfallzahlen beruhen auf den bei der SVLFG gemeldeten Unfällen und sagen nichts über einzelne Pferde.",
+        "Die Studien zu Schmerzzeichen untersuchten wenige Pferde unter besonderen Bedingungen: sechs Pferde mit ausgelöstem akutem Schmerz (Gleerup u. a.) und 60 Reitpferde einer Gelegenheitsstichprobe (Dyson und Pollard).",
+        "Starling u. a. ist eine Übersichtsarbeit ohne eigene Messdaten.",
+        "Die Ausbildungspreise sind die Preisliste eines einzelnen Betriebs. Andere Betriebe verlangen mehr oder weniger.",
+        "Die Leitlinien sind keine Rechtsnormen, sondern eine Auslegungshilfe zum Tierschutzgesetz."
+      ],
+      "sources": [
+        {
+          "label": "BMEL: Tierschutz im Pferdesport, Leitlinien zu Umgang mit und Nutzung von Pferden unter Tierschutzgesichtspunkten (2020)",
+          "url": "https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/tierschutz-pferdesport.pdf?__blob=publicationFile&v=5"
+        },
+        {
+          "label": "International Society for Equitation Science (ISES): Training Principles, Principles of Learning Theory in Equitation",
+          "url": "https://www.equitationscience.com/ises-training-principles"
+        },
+        {
+          "label": "SVLFG: Sichere Pferdehaltung (Unfallstatistik 2021 bis 2025, Sicherheitshinweise)",
+          "url": "https://www.svlfg.de/pferdehaltung"
+        },
+        {
+          "label": "Starling, McLean, McGreevy (2016): The Contribution of Equitation Science to Minimising Horse-Related Risks to Humans, Animals 6(3)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4810043/"
+        },
+        {
+          "label": "Vetmeduni Wien, Ulrike Auer: Schmerzerkennung beim Pferd (Pferde-Symposium 2016)",
+          "url": "https://www.vetmeduni.ac.at/fileadmin/v/z/veranstaltungen/2016/Pferde-Symposium_20161015/Auer_Schmerz.pdf"
+        },
+        {
+          "label": "Dyson und Pollard (2020): Application of a Ridden Horse Pain Ethogram and Its Relationship with Gait in a Convenience Sample of 60 Riding Horses, Animals 10(6)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32560486/"
+        },
+        {
+          "label": "Gleerup u. a. (2015): An equine pain face, Veterinary Anaesthesia and Analgesia 42(1)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25082060/"
+        },
+        {
+          "label": "go4vet: Pferd verladen, Training für stressfreies Einladen (15. März 2026)",
+          "url": "https://www.go4vet.com/pferd/erziehung/pferd-verladen-training/"
+        },
+        {
+          "label": "Landesverband Bayerischer Pferdezüchter: Preise des Ausbildungszentrums (ab 1. Januar 2026)",
+          "url": "https://www.bayerns-pferde.de/ausbildungszentrum/angebot/preise/"
+        },
+        {
+          "label": "futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)",
+          "url": "https://www.futter.de/ratgeber/anschaffung/pferd-kosten"
+        },
+        {
+          "label": "RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)",
+          "url": "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd"
+        },
+        {
+          "label": "Österreichischer Tierschutzverein: Ein Tierschutz-Pferd aus der Pferdeklappe adoptieren",
+          "url": "https://tierschutzverein.at/pferdeklappe-reutte/adoptionsprozess/"
+        },
+        {
+          "label": "Deutscher Tierschutzbund: Reitstall-Check",
+          "url": "https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Jugend_Reitstall_Check.pdf"
+        },
+        {
+          "label": "Animal Diversity Web: Equus caballus",
+          "url": "https://animaldiversity.org/accounts/Equus_caballus/"
+        }
+      ],
+      "social": {
+        "title": "Umgang, Erziehung und Ausbildung beim Pferd - Wa(h)re Haustier(liebe)",
+        "description": "Wie Pferde lernen, warum Erziehung vom ersten Tag an zählt, wie du ein „schwieriges“ Pferd einordnest und woran du gutes Training erkennst.",
+        "image": "https://wahre-haustierliebe.de/assets/social/pferde-umgang.png",
+        "imageAlt": "Eingezäunte Pferdekoppel mit Unterständen im Hintergrund.",
+        "imageWidth": 1200,
+        "imageHeight": 630
+      }
+    },
+    {
       "id": "pferde-entscheidung",
       "url": "https://wahre-haustierliebe.de/pferde/entscheidung/index.html",
       "title": "Bevor ein Pferd einzieht - Wa(h)re Haustier(liebe)",
@@ -2777,6 +2936,10 @@
         {
           "label": "RidersDeal: Was kostet ein Pferd? (aktualisiert April 2026)",
           "url": "https://www.ridersdeal.com/ratgeber/was-kostet-ein-pferd"
+        },
+        {
+          "label": "futter.de: Was kostet ein Pferd? Kostentabelle (aktualisiert Juni 2026)",
+          "url": "https://www.futter.de/ratgeber/anschaffung/pferd-kosten"
         }
       ],
       "social": {
