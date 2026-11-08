@@ -52,6 +52,12 @@
       <p id="score-summary" class="muted">Noch keine Runde gespielt.</p>
       <p id="best-run-line" class="best-run" data-empty="true">Dein bester Run beginnt hier.</p>
     </section>
+
+    <section class="card soft data-card" aria-labelledby="data-title">
+      <h2 id="data-title">Gespeicherte Daten</h2>
+      <p class="muted">Dieses Quiz merkt sich auf deinem Gerät nur Highscores, gesehene Fragen und deine Tagesfrage. Wenn du magst, räumen wir alles wieder auf.</p>
+      <button type="button" class="ghost-btn data-clear-btn" data-clear-data>Gespeicherte Daten löschen</button>
+    </section>
   </main>
 
   <footer class="app-footer" role="contentinfo">
@@ -66,5 +72,6 @@
   <div class="snackbar" id="snackbar" role="status" aria-live="polite"></div>
 
   <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/datenloeschen.js"></script>
 </body>
 </html>

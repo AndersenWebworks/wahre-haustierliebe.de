@@ -4,7 +4,7 @@
 // Dadurch bleibt nach einem Deploy keine alte Fassung hängen. CACHE_VERSION
 // nur erhöhen, wenn sich die APP_SHELL-Liste ändert.
 
-const CACHE_VERSION = "whl-pwa-v5";
+const CACHE_VERSION = "whl-pwa-v6";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -18,6 +18,7 @@ const APP_SHELL = [
   "./js/share.js",
   "./js/sticker.js",
   "./js/daily.js",
+  "./js/datenloeschen.js",
   "./data/questions.js",
   "./data/resultateTexte.js",
   "./icons/icon.svg",

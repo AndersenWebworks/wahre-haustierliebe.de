@@ -2,7 +2,6 @@
 import {
   loadQuestions,
   registerServiceWorker,
-  checkQuestionUpdate,
   pickQuestions,
   poolFor,
   roundSize,
@@ -180,9 +179,6 @@ async function init() {
     renderCategories();
     renderScoreSummary();
     try { renderDaily(document.getElementById("daily-card"), data); } catch (e) { /* Startseite bleibt nutzbar */ }
-    if (checkQuestionUpdate(data)) {
-      showSnackbar("Neue Fragen sind da. Viel Spaß beim Spielen!");
-    }
   } catch (e) {
     scoreSummary.textContent = "Fragenkatalog konnte nicht geladen werden. Versuche es später erneut.";
     startBtn.disabled = true;
