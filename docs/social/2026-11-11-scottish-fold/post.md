@@ -10,7 +10,7 @@ Website-Seite: https://wahre-haustierliebe.de/qualzucht/index.html (Abschnitt �
 Aufbau: Einstieg über den aktuellen Anlass (Empfehlung der Österreichischen Qualzuchtkommission, Oktober 2026) und den Widerspruch „süß und ruhig“, dann der Aha-Moment (das Faltohr ist der Defekt), zwei Folien zur Krankheit, die vermeintliche Ruhe als Schmerzzeichen, Zeichen zum Erkennen, eine Folie für Menschen, die schon eine Scottish Fold haben, zum Schluss Adoption, die Entscheidung gegen ein Tier und ein einziger Handlungsimpuls (Teilen). Je Folie eine Überschrift und wenige kurze Sätze; wer etwas sagt, steht in der Quellenzeile. Gesagt wird nur, was die Qualzucht-Seite trägt.
 
 **Folie 1** (Bild: folie-1)
-Fachleute empfehlen, diese Katze nicht mehr zu züchten. Sofort.
+Fachleute in Österreich empfehlen, diese Katze nicht mehr zu züchten. Sofort.
 Dabei gilt sie als besonders süß und ruhig.
 Wisch durch. Es liegt an den Ohren.
 Quelle: Österreichische Qualzuchtkommission, Empfehlung vom Oktober 2026
@@ -23,7 +23,7 @@ Quelle: UC Davis Veterinary Genetics Laboratory; Österreichische Qualzuchtkommi
 
 **Folie 3** (Bild: folie-3)
 Auch „nur ein bisschen“ macht krank.
-Nicht nur Katzen, die die Veränderung von beiden Eltern geerbt haben, erkranken. Auch bei 90 bis 100 Prozent der Jungtiere mit nur einer Kopie sind zumindest leichte Veränderungen zu erwarten.
+Es reicht, wenn ein Elternteil die Veränderung weitergibt: Bei 90 bis 100 Prozent dieser Kätzchen sind zumindest leichte Veränderungen zu erwarten.
 Mit dem Alter kommen Schmerzen, die bleiben oder wiederkehren.
 Quelle: Österreichische Qualzuchtkommission
 
@@ -63,7 +63,7 @@ wahre-haustierliebe.de, Link im Profil
 
 Fachleute empfehlen, diese Katze nicht mehr zu züchten, und zwar sofort. Im Oktober hat die Österreichische Qualzuchtkommission das für die Scottish Fold gefordert. Die Kommission berät die Politik; ein Gesetz ist ihre Empfehlung noch nicht.
 
-Der Grund sind die Ohren. Dieselbe Genveränderung, die das Ohr knickt, schädigt den Knorpel im ganzen Körper. Eine Katze mit Faltohren trägt sie immer. Auch bei 90 bis 100 Prozent der Jungtiere mit nur einer Kopie sind zumindest leichte Veränderungen zu erwarten, und mit dem Alter kommen Schmerzen hinzu. Wie stark die Ohren gefaltet sind, sagt darüber nichts Verlässliches.
+Der Grund sind die Ohren. Dieselbe Genveränderung, die das Ohr knickt, schädigt den Knorpel im ganzen Körper. Eine Katze mit Faltohren trägt sie immer. Es reicht, wenn ein Elternteil die Veränderung weitergibt: Bei 90 bis 100 Prozent dieser Kätzchen sind zumindest leichte Veränderungen zu erwarten, und mit dem Alter kommen Schmerzen hinzu. Wie stark die Ohren gefaltet sind, sagt darüber nichts Verlässliches.
 
 Die Scottish Fold gilt als ruhig und ohne großen Bewegungsdrang. Nach der Kommission sind die Tiere wegen der Schäden an Knochen und Knorpel schon jung ruhig, sitzen viel und vermeiden Bewegung. Sie zögern beim Springen, spielen weniger und zeigen Schmerzen, wenn man sie anfasst.
 
@@ -97,9 +97,9 @@ Hinweis: Bei CC BY-SA gilt Weitergabe unter gleichen Bedingungen für die zugesc
 
 Alle Inhalte stammen aus der Seite „Qualzucht“, https://wahre-haustierliebe.de/qualzucht/index.html, Abschnitt „Scottish Fold (Katze)“ mit „Gilt als“ und „Dahinter steckt“, Lexikonkarte „Scottish-Fold-Osteochondrodysplasie“ sowie „Auf einen Blick“ und „Was du tun kannst“. Die Quellen dort:
 
-- Folie 1: Österreichische Qualzuchtkommission, Empfehlung zur Osteochondrodysplasie bei Katzen (Oktober 2026): sofortiges Zuchtverbot für alle Katzen mit dieser Genveränderung empfohlen. „Gilt als: ruhig, gesellig und anhänglich, ohne großen Bewegungsdrang“ (Rassebeschreibung zooroyal, auf der Seite verlinkt). „Süß“ ist Einstiegsformulierung, keine Quellenaussage.
+- Folie 1: „in Österreich“ steht im Folientext, damit die Empfehlung nicht für deutsches Recht gehalten wird. Österreichische Qualzuchtkommission, Empfehlung zur Osteochondrodysplasie bei Katzen (Oktober 2026): sofortiges Zuchtverbot für alle Katzen mit dieser Genveränderung empfohlen. „Gilt als: ruhig, gesellig und anhänglich, ohne großen Bewegungsdrang“ (Rassebeschreibung zooroyal, auf der Seite verlinkt). „Süß“ ist Einstiegsformulierung, keine Quellenaussage.
 - Folie 2: Seite: „Faltohr und Knorpelerkrankung haben dieselbe Ursache, eine Veränderung im Gen TRPV4. Eine Katze mit Faltohren trägt sie also immer.“ Lexikonkarte: „das Faltohr ist selbst Teil des Knorpeldefekts“; „Gendefekt, der den gesamten Knorpel im Körper betrifft“. Quellen: UC Davis, Qualzuchtkommission.
-- Folie 3: Seite und Lexikonkarte: „Krank werden nicht nur Katzen, die die Veränderung von beiden Eltern geerbt haben, sondern auch die mit nur einer Kopie: Bei 90 bis 100 Prozent dieser Jungtiere sind zumindest leichte Veränderungen zu erwarten, und mit dem Alter kommen lang anhaltende oder wiederkehrende Schmerzen hinzu.“
+- Folie 3: Seite und Lexikonkarte: „Krank werden nicht nur Katzen, die die Veränderung von beiden Eltern geerbt haben, sondern auch die mit nur einer Kopie: Bei 90 bis 100 Prozent dieser Jungtiere sind zumindest leichte Veränderungen zu erwarten, und mit dem Alter kommen lang anhaltende oder wiederkehrende Schmerzen hinzu.“ Folientext: „Es reicht, wenn ein Elternteil die Veränderung weitergibt“ steht allgemeinverständlich für „nur eine Kopie“ (eine Kopie stammt von einem Elternteil).
 - Folie 4: Seite: „Wie stark die Ohren gefaltet sind, sagt nichts Verlässliches darüber, wie schwer eine Katze erkrankt.“ Lexikonkarte „Wie schwer: Gelenkschmerz, steifer Gang, verformte Gliedmaßen, eingeschränkte Lebensqualität“; Abschnitt: „chronischen Gelenkschmerzen und eingeschränkter Beweglichkeit … lebenslang“. „Verformte Beine“ steht für „verformte Gliedmaßen“. Quellen der Karte: UC Davis, Cats Protection, VetCompass, Qualzuchtkommission.
 - Folie 5: „Dahinter steckt“: wörtliches Zitat der Kommission („schon in jungem Alter ruhig, sitzen viel und vermeiden es sich zu bewegen“, Empfehlung S. 10), auf der Seite „infolge der Knochen- und Knorpelveränderungen“. Der Satz „kann Schmerz sein“ ist bewusst vorsichtig: Nicht jede ruhige Katze hat Schmerzen.
 - Folie 6: „Dahinter steckt“: „Sie zögern beim Springen oder können es gar nicht mehr, spielen weniger und zeigen Schmerzen, wenn man sie anfasst. Manche werden vor Schmerz auch aggressiv.“ (Kommission, S. 10). „Katzen zeigen Schmerz leise“ ist eine Überleitung; „wehrt sich, wenn man sie anfasst“ fasst „zeigen Schmerzen, wenn man sie anfasst“ zusammen.
