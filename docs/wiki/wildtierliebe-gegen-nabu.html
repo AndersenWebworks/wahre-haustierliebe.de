@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildtierliebe gegen NABU - Wa(h)re Haustier(liebe) Wiki</title>
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">
+          <span class="brand-title">Wa(h)re Haustier(liebe) Wiki</span>
+          <span class="brand-subtitle">Aufklärungsseite wahre-haustierliebe.de, internes Repo-Wiki</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Wiki-Navigation">
+        <a href="index.html">Start</a>
+        <a href="stand-und-seitenbestand.html">Stand und Seitenbestand</a>
+        <a href="technik-und-veroeffentlichung.html">Technik und Veröffentlichung</a>
+        <a href="redaktionslinie.html">Redaktionslinie und Quellen</a>
+        <a href="bilder-und-nachweise.html">Bilder und Bildnachweise</a>
+        <a href="pwa-und-quiz.html">PWA und Quiz</a>
+        <a href="instagram.html">Instagram: Rhythmus und Themen</a>
+        <a href="social-media-strategie.html">Social-Media-Strategie</a>
+        <a href="annotation-konzept.html">Annotation: Konzept</a>
+        <a href="annotation-ux-flow.html">Annotation: UX-Flow</a>
+        <a href="backlog.html">Backlog-Themen</a>
+        <a class="active" href="wildtierliebe-gegen-nabu.html">Wildtierliebe gegen NABU</a>
+        <a href="entscheidungen.html">Entscheidungen</a>
+        <a href="stolperfallen.html">Stolperfallen</a>
+        <a href="offene-fragen.html">Offene Fragen</a>
+        <a href="aenderungsverlauf.html">Änderungsverlauf</a>
+        <a href="wiki-vertrag.html">Wiki-Vertrag</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="page">
+        <h1>Wildtierliebe gegen NABU</h1>
+        <p class="status">Stand 22. November 2026. NABU-Seiten am 22. November 2026 im Original gelesen, Wa(h)re Wildtier(liebe) am Code und an den Artendaten geprüft</p>
+
+        <p>Dieser Vergleich legt das tatsächliche Angebot des NABU neben das Portal Wa(h)re Wildtier(liebe) (<code>wahre-wildtierliebe.de</code>, Repo <code>wahre-wildtierliebe.de</code>). Er beantwortet eine Frage aus dem Gespräch vom 11. November 2026: Wo gibt es beim NABU schon dasselbe, wo ist Wildtierliebe anders oder besser, wo ist sie überflüssig? Das Wildtierliebe-Repo hat kein eigenes Wiki; der Vergleich steht deshalb hier.</p>
+
+        <h2 id="ergebnis">Ergebnis in Kürze</h2>
+        <ul>
+          <li><strong>Als Wissensseite ist Wildtierliebe beim NABU praktisch ersetzbar.</strong> Der Fundratgeber für Vögel, die Artenporträts, die Apps, die Hilfekarte und die Mitmachaktionen gibt es dort ausführlicher, oft mit Fotos, Stimmen und Downloads. Von den 403 Steckbriefen nennen 189 selbst eine NABU-Seite (Bundes-, Landes- oder Kreisverband) als Quelle.</li>
+          <li><strong>Das Regionale ist beim NABU stärker als bei uns.</strong> Die Ortsgruppe NABU Plau am See hat eine eigene Seite „Wildtiere in Not“ mit Kontaktformular und Fledermaus-Station, dazu Projekte und Biotope vor Ort. Unsere Plau-Seite hat drei Absätze und verweist auf genau diese NABU-Seite.</li>
+          <li><strong>Nicht null ist der Unterschied bei Aufbau und Breite der Gefahren.</strong> Wildtierliebe führt von der Situation aus (Tier gefunden, Gefahr, Garten) und bündelt Glas, Licht, Katzen, Mähroboter, Schächte, Wasser, Zäune, Netze und Gift unter einer Tür für alle Wildtiere. Der NABU hat die Themen großenteils einzeln und eine Gesamtübersicht nur für Vögel. Zu Zäunen und Schächten habe ich beim NABU keine eigene Seite gefunden.</li>
+          <li><strong>Kein tragender Vorsprung.</strong> Der Aufbau ist leicht nachzubauen, und der Stoff dahinter ist größtenteils NABU-Wissen in anderer Form. Das ist meine Einschätzung aus dem Vergleich unten, kein gelesener Beleg.</li>
+        </ul>
+
+        <h2 id="grenzen">Was gelesen wurde und was nicht</h2>
+        <p>Gelesen wurden über 50 Seiten auf <code>nabu.de</code>, <code>mecklenburg-vorpommern.nabu.de</code> und <code>nabu-plau.de</code>, jeweils im Original und nicht aus Zusammenfassungen. „Nicht gefunden“ heißt hier nur: auf den gelesenen Seiten und über Navigation und Suche des NABU nicht aufgetaucht. Das beweist nicht, dass es das Angebot nicht gibt. Die Aussagen zu Wildtierliebe stammen aus <code>src/site-source.js</code>, den Artendaten in <code>src/arten-daten/</code> und den gebauten Seiten des Repos.</p>
+
+        <h2 id="vergleich">Vergleich Punkt für Punkt</h2>
+        <table>
+          <thead><tr><th>Bereich</th><th>NABU (gelesen)</th><th>Wildtierliebe</th><th>Einordnung</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Vogel gefunden</td>
+              <td>„Wildvogel in Not – was tun?“: vier Fragen (akute Gefahr, erwachsen oder Jungvogel, verletzt, befiedert), zu jeder Antwort ein ausformulierter Weg, Sonderfälle Mauersegler und Greifvogel, Nestlinge mit Wärmehinweis (etwa 30 °C), rechtlicher Hinweis zum Mitnehmen, Karte der Auffangstationen.</td>
+              <td>Jungvogel-Check mit vier Fragen und drei Ergebnissen, dazu die Seiten „Jungvogel am Boden“ und „Verletzter Vogel“. Mauersegler ist eine eigene Frage.</td>
+              <td>Inhaltlich gleich, beim NABU ausführlicher und mit Rechtslage. <strong>Überflüssig als Wissen</strong>, anders nur in der Form (Punktwert statt Antwortweg).</td>
+            </tr>
+            <tr>
+              <td>Andere Wildtierfunde</td>
+              <td>Fledermaus: Ratgeber mit Fledermaustelefon. Igel: kein Fundratgeber gefunden, im Igel-Porträt steht die Gewichtsgrenze (unter einem Pfund Anfang bis Mitte November). Jungsäuger: nichts Eigenes gefunden. Die Ortsgruppe Plau deckt Igel, Eichhörnchen, Jungtiere, Fledermäuse, Schwäne und Kollisionen in einem Text ab.</td>
+              <td>Eigene Seiten für Igel am Tag, Fledermaus im Zimmer, Tier im Schacht, Jungtier allein und beschädigtes Nest, dazu die artübergreifende Prüfung „Braucht dieses Tier Hilfe?“ mit vier Fragen.</td>
+              <td><strong>Hier ist Wildtierliebe breiter</strong> als der NABU bundesweit. Gegenüber der Ortsgruppe Plau ist der Vorsprung klein.</td>
+            </tr>
+            <tr>
+              <td>Hilfe finden</td>
+              <td>Bundesweite Karte der Pflege- und Auffangstationen (Google-Karte, erst nach Einwilligung), Naturtelefon montags bis freitags 9 bis 16 Uhr, Fledermaustelefon. Plau: Kontaktformular Wildtierhilfe, Fledermaus-Station des Naturparks, Hinweise zu Tierheimen der Region.</td>
+              <td>Hilfestellen-Seite mit vier Stellen (NABU Plau am See, Fledermaushilfe, Igelhilfe MV, Wildtierschutz Deutschland). Verlinkt selbst auf die NABU-Plau-Seite.</td>
+              <td><strong>Überflüssig als Ersatz.</strong> Die Karte und die Telefone sind beim NABU besser; Verweise genügen. Abhängigkeit: Ändert sich die NABU-Plau-Seite, laufen unsere Links ins Leere.</td>
+            </tr>
+            <tr>
+              <td>Artenwissen Vögel</td>
+              <td>314 Vogelporträts mit Filtern (Gefährdung, Farbe, Größe, Lebensraum), Ruf- und Gesangsaufnahmen, Beobachtungstipps, Bestand und Gefährdung.</td>
+              <td>Mindestens 100 Vogel-Steckbriefe in drei Gruppen (Singvögel 50, Greifvögel und Eulen 25, Wasser-, Wiesen- und Großvögel 25), ohne Foto und ohne Stimme.</td>
+              <td><strong>Überflüssig.</strong> Der NABU ist hier klar im Vorteil.</td>
+            </tr>
+            <tr>
+              <td>Artenwissen übrige Gruppen</td>
+              <td>Auf den Listenseiten sichtbar: 14 Säugetierporträts, 15 Insektenporträts, 25 Fledermausarten als Unterseiten. Ob die Listen weiterblättern, wurde nicht geprüft. Weitere Wissensseiten zu Insekten, Amphibien, Pilzen.</td>
+              <td>403 Steckbriefe in 11 Gruppen, darunter 101 Pflanzen, Pilze und Moose, 39 Säugetiere, 26 Libellen und 90 weitere Insekten (Käfer, Hautflügler, Heuschrecken, Wanzen, Schmetterlinge). Einheitliches Muster (erkennen, Verwechslung, Lebensraum, Zeit, Umgang, Schutz, Quellen). Keine Artbilder.</td>
+              <td><strong>Anders.</strong> Breiter erschlossen als die sichtbaren NABU-Listen, aber ohne Bilder. Ob der NABU an anderer Stelle (naturgucker, Insektenwelt-App) mehr hat, wurde nicht geprüft.</td>
+            </tr>
+            <tr>
+              <td>Bestimmen</td>
+              <td>App „Vogelwelt“: 315 Vogelarten, Bestimmen und Vergleichen kostenlos; Erkennung per Foto oder Vogelstimme nur im Abo. Daneben Insektenwelt-App, Gottesanbeterinnen-App und das Meldeportal NABU|naturgucker (nur in der Suche gesehen, nicht geöffnet). Spuren-, Kot- oder Nestbestimmer nicht gefunden.</td>
+              <td>Tierfinder mit Filtern, aber nur acht Einträgen. Spuren-Atlas, Seiten zu Stimmen, Spuren, Nestern.</td>
+              <td>Bei Vögeln <strong>überflüssig</strong>. Der Spuren-Atlas hat auf den gelesenen NABU-Seiten kein Gegenstück, der Tierfinder ist ein Muster, kein Werkzeug.</td>
+            </tr>
+            <tr>
+              <td>Lebensraum schaffen</td>
+              <td>Bereich „Naturnah gärtnern“: Tiere im Garten, Pflanzen, Pflanzenschutz ohne Gift, Gartenelemente, Boden, Schottergarten, naturnaher Balkon, igelfreundlicher Garten mit Checkliste, Nistkästen mit Bauanleitungen, Schwalbenfreundliches Haus mit Plakette. Interaktive Prüf- oder Planungswerkzeuge auf den gelesenen Seiten nicht gefunden.</td>
+              <td>Seiten für Garten, Balkon, Haus und Dach, Hof, Stadt und Dorf. Garten- und Balkoncheck, Flächenplan, Saisonkalender (Monat für Monat).</td>
+              <td>Der NABU ist inhaltlich tiefer (Bauanleitungen, Pflanzenwissen). <strong>Anders</strong> sind bei uns die kleinen Prüfwerkzeuge und der Saisonkalender; einen Saisonkalender habe ich beim NABU nicht gefunden.</td>
+            </tr>
+            <tr>
+              <td>Gefahren</td>
+              <td>Eigene Seiten zu Glas (mit Faustregeln, Flyer und Broschüre, Zahl: rund 100 Millionen Vögel jährlich), Licht, Katzen, Mähroboter und Gift. Eine Übersicht „Gefahren für Vögel“ mit Zahlen. Zäune nur in Nebensätzen, Laubbläser nur kurz erwähnt, Schächte und Wasserfallen nicht gefunden.</td>
+              <td>Eigener Bereich „Gefahren vermeiden“ für alle Wildtiere: Glas, Licht, Mähen, Wasser und Schächte, Zäune und Netze, Gift und Leimfallen, Katzen. Lichtfallen-Check und Zaun-Check.</td>
+              <td><strong>Hier liegt der größte inhaltliche Unterschied.</strong> Die Bündelung über alle Tiere samt Zaun, Schacht und Wasser ist eigen; Glas, Licht, Katzen, Mähroboter und Gift sind beim NABU gleichwertig oder besser belegt.</td>
+            </tr>
+            <tr>
+              <td>Mitmachen und Melden</td>
+              <td>Stunde der Wintervögel (nächste vom 8. bis 10. Januar 2027), Vogel des Jahres, Krötenwanderung, Kranichzug-Ticker, Meldeaktionen (etwa Vögel an Stromleitungen), NABU|naturgucker. Die Meldeformulare waren am 22. November 2026 laut NABU vorübergehend nicht aktiv.</td>
+              <td>Texte zu Beobachten, Nachtbeobachtung und Gartentagebuch. Keine Zähl- oder Meldeaktion.</td>
+              <td><strong>Überflüssig als Nachbau.</strong> Zählaktionen leben von der Reichweite des NABU; hier genügen Verweise.</td>
+            </tr>
+            <tr>
+              <td>Region Plau und Mecklenburg-Vorpommern</td>
+              <td>NABU Plau am See: Wildtiere in Not, Projekte (Wasservögel, Rebhuhn, Spechte, Wendehals, Wiedehopf, Rehkitzrettung, Vogelstimmen), Biotope (Plauer Stadtwald, Marienfließ, Plauer See), Termine, Wasservogelzählung. Landesverband MV: Projekte wie Schatzküste und BatAccess; eine Wildtierfund-Seite dort nicht gefunden.</td>
+              <td>Seite „Wildtiere rund um Plau am See“ mit drei Absätzen und den Hilfestellen. Nur 31 von 403 Steckbriefen haben einen regionalen Eintrag; er nennt als Quelle mehrfach den NABU Mecklenburg-Vorpommern (etwa „Laut NABU Mecklenburg-Vorpommern wird der Admiral im Land häufig beobachtet“), sonst die Rote Liste.</td>
+              <td><strong>Der NABU ist regional stärker.</strong> Unsere regionale Ebene ist dünn und selbst aus NABU-Material gebaut.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="bewertung">Bewertung</h2>
+        <ul>
+          <li><strong>Überflüssig:</strong> Vogelwissen und Vogelfund, Hilfekarte und Telefone, Zähl- und Meldeaktionen, regionale Wildtierhilfe. Wer das braucht, findet es beim NABU besser; Wildtierliebe sollte dorthin verweisen und nicht konkurrieren.</li>
+          <li><strong>Anders, aber ohne Gewicht:</strong> der Aufbau von der Situation aus, die Mehr-Tier-Fundseiten (Igel, Fledermaus, Schacht, Jungtier), die Steckbriefe in einheitlichem Muster mit Pflanzen, Pilzen und Moosen. Das hilft Besuchern, ist aber kein Grund, extra zu uns zu kommen.</li>
+          <li><strong>Eigen:</strong> die Gefahren-Bündelung über alle Tiere mit Zaun, Schacht und Wasser, der Spuren-Atlas, die kleinen Prüfwerkzeuge (Licht, Zaun, Garten) und der Saisonkalender. Hier habe ich beim NABU nichts Gleichartiges gefunden. Die Substanz stammt aber wieder aus Fachquellen, die der NABU ebenfalls nutzt.</li>
+        </ul>
+        <p>Der Befund aus dem Gespräch vom 11. November 2026 bestätigt sich im Kern: Als Wissensseite hat Wildtierliebe keinen tragenden Vorsprung. Er ist nicht ganz null, sondern klein und liegt in der Gefahren-Seite und den Prüfwerkzeugen. Ein regionaler Vorsprung entstünde nur aus eigenen Beobachtungen rund um Plau; der NABU Plau deckt die Region sonst gut ab.</p>
+
+        <h2 id="quellen">Quellen (Abruf 22. November 2026)</h2>
+        <ul>
+          <li><a href="https://www.nabu.de/aktiv-werden/tieren-helfen/verletztes-tier-gefunden/wildvogel-in-not-was-tun">NABU: Wildvogel in Not – was tun?</a></li>
+          <li><a href="https://www.nabu.de/aktiv-werden/tieren-helfen/erste-hilfe-fuer-verletzte-tiere">NABU: Erste Hilfe für verletzte Tiere</a>, <a href="https://www.nabu.de/aktiv-werden/tieren-helfen/verletztes-tier-gefunden/pflege-und-auffangstationen-fuer-saeugetiere-und-voegel">Pflege- und Auffangstationen</a>, <a href="https://www.nabu.de/aktiv-werden/tieren-helfen/verletztes-tier-gefunden/tipps-beim-fund-von-verirrten-fledermaeusen">Fledermausfund</a>, <a href="https://www.nabu.de/wir-ueber-uns/nabu-naturtelefon-und-info-service">Naturtelefon</a></li>
+          <li><a href="https://www.nabu-plau.de/wildtiere-in-not/">NABU Plau am See: Wildtiere in Not</a>, <a href="https://www.nabu-plau.de/">Startseite</a></li>
+          <li><a href="https://www.nabu.de/natur-und-artenwissen/voegel/vogelportraets">NABU: Vogelporträts</a>, <a href="https://www.nabu.de/natur-und-artenwissen/saeugetiere/portraets-saeugetiere">Säugetierporträts</a>, <a href="https://www.nabu.de/natur-und-artenwissen/insekten/insektenportraets">Insektenporträts</a>, <a href="https://www.nabu.de/natur-und-artenwissen/saeugetiere/fledermaeuse">Fledermäuse</a></li>
+          <li><a href="https://www.nabu.de/natur-erleben/nabu-apps/nabu-app-vogelwelt">NABU: App „Vogelwelt“</a> (die Seite nennt im Titel 308, im Text 315 Vogelarten), <a href="https://www.nabu.de/natur-erleben/nabu-natur-apps">NABU-Natur-Apps</a></li>
+          <li><a href="https://www.nabu.de/aktiv-werden/naturnah-gaertnern">NABU: Naturnah gärtnern</a>, <a href="https://www.nabu.de/aktiv-werden/naturnah-gaertnern/naturnaher-balkon">naturnaher Balkon</a>, <a href="https://www.nabu.de/aktiv-werden/naturnah-gaertnern/tiere-im-garten/den-garten-igelfreundlich-gestalten">igelfreundlicher Garten</a>, <a href="https://www.nabu.de/aktiv-werden/naturnah-gaertnern/pflanzenschutz-ohne-gift">Pflanzenschutz ohne Gift</a>, <a href="https://www.nabu.de/aktiv-werden/tieren-helfen/nistkaesten-selber-bauen">Nistkästen</a></li>
+          <li><a href="https://www.nabu.de/aktiv-werden/tieren-helfen/so-machst-du-glasscheiben-vogelsicher">NABU: Glasscheiben vogelsicher</a>, <a href="https://www.nabu.de/natur-und-artenwissen/lebensraeume/naturgarten/zu-viel-licht-kann-schaedlich-sein">Licht</a>, <a href="https://www.nabu.de/natur-und-artenwissen/voegel/gefahren-fuer-voegel/katzen-eine-gefahr-fuer-die-vogelwelt">Katzen</a>, <a href="https://www.nabu.de/natur-und-artenwissen/lebensraeume/naturgarten/maehroboter-im-garten">Mähroboter</a>, <a href="https://www.nabu.de/natur-und-artenwissen/voegel/gefahren-fuer-voegel-0">Gefahren für Vögel</a></li>
+          <li><a href="https://www.nabu.de/aktiv-werden/nabu-mitmachaktionen">NABU: Mitmachaktionen</a>, <a href="https://www.nabu.de/aktiv-werden/mitmachaktionen/stunde-der-wintervoegel">Stunde der Wintervögel</a>, <a href="https://www.nabu.de/aktiv-werden/mitmachaktionen/naturbeobachtungen-melden-1">Naturbeobachtungen melden</a></li>
+          <li><a href="https://mecklenburg-vorpommern.nabu.de/">NABU Mecklenburg-Vorpommern</a>, <a href="https://mecklenburg-vorpommern.nabu.de/natur-und-artenwissen/tiere-und-pflanzen-mecklenburg-vorpommerns">Tiere und Pflanzen in MV</a></li>
+        </ul>
+        <p class="source">Quelle Wildtierliebe: <code>wahre-wildtierliebe.de/src/site-source.js</code> (Werkzeuge, Hilfestellen), <code>src/arten-daten/*.json</code> (403 Steckbriefe; 189 mit NABU-Quelle, 31 mit regionalem Eintrag, 5 nur mit Wikipedia als Quelle), gebaute Seiten im Repo (keine <code>img</code>-Elemente auf Steckbriefen)</p>
+
+        <div class="callout"><p><strong>Achtung:</strong> Die Quelle <code>mecklenburg-vorpommern.nabu.de/wir-ueber-uns/produkte/publikationen/16444.html</code> (Faltblatt „Wildtiere“) steht in Wildtierliebe in den Quellenangaben vieler Seiten und Steckbriefe (50 Treffer im Repo). Beim Abruf am 22. November 2026 antwortete sie mit HTTP 403. Das kann ein Abrufschutz sein, ist aber nicht geklärt.</p></div>
+
+        <h2 id="offen">Offene Punkte</h2>
+        <ul>
+          <li>Faltblatt 16444 (siehe Hinweis oben): ist die Quelle für Besucher abrufbar und stützt sie die regionalen Einträge?</li>
+          <li>Nicht geöffnet: NABU-Insektenwelt-App, NABU|naturgucker, „Welcher Vogel singt wann?“, die Seite „Gefahrenquellen im Garten“ (nur als Auszug gelesen). Ob die Porträtlisten für Säugetiere und Insekten über die sichtbaren Karten hinausgehen, ist offen.</li>
+          <li>Die NABU-Fragen der Vogelhilfe wurden aus dem Quelltext der Seite gelesen, nicht durch Anklicken; im Browser sind die Antworttexte zugeklappt hinterlegt.</li>
+          <li>Ob <code>wahre-wildtierliebe.de</code> öffentlich erreichbar ist, wurde nicht festgestellt.</li>
+          <li>Das README im Wildtierliebe-Repo nennt noch 347 Routen und 290 Steckbriefe; die Daten enthalten 403 Steckbriefe, die Sitemap 461 Adressen.</li>
+          <li>Ob Wildtierliebe bleibt, auf die Gefahren-Seiten verdichtet oder anders genutzt wird, ist Sache von Erik und Annemarie. Dieser Vergleich ist nur die Grundlage.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
