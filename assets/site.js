@@ -2570,6 +2570,13 @@ function normalizeAssetUrls(root) {
           renderSearchResults(mobileInput.value, mobileResults, { limit: 5 });
         });
       }
+      var startInput = document.getElementById('start-site-search-input');
+      var startResults = document.getElementById('start-site-search-results');
+      if (startInput && startResults) {
+        startInput.addEventListener('input', function() {
+          renderSearchResults(startInput.value, startResults, { limit: 6 });
+        });
+      }
       document.addEventListener('click', function(event) {
         if (!event.target.closest('#site-search, .nav-link-search')) closeSiteSearch();
       });

@@ -42,6 +42,12 @@
 
         <p>Hier steht, was sich am Projekt und am Wiki geändert hat, mit Datum und betroffener Seite. Ein Eintrag pro Arbeitsgang reicht: was, warum, wo nachlesen.</p>
 
+        <h2 id="2026-11-23-startsuche">23. November 2026: Suchfeld der Startseite aktualisiert die Treffer bei jeder Eingabe</h2>
+        <ul>
+          <li>Fehler: <code>initSiteSearch()</code> in <code>src/site-source.html</code> hängte Eingabe-Listener nur an das Suchfeld im Menü und im mobilen Menü, nicht an das Feld „Was suchst du?“ auf der Startseite. Dessen Trefferliste wurde nur einmal gefüllt, wenn der Suchindex nach dem ersten Buchstaben fertig geladen war, und blieb danach stehen.</li>
+          <li>Behoben: Das Startfeld hat jetzt einen eigenen Listener (sechs Treffer). Neu gebaut; geändert sind nur <code>src/site-source.html</code> und <code>assets/site.js</code>. Das Startfeld wurde in der lokalen Vorschau bei wechselnden Begriffen geprüft; die Volltexttreffer mit Abschnitten zeigte die Vorschau dabei nicht (es erschien nur der Fallback mit Titeln und Beschreibungen, Ursache nicht geprüft); auf der Live-Seite lädt der Index.</li>
+        </ul>
+
         <h2 id="2026-11-23-widderkaninchen">23. November 2026: Widderkaninchen auf der Qualzucht-Seite ausgebaut, Instagram-Entwurf</h2>
         <ul>
           <li>Auftrag von Annemarie (23. November 2026): Nächster Beitrag der Qualzucht-Reihe ist das Widderkaninchen; die Website zuerst, dann der Beitrag.</li>
