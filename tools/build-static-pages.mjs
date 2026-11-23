@@ -184,7 +184,7 @@ const pages = [
     id: 'qualzucht',
     slug: 'qualzucht',
     title: 'Qualzucht und Rassekrankheiten erkennen',
-    description: 'Qualzucht und rassetypische Erkrankungen bei Hunden, Katzen und Kaninchen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Ohren-, Herz-, Nieren- und Gendefekten mit Quellen.',
+    description: 'Qualzucht und rassetypische Erkrankungen bei Hunden, Katzen und Kaninchen unterscheiden: suchbares Lexikon zu Atemnot, Gelenken, Ohren und Gendefekten mit Quellen.',
     intent: 'Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden',
     priority: '0.85',
     lastmod: '2026-11-23',
