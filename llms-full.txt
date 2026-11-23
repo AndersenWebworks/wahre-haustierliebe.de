@@ -889,6 +889,7 @@ Facts:
 - Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.
 - Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.
 - Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.
+- Beim Widderkaninchen knickt mit dem Hängeohr auch der Gehörgang ab; Ohrenentzündungen sind bei Hängeohrkaninchen häufiger, Schmerzen und Schwerhörigkeit möglich. Die Studien sind klein oder beruhen auf Halterangaben, und ob auch die Zähne betroffen sind, ist widersprüchlich belegt.
 Important boundaries:
 - Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.
 - Kaufe und bewirb keine Tiere, deren Rassemerkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.
@@ -903,6 +904,14 @@ Sources:
 - Oberbauer et al. 2017: Long-term genetic selection reduced prevalence of hip and elbow dysplasia in 60 dog breeds (PLoS One): https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/
 - UC Davis Veterinary Genetics Laboratory: https://vgl.ucdavis.edu/dna-tests/cat
 - LSU Deafness in Dogs & Cats: https://www.lsu.edu/vetmed/deafness/index.php
+- QUEN: Merkblatt Kaninchen, Typ Widder: https://qualzucht-datenbank.eu/merkblatt-kaninchen-typ-widder/
+- Chivers et al. 2023: Ear health and quality of life in pet rabbits of differing ear conformations (PLOS ONE): https://pmc.ncbi.nlm.nih.gov/articles/PMC10355490/
+- Johnson und Burn 2019: Lop-eared rabbits have more aural and dental problems than erect-eared rabbits (Veterinary Record): https://europepmc.org/article/MED/31575760
+- Jackson et al. 2026: Rabbit conformational predispositions to ear abnormalities (The Veterinary Journal): https://doi.org/10.1016/j.tvjl.2025.106497
+- Vetjournal 07/08 2023: Otitis beim Kaninchen, wenn die Schlappohren schmerzen: https://tieraerzteverlag.at/vetjournal/otitis-beim-kaninchen-wenn-die-schlappohren-schmerzen/
+- RSPCA: Rabbit health, signs of illness and care: https://www.rspca.org.uk/adviceandwelfare/pets/rabbits/health
+- Rabbit Welfare Association and Fund: Ohrerkrankungen bei Hängeohrkaninchen: https://rabbitwelfare.co.uk/rwaf-response-to-rvc-rabbit-ear-disease-study/
+- TVT-Merkblatt Nr. 157: Heimtiere, Kaninchen (09/2019): https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&did=38
 
 ### Adoption statt Kauf: Abgabealter, Tierheim und verantwortungsvolle Vermittlung
 URL: https://wahre-haustierliebe.de/adoption/index.html

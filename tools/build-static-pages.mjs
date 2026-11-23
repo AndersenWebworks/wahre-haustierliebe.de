@@ -184,10 +184,10 @@ const pages = [
     id: 'qualzucht',
     slug: 'qualzucht',
     title: 'Qualzucht und Rassekrankheiten erkennen',
-    description: 'Qualzucht und rassetypische Erkrankungen bei Hunden und Katzen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.',
+    description: 'Qualzucht und rassetypische Erkrankungen bei Hunden, Katzen und Kaninchen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Ohren-, Herz-, Nieren- und Gendefekten mit Quellen.',
     intent: 'Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden',
     priority: '0.85',
-    lastmod: '2026-11-08',
+    lastmod: '2026-11-23',
   },
   {
     id: 'adoption',
@@ -308,7 +308,7 @@ const pages = [
     description: 'Züchter oder Vermehrer? Was Papiere belegen, wo auch sorgfältige Zucht Qualzucht bedeutet, woran du getarnte Vermehrer erkennst und warum Adoption konsequenter ist.',
     intent: 'Zucht, Vermehrung und Adoption einordnen und Züchter prüfen',
     priority: '0.8',
-    lastmod: '2026-11-07',
+    lastmod: '2026-11-23',
     staticOnly: true,
   },
   {
@@ -382,7 +382,7 @@ const topicPages = [
   ['voegel-krankheit-erkennen', 'voegel', 'voegel/krankheit-erkennen', 'Krankheit bei Vögeln erkennen', 'Warum Vögel Symptome verstecken und kleine Veränderungen schnell tierärztlich abgeklärt werden müssen.', 'Krankheitszeichen bei Vögeln ernst nehmen.', { lastmod: '2026-11-07' }],
   ['voegel-qualzucht', 'voegel', 'voegel/qualzucht', 'Schauwellensittiche und Qualzucht', 'Warum Schau- und Haubenwellensittiche als Qualzucht gelten und überzüchtete Merkmale bei Vögeln nicht niedlich, sondern belastend sind.', 'Qualzucht bei Heimvögeln erkennen.', { lastmod: '2026-11-07' }],
   ['voegel-entscheidung', 'voegel', 'voegel/entscheidung', 'Bevor Vögel einziehen', 'Kosten pro Tag und Monat, Bedenkzeit, Wenn-dann-Karte und Checkliste zu Schwarm, Freiflug, Licht, Tierarzt und Alltag.', 'Entscheidung vor der Vogelhaltung prüfen.', { lastmod: '2026-11-07' }],
-  ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Monat sowie Bedenkzeit vor dem Einzug.', 'Kaninchenhaltung vom Tier aus denken und vor dem Einzug verantwortungsvoll einordnen.', { lastmod: '2026-11-07' }],
+  ['kleintiere-kaninchen', 'kleintiere', 'kleintiere/kaninchen', 'Kaninchen halten', 'Was zwei Kaninchen von dir brauchen: Artgenossen, 6 m² Platz, Heu und Frischfutter, Ruhe, Gesundheit, Kosten pro Tag und Monat sowie Bedenkzeit vor dem Einzug.', 'Kaninchenhaltung vom Tier aus denken und vor dem Einzug verantwortungsvoll einordnen.', { lastmod: '2026-11-23' }],
   ['kleintiere-kaninchen-kosten', 'kleintiere', 'kleintiere/kaninchen-kosten', 'Was zwei Kaninchen wirklich kosten', 'Gehege, Heu, Impfung, Kastration, Zähne, Rücklagen und zehn Jahre: ehrlich gerechnet für ein Kaninchenpaar.', 'Kosten für zwei Kaninchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-11-07' }],
   ['kleintiere-meerschweinchen', 'kleintiere', 'kleintiere/meerschweinchen', 'Meerschweinchen halten und abgeben: Bedarf, Kosten, Mindestalter', 'Wie Meerschweinchen in der Natur leben, was sie brauchen, was sie kosten und warum mindestens acht Wochen die Orientierung für die Abgabe sind.', 'Haltung, Kosten, Abgabealter, Geschlechtsreife und Gruppenhaltung bei Meerschweinchen verantwortungsvoll planen.', { lastmod: '2026-11-07' }],
   ['kleintiere-meerschweinchen-kosten', 'kleintiere', 'kleintiere/meerschweinchen-kosten', 'Was Meerschweinchen wirklich kosten', 'Gehege, Heu, Kastration, Zähne, Rücklagen und acht Jahre: ehrlich gerechnet für eine Meerschweinchengruppe.', 'Kosten für Meerschweinchen vor der Anschaffung realistisch einschätzen.', { lastmod: '2026-11-07' }],
@@ -1348,6 +1348,7 @@ const evidenceByPage = {
       'Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.',
       'Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.',
       'Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.',
+      'Beim Widderkaninchen knickt mit dem Hängeohr auch der Gehörgang ab; Ohrenentzündungen sind bei Hängeohrkaninchen häufiger, Schmerzen und Schwerhörigkeit möglich. Die Studien sind klein oder beruhen auf Halterangaben, und ob auch die Zähne betroffen sind, ist widersprüchlich belegt.',
     ],
     sources: [
       ['Tierschutzgesetz § 11b', 'https://www.gesetze-im-internet.de/tierschg/__11b.html'],
@@ -1360,6 +1361,14 @@ const evidenceByPage = {
       ['Oberbauer et al. 2017: Long-term genetic selection reduced prevalence of hip and elbow dysplasia in 60 dog breeds (PLoS One)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5325577/'],
       ['UC Davis Veterinary Genetics Laboratory', 'https://vgl.ucdavis.edu/dna-tests/cat'],
       ['LSU Deafness in Dogs & Cats', 'https://www.lsu.edu/vetmed/deafness/index.php'],
+      ['QUEN: Merkblatt Kaninchen, Typ Widder', 'https://qualzucht-datenbank.eu/merkblatt-kaninchen-typ-widder/'],
+      ['Chivers et al. 2023: Ear health and quality of life in pet rabbits of differing ear conformations (PLOS ONE)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10355490/'],
+      ['Johnson und Burn 2019: Lop-eared rabbits have more aural and dental problems than erect-eared rabbits (Veterinary Record)', 'https://europepmc.org/article/MED/31575760'],
+      ['Jackson et al. 2026: Rabbit conformational predispositions to ear abnormalities (The Veterinary Journal)', 'https://doi.org/10.1016/j.tvjl.2025.106497'],
+      ['Vetjournal 07/08 2023: Otitis beim Kaninchen, wenn die Schlappohren schmerzen', 'https://tieraerzteverlag.at/vetjournal/otitis-beim-kaninchen-wenn-die-schlappohren-schmerzen/'],
+      ['RSPCA: Rabbit health, signs of illness and care', 'https://www.rspca.org.uk/adviceandwelfare/pets/rabbits/health'],
+      ['Rabbit Welfare Association and Fund: Ohrerkrankungen bei Hängeohrkaninchen', 'https://rabbitwelfare.co.uk/rwaf-response-to-rvc-rabbit-ear-disease-study/'],
+      ['TVT-Merkblatt Nr. 157: Heimtiere, Kaninchen (09/2019)', 'https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&did=38'],
     ],
     guardrails: [
       'Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.',
@@ -2381,7 +2390,7 @@ const socialCopyByPage = {
   qualzucht: {
     eyebrow: 'Zuchtmerkmale kritisch sehen',
     title: 'Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert',
-    description: 'Suchbares Lexikon zu Qualzucht und rassetypischen Erkrankungen bei Hunden und Katzen, mit Quellen und klarer Einordnung.',
+    description: 'Suchbares Lexikon zu Qualzucht und rassetypischen Erkrankungen bei Hunden, Katzen und Kaninchen, mit Quellen und klarer Einordnung.',
   },
   'woher-kommt-mein-tier': {
     eyebrow: 'Herkunft prüfen',

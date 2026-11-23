@@ -3067,7 +3067,7 @@
       "id": "qualzucht",
       "url": "https://wahre-haustierliebe.de/qualzucht/index.html",
       "title": "Qualzucht und Rassekrankheiten erkennen",
-      "description": "Qualzucht und rassetypische Erkrankungen bei Hunden und Katzen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Herz-, Nieren- und Gendefekten mit Quellen.",
+      "description": "Qualzucht und rassetypische Erkrankungen bei Hunden, Katzen und Kaninchen unterscheiden: suchbares Lexikon zu Atemnot, Gelenkschmerzen, Ohren-, Herz-, Nieren- und Gendefekten mit Quellen.",
       "intent": "Qualzucht und Rassekrankheiten verstehen und beim Tierkauf vermeiden",
       "keywords": [
         "Qualzucht",
@@ -3083,7 +3083,8 @@
         "Rassetypische Erkrankungen wie Hüftdysplasie, Degenerative Myelopathie oder Herzmuskelerkrankungen sind keine Folge eines angezüchteten Aussehens, sondern häufen sich erblich in einer Rasse oder bei großen und schweren Hunden. Die Grenze zur Qualzucht ist nicht immer scharf.",
         "Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.",
         "Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.",
-        "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien."
+        "Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.",
+        "Beim Widderkaninchen knickt mit dem Hängeohr auch der Gehörgang ab; Ohrenentzündungen sind bei Hängeohrkaninchen häufiger, Schmerzen und Schwerhörigkeit möglich. Die Studien sind klein oder beruhen auf Halterangaben, und ob auch die Zähne betroffen sind, ist widersprüchlich belegt."
       ],
       "citationGuardrails": [
         "Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.",
@@ -3129,11 +3130,43 @@
         {
           "label": "LSU Deafness in Dogs & Cats",
           "url": "https://www.lsu.edu/vetmed/deafness/index.php"
+        },
+        {
+          "label": "QUEN: Merkblatt Kaninchen, Typ Widder",
+          "url": "https://qualzucht-datenbank.eu/merkblatt-kaninchen-typ-widder/"
+        },
+        {
+          "label": "Chivers et al. 2023: Ear health and quality of life in pet rabbits of differing ear conformations (PLOS ONE)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10355490/"
+        },
+        {
+          "label": "Johnson und Burn 2019: Lop-eared rabbits have more aural and dental problems than erect-eared rabbits (Veterinary Record)",
+          "url": "https://europepmc.org/article/MED/31575760"
+        },
+        {
+          "label": "Jackson et al. 2026: Rabbit conformational predispositions to ear abnormalities (The Veterinary Journal)",
+          "url": "https://doi.org/10.1016/j.tvjl.2025.106497"
+        },
+        {
+          "label": "Vetjournal 07/08 2023: Otitis beim Kaninchen, wenn die Schlappohren schmerzen",
+          "url": "https://tieraerzteverlag.at/vetjournal/otitis-beim-kaninchen-wenn-die-schlappohren-schmerzen/"
+        },
+        {
+          "label": "RSPCA: Rabbit health, signs of illness and care",
+          "url": "https://www.rspca.org.uk/adviceandwelfare/pets/rabbits/health"
+        },
+        {
+          "label": "Rabbit Welfare Association and Fund: Ohrerkrankungen bei Hängeohrkaninchen",
+          "url": "https://rabbitwelfare.co.uk/rwaf-response-to-rvc-rabbit-ear-disease-study/"
+        },
+        {
+          "label": "TVT-Merkblatt Nr. 157: Heimtiere, Kaninchen (09/2019)",
+          "url": "https://www.tierschutz-tvt.de/alle-merkblaetter-und-stellungnahmen/?no_cache=1&L=0&download=TVT-MB_157_Heimtiere-Kaninchen_09.2019.pdf&did=38"
         }
       ],
       "social": {
         "title": "Rassekrankheiten erkennen, bevor Nachfrage Leid finanziert",
-        "description": "Suchbares Lexikon zu Qualzucht und rassetypischen Erkrankungen bei Hunden und Katzen, mit Quellen und klarer Einordnung.",
+        "description": "Suchbares Lexikon zu Qualzucht und rassetypischen Erkrankungen bei Hunden, Katzen und Kaninchen, mit Quellen und klarer Einordnung.",
         "image": "https://wahre-haustierliebe.de/assets/social/qualzucht.png",
         "imageAlt": "Mops als Beispiel für problematische Zuchtmerkmale.",
         "imageWidth": 1200,
