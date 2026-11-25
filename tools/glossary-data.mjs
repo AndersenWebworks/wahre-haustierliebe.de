@@ -928,7 +928,7 @@ export const glossaryAnnotationsByPage = {
     { from: 'örtliche Vorgaben zu Kastration, Kennzeichnung und Registrierung', to: `örtliche Vorgaben zu ${mark('kastrationspflicht', 'Kastration')}, ${mark('kennzeichnungspflicht', 'Kennzeichnung')} und ${mark('registrierungspflicht', 'Registrierung')}` },
   ],
   qualzucht: [
-    { from: 'Qualzucht bedeutet: Tiere werden auf äußere Merkmale gezüchtet', to: `${mark('qualzucht', 'Qualzucht')} bedeutet: Tiere werden auf äußere ${mark('rassemerkmal', 'Merkmale')} gezüchtet` },
+    { from: 'Qualzucht bedeutet: Tiere werden so gezüchtet, dass sie durch erbliche Merkmale', to: `${mark('qualzucht', 'Qualzucht')} bedeutet: Tiere werden so gezüchtet, dass sie durch erbliche ${mark('rassemerkmal', 'Merkmale')}` },
     { from: '§ 11b TierSchG', to: `§ 11b ${mark('tierschg', 'TierSchG')}` },
     { from: 'Rassetypische Erkrankungen haben eine andere Ursache', to: `${mark('rassetypische-erkrankung', 'Rassetypische Erkrankungen')} haben eine andere Ursache` },
     { from: '(<a href="#glossar" onclick="navigateTo(\'glossar\');return false">Brachyzephalie</a>)', to: `(${mark('brachyzephalie', 'Brachyzephalie')})` },
