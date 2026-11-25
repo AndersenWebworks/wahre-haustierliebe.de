@@ -1850,3 +1850,26 @@ html { scroll-behavior: smooth; }
 @media (max-width: 1040px) {
   body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
 }
+
+/* ===== Qualzucht-Lexikon: „Stell dir vor“-Kasten, ein Vergleich je Problem zum Nachfühlen ===== */
+body.static-site .stell-dir-vor {
+  margin: 1.1rem 0 1.5rem;
+  padding: 0.9rem 1.1rem 1rem;
+  background: var(--ochre-tint);
+  border-left: 4px solid var(--ochre);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink);
+  max-width: var(--reading-width);
+}
+body.static-site .stell-dir-vor .stell-dir-vor-label {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b4710;
+}
+body.static-site .stell-dir-vor p:not(.stell-dir-vor-label) { margin: 0; font-size: 1.02rem; line-height: 1.6; }
+body.static-site .stell-dir-vor p + p:not(.stell-dir-vor-label) { margin-top: 0.5rem; }
+body.static-site .breed-disease-card .stell-dir-vor { margin: 0.9rem 0 0.4rem; max-width: none; }

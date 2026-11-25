@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Menschen stehen bei einer Tierschutzaktion mit Informationsschildern zusammen.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-11-23">
+  <meta property="og:updated_time" content="2026-11-25">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Zucht, Vermehrung und Adoption - Wa(h)re Haustier(liebe)">
   <meta name="twitter:description" content="Warum zusätzliche Haustierproduktion problematisch bleibt, auch wenn sie sauberer wirkt als Vermehrung.">
@@ -7247,6 +7247,29 @@ html { scroll-behavior: smooth; }
   body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
 }
 
+/* ===== Qualzucht-Lexikon: „Stell dir vor“-Kasten, ein Vergleich je Problem zum Nachfühlen ===== */
+body.static-site .stell-dir-vor {
+  margin: 1.1rem 0 1.5rem;
+  padding: 0.9rem 1.1rem 1rem;
+  background: var(--ochre-tint);
+  border-left: 4px solid var(--ochre);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink);
+  max-width: var(--reading-width);
+}
+body.static-site .stell-dir-vor .stell-dir-vor-label {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b4710;
+}
+body.static-site .stell-dir-vor p:not(.stell-dir-vor-label) { margin: 0; font-size: 1.02rem; line-height: 1.6; }
+body.static-site .stell-dir-vor p + p:not(.stell-dir-vor-label) { margin-top: 0.5rem; }
+body.static-site .breed-disease-card .stell-dir-vor { margin: 0.9rem 0 0.4rem; max-width: none; }
+
 
   </style>
   <script type="application/ld+json">
@@ -7273,7 +7296,7 @@ html { scroll-behavior: smooth; }
     "caption": "Menschen stehen bei einer Tierschutzaktion mit Informationsschildern zusammen."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-11-23",
+  "dateModified": "2026-11-25",
   "isAccessibleForFree": true,
   "keywords": "Zucht, Vermehrung, Züchter, Vermehrer, Ahnentafel, Qualzucht, Gewerbsmäßige Zucht, Illegaler Welpenhandel, Tierheim, Adoption",
   "about": [
@@ -7379,7 +7402,7 @@ html { scroll-behavior: smooth; }
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-11-23",
+  "dateModified": "2026-11-25",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Zucht, Vermehrung, Züchter, Vermehrer, Ahnentafel, Qualzucht, Gewerbsmäßige Zucht, Illegaler Welpenhandel, Tierheim, Adoption",
@@ -7927,8 +7950,8 @@ html { scroll-behavior: smooth; }
         <table class="cost-table">
           <thead><tr><th>Tierart und Rasse</th><th>Was die Quellen nennen</th></tr></thead>
           <tbody>
-            <tr><td data-label="Tierart und Rasse">Hund: Mops, Französische Bulldogge</td><td data-label="Was die Quellen nennen">Nach dem <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/qualzucht/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbund</a> leidet bei extrem kurzköpfigen Hunden der Großteil unter Atemnot, außerdem treten Haut-, Ohren-, Augen- und Zahnprobleme auf.</td></tr>
-            <tr><td data-label="Tierart und Rasse">Katze: Perser</td><td data-label="Was die Quellen nennen">Das <a href="https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/" target="_blank" rel="noopener noreferrer">Merkblatt Nr. 33 der Qualzucht-Datenbank QUEN</a> (Stand 28. Oktober 2026) ordnet die Perserkatze den kurzköpfigen (brachyzephalen) Rassen zu. Schon die vom Standard verlangten Abweichungen im Körperbau können demnach die Belastungskategorie 3 (starke Belastung) ergeben. Die polyzystische Nierenerkrankung (PKD, Zysten in den Nieren) nennt es wegen ihrer Häufigkeit eine der wichtigsten Erbkrankheiten der Katze; die weltweite Häufigkeit bei Perserkatzen wird dort mit 25 bis 50 Prozent angegeben.</td></tr>
+            <tr><td data-label="Tierart und Rasse">Hund: Mops, Französische Bulldogge</td><td data-label="Was die Quellen nennen">Nach dem <a href="https://www.tierschutzbund.de/tiere-themen/haustiere/qualzucht/" target="_blank" rel="noopener noreferrer">Deutschen Tierschutzbund</a> treten bei extrem kurzköpfigen Hunden Atemnot sowie Haut-, Ohren-, Augen- und Zahnprobleme auf. In britischen Untersuchungen war etwa die Hälfte bis zwei Drittel der untersuchten Möpse und Französischen Bulldoggen klinisch von Atemproblemen betroffen. Alle Probleme mit Zahlen und Quellen stehen auf der Seite <a href="../qualzucht/index.html">Qualzucht</a>.</td></tr>
+            <tr><td data-label="Tierart und Rasse">Katze: Perser</td><td data-label="Was die Quellen nennen">Das <a href="https://qualzucht-datenbank.eu/merkblatt-katze-rasse-perser/" target="_blank" rel="noopener noreferrer">Merkblatt Nr. 33 der Qualzucht-Datenbank QUEN</a> (Stand 28. Oktober 2026) ordnet die Perserkatze den kurzköpfigen (brachyzephalen) Rassen zu. Schon die vom Standard verlangten Abweichungen im Körperbau können demnach die Belastungskategorie 3 (starke Belastung) ergeben. Die polyzystische Nierenerkrankung (PKD, Zysten in den Nieren) nennt es wegen ihrer Häufigkeit eine der wichtigsten Erbkrankheiten der Katze; sie hängt aber an einem Gen, nicht an der Kopfform. Frühere Untersuchungen nannten 25 bis 50 Prozent der Perserkatzen, in Großbritannien ist der Anteil durch Tests vor der Zucht stark gesunken. Zahlen und Quellen zu den Gesichtsproblemen stehen auf der Seite <a href="../qualzucht/index.html">Qualzucht</a>.</td></tr>
             <tr><td data-label="Tierart und Rasse">Katze: Scottish Fold</td><td data-label="Was die Quellen nennen">Die Faltohren beruhen auf einem Gendefekt, der nach dem Tierschutzbund Knochen und Knorpel im ganzen Körper schädigt. Laut <a href="https://qualzucht-datenbank.eu/merkblatt-katze-rasse-scottish-fold/" target="_blank" rel="noopener noreferrer">QUEN-Merkblatt</a> erlaubt der Katzenverband FIFe die Zucht von Katzen mit Osteochondrodysplasie (einer Knorpel- und Knochenfehlbildung) nicht und erkennt die Scottish Fold ausdrücklich nicht an.</td></tr>
             <tr><td data-label="Tierart und Rasse">Kaninchen: Widder</td><td data-label="Was die Quellen nennen">Das <a href="https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html" target="_blank" rel="noopener noreferrer">Gutachten des Bundesministeriums zu § 11b</a> (1999) beschreibt, dass die überlangen Ohren der Widderkaninchen, besonders der Englischen Widder, die Bewegung einschränken und die Verletzungsgefahr erhöhen. Der Deutsche Tierschutzbund schreibt, Widderkaninchen neigten zu Ohrenentzündungen (<a href="https://www.tierschutzbund.de/fileadmin/Seiten/tierschutzbund.de/Downloads/Broschueren/Broschuere_Die_Haltung_von_Zwergkaninchen.pdf" target="_blank" rel="noopener noreferrer">Broschüre Zwergkaninchen, S. 24</a>). Mehr dazu auf der Seite <a href="../qualzucht/index.html">Qualzucht</a>.</td></tr>
             <tr><td data-label="Tierart und Rasse">Meerschweinchen</td><td data-label="Was die Quellen nennen">Nach dem Tierschutzbund gehen besondere Fellfarben und -strukturen (Schimmel, Dalmatiner, Rex, Satin) mit krankhaften Veränderungen einher; Langhaar- und Nacktmeerschweinchen sind in ihrer Pflege oder Abwehr eingeschränkt.</td></tr>

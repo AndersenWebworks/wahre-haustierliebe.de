@@ -38,9 +38,33 @@
     <main class="content">
       <article class="page">
         <h1>Änderungsverlauf</h1>
-        <p class="status">Zuletzt ergänzt am 23. November 2026, neueste Einträge oben</p>
+        <p class="status">Zuletzt ergänzt am 25. November 2026, neueste Einträge oben</p>
 
         <p>Hier steht, was sich am Projekt und am Wiki geändert hat, mit Datum und betroffener Seite. Ein Eintrag pro Arbeitsgang reicht: was, warum, wo nachlesen.</p>
+
+        <h2 id="2026-11-25-qualzucht-lexikon">25. November 2026: Qualzucht-Seite zum Lexikon ausgebaut, Kasten „Stell dir vor“</h2>
+        <ul>
+          <li>Auftrag und Entscheidung Annemaries (25. November 2026): Die Qualzucht-Seite nennt für jede Rasse alle belegbaren Probleme, so umfangreich wie möglich, und jede Aussage hängt an einer Fundstelle, die sie tatsächlich enthält. Zuerst Mops und Französische Bulldogge, danach alle übrigen Beispiele und Lexikonkarten. Je Problem gibt es höchstens einen Vergleich in einem eigenen Kasten „Stell dir vor“. Der Instagram-Beitrag Teil 3 der Reihe (Mops und Französische Bulldogge) folgt erst, wenn Annemarie die Seite freigegeben hat.</li>
+          <li><strong>Mops und Französische Bulldogge</strong> in <code>src/site-source.html</code> (Abschnitt <code>qualzucht</code>, <code>id="beispiel-mops-bulldogge"</code>) neu gefasst: 15 Unterabschnitte mit Sprungleiste (Anzeigen, Vergleichstabelle, Atmung, Schlaf, Hitze, Augen, Wirbelsäule und Rückenmark, Haut, Ohren, Zähne, Verdauung, Narkose, Geburt, Lebenserwartung, Rechtslage, „Wenn du schon einen hast“). Zahlen stammen aus VetCompass- und weiteren Studien, jeweils mit Stichprobe und Grenzen; ohne Beleg blieb „können nicht rennen, nicht schlafen ohne Schnarchen“, „Körpertemperatur nicht regulieren“ und „Augäpfel fallen bei Stößen heraus“ (ersetzt durch belegte Formulierungen zu Hitze, Schlaf und Augapfelvorfall).</li>
+          <li><strong>Übrige Beispiele</strong> geprüft und ausgebaut: Perserkatze, Scottish Fold, Schauwellensittich (mit Haubenwellensittich), Teacup-Hunde, Qualzucht-Goldfische, Albino-Reptilien; beim Widderkaninchen die Gutachten-Aussage berichtigt (der allgemeine Teil nennt bei Pendelohren häufigere Ohrentzündungen) und die große VetCompass-Auswertung 2024 als zweite Gegenstimme ergänzt. Reihenfolge der Beispiele jetzt nach Tierart. Entfallen sind unbelegte Aussagen: „viele Teacup-Hunde sterben jung“, „verkürzte Lebenserwartung“ bei Qualzucht-Goldfischen, „unsicher, stressanfällig“ beim Schauwellensittich.</li>
+          <li><strong>Lexikonkarten</strong> der Gruppe Qualzucht mit Zahlen und Fundstellen neu gefasst (Atemwegssyndrom, Augen, Bandscheibe, Cavalier, Faltenhaut, Taubheit, Scottish Fold, Perser, Haarlosigkeit, Manx, Hängeohr); 94 Quellenlinks in den Karten, Startseiten von OFA, OMIA, UFAW und UC Davis ersetzt. Bei den rassetypischen Karten nur Links und zwei Aussagen berichtigt (PKD-Häufigkeit, Mills-Kommentar).</li>
+          <li><strong>Neues Kastenelement</strong> <code>.stell-dir-vor</code> (<code>aside</code> mit Beschriftung) in <code>src/design-v5.css</code>; 35 Kästen auf der Seite. Regeln in der <a href="redaktionslinie.html#schreibweise">Redaktionslinie</a>.</li>
+          <li><strong>Verwandte Seiten nachgezogen:</strong> Adoption (Satz „Brachyzephale Hunde, die nicht atmen können“ entschärft), Katzenkosten (Perser-Atemweg), Schauwellensittich-Seite (Sichtfeld, Gutachten, Verweis), Zucht und Vermehrung (Tabelle Mops/Perser). Glossar: zehn neue Begriffe (Augapfelvorfall, Entropium, Fontanelle, Gaumensegel, Hautfaltendermatitis, Hornhautgeschwür, Hydrozephalus, Keilwirbel, Pigmentkeratitis, Syringomyelie), drei Begriffe berichtigt (Brachyzephalie, Brachyzephales Atemwegssyndrom, Albinismus).</li>
+          <li>Durchsprache mit Rainer, Smeralda und Eugen am fertigen Text: vorwurfsfreier Einstieg, Vergleichstabelle und Kaufblock („Vor dem Kauf“), Zahlenabsätze geteilt, Kästen sprachlich und inhaltlich zurückgenommen, wo sie mehr behaupteten als der Text. Nicht umgesetzt und offen: <a href="offene-fragen.html#pflege">Offene Fragen</a>.</li>
+          <li>Gebaut mit <code>node tools/build-static-pages.mjs</code> im Arbeitsbaum <code>.claude/worktrees/qualzucht-lexikon</code> (Zweig <code>text/qualzucht-lexikon</code>). Nicht gepusht, nicht veröffentlicht. Audits, Tests und Sichtprüfung wurden nicht gefahren; die Darstellung der Kästen ist ungeprüft.</li>
+        </ul>
+
+        <h2 id="2026-11-23-widder-folie-8">23. November 2026: Widderkaninchen-Beitrag, Folie 8 und automatische Durchsprache</h2>
+        <ul>
+          <li>Folie 8 zeigt jetzt ein ruhiges Porträt (Takkiln, CC BY-SA 4.0) statt des Wohnungsbilds; Nachweis in <code>docs/social/2026-11-25-widderkaninchen/</code> angepasst.</li>
+          <li>Festgehalten, dass die Durchsprache mit Rainer, Smeralda und Eugen bei Instagram-Beiträgen und bei der Website automatisch läuft, ohne eigene Board-Karte (<a href="instagram.html#ziel-je-beitrag">Instagram</a>, <a href="redaktionslinie.html#schreibweise">Redaktionslinie</a>, <a href="entscheidungen.html#social">Entscheidungen</a>).</li>
+        </ul>
+
+        <h2 id="2026-11-23-widder-endfassung">23. November 2026: Widderkaninchen-Beitrag auf die Endfassung gebracht</h2>
+        <ul>
+          <li>Nach der Durchsprache mit Rainer, Smeralda und Eugen und der Prüfung aus Leserperspektive und Verhaltensökonomie (Vorgabe Annemaries vom 7. November 2026) überarbeitet: Hook in Folie 1 und in den ersten Caption-Zeilen, Vergleich „Stell dir vor“ auf Folie 5 (zeigt eine Sache, belegt wird am Kaninchen), „gut zweieinhalbmal so oft“ auf Folie 4, Tür und Schild auf Folie 7, Kindersatz und Weg zur Seite „Kaninchen“ in der Caption, Speichern-Impuls auf Folie 6. Ohne eigene Geschichte der Autorin. Die Begründung je Punkt steht in <code>docs/social/2026-11-25-widderkaninchen/post.md</code>, Abschnitt „Leserperspektive und Verhaltensökonomie“.</li>
+          <li>Der Ausbau der Qualzucht-Seite ist veröffentlicht (Deploy am 23. November 2026 erfolgreich; der erste Lauf scheiterte an einer Meta-Beschreibung über 180 Zeichen, gekürzt).</li>
+        </ul>
 
         <h2 id="2026-11-23-startsuche">23. November 2026: Suchfeld der Startseite aktualisiert die Treffer bei jeder Eingabe</h2>
         <ul>

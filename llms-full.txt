@@ -889,14 +889,21 @@ Facts:
 - Schmerz zeigt sich bei Hunden oft als verändertes Verhalten; bei etwa einem Drittel der wegen Verhaltensproblemen überwiesenen Hunde ist nach vorsichtiger Schätzung eine schmerzhafte Erkrankung beteiligt.
 - Schwere und Häufigkeit unterscheiden sich je nach Rasse, Zuchtlinie und Einzeltier; die verlinkten Quellen und tierärztliche Befunde sind deshalb entscheidend.
 - Nachfrage finanziert die Fortsetzung solcher Zuchtlinien.
+- Bei Mops und Französischer Bulldogge war in britischen Untersuchungen etwa die Hälfte bis zwei Drittel der untersuchten Hunde klinisch von Atemproblemen betroffen; weitere belegte Probleme betreffen Augen, Wirbelsäule, Haut, Ohren, Narkose und Geburt.
+- Jeder Abschnitt nennt, wo es die Quellen hergeben, Zahlen mit ihren Grenzen; Kästen „Stell dir vor“ übersetzen ein körperliches Problem in einen Vergleich aus dem eigenen Körper und sagen nichts darüber, was ein Tier empfindet.
 - Beim Widderkaninchen knickt mit dem Hängeohr auch der Gehörgang ab; Ohrenentzündungen sind bei Hängeohrkaninchen häufiger, Schmerzen und Schwerhörigkeit möglich. Die Studien sind klein oder beruhen auf Halterangaben, und ob auch die Zähne betroffen sind, ist widersprüchlich belegt.
 Important boundaries:
 - Es geht um Zuchtmerkmale und Nachfrage, nicht um Schuldzuweisungen an einzelne Halter.
 - Kaufe und bewirb keine Tiere, deren Rassemerkmale Schmerzen, Leiden, Schäden oder eingeschränkte Lebensfunktionen verursachen.
 Sources:
 - Tierschutzgesetz § 11b: https://www.gesetze-im-internet.de/tierschg/__11b.html
-- BMEL: Gutachten zur Auslegung von § 11b TierSchG: https://www.bmleh.de/DE/themen/tiere/tierschutz/gutachten-paragraf11b.html
-- RVC VetCompass Brachycephaly: https://www.rvc.ac.uk/research/focus/brachycephaly/health-issues/epidemiology-vetcompass
+- Tierschutz-Hundeverordnung § 10 (Ausstellungsverbot): https://www.gesetze-im-internet.de/tierschhuv/__10.html
+- BMEL: Gutachten zur Auslegung von § 11b TierSchG (PDF): https://www.bmleh.de/SharedDocs/Downloads/DE/_Tiere/Tierschutz/Gutachten-Leitlinien/Qualzucht.pdf?__blob=publicationFile&v=2
+- Packer und Tivers 2015: Strategies for the management and prevention of conformation-related respiratory disorders in brachycephalic dogs: https://pmc.ncbi.nlm.nih.gov/articles/PMC6067768/
+- Liu u. a. 2017: Conformational risk factors of BOAS in pugs, French bulldogs, and bulldogs (PLoS ONE): https://pmc.ncbi.nlm.nih.gov/articles/PMC5538678/
+- O’Neill u. a. 2022: Health of Pug dogs in the UK: https://pmc.ncbi.nlm.nih.gov/articles/PMC9115981/
+- O’Neill u. a. 2021: French Bulldogs differ to other dogs in the UK in propensity for many common disorders: https://pmc.ncbi.nlm.nih.gov/articles/PMC8675495/
+- Hall u. a. 2020: Incidence and risk factors for heat-related illness in UK dogs: https://pmc.ncbi.nlm.nih.gov/articles/PMC7303136/
 - OMIA - Online Mendelian Inheritance in Animals: https://omia.org/home/
 - Science for Animal Welfare (ehemals UFAW): Genetic Welfare Problems of Companion Animals: https://scienceforanimalwelfare.org/understand-animal-welfare/genetic-welfare/
 - Mills et al. 2020: Pain and Problem Behavior in Cats and Dogs (Animals 10(2):318): https://pmc.ncbi.nlm.nih.gov/articles/PMC7071134/

@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Mehrere Goldfische schwimmen in einem bepflanzten Aquarium.">
   <meta property="og:site_name" content="Wa(h)re Haustier(liebe)">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:updated_time" content="2026-11-07">
+  <meta property="og:updated_time" content="2026-11-25">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Glossar für Tierhaltung und Tierschutz">
   <meta name="twitter:description" content="Wichtige Begriffe rund um Haltung, Krankheiten, Kastration, Tierschutz und Tiermedizin kurz erklärt.">
@@ -7247,6 +7247,29 @@ html { scroll-behavior: smooth; }
   body.static-site .page:not(#startseite):has(.nat-uebersicht) > .article-toc { display: none; }
 }
 
+/* ===== Qualzucht-Lexikon: „Stell dir vor“-Kasten, ein Vergleich je Problem zum Nachfühlen ===== */
+body.static-site .stell-dir-vor {
+  margin: 1.1rem 0 1.5rem;
+  padding: 0.9rem 1.1rem 1rem;
+  background: var(--ochre-tint);
+  border-left: 4px solid var(--ochre);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink);
+  max-width: var(--reading-width);
+}
+body.static-site .stell-dir-vor .stell-dir-vor-label {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b4710;
+}
+body.static-site .stell-dir-vor p:not(.stell-dir-vor-label) { margin: 0; font-size: 1.02rem; line-height: 1.6; }
+body.static-site .stell-dir-vor p + p:not(.stell-dir-vor-label) { margin-top: 0.5rem; }
+body.static-site .breed-disease-card .stell-dir-vor { margin: 0.9rem 0 0.4rem; max-width: none; }
+
 
   </style>
   <script type="application/ld+json">
@@ -7273,7 +7296,7 @@ html { scroll-behavior: smooth; }
     "caption": "Mehrere Goldfische schwimmen in einem bepflanzten Aquarium."
   },
   "inLanguage": "de-DE",
-  "dateModified": "2026-11-07",
+  "dateModified": "2026-11-25",
   "isAccessibleForFree": true,
   "keywords": "Glossar, Tierschutzwissen, Tiermedizin Begriffe, Tierhaltung Begriffe",
   "about": [
@@ -7355,7 +7378,7 @@ html { scroll-behavior: smooth; }
       "name": "Jan-Erik Andersen"
     }
   ],
-  "dateModified": "2026-11-07",
+  "dateModified": "2026-11-25",
   "inLanguage": "de-DE",
   "isAccessibleForFree": true,
   "keywords": "Glossar, Tierschutzwissen, Tiermedizin Begriffe, Tierhaltung Begriffe",
@@ -7752,13 +7775,13 @@ html { scroll-behavior: smooth; }
       <div class="container">
         <div class="section-feedback-heading"><h2 id="begriffe" class="mt-2">Glossar</h2><button type="button" class="section-feedback-action" data-feedback-section="begriffe" aria-label="Hinweis zu diesem Abschnitt senden"><span class="feedback-action-mark" aria-hidden="true">?</span><span>Hinweis geben</span></button></div>
 
-        <input type="text" class="glossary-search" id="glossary-search" placeholder="Suchbegriff eingeben ..." oninput="filterGlossary()" aria-describedby="glossary-filter-status"><p id="glossary-filter-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">124 Glossar-Einträge sichtbar.</p>
+        <input type="text" class="glossary-search" id="glossary-search" placeholder="Suchbegriff eingeben ..." oninput="filterGlossary()" aria-describedby="glossary-filter-status"><p id="glossary-filter-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">134 Glossar-Einträge sichtbar.</p>
 
                 <dl id="glossary-list">
           <div class="glossary-item" id="adoption" data-glossary-key="adoption" data-enhancements-hydrated="true"><dt>Adoption</dt><dd>Ein Tier aus dem Tierheim, von einer Tierschutzorganisation oder aus einer Pflegestelle bei sich aufnehmen. Dafür wird kein neu gezüchtetes Tier gekauft.</dd></div>
           <div class="glossary-item" id="ahnentafel" data-glossary-key="ahnentafel"><dt>Ahnentafel</dt><dd>Auszug aus dem Zuchtbuch eines Zuchtvereins. Sie belegt die Abstammung eines Tieres, ist aber kein Gesundheitszeugnis. Bei Hunden tragen die Ahnentafeln, die VDH und FCI anerkennen, die Logos beider Verbände. <a href="../zucht-und-vermehrung/index.html">Mehr dazu: Zucht und Vermehrung</a></dd></div>
           <div class="glossary-item" id="aktivstall" data-glossary-key="aktivstall"><dt>Aktivstall</dt><dd>Pferdehaltung, bei der Futter, Wasser, Liegebereiche und Auslauf so verteilt sind, dass sich die Pferde im Alltag viel bewegen. Das funktioniert nur gut, wenn Gruppe, Platz, Liegeflächen und Futterzugang wirklich passen.</dd></div>
-          <div class="glossary-item" id="albinismus" data-glossary-key="albinismus"><dt>Albinismus</dt><dd>Angeborener Mangel an Farbstoff in Haut, Augen und Fell oder Schuppen. Dem Körper fehlt ein Enzym, das Pigment bildet. Ohne Pigment fehlt der Lichtschutz: Die Tiere sind lichtempfindlich, bekommen leichter Sonnenbrand und erkranken eher an Hautkrebs (Bundestierärztekammer, Gutachten zu Qualzuchten). Auch Sehprobleme sind möglich. Wird gezielt darauf gezüchtet, bleiben diese Belastungen bestehen.</dd></div>
+          <div class="glossary-item" id="albinismus" data-glossary-key="albinismus"><dt>Albinismus</dt><dd>Angeborener Mangel an Farbstoff in Haut, Augen und Fell oder Schuppen. Dem Körper fehlt ein Enzym, das Pigment bildet. Ohne Pigment fehlt der Lichtschutz: Albinos sind nach dem Gutachten zu Qualzuchten hochgradig lichtempfindlich und leiden unter Schwachsichtigkeit; nach dem TVT-Merkblatt Nr. 141 fehlt ihnen außerdem der UV-Schutz von Haut und Schleimhäuten, was zu Sonnenbrand führen kann. Wie stark das die einzelnen Tierarten betrifft, ist unterschiedlich gut untersucht; bei Reptilien ist es kaum gemessen.</dd></div>
           <div class="glossary-item" id="alleinfutter" data-glossary-key="alleinfutter"><dt>Alleinfutter</dt><dd>Futter, das alle nötigen Nährstoffe enthält und allein ausreicht. Besonders bei Katzen, Welpen sowie kranken oder alten Tieren kommt es darauf an, dass es zur Tierart und zum Alter passt.</dd></div>
           <div class="glossary-item" id="anbindehaltung" data-glossary-key="anbindehaltung"><dt>Anbindehaltung</dt><dd>Haltung, bei der ein Tier dauerhaft oder über lange Zeit angebunden ist. Pferde können sich dann kaum drehen, hinlegen und bewegen und haben keinen normalen Kontakt zu Artgenossen.</dd></div>
           <div class="glossary-item" id="apathie" data-glossary-key="apathie"><dt>Apathie</dt><dd>Auffällige Teilnahmslosigkeit: Das Tier wirkt schwach und reagiert kaum auf seine Umgebung. Bei Tieren kann das ein Warnsignal für Schmerz, Stress, Vergiftung oder schwere Krankheit sein.</dd></div>
@@ -7766,10 +7789,11 @@ html { scroll-behavior: smooth; }
           <div class="glossary-item" id="artgenosse" data-glossary-key="artgenosse"><dt>Artgenosse</dt><dd>Ein Tier derselben Art. Viele gesellige Haustiere brauchen passende Artgenossen; andere Tierarten können das nicht zuverlässig ersetzen.</dd></div>
           <div class="glossary-item" id="artgerecht" data-glossary-key="artgerecht"><dt>Artgerecht</dt><dd>Haltung, die zu dem passt, was eine Tierart von Natur aus braucht: Platz, Gesellschaft von Artgenossen, passendes Futter, Beschäftigung, Klima, Rückzugsorte und Gesundheitsvorsorge.</dd></div>
           <div class="glossary-item" id="atemnot" data-glossary-key="atemnot"><dt>Atemnot</dt><dd>Erschwerte, schnelle, laute oder sichtbar angestrengte Atmung. Bei Tieren ist das ein Notfallzeichen: Lass es sofort in einer Tierarztpraxis oder im tierärztlichen Notdienst abklären.</dd></div>
+          <div class="glossary-item" id="bulbusprolaps" data-glossary-key="bulbusprolaps"><dt>Augapfelvorfall</dt><dd>Der Augapfel wird nach vorn aus der Augenhöhle gedrückt (Bulbusprolaps oder Proptosis). Bei Rassen mit flacher Augenhöhle und vorstehenden Augen, etwa Shih Tzu, Mops oder Pekingese, kann schon ein Biss, ein Schlag oder gelegentlich ein fester Griff im Nacken genügen. Das ist ein Notfall: Geh sofort in eine Tierarztpraxis oder zum tierärztlichen Notdienst.</dd></div>
           <div class="glossary-item" id="auslauf" data-glossary-key="auslauf"><dt>Auslauf</dt><dd>Eine eingezäunte Fläche im Freien, meist ohne oder mit wenig Bewuchs, die mehrere Pferde gleichzeitig nutzen und auf der sie sich weitgehend frei bewegen können. Sie ist weder Stall noch Weide. Für bis zu zwei Pferde nennen die BMEL-Leitlinien mindestens 150 m², das sind etwa 10 × 15 m, für jedes weitere Pferd 40 m² mehr. Das ist ein Mindestwert; die Tierärztliche Vereinigung für Tierschutz verlangt mindestens 200 m² für zwei Großpferde. Wo Pferde länger im Auslauf stehen, dürfen die Flächen nicht morastig sein. <a href="../pferde/platzbedarf/index.html">Mehr dazu: Platzbedarf bei Pferden</a></dd></div>
           <div class="glossary-item" id="beutetier" data-glossary-key="beutetier"><dt>Beutetier</dt><dd>Tier, das in der Natur selbst gejagt wird. Viele Beutetiere verbergen Schmerz und Krankheit von Natur aus, deshalb fällt ihr Leiden oft erst spät auf.</dd></div>
           <div class="glossary-item" id="boxenhaltung" data-glossary-key="boxenhaltung"><dt>Boxenhaltung</dt><dd>Pferdehaltung in Einzelboxen. Sie schränkt Bewegung und Kontakt zu anderen Pferden stark ein und ist nur vertretbar, wenn das Pferd täglich Auslauf, Bewegung und Sozialkontakt bekommt.</dd></div>
-          <div class="glossary-item" id="brachyzephales-atemwegssyndrom" data-glossary-key="brachyzephales-atemwegssyndrom"><dt>Brachyzephales Atemwegssyndrom</dt><dd>Atemprobleme bei kurzköpfigen Rassen. Enge Nasenlöcher, ein zu langer Gaumen und Probleme an Kehlkopf und Luftröhre können Atmung, Schlaf und Belastbarkeit stark einschränken.</dd></div>
+          <div class="glossary-item" id="brachyzephales-atemwegssyndrom" data-glossary-key="brachyzephales-atemwegssyndrom"><dt>Brachyzephales Atemwegssyndrom</dt><dd>Atemprobleme bei kurzköpfigen Rassen, kurz BOAS. Der Schädel ist verkürzt, die Weichteile in Mund und Rachen sind es nicht. Enge Nasenlöcher, ein zu langes und dickes Gaumensegel und zu große Nasenmuscheln behindern die Atmung; durch das ständige starke Einatmen können sich später die Kehlkopftaschen ausstülpen und der Kehlkopf zusammenfallen. Atmung, Schlaf und Belastbarkeit können stark eingeschränkt sein (Packer und Tivers 2015).</dd></div>
           <div class="glossary-item" id="brachyzephalie" data-glossary-key="brachyzephalie"><dt>Brachyzephalie</dt><dd>Extrem verkürzte Schädelform, im Alltag „Kurzköpfigkeit“. Bei Hunden und Katzen kann sie zu dauerhafter Atemnot, Augenproblemen, Zahnfehlstellungen und hoher Hitzeempfindlichkeit führen. Der Grund: Die Schädelknochen wachsen nicht im richtigen Verhältnis zueinander. Bei Hunden werden Nasenöffnungen und Nasengänge eng und der weiche Gaumen ist zu lang, sodass sie schlechter Luft bekommen und ihre Körpertemperatur schlechter regeln. Die Augen treten hervor, und der verkürzte Kiefer lässt die Zähne mitunter nicht richtig schließen (Bundestierärztekammer, Gutachten zu Qualzuchten).</dd></div>
           <div class="glossary-item" id="brut-und-setzzeit" data-glossary-key="brut-und-setzzeit"><dt>Brut- und Setzzeit</dt><dd>Zeit, in der Wildtiere brüten, ihre Jungen zur Welt bringen oder aufziehen. Freilaufende Hunde können in dieser Phase besonders großen Schaden anrichten.</dd></div>
           <div class="glossary-item" id="chippen" data-glossary-key="chippen"><dt>Chippen</dt><dd>Einsetzen eines Mikrochips, meist unter die Haut am Hals. Der Chip trägt eine Nummer, die das Tier eindeutig erkennbar macht. Erst die Anmeldung in einem Register hilft aber dabei, es seiner Familie zurückzugeben.</dd></div>
@@ -7778,13 +7802,16 @@ html { scroll-behavior: smooth; }
           <div class="glossary-item" id="einzelgaenger" data-glossary-key="einzelgaenger"><dt>Einzelgänger</dt><dd>Tier, das überwiegend allein lebt und Artgenossen nicht dauerhaft braucht. Bei Katzen wird das Wort oft falsch benutzt, denn allein zu jagen heißt nicht, allein leben zu wollen.</dd></div>
           <div class="glossary-item" id="einzeljaeger" data-glossary-key="einzeljaeger"><dt>Einzeljäger</dt><dd>Tiere, die allein jagen, etwa Katzen. Das bedeutet nicht, dass sie am liebsten ohne Gesellschaft leben.</dd></div>
           <div class="glossary-item" id="ellbogendysplasie" data-glossary-key="ellbogendysplasie"><dt>Ellbogendysplasie</dt><dd>Fehlentwicklung des Ellbogengelenks beim Hund. Sie kann Lahmheit, Schmerzen und Gelenkverschleiß (Arthrose) verursachen. Bei vielen größeren Rassen wird deshalb vor der Zucht untersucht.</dd></div>
+          <div class="glossary-item" id="entropium" data-glossary-key="entropium"><dt>Entropium</dt><dd>Der Rand des Lids ist nach innen gedreht, sodass Haare oder Wimpern auf der Hornhaut scheuern. Das reizt das Auge und kann zu Hornhautverletzungen führen. Es kommt bei vielen Hunderassen vor, etwa beim Shar Pei, und gehäuft bei kurzköpfigen Rassen (Bundestierärztekammer, Gutachten zu Qualzuchten).</dd></div>
           <div class="glossary-item" id="evidenzbasierte-medizin" data-glossary-key="evidenzbasierte-medizin"><dt>Evidenzbasierte Medizin</dt><dd>Medizin, die sich an überprüfbaren Studien, gesammelter Erfahrung und sorgfältiger Untersuchung orientiert, nicht nur an Einzelberichten oder Überzeugungen.</dd></div>
           <div class="glossary-item" id="felv" data-glossary-key="felv"><dt>FeLV</dt><dd>Feline Leukämie, eine ansteckende Virusinfektion bei Katzen. Sie schwächt das Immunsystem und die Blutbildung und kann Tumorerkrankungen begünstigen.</dd></div>
           <div class="glossary-item" id="fiv" data-glossary-key="fiv"><dt>FIV</dt><dd>Felines Immundefizienz-Virus, oft ungenau „Katzen-AIDS“ genannt. Es schwächt die Abwehrkräfte und wird hauptsächlich durch tiefe Bisse übertragen.</dd></div>
           <div class="glossary-item" id="fluchttier" data-glossary-key="fluchttier"><dt>Fluchttier</dt><dd>Tier, das bei Gefahr zuerst flieht. Viele Fluchttiere erleben Hochheben, Festhalten, Lärm oder bedrängenden Kontakt als Stress.</dd></div>
+          <div class="glossary-item" id="fontanelle" data-glossary-key="fontanelle"><dt>Fontanelle</dt><dd>Lücke im Schädeldach, die bei Welpen noch offen ist und sich normalerweise schließt. Bei manchen sehr kleinen Hunden, vor allem Chihuahuas, bleibt sie offen (persistierende Fontanelle); in einer Untersuchung waren die Lücken umso größer, je leichter die Hunde waren (Kiviranta u. a. 2021).</dd></div>
           <div class="glossary-item" id="freiflug" data-glossary-key="freiflug"><dt>Freiflug</dt><dd>Tägliche freie Flugzeit außerhalb des Käfigs in einem vogelsicheren Raum. Für viele Heimvögel ist Freiflug ein Grundbedürfnis und keine Zusatzbeschäftigung.</dd></div>
           <div class="glossary-item" id="freigang" data-glossary-key="freigang"><dt>Freigang</dt><dd>Zugang nach draußen. Bei Katzen kann Freigang Verhalten und Revierbedürfnisse erfüllen. Er bringt aber Risiken wie Verkehr, Krankheiten, Revierkämpfe und ungewollten Nachwuchs mit sich.</dd></div>
           <div class="glossary-item" id="fruehkastration" data-glossary-key="fruehkastration"><dt>Frühkastration</dt><dd>Kastration vor der Geschlechtsreife, bei Katzen meist vor der ersten Rolligkeit. Sie kann ungewollten Nachwuchs verhindern und bestimmte Risiken deutlich senken.</dd></div>
+          <div class="glossary-item" id="gaumensegel" data-glossary-key="gaumensegel"><dt>Gaumensegel</dt><dd>Der weiche Gaumen am hinteren Ende des Maulraums. Bei kurzköpfigen Hunden ist er im Verhältnis zum verkürzten Schädel oft zu lang und zu dick und verengt den Atemweg; es ist die häufigste Veränderung beim brachyzephalen Atemwegssyndrom (Packer und Tivers 2015).</dd></div>
           <div class="glossary-item" id="gefahrtier" data-glossary-key="gefahrtier"><dt>Gefahrtier</dt><dd>Tier, das wegen Größe, Gift, Kraft, Jagdverhalten oder Unberechenbarkeit besondere Sicherheitsvorkehrungen verlangt. Die Regeln sind je nach Bundesland verschieden.</dd></div>
           <div class="glossary-item" id="gefahrtierliste" data-glossary-key="gefahrtierliste"><dt>Gefahrtierliste</dt><dd>Liste von Tierarten, deren Haltung wegen möglicher Gefahren besondere Auflagen, Erlaubnisse oder Verbote auslösen kann. Die Listen sind nicht bundesweit einheitlich, sondern regional geregelt.</dd></div>
           <div class="glossary-item" id="gendefekt" data-glossary-key="gendefekt"><dt>Gendefekt</dt><dd>Erblicher Fehler im Erbgut, der Gesundheit, Körperbau oder normale Funktionen eines Tieres beeinträchtigen kann. In der Zucht werden solche Defekte oft unbemerkt weitergegeben.</dd></div>
@@ -7793,17 +7820,21 @@ html { scroll-behavior: smooth; }
           <div class="glossary-item" id="harnroehrenverschluss" data-glossary-key="harnroehrenverschluss"><dt>Harnröhrenverschluss</dt><dd>Die Harnröhre ist verstopft, das Tier kann nicht oder kaum urinieren. Besonders bei Katern wird das schnell lebensgefährlich und braucht sofort Hilfe in einer Tierarztpraxis oder im tierärztlichen Notdienst.</dd></div>
           <div class="glossary-item" id="harnstopp" data-glossary-key="harnstopp"><dt>Harnstopp</dt><dd>Umgangssprachlich für: Das Tier kann nicht urinieren, meist wegen eines Harnröhrenverschlusses. Das ist kein Fall zum Abwarten, sondern ein sofortiger Notfall.</dd></div>
           <div class="glossary-item" id="harnwegserkrankung" data-glossary-key="harnwegserkrankung"><dt>Harnwegserkrankung</dt><dd>Erkrankung von Blase, Harnröhre oder Harnleitern. Bei Katzen können Schmerzen, häufige Gänge zum Katzenklo, Blut im Urin oder Unsauberkeit darauf hinweisen.</dd></div>
+          <div class="glossary-item" id="hautfaltendermatitis" data-glossary-key="hautfaltendermatitis"><dt>Hautfaltendermatitis</dt><dd>Hautentzündung in Hautfalten, in denen Haut auf Haut reibt und die Haut feucht bleibt. Typische Stellen sind Gesichtsfalten und die Haut um einen Schraubenschwanz. Die Schwere reicht von leichter Entzündung bis zu tiefen, schmerzhaften Geschwüren (O’Neill u. a. 2022).</dd></div>
           <div class="glossary-item" id="hecheln" data-glossary-key="hecheln"><dt>Hecheln</dt><dd>Schnelles Atmen mit offenem Maul. Hunde kühlen sich damit ab. Starkes, hektisches oder anhaltendes Hecheln kann aber Stress, Schmerzen oder Überhitzung anzeigen.</dd></div>
           <div class="glossary-item" id="heimtierausweis" data-glossary-key="heimtierausweis"><dt>Heimtierausweis</dt><dd>Ausweis für ein Tier, in dem unter anderem die Nummer des Mikrochips und Impfungen wie die Tollwutimpfung stehen. Bei Welpen aus dem Ausland ist der Ausweis des Herkunftslandes nötig; TASSO weist darauf hin, dass Vermehrer Ausweise fälschen. <a href="../zucht-und-vermehrung/index.html">Mehr dazu: Zucht und Vermehrung</a></dd></div>
           <div class="glossary-item" id="herdentier" data-glossary-key="herdentier"><dt>Herdentier</dt><dd>Tier, das in einer Gruppe lebt und dort Sicherheit findet. Wird es allein gehalten, ist das meist stark belastend.</dd></div>
           <div class="glossary-item" id="herkunftsnachweis" data-glossary-key="herkunftsnachweis"><dt>Herkunftsnachweis</dt><dd>Dokument, das zeigt, woher ein Tier legal stammt. Bei geschützten Arten sind Herkunftsnachweise, CITES-Papiere oder Unterlagen von Behörden entscheidend.</dd></div>
           <div class="glossary-item" id="hitzschlag" data-glossary-key="hitzschlag"><dt>Hitzschlag</dt><dd>Lebensgefährliche Überhitzung des Körpers. Warnzeichen sind starkes Hecheln, Schwäche, Taumeln, Erbrechen, Krämpfe oder Zusammenbruch. Handle sofort und ruf eine Tierarztpraxis oder den tierärztlichen Notdienst an.</dd></div>
           <div class="glossary-item" id="homoeopathie" data-glossary-key="homoeopathie"><dt>Homöopathie</dt><dd>Alternativmedizinisches Verfahren aus dem 18. Jahrhundert. Es beruht auf der Annahme „Ähnliches heilt Ähnliches“ und auf starker Verdünnung. Eine Wirkung über den Placeboeffekt hinaus ist nicht belegt.</dd></div>
+          <div class="glossary-item" id="hornhautgeschwuer" data-glossary-key="hornhautgeschwuer"><dt>Hornhautgeschwür</dt><dd>Eine Wunde in der Hornhaut, der durchsichtigen Vorderseite des Auges. Bei kurzköpfigen Hunden entsteht sie leichter, weil die Augen flach vorstehen und die Lider sie oft nicht ganz schützen. Bei knapp der Hälfte der betroffenen Hunde war in der Tierarztakte Schmerz vermerkt (O’Neill u. a. 2017).</dd></div>
           <div class="glossary-item" id="hufrehe" data-glossary-key="hufrehe"><dt>Hufrehe</dt><dd>Schmerzhafte Erkrankung der Hufe beim Pferd. Sie kann akut lebensgefährlich werden und bleibende Schäden hinterlassen. Sie braucht sofort Behandlung und danach angepasste Fütterung und Haltung.</dd></div>
           <div class="glossary-item" id="hufschmied" data-glossary-key="hufschmied"><dt>Hufschmied</dt><dd>Fachperson für Hufpflege, Hufkorrektur und Hufbeschlag. Regelmäßige Hufpflege gehört bei Pferden zu den festen Kosten für Gesundheit und Haltung.</dd></div>
           <div class="glossary-item" id="hueftdysplasie" data-glossary-key="hueftdysplasie"><dt>Hüftdysplasie</dt><dd>Fehlentwicklung des Hüftgelenks, oft erblich mitbedingt. Sie kann Schmerzen, Lahmheit und Gelenkverschleiß (Arthrose) verursachen und kommt bei vielen großen Hunderassen vor.</dd></div>
+          <div class="glossary-item" id="hydrozephalus" data-glossary-key="hydrozephalus"><dt>Hydrozephalus</dt><dd>Umgangssprachlich „Wasserkopf“: Gehirnflüssigkeit staut sich in den Hirnkammern im Schädel. Er kommt bei Zwerghunden und bei extrem kurzköpfigen Katzen vor und kann neurologische Ausfälle verursachen (Bundestierärztekammer, Gutachten zu Qualzuchten; Schmidt u. a. 2017).</dd></div>
           <div class="glossary-item" id="kastration" data-glossary-key="kastration" data-enhancements-hydrated="true"><dt>Kastration</dt><dd>Operation, bei der Hoden oder Eierstöcke (die Keimdrüsen) entfernt werden. Das Tier kann sich danach nicht mehr fortpflanzen, und hormonbedingte Vorgänge wie Rolligkeit oder Markieren lassen weitgehend nach.</dd></div>
           <div class="glossary-item" id="kastrationspflicht" data-glossary-key="kastrationspflicht"><dt>Kastrationspflicht</dt><dd>Vorschrift, bestimmte Katzen kastrieren zu lassen, meist Freigängerkatzen in einzelnen Städten oder Landkreisen. Eine bundesweite Regel gibt es nicht; es gilt die örtliche Verordnung.</dd></div>
+          <div class="glossary-item" id="keilwirbel" data-glossary-key="keilwirbel"><dt>Keilwirbel</dt><dd>Ein Wirbel, der keilförmig statt rechteckig gewachsen ist (Hemivertebra). Er kann die Wirbelsäule krümmen und auf das Rückenmark drücken. Bei Französischen Bulldoggen sind Keilwirbel sehr häufig und bleiben oft ohne Beschwerden (Ryan u. a. 2017).</dd></div>
           <div class="glossary-item" id="keimdruese" data-glossary-key="keimdruese"><dt>Keimdrüsen</dt><dd>Hoden oder Eierstöcke. Sie bilden Keimzellen und wichtige Geschlechtshormone und werden bei der Kastration entfernt.</dd></div>
           <div class="glossary-item" id="kennzeichnungspflicht" data-glossary-key="kennzeichnungspflicht"><dt>Kennzeichnungspflicht</dt><dd>Vorschrift, ein Tier eindeutig erkennbar zu machen, meist durch Mikrochip oder Tätowierung. Bei Katzenschutzverordnungen gehört sie oft zusammen mit Registrierung und Kastration.</dd></div>
           <div class="glossary-item" id="kognitive-dissonanz" data-glossary-key="kognitive-dissonanz"><dt>Kognitive Dissonanz</dt><dd>Innerer Spannungszustand, wenn Verhalten, Tatsachen und Selbstbild nicht zusammenpassen. Menschen lösen ihn oft durch Ausreden, Umdeutung oder Schuldzuweisung.</dd></div>
@@ -7832,6 +7863,7 @@ html { scroll-behavior: smooth; }
           <div class="glossary-item" id="permethrin" data-glossary-key="permethrin"><dt>Permethrin</dt><dd>Insektengift, das in manchen Hunde-Flohmitteln steckt. Für Katzen kann es lebensgefährlich giftig sein, weil ihr Körper den Stoff schlecht abbaut.</dd></div>
           <div class="glossary-item" id="pflegestelle" data-glossary-key="pflegestelle"><dt>Pflegestelle</dt><dd>Vorübergehendes Zuhause für ein Tier aus dem Tierschutz, bis eine dauerhafte Familie gefunden ist. Pflegestellen entlasten Tierheime und lernen die Tiere im Alltag kennen.</dd></div>
           <div class="glossary-item" id="phytotherapie" data-glossary-key="phytotherapie"><dt>Phytotherapie</dt><dd>Pflanzenheilkunde. Anders als Homöopathie können Pflanzenmittel wirksame Stoffe enthalten. Gerade deshalb sind Dosierung, Wechselwirkungen und die Abklärung in der Tierarztpraxis wichtig.</dd></div>
+          <div class="glossary-item" id="pigmentkeratitis" data-glossary-key="pigmentkeratitis"><dt>Pigmentkeratitis</dt><dd>Die Hornhaut färbt sich durch eingelagerten Farbstoff dunkel. Beim Mops ist sie häufig und nimmt mit dem Alter zu; wächst das Pigment auf die Sehachse, kann es die Sicht stark mindern, im schlimmsten Fall bis zur Blindheit (Maini u. a. 2019).</dd></div>
           <div class="glossary-item" id="placebo-effekt" data-glossary-key="placebo-effekt"><dt>Placebo-Effekt</dt><dd>Gefühlte Besserung, die von der Erwartung, der veränderten Aufmerksamkeit oder den Begleitumständen kommt statt von einem wirksamen Stoff. Bei Tieren spielt vor allem eine Rolle, wie Menschen das Verhalten deuten.</dd></div>
           <div class="glossary-item" id="potenzierung" data-glossary-key="potenzierung"><dt>Potenzierung</dt><dd>Verfahren der Homöopathie: Ein Stoff wird schrittweise verdünnt und verschüttelt. Bei hohen Potenzen ist vom Ausgangsstoff rechnerisch kein Molekül mehr enthalten.</dd></div>
           <div class="glossary-item" id="ptfe" data-glossary-key="ptfe"><dt>PTFE</dt><dd>Kunststoff in Antihaftbeschichtungen (Polytetrafluorethylen, bekannt als Teflon). Wird er überhitzt, entstehen Dämpfe, die für Vögel sehr schnell tödlich sein können.</dd></div>
@@ -7851,6 +7883,7 @@ html { scroll-behavior: smooth; }
           <div class="glossary-item" id="stereotypie" data-glossary-key="stereotypie"><dt>Stereotypie</dt><dd>Immer gleiche, zwanghafte Verhaltensweisen ohne erkennbaren Zweck, zum Beispiel Koppen und Weben beim Pferd, Federrupfen oder ständiges Kopfwippen bei Vögeln.</dd></div>
           <div class="glossary-item" id="sterilisation" data-glossary-key="sterilisation"><dt>Sterilisation</dt><dd>Durchtrennung der Ei- oder Samenleiter. Das Tier wird unfruchtbar, aber Hormone, Rolligkeit, Markieren und Paarungsdrang bleiben weitgehend bestehen.</dd></div>
           <div class="glossary-item" id="streunerkatze" data-glossary-key="streunerkatze"><dt>Streunerkatze</dt><dd>Frei lebende Katze ohne verlässliche Versorgung durch Menschen. Viele sind Nachkommen unkastrierter Freigängerkatzen und leiden unter Krankheiten, Hunger und Verletzungen.</dd></div>
+          <div class="glossary-item" id="syringomyelie" data-glossary-key="syringomyelie"><dt>Syringomyelie</dt><dd>Mit Flüssigkeit gefüllte Hohlräume im Rückenmark. Beim Cavalier King Charles Spaniel hängt sie mit einer Chiari-ähnlichen Fehlbildung zusammen, einem Missverhältnis zwischen Gehirn und Schädel, und kann mit Nacken- und Rückenschmerz verbunden sein. Ein Hohlraum im MRT bedeutet nicht in jedem Fall, dass der Hund Beschwerden hat (Parker u. a. 2011).</dd></div>
           <div class="glossary-item" id="systematischer-review" data-glossary-key="systematischer-review"><dt>Systematischer Review</dt><dd>Übersichtsarbeit, die vorhandene Studien nach vorher festgelegten Regeln sucht, auswählt, bewertet und zusammenfasst. So werden Einzelstudien nicht überbewertet.</dd></div>
           <div class="glossary-item" id="taurin" data-glossary-key="taurin"><dt>Taurin</dt><dd>Nährstoff, den Katzen unbedingt über das Futter aufnehmen müssen. Er ist wichtig für Herz, Netzhaut, Gallensäuren, Fortpflanzung und Entwicklung.</dd></div>
           <div class="glossary-item" id="theobromin" data-glossary-key="theobromin"><dt>Theobromin</dt><dd>Stoff aus Kakao und Schokolade. Hunde bauen ihn langsam ab, deshalb können schon kleine Mengen dunkler Schokolade gefährlich werden.</dd></div>
